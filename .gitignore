@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+.playwright-cli/
+test-results/
+*.tsbuildinfo
+.omx

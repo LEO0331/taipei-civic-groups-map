@@ -1,0 +1,10 @@
+{
+  "name": "台北人民團體地圖",
+  "short_name": "人民團體地圖",
+  "start_url": "/taipei-civic-groups-map/",
+  "scope": "/taipei-civic-groups-map/",
+  "display": "standalone",
+  "theme_color": "#203744",
+  "background_color": "#f5f1e8",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

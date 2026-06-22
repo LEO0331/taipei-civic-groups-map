@@ -123,7 +123,7 @@ function CivicMap({ summary, language, openDistrict }: {
   return <div className="map-wrap">
     <div className="notice">{t.mapNotice}</div>
     <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
       {summary.districtSummaries.filter((district) => district.count).map((district) =>
         <CircleMarker key={district.district} center={[district.latitude, district.longitude]}
           radius={Math.max(10, Math.sqrt(district.count) * 1.15)}

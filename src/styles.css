@@ -17,6 +17,7 @@ nav { display: flex; overflow-x: auto; max-width: 1280px; margin: auto; padding:
 nav button { flex: 1 0 auto; min-width: 110px; color: #bec9cb; background: transparent; border: 0; border-bottom: 3px solid transparent; padding: 16px 12px 13px; cursor: pointer; }
 nav button.active { color: #fff; border-color: #d75b3f; }
 main { min-height: 70vh; }
+.status { max-width: 1280px; margin: 28px auto; padding: 18px; color: #663025; background: #f1d8ca; }
 .filters { position: sticky; top: 0; z-index: 900; padding: 14px 16px; background: rgba(245,241,232,.97); border-bottom: 1px solid #cbc4b6; backdrop-filter: blur(8px); }
 .search { display: flex; align-items: center; gap: 9px; max-width: 1280px; margin: auto; border-bottom: 2px solid #203744; }
 .search span { font-size: 26px; transform: rotate(-15deg); }

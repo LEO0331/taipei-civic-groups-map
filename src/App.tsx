@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
-  CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
+  buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
 } from './lib/civicGroups';
 import type { CivicGroup, CivicGroupFilters, CivicGroupSummary, Language } from './types';
 
@@ -24,6 +24,7 @@ const copy = {
     disclaimer: '本網站呈現臺北市公開資料中的人民團體名冊。地址、電話與團體狀態請以主管機關公告及團體實際資訊為準。本網站以行政區彙總呈現地圖，不代表各團體精確位置。推測分類係依團體名稱關鍵字產生，並非資料來源提供之正式分類。',
     method: '資料處理方式', methodText: '地址僅比對臺北市 12 個行政區名稱；成立日期支援民國及西元格式；分類僅依團體名稱關鍵字推測。無法解析的原始值仍保留於名冊。',
     fields: '欄位對照', updated: '資料轉換時間', noResults: '沒有符合條件的紀錄。',
+    loading: '資料載入中…', loadError: '資料載入失敗，請重新整理頁面。',
     footer: '資料來源：臺北市人民團體名冊。實際資料內容請以臺北市資料大平臺及主管機關公告為準。',
   },
   en: {
@@ -44,6 +45,7 @@ const copy = {
     disclaimer: 'This site presents Taipei civic group directory records from public data. Addresses, phone numbers, and organization status should be verified with official sources and the organizations themselves. The map shows district-level summaries, not exact group locations. Inferred categories are generated from organization-name keywords and are not official categories provided by the data source.',
     method: 'Processing method', methodText: 'Addresses are matched only against Taipei’s 12 district names. Founding dates support ROC and Gregorian formats. Categories are inferred only from name keywords. Unparsed raw values remain in the directory.',
     fields: 'Field mapping', updated: 'Converted at', noResults: 'No records match these filters.',
+    loading: 'Loading data…', loadError: 'Data failed to load. Please refresh the page.',
     footer: 'Data source: Taipei civic groups directory dataset. Please refer to Taipei Open Data and official authority notices for official records.',
   },
 } as const;
@@ -73,7 +75,7 @@ function FilterPanel({ filters, setFilters, language, decades }: {
   const t = copy[language];
   const update = (key: keyof CivicGroupFilters, value: string) => setFilters({ ...filters, [key]: value });
   return <aside className="filters" aria-label={language === 'zh' ? '篩選條件' : 'Filters'}>
-    <label className="search"><span>⌕</span><input value={filters.search} onChange={(event) => update('search', event.target.value)} placeholder={t.search} /></label>
+    <label className="search"><span aria-hidden="true">⌕</span><input aria-label={t.search} value={filters.search} onChange={(event) => update('search', event.target.value)} placeholder={t.search} /></label>
     <div className="filter-grid">
       <label>{t.district}<select value={filters.district} onChange={(event) => update('district', event.target.value)}>
         <option value="">{t.all}</option>{DISTRICTS.map((district) => <option key={district}>{district}</option>)}
@@ -143,7 +145,7 @@ function Overview({ summary, groups, language }: { summary: CivicGroupSummary; g
     [t.total, summary.total], [t.withDistrict, summary.recordsWithDistrict], [t.withPhone, summary.recordsWithPhone],
     [t.withYear, summary.recordsWithFoundedYear], [t.topDistrict, topDistrict?.district ?? '—'],
     [t.topCategory, topCategory ? getCategoryLabel(topCategory.category, language) : '—'],
-    [t.oldest, Math.min(...years)], [t.newest, Math.max(...years)],
+    [t.oldest, years.length ? Math.min(...years) : '—'], [t.newest, years.length ? Math.max(...years) : '—'],
   ];
   const chartYears = summary.byFoundedYear.filter((item) => item.year >= 1900);
   const bucket = Math.max(1, Math.ceil(chartYears.length / 30));
@@ -177,16 +179,22 @@ export default function App() {
   const [summary, setSummary] = useState<CivicGroupSummary | null>(null);
   const [report, setReport] = useState<{ convertedAt?: string }>({});
   const [filters, setFilters] = useState(emptyFilters);
+  const [loadError, setLoadError] = useState(false);
   const t = copy[language];
 
   useEffect(() => {
+    const loadJson = async (path: string) => {
+      const response = await fetch(`${import.meta.env.BASE_URL}${path}`);
+      if (!response.ok) throw new Error(`${path}: ${response.status}`);
+      return response.json();
+    };
     Promise.all([
-      fetch(`${import.meta.env.BASE_URL}data/civic-groups.json`).then((response) => response.json()),
-      fetch(`${import.meta.env.BASE_URL}data/civic-group-summary.json`).then((response) => response.json()),
-      fetch(`${import.meta.env.BASE_URL}data/conversion-report.json`).then((response) => response.json()),
+      loadJson('data/civic-groups.json'),
+      loadJson('data/civic-group-summary.json'),
+      loadJson('data/conversion-report.json'),
     ]).then(([groupData, summaryData, reportData]) => {
       setGroups(groupData); setSummary(summaryData); setReport(reportData);
-    });
+    }).catch(() => setLoadError(true));
   }, []);
 
   useEffect(() => {
@@ -195,6 +203,11 @@ export default function App() {
   }, [language, t.title]);
 
   const filtered = useMemo(() => filterCivicGroups(groups, filters, language), [groups, filters, language]);
+  const hasFilters = Object.values(filters).some(Boolean);
+  const activeSummary = useMemo(
+    () => summary && hasFilters ? buildCivicGroupSummary(filtered) : summary,
+    [filtered, hasFilters, summary],
+  );
   const decades = useMemo(() => [...new Set(groups.flatMap((group) => group.foundedDecade ?? []))].sort(), [groups]);
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setTab('directory'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const tabs = [['map', t.map], ['directory', t.directory], ['overview', t.overview], ['notes', t.notes]];
@@ -203,13 +216,15 @@ export default function App() {
     <header>
       <div className="masthead"><div className="brand-mark">北</div><div><p>TAIPEI · OPEN DIRECTORY</p><h1>{t.title}</h1><span>{t.subtitle}</span></div>
         <button className="language" onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')} aria-label="Switch language">{language === 'zh' ? 'EN' : '中文'}</button></div>
-      <nav>{tabs.map(([id, label]) => <button className={tab === id ? 'active' : ''} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
+      <nav aria-label={language === 'zh' ? '主要導覽' : 'Main navigation'}>{tabs.map(([id, label]) => <button aria-pressed={tab === id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
     </header>
     <main>
-      {(tab === 'map' || tab === 'directory') && <FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} />}
-      {tab === 'map' && summary && <section className="workspace"><div className="section-heading"><p>01 / DISTRICT VIEW</p><h2>{t.map}</h2></div><CivicMap summary={summary} language={language} openDistrict={openDistrict} /></section>}
-      {tab === 'directory' && <section className="workspace"><div className="section-heading inline"><div><p>02 / PUBLIC RECORDS</p><h2>{t.directory}</h2></div><strong>{filtered.length.toLocaleString()} <span>{t.found}</span></strong></div><div className="notice subtle">{t.categoryNotice}</div><GroupDirectory groups={filtered} language={language} /></section>}
-      {tab === 'overview' && summary && <section className="workspace"><div className="section-heading"><p>03 / DISTRIBUTION</p><h2>{t.overview}</h2></div><Overview summary={summary} groups={groups} language={language} /></section>}
+      {loadError && <p className="status" role="alert">{t.loadError}</p>}
+      {!loadError && !summary && <p className="status" role="status">{t.loading}</p>}
+      {summary && (tab === 'map' || tab === 'directory' || tab === 'overview') && <FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} />}
+      {tab === 'map' && activeSummary && <section className="workspace"><div className="section-heading"><p>01 / DISTRICT VIEW</p><h2>{t.map}</h2></div><CivicMap summary={activeSummary} language={language} openDistrict={openDistrict} /></section>}
+      {tab === 'directory' && summary && <section className="workspace"><div className="section-heading inline"><div><p>02 / PUBLIC RECORDS</p><h2>{t.directory}</h2></div><strong>{filtered.length.toLocaleString()} <span>{t.found}</span></strong></div><div className="notice subtle">{t.categoryNotice}</div><GroupDirectory groups={filtered} language={language} /></section>}
+      {tab === 'overview' && activeSummary && <section className="workspace"><div className="section-heading"><p>03 / DISTRIBUTION</p><h2>{t.overview}</h2></div><Overview summary={activeSummary} groups={hasFilters ? filtered : groups} language={language} /></section>}
       {tab === 'notes' && <section className="workspace notes"><div className="section-heading"><p>04 / METHODOLOGY</p><h2>{t.notes}</h2></div>
         <blockquote>{t.disclaimer}</blockquote><div className="notes-grid"><article><h3>{t.method}</h3><p>{t.methodText}</p></article>
           <article><h3>{t.fields}</h3><p>機關代碼 → agencyCode<br />名稱 → name<br />地址 → address<br />電話 → phone<br />成立日期 → foundedDateRaw</p></article>

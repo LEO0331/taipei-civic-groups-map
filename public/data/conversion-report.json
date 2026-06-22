@@ -2,15 +2,17 @@
   "source": "臺北市人民團體名冊",
   "sourcePage": "https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084",
   "inputFile": "臺北市人民團體名冊.csv",
-  "convertedAt": "2026-06-18T05:53:27.315Z",
+  "convertedAt": "2026-06-22T00:48:21.503Z",
   "fileSize": 443779,
   "inputRows": 4094,
   "outputRecords": 4094,
   "recordsWithoutDistrict": 78,
-  "failedFoundedDateCount": 2,
+  "failedFoundedDateCount": 4,
   "failedFoundedDateExamples": [
     "北市社商字第0167號",
-    "Vietnam"
+    "0",
+    "Vietnam",
+    "0"
   ],
   "notes": [
     "UTF-8-SIG decoded",

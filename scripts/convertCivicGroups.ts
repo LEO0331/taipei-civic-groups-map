@@ -27,17 +27,22 @@ export function parseCsv(input: string) {
       row = [];
     } else value += char;
   }
+  if (quoted) throw new Error('Invalid CSV: unclosed quoted field.');
   if (value || row.length) { row.push(value); rows.push(row); }
   return rows;
 }
 
 export async function convertCivicGroups(filePath?: string) {
-  const files = await readdir(rawDir);
-  const inputPath = filePath ?? join(rawDir, files.find((file) => file.toLowerCase().endsWith('.csv')) ?? '');
-  if (!basename(inputPath)) throw new Error('No CSV found. Run npm run data:fetch or add one under data/raw/civic-groups/.');
+  const csvFile = filePath ? undefined : (await readdir(rawDir)).find((file) => file.toLowerCase().endsWith('.csv'));
+  if (!filePath && !csvFile) throw new Error('No CSV found. Run npm run data:fetch or add one under data/raw/civic-groups/.');
+  const inputPath = filePath ?? join(rawDir, csvFile!);
   const content = await readFile(inputPath, 'utf8');
   const [rawHeaders, ...rows] = parseCsv(content.replace(/^\uFEFF/, ''));
+  if (!rawHeaders) throw new Error('Invalid CSV: file is empty.');
   const headers = rawHeaders.map(normalizeColumnName);
+  const requiredHeaders = ['機關代碼', '名稱', '地址', '電話', '成立日期'];
+  const missingHeaders = requiredHeaders.filter((header) => !headers.includes(header));
+  if (missingHeaders.length) throw new Error(`Invalid CSV: missing columns ${missingHeaders.join(', ')}.`);
   const failedDates: string[] = [];
   let recordsWithoutDistrict = 0;
 

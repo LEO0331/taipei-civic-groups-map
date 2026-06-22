@@ -61,12 +61,17 @@ export function parseFoundedDate(raw?: string): { foundedDate?: string; foundedY
     dayText = compact.slice(yearDigits + 2);
   }
   if (!/^\d{1,4}$/.test(yearText ?? '')) return {};
-  let year = Number(yearText);
-  if (year < 1911) year += 1911;
+  const numericYear = Number(yearText);
+  if (yearText.length <= 3 && numericYear < 1) return {};
+  const year = yearText.length <= 3 ? numericYear + 1911 : numericYear;
   if (year < 1800 || year > new Date().getFullYear() + 1) return {};
   const month = monthText ? Number(monthText) : undefined;
   const day = dayText ? Number(dayText) : undefined;
   if ((month && (month < 1 || month > 12)) || (day && (day < 1 || day > 31))) return {};
+  if (month && day) {
+    const date = new Date(Date.UTC(year, month - 1, day));
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return {};
+  }
   const foundedDate = month
     ? `${year}-${String(month).padStart(2, '0')}${day ? `-${String(day).padStart(2, '0')}` : ''}`
     : String(year);
@@ -115,9 +120,11 @@ export function buildDistrictSummaries(groups: CivicGroup[]): DistrictCivicGroup
 }
 
 export function buildCivicGroupSummary(groups: CivicGroup[]): CivicGroupSummary {
-  const countBy = <T extends string | number>(values: T[]) =>
-    [...new Map(values.map((value) => [value, values.filter((item) => item === value).length]))]
-      .map(([key, count]) => ({ key, count })).sort((a, b) => b.count - a.count);
+  const countBy = <T extends string | number>(values: T[]) => {
+    const counts = new Map<T, number>();
+    values.forEach((value) => counts.set(value, (counts.get(value) ?? 0) + 1));
+    return [...counts].map(([key, count]) => ({ key, count })).sort((a, b) => b.count - a.count);
+  };
   return {
     total: groups.length,
     recordsWithDistrict: groups.filter((group) => group.district).length,

@@ -1,12 +1,21 @@
 # Taipei Civic Groups Map / 台北人民團體地圖
 
-Mobile-first bilingual directory and district map for exploring Taipei civic group public records.
+Mobile-first bilingual explorer for Taipei civic group records and industry development grant recipient records.
 
 ## Purpose
 
-The app presents the Taipei Open Data dataset [臺北市人民團體名冊](https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084) as a searchable directory, district-level aggregate map, and founding-year overview. Traditional Chinese is the default language; English is available in the header.
+The app presents two separate Taipei Open Data modules:
 
-The source data has no coordinates. The map therefore uses the supplied centroids of Taipei’s 12 districts and displays aggregate bubbles only. It does not show exact organization locations.
+- [臺北市人民團體名冊](https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084): civic group directory, district distribution, founding years, and inferred categories.
+- [臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料](https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695): industry grant recipient companies, approved subsidy amounts, project budgets, grant fields, and industry categories.
+
+Traditional Chinese is the default language; English is available in the header.
+
+## Additional module: Industry Grant Recipients / 產業補助廠商
+
+Grant recipients are not civic groups and remain a separate directory. The source CSV uses CP950/Big5-compatible encoding. Conversion handles ROC dates, NTD currency fields, district normalization, subsidy shares, and summary aggregation. The responsible-person field remains in generated source data but is not shown in default company cards.
+
+Neither dataset supplies organization coordinates. Maps use Taipei’s 12 district centroids and display aggregate bubbles only, not exact locations.
 
 ## Data processing
 
@@ -27,6 +36,8 @@ Generated files:
 - `public/data/civic-groups.json`
 - `public/data/civic-group-summary.json`
 - `public/data/conversion-report.json`
+- `public/data/industry-grant-recipients.json`
+- `public/data/industry-grant-summary.json`
 
 ## Local development
 
@@ -52,6 +63,13 @@ Or download a known official CSV resource:
 npm run data:fetch -- --force --url=https://example.gov/resource.csv
 ```
 
+Industry grant data can be replaced independently:
+
+```bash
+npm run data:fetch:industry-grants -- --force --local=/absolute/path/to/grants.csv
+npm run data:convert:industry-grants
+```
+
 Build and preview:
 
 ```bash
@@ -67,4 +85,4 @@ Push `main` to deploy through `.github/workflows/deploy.yml`. Vite is configured
 
 ## Disclaimer
 
-This site presents public directory records. Addresses, phone numbers, and organization status should be verified with official sources and the organizations themselves. District bubbles are aggregates, not exact locations. Inferred categories are generated from name keywords and are not official categories supplied by the data source.
+This site presents public records for exploration and district comparison. Civic groups and subsidized companies are different record types. Industry grant data is not investment advice, company evaluation, policy-effectiveness assessment, or official endorsement. Addresses, phone numbers, organization status, subsidy records, and amounts should be verified with official sources. District bubbles are aggregates, not exact locations.

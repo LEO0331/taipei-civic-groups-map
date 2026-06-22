@@ -1,4 +1,5 @@
 export type Language = 'zh' | 'en';
+export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -51,4 +52,62 @@ export type CivicGroupFilters = {
   yearFrom: string;
   yearTo: string;
   phone: string;
+};
+
+export type IndustryGrantRecipient = {
+  id: string;
+  module: 'industry_grant_recipients';
+  subsidyYearRoc?: number;
+  subsidyYear?: number;
+  grantField?: string;
+  companyName: string;
+  projectName?: string;
+  responsiblePersonName?: string;
+  registeredDistrict?: string;
+  approvalDateRaw?: string;
+  approvalDate?: string;
+  projectStartDateRaw?: string;
+  projectStartDate?: string;
+  projectEndDateRaw?: string;
+  projectEndDate?: string;
+  approvedSubsidyNtd?: number;
+  selfFundedAmountNtd?: number;
+  totalProjectBudgetNtd?: number;
+  capitalAmountAtApplicationNtd?: number;
+  subsidyShare?: number;
+  selfFundingShare?: number;
+  industryCategory?: string;
+  source: string;
+};
+
+export type IndustryGrantSummary = {
+  totalRecords: number;
+  uniqueCompanyCount: number;
+  totalApprovedSubsidyNtd: number;
+  totalSelfFundedAmountNtd: number;
+  totalProjectBudgetNtd: number;
+  medianApprovedSubsidyNtd?: number;
+  averageApprovedSubsidyNtd?: number;
+  minSubsidyYear?: number;
+  maxSubsidyYear?: number;
+  byYear: Array<{ year: number; recordCount: number; approvedSubsidyNtd: number; totalProjectBudgetNtd: number }>;
+  byDistrict: Array<{ district: string; recordCount: number; uniqueCompanyCount: number; approvedSubsidyNtd: number; totalProjectBudgetNtd: number }>;
+  byGrantField: Array<{ grantField: string; recordCount: number; approvedSubsidyNtd: number }>;
+  byIndustryCategory: Array<{ industryCategory: string; recordCount: number; approvedSubsidyNtd: number }>;
+};
+
+export type IndustryGrantFilters = {
+  search: string;
+  subsidyYear: string;
+  grantField: string;
+  district: string;
+  industryCategory: string;
+  subsidyMin: string;
+  subsidyMax: string;
+  budgetMin: string;
+  budgetMax: string;
+  shareMin: string;
+  shareMax: string;
+  projectFrom: string;
+  projectTo: string;
 };

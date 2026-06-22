@@ -2,7 +2,7 @@
   "source": "臺北市人民團體名冊",
   "sourcePage": "https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084",
   "inputFile": "臺北市人民團體名冊.csv",
-  "convertedAt": "2026-06-22T00:48:21.503Z",
+  "convertedAt": "2026-06-22T06:23:53.826Z",
   "fileSize": 443779,
   "inputRows": 4094,
   "outputRecords": 4094,
@@ -18,5 +18,51 @@
     "UTF-8-SIG decoded",
     "Empty strings normalized",
     "Categories inferred from organization-name keywords"
-  ]
+  ],
+  "industryGrantRecipients": {
+    "source": "臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料",
+    "sourcePage": "https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695",
+    "inputFile": "industry-grant-recipients.csv",
+    "convertedAt": "2026-06-22T06:23:56.281Z",
+    "fileSize": 385551,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 2428,
+    "outputRecords": 2428,
+    "failedDateCount": 4,
+    "failedDateExamples": [
+      "1051131",
+      "1060931",
+      "1060631",
+      "11404015"
+    ],
+    "failedNumericExamples": [
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -",
+      "自籌款-元: -"
+    ],
+    "unnormalizedDistrictExamples": [],
+    "notes": [
+      "Strings trimmed",
+      "Empty strings normalized",
+      "ROC dates converted to Gregorian dates",
+      "Currency fields parsed as NTD"
+    ]
+  }
 }

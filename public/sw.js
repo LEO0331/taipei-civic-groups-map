@@ -1,8 +1,10 @@
-const CACHE = 'taipei-civic-groups-v2';
+const CACHE = 'taipei-civic-groups-v3';
 const BASE = '/taipei-civic-groups-map/';
 const DATA = [
   `${BASE}data/civic-groups.json`,
   `${BASE}data/civic-group-summary.json`,
+  `${BASE}data/industry-grant-recipients.json`,
+  `${BASE}data/industry-grant-summary.json`,
   `${BASE}data/conversion-report.json`,
 ];
 

@@ -31,6 +31,7 @@ main { min-height: 70vh; }
 .section-heading { margin-bottom: 22px; }
 .section-heading p { color: #a04431; margin-bottom: 8px; }
 .section-heading h2 { margin: 0; font-size: clamp(29px, 6vw, 50px); letter-spacing: -.04em; }
+.section-heading > span { display: block; max-width: 720px; margin-top: 10px; color: #68767a; line-height: 1.6; }
 .section-heading.inline { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
 .section-heading.inline > strong { font-size: 24px; white-space: nowrap; }
 .section-heading.inline > strong span { display: block; font-size: 11px; font-weight: 500; color: #6e787c; }
@@ -67,6 +68,20 @@ dd { margin: 0; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
 .bar-row i { display: block; height: 100%; background: #d75b3f; transform-origin: left; animation: grow .55s ease-out; }
 @keyframes grow { from { transform: scaleX(0); } }
 .bar-row b { text-align: right; }
+.bar-row.wide-label { grid-template-columns: minmax(90px, 140px) 1fr minmax(58px, auto); }
+.subtabs, .metric-toggle { display: flex; gap: 8px; overflow-x: auto; margin: 0 0 22px; padding-bottom: 6px; }
+.subtabs button, .metric-toggle button { flex: 0 0 auto; padding: 10px 14px; color: #40575f; background: transparent; border: 1px solid #9ea9a6; cursor: pointer; }
+.subtabs button.active, .metric-toggle button.active { color: #fff; background: #203744; border-color: #203744; }
+.metric-toggle { margin-top: 22px; }
+.grant-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grant-summary strong { font-size: clamp(19px, 4vw, 32px); overflow-wrap: anywhere; }
+.comparison-map { margin: 0 0 28px; }
+.comparison-scroll { overflow-x: auto; border: 1px solid #c8c0b2; }
+table { width: 100%; min-width: 1300px; border-collapse: collapse; background: #fffaf0; font-size: 12px; }
+th, td { padding: 10px; border: 1px solid #d5cec1; text-align: left; vertical-align: top; }
+thead th { background: #203744; color: #fff; }
+tbody th { background: #e9e4d9; }
+.company-row dt { width: 92px; }
 .notes blockquote { margin: 0 0 34px; padding: 20px 0 20px 22px; border-left: 5px solid #d75b3f; font-size: clamp(18px, 4vw, 28px); line-height: 1.6; letter-spacing: -.02em; }
 .notes-grid { display: grid; gap: 0; border-top: 2px solid #203744; }
 .notes-grid article { padding: 22px 0; border-bottom: 1px solid #c8c0b2; }
@@ -80,6 +95,7 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
   nav { padding: 0 24px; }
   .filters { padding: 16px 32px; }
   .filter-grid { grid-template-columns: repeat(6, 1fr); }
+  .grant-filters { grid-template-columns: repeat(5, 1fr); }
   .workspace { padding: 52px 32px 100px; }
   .group-row { grid-template-columns: minmax(260px, .9fr) 1.4fr; padding: 28px 4px; }
   .summary-grid { grid-template-columns: repeat(4, 1fr); }

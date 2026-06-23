@@ -4,13 +4,17 @@ import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
 } from './lib/civicGroups';
 import IndustryModule from './IndustryModule';
+import MetroProcurementModule from './MetroProcurementModule';
 import DistrictComparison from './DistrictComparison';
-import type { CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language } from './types';
+import type {
+  CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
+  MetroProcurementScheduleRecord, MetroProcurementScheduleSummary,
+} from './types';
 
 const copy = {
   zh: {
-    title: '台北人民團體地圖', subtitle: '探索臺北市人民團體與產業補助廠商公開資料',
-    civicGroups: '人民團體', industryGrants: '產業補助廠商', comparison: '行政區比較',
+    title: '台北人民團體地圖', subtitle: '探索臺北市人民團體、產業補助與捷運採購時程公開資料',
+    civicGroups: '人民團體', industryGrants: '產業補助廠商', metroProcurement: '捷運採購時程', comparison: '行政區比較',
     map: '團體地圖', directory: '團體名冊', overview: '資料概覽', notes: '資料說明',
     search: '搜尋團體名稱、地址、電話或關鍵字', district: '行政區', category: '推測分類',
     decade: '成立年代', phone: '電話資料', all: '全部', yes: '有電話', no: '無電話',
@@ -28,11 +32,11 @@ const copy = {
     method: '資料處理方式', methodText: '地址僅比對臺北市 12 個行政區名稱；成立日期支援民國及西元格式；分類僅依團體名稱關鍵字推測。無法解析的原始值仍保留於名冊。',
     fields: '欄位對照', updated: '資料轉換時間', noResults: '沒有符合條件的紀錄。',
     loading: '資料載入中…', loadError: '資料載入失敗，請重新整理頁面。',
-    footer: '資料來源：臺北市人民團體名冊、臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料。實際資料內容、補助紀錄與金額請以臺北市資料大平臺及主管機關公告為準。',
+    footer: '資料來源：臺北市人民團體名冊、臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料、臺北捷運公司採購案件預定招標時程資訊等公開資料。各資料集性質不同，實際資料內容、採購公告、補助紀錄與最新狀態請以主管機關正式公告及官方系統為準。',
   },
   en: {
-    title: 'Taipei Civic Groups Map', subtitle: 'Explore Taipei civic group and industry grant recipient public records',
-    civicGroups: 'Civic Groups', industryGrants: 'Industry Grant Recipients', comparison: 'District Comparison',
+    title: 'Taipei Civic Groups Map', subtitle: 'Explore Taipei civic group, industry grant, and Metro procurement public records',
+    civicGroups: 'Civic Groups', industryGrants: 'Industry Grant Recipients', metroProcurement: 'Metro Procurement Schedule', comparison: 'District Comparison',
     map: 'Group Map', directory: 'Group Directory', overview: 'Data Overview', notes: 'Data Notes',
     search: 'Search group name, address, phone, or keyword', district: 'District', category: 'Inferred category',
     decade: 'Founded decade', phone: 'Phone data', all: 'All', yes: 'Has phone', no: 'No phone',
@@ -50,7 +54,7 @@ const copy = {
     method: 'Processing method', methodText: 'Addresses are matched only against Taipei’s 12 district names. Founding dates support ROC and Gregorian formats. Categories are inferred only from name keywords. Unparsed raw values remain in the directory.',
     fields: 'Field mapping', updated: 'Converted at', noResults: 'No records match these filters.',
     loading: 'Loading data…', loadError: 'Data failed to load. Please refresh the page.',
-    footer: 'Data sources: Taipei civic groups directory dataset and Taipei industry development grant recipient dataset. Please refer to Taipei Open Data and official authority notices for official records, subsidy records, and amounts.',
+    footer: 'Data sources: Taipei civic group directory dataset, Taipei industry development grant recipient dataset, Taipei Metro planned procurement tender schedule dataset, and related public-data records. These datasets have different meanings. Official records, procurement announcements, grant records, and latest status should be verified with official authority notices and official systems.',
   },
 } as const;
 
@@ -176,28 +180,39 @@ function Overview({ summary, groups, language }: { summary: CivicGroupSummary; g
   </>;
 }
 
-function CombinedOverview({ civic, grants, language }: { civic: CivicGroupSummary; grants: IndustryGrantSummary; language: Language }) {
+function CombinedOverview({ civic, grants, procurement, language }: {
+  civic: CivicGroupSummary; grants: IndustryGrantSummary; procurement: MetroProcurementScheduleSummary; language: Language;
+}) {
   const zh = language === 'zh';
-  return <section className="workspace"><div className="section-heading"><p>04 / PUBLIC RECORDS OVERVIEW</p><h2>{zh ? '資料概覽' : 'Data Overview'}</h2></div>
-    <div className="notice subtle">{zh ? '人民團體與產業補助廠商為不同性質之公開資料，不應直接解讀為相同類型組織。' : 'Civic groups and industry grant recipients are different types of public data and should not be interpreted as the same type of organization.'}</div>
+  return <section className="workspace"><div className="section-heading"><p>05 / PUBLIC RECORDS OVERVIEW</p><h2>{zh ? '資料概覽' : 'Data Overview'}</h2></div>
+    <div className="notice subtle">{zh ? '此圖僅比較不同公開資料模組的紀錄數，不代表資料重要性、政策成效、採購規模或組織活躍程度。' : 'This chart only compares record counts across different public-data modules. It does not represent data importance, policy effectiveness, procurement scale, or organizational activity.'}</div>
     <div className="summary-grid"><article><span>{zh ? '人民團體紀錄' : 'Civic group records'}</span><strong>{civic.total.toLocaleString()}</strong></article>
       <article><span>{zh ? '補助紀錄' : 'Subsidy records'}</span><strong>{grants.totalRecords.toLocaleString()}</strong></article>
       <article><span>{zh ? '獲補助廠商' : 'Grant recipient companies'}</span><strong>{grants.uniqueCompanyCount.toLocaleString()}</strong></article>
-      <article><span>{zh ? '核定補助款總額' : 'Total approved subsidy'}</span><strong>{new Intl.NumberFormat(zh ? 'zh-TW' : 'en', { style: 'currency', currency: 'TWD', notation: 'compact', maximumFractionDigits: 1 }).format(grants.totalApprovedSubsidyNtd)}</strong></article></div>
+      <article><span>{zh ? '捷運採購時程紀錄' : 'Metro procurement schedule records'}</span><strong>{procurement.totalRecords.toLocaleString()}</strong></article></div>
     <div className="chart-grid"><BarChart label={zh ? '各行政區人民團體數' : 'Civic groups by district'} data={civic.byDistrict.map((item) => ({ label: item.district, count: item.count }))} />
-      <BarChart label={zh ? '各行政區補助紀錄數' : 'Grant records by district'} data={grants.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} /></div>
+      <BarChart label={zh ? '各行政區補助紀錄數' : 'Grant records by district'} data={grants.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
+      <BarChart label={zh ? '不同公開資料模組紀錄數' : 'Record count by public-data module'} data={[
+        { label: zh ? '人民團體' : 'Civic groups', count: civic.total },
+        { label: zh ? '產業補助' : 'Industry grants', count: grants.totalRecords },
+        { label: zh ? '捷運採購時程' : 'Metro procurement', count: procurement.totalRecords },
+      ]} /></div>
   </section>;
 }
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('zh');
-  const [tab, setTab] = useState<'civic' | 'grants' | 'comparison' | 'overview' | 'notes'>('civic');
+  const [tab, setTab] = useState<'civic' | 'grants' | 'procurement' | 'comparison' | 'overview' | 'notes'>('civic');
   const [civicView, setCivicView] = useState<'map' | 'directory' | 'overview'>('map');
   const [groups, setGroups] = useState<CivicGroup[]>([]);
   const [summary, setSummary] = useState<CivicGroupSummary | null>(null);
   const [grantRecords, setGrantRecords] = useState<IndustryGrantRecipient[]>([]);
   const [grantSummary, setGrantSummary] = useState<IndustryGrantSummary | null>(null);
-  const [report, setReport] = useState<{ convertedAt?: string; industryGrantRecipients?: { convertedAt?: string } }>({});
+  const [procurementRecords, setProcurementRecords] = useState<MetroProcurementScheduleRecord[]>([]);
+  const [procurementSummary, setProcurementSummary] = useState<MetroProcurementScheduleSummary | null>(null);
+  const [report, setReport] = useState<{
+    convertedAt?: string; industryGrantRecipients?: { convertedAt?: string }; metroProcurementSchedules?: { convertedAt?: string };
+  }>({});
   const [filters, setFilters] = useState(emptyFilters);
   const [loadError, setLoadError] = useState(false);
   const t = copy[language];
@@ -213,9 +228,12 @@ export default function App() {
       loadJson('data/civic-group-summary.json'),
       loadJson('data/industry-grant-recipients.json'),
       loadJson('data/industry-grant-summary.json'),
+      loadJson('data/metro-procurement-schedules.json'),
+      loadJson('data/metro-procurement-summary.json'),
       loadJson('data/conversion-report.json'),
-    ]).then(([groupData, summaryData, grantData, grantSummaryData, reportData]) => {
-      setGroups(groupData); setSummary(summaryData); setGrantRecords(grantData); setGrantSummary(grantSummaryData); setReport(reportData);
+    ]).then(([groupData, summaryData, grantData, grantSummaryData, procurementData, procurementSummaryData, reportData]) => {
+      setGroups(groupData); setSummary(summaryData); setGrantRecords(grantData); setGrantSummary(grantSummaryData);
+      setProcurementRecords(procurementData); setProcurementSummary(procurementSummaryData); setReport(reportData);
     }).catch(() => setLoadError(true));
   }, []);
 
@@ -232,7 +250,10 @@ export default function App() {
   );
   const decades = useMemo(() => [...new Set(groups.flatMap((group) => group.foundedDecade ?? []))].sort(), [groups]);
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setCivicView('directory'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-  const tabs = [['civic', t.civicGroups], ['grants', t.industryGrants], ['comparison', t.comparison], ['overview', t.overview], ['notes', t.notes]] as const;
+  const tabs = [
+    ['civic', t.civicGroups], ['grants', t.industryGrants], ['procurement', t.metroProcurement],
+    ['comparison', t.comparison], ['overview', t.overview], ['notes', t.notes],
+  ] as const;
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -243,22 +264,24 @@ export default function App() {
     </header>
     <main>
       {loadError && <p className="status" role="alert">{t.loadError}</p>}
-      {!loadError && (!summary || !grantSummary) && <p className="status" role="status">{t.loading}</p>}
+      {!loadError && (!summary || !grantSummary || !procurementSummary) && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
         <div className="subtabs">{civicViews.map(([id, label]) => <button className={civicView === id ? 'active' : ''} onClick={() => setCivicView(id)} key={id}>{label}</button>)}</div>
         {civicView === 'map' && activeSummary && <CivicMap summary={activeSummary} language={language} openDistrict={openDistrict} />}
         {civicView === 'directory' && <><div className="section-heading inline"><div /><strong>{filtered.length.toLocaleString()} <span>{t.found}</span></strong></div><div className="notice subtle">{t.categoryNotice}</div><GroupDirectory groups={filtered} language={language} /></>}
         {civicView === 'overview' && activeSummary && <Overview summary={activeSummary} groups={hasFilters ? filtered : groups} language={language} />}</section></>}
       {tab === 'grants' && grantSummary && <IndustryModule records={grantRecords} summary={grantSummary} language={language} />}
+      {tab === 'procurement' && procurementSummary && <MetroProcurementModule records={procurementRecords} summary={procurementSummary} language={language} />}
       {tab === 'comparison' && summary && grantSummary && <DistrictComparison groups={groups} civicSummary={summary} grants={grantRecords} grantSummary={grantSummary} language={language} />}
-      {tab === 'overview' && summary && grantSummary && <CombinedOverview civic={summary} grants={grantSummary} language={language} />}
-      {tab === 'notes' && <section className="workspace notes"><div className="section-heading"><p>04 / METHODOLOGY</p><h2>{t.notes}</h2></div>
-        <blockquote>{language === 'zh' ? '本網站整理臺北市公開資料中的人民團體名冊與產業發展獎勵補助廠商資料，僅供資料探索與行政區比較使用。兩者屬於不同性質之公開資料。產業補助資料不構成投資建議、企業評價、政策成效判斷或官方背書。' : 'This site organizes Taipei public data on civic group directory records and industry development grant recipient companies for data exploration and district comparison only. These are different types of public data. Industry grant data does not constitute investment advice, company evaluation, policy-effectiveness assessment, or official endorsement.'}</blockquote>
+      {tab === 'overview' && summary && grantSummary && procurementSummary && <CombinedOverview civic={summary} grants={grantSummary} procurement={procurementSummary} language={language} />}
+      {tab === 'notes' && <section className="workspace notes"><div className="section-heading"><p>06 / METHODOLOGY</p><h2>{t.notes}</h2></div>
+        <blockquote>{language === 'zh' ? '本網站整理臺北市公開資料中的人民團體名冊、產業補助廠商資料與捷運採購案件預定招標時程等公開紀錄，僅供資料探索與整理使用。各資料集性質不同，不應直接解讀為相同類型組織或活動。採購時程為預定排程，實際公告、招標內容與最新狀態請以政府電子採購網及主管機關正式公告為準。' : 'This site organizes Taipei public-data records such as civic group directory records, industry grant recipient records, and Taipei Metro planned procurement tender schedules for data exploration and organization only. These datasets have different meanings and should not be interpreted as the same type of organization or activity. Procurement schedules are planned schedules only; actual announcements, tender content, and latest status should be verified through the Government e-Procurement System and official authority notices.'}</blockquote>
         <div className="notes-grid"><article><h3>{t.method}</h3><p>{t.methodText}</p></article>
           <article><h3>{t.fields}</h3><p>機關代碼 → agencyCode<br />名稱 → name<br />地址 → address<br />電話 → phone<br />成立日期 → foundedDateRaw</p></article>
           <article><h3>{language === 'zh' ? '產業補助資料' : 'Industry grant data'}</h3><p>{language === 'zh' ? '來源包含負責人姓名欄位；本網站預設不在卡片中顯示。日期由民國年轉換，金額以新臺幣解析。' : 'The source includes responsible-person names; this site does not display them in default cards. ROC dates are converted and amounts are parsed as NTD.'}</p></article>
-          <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a></p>
-            <p>{t.updated}: {report.convertedAt ? new Date(report.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.industryGrantRecipients?.convertedAt ? new Date(report.industryGrantRecipients.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}</p></article></div>
+          <article><h3>{language === 'zh' ? '捷運採購時程' : 'Metro procurement schedule'}</h3><p>{language === 'zh' ? '資料為每月公布的預定招標排程。「預算金額」原始欄位會完整保留；僅在內容可辨識時衍生招標方式，且不建立地圖點位。' : 'The data is a monthly planned tender schedule. The raw “budget amount” field is preserved, tender method is derived only when recognizable, and no map points are created.'}</p></article>
+          <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">臺北捷運公司採購案件預定招標時程資訊 ↗</a></p>
+            <p>{t.updated}: {report.convertedAt ? new Date(report.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.industryGrantRecipients?.convertedAt ? new Date(report.industryGrantRecipients.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.metroProcurementSchedules?.convertedAt ? new Date(report.metroProcurementSchedules.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}</p></article></div>
       </section>}
     </main>
     <footer>{t.footer}</footer>

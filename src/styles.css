@@ -75,6 +75,12 @@ dd { margin: 0; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
 .metric-toggle { margin-top: 22px; }
 .grant-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grant-summary strong { font-size: clamp(19px, 4vw, 32px); overflow-wrap: anywhere; }
+.procurement-summary strong { font-size: clamp(18px, 4vw, 30px); overflow-wrap: anywhere; }
+.procurement-table table { min-width: 1200px; }
+.procurement-table tbody th { min-width: 300px; background: transparent; }
+.period-table { margin-top: 28px; }
+.period-table table { min-width: 620px; }
+.procurement-notes { margin-top: 28px; }
 .comparison-map { margin: 0 0 28px; }
 .comparison-scroll { overflow-x: auto; border: 1px solid #c8c0b2; }
 table { width: 100%; min-width: 1300px; border-collapse: collapse; background: #fffaf0; font-size: 12px; }
@@ -96,6 +102,7 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
   .filters { padding: 16px 32px; }
   .filter-grid { grid-template-columns: repeat(6, 1fr); }
   .grant-filters { grid-template-columns: repeat(5, 1fr); }
+  .procurement-filters { grid-template-columns: repeat(7, 1fr); }
   .workspace { padding: 52px 32px 100px; }
   .group-row { grid-template-columns: minmax(260px, .9fr) 1.4fr; padding: 28px 4px; }
   .summary-grid { grid-template-columns: repeat(4, 1fr); }

@@ -64,5 +64,795 @@
       "ROC dates converted to Gregorian dates",
       "Currency fields parsed as NTD"
     ]
+  },
+  "metroProcurementSchedules": {
+    "source": "臺北捷運公司採購案件預定招標時程資訊",
+    "sourceAgency": "臺北大眾捷運股份有限公司",
+    "sourcePage": "https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570",
+    "convertedAt": "2026-06-23T06:01:28.995Z",
+    "sourceFiles": [
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202206.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1699,
+        "inputRows": 31
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202207.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 4325,
+        "inputRows": 76
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202208.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3449,
+        "inputRows": 64
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202209.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2978,
+        "inputRows": 53
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202210.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2689,
+        "inputRows": 47
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202211.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2201,
+        "inputRows": 38
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202212.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2244,
+        "inputRows": 43
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202301.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1321,
+        "inputRows": 23
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202302.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3992,
+        "inputRows": 72
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202303.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 5392,
+        "inputRows": 100
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202304.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3289,
+        "inputRows": 60
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202305.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2442,
+        "inputRows": 46
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202306.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2782,
+        "inputRows": 49
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202307.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2634,
+        "inputRows": 45
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202308.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3869,
+        "inputRows": 70
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202309.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1986,
+        "inputRows": 33
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202310.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2660,
+        "inputRows": 43
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202311.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1393,
+        "inputRows": 24
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202312.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2101,
+        "inputRows": 38
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202401.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2359,
+        "inputRows": 40
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202402.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2906,
+        "inputRows": 51
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202403.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3713,
+        "inputRows": 62
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202404.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 4326,
+        "inputRows": 73
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202405.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2625,
+        "inputRows": 44
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202406.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3519,
+        "inputRows": 60
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202407.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1892,
+        "inputRows": 32
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202408.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1800,
+        "inputRows": 31
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202409.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2521,
+        "inputRows": 44
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202410.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2299,
+        "inputRows": 43
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202411.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2017,
+        "inputRows": 34
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202412.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2538,
+        "inputRows": 44
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202501.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1416,
+        "inputRows": 23
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202502.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2758,
+        "inputRows": 51
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202503.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 4042,
+        "inputRows": 71
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202504.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3142,
+        "inputRows": 53
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202505.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3143,
+        "inputRows": 55
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202506.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2182,
+        "inputRows": 39
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202507.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2504,
+        "inputRows": 43
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202508.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2720,
+        "inputRows": 49
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202509.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1372,
+        "inputRows": 23
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202510.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3395,
+        "inputRows": 59
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202511.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2323,
+        "inputRows": 40
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202512.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2297,
+        "inputRows": 36
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202601.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 1826,
+        "inputRows": 30
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202602.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 2347,
+        "inputRows": 40
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202603.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3832,
+        "inputRows": 60
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202604.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3780,
+        "inputRows": 58
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202605.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3140,
+        "inputRows": 49
+      },
+      {
+        "fileName": "臺北捷運公司採購案件預定招標時程資訊_202606.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "fileSize": 3863,
+        "inputRows": 60
+      }
+    ],
+    "inputRows": 2352,
+    "outputRecords": 2352,
+    "duplicateCount": 0,
+    "duplicateExamples": [],
+    "failedPeriodCount": 0,
+    "failedPeriodExamples": [],
+    "budgetSchemaWarningCount": 675,
+    "budgetSchemaWarningExamples": [
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202206.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202207.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202207.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202207.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202207.csv: 預算金額不公開",
+      "臺北捷運公司採購案件預定招標時程資訊_202207.csv: 預算金額不公開"
+    ],
+    "fetch": {
+      "sourcePage": "https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570",
+      "fetchedAt": "2026-06-23T06:00:06.793Z",
+      "discoveredResourceCount": 49,
+      "resources": [
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202206.csv",
+          "period": "202206",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/1108644d-d4a3-4df7-81ee-8e16c0e990ea/download",
+          "downloadedAt": "2026-06-23T05:59:55.034Z",
+          "fileSize": 1699,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202207.csv",
+          "period": "202207",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/9b28b724-4681-46b0-8938-aeb5bdf6b8cd/download",
+          "downloadedAt": "2026-06-23T05:59:55.232Z",
+          "fileSize": 4325,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202208.csv",
+          "period": "202208",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/08373000-18d1-4687-9755-65fb1250dd34/download",
+          "downloadedAt": "2026-06-23T05:59:55.434Z",
+          "fileSize": 3449,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202209.csv",
+          "period": "202209",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/1cc2df95-7826-49e5-876f-24b2c9775424/download",
+          "downloadedAt": "2026-06-23T05:59:55.624Z",
+          "fileSize": 2978,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202210.csv",
+          "period": "202210",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/7d664a52-0d26-4c39-bbf9-5c1587f76e7f/download",
+          "downloadedAt": "2026-06-23T05:59:55.838Z",
+          "fileSize": 2689,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202211.csv",
+          "period": "202211",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/10f55138-1421-4f23-a744-d46fccbc6a85/download",
+          "downloadedAt": "2026-06-23T05:59:56.038Z",
+          "fileSize": 2201,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202212.csv",
+          "period": "202212",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/8fcebb70-2b27-458c-8c0d-57fadcc8782b/download",
+          "downloadedAt": "2026-06-23T05:59:56.238Z",
+          "fileSize": 2244,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202301.csv",
+          "period": "202301",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/043ec661-50ec-4c81-8772-fb08ec993ee9/download",
+          "downloadedAt": "2026-06-23T05:59:56.438Z",
+          "fileSize": 1321,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202302.csv",
+          "period": "202302",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/5cae6b15-8fb2-40b7-b894-5a39970d4c0c/download",
+          "downloadedAt": "2026-06-23T05:59:56.662Z",
+          "fileSize": 3992,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202303.csv",
+          "period": "202303",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/9e486f49-d1de-40f0-9481-45e04b11c189/download",
+          "downloadedAt": "2026-06-23T05:59:56.870Z",
+          "fileSize": 5392,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202304.csv",
+          "period": "202304",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/c5dbbf0f-1c39-4190-af83-ae180421f7d3/download",
+          "downloadedAt": "2026-06-23T05:59:57.073Z",
+          "fileSize": 3289,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202305.csv",
+          "period": "202305",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/a910494e-15d8-49c3-ad3c-64e876f5c883/download",
+          "downloadedAt": "2026-06-23T05:59:57.279Z",
+          "fileSize": 2442,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202306.csv",
+          "period": "202306",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/533a94e3-2565-43aa-adf5-81fd12e79bf5/download",
+          "downloadedAt": "2026-06-23T05:59:57.476Z",
+          "fileSize": 2782,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202307.csv",
+          "period": "202307",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/ca939d72-4189-4c12-ba5a-aed9f63bd752/download",
+          "downloadedAt": "2026-06-23T05:59:57.665Z",
+          "fileSize": 2634,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202308.csv",
+          "period": "202308",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/d1e347a6-9c04-4b75-bc01-23066593610a/download",
+          "downloadedAt": "2026-06-23T05:59:57.862Z",
+          "fileSize": 3869,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202309.csv",
+          "period": "202309",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/de900cc5-8ec8-4c55-8ee7-49a3e9612e56/download",
+          "downloadedAt": "2026-06-23T05:59:58.077Z",
+          "fileSize": 1986,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202310.csv",
+          "period": "202310",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/5b1c399b-412a-499b-81a9-10d0cb6a570a/download",
+          "downloadedAt": "2026-06-23T05:59:58.280Z",
+          "fileSize": 2660,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202311.csv",
+          "period": "202311",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/bea41d5d-590e-409e-be92-8c8b6311f3bf/download",
+          "downloadedAt": "2026-06-23T05:59:58.481Z",
+          "fileSize": 1393,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202312.csv",
+          "period": "202312",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/c15368fd-2aea-44fd-ac52-39ce33552561/download",
+          "downloadedAt": "2026-06-23T05:59:58.694Z",
+          "fileSize": 2101,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202401.csv",
+          "period": "202401",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/c38f43e0-4253-470e-9546-c557b4cd0917/download",
+          "downloadedAt": "2026-06-23T05:59:58.901Z",
+          "fileSize": 2359,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202402.csv",
+          "period": "202402",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/1ad914d0-04dd-408e-9f14-3eacfe7cd71c/download",
+          "downloadedAt": "2026-06-23T05:59:59.141Z",
+          "fileSize": 2906,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202403.csv",
+          "period": "202403",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/7481fdbe-55db-4434-87d1-abe8eea7b981/download",
+          "downloadedAt": "2026-06-23T05:59:59.380Z",
+          "fileSize": 3713,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202404.csv",
+          "period": "202404",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/ce7b2b4a-de1b-4ec6-a8ee-543de93d6e80/download",
+          "downloadedAt": "2026-06-23T05:59:59.748Z",
+          "fileSize": 4326,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202405.csv",
+          "period": "202405",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/fa8c7f74-e622-454e-b1d3-288ba96985ee/download",
+          "downloadedAt": "2026-06-23T05:59:59.972Z",
+          "fileSize": 2625,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202406.csv",
+          "period": "202406",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/28573ed4-3353-471f-af29-6d6addadd0e4/download",
+          "downloadedAt": "2026-06-23T06:00:00.181Z",
+          "fileSize": 3519,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202407.csv",
+          "period": "202407",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/8b49df6a-3445-4eb7-8695-8a20b674a77b/download",
+          "downloadedAt": "2026-06-23T06:00:00.398Z",
+          "fileSize": 1892,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202408.csv",
+          "period": "202408",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/89b84485-17d2-4886-8a41-05ab2d1a11e7/download",
+          "downloadedAt": "2026-06-23T06:00:00.631Z",
+          "fileSize": 1800,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202409.csv",
+          "period": "202409",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/2f2c49f9-7a29-4a05-a211-8d47daec5f39/download",
+          "downloadedAt": "2026-06-23T06:00:00.979Z",
+          "fileSize": 2521,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202410.csv",
+          "period": "202410",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/101e4da8-3ded-4e21-83f4-a84c4d5e6bd8/download",
+          "downloadedAt": "2026-06-23T06:00:01.250Z",
+          "fileSize": 2299,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202411.csv",
+          "period": "202411",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/7d1c8d76-29f1-41b4-8678-30e7b5883473/download",
+          "downloadedAt": "2026-06-23T06:00:01.494Z",
+          "fileSize": 2017,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202412.csv",
+          "period": "202412",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/a03f791b-301b-4107-94c9-3fba8ed98733/download",
+          "downloadedAt": "2026-06-23T06:00:01.999Z",
+          "fileSize": 2538,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202501.csv",
+          "period": "202501",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/bd9e9886-a011-407f-abb1-8c4440118f39/download",
+          "downloadedAt": "2026-06-23T06:00:02.267Z",
+          "fileSize": 1416,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202502.csv",
+          "period": "202502",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/c9187f99-3464-48fe-ba65-ec7c24339883/download",
+          "downloadedAt": "2026-06-23T06:00:02.559Z",
+          "fileSize": 2758,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202503.csv",
+          "period": "202503",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/d718e027-c379-419b-9efe-2f57f506d489/download",
+          "downloadedAt": "2026-06-23T06:00:02.855Z",
+          "fileSize": 4042,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202504.csv",
+          "period": "202504",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/d2420446-04c9-41ac-99c3-3348409b9533/download",
+          "downloadedAt": "2026-06-23T06:00:03.161Z",
+          "fileSize": 3142,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202505.csv",
+          "period": "202505",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/cf6bf697-62d5-4879-a6c1-ec4053d07f53/download",
+          "downloadedAt": "2026-06-23T06:00:03.491Z",
+          "fileSize": 3143,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202506.csv",
+          "period": "202506",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/d493bb3a-cf91-40a0-b94c-32b52e4256f5/download",
+          "downloadedAt": "2026-06-23T06:00:03.796Z",
+          "fileSize": 2182,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202507.csv",
+          "period": "202507",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/e43d0af2-3fe9-4153-bc76-bf0cba4d80dd/download",
+          "downloadedAt": "2026-06-23T06:00:04.150Z",
+          "fileSize": 2504,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202508.csv",
+          "period": "202508",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/c4deefe9-b327-43e6-b68e-ce97566b9744/download",
+          "downloadedAt": "2026-06-23T06:00:04.385Z",
+          "fileSize": 2720,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202509.csv",
+          "period": "202509",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/8b39eb8e-0649-4d5e-9354-bc25f100720c/download",
+          "downloadedAt": "2026-06-23T06:00:04.606Z",
+          "fileSize": 1372,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202510.csv",
+          "period": "202510",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/b7be21f2-37e6-4dc4-9c82-0eee45a7ca75/download",
+          "downloadedAt": "2026-06-23T06:00:04.831Z",
+          "fileSize": 3395,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202511.csv",
+          "period": "202511",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/a0461d54-98bf-406b-b61d-0a34bb0eab44/download",
+          "downloadedAt": "2026-06-23T06:00:05.032Z",
+          "fileSize": 2323,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202512.csv",
+          "period": "202512",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/a7ea9587-4087-4921-8314-5e6ce392badd/download",
+          "downloadedAt": "2026-06-23T06:00:05.234Z",
+          "fileSize": 2297,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202601.csv",
+          "period": "202601",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/22fa0159-0440-4255-b9c1-42febab8d914/download",
+          "downloadedAt": "2026-06-23T06:00:05.424Z",
+          "fileSize": 1826,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202602.csv",
+          "period": "202602",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/faaecc5d-8592-4141-a900-a490064d7168/download",
+          "downloadedAt": "2026-06-23T06:00:05.627Z",
+          "fileSize": 2347,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202603.csv",
+          "period": "202603",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/4ea41a96-945f-4fd2-87f2-877e4137fa37/download",
+          "downloadedAt": "2026-06-23T06:00:05.893Z",
+          "fileSize": 3832,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202604.csv",
+          "period": "202604",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/3ab3c485-b214-423d-9b96-b2e6109964f0/download",
+          "downloadedAt": "2026-06-23T06:00:06.198Z",
+          "fileSize": 3780,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202605.csv",
+          "period": "202605",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/380fd924-d673-4a9d-bec5-facb67052769/download",
+          "downloadedAt": "2026-06-23T06:00:06.421Z",
+          "fileSize": 3140,
+          "encoding": "CP950 / Big5-compatible"
+        },
+        {
+          "name": "臺北捷運公司採購案件預定招標時程資訊_202606.csv",
+          "period": "202606",
+          "url": "https://data.taipei/api/dataset/f4fd7f03-9bf6-41de-a003-02c437596570/resource/b1f11c0b-a090-4389-a139-66b67404ae03/download",
+          "downloadedAt": "2026-06-23T06:00:06.793Z",
+          "fileSize": 3863,
+          "encoding": "CP950 / Big5-compatible"
+        }
+      ],
+      "skippedResources": [],
+      "failures": [],
+      "localFiles": [
+        "臺北捷運公司採購案件預定招標時程資訊_202206.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202207.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202208.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202209.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202210.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202211.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202212.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202301.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202302.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202303.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202304.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202305.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202306.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202307.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202308.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202309.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202310.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202311.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202312.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202401.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202402.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202403.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202404.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202405.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202406.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202407.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202408.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202409.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202410.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202411.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202412.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202501.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202502.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202503.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202504.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202505.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202506.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202507.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202508.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202509.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202510.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202511.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202512.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202601.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202602.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202603.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202604.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202605.csv",
+        "臺北捷運公司採購案件預定招標時程資訊_202606.csv"
+      ],
+      "previousResources": []
+    },
+    "notes": [
+      "Strings and column names trimmed",
+      "UTF-8-SIG and CP950/Big5-compatible decoding supported",
+      "Raw budget field preserved",
+      "Tender method derived only from recognizable text"
+    ]
   }
 }

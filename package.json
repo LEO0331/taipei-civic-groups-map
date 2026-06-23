@@ -10,10 +10,12 @@
     "test": "tsx --test src/lib/*.test.ts",
     "data:fetch:civic-groups": "tsx scripts/fetchCivicGroups.ts",
     "data:fetch:industry-grants": "tsx scripts/fetchIndustryGrantRecipients.ts",
-    "data:fetch": "npm run data:fetch:civic-groups && npm run data:fetch:industry-grants",
+    "data:fetch:metro-procurement": "tsx scripts/fetchMetroProcurementSchedules.ts",
+    "data:fetch": "npm run data:fetch:civic-groups && npm run data:fetch:industry-grants && npm run data:fetch:metro-procurement",
     "data:convert:civic-groups": "tsx scripts/convertCivicGroups.ts && tsx scripts/buildCivicGroupSummary.ts",
     "data:convert:industry-grants": "tsx scripts/convertIndustryGrantRecipients.ts && tsx scripts/buildIndustryGrantSummary.ts",
-    "data:convert": "npm run data:convert:civic-groups && npm run data:convert:industry-grants"
+    "data:convert:metro-procurement": "tsx scripts/convertMetroProcurementSchedules.ts && tsx scripts/buildMetroProcurementSummary.ts",
+    "data:convert": "npm run data:convert:civic-groups && npm run data:convert:industry-grants && npm run data:convert:metro-procurement && tsx scripts/buildPublicRecordsSummary.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

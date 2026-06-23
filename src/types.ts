@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients';
+export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -110,4 +110,67 @@ export type IndustryGrantFilters = {
   shareMax: string;
   projectFrom: string;
   projectTo: string;
+};
+
+export type ProcurementSubjectCategory = 'goods' | 'services' | 'works' | 'other' | 'unknown';
+export type TenderMethod =
+  | 'open_tender'
+  | 'public_quotation_or_proposal'
+  | 'selective_limited_tender_after_public_review'
+  | 'other'
+  | 'unknown';
+
+export type MetroProcurementScheduleRecord = {
+  id: string;
+  module: 'metro_procurement_schedule';
+  sourceFileName?: string;
+  sourceSequenceNumber?: number;
+  caseName: string;
+  budgetAmountRaw?: string;
+  budgetAmountNtd?: number;
+  tenderMethodRaw?: string;
+  tenderMethod: TenderMethod;
+  subjectCategoryRaw?: string;
+  subjectCategory: ProcurementSubjectCategory;
+  periodRocYearMonth: string;
+  periodRocYear?: number;
+  periodYear?: number;
+  periodMonth?: number;
+  periodKey?: string;
+  derivedKeywordGroups: string[];
+  source: string;
+  sourceAgency: string;
+};
+
+export type MetroProcurementScheduleSummary = {
+  totalRecords: number;
+  periodCount: number;
+  minPeriodKey?: string;
+  maxPeriodKey?: string;
+  recordsWithNumericBudgetAmount: number;
+  recordsWithTextualBudgetColumn: number;
+  byPeriod: Array<{
+    periodKey: string;
+    periodYear?: number;
+    periodMonth?: number;
+    recordCount: number;
+    goodsCount: number;
+    servicesCount: number;
+    worksCount: number;
+    otherSubjectCount: number;
+  }>;
+  bySubjectCategory: Array<{ subjectCategory: ProcurementSubjectCategory; subjectCategoryRaw?: string; count: number }>;
+  byTenderMethod: Array<{ tenderMethod: TenderMethod; tenderMethodRaw?: string; count: number }>;
+  keywordFrequency: Array<{ keyword: string; count: number }>;
+};
+
+export type MetroProcurementFilters = {
+  search: string;
+  periodYear: string;
+  periodMonth: string;
+  periodKey: string;
+  subjectCategory: string;
+  tenderMethod: string;
+  keywordGroup: string;
+  budgetStatus: string;
 };

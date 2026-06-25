@@ -1,5 +1,6 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule';
+export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools';
+export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'missing';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -173,4 +174,77 @@ export type MetroProcurementFilters = {
   tenderMethod: string;
   keywordGroup: string;
   budgetStatus: string;
+};
+
+export type RegisteredCramSchool = {
+  id: string;
+  module: 'registered_cram_schools';
+  sourceSequenceNumber?: number;
+  authorityDocumentCode?: string;
+  cramSchoolName: string;
+  address?: string;
+  addressWithoutPostalCode?: string;
+  postalCode?: string;
+  district?: string;
+  phone?: string;
+  registrationDateRaw?: string;
+  registrationDate?: string;
+  registrationYear?: number;
+  registrationDecade?: string;
+  registrationDocumentNumber?: string;
+  classroomCount?: number;
+  classroomAreaSqm?: number;
+  premisesAreaSqm?: number;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type RegisteredCramSchoolSummary = {
+  totalRecords: number;
+  uniqueCramSchoolNameCount: number;
+  districtCount: number;
+  earliestRegistrationDate?: string;
+  latestRegistrationDate?: string;
+  recordsWithPhone: number;
+  recordsWithRegistrationDate: number;
+  recordsWithClassroomCount: number;
+  recordsWithClassroomArea: number;
+  recordsWithPremisesArea: number;
+  totalClassroomCount: number;
+  totalClassroomAreaSqm: number;
+  totalPremisesAreaSqm: number;
+  averageClassroomCount?: number;
+  averageClassroomAreaSqm?: number;
+  averagePremisesAreaSqm?: number;
+  byDistrict: Array<{
+    district: string;
+    recordCount: number;
+    totalClassroomCount: number;
+    totalClassroomAreaSqm: number;
+    totalPremisesAreaSqm: number;
+  }>;
+  byRegistrationYear: Array<{ year: number; recordCount: number }>;
+  byRegistrationDecade: Array<{ decade: string; recordCount: number }>;
+  areaDistribution: {
+    classroomAreaSqm: Array<{ bucket: string; count: number }>;
+    premisesAreaSqm: Array<{ bucket: string; count: number }>;
+  };
+};
+
+export type RegisteredCramSchoolFilters = {
+  search: string;
+  district: string;
+  registrationYear: string;
+  registrationDecade: string;
+  hasPhone: string;
+  hasClassroomCount: string;
+  classroomCountMin: string;
+  classroomCountMax: string;
+  classroomAreaMin: string;
+  classroomAreaMax: string;
+  premisesAreaMin: string;
+  premisesAreaMax: string;
 };

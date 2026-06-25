@@ -854,5 +854,27 @@
       "Raw budget field preserved",
       "Tender method derived only from recognizable text"
     ]
+  },
+  "registeredCramSchools": {
+    "source": "臺北市立案補習班資訊",
+    "sourceAgency": "臺北市政府教育局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15",
+    "inputFile": "registered-cram-schools.csv",
+    "convertedAt": "2026-06-25T06:14:48.459Z",
+    "fileSize": 450068,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 2599,
+    "outputRecords": 2599,
+    "recordsWithoutDistrict": 0,
+    "failedDistrictExamples": [],
+    "failedDateExamples": [],
+    "failedNumericExamples": [],
+    "duplicateAuthorityDocumentExamples": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings trimmed",
+      "Empty strings normalized",
+      "No coordinates supplied; records use address_only precision"
+    ]
   }
 }

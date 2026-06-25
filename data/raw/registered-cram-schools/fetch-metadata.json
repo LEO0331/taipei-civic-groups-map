@@ -1,0 +1,20 @@
+{
+  "sourceUrl": "https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15",
+  "resourceName": "臺北市立案補習班資訊",
+  "downloadedAt": "2026-06-25T06:17:36.857Z",
+  "fileSize": 450068,
+  "encoding": "UTF-8-SIG",
+  "notes": [
+    "Existing local CSV reused."
+  ],
+  "previous": {
+    "sourceUrl": "local-file",
+    "resourceName": "臺北市立案補習班資訊",
+    "downloadedAt": "2026-06-25T06:14:31.401Z",
+    "fileSize": 450068,
+    "encoding": "UTF-8-SIG",
+    "notes": [
+      "Copied from 補習班名冊_1140213.csv"
+    ]
+  }
+}

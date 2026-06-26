@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels';
+export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'missing';
 
 export type CivicGroupCategory =
@@ -305,4 +305,95 @@ export type RegisteredHotelFilters = {
   listedRoomRateMin: string;
   listedRoomRateMax: string;
   roomCountBucket: string;
+};
+
+export type LaborViolationTopicTag =
+  | 'wage_payment' | 'overtime_pay' | 'working_hours' | 'rest_day'
+  | 'attendance_record' | 'wage_record' | 'leave_or_holiday' | 'labor_inspection'
+  | 'retirement_or_severance' | 'employment_contract' | 'other' | 'unknown';
+
+export type LaborPenaltyAmountBucket =
+  | 'none_or_missing' | '1_to_20000' | '20001_to_50000' | '50001_to_100000'
+  | '100001_to_300000' | '300001_to_1000000' | '1000001_plus' | 'unknown';
+
+export type LaborStandardActViolationRecord = {
+  id: string;
+  module: 'labor_standard_act_violation_records';
+  announcementDateRaw?: string;
+  announcementDate?: string;
+  announcementYear?: number;
+  announcementMonth?: string;
+  dispositionDateRaw?: string;
+  dispositionDate?: string;
+  dispositionYear?: number;
+  dispositionMonth?: string;
+  dispositionNumber?: string;
+  businessOrEmployerName: string;
+  responsiblePersonName?: string;
+  violatedProvisionsRaw?: string;
+  violatedProvisions: string[];
+  provisionCount: number;
+  violationContentRaw?: string;
+  violationContents: string[];
+  violationContentCount: number;
+  violationTopicTags: LaborViolationTopicTag[];
+  penaltyAmountRaw?: string;
+  penaltyAmountNtd?: number;
+  penaltyAmountBucket: LaborPenaltyAmountBucket;
+  note?: string;
+  sourceExtraNote?: string;
+  hasPenaltyAmount: boolean;
+  hasResponsiblePersonName: boolean;
+  hasNote: boolean;
+  hasSourceExtraNote: boolean;
+  source: string;
+  sourceAgency: string;
+};
+
+export type LaborStandardActViolationSummary = {
+  totalRecords: number;
+  uniqueBusinessOrEmployerNameCount: number;
+  uniqueDispositionNumberCount: number;
+  minAnnouncementDate?: string;
+  maxAnnouncementDate?: string;
+  minDispositionDate?: string;
+  maxDispositionDate?: string;
+  recordsWithPenaltyAmount: number;
+  recordsMissingPenaltyAmount: number;
+  recordsWithResponsiblePersonName: number;
+  recordsWithNote: number;
+  recordsWithSourceExtraNote: number;
+  totalPenaltyAmountNtd: number;
+  medianPenaltyAmountNtd?: number;
+  averagePenaltyAmountNtd?: number;
+  maxPenaltyAmountNtd?: number;
+  byAnnouncementYear: Array<{ year: number; recordCount: number; recordsWithPenaltyAmount: number; totalPenaltyAmountNtd: number }>;
+  byAnnouncementMonth: Array<{ month: string; recordCount: number; recordsWithPenaltyAmount: number; totalPenaltyAmountNtd: number }>;
+  byDispositionYear: Array<{ year: number; recordCount: number }>;
+  byDispositionMonth: Array<{ month: string; recordCount: number }>;
+  byViolatedProvision: Array<{ provision: string; count: number; totalPenaltyAmountNtd: number }>;
+  byViolationTopicTag: Array<{ topicTag: LaborViolationTopicTag; count: number; totalPenaltyAmountNtd: number }>;
+  byViolationContent: Array<{ violationContent: string; count: number; totalPenaltyAmountNtd: number }>;
+  byPenaltyAmountBucket: Array<{ penaltyAmountBucket: LaborPenaltyAmountBucket; count: number }>;
+  topBusinessOrEmployerNames: Array<{ businessOrEmployerName: string; recordCount: number; totalPenaltyAmountNtd: number; latestAnnouncementDate?: string }>;
+};
+
+export type LaborStandardActViolationManifest = {
+  years: number[];
+  recordCount: number;
+  chunks: Array<{ year: number; file: string; recordCount: number }>;
+};
+
+export type LaborStandardActViolationFilters = {
+  search: string;
+  announcementYear: string;
+  announcementMonth: string;
+  dispositionYear: string;
+  dispositionMonth: string;
+  violatedProvision: string;
+  violationTopicTag: string;
+  penaltyAmountBucket: string;
+  hasPenaltyAmount: string;
+  hasResponsiblePersonName: string;
+  hasNote: string;
 };

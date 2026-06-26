@@ -905,5 +905,37 @@
       "No coordinates supplied; records use address_only precision",
       "Listed room-rate fields are registry fields, not real-time booking prices"
     ]
+  },
+  "laborStandardActViolationRecords": {
+    "source": "臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表",
+    "sourceAgency": "勞動局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5",
+    "category": "勞動",
+    "serviceCategory": "求職及就業",
+    "datasetType": "原始資料",
+    "updateFrequency": "每1月",
+    "inputFile": "labor-standard-act-violation-records.csv",
+    "convertedAt": "2026-06-26T05:49:37.810Z",
+    "fileSize": 3644408,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 15493,
+    "outputRecords": 15493,
+    "chunkedByAnnouncementYear": true,
+    "invalidDateExamples": [
+      "處分日期: 10409298"
+    ],
+    "invalidPenaltyAmountExamples": [],
+    "duplicateExamples": [],
+    "warnings": [
+      "Extra unnamed column detected and preserved as sourceExtraNote"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings trimmed",
+      "Empty strings and NaN normalized",
+      "ROC dates parsed when valid",
+      "Missing penalty amounts are not treated as zero",
+      "No addresses or coordinates supplied; no map layer created"
+    ]
   }
 }

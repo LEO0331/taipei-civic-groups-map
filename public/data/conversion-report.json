@@ -876,5 +876,34 @@
       "Empty strings normalized",
       "No coordinates supplied; records use address_only precision"
     ]
+  },
+  "registeredHotels": {
+    "source": "臺北市一般旅館名冊",
+    "sourceAgency": "觀傳局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651",
+    "theme": "觀光",
+    "description": "臺北市合法一般旅館名冊",
+    "updateFrequency": "每3月",
+    "inputFile": "registered-hotels.csv",
+    "convertedAt": "2026-06-26T00:53:31.264Z",
+    "fileSize": 61340,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 582,
+    "outputRecords": 582,
+    "recordsWithoutDistrict": 0,
+    "recordsWithPhone": 582,
+    "recordsWithListedRoomRate": 582,
+    "recordsWithRoomCount": 582,
+    "totalRoomCount": 32187,
+    "failedDistrictExamples": [],
+    "failedNumericExamples": [],
+    "duplicateRegistrationIds": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings trimmed",
+      "Empty strings normalized",
+      "No coordinates supplied; records use address_only precision",
+      "Listed room-rate fields are registry fields, not real-time booking prices"
+    ]
   }
 }

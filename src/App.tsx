@@ -6,16 +6,18 @@ import {
 import IndustryModule from './IndustryModule';
 import MetroProcurementModule from './MetroProcurementModule';
 import RegisteredCramSchoolsModule from './RegisteredCramSchoolsModule';
+import RegisteredHotelsModule from './RegisteredHotelsModule';
 import DistrictComparison from './DistrictComparison';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
+  RegisteredHotel, RegisteredHotelSummary,
 } from './types';
 
 const copy = {
   zh: {
-    title: '台北人民團體地圖', subtitle: '人民團體、立案機構與公開行政資料探索',
-    civicGroups: '人民團體', industryGrants: '產業補助廠商', metroProcurement: '捷運採購時程', registeredCramSchools: '立案補習班', comparison: '行政區比較',
+    title: '台北公共登記資料地圖', subtitle: '人民團體、立案機構、旅宿與公開行政資料探索',
+    civicGroups: '人民團體', industryGrants: '產業補助廠商', metroProcurement: '捷運採購時程', registeredCramSchools: '立案補習班', registeredHotels: '一般旅館名冊', comparison: '行政區比較',
     map: '團體地圖', directory: '團體名冊', overview: '資料概覽', notes: '資料說明',
     search: '搜尋團體名稱、地址、電話或關鍵字', district: '行政區', category: '推測分類',
     decade: '成立年代', phone: '電話資料', all: '全部', yes: '有電話', no: '無電話',
@@ -33,11 +35,11 @@ const copy = {
     method: '資料處理方式', methodText: '地址僅比對臺北市 12 個行政區名稱；成立日期支援民國及西元格式；分類僅依團體名稱關鍵字推測。無法解析的原始值仍保留於名冊。',
     fields: '欄位對照', updated: '資料轉換時間', noResults: '沒有符合條件的紀錄。',
     loading: '資料載入中…', loadError: '資料載入失敗，請重新整理頁面。',
-    footer: '資料來源：臺北市人民團體名冊、臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料、臺北捷運公司採購案件預定招標時程資訊、臺北市立案補習班資訊等公開資料。各資料集性質不同，實際登記狀態、補助紀錄、採購公告、補習班資訊與最新狀態請以主管機關正式公告及官方系統為準。',
+    footer: '資料來源：臺北市人民團體名冊、臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料、臺北捷運公司採購案件預定招標時程資訊、臺北市立案補習班資訊、臺北市一般旅館名冊等公開資料。各資料集性質不同，實際登記狀態、補助紀錄、採購公告、補習班資訊、旅館營業狀態與最新狀態請以主管機關正式公告及官方系統為準。',
   },
   en: {
-    title: 'Taipei Civic Groups Map', subtitle: 'Civic groups, registered institutions, and public administrative records explorer',
-    civicGroups: 'Civic Groups', industryGrants: 'Industry Grant Recipients', metroProcurement: 'Metro Procurement Schedule', registeredCramSchools: 'Registered Cram Schools', comparison: 'District Comparison',
+    title: 'Taipei Public Records Map', subtitle: 'Civic groups, registered institutions, lodging records, and public administrative records explorer',
+    civicGroups: 'Civic Groups', industryGrants: 'Industry Grant Recipients', metroProcurement: 'Metro Procurement Schedule', registeredCramSchools: 'Registered Cram Schools', registeredHotels: 'Registered Hotels', comparison: 'District Comparison',
     map: 'Group Map', directory: 'Group Directory', overview: 'Data Overview', notes: 'Data Notes',
     search: 'Search group name, address, phone, or keyword', district: 'District', category: 'Inferred category',
     decade: 'Founded decade', phone: 'Phone data', all: 'All', yes: 'Has phone', no: 'No phone',
@@ -55,7 +57,7 @@ const copy = {
     method: 'Processing method', methodText: 'Addresses are matched only against Taipei’s 12 district names. Founding dates support ROC and Gregorian formats. Categories are inferred only from name keywords. Unparsed raw values remain in the directory.',
     fields: 'Field mapping', updated: 'Converted at', noResults: 'No records match these filters.',
     loading: 'Loading data…', loadError: 'Data failed to load. Please refresh the page.',
-    footer: 'Data sources: Taipei civic group directory dataset, Taipei industry development grant recipient dataset, Taipei Metro planned procurement tender schedule dataset, Taipei registered cram-school dataset, and related public-data records. These datasets have different meanings. Official registration status, grant records, procurement announcements, cram-school information, and latest status should be verified with official authority notices and official systems.',
+    footer: 'Data sources: Taipei civic group directory dataset, Taipei industry development grant recipient dataset, Taipei Metro planned procurement tender schedule dataset, Taipei registered cram-school dataset, Taipei general hotel registry, and related public-data records. These datasets have different meanings. Official registration status, grant records, procurement announcements, cram-school information, hotel operating status, and latest status should be verified with official authority notices and official systems.',
   },
 } as const;
 
@@ -181,32 +183,35 @@ function Overview({ summary, groups, language }: { summary: CivicGroupSummary; g
   </>;
 }
 
-function CombinedOverview({ civic, grants, procurement, cramSchools, language }: {
-  civic: CivicGroupSummary; grants: IndustryGrantSummary; procurement: MetroProcurementScheduleSummary; cramSchools: RegisteredCramSchoolSummary; language: Language;
+function CombinedOverview({ civic, grants, procurement, cramSchools, hotels, language }: {
+  civic: CivicGroupSummary; grants: IndustryGrantSummary; procurement: MetroProcurementScheduleSummary; cramSchools: RegisteredCramSchoolSummary; hotels: RegisteredHotelSummary; language: Language;
 }) {
   const zh = language === 'zh';
-  return <section className="workspace"><div className="section-heading"><p>05 / PUBLIC RECORDS OVERVIEW</p><h2>{zh ? '資料概覽' : 'Data Overview'}</h2></div>
-    <div className="notice subtle">{zh ? '此圖僅比較不同公開資料模組的紀錄數，不代表機構品質、教育成效、營業狀態、政策成效或推薦程度。' : 'This chart only compares record counts across different public-data modules. It does not represent institutional quality, educational outcomes, business status, policy effectiveness, or recommendation.'}</div>
+  return <section className="workspace"><div className="section-heading"><p>06 / PUBLIC RECORDS OVERVIEW</p><h2>{zh ? '資料概覽' : 'Data Overview'}</h2></div>
+    <div className="notice subtle">{zh ? '此圖僅比較不同公開資料模組的紀錄數，不代表機構品質、教育成效、營業狀態、政策成效、旅宿品質或推薦程度。' : 'This chart only compares record counts across different public-data modules. It does not represent institutional quality, educational outcomes, business status, policy effectiveness, lodging quality, or recommendation.'}</div>
     <div className="summary-grid"><article><span>{zh ? '人民團體紀錄' : 'Civic group records'}</span><strong>{civic.total.toLocaleString()}</strong></article>
       <article><span>{zh ? '補助紀錄' : 'Subsidy records'}</span><strong>{grants.totalRecords.toLocaleString()}</strong></article>
       <article><span>{zh ? '獲補助廠商' : 'Grant recipient companies'}</span><strong>{grants.uniqueCompanyCount.toLocaleString()}</strong></article>
       <article><span>{zh ? '捷運採購時程紀錄' : 'Metro procurement schedule records'}</span><strong>{procurement.totalRecords.toLocaleString()}</strong></article>
-      <article><span>{zh ? '立案補習班紀錄' : 'Registered cram-school records'}</span><strong>{cramSchools.totalRecords.toLocaleString()}</strong></article></div>
+      <article><span>{zh ? '立案補習班紀錄' : 'Registered cram-school records'}</span><strong>{cramSchools.totalRecords.toLocaleString()}</strong></article>
+      <article><span>{zh ? '一般旅館登記紀錄' : 'Registered hotel records'}</span><strong>{hotels.totalRecords.toLocaleString()}</strong></article></div>
     <div className="chart-grid"><BarChart label={zh ? '各行政區人民團體數' : 'Civic groups by district'} data={civic.byDistrict.map((item) => ({ label: item.district, count: item.count }))} />
       <BarChart label={zh ? '各行政區補助紀錄數' : 'Grant records by district'} data={grants.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
       <BarChart label={zh ? '各行政區立案補習班數' : 'Registered cram schools by district'} data={cramSchools.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
+      <BarChart label={zh ? '各行政區一般旅館數' : 'Registered hotels by district'} data={hotels.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
       <BarChart label={zh ? '不同公開資料模組紀錄數' : 'Record count by public-data module'} data={[
         { label: zh ? '人民團體' : 'Civic groups', count: civic.total },
         { label: zh ? '產業補助' : 'Industry grants', count: grants.totalRecords },
         { label: zh ? '捷運採購時程' : 'Metro procurement', count: procurement.totalRecords },
         { label: zh ? '立案補習班' : 'Registered cram schools', count: cramSchools.totalRecords },
+        { label: zh ? '一般旅館名冊' : 'Registered hotels', count: hotels.totalRecords },
       ]} /></div>
   </section>;
 }
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('zh');
-  const [tab, setTab] = useState<'civic' | 'grants' | 'procurement' | 'cramSchools' | 'comparison' | 'overview' | 'notes'>('civic');
+  const [tab, setTab] = useState<'civic' | 'grants' | 'procurement' | 'cramSchools' | 'hotels' | 'comparison' | 'overview' | 'notes'>('civic');
   const [civicView, setCivicView] = useState<'map' | 'directory' | 'overview'>('map');
   const [groups, setGroups] = useState<CivicGroup[]>([]);
   const [summary, setSummary] = useState<CivicGroupSummary | null>(null);
@@ -216,8 +221,10 @@ export default function App() {
   const [procurementSummary, setProcurementSummary] = useState<MetroProcurementScheduleSummary | null>(null);
   const [cramSchoolRecords, setCramSchoolRecords] = useState<RegisteredCramSchool[]>([]);
   const [cramSchoolSummary, setCramSchoolSummary] = useState<RegisteredCramSchoolSummary | null>(null);
+  const [hotelRecords, setHotelRecords] = useState<RegisteredHotel[]>([]);
+  const [hotelSummary, setHotelSummary] = useState<RegisteredHotelSummary | null>(null);
   const [report, setReport] = useState<{
-    convertedAt?: string; industryGrantRecipients?: { convertedAt?: string }; metroProcurementSchedules?: { convertedAt?: string }; registeredCramSchools?: { convertedAt?: string };
+    convertedAt?: string; industryGrantRecipients?: { convertedAt?: string }; metroProcurementSchedules?: { convertedAt?: string }; registeredCramSchools?: { convertedAt?: string }; registeredHotels?: { convertedAt?: string };
   }>({});
   const [filters, setFilters] = useState(emptyFilters);
   const [loadError, setLoadError] = useState(false);
@@ -238,11 +245,14 @@ export default function App() {
       loadJson('data/metro-procurement-summary.json'),
       loadJson('data/registered-cram-schools.json'),
       loadJson('data/registered-cram-school-summary.json'),
+      loadJson('data/registered-hotels.json'),
+      loadJson('data/registered-hotel-summary.json'),
       loadJson('data/conversion-report.json'),
-    ]).then(([groupData, summaryData, grantData, grantSummaryData, procurementData, procurementSummaryData, cramSchoolData, cramSchoolSummaryData, reportData]) => {
+    ]).then(([groupData, summaryData, grantData, grantSummaryData, procurementData, procurementSummaryData, cramSchoolData, cramSchoolSummaryData, hotelData, hotelSummaryData, reportData]) => {
       setGroups(groupData); setSummary(summaryData); setGrantRecords(grantData); setGrantSummary(grantSummaryData);
       setProcurementRecords(procurementData); setProcurementSummary(procurementSummaryData);
-      setCramSchoolRecords(cramSchoolData); setCramSchoolSummary(cramSchoolSummaryData); setReport(reportData);
+      setCramSchoolRecords(cramSchoolData); setCramSchoolSummary(cramSchoolSummaryData);
+      setHotelRecords(hotelData); setHotelSummary(hotelSummaryData); setReport(reportData);
     }).catch(() => setLoadError(true));
   }, []);
 
@@ -261,7 +271,7 @@ export default function App() {
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setCivicView('directory'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const tabs = [
     ['civic', t.civicGroups], ['grants', t.industryGrants], ['procurement', t.metroProcurement],
-    ['cramSchools', t.registeredCramSchools],
+    ['cramSchools', t.registeredCramSchools], ['hotels', t.registeredHotels],
     ['comparison', t.comparison], ['overview', t.overview], ['notes', t.notes],
   ] as const;
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
@@ -274,7 +284,7 @@ export default function App() {
     </header>
     <main>
       {loadError && <p className="status" role="alert">{t.loadError}</p>}
-      {!loadError && (!summary || !grantSummary || !procurementSummary || !cramSchoolSummary) && <p className="status" role="status">{t.loading}</p>}
+      {!loadError && (!summary || !grantSummary || !procurementSummary || !cramSchoolSummary || !hotelSummary) && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
         <div className="subtabs">{civicViews.map(([id, label]) => <button className={civicView === id ? 'active' : ''} onClick={() => setCivicView(id)} key={id}>{label}</button>)}</div>
         {civicView === 'map' && activeSummary && <CivicMap summary={activeSummary} language={language} openDistrict={openDistrict} />}
@@ -283,17 +293,19 @@ export default function App() {
       {tab === 'grants' && grantSummary && <IndustryModule records={grantRecords} summary={grantSummary} language={language} />}
       {tab === 'procurement' && procurementSummary && <MetroProcurementModule records={procurementRecords} summary={procurementSummary} language={language} />}
       {tab === 'cramSchools' && cramSchoolSummary && <RegisteredCramSchoolsModule records={cramSchoolRecords} summary={cramSchoolSummary} language={language} />}
+      {tab === 'hotels' && hotelSummary && <RegisteredHotelsModule records={hotelRecords} summary={hotelSummary} language={language} />}
       {tab === 'comparison' && summary && grantSummary && <DistrictComparison groups={groups} civicSummary={summary} grants={grantRecords} grantSummary={grantSummary} language={language} />}
-      {tab === 'overview' && summary && grantSummary && procurementSummary && cramSchoolSummary && <CombinedOverview civic={summary} grants={grantSummary} procurement={procurementSummary} cramSchools={cramSchoolSummary} language={language} />}
-      {tab === 'notes' && <section className="workspace notes"><div className="section-heading"><p>06 / METHODOLOGY</p><h2>{t.notes}</h2></div>
-        <blockquote>{language === 'zh' ? '本網站整理臺北市公開資料中的人民團體名冊、產業補助廠商資料、捷運採購案件預定招標時程、立案補習班資訊等公開紀錄，僅供資料探索與整理使用。各資料集性質不同，不應直接解讀為相同類型組織或活動。補習班資料為立案登記清冊，不代表教學品質、招生狀態、課程內容、收費標準、即時營業狀態或推薦程度。' : 'This site organizes Taipei public-data records such as civic group directory records, industry grant recipient records, Taipei Metro planned procurement tender schedules, registered cram-school records, and related public records for data exploration and organization only. These datasets have different meanings and should not be interpreted as the same type of organization or activity. Registered cram-school data is a registration directory and does not represent teaching quality, enrollment status, course content, pricing, real-time business status, or recommendation.'}</blockquote>
+      {tab === 'overview' && summary && grantSummary && procurementSummary && cramSchoolSummary && hotelSummary && <CombinedOverview civic={summary} grants={grantSummary} procurement={procurementSummary} cramSchools={cramSchoolSummary} hotels={hotelSummary} language={language} />}
+      {tab === 'notes' && <section className="workspace notes"><div className="section-heading"><p>07 / METHODOLOGY</p><h2>{t.notes}</h2></div>
+        <blockquote>{language === 'zh' ? '本網站整理臺北市公開資料中的人民團體名冊、產業補助廠商資料、捷運採購案件預定招標時程、立案補習班資訊、一般旅館名冊等公開紀錄，僅供資料探索與整理使用。各資料集性質不同，不應直接解讀為相同類型組織或活動。補習班與旅館資料皆為公開登記清冊，不代表教學品質、住宿品質、即時營業狀態、即時房價、訂房可用性或推薦程度。' : 'This site organizes Taipei public-data records such as civic group directory records, industry grant recipient records, Taipei Metro planned procurement tender schedules, registered cram-school records, registered hotel records, and related public records for data exploration and organization only. These datasets have different meanings and should not be interpreted as the same type of organization or activity. Registered cram-school and hotel data are public registry directories and do not represent teaching quality, lodging quality, real-time business status, real-time room prices, booking availability, or recommendation.'}</blockquote>
         <div className="notes-grid"><article><h3>{t.method}</h3><p>{t.methodText}</p></article>
           <article><h3>{t.fields}</h3><p>機關代碼 → agencyCode<br />名稱 → name<br />地址 → address<br />電話 → phone<br />成立日期 → foundedDateRaw</p></article>
           <article><h3>{language === 'zh' ? '產業補助資料' : 'Industry grant data'}</h3><p>{language === 'zh' ? '來源包含負責人姓名欄位；本網站預設不在卡片中顯示。日期由民國年轉換，金額以新臺幣解析。' : 'The source includes responsible-person names; this site does not display them in default cards. ROC dates are converted and amounts are parsed as NTD.'}</p></article>
           <article><h3>{language === 'zh' ? '捷運採購時程' : 'Metro procurement schedule'}</h3><p>{language === 'zh' ? '資料為每月公布的預定招標排程。「預算金額」原始欄位會完整保留；僅在內容可辨識時衍生招標方式，且不建立地圖點位。' : 'The data is a monthly planned tender schedule. The raw “budget amount” field is preserved, tender method is derived only when recognizable, and no map points are created.'}</p></article>
           <article><h3>{language === 'zh' ? '立案補習班資料' : 'Registered cram-school data'}</h3><p>{language === 'zh' ? '資料未提供經緯度，因此以行政區彙總與清單呈現，並透過地址提供地圖查詢連結。' : 'The data does not provide coordinates, so this site presents district-level summaries and directory records, with map lookup links based on addresses.'}</p></article>
-          <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">臺北捷運公司採購案件預定招標時程資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15" target="_blank" rel="noreferrer">臺北市立案補習班資訊 ↗</a></p>
-            <p>{t.updated}: {report.convertedAt ? new Date(report.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.industryGrantRecipients?.convertedAt ? new Date(report.industryGrantRecipients.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.metroProcurementSchedules?.convertedAt ? new Date(report.metroProcurementSchedules.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredCramSchools?.convertedAt ? new Date(report.registeredCramSchools.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}</p></article></div>
+          <article><h3>{language === 'zh' ? '一般旅館名冊' : 'Registered hotel data'}</h3><p>{language === 'zh' ? '資料未提供經緯度，因此以行政區彙總與地址型名冊呈現。客房定價欄位為公開登記欄位，不是即時房價或訂房價格。' : 'The data does not provide coordinates, so this site presents district-level summaries and an address-based directory. Room-rate fields are public registry fields, not real-time room prices or booking prices.'}</p></article>
+          <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">臺北捷運公司採購案件預定招標時程資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15" target="_blank" rel="noreferrer">臺北市立案補習班資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651" target="_blank" rel="noreferrer">臺北市一般旅館名冊 ↗</a></p>
+            <p>{t.updated}: {report.convertedAt ? new Date(report.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.industryGrantRecipients?.convertedAt ? new Date(report.industryGrantRecipients.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.metroProcurementSchedules?.convertedAt ? new Date(report.metroProcurementSchedules.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredCramSchools?.convertedAt ? new Date(report.registeredCramSchools.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredHotels?.convertedAt ? new Date(report.registeredHotels.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}</p></article></div>
       </section>}
     </main>
     <footer>{t.footer}</footer>

@@ -1,13 +1,14 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { CivicGroupSummary, IndustryGrantSummary, MetroProcurementScheduleSummary, RegisteredCramSchoolSummary } from '../src/types';
+import type { CivicGroupSummary, IndustryGrantSummary, MetroProcurementScheduleSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary } from '../src/types';
 
 const dataDir = join(process.cwd(), 'public/data');
-const [civicGroups, industryGrants, metroProcurement, registeredCramSchools] = await Promise.all([
+const [civicGroups, industryGrants, metroProcurement, registeredCramSchools, registeredHotels] = await Promise.all([
   readFile(join(dataDir, 'civic-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as CivicGroupSummary),
   readFile(join(dataDir, 'industry-grant-summary.json'), 'utf8').then((text) => JSON.parse(text) as IndustryGrantSummary),
   readFile(join(dataDir, 'metro-procurement-summary.json'), 'utf8').then((text) => JSON.parse(text) as MetroProcurementScheduleSummary),
   readFile(join(dataDir, 'registered-cram-school-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredCramSchoolSummary),
+  readFile(join(dataDir, 'registered-hotel-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredHotelSummary),
 ]);
 await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
   generatedAt: new Date().toISOString(),
@@ -16,6 +17,7 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
     industryGrantRecipients: { recordCount: industryGrants.totalRecords, uniqueCompanyCount: industryGrants.uniqueCompanyCount },
     metroProcurementSchedule: { recordCount: metroProcurement.totalRecords, periodCount: metroProcurement.periodCount },
     registeredCramSchools: { recordCount: registeredCramSchools.totalRecords, districtCount: registeredCramSchools.districtCount },
+    registeredHotels: { recordCount: registeredHotels.totalRecords, districtCount: registeredHotels.districtCount, totalRoomCount: registeredHotels.totalRoomCount },
   },
 }));
 console.log('Built public records summary.');

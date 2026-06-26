@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools';
+export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'missing';
 
 export type CivicGroupCategory =
@@ -247,4 +247,62 @@ export type RegisteredCramSchoolFilters = {
   classroomAreaMax: string;
   premisesAreaMin: string;
   premisesAreaMax: string;
+};
+
+export type RegisteredHotel = {
+  id: string;
+  module: 'registered_hotels';
+  cityCode?: string;
+  registrationId: string;
+  hotelName: string;
+  phone?: string;
+  address?: string;
+  addressWithoutPostalCode?: string;
+  postalCode?: string;
+  district?: string;
+  listedMinRoomRateNtd?: number;
+  listedMaxRoomRateNtd?: number;
+  listedRoomRateSpreadNtd?: number;
+  roomCount?: number;
+  roomCountBucket?: string;
+  hasPhone: boolean;
+  hasListedRoomRate: boolean;
+  hasRoomCount: boolean;
+  locationPrecision: LocationPrecision;
+  source: string;
+  sourceAgency: string;
+};
+
+export type RegisteredHotelSummary = {
+  totalRecords: number;
+  uniqueHotelNameCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithListedRoomRate: number;
+  recordsWithRoomCount: number;
+  totalRoomCount: number;
+  averageRoomCount?: number;
+  lowestListedRoomRateNtd?: number;
+  highestListedRoomRateNtd?: number;
+  byDistrict: Array<{
+    district: string;
+    recordCount: number;
+    totalRoomCount: number;
+    averageRoomCount?: number;
+  }>;
+  roomCountBuckets: Array<{ bucket: string; recordCount: number }>;
+  listedRoomRateBuckets: Array<{ bucket: string; recordCount: number }>;
+};
+
+export type RegisteredHotelFilters = {
+  search: string;
+  district: string;
+  hasPhone: string;
+  hasListedRoomRate: string;
+  hasRoomCount: string;
+  roomCountMin: string;
+  roomCountMax: string;
+  listedRoomRateMin: string;
+  listedRoomRateMax: string;
+  roomCountBucket: string;
 };

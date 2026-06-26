@@ -937,5 +937,29 @@
       "Missing penalty amounts are not treated as zero",
       "No addresses or coordinates supplied; no map layer created"
     ]
+  },
+  "nangangSoftwareParkCompanies": {
+    "source": "臺北市南港軟體工業園區廠商資料名錄",
+    "sourceAgency": "產業局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=6b7c48b4-03a6-4fcc-b172-9cee415c20b9",
+    "theme": "經濟",
+    "serviceCategory": "開創事業",
+    "updateFrequency": "每3月",
+    "inputFile": "nangang-software-park-companies.csv",
+    "convertedAt": "2026-06-26T06:08:54.500Z",
+    "fileSize": 57115,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 563,
+    "outputRecords": 563,
+    "invalidBusinessIdExamples": [],
+    "addressNormalizationWarnings": [],
+    "coordinateWarnings": [],
+    "duplicateBusinessIds": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Business IDs preserved as strings",
+      "Coordinate source is detected; EPSG:3826 is converted to WGS84",
+      "Company-name keyword tags are heuristic and not official industry categories"
+    ]
   }
 }

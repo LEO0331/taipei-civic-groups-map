@@ -1,6 +1,9 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records';
+export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'missing';
+export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
+export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
+export type CompanyNameKeywordTag = 'technology' | 'software' | 'biotech' | 'medical' | 'energy' | 'semiconductor' | 'data_or_digital' | 'media_or_creative' | 'investment_or_asset' | 'other' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -305,6 +308,57 @@ export type RegisteredHotelFilters = {
   listedRoomRateMin: string;
   listedRoomRateMax: string;
   roomCountBucket: string;
+};
+
+export type NangangSoftwareParkCompany = {
+  id: string;
+  module: 'nangang_software_park_companies';
+  businessId: string;
+  companyName: string;
+  address?: string;
+  postalCode?: string;
+  district?: string;
+  addressWithoutPostalCode?: string;
+  roadName?: string;
+  buildingAddressKey?: string;
+  coordinateSourceType: CoordinateSourceType;
+  xTwd97Raw?: string;
+  yTwd97Raw?: string;
+  xTwd97?: number;
+  yTwd97?: number;
+  longitude?: number;
+  latitude?: number;
+  coordinateStatus: CoordinateStatus;
+  companyNameKeywordTags?: CompanyNameKeywordTag[];
+  source: string;
+  sourceAgency: string;
+};
+
+export type NangangSoftwareParkCompanySummary = {
+  totalRecords: number;
+  uniqueBusinessIdCount: number;
+  uniqueCompanyNameCount: number;
+  uniqueAddressCount: number;
+  uniqueBuildingAddressKeyCount: number;
+  recordsWithValidCoordinates: number;
+  recordsWithMissingCoordinates: number;
+  recordsWithOutlierCoordinates: number;
+  recordsWithUnparsedCoordinates: number;
+  districtCount: number;
+  byDistrict: Array<{ district: string; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  byBuildingAddressKey: Array<{ buildingAddressKey: string; count: number; sampleCompanies: string[] }>;
+  byCoordinatePair: Array<{ longitude: number; latitude: number; count: number; sampleCompanies: string[]; sampleAddress?: string }>;
+  byCompanyNameKeywordTag: Array<{ tag: CompanyNameKeywordTag; count: number }>;
+};
+
+export type NangangSoftwareParkCompanyFilters = {
+  search: string;
+  roadName: string;
+  buildingAddressKey: string;
+  keywordTag: string;
+  coordinateStatus: string;
+  hasValidCoordinate: string;
 };
 
 export type LaborViolationTopicTag =

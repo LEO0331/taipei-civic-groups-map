@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, and labor-law compliance publication records / 公開資料模組：人民團體、產業補助、捷運採購時程、立案補習班、一般旅館名冊與勞動法規公開紀錄
+Public-record modules: civic groups, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, labor-law compliance publication records, and Nangang Software Park companies / 公開資料模組：人民團體、產業補助、捷運採購時程、立案補習班、一般旅館名冊、勞動法規公開紀錄與南港軟體工業園區廠商
 
 ## Purpose
 
@@ -14,6 +14,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市立案補習班資訊](https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15): registered cram-school public registry records, district summaries, filing dates, classroom counts, and classroom/premises areas.
 - [臺北市一般旅館名冊](https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651): general hotel registry records, district summaries, listed room-rate fields, and room counts.
 - [臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表](https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5): Labor Standards Act violation publication records, announcement/disposition dates, provisions, source-text violation contents, and parsed penalty amounts.
+- [臺北市南港軟體工業園區廠商資料名錄](https://data.taipei/dataset/detail?id=6b7c48b4-03a6-4fcc-b172-9cee415c20b9): Nangang Software Park public company directory, business IDs, addresses, detected TWD97/WGS84 coordinates, and grouped map locations.
 
 Traditional Chinese is the default language; English is available in the header.
 
@@ -45,6 +46,10 @@ The separate `labor_standard_act_violation_records` module uses UTF-8-SIG with a
 
 Records are chunked by announcement year and lazy-loaded only for the directory. The dataset has no addresses or coordinates, so it has no map layer. It is a public administrative-record explorer, not a blacklist, current-compliance assessment, employer ranking, or legal-advice tool. Responsible-person names are preserved from the official source but only shown in source details.
 
+## Additional module: Nangang Software Park Companies / 南港軟體工業園區廠商
+
+The company directory remains separate from civic groups and grants. Business IDs stay as strings to preserve leading zeroes. The source coordinate columns are detected as WGS84 or TWD97/EPSG:3826; valid TWD97 points are converted to WGS84 and grouped by shared coordinate for map display. Company-name keyword tags are a site-derived aid, not official industry classifications. The directory is not evidence of operating status, investment value, real-time tenancy, or government recommendation.
+
 ## Data processing
 
 Source fields:
@@ -75,6 +80,8 @@ Generated files:
 - `public/data/labor-standard-act-violation-records/manifest.json`
 - `public/data/labor-standard-act-violation-records/chunks/by-announcement-year/*.json`
 - `public/data/labor-standard-act-violation-summary.json`
+- `public/data/nangang-software-park-companies.json`
+- `public/data/nangang-software-park-company-summary.json`
 - `public/data/public-records-summary.json`
 
 ## Local development
@@ -128,6 +135,14 @@ Labor violation records can be loaded from the uploaded CSV or an official resou
 ```bash
 npm run data:fetch:labor-violations -- --force --local=/absolute/path/to/違法名單總表.csv
 npm run data:convert:labor-violations
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Nangang Software Park company data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:nangang-software-park -- --force --local=/absolute/path/to/臺北市南港軟體工業園區.csv
+npm run data:convert:nangang-software-park
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -8,6 +8,10 @@ export type AnimalHospitalPhoneType = 'landline' | 'mobile' | 'extension' | 'unk
 export type RegisteredLaborUnionType = 'occupational_union' | 'enterprise_union' | 'industrial_union' | 'union_federation' | 'other' | 'unknown';
 export type LaborUnionPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'missing' | 'unknown';
 export type LaborUnionAddressLocationCategory = 'taipei_address' | 'new_taipei_address' | 'other_taiwan_address' | 'postal_box_or_unparsed' | 'missing';
+export type InfantCareCenterPhoneType = 'taipei_landline' | 'mobile' | 'extension' | 'missing' | 'unknown';
+export type InfantCareCapacityStatus = 'apparent_full' | 'apparent_remaining_capacity' | 'unknown';
+export type InfantCareEvaluationGrade = 'excellent' | 'grade_a' | 'grade_b' | 'grade_c' | 'other' | 'missing' | 'unknown';
+export type InfantCareCenterOperationType = 'private_infant_care_center' | 'public_childcare_home' | 'public_or_commissioned_center' | 'other' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -124,6 +128,81 @@ export type RegisteredLaborUnionFilters = {
   phoneType: string;
   hasPhone: string;
   hasChairpersonName: string;
+};
+
+export type QuasiPublicInfantCareCenter = {
+  id: string;
+  module: 'quasi_public_infant_care_centers';
+  sourceSequenceNumber?: number;
+  centerName: string;
+  centerOperationType: InfantCareCenterOperationType;
+  district?: string;
+  address?: string;
+  addressNormalized?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: InfantCareCenterPhoneType;
+  hasPhone: boolean;
+  approvedCapacity?: number;
+  actualEnrollment?: number;
+  apparentRemainingCapacity?: number;
+  occupancyRatePercent?: number;
+  capacityStatus: InfantCareCapacityStatus;
+  evaluationResultRaw?: string;
+  evaluationRocYear?: number;
+  evaluationGregorianYear?: number;
+  evaluationGrade: InfantCareEvaluationGrade;
+  hasEvaluationResult: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type QuasiPublicInfantCareCenterSummary = {
+  totalRecords: number;
+  uniqueCenterNameCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithEvaluationResult: number;
+  recordsMissingEvaluationResult: number;
+  totalApprovedCapacity?: number;
+  totalActualEnrollment?: number;
+  totalApparentRemainingCapacity?: number;
+  averageOccupancyRatePercent?: number;
+  medianOccupancyRatePercent?: number;
+  apparentFullRecordCount: number;
+  apparentRemainingCapacityRecordCount: number;
+  byDistrict: Array<{ district: string; centerCount: number; totalApprovedCapacity?: number; totalActualEnrollment?: number; totalApparentRemainingCapacity?: number; averageOccupancyRatePercent?: number }>;
+  byEvaluationGrade: Array<{ evaluationGrade: InfantCareEvaluationGrade; count: number }>;
+  byEvaluationYear: Array<{ evaluationRocYear: number; evaluationGregorianYear: number; count: number }>;
+  byCapacityStatus: Array<{ capacityStatus: InfantCareCapacityStatus; count: number }>;
+  byCenterOperationType: Array<{ centerOperationType: InfantCareCenterOperationType; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+};
+
+export type QuasiPublicInfantCareCenterFilters = {
+  search: string;
+  district: string;
+  roadName: string;
+  centerOperationType: string;
+  capacityStatus: string;
+  evaluationGrade: string;
+  evaluationYear: string;
+  hasEvaluationResult: string;
+  approvedMin: string;
+  approvedMax: string;
+  actualMin: string;
+  actualMax: string;
+  gapMin: string;
+  gapMax: string;
+  occupancyMin: string;
+  occupancyMax: string;
+  phoneType: string;
 };
 
 export type IndustryGrantRecipient = {

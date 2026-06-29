@@ -1029,5 +1029,37 @@
       "No geocoding used; Taipei addresses use district centroids only",
       "Chairperson names are preserved but shown only in source details"
     ]
+  },
+  "quasiPublicInfantCareCenters": {
+    "source": "臺北市準公共化托嬰中心",
+    "sourceAgency": "臺北市政府社會局",
+    "officialSourceAgencyShort": "社會局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=aeaaa517-089c-42a7-ad5b-60fef89c3545",
+    "category": "社福",
+    "serviceCategory": "生育保健",
+    "datasetType": "網路服務",
+    "description": "提供準公共化托嬰中心名冊",
+    "inputFile": "quasi-public-infant-care-centers.csv",
+    "convertedAt": "2026-06-29T05:51:53.816Z",
+    "fileSize": 34764,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 215,
+    "outputRecords": 215,
+    "duplicateKeys": [],
+    "invalidNumberExamples": [],
+    "addressWarningExamples": [],
+    "phoneWarningExamples": [],
+    "evaluationWarningExamples": [],
+    "capacityWarningExamples": [],
+    "totalApprovedCapacity": 5983,
+    "totalActualEnrollment": 5297,
+    "totalApparentRemainingCapacity": 686,
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings and column names trimmed",
+      "Phone values preserved as source text",
+      "No geocoding used; records use district centroids only",
+      "Listed capacity gap is derived from source fields and is not real-time vacancy"
+    ]
   }
 }

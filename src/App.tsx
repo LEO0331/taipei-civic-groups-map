@@ -4,6 +4,7 @@ import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
 } from './lib/civicGroups';
 import RegisteredLaborUnionsModule from './RegisteredLaborUnionsModule';
+import QuasiPublicInfantCareCentersModule from './QuasiPublicInfantCareCentersModule';
 import IndustryModule from './IndustryModule';
 import MetroProcurementModule from './MetroProcurementModule';
 import RegisteredCramSchoolsModule from './RegisteredCramSchoolsModule';
@@ -16,13 +17,13 @@ import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
   RegisteredHotel, RegisteredHotelSummary, LaborStandardActViolationManifest, LaborStandardActViolationSummary, NangangSoftwareParkCompany, NangangSoftwareParkCompanySummary,
-  RegisteredAnimalHospital, RegisteredAnimalHospitalSummary, RegisteredLaborUnion, RegisteredLaborUnionSummary,
+  QuasiPublicInfantCareCenter, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospital, RegisteredAnimalHospitalSummary, RegisteredLaborUnion, RegisteredLaborUnionSummary,
 } from './types';
 
 const copy = {
   zh: {
-    title: '台北公共登記與行政紀錄地圖', subtitle: '人民團體、工會、立案機構、旅宿、採購、補助、法規、產業園區與動物照護公開紀錄探索',
-    civicGroups: '人民團體', laborUnions: '工會名單', industryGrants: '產業補助廠商', metroProcurement: '捷運採購時程', registeredCramSchools: '立案補習班', registeredHotels: '一般旅館名冊', laborViolations: '勞基法違規公布紀錄', nangangCompanies: '南港軟體工業園區廠商', animalHospitals: '動物醫院一覽表', comparison: '行政區比較',
+    title: '台北公共登記與行政紀錄地圖', subtitle: '人民團體、工會、立案機構、旅宿、採購、補助、法規、產業園區、動物照護與兒童照護公開紀錄探索',
+    civicGroups: '人民團體', laborUnions: '工會名單', infantCareCenters: '準公共化托嬰中心', industryGrants: '產業補助廠商', metroProcurement: '捷運採購時程', registeredCramSchools: '立案補習班', registeredHotels: '一般旅館名冊', laborViolations: '勞基法違規公布紀錄', nangangCompanies: '南港軟體工業園區廠商', animalHospitals: '動物醫院一覽表', comparison: '行政區比較',
     map: '團體地圖', directory: '團體名冊', overview: '資料概覽', notes: '資料說明',
     search: '搜尋團體名稱、地址、電話或關鍵字', district: '行政區', category: '推測分類',
     decade: '成立年代', phone: '電話資料', all: '全部', yes: '有電話', no: '無電話',
@@ -40,11 +41,11 @@ const copy = {
     method: '資料處理方式', methodText: '地址僅比對臺北市 12 個行政區名稱；成立日期支援民國及西元格式；分類僅依團體名稱關鍵字推測。無法解析的原始值仍保留於名冊。',
     fields: '欄位對照', updated: '資料轉換時間', noResults: '沒有符合條件的紀錄。',
     loading: '資料載入中…', loadError: '資料載入失敗，請重新整理頁面。',
-    footer: '資料來源：臺北市人民團體名冊、臺北市各工會名單及聯絡方式、產業補助、捷運採購、立案補習班、一般旅館、勞基法違規公布、南港軟體工業園區廠商與臺北市動物醫院一覽表等公開資料。各資料集性質不同，最新與正式資訊請以主管機關正式公告及官方系統為準。',
+    footer: '資料來源：臺北市人民團體名冊、臺北市各工會名單及聯絡方式、產業補助、捷運採購、立案補習班、一般旅館、勞基法違規公布、南港軟體工業園區廠商、臺北市動物醫院一覽表與臺北市準公共化托嬰中心等公開資料。各資料集性質不同，最新與正式資訊請以主管機關正式公告及官方系統為準。',
   },
   en: {
-    title: 'Taipei Public Records Explorer', subtitle: 'Civic groups, labor unions, registered institutions, lodging records, procurement, grants, compliance, industry park, and animal-care public records explorer',
-    civicGroups: 'Civic Groups', laborUnions: 'Labor Unions', industryGrants: 'Industry Grant Recipients', metroProcurement: 'Metro Procurement Schedule', registeredCramSchools: 'Registered Cram Schools', registeredHotels: 'Registered Hotels', laborViolations: 'Labor Standards Act Violation Records', nangangCompanies: 'Nangang Software Park Companies', animalHospitals: 'Registered Animal Hospitals', comparison: 'District Comparison',
+    title: 'Taipei Public Records Explorer', subtitle: 'Civic groups, labor unions, registered institutions, lodging records, procurement, grants, compliance, industry park, animal-care, and childcare public records explorer',
+    civicGroups: 'Civic Groups', laborUnions: 'Labor Unions', infantCareCenters: 'Quasi-Public Infant Care Centers', industryGrants: 'Industry Grant Recipients', metroProcurement: 'Metro Procurement Schedule', registeredCramSchools: 'Registered Cram Schools', registeredHotels: 'Registered Hotels', laborViolations: 'Labor Standards Act Violation Records', nangangCompanies: 'Nangang Software Park Companies', animalHospitals: 'Registered Animal Hospitals', comparison: 'District Comparison',
     map: 'Group Map', directory: 'Group Directory', overview: 'Data Overview', notes: 'Data Notes',
     search: 'Search group name, address, phone, or keyword', district: 'District', category: 'Inferred category',
     decade: 'Founded decade', phone: 'Phone data', all: 'All', yes: 'Has phone', no: 'No phone',
@@ -62,7 +63,7 @@ const copy = {
     method: 'Processing method', methodText: 'Addresses are matched only against Taipei’s 12 district names. Founding dates support ROC and Gregorian formats. Categories are inferred only from name keywords. Unparsed raw values remain in the directory.',
     fields: 'Field mapping', updated: 'Converted at', noResults: 'No records match these filters.',
     loading: 'Loading data…', loadError: 'Data failed to load. Please refresh the page.',
-    footer: 'Data sources: Taipei civic groups, registered labor unions, industry grants, Metro procurement, registered cram schools, registered hotels, Labor Standards Act violation publication records, Nangang Software Park company directory, Taipei animal hospital directory, and related public data. These datasets have different meanings. Latest official information should be verified with authorities and official systems.',
+    footer: 'Data sources: Taipei civic groups, registered labor unions, industry grants, Metro procurement, registered cram schools, registered hotels, Labor Standards Act violation publication records, Nangang Software Park company directory, Taipei animal hospital directory, Taipei quasi-public infant care center records, and related public data. These datasets have different meanings. Latest official information should be verified with authorities and official systems.',
   },
 } as const;
 
@@ -188,14 +189,16 @@ function Overview({ summary, groups, language }: { summary: CivicGroupSummary; g
   </>;
 }
 
-function CombinedOverview({ civic, laborUnions, grants, procurement, cramSchools, hotels, laborViolations, nangangCompanies, animalHospitals, language }: {
-  civic: CivicGroupSummary; laborUnions: RegisteredLaborUnionSummary; grants: IndustryGrantSummary; procurement: MetroProcurementScheduleSummary; cramSchools: RegisteredCramSchoolSummary; hotels: RegisteredHotelSummary; laborViolations: LaborStandardActViolationSummary; nangangCompanies: NangangSoftwareParkCompanySummary; animalHospitals: RegisteredAnimalHospitalSummary; language: Language;
+function CombinedOverview({ civic, laborUnions, infantCare, grants, procurement, cramSchools, hotels, laborViolations, nangangCompanies, animalHospitals, language }: {
+  civic: CivicGroupSummary; laborUnions: RegisteredLaborUnionSummary; infantCare: QuasiPublicInfantCareCenterSummary; grants: IndustryGrantSummary; procurement: MetroProcurementScheduleSummary; cramSchools: RegisteredCramSchoolSummary; hotels: RegisteredHotelSummary; laborViolations: LaborStandardActViolationSummary; nangangCompanies: NangangSoftwareParkCompanySummary; animalHospitals: RegisteredAnimalHospitalSummary; language: Language;
 }) {
   const zh = language === 'zh';
   return <section className="workspace"><div className="section-heading"><p>08 / PUBLIC RECORDS OVERVIEW</p><h2>{zh ? '資料概覽' : 'Data Overview'}</h2></div>
     <div className="notice subtle">{zh ? '此圖僅比較公開資料中的紀錄數與來源欄位，不代表資料重要性、政策成效、法律狀態、會員資格、醫療品質、即時營業狀態、推薦程度或官方背書。' : 'This chart only compares public-data record counts and source fields. It does not represent data importance, policy effectiveness, legal status, membership eligibility, medical quality, real-time operating status, recommendation, or official endorsement.'}</div>
     <div className="summary-grid"><article><span>{zh ? '人民團體紀錄' : 'Civic group records'}</span><strong>{civic.total.toLocaleString()}</strong></article>
       <article><span>{zh ? '工會名單紀錄' : 'Labor union records'}</span><strong>{laborUnions.totalRecords.toLocaleString()}</strong></article>
+      <article><span>{zh ? '托嬰中心數' : 'Infant care centers'}</span><strong>{infantCare.totalRecords.toLocaleString()}</strong></article>
+      <article><span>{zh ? '核定收托人數總計' : 'Total approved capacity'}</span><strong>{infantCare.totalApprovedCapacity?.toLocaleString() ?? '—'}</strong></article>
       <article><span>{zh ? '補助紀錄' : 'Subsidy records'}</span><strong>{grants.totalRecords.toLocaleString()}</strong></article>
       <article><span>{zh ? '獲補助廠商' : 'Grant recipient companies'}</span><strong>{grants.uniqueCompanyCount.toLocaleString()}</strong></article>
       <article><span>{zh ? '捷運採購時程紀錄' : 'Metro procurement schedule records'}</span><strong>{procurement.totalRecords.toLocaleString()}</strong></article>
@@ -205,6 +208,7 @@ function CombinedOverview({ civic, laborUnions, grants, procurement, cramSchools
     <div className="summary-grid"><article><span>{zh ? '園區廠商紀錄' : 'Industry park company records'}</span><strong>{nangangCompanies.totalRecords.toLocaleString()}</strong></article><article><span>{zh ? '園區有效座標' : 'Valid park coordinates'}</span><strong>{nangangCompanies.recordsWithValidCoordinates.toLocaleString()}</strong></article><article><span>{zh ? '動物醫院數' : 'Animal hospital count'}</span><strong>{animalHospitals.totalRecords.toLocaleString()}</strong></article><article><span>{zh ? '動物醫院最多行政區' : 'Top animal-hospital district'}</span><strong>{animalHospitals.byDistrict[0]?.district ?? '—'}</strong></article></div>
     <div className="chart-grid"><BarChart label={zh ? '各行政區人民團體數' : 'Civic groups by district'} data={civic.byDistrict.map((item) => ({ label: item.district, count: item.count }))} />
       <BarChart label={zh ? '各行政區工會數' : 'Labor unions by district'} data={laborUnions.byDistrict.map((item) => ({ label: item.district, count: item.count }))} />
+      <BarChart label={zh ? '各行政區托嬰中心數' : 'Infant care centers by district'} data={infantCare.byDistrict.map((item) => ({ label: item.district, count: item.centerCount }))} />
       <BarChart label={zh ? '各行政區補助紀錄數' : 'Grant records by district'} data={grants.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
       <BarChart label={zh ? '各行政區立案補習班數' : 'Registered cram schools by district'} data={cramSchools.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
       <BarChart label={zh ? '各行政區一般旅館數' : 'Registered hotels by district'} data={hotels.byDistrict.map((item) => ({ label: item.district, count: item.recordCount }))} />
@@ -212,6 +216,7 @@ function CombinedOverview({ civic, laborUnions, grants, procurement, cramSchools
       <BarChart label={zh ? '不同公開資料模組紀錄數' : 'Record count by public-data module'} data={[
         { label: zh ? '人民團體' : 'Civic groups', count: civic.total },
         { label: zh ? '工會名單' : 'Labor unions', count: laborUnions.totalRecords },
+        { label: zh ? '托嬰中心' : 'Infant care centers', count: infantCare.totalRecords },
         { label: zh ? '產業補助' : 'Industry grants', count: grants.totalRecords },
         { label: zh ? '捷運採購時程' : 'Metro procurement', count: procurement.totalRecords },
         { label: zh ? '立案補習班' : 'Registered cram schools', count: cramSchools.totalRecords },
@@ -225,12 +230,14 @@ function CombinedOverview({ civic, laborUnions, grants, procurement, cramSchools
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('zh');
-  const [tab, setTab] = useState<'civic' | 'laborUnions' | 'grants' | 'procurement' | 'cramSchools' | 'hotels' | 'laborViolations' | 'nangangCompanies' | 'animalHospitals' | 'comparison' | 'overview' | 'notes'>('civic');
+  const [tab, setTab] = useState<'civic' | 'laborUnions' | 'infantCare' | 'grants' | 'procurement' | 'cramSchools' | 'hotels' | 'laborViolations' | 'nangangCompanies' | 'animalHospitals' | 'comparison' | 'overview' | 'notes'>('civic');
   const [civicView, setCivicView] = useState<'map' | 'directory' | 'overview'>('map');
   const [groups, setGroups] = useState<CivicGroup[]>([]);
   const [summary, setSummary] = useState<CivicGroupSummary | null>(null);
   const [laborUnionRecords, setLaborUnionRecords] = useState<RegisteredLaborUnion[]>([]);
   const [laborUnionSummary, setLaborUnionSummary] = useState<RegisteredLaborUnionSummary | null>(null);
+  const [infantCareRecords, setInfantCareRecords] = useState<QuasiPublicInfantCareCenter[]>([]);
+  const [infantCareSummary, setInfantCareSummary] = useState<QuasiPublicInfantCareCenterSummary | null>(null);
   const [grantRecords, setGrantRecords] = useState<IndustryGrantRecipient[]>([]);
   const [grantSummary, setGrantSummary] = useState<IndustryGrantSummary | null>(null);
   const [procurementRecords, setProcurementRecords] = useState<MetroProcurementScheduleRecord[]>([]);
@@ -246,7 +253,7 @@ export default function App() {
   const [animalHospitalRecords, setAnimalHospitalRecords] = useState<RegisteredAnimalHospital[]>([]);
   const [animalHospitalSummary, setAnimalHospitalSummary] = useState<RegisteredAnimalHospitalSummary | null>(null);
   const [report, setReport] = useState<{
-    convertedAt?: string; registeredLaborUnions?: { convertedAt?: string }; industryGrantRecipients?: { convertedAt?: string }; metroProcurementSchedules?: { convertedAt?: string }; registeredCramSchools?: { convertedAt?: string }; registeredHotels?: { convertedAt?: string }; laborStandardActViolationRecords?: { convertedAt?: string }; nangangSoftwareParkCompanies?: { convertedAt?: string }; registeredAnimalHospitals?: { convertedAt?: string };
+    convertedAt?: string; registeredLaborUnions?: { convertedAt?: string }; quasiPublicInfantCareCenters?: { convertedAt?: string }; industryGrantRecipients?: { convertedAt?: string }; metroProcurementSchedules?: { convertedAt?: string }; registeredCramSchools?: { convertedAt?: string }; registeredHotels?: { convertedAt?: string }; laborStandardActViolationRecords?: { convertedAt?: string }; nangangSoftwareParkCompanies?: { convertedAt?: string }; registeredAnimalHospitals?: { convertedAt?: string };
   }>({});
   const [filters, setFilters] = useState(emptyFilters);
   const [loadError, setLoadError] = useState(false);
@@ -263,6 +270,8 @@ export default function App() {
       loadJson('data/civic-group-summary.json'),
       loadJson('data/registered-labor-unions.json'),
       loadJson('data/registered-labor-union-summary.json'),
+      loadJson('data/quasi-public-infant-care-centers.json'),
+      loadJson('data/quasi-public-infant-care-center-summary.json'),
       loadJson('data/industry-grant-recipients.json'),
       loadJson('data/industry-grant-summary.json'),
       loadJson('data/metro-procurement-schedules.json'),
@@ -278,9 +287,10 @@ export default function App() {
       loadJson('data/registered-animal-hospitals.json'),
       loadJson('data/registered-animal-hospital-summary.json'),
       loadJson('data/conversion-report.json'),
-    ]).then(([groupData, summaryData, laborUnionData, laborUnionSummaryData, grantData, grantSummaryData, procurementData, procurementSummaryData, cramSchoolData, cramSchoolSummaryData, hotelData, hotelSummaryData, laborSummaryData, laborManifestData, nangangData, nangangSummaryData, animalData, animalSummaryData, reportData]) => {
+    ]).then(([groupData, summaryData, laborUnionData, laborUnionSummaryData, infantCareData, infantCareSummaryData, grantData, grantSummaryData, procurementData, procurementSummaryData, cramSchoolData, cramSchoolSummaryData, hotelData, hotelSummaryData, laborSummaryData, laborManifestData, nangangData, nangangSummaryData, animalData, animalSummaryData, reportData]) => {
       setGroups(groupData); setSummary(summaryData); setGrantRecords(grantData); setGrantSummary(grantSummaryData);
       setLaborUnionRecords(laborUnionData); setLaborUnionSummary(laborUnionSummaryData);
+      setInfantCareRecords(infantCareData); setInfantCareSummary(infantCareSummaryData);
       setProcurementRecords(procurementData); setProcurementSummary(procurementSummaryData);
       setCramSchoolRecords(cramSchoolData); setCramSchoolSummary(cramSchoolSummaryData);
       setHotelRecords(hotelData); setHotelSummary(hotelSummaryData);
@@ -304,7 +314,7 @@ export default function App() {
   const decades = useMemo(() => [...new Set(groups.flatMap((group) => group.foundedDecade ?? []))].sort(), [groups]);
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setCivicView('directory'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const tabs = [
-    ['civic', t.civicGroups], ['laborUnions', t.laborUnions], ['grants', t.industryGrants], ['procurement', t.metroProcurement],
+    ['civic', t.civicGroups], ['laborUnions', t.laborUnions], ['infantCare', t.infantCareCenters], ['grants', t.industryGrants], ['procurement', t.metroProcurement],
     ['cramSchools', t.registeredCramSchools], ['hotels', t.registeredHotels], ['laborViolations', t.laborViolations], ['nangangCompanies', t.nangangCompanies],
     ['animalHospitals', t.animalHospitals],
     ['comparison', t.comparison], ['overview', t.overview], ['notes', t.notes],
@@ -319,13 +329,14 @@ export default function App() {
     </header>
     <main>
       {loadError && <p className="status" role="alert">{t.loadError}</p>}
-      {!loadError && (!summary || !laborUnionSummary || !grantSummary || !procurementSummary || !cramSchoolSummary || !hotelSummary || !laborViolationSummary || !laborViolationManifest || !nangangCompanySummary || !animalHospitalSummary) && <p className="status" role="status">{t.loading}</p>}
+      {!loadError && (!summary || !laborUnionSummary || !infantCareSummary || !grantSummary || !procurementSummary || !cramSchoolSummary || !hotelSummary || !laborViolationSummary || !laborViolationManifest || !nangangCompanySummary || !animalHospitalSummary) && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
         <div className="subtabs">{civicViews.map(([id, label]) => <button className={civicView === id ? 'active' : ''} onClick={() => setCivicView(id)} key={id}>{label}</button>)}</div>
         {civicView === 'map' && activeSummary && <CivicMap summary={activeSummary} language={language} openDistrict={openDistrict} />}
         {civicView === 'directory' && <><div className="section-heading inline"><div /><strong>{filtered.length.toLocaleString()} <span>{t.found}</span></strong></div><div className="notice subtle">{t.categoryNotice}</div><GroupDirectory groups={filtered} language={language} /></>}
         {civicView === 'overview' && activeSummary && <Overview summary={activeSummary} groups={hasFilters ? filtered : groups} language={language} />}</section></>}
       {tab === 'laborUnions' && laborUnionSummary && <RegisteredLaborUnionsModule records={laborUnionRecords} summary={laborUnionSummary} language={language} />}
+      {tab === 'infantCare' && infantCareSummary && <QuasiPublicInfantCareCentersModule records={infantCareRecords} summary={infantCareSummary} language={language} />}
       {tab === 'grants' && grantSummary && <IndustryModule records={grantRecords} summary={grantSummary} language={language} />}
       {tab === 'procurement' && procurementSummary && <MetroProcurementModule records={procurementRecords} summary={procurementSummary} language={language} />}
       {tab === 'cramSchools' && cramSchoolSummary && <RegisteredCramSchoolsModule records={cramSchoolRecords} summary={cramSchoolSummary} language={language} />}
@@ -334,9 +345,9 @@ export default function App() {
       {tab === 'nangangCompanies' && nangangCompanySummary && <NangangSoftwareParkCompaniesModule records={nangangCompanyRecords} summary={nangangCompanySummary} language={language} />}
       {tab === 'animalHospitals' && animalHospitalSummary && <RegisteredAnimalHospitalsModule records={animalHospitalRecords} summary={animalHospitalSummary} language={language} />}
       {tab === 'comparison' && summary && grantSummary && <DistrictComparison groups={groups} civicSummary={summary} grants={grantRecords} grantSummary={grantSummary} language={language} />}
-      {tab === 'overview' && summary && laborUnionSummary && grantSummary && procurementSummary && cramSchoolSummary && hotelSummary && laborViolationSummary && nangangCompanySummary && animalHospitalSummary && <CombinedOverview civic={summary} laborUnions={laborUnionSummary} grants={grantSummary} procurement={procurementSummary} cramSchools={cramSchoolSummary} hotels={hotelSummary} laborViolations={laborViolationSummary} nangangCompanies={nangangCompanySummary} animalHospitals={animalHospitalSummary} language={language} />}
+      {tab === 'overview' && summary && laborUnionSummary && infantCareSummary && grantSummary && procurementSummary && cramSchoolSummary && hotelSummary && laborViolationSummary && nangangCompanySummary && animalHospitalSummary && <CombinedOverview civic={summary} laborUnions={laborUnionSummary} infantCare={infantCareSummary} grants={grantSummary} procurement={procurementSummary} cramSchools={cramSchoolSummary} hotels={hotelSummary} laborViolations={laborViolationSummary} nangangCompanies={nangangCompanySummary} animalHospitals={animalHospitalSummary} language={language} />}
       {tab === 'notes' && <section className="workspace notes"><div className="section-heading"><p>09 / METHODOLOGY</p><h2>{t.notes}</h2></div>
-        <blockquote>{language === 'zh' ? '本網站整理臺北市公開資料中的人民團體名冊、各工會名單及聯絡方式、產業補助廠商資料、捷運採購案件預定招標時程、立案補習班資訊、一般旅館名冊、勞基法違規公布紀錄、南港軟體工業園區廠商資料、動物醫院一覽表等公開資料，僅供資料探索與整理使用。各資料集性質不同，不應直接解讀為相同類型組織或活動。工會名單不代表法律狀態、會員資格、推薦程度或官方背書；動物醫院資料不代表醫療品質、即時營業狀態、急診服務、收費、醫師排班、推薦程度、醫療建議或官方背書。' : 'This site organizes Taipei public-data records such as civic group directory records, registered labor union records, industry grant recipient records, Taipei Metro planned procurement tender schedules, registered cram-school records, registered hotel records, Labor Standards Act violation publication records, Nangang Software Park company records, animal hospital directory records, and related public records for data exploration and organization only. These datasets have different meanings and should not be interpreted as the same type of organization or activity. Labor union data does not represent legal status, membership eligibility, recommendation, or official endorsement; animal hospital data does not represent medical quality, real-time operating status, emergency service, pricing, veterinarian schedules, recommendation, medical advice, or official endorsement.'}</blockquote>
+        <blockquote>{language === 'zh' ? '本網站整理臺北市公開資料中的人民團體名冊、各工會名單及聯絡方式、產業補助廠商資料、捷運採購案件預定招標時程、立案補習班資訊、一般旅館名冊、勞基法違規公布紀錄、南港軟體工業園區廠商資料、動物醫院一覽表、準公共化托嬰中心等公開資料，僅供資料探索與整理使用。各資料集性質不同，不應直接解讀為相同類型組織或活動。準公共化托嬰中心資料不代表即時收托名額、服務品質保證、推薦排名、托育建議、收費資訊、營運狀態或官方背書。' : 'This site organizes Taipei public-data records such as civic group directory records, registered labor union records, industry grant recipient records, Taipei Metro planned procurement tender schedules, registered cram-school records, registered hotel records, Labor Standards Act violation publication records, Nangang Software Park company records, animal hospital directory records, quasi-public infant care center records, and related public records for data exploration and organization only. These datasets have different meanings and should not be interpreted as the same type of organization or activity. Quasi-public infant care center data does not represent real-time vacancy, service-quality guarantee, recommendation ranking, childcare advice, pricing information, operating status, or official endorsement.'}</blockquote>
         <div className="notes-grid"><article><h3>{t.method}</h3><p>{t.methodText}</p></article>
           <article><h3>{t.fields}</h3><p>機關代碼 → agencyCode<br />名稱 → name<br />地址 → address<br />電話 → phone<br />成立日期 → foundedDateRaw</p></article>
           <article><h3>{language === 'zh' ? '工會名單資料' : 'Registered labor union data'}</h3><p>{language === 'zh' ? '來源為 CP950/Big5 CSV，欄位包含工會屬性、工會名稱、理事長、郵遞區號、通訊地址與聯絡電話。資料未提供經緯度，因此僅以臺北市行政區中心點呈現彙總；理事長姓名只在來源明細中呈現。' : 'The source is a CP950/Big5 CSV with union type, union name, chairperson, postal code, contact address, and phone fields. It provides no coordinates, so Taipei records are shown only as district-centroid summaries; chairperson names appear only in source details.'}</p></article>
@@ -347,8 +358,9 @@ export default function App() {
           <article><h3>{language === 'zh' ? '勞基法違規公布紀錄' : 'Labor violation publication records'}</h3><p>{language === 'zh' ? '資料未提供地址或經緯度，因此不建立地圖點位。民國日期會轉為西元日期；負責人姓名僅在來源明細中呈現，不作個人排名或評價。' : 'The data provides no addresses or coordinates, so it has no map layer. ROC dates are converted to Gregorian dates; responsible-person names appear only in source details and are not ranked or evaluated.'}</p></article>
           <article><h3>{language === 'zh' ? '南港軟體工業園區廠商' : 'Nangang Software Park companies'}</h3><p>{language === 'zh' ? '來源欄位名稱為經度與緯度，但資料型態接近 TWD97；系統會判斷座標型態並轉換為 WGS84。園區廠商名錄不代表即時營運或進駐狀態。' : 'Source coordinate values resemble TWD97, so the app detects the type and converts them to WGS84. The directory does not represent real-time operating or tenancy status.'}</p></article>
           <article><h3>{language === 'zh' ? '動物醫院一覽表' : 'Animal hospital directory'}</h3><p>{language === 'zh' ? '資料未提供經緯度，因此以行政區彙總與清單呈現。負責人姓名為來源資料欄位，僅於明細中呈現，不作個人排名或評價。' : 'The data provides no coordinates, so this site presents district summaries and a directory. Responsible person name is a source field shown only in details, not ranked or evaluated.'}</p></article>
-          <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48" target="_blank" rel="noreferrer">臺北市各工會名單及聯絡方式 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">臺北捷運公司採購案件預定招標時程資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15" target="_blank" rel="noreferrer">臺北市立案補習班資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651" target="_blank" rel="noreferrer">臺北市一般旅館名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5" target="_blank" rel="noreferrer">臺北市勞基法違規公布紀錄 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94" target="_blank" rel="noreferrer">臺北市動物醫院一覽表 ↗</a></p>
-            <p>{t.updated}: {report.convertedAt ? new Date(report.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredLaborUnions?.convertedAt ? new Date(report.registeredLaborUnions.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.industryGrantRecipients?.convertedAt ? new Date(report.industryGrantRecipients.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.metroProcurementSchedules?.convertedAt ? new Date(report.metroProcurementSchedules.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredCramSchools?.convertedAt ? new Date(report.registeredCramSchools.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredHotels?.convertedAt ? new Date(report.registeredHotels.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.laborStandardActViolationRecords?.convertedAt ? new Date(report.laborStandardActViolationRecords.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredAnimalHospitals?.convertedAt ? new Date(report.registeredAnimalHospitals.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}</p></article></div>
+          <article><h3>{language === 'zh' ? '準公共化托嬰中心' : 'Quasi-public infant care centers'}</h3><p>{language === 'zh' ? '資料未提供經緯度，因此以行政區彙總與清單呈現。表列收托差額由核定收托人數與實際收托人數衍生，不是即時可收托名額。' : 'The data provides no coordinates, so this site presents district summaries and a directory. Listed capacity gap is derived from approved capacity and actual enrollment; it is not real-time vacancy.'}</p></article>
+          <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48" target="_blank" rel="noreferrer">臺北市各工會名單及聯絡方式 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">臺北捷運公司採購案件預定招標時程資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15" target="_blank" rel="noreferrer">臺北市立案補習班資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651" target="_blank" rel="noreferrer">臺北市一般旅館名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5" target="_blank" rel="noreferrer">臺北市勞基法違規公布紀錄 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94" target="_blank" rel="noreferrer">臺北市動物醫院一覽表 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=aeaaa517-089c-42a7-ad5b-60fef89c3545" target="_blank" rel="noreferrer">臺北市準公共化托嬰中心 ↗</a></p>
+            <p>{t.updated}: {report.convertedAt ? new Date(report.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredLaborUnions?.convertedAt ? new Date(report.registeredLaborUnions.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.quasiPublicInfantCareCenters?.convertedAt ? new Date(report.quasiPublicInfantCareCenters.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.industryGrantRecipients?.convertedAt ? new Date(report.industryGrantRecipients.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.metroProcurementSchedules?.convertedAt ? new Date(report.metroProcurementSchedules.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredCramSchools?.convertedAt ? new Date(report.registeredCramSchools.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredHotels?.convertedAt ? new Date(report.registeredHotels.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.laborStandardActViolationRecords?.convertedAt ? new Date(report.laborStandardActViolationRecords.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}<br />{report.registeredAnimalHospitals?.convertedAt ? new Date(report.registeredAnimalHospitals.convertedAt).toLocaleString(language === 'zh' ? 'zh-TW' : 'en') : '—'}</p></article></div>
       </section>}
     </main>
     <footer>{t.footer}</footer>

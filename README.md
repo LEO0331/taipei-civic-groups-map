@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, labor-law compliance publication records, Nangang Software Park companies, and registered animal hospitals / 公開資料模組：人民團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、勞動法規公開紀錄、南港軟體工業園區廠商與動物醫院一覽表
+Public-record modules: civic groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, labor-law compliance publication records, Nangang Software Park companies, registered animal hospitals, and quasi-public infant care centers / 公開資料模組：人民團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、勞動法規公開紀錄、南港軟體工業園區廠商、動物醫院一覽表與準公共化托嬰中心
 
 ## Purpose
 
@@ -10,6 +10,7 @@ The app presents separate Taipei Open Data modules:
 
 - [臺北市人民團體名冊](https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084): civic group directory, district distribution, founding years, and inferred categories.
 - [臺北市各工會名單及聯絡方式](https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48): registered labor union directory, union-type grouping, contact-address parsing, phone classification, and district summaries.
+- [臺北市準公共化托嬰中心](https://data.taipei/dataset/detail?id=aeaaa517-089c-42a7-ad5b-60fef89c3545): quasi-public infant care center directory, district summaries, approved capacity, actual enrollment, listed capacity gap, occupancy rate, and evaluation-result grouping.
 - [臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料](https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695): industry grant recipient companies, approved subsidy amounts, project budgets, grant fields, and industry categories.
 - [臺北捷運公司採購案件預定招標時程資訊](https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570): monthly Taipei Metro planned procurement tender schedule records, subject categories, derived tender methods, and case keywords.
 - [臺北市立案補習班資訊](https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15): registered cram-school public registry records, district summaries, filing dates, classroom counts, and classroom/premises areas.
@@ -31,6 +32,12 @@ The civic-group and grant datasets do not supply organization coordinates. Their
 Labor unions remain the separate `registered_labor_unions` module. The source uses CP950/Big5-compatible encoding and includes union type, union name, chairperson, postal code, contact address, and phone fields. Conversion preserves postal codes, phone text, and chairperson names; chairperson names are shown only in expanded source details.
 
 The dataset has no coordinates. The map uses Taipei district centroid bubbles only. Outside-Taipei addresses, postal boxes, and unparsed addresses remain in directory/search/statistics but are not mapped as exact points. The module does not claim legal status, membership eligibility, recommendation, labor-relations advice, ranking, or official endorsement.
+
+## Additional module: Quasi-Public Infant Care Centers / 準公共化托嬰中心
+
+Infant care centers remain the separate `quasi_public_infant_care_centers` module. The source uses UTF-8-SIG, with Big5/CP950 fallback. Conversion preserves phone text, parses district/address/road name, parses approved capacity and actual enrollment, derives listed capacity gap and occupancy rate, and splits evaluation results into ROC year and grade.
+
+The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Listed capacity gap is not real-time vacancy. The module does not claim real-time availability, service-quality guarantee, recommendation, childcare advice, pricing, operating status, ranking, or official endorsement.
 
 ## Additional module: Metro Procurement Schedule / 捷運採購時程
 
@@ -85,6 +92,8 @@ Generated files:
 - `public/data/conversion-report.json`
 - `public/data/registered-labor-unions.json`
 - `public/data/registered-labor-union-summary.json`
+- `public/data/quasi-public-infant-care-centers.json`
+- `public/data/quasi-public-infant-care-center-summary.json`
 - `public/data/industry-grant-recipients.json`
 - `public/data/industry-grant-summary.json`
 - `public/data/metro-procurement-schedules.json`
@@ -138,6 +147,14 @@ Labor union data can be loaded from the uploaded CSV or an official resource:
 ```bash
 npm run data:fetch:labor-unions -- --force --local=/absolute/path/to/臺北市各工會名單及聯絡方式.csv
 npm run data:convert:labor-unions
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Infant care center data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:infant-care -- --force --local=/absolute/path/to/臺北市準公共化托嬰中心.csv
+npm run data:convert:infant-care
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 
@@ -205,6 +222,8 @@ Push `main` to deploy through `.github/workflows/deploy.yml`. Vite is configured
 This site presents public records for exploration and organization. The modules contain different record types and their counts are not directly comparable as measures of importance, effectiveness, procurement scale, or activity.
 
 Registered labor union directory data is a public contact directory only. It does not represent legal status, membership eligibility, recommendation, labor-relations advice, ranking, or official endorsement. Chairperson names are shown only in source details.
+
+Quasi-public infant care center data is a public directory only. It does not represent real-time vacancy, service-quality guarantee, recommendation ranking, childcare advice, pricing information, operating status, or official endorsement. Listed capacity gap is derived from source fields and is not real-time vacancy.
 
 Taipei Metro procurement schedule data is a planned schedule only. Actual announcement timing, tender documents, eligibility requirements, procurement amounts, and latest status should be verified through the Government e-Procurement System and official authority notices.
 

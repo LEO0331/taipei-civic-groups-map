@@ -2,19 +2,21 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, labor-law compliance publication records, and Nangang Software Park companies / 公開資料模組：人民團體、產業補助、捷運採購時程、立案補習班、一般旅館名冊、勞動法規公開紀錄與南港軟體工業園區廠商
+Public-record modules: civic groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, labor-law compliance publication records, Nangang Software Park companies, and registered animal hospitals / 公開資料模組：人民團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、勞動法規公開紀錄、南港軟體工業園區廠商與動物醫院一覽表
 
 ## Purpose
 
 The app presents separate Taipei Open Data modules:
 
 - [臺北市人民團體名冊](https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084): civic group directory, district distribution, founding years, and inferred categories.
+- [臺北市各工會名單及聯絡方式](https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48): registered labor union directory, union-type grouping, contact-address parsing, phone classification, and district summaries.
 - [臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料](https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695): industry grant recipient companies, approved subsidy amounts, project budgets, grant fields, and industry categories.
 - [臺北捷運公司採購案件預定招標時程資訊](https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570): monthly Taipei Metro planned procurement tender schedule records, subject categories, derived tender methods, and case keywords.
 - [臺北市立案補習班資訊](https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15): registered cram-school public registry records, district summaries, filing dates, classroom counts, and classroom/premises areas.
 - [臺北市一般旅館名冊](https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651): general hotel registry records, district summaries, listed room-rate fields, and room counts.
 - [臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表](https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5): Labor Standards Act violation publication records, announcement/disposition dates, provisions, source-text violation contents, and parsed penalty amounts.
 - [臺北市南港軟體工業園區廠商資料名錄](https://data.taipei/dataset/detail?id=6b7c48b4-03a6-4fcc-b172-9cee415c20b9): Nangang Software Park public company directory, business IDs, addresses, detected TWD97/WGS84 coordinates, and grouped map locations.
+- [臺北市動物醫院一覽表](https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94): animal hospital public directory records, district summaries, road-name grouping, phone lookup, and address-based map links.
 
 Traditional Chinese is the default language; English is available in the header.
 
@@ -23,6 +25,12 @@ Traditional Chinese is the default language; English is available in the header.
 Grant recipients are not civic groups and remain a separate directory. The source CSV uses CP950/Big5-compatible encoding. Conversion handles ROC dates, NTD currency fields, district normalization, subsidy shares, and summary aggregation. The responsible-person field remains in generated source data but is not shown in default company cards.
 
 The civic-group and grant datasets do not supply organization coordinates. Their maps use Taipei’s 12 district centroids and display aggregate bubbles only, not exact locations.
+
+## Additional module: Registered Labor Unions / 工會名單
+
+Labor unions remain the separate `registered_labor_unions` module. The source uses CP950/Big5-compatible encoding and includes union type, union name, chairperson, postal code, contact address, and phone fields. Conversion preserves postal codes, phone text, and chairperson names; chairperson names are shown only in expanded source details.
+
+The dataset has no coordinates. The map uses Taipei district centroid bubbles only. Outside-Taipei addresses, postal boxes, and unparsed addresses remain in directory/search/statistics but are not mapped as exact points. The module does not claim legal status, membership eligibility, recommendation, labor-relations advice, ranking, or official endorsement.
 
 ## Additional module: Metro Procurement Schedule / 捷運採購時程
 
@@ -50,6 +58,12 @@ Records are chunked by announcement year and lazy-loaded only for the directory.
 
 The company directory remains separate from civic groups and grants. Business IDs stay as strings to preserve leading zeroes. The source coordinate columns are detected as WGS84 or TWD97/EPSG:3826; valid TWD97 points are converted to WGS84 and grouped by shared coordinate for map display. Company-name keyword tags are a site-derived aid, not official industry classifications. The directory is not evidence of operating status, investment value, real-time tenancy, or government recommendation.
 
+## Additional module: Registered Animal Hospitals / 動物醫院一覽表
+
+Animal hospitals remain the separate `registered_animal_hospitals` module. The uploaded CSV uses UTF-8-SIG, with Big5/CP950 fallback in conversion. The converter preserves phone text, extracts district and road names from addresses, and keeps responsible-person names only for source details.
+
+The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. The module does not claim medical quality, emergency service, real-time operating status, recommendation, ranking, or medical advice.
+
 ## Data processing
 
 Source fields:
@@ -69,6 +83,8 @@ Generated files:
 - `public/data/civic-groups.json`
 - `public/data/civic-group-summary.json`
 - `public/data/conversion-report.json`
+- `public/data/registered-labor-unions.json`
+- `public/data/registered-labor-union-summary.json`
 - `public/data/industry-grant-recipients.json`
 - `public/data/industry-grant-summary.json`
 - `public/data/metro-procurement-schedules.json`
@@ -82,6 +98,8 @@ Generated files:
 - `public/data/labor-standard-act-violation-summary.json`
 - `public/data/nangang-software-park-companies.json`
 - `public/data/nangang-software-park-company-summary.json`
+- `public/data/registered-animal-hospitals.json`
+- `public/data/registered-animal-hospital-summary.json`
 - `public/data/public-records-summary.json`
 
 ## Local development
@@ -115,6 +133,14 @@ npm run data:fetch:industry-grants -- --force --local=/absolute/path/to/grants.c
 npm run data:convert:industry-grants
 ```
 
+Labor union data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:labor-unions -- --force --local=/absolute/path/to/臺北市各工會名單及聯絡方式.csv
+npm run data:convert:labor-unions
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
 Metro procurement data can be refreshed from every monthly resource on the official page:
 
 ```bash
@@ -146,6 +172,14 @@ npm run data:convert:nangang-software-park
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 
+Animal hospital data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:animal-hospitals -- --force --local=/absolute/path/to/臺北市動物醫院一覽表.csv
+npm run data:convert:animal-hospitals
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
 To add a local monthly file:
 
 ```bash
@@ -170,8 +204,12 @@ Push `main` to deploy through `.github/workflows/deploy.yml`. Vite is configured
 
 This site presents public records for exploration and organization. The modules contain different record types and their counts are not directly comparable as measures of importance, effectiveness, procurement scale, or activity.
 
+Registered labor union directory data is a public contact directory only. It does not represent legal status, membership eligibility, recommendation, labor-relations advice, ranking, or official endorsement. Chairperson names are shown only in source details.
+
 Taipei Metro procurement schedule data is a planned schedule only. Actual announcement timing, tender documents, eligibility requirements, procurement amounts, and latest status should be verified through the Government e-Procurement System and official authority notices.
 
 Registered cram-school data is a public registration directory only. It does not represent teaching quality, enrollment status, course content, pricing, real-time business status, or recommendation.
 
 Labor Standards Act violation publication records are administrative publication records for lookup and statistical organization only. They do not represent current operating status, real-time violation status, overall employer evaluation, job-seeking advice, legal advice, or court outcomes. Responsible-person names are shown only in source details.
+
+Animal hospital directory data is for lookup, district distribution, and public-data exploration only. It does not represent medical quality, real-time operating status, emergency service, pricing, veterinarian schedules, recommendation, medical advice, or official endorsement. Responsible-person names are shown only in source details.

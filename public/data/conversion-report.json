@@ -961,5 +961,73 @@
       "Coordinate source is detected; EPSG:3826 is converted to WGS84",
       "Company-name keyword tags are heuristic and not official industry categories"
     ]
+  },
+  "registeredAnimalHospitals": {
+    "source": "臺北市動物醫院一覽表",
+    "sourceAgency": "臺北市政府產業發展局動物保護處",
+    "officialSourceAgencyShort": "產業局動保處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94",
+    "category": "農業",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "description": "提供臺北市動物醫院資料。",
+    "inputFile": "registered-animal-hospitals.csv",
+    "convertedAt": "2026-06-29T00:49:03.645Z",
+    "fileSize": 22511,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 270,
+    "outputRecords": 270,
+    "duplicateKeys": [],
+    "recordsWithoutDistrict": 0,
+    "addressWarningExamples": [],
+    "phoneWarningExamples": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings and column names trimmed",
+      "Phone values preserved as source text",
+      "No coordinates supplied; records use address_only precision",
+      "Responsible person names are preserved but intended for source details only"
+    ]
+  },
+  "registeredLaborUnions": {
+    "source": "臺北市各工會名單及聯絡方式",
+    "sourceAgency": "臺北市政府勞動局",
+    "officialSourceAgencyShort": "勞動局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48",
+    "category": "勞動",
+    "serviceCategory": "求職及就業",
+    "datasetType": "原始資料",
+    "updateFrequency": "每3月",
+    "inputFile": "registered-labor-unions.csv",
+    "convertedAt": "2026-06-29T01:14:26.659Z",
+    "fileSize": 67478,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 702,
+    "outputRecords": 702,
+    "duplicateKeys": [],
+    "recordsWithoutPhone": 116,
+    "recordsWithoutChairpersonName": 1,
+    "taipeiAddressCount": 657,
+    "nonTaipeiAddressCount": 37,
+    "postalBoxOrUnparsedAddressCount": 8,
+    "addressWarningExamples": [
+      "臺北市龍江路郵局121-53號信箱",
+      "臺北市錦州街36號6樓",
+      "臺北市中山北路6段90號13樓",
+      "臺北市羅斯福路6段107號1樓",
+      "臺北郵局第45-62號信箱",
+      "臺北郵政45之10號",
+      "台北市羅斯福路6段378號12樓",
+      "臺北市杭南郵局第631號信箱"
+    ],
+    "phoneWarningExamples": [],
+    "postalCodeWarningExamples": [],
+    "notes": [
+      "CP950/Big5 decoded with UTF-8-SIG fallback",
+      "Strings and column names trimmed",
+      "Phone values preserved as source text",
+      "No geocoding used; Taipei addresses use district centroids only",
+      "Chairperson names are preserved but shown only in source details"
+    ]
   }
 }

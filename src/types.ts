@@ -1,9 +1,13 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies';
-export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'missing';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals';
+export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
 export type CompanyNameKeywordTag = 'technology' | 'software' | 'biotech' | 'medical' | 'energy' | 'semiconductor' | 'data_or_digital' | 'media_or_creative' | 'investment_or_asset' | 'other' | 'unknown';
+export type AnimalHospitalPhoneType = 'landline' | 'mobile' | 'extension' | 'unknown';
+export type RegisteredLaborUnionType = 'occupational_union' | 'enterprise_union' | 'industrial_union' | 'union_federation' | 'other' | 'unknown';
+export type LaborUnionPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'missing' | 'unknown';
+export type LaborUnionAddressLocationCategory = 'taipei_address' | 'new_taipei_address' | 'other_taiwan_address' | 'postal_box_or_unparsed' | 'missing';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -56,6 +60,70 @@ export type CivicGroupFilters = {
   yearFrom: string;
   yearTo: string;
   phone: string;
+};
+
+export type RegisteredLaborUnion = {
+  id: string;
+  module: 'registered_labor_unions';
+  sourceSequenceNumber?: number;
+  unionAttributeRaw?: string;
+  unionType: RegisteredLaborUnionType;
+  unionName: string;
+  chairpersonName?: string;
+  hasChairpersonName: boolean;
+  postalCode?: string;
+  contactAddress?: string;
+  addressNormalized?: string;
+  city?: string;
+  district?: string;
+  roadName?: string;
+  isTaipeiAddress: boolean;
+  addressLocationCategory: LaborUnionAddressLocationCategory;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: LaborUnionPhoneType;
+  hasPhone: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type RegisteredLaborUnionSummary = {
+  totalRecords: number;
+  uniqueUnionNameCount: number;
+  uniqueAddressCount: number;
+  uniqueChairpersonNameCount: number;
+  recordsWithPhone: number;
+  recordsMissingPhone: number;
+  recordsWithChairpersonName: number;
+  recordsMissingChairpersonName: number;
+  taipeiAddressCount: number;
+  nonTaipeiAddressCount: number;
+  postalBoxOrUnparsedAddressCount: number;
+  districtCount: number;
+  byUnionType: Array<{ unionType: RegisteredLaborUnionType; unionAttributeRaw?: string; count: number }>;
+  byDistrict: Array<{ district: string; count: number; unionTypes: Array<{ unionType: RegisteredLaborUnionType; count: number }> }>;
+  byAddressLocationCategory: Array<{ addressLocationCategory: LaborUnionAddressLocationCategory; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  byPhoneType: Array<{ phoneType: LaborUnionPhoneType; count: number }>;
+  duplicateAddressGroups: Array<{ address: string; count: number; sampleUnionNames: string[] }>;
+  byPostalCode: Array<{ postalCode: string; count: number }>;
+};
+
+export type RegisteredLaborUnionFilters = {
+  search: string;
+  unionType: string;
+  district: string;
+  addressLocationCategory: string;
+  city: string;
+  postalCode: string;
+  roadName: string;
+  phoneType: string;
+  hasPhone: string;
+  hasChairpersonName: string;
 };
 
 export type IndustryGrantRecipient = {
@@ -308,6 +376,53 @@ export type RegisteredHotelFilters = {
   listedRoomRateMin: string;
   listedRoomRateMax: string;
   roomCountBucket: string;
+};
+
+export type RegisteredAnimalHospital = {
+  id: string;
+  module: 'registered_animal_hospitals';
+  city?: string;
+  animalHospitalName: string;
+  address?: string;
+  addressNormalized?: string;
+  postalCode?: string;
+  district?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: AnimalHospitalPhoneType;
+  hasPhone: boolean;
+  responsiblePersonName?: string;
+  hasResponsiblePersonName: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type RegisteredAnimalHospitalSummary = {
+  totalRecords: number;
+  uniqueAnimalHospitalNameCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithResponsiblePersonName: number;
+  recordsWithAddress: number;
+  byDistrict: Array<{ district: string; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  byPhoneType: Array<{ phoneType: AnimalHospitalPhoneType; count: number }>;
+  duplicateAddressGroups: Array<{ address: string; count: number; sampleAnimalHospitalNames: string[] }>;
+};
+
+export type RegisteredAnimalHospitalFilters = {
+  search: string;
+  district: string;
+  roadName: string;
+  phoneType: string;
+  hasPhone: string;
+  hasResponsiblePersonName: string;
 };
 
 export type NangangSoftwareParkCompany = {

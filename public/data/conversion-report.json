@@ -1061,5 +1061,34 @@
       "No geocoding used; records use district centroids only",
       "Listed capacity gap is derived from source fields and is not real-time vacancy"
     ]
+  },
+  "taipeiTravelAccommodationsZh": {
+    "source": "臺北市臺北旅遊網住宿資料(中文)",
+    "sourceAgency": "臺北市政府觀光傳播局",
+    "officialSourceAgencyShort": "觀傳局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=58093ba6-4c98-4148-b27a-50ad97d7afca",
+    "category": "觀光",
+    "serviceCategory": "休閒旅遊",
+    "datasetType": "網路服務",
+    "updateFrequency": "不定期更新",
+    "language": "中文",
+    "inputFile": "taipei-travel-accommodations-zh.csv",
+    "convertedAt": "2026-06-29T06:18:54.405Z",
+    "fileSize": 52777,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 619,
+    "outputRecords": 619,
+    "duplicateKeys": [],
+    "roomWarningExamples": [],
+    "addressWarningExamples": [],
+    "phoneWarningExamples": [],
+    "totalRoomCount": 41721,
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings and column names trimmed",
+      "Phone and fax values preserved as source text",
+      "No geocoding used; records use district centroids only when district is parsed",
+      "This is not booking, vacancy, price, quality, ranking, travel-advice, or safety-guarantee data"
+    ]
   }
 }

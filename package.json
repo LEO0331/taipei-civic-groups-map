@@ -11,6 +11,7 @@
     "data:fetch:civic-groups": "tsx scripts/fetchCivicGroups.ts",
     "data:fetch:labor-unions": "tsx scripts/fetchRegisteredLaborUnions.ts",
     "data:fetch:infant-care": "tsx scripts/fetchQuasiPublicInfantCareCenters.ts",
+    "data:fetch:travel-accommodations": "tsx scripts/fetchTaipeiTravelAccommodationsZh.ts",
     "data:fetch:industry-grants": "tsx scripts/fetchIndustryGrantRecipients.ts",
     "data:fetch:metro-procurement": "tsx scripts/fetchMetroProcurementSchedules.ts",
     "data:fetch:registered-cram-schools": "tsx scripts/fetchRegisteredCramSchools.ts",
@@ -18,10 +19,11 @@
     "data:fetch:labor-violations": "tsx scripts/fetchLaborStandardActViolationRecords.ts",
     "data:fetch:nangang-software-park": "tsx scripts/fetchNangangSoftwareParkCompanies.ts",
     "data:fetch:animal-hospitals": "tsx scripts/fetchRegisteredAnimalHospitals.ts",
-    "data:fetch": "npm run data:fetch:civic-groups && npm run data:fetch:labor-unions && npm run data:fetch:infant-care && npm run data:fetch:industry-grants && npm run data:fetch:metro-procurement && npm run data:fetch:registered-cram-schools && npm run data:fetch:registered-hotels && npm run data:fetch:labor-violations && npm run data:fetch:nangang-software-park && npm run data:fetch:animal-hospitals",
+    "data:fetch": "npm run data:fetch:civic-groups && npm run data:fetch:labor-unions && npm run data:fetch:infant-care && npm run data:fetch:travel-accommodations && npm run data:fetch:industry-grants && npm run data:fetch:metro-procurement && npm run data:fetch:registered-cram-schools && npm run data:fetch:registered-hotels && npm run data:fetch:labor-violations && npm run data:fetch:nangang-software-park && npm run data:fetch:animal-hospitals",
     "data:convert:civic-groups": "tsx scripts/convertCivicGroups.ts && tsx scripts/buildCivicGroupSummary.ts",
     "data:convert:labor-unions": "tsx scripts/convertRegisteredLaborUnions.ts && tsx scripts/buildRegisteredLaborUnionSummary.ts",
     "data:convert:infant-care": "tsx scripts/convertQuasiPublicInfantCareCenters.ts && tsx scripts/buildQuasiPublicInfantCareCenterSummary.ts",
+    "data:convert:travel-accommodations": "tsx scripts/convertTaipeiTravelAccommodationsZh.ts && tsx scripts/buildTaipeiTravelAccommodationZhSummary.ts",
     "data:convert:industry-grants": "tsx scripts/convertIndustryGrantRecipients.ts && tsx scripts/buildIndustryGrantSummary.ts",
     "data:convert:metro-procurement": "tsx scripts/convertMetroProcurementSchedules.ts && tsx scripts/buildMetroProcurementSummary.ts",
     "data:convert:registered-cram-schools": "tsx scripts/convertRegisteredCramSchools.ts && tsx scripts/buildRegisteredCramSchoolSummary.ts",
@@ -29,7 +31,7 @@
     "data:convert:labor-violations": "tsx scripts/convertLaborStandardActViolationRecords.ts && tsx scripts/buildLaborStandardActViolationSummary.ts",
     "data:convert:nangang-software-park": "tsx scripts/convertNangangSoftwareParkCompanies.ts && tsx scripts/buildNangangSoftwareParkCompanySummary.ts",
     "data:convert:animal-hospitals": "tsx scripts/convertRegisteredAnimalHospitals.ts && tsx scripts/buildRegisteredAnimalHospitalSummary.ts",
-    "data:convert": "npm run data:convert:civic-groups && npm run data:convert:labor-unions && npm run data:convert:infant-care && npm run data:convert:industry-grants && npm run data:convert:metro-procurement && npm run data:convert:registered-cram-schools && npm run data:convert:registered-hotels && npm run data:convert:labor-violations && npm run data:convert:nangang-software-park && npm run data:convert:animal-hospitals && tsx scripts/buildPublicRecordsSummary.ts"
+    "data:convert": "npm run data:convert:civic-groups && npm run data:convert:labor-unions && npm run data:convert:infant-care && npm run data:convert:travel-accommodations && npm run data:convert:industry-grants && npm run data:convert:metro-procurement && npm run data:convert:registered-cram-schools && npm run data:convert:registered-hotels && npm run data:convert:labor-violations && npm run data:convert:nangang-software-park && npm run data:convert:animal-hospitals && tsx scripts/buildPublicRecordsSummary.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

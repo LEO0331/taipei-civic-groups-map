@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -12,6 +12,9 @@ export type InfantCareCenterPhoneType = 'taipei_landline' | 'mobile' | 'extensio
 export type InfantCareCapacityStatus = 'apparent_full' | 'apparent_remaining_capacity' | 'unknown';
 export type InfantCareEvaluationGrade = 'excellent' | 'grade_a' | 'grade_b' | 'grade_c' | 'other' | 'missing' | 'unknown';
 export type InfantCareCenterOperationType = 'private_infant_care_center' | 'public_childcare_home' | 'public_or_commissioned_center' | 'other' | 'unknown';
+export type TaipeiTravelAccommodationCategory = 'hotel' | 'hostel' | 'guesthouse' | 'tourist_hotel' | 'other' | 'unknown';
+export type AccommodationPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'missing' | 'unknown';
+export type AccommodationRoomCountBucket = 'small_1_20' | 'medium_21_50' | 'large_51_100' | 'very_large_101_plus' | 'missing' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -203,6 +206,65 @@ export type QuasiPublicInfantCareCenterFilters = {
   occupancyMin: string;
   occupancyMax: string;
   phoneType: string;
+};
+
+export type TaipeiTravelAccommodationZhRecord = {
+  id: string;
+  module: 'taipei_travel_accommodations_zh';
+  accommodationCategoryRaw?: string;
+  accommodationCategory: TaipeiTravelAccommodationCategory;
+  accommodationName: string;
+  address?: string;
+  addressNormalized?: string;
+  district?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: AccommodationPhoneType;
+  hasPhone: boolean;
+  fax?: string;
+  faxDisplay?: string;
+  hasFax: boolean;
+  roomCount?: number;
+  hasRoomCount: boolean;
+  roomCountBucket: AccommodationRoomCountBucket;
+  possibleRegisteredHotelMatchKey?: string;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type TaipeiTravelAccommodationZhSummary = {
+  totalRecords: number;
+  uniqueAccommodationNameCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithFax: number;
+  recordsWithRoomCount: number;
+  totalRoomCount?: number;
+  averageRoomCount?: number;
+  medianRoomCount?: number;
+  byAccommodationCategory: Array<{ accommodationCategory: TaipeiTravelAccommodationCategory; accommodationCategoryRaw?: string; count: number; totalRoomCount?: number }>;
+  byDistrict: Array<{ district: string; accommodationCount: number; totalRoomCount?: number; categoryBreakdown: Array<{ accommodationCategory: TaipeiTravelAccommodationCategory; count: number }> }>;
+  byRoomCountBucket: Array<{ roomCountBucket: AccommodationRoomCountBucket; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number; totalRoomCount?: number }>;
+  possibleOverlapWithRegisteredHotels?: { matchedCount: number; unmatchedCount: number };
+};
+
+export type TaipeiTravelAccommodationZhFilters = {
+  search: string;
+  accommodationCategory: string;
+  district: string;
+  roadName: string;
+  roomCountBucket: string;
+  roomCountMin: string;
+  roomCountMax: string;
+  hasPhone: string;
+  hasFax: string;
 };
 
 export type IndustryGrantRecipient = {

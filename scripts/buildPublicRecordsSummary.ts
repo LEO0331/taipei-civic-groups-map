@@ -1,12 +1,13 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { CivicGroupSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary } from '../src/types';
+import type { CivicGroupSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary } from '../src/types';
 
 const dataDir = join(process.cwd(), 'public/data');
-const [civicGroups, laborUnions, infantCare, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
+const [civicGroups, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
   readFile(join(dataDir, 'civic-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as CivicGroupSummary),
   readFile(join(dataDir, 'registered-labor-union-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredLaborUnionSummary),
   readFile(join(dataDir, 'quasi-public-infant-care-center-summary.json'), 'utf8').then((text) => JSON.parse(text) as QuasiPublicInfantCareCenterSummary),
+  readFile(join(dataDir, 'taipei-travel-accommodation-zh-summary.json'), 'utf8').then((text) => JSON.parse(text) as TaipeiTravelAccommodationZhSummary),
   readFile(join(dataDir, 'industry-grant-summary.json'), 'utf8').then((text) => JSON.parse(text) as IndustryGrantSummary),
   readFile(join(dataDir, 'metro-procurement-summary.json'), 'utf8').then((text) => JSON.parse(text) as MetroProcurementScheduleSummary),
   readFile(join(dataDir, 'registered-cram-school-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredCramSchoolSummary),
@@ -21,6 +22,7 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
     civicGroups: { recordCount: civicGroups.total },
     registeredLaborUnions: { recordCount: laborUnions.totalRecords, districtCount: laborUnions.districtCount, taipeiAddressCount: laborUnions.taipeiAddressCount },
     quasiPublicInfantCareCenters: { recordCount: infantCare.totalRecords, districtCount: infantCare.districtCount, totalApprovedCapacity: infantCare.totalApprovedCapacity, totalActualEnrollment: infantCare.totalActualEnrollment },
+    taipeiTravelAccommodationsZh: { recordCount: travelAccommodations.totalRecords, districtCount: travelAccommodations.districtCount, totalRoomCount: travelAccommodations.totalRoomCount },
     industryGrantRecipients: { recordCount: industryGrants.totalRecords, uniqueCompanyCount: industryGrants.uniqueCompanyCount },
     metroProcurementSchedule: { recordCount: metroProcurement.totalRecords, periodCount: metroProcurement.periodCount },
     registeredCramSchools: { recordCount: registeredCramSchools.totalRecords, districtCount: registeredCramSchools.districtCount },

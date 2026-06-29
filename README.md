@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, labor-law compliance publication records, Nangang Software Park companies, registered animal hospitals, and quasi-public infant care centers / 公開資料模組：人民團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、勞動法規公開紀錄、南港軟體工業園區廠商、動物醫院一覽表與準公共化托嬰中心
+Public-record modules: civic groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, Nangang Software Park companies, registered animal hospitals, and quasi-public infant care centers / 公開資料模組：人民團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、南港軟體工業園區廠商、動物醫院一覽表與準公共化托嬰中心
 
 ## Purpose
 
@@ -15,6 +15,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北捷運公司採購案件預定招標時程資訊](https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570): monthly Taipei Metro planned procurement tender schedule records, subject categories, derived tender methods, and case keywords.
 - [臺北市立案補習班資訊](https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15): registered cram-school public registry records, district summaries, filing dates, classroom counts, and classroom/premises areas.
 - [臺北市一般旅館名冊](https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651): general hotel registry records, district summaries, listed room-rate fields, and room counts.
+- [臺北市臺北旅遊網住宿資料(中文)](https://data.taipei/dataset/detail?id=58093ba6-4c98-4148-b27a-50ad97d7afca): Taipei Travel tourism-facing accommodation records, categories, contact fields, district summaries, and listed room counts.
 - [臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表](https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5): Labor Standards Act violation publication records, announcement/disposition dates, provisions, source-text violation contents, and parsed penalty amounts.
 - [臺北市南港軟體工業園區廠商資料名錄](https://data.taipei/dataset/detail?id=6b7c48b4-03a6-4fcc-b172-9cee415c20b9): Nangang Software Park public company directory, business IDs, addresses, detected TWD97/WGS84 coordinates, and grouped map locations.
 - [臺北市動物醫院一覽表](https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94): animal hospital public directory records, district summaries, road-name grouping, phone lookup, and address-based map links.
@@ -54,6 +55,12 @@ The dataset has no longitude or latitude columns. The map uses Taipei district c
 ## Additional module: Registered Hotels / 一般旅館名冊
 
 Registered hotels remain a separate `registered_hotels` module. The source uses CP950/Big5-compatible encoding, has no coordinates, and is presented as district summaries plus an address-based directory. Listed room-rate fields are public registry fields, not real-time or booking prices.
+
+## Additional module: Taipei Travel Accommodations / 臺北旅遊網住宿資料
+
+Taipei Travel accommodations remain the separate `taipei_travel_accommodations_zh` module. It is a tourism-facing accommodation directory, distinct from the administrative `registered_hotels` registry even when records overlap. Conversion preserves phone and fax text, parses address/district/road names, parses listed room count, and groups records by source accommodation category.
+
+The dataset has no official coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. The module does not claim booking availability, real-time vacancy, pricing, recommendation, ranking, accommodation quality, travel advice, safety guarantee, or official endorsement.
 
 ## Additional module: Labor Standards Act Violation Records / 勞基法違規公布紀錄
 
@@ -102,6 +109,8 @@ Generated files:
 - `public/data/registered-cram-school-summary.json`
 - `public/data/registered-hotels.json`
 - `public/data/registered-hotel-summary.json`
+- `public/data/taipei-travel-accommodations-zh.json`
+- `public/data/taipei-travel-accommodation-zh-summary.json`
 - `public/data/labor-standard-act-violation-records/manifest.json`
 - `public/data/labor-standard-act-violation-records/chunks/by-announcement-year/*.json`
 - `public/data/labor-standard-act-violation-summary.json`
@@ -155,6 +164,14 @@ Infant care center data can be loaded from the uploaded CSV or an official resou
 ```bash
 npm run data:fetch:infant-care -- --force --local=/absolute/path/to/臺北市準公共化托嬰中心.csv
 npm run data:convert:infant-care
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Taipei Travel accommodation data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:travel-accommodations -- --force --local=/absolute/path/to/臺北市臺北旅遊網住宿資料\(中文\).csv
+npm run data:convert:travel-accommodations
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 
@@ -224,6 +241,8 @@ This site presents public records for exploration and organization. The modules 
 Registered labor union directory data is a public contact directory only. It does not represent legal status, membership eligibility, recommendation, labor-relations advice, ranking, or official endorsement. Chairperson names are shown only in source details.
 
 Quasi-public infant care center data is a public directory only. It does not represent real-time vacancy, service-quality guarantee, recommendation ranking, childcare advice, pricing information, operating status, or official endorsement. Listed capacity gap is derived from source fields and is not real-time vacancy.
+
+Taipei Travel accommodation data is a public tourism accommodation directory only. It does not represent real-time operating status, real-time vacancy, pricing, booking service, accommodation quality, recommendation ranking, travel advice, safety guarantee, or official endorsement.
 
 Taipei Metro procurement schedule data is a planned schedule only. Actual announcement timing, tender documents, eligibility requirements, procurement amounts, and latest status should be verified through the Government e-Procurement System and official authority notices.
 

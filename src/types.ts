@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -16,6 +16,11 @@ export type TaipeiTravelAccommodationCategory = 'hotel' | 'hostel' | 'guesthouse
 export type AccommodationPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'missing' | 'unknown';
 export type AccommodationRoomCountBucket = 'small_1_20' | 'medium_21_50' | 'large_51_100' | 'very_large_101_plus' | 'missing' | 'unknown';
 export type PerformingArtsGroupApplicationCategory = 'traditional_opera' | 'theater' | 'dance' | 'music' | 'folk_art' | 'cross_disciplinary' | 'other' | 'unknown';
+export type VaccinationServiceItem = 'bcg_clinic' | 'child_routine' | 'child_flu_under_3' | 'child_flu_over_3' | 'adult_flu' | 'covid_19' | 'pneumococcal' | 'rotavirus' | 'mpox_clinic' | 'enterovirus_clinic';
+export type HealthcareProviderPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
+export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
+export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
+export type TelepsychologyPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -322,6 +327,162 @@ export type PerformingArtsGroupFilters = {
   hasRegistrationNumber: string;
   hasWebsite: string;
   websiteHostname: string;
+};
+
+export type ContractedVaccinationMedicalProviderRecord = {
+  id: string;
+  module: 'contracted_vaccination_medical_providers';
+  sourceSequenceNumber?: number;
+  providerName: string;
+  providerNameNormalized?: string;
+  district?: string;
+  districtNormalized?: string;
+  address?: string;
+  addressNormalized?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: HealthcareProviderPhoneType;
+  hasPhone: boolean;
+  voiceReservationRaw?: string;
+  hasVoiceReservation: boolean;
+  bcgClinicRaw?: string;
+  hasBcgClinic: boolean;
+  childRoutineRaw?: string;
+  hasChildRoutineVaccination: boolean;
+  childFluUnder3Raw?: string;
+  hasChildFluUnder3: boolean;
+  childFluOver3Raw?: string;
+  hasChildFluOver3: boolean;
+  adultFluRaw?: string;
+  hasAdultFlu: boolean;
+  covid19Raw?: string;
+  hasCovid19: boolean;
+  pneumococcalRaw?: string;
+  hasPneumococcal: boolean;
+  rotavirusRaw?: string;
+  hasRotavirus: boolean;
+  mpoxClinicRaw?: string;
+  hasMpoxClinic: boolean;
+  enterovirusClinicRaw?: string;
+  hasEnterovirusClinic: boolean;
+  serviceItems: VaccinationServiceItem[];
+  serviceItemCount: number;
+  hasAnyChildVaccinationService: boolean;
+  hasAnyAdultVaccinationService: boolean;
+  hasAnySpecialClinicService: boolean;
+  hasAnyFluService: boolean;
+  hasAnyCovidService: boolean;
+  hasAnyReservationField: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type ContractedVaccinationMedicalProviderSummary = {
+  totalRecords: number;
+  uniqueProviderNameCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithVoiceReservation: number;
+  recordsWithParsedRoadName: number;
+  byDistrict: Array<{ district: string; providerCount: number; serviceBreakdown: Array<{ serviceItem: VaccinationServiceItem; count: number }> }>;
+  byServiceItem: Array<{ serviceItem: VaccinationServiceItem; count: number }>;
+  byServiceItemCount: Array<{ serviceItemCount: number; providerCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  topProvidersByServiceItemCount: Array<{ providerName: string; district?: string; serviceItemCount: number; serviceItems: VaccinationServiceItem[] }>;
+  providerCategorySummary: {
+    childVaccinationProviderCount: number;
+    adultVaccinationProviderCount: number;
+    fluProviderCount: number;
+    covidProviderCount: number;
+    specialClinicProviderCount: number;
+  };
+};
+
+export type ContractedVaccinationMedicalProviderFilters = {
+  search: string;
+  district: string;
+  serviceItem: string;
+  serviceGroup: string;
+  serviceItemCount: string;
+  hasPhone: string;
+  hasVoiceReservation: string;
+  roadName: string;
+};
+
+export type TelepsychologyCounselingInstitutionRecord = {
+  id: string;
+  module: 'telepsychology_counseling_institutions';
+  sourceSequenceNumber?: number;
+  institutionTypeRaw?: string;
+  institutionType: TelepsychologyInstitutionType;
+  districtCodeRaw?: string;
+  districtCode?: string;
+  institutionName: string;
+  institutionNameNormalized?: string;
+  district?: string;
+  districtNormalized?: string;
+  address?: string;
+  addressNormalized?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: TelepsychologyPhoneType;
+  hasPhone: boolean;
+  extension?: string;
+  extensionDisplay?: string;
+  hasExtension: boolean;
+  mobile?: string;
+  mobileDisplay?: string;
+  mobileDialHref?: string;
+  hasMobile: boolean;
+  contactMethods: TelepsychologyContactMethod[];
+  contactMethodCount: number;
+  hasAnyContact: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type TelepsychologyCounselingInstitutionSummary = {
+  totalRecords: number;
+  uniqueInstitutionNameCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithExtension: number;
+  recordsWithMobile: number;
+  recordsWithAnyContact: number;
+  recordsWithParsedRoadName: number;
+  byInstitutionType: Array<{ institutionType: TelepsychologyInstitutionType; institutionTypeRaw?: string; count: number }>;
+  byDistrict: Array<{ district: string; institutionCount: number; typeBreakdown: Array<{ institutionType: TelepsychologyInstitutionType; count: number }> }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  contactAvailability: {
+    phoneOnlyCount: number;
+    mobileOnlyCount: number;
+    phoneAndMobileCount: number;
+    noContactCount: number;
+  };
+};
+
+export type TelepsychologyCounselingInstitutionFilters = {
+  search: string;
+  institutionType: string;
+  district: string;
+  roadName: string;
+  hasPhone: string;
+  hasExtension: string;
+  hasMobile: string;
+  hasAnyContact: string;
+  contactMethodCount: string;
 };
 
 export type IndustryGrantRecipient = {

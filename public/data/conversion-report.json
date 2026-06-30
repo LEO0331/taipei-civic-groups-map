@@ -1123,5 +1123,105 @@
       "No geocoding used; records use district centroids only when district is parsed",
       "This is not event schedule, ticketing, quality, ranking, grant-status, legal-advice, or endorsement data"
     ]
+  },
+  "contractedVaccinationMedicalProviders": {
+    "source": "臺北市各項預防接種合約醫療院所",
+    "sourceAgency": "臺北市政府衛生局",
+    "officialSourceAgencyShort": "衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=ec201f0a-2efa-4426-9439-a8daea7b33c7",
+    "category": "醫療",
+    "serviceCategory": "就醫",
+    "datasetType": "原始資料",
+    "updateFrequency": "不定期更新",
+    "inputFile": "contracted-vaccination-medical-providers.csv",
+    "convertedAt": "2026-06-30T00:52:35.279Z",
+    "fileSize": 41625,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 391,
+    "outputRecords": 391,
+    "duplicateKeys": [],
+    "districtWarningExamples": [],
+    "addressWarningExamples": [],
+    "phoneWarningExamples": [],
+    "flagWarningExamples": [
+      "成人流感:1\n限院內腎友及家屬"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings and column names trimmed",
+      "Service flags converted to filterable service items",
+      "Phone and voice reservation values preserved as source text",
+      "No geocoding used; records use district centroids only when district is parsed",
+      "This is not appointment, stock, eligibility, medical-advice, quality, ranking, or endorsement data"
+    ],
+    "topServiceItem": {
+      "serviceItem": "adult_flu",
+      "count": 383
+    }
+  },
+  "telepsychologyCounselingInstitutions": {
+    "source": "臺北市可執行通訊心理諮商之心理機構",
+    "sourceAgency": "臺北市政府衛生局",
+    "officialSourceAgencyShort": "衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=428a78d5-867a-4e55-9630-040a89c8cd94",
+    "category": "醫療",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "updateFrequency": "不定期更新",
+    "inputFile": "telepsychology-counseling-institutions.csv",
+    "convertedAt": "2026-06-30T01:09:35.433Z",
+    "fileSize": 8090,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 94,
+    "outputRecords": 94,
+    "duplicateKeys": [],
+    "duplicateNames": [],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市內湖區五分里安康路261巷7號1樓",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "addressWarningExamples": [],
+    "phoneWarningExamples": [
+      "935338607",
+      "971252866"
+    ],
+    "mobileWarningExamples": [],
+    "notes": [
+      "CP950 / Big5-compatible decoded with UTF-8-SIG fallback",
+      "All CSV values treated as strings before parsing",
+      "Institution type, district code, address, road, phone, extension, and mobile values preserved or normalized for display",
+      "No geocoding used; records use district centroids only when district is parsed",
+      "This is not diagnosis, therapy recommendation, appointment availability, fee, insurance, crisis-service, quality, ranking, medical-advice, psychotherapy-advice, or endorsement data"
+    ],
+    "topDistrict": {
+      "district": "大安區",
+      "institutionCount": 36,
+      "typeBreakdown": [
+        {
+          "institutionType": "counseling_clinic",
+          "count": 22
+        },
+        {
+          "institutionType": "psychological_treatment_clinic",
+          "count": 9
+        },
+        {
+          "institutionType": "foundation",
+          "count": 4
+        },
+        {
+          "institutionType": "school",
+          "count": 1
+        }
+      ]
+    },
+    "topInstitutionType": {
+      "institutionType": "counseling_clinic",
+      "institutionTypeRaw": "諮商所",
+      "count": 58
+    }
   }
 }

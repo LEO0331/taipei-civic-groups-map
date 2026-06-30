@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -25,6 +25,7 @@ export type PublicLiabilityPolicyExpiryStatus = 'active_by_source_date' | 'expir
 export type CoordinateSystem = 'wgs84' | 'twd97' | 'unknown';
 export type PublicLiabilityBusinessCategory = 'lodging' | 'restaurant_food' | 'entertainment' | 'retail' | 'education_training' | 'sports_recreation' | 'other' | 'unknown';
 export type BusinessRegistrationChangeEventType = 'establishment' | 'modification' | 'closure' | 'unknown';
+export type CompanyRegistrationChangeEventType = 'establishment' | 'modification' | 'dissolution' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -618,6 +619,79 @@ export type BusinessRegistrationChangeSummary = {
 };
 
 export type BusinessRegistrationChangeFilters = {
+  search: string;
+  eventType: string;
+  eventYear: string;
+  eventMonth: string;
+  eventFrom: string;
+  eventTo: string;
+  district: string;
+  roadName: string;
+  hasUnifiedBusinessNumber: string;
+  hasValidCoordinates: string;
+  coordinateStatus: string;
+  resourceName: string;
+};
+
+export type CompanyRegistrationChangeRecord = {
+  id: string;
+  module: 'company_registration_change_records';
+  resourceName: string;
+  eventType: CompanyRegistrationChangeEventType;
+  unifiedBusinessNumber?: string;
+  unifiedBusinessNumberNormalized?: string;
+  hasUnifiedBusinessNumber: boolean;
+  companyName: string;
+  companyNameNormalized?: string;
+  companyAddress?: string;
+  companyAddressNormalized?: string;
+  district?: string;
+  roadName?: string;
+  approvalDateRaw?: string;
+  approvalDate?: string;
+  modificationApprovalDateRaw?: string;
+  modificationApprovalDate?: string;
+  dissolutionApprovalDateRaw?: string;
+  dissolutionApprovalDate?: string;
+  eventDateRaw?: string;
+  eventDate?: string;
+  eventYear?: number;
+  eventMonth?: number;
+  eventMonthKey?: string;
+  eventQuarter?: string;
+  sourceLongitudeRaw?: string;
+  sourceLatitudeRaw?: string;
+  longitude?: number;
+  latitude?: number;
+  coordinateStatus: CoordinateStatus;
+  coordinateSystem: CoordinateSystem;
+  hasCoordinates: boolean;
+  source: string;
+  sourceAgency: string;
+};
+
+export type CompanyRegistrationChangeSummary = {
+  totalRecords: number;
+  uniqueCompanyNameCount: number;
+  uniqueBusinessNumberCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithUnifiedBusinessNumber: number;
+  recordsWithValidCoordinates: number;
+  recordsWithParsedDistrict: number;
+  recordsWithParsedRoadName: number;
+  recordsWithEventDate: number;
+  minEventDate?: string;
+  maxEventDate?: string;
+  latestEventMonth?: string;
+  byEventType: Array<{ eventType: CompanyRegistrationChangeEventType; count: number }>;
+  byMonth: Array<{ monthKey: string; establishmentCount: number; modificationCount: number; dissolutionCount: number; totalCount: number }>;
+  byDistrict: Array<{ district: string; totalCount: number; establishmentCount: number; modificationCount: number; dissolutionCount: number; validCoordinateCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  coordinateQuality: { valid: number; missing: number; outlier: number; unparsed: number };
+};
+
+export type CompanyRegistrationChangeFilters = {
   search: string;
   eventType: string;
   eventYear: string;

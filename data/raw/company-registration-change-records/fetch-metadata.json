@@ -1,0 +1,31 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=0a1f284d-e985-4c39-b0b5-53389fbfa6e9",
+  "source": "臺北市核准公司設立變更解散清冊",
+  "sourceAgency": "臺北市政府產業發展局商業處",
+  "downloadedAt": "2026-06-30T06:52:37.578Z",
+  "resources": [
+    {
+      "eventType": "establishment",
+      "filename": "公司設立11504.csv",
+      "sourceUrl": "local-file",
+      "copiedFrom": "公司設立11504.csv",
+      "fileSize": 101771
+    },
+    {
+      "eventType": "modification",
+      "filename": "公司變更11504.csv",
+      "sourceUrl": "local-file",
+      "copiedFrom": "公司變更11504.csv",
+      "fileSize": 447189
+    },
+    {
+      "eventType": "dissolution",
+      "filename": "公司解散11504.csv",
+      "sourceUrl": "local-file",
+      "copiedFrom": "公司解散11504.csv",
+      "fileSize": 50185
+    }
+  ],
+  "encoding": "UTF-8-SIG with Big5 fallback at conversion",
+  "previous": {}
+}

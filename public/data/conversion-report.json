@@ -1932,5 +1932,405 @@
       "validCoordinateCount": 201
     },
     "latestEventMonth": "2026-04"
+  },
+  "companyRegistrationChangeRecords": {
+    "source": "臺北市核准公司設立變更解散清冊",
+    "sourceAgency": "臺北市政府產業發展局商業處",
+    "officialSourceAgencyShort": "產業局商業處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=0a1f284d-e985-4c39-b0b5-53389fbfa6e9",
+    "category": "統計",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "updateFrequency": "每1月",
+    "convertedAt": "2026-06-30T06:53:54.531Z",
+    "inputRows": 5185,
+    "outputRecords": 5166,
+    "resources": [
+      {
+        "resourceName": "公司解散11504",
+        "eventType": "dissolution",
+        "inputRows": 445,
+        "outputRecords": 445,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "fileSize": 50185
+      },
+      {
+        "resourceName": "公司設立11504",
+        "eventType": "establishment",
+        "inputRows": 899,
+        "outputRecords": 899,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "fileSize": 101771
+      },
+      {
+        "resourceName": "公司變更11504",
+        "eventType": "modification",
+        "inputRows": 3841,
+        "outputRecords": 3822,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "fileSize": 447189
+      }
+    ],
+    "duplicateKeys": [
+      "modification|178396|台灣大創百貨股份有限公司林口三井分公司|新北市林口區文化二路1段123號3樓|115/04/17",
+      "modification|178396|台灣大創百貨股份有限公司林口三井分公司|新北市林口區文化二路1段123號3樓|115/04/17",
+      "modification|60341962|台灣大創百貨股份有限公司蘆洲長榮分公司|新北市蘆洲區長榮路23號2樓|115/04/17",
+      "modification|60341962|台灣大創百貨股份有限公司蘆洲長榮分公司|新北市蘆洲區長榮路23號2樓|115/04/17",
+      "modification|60341962|台灣大創百貨股份有限公司蘆洲長榮分公司|新北市蘆洲區長榮路23號2樓|115/04/17",
+      "modification|60411896|台灣大創百貨股份有限公司北屯敦富分公司|臺中市北屯區南興路886號|115/04/17",
+      "modification|60411896|台灣大創百貨股份有限公司北屯敦富分公司|臺中市北屯區南興路886號|115/04/17",
+      "modification|83031991|台灣大創百貨股份有限公司台中啦啦寶都分公司|臺中市東區進德路600號4樓|115/04/17",
+      "modification|83031991|台灣大創百貨股份有限公司台中啦啦寶都分公司|臺中市東區進德路600號4樓|115/04/17",
+      "modification|83031991|台灣大創百貨股份有限公司台中啦啦寶都分公司|臺中市東區進德路600號4樓|115/04/17",
+      "modification|90014363|台灣大創百貨股份有限公司新店小碧潭分公司|新北市新店區中央路159號2樓|115/04/17",
+      "modification|90014363|台灣大創百貨股份有限公司新店小碧潭分公司|新北市新店區中央路159號2樓|115/04/17",
+      "modification|90014363|台灣大創百貨股份有限公司新店小碧潭分公司|新北市新店區中央路159號2樓|115/04/17",
+      "modification|93641959|台灣大創百貨股份有限公司台中安和分公司|臺中市西屯區安和路170號2樓之2|115/04/17",
+      "modification|93641959|台灣大創百貨股份有限公司台中安和分公司|臺中市西屯區安和路170號2樓之2|115/04/17",
+      "modification|94206032|台灣大創百貨股份有限公司南投草屯分公司|南投縣草屯鎮中正路654號、656號1-3樓|115/04/17",
+      "modification|94206032|台灣大創百貨股份有限公司南投草屯分公司|南投縣草屯鎮中正路654號、656號1-3樓|115/04/17",
+      "modification|94206032|台灣大創百貨股份有限公司南投草屯分公司|南投縣草屯鎮中正路654號、656號1-3樓|115/04/17",
+      "modification|24755338|一鷺國際餐飲股份有限公司大直分公司|臺北市中山區植福路217、219號|115/04/20"
+    ],
+    "duplicateCompanyNames": [
+      {
+        "value": "盟策創意整合有限公司",
+        "count": 2
+      },
+      {
+        "value": "順星有限公司",
+        "count": 2
+      },
+      {
+        "value": "柯賓漢數位金融科技有限公司",
+        "count": 2
+      },
+      {
+        "value": "花彘醺餐飲管理顧問有限公司",
+        "count": 2
+      },
+      {
+        "value": "德樂室內裝修有限公司",
+        "count": 2
+      },
+      {
+        "value": "永磁電子股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "金耀雲新創科技股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "華倫資本股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "樂蜜娛樂有限公司",
+        "count": 2
+      },
+      {
+        "value": "紘全機電工程股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "維特力綠能產業有限公司",
+        "count": 2
+      },
+      {
+        "value": "卡巴文化有限公司",
+        "count": 2
+      },
+      {
+        "value": "源序投資股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "伴飛科技顧問股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "泉鑫整合工程有限公司",
+        "count": 2
+      },
+      {
+        "value": "福安居資產管理股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "富勁能源有限公司",
+        "count": 2
+      },
+      {
+        "value": "元盛資本有限公司",
+        "count": 2
+      },
+      {
+        "value": "鼎豐亞太控股股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "邑鼎股份有限公司",
+        "count": 2
+      }
+    ],
+    "duplicateUnifiedBusinessNumbers": [
+      {
+        "value": "53567320",
+        "count": 2
+      },
+      {
+        "value": "93598881",
+        "count": 2
+      },
+      {
+        "value": "52894536",
+        "count": 2
+      },
+      {
+        "value": "24783926",
+        "count": 2
+      },
+      {
+        "value": "83474828",
+        "count": 2
+      },
+      {
+        "value": "20756969",
+        "count": 2
+      },
+      {
+        "value": "90648676",
+        "count": 2
+      },
+      {
+        "value": "60607076",
+        "count": 2
+      },
+      {
+        "value": "60764574",
+        "count": 2
+      },
+      {
+        "value": "62247302",
+        "count": 2
+      },
+      {
+        "value": "62247696",
+        "count": 2
+      },
+      {
+        "value": "62247773",
+        "count": 2
+      },
+      {
+        "value": "62248061",
+        "count": 2
+      },
+      {
+        "value": "62253795",
+        "count": 2
+      },
+      {
+        "value": "62196752",
+        "count": 2
+      },
+      {
+        "value": "62196850",
+        "count": 2
+      },
+      {
+        "value": "62222549",
+        "count": 2
+      },
+      {
+        "value": "62222772",
+        "count": 2
+      },
+      {
+        "value": "108532",
+        "count": 2
+      },
+      {
+        "value": "27367254",
+        "count": 2
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市萬華區長沙街2段111之1號2樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市中山區南京東路1段25號9樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市中正區重慶南路1段10號8樓之15",
+        "count": 10
+      },
+      {
+        "value": "臺北市信義區信義路4段415號14樓之1",
+        "count": 8
+      },
+      {
+        "value": "臺北市信義區忠孝東路5段1之1號8樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區基隆路1段35巷7弄2之1號",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區南京西路1之1號10樓",
+        "count": 6
+      },
+      {
+        "value": "臺北市中正區許昌街42號8樓",
+        "count": 12
+      },
+      {
+        "value": "臺北市大安區信義路4段279號11樓",
+        "count": 4
+      },
+      {
+        "value": "臺北市萬華區中華路1段106號8樓",
+        "count": 17
+      },
+      {
+        "value": "臺北市松山區復興北路191號13樓之1",
+        "count": 3
+      },
+      {
+        "value": "臺北市大安區羅斯福路3段29號6樓",
+        "count": 6
+      },
+      {
+        "value": "臺北市松山區寶清街31號8樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市中正區忠孝東路1段152號11樓之6",
+        "count": 3
+      },
+      {
+        "value": "臺北市信義區光復南路495號4樓",
+        "count": 11
+      },
+      {
+        "value": "臺北市信義區忠孝東路5段482號15樓之4",
+        "count": 3
+      },
+      {
+        "value": "臺北市大安區敦化南路2段97號25樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區南京西路1之1號11樓",
+        "count": 4
+      },
+      {
+        "value": "臺北市中山區長春路267號4樓之1",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區忠孝東路4段320號2樓",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司林口三井分公司|新北市林口區文化二路1段123號3樓|115/04/17",
+        "count": 3
+      },
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司蘆洲長榮分公司|新北市蘆洲區長榮路23號2樓|115/04/17",
+        "count": 4
+      },
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司北屯敦富分公司|臺中市北屯區南興路886號|115/04/17",
+        "count": 3
+      },
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司台中啦啦寶都分公司|臺中市東區進德路600號4樓|115/04/17",
+        "count": 4
+      },
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司新店小碧潭分公司|新北市新店區中央路159號2樓|115/04/17",
+        "count": 4
+      },
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司台中安和分公司|臺中市西屯區安和路170號2樓之2|115/04/17",
+        "count": 3
+      },
+      {
+        "value": "公司變更11504.csv|台灣大創百貨股份有限公司南投草屯分公司|南投縣草屯鎮中正路654號、656號1-3樓|115/04/17",
+        "count": 4
+      },
+      {
+        "value": "公司變更11504.csv|一鷺國際餐飲股份有限公司大直分公司|臺北市中山區植福路217、219號|115/04/20",
+        "count": 2
+      }
+    ],
+    "addressWarningExamples": [
+      "遠冠股份有限公司中壢分公司:District not parsed",
+      "台灣派對商店股份有限公司桃園分公司:District not parsed",
+      "統康生活事業股份有限公司輔大分公司:District not parsed",
+      "統康生活事業股份有限公司竹東一分公司:District not parsed",
+      "台灣橫河股份有限公司高雄分公司:District not parsed",
+      "統康生活事業股份有限公司奉化分公司:District not parsed",
+      "鼎漢國際工程顧問股份有限公司台南分公司:District not parsed",
+      "健康版圖餐飲管理顧問股份有限公司汐止分公司:District not parsed",
+      "健康版圖餐飲管理顧問股份有限公司新莊分公司:District not parsed",
+      "健康版圖餐飲管理顧問股份有限公司板橋分公司:District not parsed",
+      "聯科半導體股份有限公司苗栗分公司:District not parsed",
+      "華獅有限公司溪頭分公司:District not parsed",
+      "傑普天波有限公司逢甲分公司:District not parsed",
+      "雲雀國際股份有限公司新店家樂福分公司:District not parsed",
+      "雲雀國際股份有限公司新竹迎曦分公司:District not parsed",
+      "恩戴適股份有限公司草悟道眼鏡分公司:District not parsed",
+      "台鋼漢堡王股份有限公司台南崇學分公司:District not parsed",
+      "台鋼漢堡王股份有限公司嘉義分公司:District not parsed",
+      "台鋼漢堡王股份有限公司台中沙鹿分公司:District not parsed",
+      "台鋼漢堡王股份有限公司台南永康分公司:District not parsed"
+    ],
+    "dateWarningExamples": [],
+    "coordinateWarningExamples": [
+      "遠冠股份有限公司中壢分公司:Coordinate outside Taipei bounds:121.241676,24.988465",
+      "台灣派對商店股份有限公司桃園分公司:Coordinate outside Taipei bounds:121.295036,25.020612",
+      "統康生活事業股份有限公司輔大分公司:Coordinate outside Taipei bounds:121.429083,25.027166",
+      "統康生活事業股份有限公司竹東一分公司:Coordinate outside Taipei bounds:121.084445,24.74432",
+      "台灣橫河股份有限公司高雄分公司:Coordinate outside Taipei bounds:120.309453,22.604925",
+      "統康生活事業股份有限公司奉化分公司:Coordinate outside Taipei bounds:121.291652,25.037503",
+      "鼎漢國際工程顧問股份有限公司台南分公司:Coordinate outside Taipei bounds:120.303162,22.642005",
+      "聯科半導體股份有限公司苗栗分公司:Coordinate outside Taipei bounds:120.919241,24.689243",
+      "華獅有限公司溪頭分公司:Coordinate outside Taipei bounds:120.78845,23.670009",
+      "傑普天波有限公司逢甲分公司:Coordinate outside Taipei bounds:120.646213,24.18081",
+      "雲雀國際股份有限公司新竹迎曦分公司:Coordinate outside Taipei bounds:120.971413,24.806139",
+      "恩戴適股份有限公司草悟道眼鏡分公司:Coordinate outside Taipei bounds:120.663866,24.151278",
+      "台鋼漢堡王股份有限公司台南崇學分公司:Coordinate outside Taipei bounds:120.222601,22.97877",
+      "台鋼漢堡王股份有限公司嘉義分公司:Coordinate outside Taipei bounds:120.446879,23.479559",
+      "台鋼漢堡王股份有限公司台中沙鹿分公司:Coordinate outside Taipei bounds:120.56379,24.242086",
+      "台鋼漢堡王股份有限公司台南永康分公司:Coordinate outside Taipei bounds:120.231966,23.01125",
+      "台鋼漢堡王股份有限公司桃園中華分公司:Coordinate outside Taipei bounds:121.310699,24.990973",
+      "台鋼漢堡王股份有限公司台南西門分公司:Coordinate outside Taipei bounds:120.197766,22.983991",
+      "台鋼漢堡王股份有限公司林口文化分公司:Coordinate outside Taipei bounds:121.379565,25.075779",
+      "台鋼漢堡王股份有限公司羅東興東分公司:Coordinate outside Taipei bounds:121.769219,24.680759"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "All CSV values treated as strings before parsing",
+      "Source coordinates validated against Taipei bounds; no geocoding used",
+      "Records are company registration change events, not current operating status, credit, investment, compliance, legal-advice, or financial-advice data"
+    ],
+    "topDistrict": {
+      "district": "中山區",
+      "totalCount": 1097,
+      "establishmentCount": 188,
+      "modificationCount": 821,
+      "dissolutionCount": 88,
+      "validCoordinateCount": 1097
+    },
+    "latestEventMonth": "2026-04"
   }
 }

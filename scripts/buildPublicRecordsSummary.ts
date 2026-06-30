@@ -1,10 +1,11 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { CivicGroupSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary } from '../src/types';
+import type { CivicGroupSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary } from '../src/types';
 
 const dataDir = join(process.cwd(), 'public/data');
-const [civicGroups, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
+const [civicGroups, performingArtsGroups, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
   readFile(join(dataDir, 'civic-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as CivicGroupSummary),
+  readFile(join(dataDir, 'performing-arts-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as PerformingArtsGroupSummary),
   readFile(join(dataDir, 'registered-labor-union-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredLaborUnionSummary),
   readFile(join(dataDir, 'quasi-public-infant-care-center-summary.json'), 'utf8').then((text) => JSON.parse(text) as QuasiPublicInfantCareCenterSummary),
   readFile(join(dataDir, 'taipei-travel-accommodation-zh-summary.json'), 'utf8').then((text) => JSON.parse(text) as TaipeiTravelAccommodationZhSummary),
@@ -20,6 +21,7 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
   generatedAt: new Date().toISOString(),
   modules: {
     civicGroups: { recordCount: civicGroups.total },
+    performingArtsGroups: { recordCount: performingArtsGroups.totalRecords, districtCount: performingArtsGroups.districtCount, recordsWithWebsite: performingArtsGroups.recordsWithWebsite },
     registeredLaborUnions: { recordCount: laborUnions.totalRecords, districtCount: laborUnions.districtCount, taipeiAddressCount: laborUnions.taipeiAddressCount },
     quasiPublicInfantCareCenters: { recordCount: infantCare.totalRecords, districtCount: infantCare.districtCount, totalApprovedCapacity: infantCare.totalApprovedCapacity, totalActualEnrollment: infantCare.totalActualEnrollment },
     taipeiTravelAccommodationsZh: { recordCount: travelAccommodations.totalRecords, districtCount: travelAccommodations.districtCount, totalRoomCount: travelAccommodations.totalRoomCount },

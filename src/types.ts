@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -15,6 +15,7 @@ export type InfantCareCenterOperationType = 'private_infant_care_center' | 'publ
 export type TaipeiTravelAccommodationCategory = 'hotel' | 'hostel' | 'guesthouse' | 'tourist_hotel' | 'other' | 'unknown';
 export type AccommodationPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'missing' | 'unknown';
 export type AccommodationRoomCountBucket = 'small_1_20' | 'medium_21_50' | 'large_51_100' | 'very_large_101_plus' | 'missing' | 'unknown';
+export type PerformingArtsGroupApplicationCategory = 'traditional_opera' | 'theater' | 'dance' | 'music' | 'folk_art' | 'cross_disciplinary' | 'other' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -265,6 +266,62 @@ export type TaipeiTravelAccommodationZhFilters = {
   roomCountMax: string;
   hasPhone: string;
   hasFax: string;
+};
+
+export type PerformingArtsGroupRecord = {
+  id: string;
+  module: 'performing_arts_groups';
+  groupName: string;
+  groupNameNormalized?: string;
+  applicationCategoryRaw?: string;
+  applicationCategory: PerformingArtsGroupApplicationCategory;
+  registrationNumber?: string;
+  hasRegistrationNumber: boolean;
+  competentAuthority?: string;
+  competentAuthorityCode?: string;
+  registeredAddress?: string;
+  addressNormalized?: string;
+  district?: string;
+  roadName?: string;
+  websiteUrl?: string;
+  websiteUrlNormalized?: string;
+  websiteDisplay?: string;
+  websiteHostname?: string;
+  hasWebsite: boolean;
+  possibleCivicGroupMatchKey?: string;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  source: string;
+  sourceAgency: string;
+};
+
+export type PerformingArtsGroupSummary = {
+  totalRecords: number;
+  uniqueGroupNameCount: number;
+  uniqueRegisteredAddressCount: number;
+  districtCount: number;
+  recordsWithRegistrationNumber: number;
+  recordsWithWebsite: number;
+  recordsWithParsedDistrict: number;
+  recordsWithParsedRoadName: number;
+  byApplicationCategory: Array<{ applicationCategory: PerformingArtsGroupApplicationCategory; applicationCategoryRaw?: string; count: number }>;
+  byDistrict: Array<{ district: string; groupCount: number; categoryBreakdown: Array<{ applicationCategory: PerformingArtsGroupApplicationCategory; count: number }> }>;
+  byCompetentAuthority: Array<{ competentAuthority: string; competentAuthorityCode?: string; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  byWebsiteHostname: Array<{ websiteHostname: string; count: number }>;
+  possibleOverlapWithCivicGroups?: { matchedCount: number; unmatchedCount: number };
+};
+
+export type PerformingArtsGroupFilters = {
+  search: string;
+  applicationCategory: string;
+  district: string;
+  roadName: string;
+  competentAuthority: string;
+  hasRegistrationNumber: string;
+  hasWebsite: string;
+  websiteHostname: string;
 };
 
 export type IndustryGrantRecipient = {

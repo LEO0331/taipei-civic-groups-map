@@ -2,13 +2,14 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, Nangang Software Park companies, registered animal hospitals, and quasi-public infant care centers / 公開資料模組：人民團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、南港軟體工業園區廠商、動物醫院一覽表與準公共化托嬰中心
+Public-record modules: civic groups, performing arts groups, registered labor unions, industry grants, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, Nangang Software Park companies, registered animal hospitals, and quasi-public infant care centers / 公開資料模組：人民團體、演藝團體、工會名單、產業補助、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、南港軟體工業園區廠商、動物醫院一覽表與準公共化托嬰中心
 
 ## Purpose
 
 The app presents separate Taipei Open Data modules:
 
 - [臺北市人民團體名冊](https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084): civic group directory, district distribution, founding years, and inferred categories.
+- [臺北市演藝團體名冊](https://data.taipei/dataset/detail?id=f56e77c6-cc69-480c-8ba4-057fc7e1d8d6): performing-arts group registry, source application categories, registration numbers, competent authority fields, registered-address parsing, website preservation, and district summaries.
 - [臺北市各工會名單及聯絡方式](https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48): registered labor union directory, union-type grouping, contact-address parsing, phone classification, and district summaries.
 - [臺北市準公共化托嬰中心](https://data.taipei/dataset/detail?id=aeaaa517-089c-42a7-ad5b-60fef89c3545): quasi-public infant care center directory, district summaries, approved capacity, actual enrollment, listed capacity gap, occupancy rate, and evaluation-result grouping.
 - [臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料](https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695): industry grant recipient companies, approved subsidy amounts, project budgets, grant fields, and industry categories.
@@ -27,6 +28,12 @@ Traditional Chinese is the default language; English is available in the header.
 Grant recipients are not civic groups and remain a separate directory. The source CSV uses CP950/Big5-compatible encoding. Conversion handles ROC dates, NTD currency fields, district normalization, subsidy shares, and summary aggregation. The responsible-person field remains in generated source data but is not shown in default company cards.
 
 The civic-group and grant datasets do not supply organization coordinates. Their maps use Taipei’s 12 district centroids and display aggregate bubbles only, not exact locations.
+
+## Additional module: Performing Arts Groups / 演藝團體名冊
+
+Performing arts groups remain the separate `performing_arts_groups` cultural public-records module, distinct from general `civic_groups` even when organizations overlap. Conversion preserves registration numbers as text, preserves source application categories, parses registered addresses into district and road name, and normalizes website URLs only for safe external links.
+
+The dataset has no official coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. The module does not claim event schedules, ticket availability, current operating status, performance quality, recommendation, ranking, grant status, legal advice, or official endorsement.
 
 ## Additional module: Registered Labor Unions / 工會名單
 
@@ -96,6 +103,8 @@ Generated files:
 
 - `public/data/civic-groups.json`
 - `public/data/civic-group-summary.json`
+- `public/data/performing-arts-groups.json`
+- `public/data/performing-arts-group-summary.json`
 - `public/data/conversion-report.json`
 - `public/data/registered-labor-unions.json`
 - `public/data/registered-labor-union-summary.json`
@@ -172,6 +181,14 @@ Taipei Travel accommodation data can be loaded from the uploaded CSV or an offic
 ```bash
 npm run data:fetch:travel-accommodations -- --force --local=/absolute/path/to/臺北市臺北旅遊網住宿資料\(中文\).csv
 npm run data:convert:travel-accommodations
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Performing arts group data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:performing-arts -- --force --local=/absolute/path/to/臺北市演藝團體名冊.csv
+npm run data:convert:performing-arts
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

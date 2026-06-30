@@ -1090,5 +1090,38 @@
       "No geocoding used; records use district centroids only when district is parsed",
       "This is not booking, vacancy, price, quality, ranking, travel-advice, or safety-guarantee data"
     ]
+  },
+  "performingArtsGroups": {
+    "source": "臺北市演藝團體名冊",
+    "sourceAgency": "臺北市政府文化局",
+    "officialSourceAgencyShort": "文化局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=f56e77c6-cc69-480c-8ba4-057fc7e1d8d6",
+    "category": "文化",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "updateFrequency": "每6月",
+    "inputFile": "performing-arts-groups.csv",
+    "convertedAt": "2026-06-30T00:32:08.892Z",
+    "fileSize": 179743,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 1797,
+    "outputRecords": 1797,
+    "duplicateKeys": [],
+    "addressWarningExamples": [],
+    "websiteWarningExamples": [
+      "蓬蓬裙舞蹈團:http:// yi-ling-dance.topschool.com.tw/",
+      "玉山混聲合唱團:http://http//:26.to/chorus",
+      "相聲瓦舍:http://www. ngng.com.tw",
+      "炬輪技藝發展協會可樂果劇團:http://www. dsrh. itoscar.com",
+      "大地福音使命團:http://3150@longlifelove"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Strings and column names trimmed",
+      "Registration numbers preserved as text",
+      "Website URLs normalized only for safe linking; websites are not fetched",
+      "No geocoding used; records use district centroids only when district is parsed",
+      "This is not event schedule, ticketing, quality, ranking, grant-status, legal-advice, or endorsement data"
+    ]
   }
 }

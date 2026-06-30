@@ -1,12 +1,13 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeSummary, CivicGroupSummary, CompanyRegistrationChangeSummary, ContractedVaccinationMedicalProviderSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary, TelepsychologyCounselingInstitutionSummary } from '../src/types';
+import type { BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeSummary, CivicGroupSummary, CompanyRegistrationChangeSummary, ContractedVaccinationMedicalProviderSummary, ElderlyWelfareInstitutionSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary, TelepsychologyCounselingInstitutionSummary } from '../src/types';
 
 const dataDir = join(process.cwd(), 'public/data');
-const [civicGroups, performingArtsGroups, vaccinationProviders, telepsychology, publicLiabilityInsurance, businessChanges, companyChanges, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
+const [civicGroups, performingArtsGroups, vaccinationProviders, elderlyWelfare, telepsychology, publicLiabilityInsurance, businessChanges, companyChanges, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
   readFile(join(dataDir, 'civic-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as CivicGroupSummary),
   readFile(join(dataDir, 'performing-arts-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as PerformingArtsGroupSummary),
   readFile(join(dataDir, 'contracted-vaccination-medical-provider-summary.json'), 'utf8').then((text) => JSON.parse(text) as ContractedVaccinationMedicalProviderSummary),
+  readFile(join(dataDir, 'elderly-welfare-institution-summary.json'), 'utf8').then((text) => JSON.parse(text) as ElderlyWelfareInstitutionSummary),
   readFile(join(dataDir, 'telepsychology-counseling-institution-summary.json'), 'utf8').then((text) => JSON.parse(text) as TelepsychologyCounselingInstitutionSummary),
   readFile(join(dataDir, 'business-premises-public-liability-insurance-summary.json'), 'utf8').then((text) => JSON.parse(text) as BusinessPremisesPublicLiabilityInsuranceSummary),
   readFile(join(dataDir, 'business-registration-change-summary.json'), 'utf8').then((text) => JSON.parse(text) as BusinessRegistrationChangeSummary),
@@ -28,6 +29,7 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
     civicGroups: { recordCount: civicGroups.total },
     performingArtsGroups: { recordCount: performingArtsGroups.totalRecords, districtCount: performingArtsGroups.districtCount, recordsWithWebsite: performingArtsGroups.recordsWithWebsite },
     contractedVaccinationMedicalProviders: { recordCount: vaccinationProviders.totalRecords, districtCount: vaccinationProviders.districtCount, recordsWithPhone: vaccinationProviders.recordsWithPhone },
+    elderlyWelfareInstitutions: { recordCount: elderlyWelfare.totalRecords, districtCount: elderlyWelfare.districtCount, recordsWithPhone: elderlyWelfare.recordsWithPhone, totalApprovedBeds: elderlyWelfare.totalApprovedBeds },
     telepsychologyCounselingInstitutions: { recordCount: telepsychology.totalRecords, districtCount: telepsychology.districtCount, recordsWithPhone: telepsychology.recordsWithPhone, recordsWithMobile: telepsychology.recordsWithMobile },
     businessPremisesPublicLiabilityInsuranceRecords: { recordCount: publicLiabilityInsurance.totalRecords, districtCount: publicLiabilityInsurance.districtCount, recordsWithValidCoordinates: publicLiabilityInsurance.recordsWithValidCoordinates, recordsWithPolicyExpiryDate: publicLiabilityInsurance.recordsWithPolicyExpiryDate },
     businessRegistrationChangeRecords: { recordCount: businessChanges.totalRecords, districtCount: businessChanges.districtCount, recordsWithValidCoordinates: businessChanges.recordsWithValidCoordinates, recordsWithEventDate: businessChanges.recordsWithEventDate },

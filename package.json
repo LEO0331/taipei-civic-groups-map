@@ -11,6 +11,7 @@
     "data:fetch:civic-groups": "tsx scripts/fetchCivicGroups.ts",
     "data:fetch:performing-arts": "tsx scripts/fetchPerformingArtsGroups.ts",
     "data:fetch:vaccination-providers": "tsx scripts/fetchContractedVaccinationMedicalProviders.ts",
+    "data:fetch:elderly-welfare": "tsx scripts/fetchElderlyWelfareInstitutions.ts",
     "data:fetch:labor-unions": "tsx scripts/fetchRegisteredLaborUnions.ts",
     "data:fetch:infant-care": "tsx scripts/fetchQuasiPublicInfantCareCenters.ts",
     "data:fetch:travel-accommodations": "tsx scripts/fetchTaipeiTravelAccommodationsZh.ts",
@@ -25,10 +26,11 @@
     "data:fetch:public-liability-insurance": "tsx scripts/fetchBusinessPremisesPublicLiabilityInsuranceRecords.ts",
     "data:fetch:business-changes": "tsx scripts/fetchBusinessRegistrationChangeRecords.ts",
     "data:fetch:company-changes": "tsx scripts/fetchCompanyRegistrationChangeRecords.ts",
-    "data:fetch": "npm run data:fetch:civic-groups && npm run data:fetch:performing-arts && npm run data:fetch:vaccination-providers && npm run data:fetch:telepsychology && npm run data:fetch:public-liability-insurance && npm run data:fetch:business-changes && npm run data:fetch:company-changes && npm run data:fetch:labor-unions && npm run data:fetch:infant-care && npm run data:fetch:travel-accommodations && npm run data:fetch:industry-grants && npm run data:fetch:metro-procurement && npm run data:fetch:registered-cram-schools && npm run data:fetch:registered-hotels && npm run data:fetch:labor-violations && npm run data:fetch:nangang-software-park && npm run data:fetch:animal-hospitals",
+    "data:fetch": "npm run data:fetch:civic-groups && npm run data:fetch:performing-arts && npm run data:fetch:vaccination-providers && npm run data:fetch:elderly-welfare && npm run data:fetch:telepsychology && npm run data:fetch:public-liability-insurance && npm run data:fetch:business-changes && npm run data:fetch:company-changes && npm run data:fetch:labor-unions && npm run data:fetch:infant-care && npm run data:fetch:travel-accommodations && npm run data:fetch:industry-grants && npm run data:fetch:metro-procurement && npm run data:fetch:registered-cram-schools && npm run data:fetch:registered-hotels && npm run data:fetch:labor-violations && npm run data:fetch:nangang-software-park && npm run data:fetch:animal-hospitals",
     "data:convert:civic-groups": "tsx scripts/convertCivicGroups.ts && tsx scripts/buildCivicGroupSummary.ts",
     "data:convert:performing-arts": "tsx scripts/convertPerformingArtsGroups.ts && tsx scripts/buildPerformingArtsGroupSummary.ts",
     "data:convert:vaccination-providers": "tsx scripts/convertContractedVaccinationMedicalProviders.ts && tsx scripts/buildContractedVaccinationMedicalProviderSummary.ts",
+    "data:convert:elderly-welfare": "tsx scripts/convertElderlyWelfareInstitutions.ts && tsx scripts/buildElderlyWelfareInstitutionSummary.ts",
     "data:convert:labor-unions": "tsx scripts/convertRegisteredLaborUnions.ts && tsx scripts/buildRegisteredLaborUnionSummary.ts",
     "data:convert:infant-care": "tsx scripts/convertQuasiPublicInfantCareCenters.ts && tsx scripts/buildQuasiPublicInfantCareCenterSummary.ts",
     "data:convert:travel-accommodations": "tsx scripts/convertTaipeiTravelAccommodationsZh.ts && tsx scripts/buildTaipeiTravelAccommodationZhSummary.ts",
@@ -43,7 +45,7 @@
     "data:convert:public-liability-insurance": "tsx scripts/convertBusinessPremisesPublicLiabilityInsuranceRecords.ts && tsx scripts/buildBusinessPremisesPublicLiabilityInsuranceSummary.ts",
     "data:convert:business-changes": "tsx scripts/convertBusinessRegistrationChangeRecords.ts && tsx scripts/buildBusinessRegistrationChangeSummary.ts",
     "data:convert:company-changes": "tsx scripts/convertCompanyRegistrationChangeRecords.ts && tsx scripts/buildCompanyRegistrationChangeSummary.ts",
-    "data:convert": "npm run data:convert:civic-groups && npm run data:convert:performing-arts && npm run data:convert:vaccination-providers && npm run data:convert:telepsychology && npm run data:convert:public-liability-insurance && npm run data:convert:business-changes && npm run data:convert:company-changes && npm run data:convert:labor-unions && npm run data:convert:infant-care && npm run data:convert:travel-accommodations && npm run data:convert:industry-grants && npm run data:convert:metro-procurement && npm run data:convert:registered-cram-schools && npm run data:convert:registered-hotels && npm run data:convert:labor-violations && npm run data:convert:nangang-software-park && npm run data:convert:animal-hospitals && tsx scripts/buildPublicRecordsSummary.ts"
+    "data:convert": "npm run data:convert:civic-groups && npm run data:convert:performing-arts && npm run data:convert:vaccination-providers && npm run data:convert:elderly-welfare && npm run data:convert:telepsychology && npm run data:convert:public-liability-insurance && npm run data:convert:business-changes && npm run data:convert:company-changes && npm run data:convert:labor-unions && npm run data:convert:infant-care && npm run data:convert:travel-accommodations && npm run data:convert:industry-grants && npm run data:convert:metro-procurement && npm run data:convert:registered-cram-schools && npm run data:convert:registered-hotels && npm run data:convert:labor-violations && npm run data:convert:nangang-software-park && npm run data:convert:animal-hospitals && tsx scripts/buildPublicRecordsSummary.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

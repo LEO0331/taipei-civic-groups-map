@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -26,6 +26,9 @@ export type CoordinateSystem = 'wgs84' | 'twd97' | 'unknown';
 export type PublicLiabilityBusinessCategory = 'lodging' | 'restaurant_food' | 'entertainment' | 'retail' | 'education_training' | 'sports_recreation' | 'other' | 'unknown';
 export type BusinessRegistrationChangeEventType = 'establishment' | 'modification' | 'closure' | 'unknown';
 export type CompanyRegistrationChangeEventType = 'establishment' | 'modification' | 'dissolution' | 'unknown';
+export type ElderlyWelfareInstitutionAttribute = 'public' | 'public_private_operated' | 'private' | 'other' | 'unknown';
+export type ElderlyWelfareCareRecipientCategory = 'long_term_care' | 'nursing_care' | 'dementia_care' | 'residential_care' | 'other' | 'unknown';
+export type ElderlyWelfareInstitutionPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -704,6 +707,85 @@ export type CompanyRegistrationChangeFilters = {
   hasValidCoordinates: string;
   coordinateStatus: string;
   resourceName: string;
+};
+
+export type ElderlyWelfareInstitutionRecord = {
+  id: string;
+  module: 'elderly_welfare_institutions';
+  sourceSequenceNumber?: number;
+  institutionAttributeRaw?: string;
+  institutionAttribute: ElderlyWelfareInstitutionAttribute;
+  institutionAttributeNormalized?: string;
+  institutionName: string;
+  institutionNameNormalized?: string;
+  district?: string;
+  districtNormalized?: string;
+  address?: string;
+  addressNormalized?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: ElderlyWelfareInstitutionPhoneType;
+  hasPhone: boolean;
+  careRecipientCategoryRaw?: string;
+  careRecipientCategories: ElderlyWelfareCareRecipientCategory[];
+  careRecipientCategoryLabels?: string[];
+  approvedTotalBedCount?: number;
+  longTermCareBedCount?: number;
+  nursingCareBedCount?: number;
+  dementiaCareBedCount?: number;
+  residentialCareBedCount?: number;
+  hasLongTermCareBeds: boolean;
+  hasNursingCareBeds: boolean;
+  hasDementiaCareBeds: boolean;
+  hasResidentialCareBeds: boolean;
+  totalSpecializedBedCount?: number;
+  computedTotalBedCount?: number;
+  bedCountMismatch: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  googleMapsQuery?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type ElderlyWelfareInstitutionSummary = {
+  totalRecords: number;
+  uniqueInstitutionNameCount: number;
+  uniqueAddressCount: number;
+  districtCount: number;
+  recordsWithPhone: number;
+  recordsWithAddress: number;
+  recordsWithParsedRoadName: number;
+  totalApprovedBeds: number;
+  totalLongTermCareBeds: number;
+  totalNursingCareBeds: number;
+  totalDementiaCareBeds: number;
+  totalResidentialCareBeds: number;
+  recordsWithBedCountMismatch: number;
+  byInstitutionAttribute: Array<{ institutionAttribute: ElderlyWelfareInstitutionAttribute; institutionAttributeRaw?: string; count: number; approvedTotalBedCount: number }>;
+  byCareRecipientCategory: Array<{ careRecipientCategory: ElderlyWelfareCareRecipientCategory; count: number; approvedTotalBedCount: number }>;
+  byDistrict: Array<{ district: string; institutionCount: number; approvedTotalBedCount: number; longTermCareBedCount: number; nursingCareBedCount: number; dementiaCareBedCount: number; residentialCareBedCount: number; attributeBreakdown: Array<{ institutionAttribute: ElderlyWelfareInstitutionAttribute; count: number }> }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  topInstitutionsByApprovedBeds: Array<{ institutionName: string; district?: string; approvedTotalBedCount?: number }>;
+};
+
+export type ElderlyWelfareInstitutionFilters = {
+  search: string;
+  institutionAttribute: string;
+  district: string;
+  careRecipientCategory: string;
+  roadName: string;
+  hasPhone: string;
+  hasLongTermCareBeds: string;
+  hasNursingCareBeds: string;
+  hasDementiaCareBeds: string;
+  hasResidentialCareBeds: string;
+  approvedMin: string;
+  approvedMax: string;
+  bedCountMismatch: string;
 };
 
 export type IndustryGrantRecipient = {

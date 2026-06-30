@@ -2332,5 +2332,63 @@
       "validCoordinateCount": 1097
     },
     "latestEventMonth": "2026-04"
+  },
+  "elderlyWelfareInstitutions": {
+    "source": "臺北市老人福利機構名冊",
+    "sourceAgency": "臺北市政府社會局",
+    "officialSourceAgencyShort": "社會局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=d455b149-1a2f-4d5a-a9a8-315eb71f51f6",
+    "category": "社福",
+    "serviceCategory": "老年安養",
+    "datasetType": "網路服務",
+    "updateFrequency": "每1年",
+    "inputFile": "elderly-welfare-institutions.csv",
+    "convertedAt": "2026-06-30T07:14:09.485Z",
+    "fileSize": 16142,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 93,
+    "outputRecords": 93,
+    "duplicateKeys": [],
+    "duplicateInstitutionNames": [],
+    "duplicateAddresses": [],
+    "duplicatePhones": [
+      {
+        "value": "(02)28163696",
+        "count": 2
+      },
+      {
+        "value": "(02)25520199",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "addressWarningExamples": [],
+    "bedWarningExamples": [],
+    "phoneWarningExamples": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "All values treated as strings before parsing",
+      "No coordinates provided; map uses district centroids only",
+      "Bed counts are source fields and not real-time vacancy data"
+    ],
+    "topDistrict": {
+      "district": "北投區",
+      "institutionCount": 24,
+      "approvedTotalBedCount": 1222,
+      "longTermCareBedCount": 0,
+      "nursingCareBedCount": 997,
+      "dementiaCareBedCount": 0,
+      "residentialCareBedCount": 225,
+      "attributeBreakdown": [
+        {
+          "institutionAttribute": "private",
+          "count": 23
+        },
+        {
+          "institutionAttribute": "public",
+          "count": 1
+        }
+      ]
+    }
   }
 }

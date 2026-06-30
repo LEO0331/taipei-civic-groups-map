@@ -1622,5 +1622,315 @@
       "businessCategoryRaw": "公司",
       "count": 2940
     }
+  },
+  "businessRegistrationChangeRecords": {
+    "source": "臺北市核准商業設立、變更及歇業登記等異動資料清冊",
+    "sourceAgency": "臺北市政府產業發展局商業處",
+    "officialSourceAgencyShort": "產業局商業處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=5fdefcca-e0a6-41bc-a520-7c8f067caad3",
+    "category": "投資理財",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "updateFrequency": "每1月",
+    "convertedAt": "2026-06-30T02:20:54.348Z",
+    "inputRows": 1141,
+    "outputRecords": 1141,
+    "resources": [
+      {
+        "resourceName": "商業歇業11504",
+        "eventType": "closure",
+        "inputRows": 275,
+        "outputRecords": 275,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "fileSize": 27474
+      },
+      {
+        "resourceName": "商業設立11504",
+        "eventType": "establishment",
+        "inputRows": 392,
+        "outputRecords": 392,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "fileSize": 38903
+      },
+      {
+        "resourceName": "商業變更11504",
+        "eventType": "modification",
+        "inputRows": 474,
+        "outputRecords": 474,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "fileSize": 47644
+      }
+    ],
+    "duplicateKeys": [],
+    "duplicateBusinessNames": [
+      {
+        "value": "羅堯仁自營計程車",
+        "count": 2
+      },
+      {
+        "value": "希潔商行",
+        "count": 2
+      },
+      {
+        "value": "人生如夢企業社",
+        "count": 2
+      },
+      {
+        "value": "沐晨企業社",
+        "count": 2
+      },
+      {
+        "value": "欣和鋁業工程行",
+        "count": 2
+      },
+      {
+        "value": "東閣精品館",
+        "count": 2
+      },
+      {
+        "value": "川味食堂",
+        "count": 2
+      },
+      {
+        "value": "小王子早餐店",
+        "count": 2
+      },
+      {
+        "value": "嘎非拉商行",
+        "count": 2
+      },
+      {
+        "value": "恆昌傳統整復推拿館",
+        "count": 2
+      },
+      {
+        "value": "雞椰爺椰子雞鍋物料理餐館",
+        "count": 3
+      },
+      {
+        "value": "一二零企業社",
+        "count": 2
+      },
+      {
+        "value": "興六群企業社",
+        "count": 2
+      },
+      {
+        "value": "建昌熔接所",
+        "count": 2
+      },
+      {
+        "value": "廣聚活力屋",
+        "count": 2
+      },
+      {
+        "value": "含豐餐酒館",
+        "count": 2
+      },
+      {
+        "value": "韓味韓式豆腐鍋店",
+        "count": 2
+      },
+      {
+        "value": "兆品商行",
+        "count": 2
+      },
+      {
+        "value": "男生好朋友除毛工作室",
+        "count": 2
+      },
+      {
+        "value": "馬小姐時尚甜點工作室",
+        "count": 2
+      }
+    ],
+    "duplicateUnifiedBusinessNumbers": [
+      {
+        "value": "1830428",
+        "count": 2
+      },
+      {
+        "value": "31855353",
+        "count": 2
+      },
+      {
+        "value": "88358290",
+        "count": 2
+      },
+      {
+        "value": "93124343",
+        "count": 2
+      },
+      {
+        "value": "13847135",
+        "count": 2
+      },
+      {
+        "value": "75922983",
+        "count": 2
+      },
+      {
+        "value": "76423839",
+        "count": 2
+      },
+      {
+        "value": "38549458",
+        "count": 2
+      },
+      {
+        "value": "75472380",
+        "count": 2
+      },
+      {
+        "value": "93194086",
+        "count": 2
+      },
+      {
+        "value": "99961922",
+        "count": 2
+      },
+      {
+        "value": "551302",
+        "count": 2
+      },
+      {
+        "value": "17758675",
+        "count": 2
+      },
+      {
+        "value": "29651804",
+        "count": 2
+      },
+      {
+        "value": "93119284",
+        "count": 2
+      },
+      {
+        "value": "566494",
+        "count": 2
+      },
+      {
+        "value": "15647549",
+        "count": 2
+      },
+      {
+        "value": "76420988",
+        "count": 2
+      },
+      {
+        "value": "79844145",
+        "count": 2
+      },
+      {
+        "value": "82649639",
+        "count": 2
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市大安區樂利路73號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市士林區芝玉路2段86號4樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區忠孝東路5段442號",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區光復南路569號1樓及2樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區松山路532號",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區南港路3段195號",
+        "count": 3
+      },
+      {
+        "value": "臺北市士林區大北路68號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區臨江街133號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區忠孝東路4段148號6樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市松山區八德路2段366巷15之7號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市文山區木柵路2段21號",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區長安東路2段171號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區羅斯福路2段101巷45號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市北投區中央北路4段532號1樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市大同區甘谷街26號5樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市士林區社子街99號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市松山區八德路4段699號5樓之3",
+        "count": 2
+      },
+      {
+        "value": "臺北市士林區延平北路6段35號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市萬華區峨眉街49號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市萬華區漢中街178號1樓",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [
+      {
+        "value": "modification|鑫富當舖|臺北市萬華區康定路206號5樓之3|1150420",
+        "count": 2
+      }
+    ],
+    "addressWarningExamples": [],
+    "dateWarningExamples": [],
+    "coordinateWarningExamples": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "All CSV values treated as strings before parsing",
+      "Source coordinates validated against Taipei bounds; no geocoding used",
+      "Records are registration change events, not current operating status, credit, investment, compliance, legal-advice, or financial-advice data"
+    ],
+    "topDistrict": {
+      "district": "中山區",
+      "totalCount": 201,
+      "establishmentCount": 65,
+      "modificationCount": 88,
+      "closureCount": 48,
+      "validCoordinateCount": 201
+    },
+    "latestEventMonth": "2026-04"
   }
 }

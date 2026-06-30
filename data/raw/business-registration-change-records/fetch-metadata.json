@@ -1,0 +1,31 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=5fdefcca-e0a6-41bc-a520-7c8f067caad3",
+  "source": "臺北市核准商業設立、變更及歇業登記等異動資料清冊",
+  "sourceAgency": "臺北市政府產業發展局商業處",
+  "downloadedAt": "2026-06-30T02:11:46.718Z",
+  "resources": [
+    {
+      "eventType": "establishment",
+      "filename": "商業設立11504.csv",
+      "sourceUrl": "local-file",
+      "copiedFrom": "商業設立11504.csv",
+      "fileSize": 38903
+    },
+    {
+      "eventType": "modification",
+      "filename": "商業變更11504.csv",
+      "sourceUrl": "local-file",
+      "copiedFrom": "商業變更11504.csv",
+      "fileSize": 47644
+    },
+    {
+      "eventType": "closure",
+      "filename": "商業歇業11504.csv",
+      "sourceUrl": "local-file",
+      "copiedFrom": "商業歇業11504.csv",
+      "fileSize": 27474
+    }
+  ],
+  "encoding": "UTF-8-SIG with Big5 fallback at conversion",
+  "previous": {}
+}

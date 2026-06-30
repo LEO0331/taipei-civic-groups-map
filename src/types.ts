@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'business_premises_public_liability_insurance_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -21,6 +21,9 @@ export type HealthcareProviderPhoneType = 'taipei_landline' | 'other_landline' |
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
 export type TelepsychologyPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
+export type PublicLiabilityPolicyExpiryStatus = 'active_by_source_date' | 'expiring_soon_30_days' | 'expiring_soon_90_days' | 'expired_by_source_date' | 'missing' | 'invalid' | 'unknown';
+export type CoordinateSystem = 'wgs84' | 'twd97' | 'unknown';
+export type PublicLiabilityBusinessCategory = 'lodging' | 'restaurant_food' | 'entertainment' | 'retail' | 'education_training' | 'sports_recreation' | 'other' | 'unknown';
 
 export type CivicGroupCategory =
   | 'association' | 'society' | 'hometown_association' | 'alumni_association'
@@ -483,6 +486,76 @@ export type TelepsychologyCounselingInstitutionFilters = {
   hasMobile: string;
   hasAnyContact: string;
   contactMethodCount: string;
+};
+
+export type BusinessPremisesPublicLiabilityInsuranceRecord = {
+  id: string;
+  module: 'business_premises_public_liability_insurance_records';
+  sourceSequenceNumber?: number;
+  registrationNumber?: string;
+  registrationNumberNormalized?: string;
+  hasRegistrationNumber: boolean;
+  businessCategoryRaw?: string;
+  businessCategory: PublicLiabilityBusinessCategory;
+  businessCategoryNormalized?: string;
+  businessName: string;
+  businessNameNormalized?: string;
+  businessAddress?: string;
+  businessAddressNormalized?: string;
+  district?: string;
+  roadName?: string;
+  policyExpiryDateRaw?: string;
+  policyExpiryDate?: string;
+  policyExpiryYear?: number;
+  policyExpiryMonth?: number;
+  policyExpiryMonthKey?: string;
+  daysUntilPolicyExpiry?: number;
+  policyExpiryStatus: PublicLiabilityPolicyExpiryStatus;
+  longitude?: number;
+  latitude?: number;
+  sourceLongitudeRaw?: string;
+  sourceLatitudeRaw?: string;
+  coordinateStatus: CoordinateStatus;
+  coordinateSystem: CoordinateSystem;
+  hasCoordinates: boolean;
+  source: string;
+  sourceAgency: string;
+};
+
+export type BusinessPremisesPublicLiabilityInsuranceSummary = {
+  totalRecords: number;
+  uniqueBusinessNameCount: number;
+  uniqueAddressCount: number;
+  uniqueRegistrationNumberCount: number;
+  districtCount: number;
+  recordsWithRegistrationNumber: number;
+  recordsWithValidCoordinates: number;
+  recordsWithParsedDistrict: number;
+  recordsWithParsedRoadName: number;
+  recordsWithPolicyExpiryDate: number;
+  minPolicyExpiryDate?: string;
+  maxPolicyExpiryDate?: string;
+  byPolicyExpiryStatus: Array<{ policyExpiryStatus: PublicLiabilityPolicyExpiryStatus; count: number }>;
+  byBusinessCategory: Array<{ businessCategory: PublicLiabilityBusinessCategory; businessCategoryRaw?: string; count: number }>;
+  byDistrict: Array<{ district: string; recordCount: number; validCoordinateCount: number; expiringSoonCount: number; expiredBySourceDateCount: number; categoryBreakdown: Array<{ businessCategory: PublicLiabilityBusinessCategory; count: number }> }>;
+  byPolicyExpiryMonth: Array<{ monthKey: string; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  coordinateQuality: { valid: number; missing: number; outlier: number; unparsed: number };
+};
+
+export type BusinessPremisesPublicLiabilityInsuranceFilters = {
+  search: string;
+  businessCategory: string;
+  district: string;
+  roadName: string;
+  policyExpiryStatus: string;
+  policyExpiryYear: string;
+  policyExpiryMonth: string;
+  policyExpiryFrom: string;
+  policyExpiryTo: string;
+  hasRegistrationNumber: string;
+  hasValidCoordinates: string;
+  coordinateStatus: string;
 };
 
 export type IndustryGrantRecipient = {

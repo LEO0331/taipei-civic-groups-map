@@ -1223,5 +1223,404 @@
       "institutionTypeRaw": "諮商所",
       "count": 58
     }
+  },
+  "businessPremisesPublicLiabilityInsuranceRecords": {
+    "source": "臺北市營業場所投保公共意外險清冊",
+    "sourceAgency": "臺北市政府產業發展局商業處",
+    "officialSourceAgencyShort": "產業局商業處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=5880bb98-ab6a-476c-ae55-37564b0d0fc9",
+    "category": "觀光",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "updateFrequency": "每1月",
+    "inputFile": "business-premises-public-liability-insurance.csv",
+    "convertedAt": "2026-06-30T01:53:00.407Z",
+    "buildDate": "2026-06-30",
+    "fileSize": 377104,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 2964,
+    "outputRecords": 2940,
+    "duplicateKeys": [
+      "96809282|鳥貴成股份有限公司|臺北市信義區松壽路12號3樓|115/05/16",
+      "13134072|東京牛角股份有限公司|臺北市士林區忠誠路2段55號12樓|115/06/01",
+      "12411160|和德昌股份有限公司|臺北市文山區興隆路三段54號|115/06/30",
+      "12411160|和德昌股份有限公司|臺北市中山區民權西路68號|115/07/01",
+      "12411160|和德昌股份有限公司|臺北市北投區北投路二段15號|115/07/01",
+      "70843031|瓦城泰統股份有限公司|臺北市士林區天母東路68號7樓|115/12/31",
+      "70843031|瓦城泰統股份有限公司|臺北市南港區經貿二路186之1號1樓|115/12/31",
+      "84630426|王品餐飲股份有限公司|臺北市大安區忠孝東路四段128、130、132號各2樓|116/01/01",
+      "84630426|王品餐飲股份有限公司|臺北市萬華區中華路一段90號2樓|116/01/01",
+      "53089762|全家國際餐飲股份有限公司|臺北市士林區忠誠路二段55號B1F|116/01/01",
+      "53089762|全家國際餐飲股份有限公司|臺北市士林區忠誠路二段55號B1F|116/01/01",
+      "70443909|乾杯股份有限公司|臺北市南港區經貿二路186之1號2樓|116/01/01",
+      "70443909|乾杯股份有限公司|臺北市中正區北平西路3號2樓|116/01/01",
+      "70443909|乾杯股份有限公司|臺北市大安區忠孝東路3段300號11樓|116/01/01",
+      "70443909|乾杯股份有限公司|臺北市中山區樂群3路200號5樓|116/01/01",
+      "79955280|饗賓餐旅事業股份有限公司|臺北市士林區忠誠路2段55號5樓|116/01/01",
+      "79955280|饗賓餐旅事業股份有限公司|臺北市士林區忠誠路2段55號5樓|116/01/01",
+      "79955280|饗賓餐旅事業股份有限公司|臺北市信義區松高路11號5樓|116/01/01",
+      "79955280|饗賓餐旅事業股份有限公司|臺北市中正區忠孝西路1段66號13樓|116/01/01",
+      "79955280|饗賓餐旅事業股份有限公司|臺北市大同區承德路1段1號B3樓|116/01/01"
+    ],
+    "duplicateNames": [
+      {
+        "value": "洛碁實業股份有限公司",
+        "count": 3
+      },
+      {
+        "value": "樂多多世界股份有限公司",
+        "count": 11
+      },
+      {
+        "value": "好膳企業股份有限公司",
+        "count": 9
+      },
+      {
+        "value": "化石先生股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "百富國際股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "善菓餐飲國際股份有限公司",
+        "count": 3
+      },
+      {
+        "value": "不然好朋友有限公司",
+        "count": 4
+      },
+      {
+        "value": "利誠餐飲有限公司",
+        "count": 2
+      },
+      {
+        "value": "有民餐飲事業股份有限公司",
+        "count": 3
+      },
+      {
+        "value": "後院貿易有限公司",
+        "count": 3
+      },
+      {
+        "value": "好食城三總股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "鳥貴成股份有限公司",
+        "count": 4
+      },
+      {
+        "value": "都城實業股份有限公司",
+        "count": 5
+      },
+      {
+        "value": "典藏藝術家庭股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "勝成餐飲股份有限公司",
+        "count": 7
+      },
+      {
+        "value": "一鷺國際餐飲有限公司",
+        "count": 3
+      },
+      {
+        "value": "食逸股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "食昌企業股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "漢記股份有限公司",
+        "count": 3
+      },
+      {
+        "value": "台灣壽司郎股份有限公司",
+        "count": 11
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市內湖區舊宗路一段150巷25號",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區忠孝東路四段515號",
+        "count": 3
+      },
+      {
+        "value": "臺北市信義區松仁路58號14樓",
+        "count": 7
+      },
+      {
+        "value": "臺北市信義區松智路17號5樓",
+        "count": 4
+      },
+      {
+        "value": "臺北市中山區中山北路2段48巷7號B1",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區樂群三路200號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市松山區敦化北路158號~166號",
+        "count": 3
+      },
+      {
+        "value": "臺北市信義區松高路19號5樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市信義區松壽路9號6樓",
+        "count": 6
+      },
+      {
+        "value": "臺北市信義區市府路45號5樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區松壽路12號3樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市內湖區瑞光路517號2樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區南京西路12號B1F",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區成功路2段325號B1",
+        "count": 3
+      },
+      {
+        "value": "臺北市士林區天母東路68號7樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市南港區經貿二路166號2樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區市府路45號4樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大同區承德路1段1號4樓",
+        "count": 6
+      },
+      {
+        "value": "臺北市松山區敦化北路100號",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區舊宗路一段128號1樓",
+        "count": 3
+      }
+    ],
+    "duplicateRegistrationNumbers": [
+      {
+        "value": "89211393",
+        "count": 3
+      },
+      {
+        "value": "83053426",
+        "count": 11
+      },
+      {
+        "value": "42826026",
+        "count": 9
+      },
+      {
+        "value": "50984384",
+        "count": 2
+      },
+      {
+        "value": "27998225",
+        "count": 2
+      },
+      {
+        "value": "52801642",
+        "count": 3
+      },
+      {
+        "value": "83056113",
+        "count": 4
+      },
+      {
+        "value": "12978192",
+        "count": 2
+      },
+      {
+        "value": "24750100",
+        "count": 3
+      },
+      {
+        "value": "52672154",
+        "count": 3
+      },
+      {
+        "value": "95440099",
+        "count": 2
+      },
+      {
+        "value": "96809282",
+        "count": 4
+      },
+      {
+        "value": "23309091",
+        "count": 5
+      },
+      {
+        "value": "70555447",
+        "count": 2
+      },
+      {
+        "value": "27980512",
+        "count": 7
+      },
+      {
+        "value": "54184602",
+        "count": 3
+      },
+      {
+        "value": "53804148",
+        "count": 2
+      },
+      {
+        "value": "16794266",
+        "count": 2
+      },
+      {
+        "value": "53095716",
+        "count": 3
+      },
+      {
+        "value": "52929520",
+        "count": 11
+      }
+    ],
+    "duplicateFallbackKeys": [
+      {
+        "value": "鳥貴成股份有限公司|臺北市信義區松壽路12號3樓|115/05/16",
+        "count": 2
+      },
+      {
+        "value": "東京牛角股份有限公司|臺北市士林區忠誠路2段55號12樓|115/06/01",
+        "count": 2
+      },
+      {
+        "value": "和德昌股份有限公司|臺北市文山區興隆路三段54號|115/06/30",
+        "count": 2
+      },
+      {
+        "value": "和德昌股份有限公司|臺北市中山區民權西路68號|115/07/01",
+        "count": 2
+      },
+      {
+        "value": "和德昌股份有限公司|臺北市北投區北投路二段15號|115/07/01",
+        "count": 2
+      },
+      {
+        "value": "瓦城泰統股份有限公司|臺北市南港區經貿二路186之1號1樓|115/12/31",
+        "count": 2
+      },
+      {
+        "value": "瓦城泰統股份有限公司|臺北市士林區天母東路68號7樓|115/12/31",
+        "count": 2
+      },
+      {
+        "value": "饗賓餐旅事業股份有限公司|臺北市大同區承德路1段1號B3樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "王品餐飲股份有限公司|臺北市大安區忠孝東路四段128、130、132號各2樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "王品餐飲股份有限公司|臺北市萬華區中華路一段90號2樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "全家國際餐飲股份有限公司|臺北市士林區忠誠路二段55號B1F|116/01/01",
+        "count": 3
+      },
+      {
+        "value": "乾杯股份有限公司|臺北市中正區北平西路3號2樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "乾杯股份有限公司|臺北市南港區經貿二路186之1號2樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "乾杯股份有限公司|臺北市大安區忠孝東路3段300號11樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "乾杯股份有限公司|臺北市中山區樂群3路200號5樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "饗賓餐旅事業股份有限公司|臺北市士林區忠誠路2段55號5樓|116/01/01",
+        "count": 3
+      },
+      {
+        "value": "饗賓餐旅事業股份有限公司|臺北市信義區松高路11號5樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "饗賓餐旅事業股份有限公司|臺北市中正區忠孝西路1段66號13樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "饗賓餐旅事業股份有限公司|臺北市信義區松智路17號5樓|116/01/01",
+        "count": 2
+      },
+      {
+        "value": "雲雀國際股份有限公司|臺北市中山區林森北路247號2樓|116/04/01",
+        "count": 2
+      }
+    ],
+    "addressWarningExamples": [
+      "勝成餐飲股份有限公司:District not parsed",
+      "展美有限公司:District not parsed",
+      "家福股份有限公司:District not parsed"
+    ],
+    "dateWarningExamples": [],
+    "coordinateWarningExamples": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "All CSV values treated as strings before parsing",
+      "Expiry status is calculated only from source policy expiry date and build date",
+      "Source coordinates validated against Taipei bounds; no geocoding used",
+      "This is not legal compliance, current coverage, claim eligibility, venue safety, legal-advice, insurance-advice, risk-ranking, or endorsement data"
+    ],
+    "topDistrict": {
+      "district": "中山區",
+      "recordCount": 695,
+      "validCoordinateCount": 695,
+      "expiringSoonCount": 142,
+      "expiredBySourceDateCount": 104,
+      "categoryBreakdown": [
+        {
+          "businessCategory": "other",
+          "count": 695
+        }
+      ]
+    },
+    "topBusinessCategory": {
+      "businessCategory": "other",
+      "businessCategoryRaw": "公司",
+      "count": 2940
+    }
   }
 }

@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -26,6 +26,8 @@ export type CoordinateSystem = 'wgs84' | 'twd97' | 'unknown';
 export type PublicLiabilityBusinessCategory = 'lodging' | 'restaurant_food' | 'entertainment' | 'retail' | 'education_training' | 'sports_recreation' | 'other' | 'unknown';
 export type BusinessRegistrationChangeEventType = 'establishment' | 'modification' | 'closure' | 'unknown';
 export type CompanyRegistrationChangeEventType = 'establishment' | 'modification' | 'dissolution' | 'unknown';
+export type BiotechIndustryCategoryType = 'applied_biotechnology' | 'medical_device' | 'pharmaceutical' | 'other' | 'unknown';
+export type CompanyPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
 export type ElderlyWelfareInstitutionAttribute = 'public' | 'public_private_operated' | 'private' | 'other' | 'unknown';
 export type ElderlyWelfareCareRecipientCategory = 'long_term_care' | 'nursing_care' | 'dementia_care' | 'residential_care' | 'other' | 'unknown';
 export type ElderlyWelfareInstitutionPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
@@ -707,6 +709,73 @@ export type CompanyRegistrationChangeFilters = {
   hasValidCoordinates: string;
   coordinateStatus: string;
   resourceName: string;
+};
+
+export type BiotechCompanyDirectoryRecord = {
+  id: string;
+  module: 'biotech_company_directory';
+  companyName: string;
+  companyNameNormalized?: string;
+  unifiedBusinessNumber?: string;
+  unifiedBusinessNumberNormalized?: string;
+  responsiblePerson?: string;
+  responsiblePersonNormalized?: string;
+  registeredAddress?: string;
+  registeredAddressNormalized?: string;
+  district?: string;
+  roadName?: string;
+  companyPhone?: string;
+  companyPhoneDisplay?: string;
+  companyPhoneDialHref?: string;
+  companyPhoneType: CompanyPhoneType;
+  hasPhone: boolean;
+  industryCategoryRaw?: string;
+  industryCategory?: string;
+  industryCategoryNormalized?: string;
+  industryCategoryType: BiotechIndustryCategoryType;
+  sourceXRaw?: string;
+  sourceYRaw?: string;
+  sourceX?: number;
+  sourceY?: number;
+  coordinateSystem: CoordinateSystem;
+  coordinateStatus: CoordinateStatus;
+  longitude?: number;
+  latitude?: number;
+  hasValidCoordinates: boolean;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type BiotechCompanyDirectorySummary = {
+  totalRecords: number;
+  uniqueCompanyNameCount: number;
+  uniqueUnifiedBusinessNumberCount: number;
+  uniqueAddressCount: number;
+  uniquePhoneCount: number;
+  districtCount: number;
+  industryCategoryCount: number;
+  recordsWithPhone: number;
+  recordsWithValidCoordinates: number;
+  recordsWithParsedDistrict: number;
+  recordsWithParsedRoadName: number;
+  byIndustryCategory: Array<{ industryCategoryType: BiotechIndustryCategoryType; industryCategoryRaw?: string; count: number; districtCount: number }>;
+  byDistrict: Array<{ district: string; companyCount: number; appliedBiotechnologyCount: number; medicalDeviceCount: number; pharmaceuticalCount: number; otherCount: number; validCoordinateCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  coordinateQuality: { valid: number; missing: number; outlier: number; unparsed: number; wgs84Detected: number; twd97Detected: number; unknownDetected: number };
+  topDistrictsByCompanyCount: Array<{ district: string; companyCount: number }>;
+};
+
+export type BiotechCompanyDirectoryFilters = {
+  search: string;
+  industryCategory: string;
+  district: string;
+  roadName: string;
+  hasValidCoordinates: string;
+  coordinateSystem: string;
+  phoneType: string;
+  hasPhone: string;
 };
 
 export type ElderlyWelfareInstitutionRecord = {

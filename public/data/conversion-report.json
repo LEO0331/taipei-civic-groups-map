@@ -2390,5 +2390,300 @@
         }
       ]
     }
+  },
+  "biotechCompanyDirectory": {
+    "source": "臺北市生技廠商企業名錄",
+    "sourceAgency": "產業局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=a05ee8ee-d7f1-4024-86c1-e2f97f2120bf",
+    "theme": "經濟",
+    "serviceCategory": "開創事業",
+    "updateFrequency": "每2年",
+    "officialResourceUpdateTime": "2026-04-02 10:10:45",
+    "officialMetadataUpdateTime": "2026-04-02 11:04:05",
+    "inputFile": "biotech-company-directory.csv",
+    "convertedAt": "2026-07-01T00:16:03.331Z",
+    "fileSize": 94722,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 659,
+    "outputRecords": 659,
+    "coordinateAliases": {
+      "xHeader": "位置X座標",
+      "yHeader": "位置Y座標"
+    },
+    "coordinateQuality": {
+      "valid": 659,
+      "missing": 0,
+      "outlier": 0,
+      "unparsed": 0,
+      "wgs84Detected": 0,
+      "twd97Detected": 659,
+      "unknownDetected": 0
+    },
+    "duplicateUnifiedBusinessNumbers": [
+      {
+        "value": "94105061",
+        "count": 2
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市南港區園區街3號17樓",
+        "count": 12
+      },
+      {
+        "value": "臺北市內湖區基湖路10巷57號6樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區敦化南路2段76號23樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區港墘路82巷7弄13號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市北投區承德路6段120號14樓",
+        "count": 8
+      },
+      {
+        "value": "臺北市南港區園區街3號10樓之2",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區洲子街12號2樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區新湖一路71號7樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大同區南京西路62號7樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區內湖路一段250號6樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區港墘路187號9樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區陽光街321巷18號5樓之1",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區瑞光路550號7樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區瑞光路188巷48號8樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區港墘路185號10樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區園區街3之2號7樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區南京東路3段130號5樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區內湖路一段120巷15弄8號7樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區洲子街46號6樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區堤頂大道2段15號5樓之2",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區瑞光路581之1號",
+        "count": 5
+      },
+      {
+        "value": "臺北市內湖區瑞光路26巷36弄2號4樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區湖元里行愛路７７巷１１號３樓、１３號３樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區民權東路6段15巷16號4樓之3",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區瑞光路258巷50號3樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區忠孝東路四段219號8樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區陽光街300號7樓之2",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區園區街3之1號4樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區研究院路1段130巷99號C棟5樓",
+        "count": 3
+      },
+      {
+        "value": "臺北市南港區研究院路1段130巷99號C棟4樓",
+        "count": 2
+      }
+    ],
+    "duplicatePhones": [
+      {
+        "value": "02-8751-8818",
+        "count": 2
+      },
+      {
+        "value": "02-8797-1741",
+        "count": 2
+      },
+      {
+        "value": "02-2755-4881",
+        "count": 8
+      },
+      {
+        "value": "02-2792-5222",
+        "count": 2
+      },
+      {
+        "value": "02-2659-0007",
+        "count": 2
+      },
+      {
+        "value": "02-2659-9430",
+        "count": 2
+      },
+      {
+        "value": "02-8797-7811",
+        "count": 4
+      },
+      {
+        "value": "02-2655-8799",
+        "count": 2
+      },
+      {
+        "value": "02-2659-0555",
+        "count": 2
+      },
+      {
+        "value": "尚無資料",
+        "count": 4
+      },
+      {
+        "value": "02-2655-7528",
+        "count": 2
+      },
+      {
+        "value": "02-2655-8680",
+        "count": 2
+      },
+      {
+        "value": "02-2790-1555",
+        "count": 3
+      },
+      {
+        "value": "02-2790-6566",
+        "count": 3
+      },
+      {
+        "value": "02-2659-8898",
+        "count": 2
+      },
+      {
+        "value": "02-2795-5390",
+        "count": 2
+      },
+      {
+        "value": "02-2627-4366",
+        "count": 2
+      },
+      {
+        "value": "02-7720-8266",
+        "count": 2
+      },
+      {
+        "value": "02-2771-1070",
+        "count": 2
+      },
+      {
+        "value": "02-2788-3922",
+        "count": 2
+      },
+      {
+        "value": "02-2882-2212",
+        "count": 2
+      },
+      {
+        "value": "02-2659-8566",
+        "count": 2
+      },
+      {
+        "value": "02-2727-9535",
+        "count": 2
+      },
+      {
+        "value": "02-2659-9592",
+        "count": 2
+      },
+      {
+        "value": "02-2655-8781",
+        "count": 3
+      },
+      {
+        "value": "02-2736-5679",
+        "count": 2
+      },
+      {
+        "value": "02-2785-8975",
+        "count": 2
+      },
+      {
+        "value": "02-2382-6615",
+        "count": 2
+      },
+      {
+        "value": "02-2659-7888",
+        "count": 3
+      },
+      {
+        "value": "02-2511-1122",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "unusualBusinessNumbers": [],
+    "addressWarnings": [],
+    "coordinateWarnings": [],
+    "phoneWarnings": [
+      "尚無資料",
+      "尚無資料",
+      "尚無資料",
+      "尚無資料"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Unified business numbers and phone values preserved as strings",
+      "TWD97 / EPSG:3826-like coordinates are converted to WGS84",
+      "Responsible person is preserved for expanded details only"
+    ]
   }
 }

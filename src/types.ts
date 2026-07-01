@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -552,6 +552,74 @@ export type ChildMedicalSubsidyContractedProviderFilters = {
   phoneType: string;
   districtMismatch: string;
   duplicateProviderCode: string;
+};
+
+export type DentureSubsidyMedicalProviderRecord = {
+  id: string;
+  module: 'denture_subsidy_medical_providers';
+  subsidyTypeRaw?: string;
+  subsidyType?: string;
+  subsidyTypeNormalized?: string;
+  providerName: string;
+  providerNameNormalized?: string;
+  administrativeAreaRaw?: string;
+  administrativeArea?: string;
+  administrativeAreaNormalized?: string;
+  isTaipeiDistrict: boolean;
+  taipeiDistrict?: string;
+  outsideTaipeiArea?: string;
+  areaDisplayName?: string;
+  address?: string;
+  addressNormalized?: string;
+  districtFromAddress?: string;
+  districtMismatch: boolean;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: MedicalProviderPhoneType;
+  hasPhone: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type DentureSubsidyMedicalProviderSummary = {
+  totalRecords: number;
+  uniqueProviderNameCount: number;
+  uniqueAddressCount: number;
+  uniquePhoneCount: number;
+  subsidyTypeCount: number;
+  taipeiProviderCount: number;
+  outsideTaipeiProviderCount: number;
+  taipeiDistrictCount: number;
+  administrativeAreaCount: number;
+  recordsWithPhone: number;
+  recordsWithAddress: number;
+  recordsWithParsedDistrictFromAddress: number;
+  recordsWithDistrictMismatch: number;
+  recordsWithParsedRoadName: number;
+  bySubsidyType: Array<{ subsidyType: string; providerCount: number }>;
+  byAdministrativeArea: Array<{ administrativeArea: string; providerCount: number; isTaipeiDistrict: boolean; uniqueAddressCount: number; uniquePhoneCount: number }>;
+  byTaipeiDistrict: Array<{ district: string; providerCount: number; uniqueAddressCount: number; uniquePhoneCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  phoneQuality: { hasPhone: number; missingPhone: number; taipeiLandline: number; otherLandline: number; mobile: number; extension: number; multiple: number; unknown: number };
+  dataQuality: { duplicateProviderNameCount: number; duplicateAddressCount: number; duplicatePhoneCount: number; districtFromAddressParsed: number; districtMismatch: number; outsideTaipeiAreaCount: number; missingAddress: number };
+};
+
+export type DentureSubsidyMedicalProviderFilters = {
+  search: string;
+  subsidyType: string;
+  administrativeArea: string;
+  taipeiDistrict: string;
+  roadName: string;
+  hasPhone: string;
+  phoneType: string;
+  districtMismatch: string;
 };
 
 export type TelepsychologyCounselingInstitutionRecord = {

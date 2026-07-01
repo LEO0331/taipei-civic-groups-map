@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -19,6 +19,9 @@ export type PerformingArtsGroupApplicationCategory = 'traditional_opera' | 'thea
 export type VaccinationServiceItem = 'bcg_clinic' | 'child_routine' | 'child_flu_under_3' | 'child_flu_over_3' | 'adult_flu' | 'covid_19' | 'pneumococcal' | 'rotavirus' | 'mpox_clinic' | 'enterovirus_clinic';
 export type HealthcareProviderPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
 export type MedicalProviderPhoneType = HealthcareProviderPhoneType;
+export type ResourcePhoneType = HealthcareProviderPhoneType;
+export type DisabilityEmploymentBusinessItemCategory = 'vocational_rehabilitation' | 'employment_service_agency' | 'retail' | 'food_and_beverage' | 'gas_station' | 'manufacturing' | 'assistive_device_service' | 'cleaning_service' | 'social_enterprise_or_sheltered_work' | 'training_or_counseling' | 'other_service' | 'unknown';
+export type DisabilityEmploymentServiceCategory = 'employment_support' | 'vocational_rehabilitation' | 'workplace_or_business_resource' | 'training_and_counseling' | 'assistive_support' | 'other' | 'unknown';
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
 export type TelepsychologyPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
@@ -620,6 +623,86 @@ export type DentureSubsidyMedicalProviderFilters = {
   hasPhone: string;
   phoneType: string;
   districtMismatch: string;
+};
+
+export type DisabilityEmploymentResourceRecord = {
+  id: string;
+  module: 'disability_employment_resource_map';
+  sourceSequenceNumber?: number;
+  sourceRocYearRaw?: string;
+  sourceRocYear?: number;
+  sourceYear?: number;
+  resourceName: string;
+  resourceNameNormalized?: string;
+  disabilityTypeRaw?: string;
+  disabilityType?: string;
+  disabilityTypeNormalized?: string;
+  businessItemRaw?: string;
+  businessItem?: string;
+  businessItemNormalized?: string;
+  businessItemCategory: DisabilityEmploymentBusinessItemCategory;
+  serviceCategory: DisabilityEmploymentServiceCategory;
+  contactName?: string;
+  hasContact: boolean;
+  address?: string;
+  addressNormalized?: string;
+  districtFromAddress?: string;
+  isTaipeiDistrict: boolean;
+  taipeiDistrict?: string;
+  outsideTaipeiArea?: string;
+  roadName?: string;
+  phone?: string;
+  phoneDisplay?: string;
+  phoneDialHref?: string;
+  phoneType: ResourcePhoneType;
+  hasPhone: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type DisabilityEmploymentResourceSummary = {
+  totalRecords: number;
+  minSourceYear?: number;
+  maxSourceYear?: number;
+  latestSourceYear?: number;
+  uniqueResourceNameCount: number;
+  disabilityTypeCount: number;
+  businessItemCount: number;
+  businessItemCategoryCount: number;
+  serviceCategoryCount: number;
+  taipeiDistrictCount: number;
+  recordsWithAddress: number;
+  recordsWithParsedDistrictFromAddress: number;
+  recordsWithPhone: number;
+  recordsWithContact: number;
+  byDisabilityType: Array<{ disabilityType: string; count: number }>;
+  byBusinessItemCategory: Array<{ businessItemCategory: DisabilityEmploymentBusinessItemCategory; count: number }>;
+  byServiceCategory: Array<{ serviceCategory: DisabilityEmploymentServiceCategory; count: number }>;
+  byDistrict: Array<{ district: string; resourceCount: number; uniqueBusinessItemCount: number; uniqueServiceCategoryCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  topBusinessItems: Array<{ businessItem: string; count: number }>;
+  phoneQuality: { hasPhone: number; missingPhone: number; taipeiLandline: number; otherLandline: number; mobile: number; extension: number; multiple: number; unknown: number };
+  dataQuality: { missingResourceNameCount: number; missingAddressCount: number; unparsedAddressDistrictCount: number; duplicateResourceNameCount: number; duplicateAddressCount: number; duplicatePhoneCount: number; duplicateFallbackKeyCount: number };
+};
+
+export type DisabilityEmploymentResourceFilters = {
+  search: string;
+  sourceYear: string;
+  disabilityType: string;
+  businessItem: string;
+  businessItemCategory: string;
+  serviceCategory: string;
+  district: string;
+  roadName: string;
+  hasContact: string;
+  hasPhone: string;
+  phoneType: string;
+  addressParsed: string;
 };
 
 export type TelepsychologyCounselingInstitutionRecord = {

@@ -2945,5 +2945,104 @@
       "No geocoding performed; map uses district centroid summaries only",
       "This is not appointment, subsidy-eligibility, subsidy-amount, fee, dental-treatment-advice, medical-advice, emergency, quality-ranking, or endorsement data"
     ]
+  },
+  "disabilityEmploymentResourceMap": {
+    "source": "臺北市身障就業資源地圖",
+    "sourceAgency": "勞動局重建處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=c5aafda8-ef14-4f66-a6b7-d5da995a14b5",
+    "category": "勞動",
+    "serviceCategory": "求職及就業",
+    "datasetType": "原始資料",
+    "inputFile": "disability-employment-resource-map.csv",
+    "convertedAt": "2026-07-01T06:59:22.416Z",
+    "fileSize": 9351,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 74,
+    "outputRecords": 74,
+    "duplicateResourceNames": [],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市南港區忠孝東路6段85號3樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市松山區八德路4段604號2樓之6",
+        "count": 3
+      },
+      {
+        "value": "臺北市大同區昌吉街110巷8號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區建國南路1段175巷31號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市松山區敦化北路155巷76號1樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市中山區八德路2段174巷28號2樓",
+        "count": 2
+      }
+    ],
+    "duplicatePhones": [
+      {
+        "value": "2722-1736",
+        "count": 2
+      },
+      {
+        "value": "7752-2518",
+        "count": 2
+      }
+    ],
+    "duplicateSourceSequenceNumbers": [],
+    "duplicateFallbackKeys": [],
+    "yearWarnings": [],
+    "disabilityTypeWarnings": [],
+    "businessItemWarnings": [
+      "臺北醫學大學:職務再設計",
+      "財團法人伊甸社會福利基金會附設數位資料處理庇護工場:業務及辦公室支援服務業",
+      "傳玻者文創設計中心:其他專門設計業",
+      "勝利數位設計印刷中心:印刷及其輔助業、文具批發業",
+      "伊果文創印刷庇護工場:印刷及其輔助業、其他專門設計業",
+      "陽光汽車美容中心 (建和社會企業):汽車美容業",
+      "社團法人台灣公益團體自律聯盟(臺北社企館3F):多功能會議廳、空間場地出借",
+      "黑暗對話社會企業股份有限公司(臺北社企館4F):各類主題工作坊、音樂會、濾掛咖啡及文創產品",
+      "視障者音樂發展中心 (臺北社企館5F):藝文服務、文教服務、樂器/育樂用品出租銷售"
+    ],
+    "addressWarnings": [
+      "財團法人第一社會福利基金會附設第一身心障礙者就業服務中心:District not parsed from address",
+      "快樂小舖 (捷運南勢角庇護工場):District not parsed from address"
+    ],
+    "phoneWarnings": [
+      "2788-2656",
+      "2722-1736",
+      "2558-7370",
+      "2595-1918",
+      "2898-5509",
+      "2514-9903",
+      "27882656",
+      "22395319",
+      "87738327",
+      "2722-1736",
+      "27652810",
+      "25951918",
+      "27177722",
+      "77293322",
+      "77137917",
+      "2720-5208",
+      "2368-9093",
+      "2395-6102",
+      "2943-3994",
+      "8732-8101"
+    ],
+    "notes": [
+      "Big5 / CP950 decoded with UTF-8-SIG fallback",
+      "ROC years converted to Gregorian years",
+      "Business item and service categories are UI helper groupings, not official classifications",
+      "No geocoding performed; map uses district centroid summaries only",
+      "This is not job-vacancy, real-time service-capacity, eligibility, employment-placement-guarantee, disability-assessment, medical-advice, legal-advice, accessibility-certification, quality-ranking, compliance, or endorsement data"
+    ]
   }
 }

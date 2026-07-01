@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, contracted vaccination medical providers, publicly funded HPV vaccination providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, contracted vaccination medical providers, publicly funded HPV vaccination providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心與老人福利機構名冊
 
 ## Purpose
 
@@ -26,6 +26,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市一般旅館名冊](https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651): general hotel registry records, district summaries, listed room-rate fields, and room counts.
 - [臺北市臺北旅遊網住宿資料(中文)](https://data.taipei/dataset/detail?id=58093ba6-4c98-4148-b27a-50ad97d7afca): Taipei Travel tourism-facing accommodation records, categories, contact fields, district summaries, and listed room counts.
 - [臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表](https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5): Labor Standards Act violation publication records, announcement/disposition dates, provisions, source-text violation contents, and parsed penalty amounts.
+- [臺北市消費爭議無故不到場協商之被申訴企業經營者列表](https://data.taipei/dataset/detail?id=c15e49fd-f511-46c8-8613-0ad91f370bfd): consumer dispute absence notice records, multiple annual CSV resources, resource-name preservation, ROC year parsing, negotiation-date parsing, respondent/complainant lookup, and dispute-content keyword tags.
 - [臺北市南港軟體工業園區廠商資料名錄](https://data.taipei/dataset/detail?id=6b7c48b4-03a6-4fcc-b172-9cee415c20b9): Nangang Software Park public company directory, business IDs, addresses, detected TWD97/WGS84 coordinates, and grouped map locations.
 - [臺北市動物醫院一覽表](https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94): animal hospital public directory records, district summaries, road-name grouping, phone lookup, and address-based map links.
 
@@ -131,6 +132,12 @@ The separate `labor_standard_act_violation_records` module uses UTF-8-SIG with a
 
 Records are chunked by announcement year and lazy-loaded only for the directory. The dataset has no addresses or coordinates, so it has no map layer. It is a public administrative-record explorer, not a blacklist, current-compliance assessment, employer ranking, or legal-advice tool. Responsible-person names are preserved from the official source but only shown in source details.
 
+## Additional module: Consumer Dispute Absence Notices / 消費爭議協商不到場公告
+
+The separate `consumer_dispute_absent_business_operators` module reads multiple annual CSV resources, preserves `resourceName`, parses ROC years and negotiation dates, preserves respondent and complainant names, and derives exploratory dispute-content keyword tags. It is not merged with company or business registration records.
+
+The dataset has no coordinates, addresses, roads, or districts, so it has no map layer. It is a consumer protection public notice explorer, not a fraud finding, legal-liability finding, court judgment, administrative penalty amount, credit-risk score, investment signal, blacklist, consumer legal advice, or official endorsement.
+
 ## Additional module: Nangang Software Park Companies / 南港軟體工業園區廠商
 
 The company directory remains separate from civic groups and grants. Business IDs stay as strings to preserve leading zeroes. The source coordinate columns are detected as WGS84 or TWD97/EPSG:3826; valid TWD97 points are converted to WGS84 and grouped by shared coordinate for map display. Company-name keyword tags are a site-derived aid, not official industry classifications. The directory is not evidence of operating status, investment value, real-time tenancy, or government recommendation.
@@ -195,6 +202,9 @@ Generated files:
 - `public/data/labor-standard-act-violation-records/manifest.json`
 - `public/data/labor-standard-act-violation-records/chunks/by-announcement-year/*.json`
 - `public/data/labor-standard-act-violation-summary.json`
+- `public/data/consumer-dispute-absent-business-operators.json`
+- `public/data/consumer-dispute-absent-business-operator-summary.json`
+- `public/data/consumer-dispute-absent-business-operator-latest.json`
 - `public/data/nangang-software-park-companies.json`
 - `public/data/nangang-software-park-company-summary.json`
 - `public/data/registered-animal-hospitals.json`
@@ -357,6 +367,14 @@ npm run data:convert:labor-violations
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 
+Consumer dispute absence notice data can be loaded from the uploaded annual CSVs or official resources:
+
+```bash
+npm run data:fetch:consumer-dispute-absence -- --force --local=/absolute/path/to/109年度無故不到場協商之被申訴企業經營者列表.csv --local=/absolute/path/to/110年度無故不到場協商之被申訴企業經營者列表.csv --local=/absolute/path/to/111年度無故不到場協商之被申訴企業經營者列表.csv --local=/absolute/path/to/無故不到場協商之被申訴企業經營者列表.csv
+npm run data:convert:consumer-dispute-absence
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
 Nangang Software Park company data can be loaded from the uploaded CSV or an official resource:
 
 ```bash
@@ -414,5 +432,7 @@ Taipei Metro procurement schedule data is a planned schedule only. Actual announ
 Registered cram-school data is a public registration directory only. It does not represent teaching quality, enrollment status, course content, pricing, real-time business status, or recommendation.
 
 Labor Standards Act violation publication records are administrative publication records for lookup and statistical organization only. They do not represent current operating status, real-time violation status, overall employer evaluation, job-seeking advice, legal advice, or court outcomes. Responsible-person names are shown only in source details.
+
+Consumer dispute absence notice records are public notice records for lookup and statistical organization only. They do not represent a complete consumer complaint database, fraud determination, legal liability determination, court judgment, administrative penalty amount, credit rating, real-time operating status, consumer advice, investment signal, blacklist, legal advice, or official endorsement.
 
 Animal hospital directory data is for lookup, district distribution, and public-data exploration only. It does not represent medical quality, real-time operating status, emergency service, pricing, veterinarian schedules, recommendation, medical advice, or official endorsement. Responsible-person names are shown only in source details.

@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -1354,4 +1354,80 @@ export type LaborStandardActViolationFilters = {
   hasPenaltyAmount: string;
   hasResponsiblePersonName: string;
   hasNote: string;
+};
+
+export type ConsumerDisputeKeywordCategory =
+  | 'travel_or_accommodation' | 'education_or_courses' | 'online_shopping' | 'retail_goods'
+  | 'housing_or_real_estate' | 'telecom_or_digital_service' | 'fitness_or_beauty'
+  | 'food_or_restaurant' | 'vehicle_or_transport' | 'financial_or_payment'
+  | 'medical_or_health_product' | 'contract_or_refund' | 'other' | 'unknown';
+
+export type ConsumerDisputeAbsentBusinessOperatorRecord = {
+  id: string;
+  module: 'consumer_dispute_absent_business_operators';
+  resourceName?: string;
+  resourceYearRaw?: string;
+  resourceRocYear?: number;
+  resourceYear?: number;
+  yearRaw?: string;
+  rocYear?: number;
+  year?: number;
+  respondentName: string;
+  respondentNameNormalized?: string;
+  complainantName?: string;
+  complainantNameNormalized?: string;
+  hasComplainantName: boolean;
+  negotiationDateRaw?: string;
+  negotiationDate?: string;
+  negotiationYear?: number;
+  negotiationMonth?: number;
+  negotiationMonthKey?: string;
+  negotiationQuarter?: string;
+  yearFromSource?: number;
+  yearFromNegotiationDate?: number;
+  yearMismatch: boolean;
+  disputeContent?: string;
+  disputeContentNormalized?: string;
+  hasDisputeContent: boolean;
+  disputeKeywordCategories: ConsumerDisputeKeywordCategory[];
+  disputeKeywordTags?: string[];
+  possibleBusinessRegistrationHint?: string;
+  sourceRecordHash: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type ConsumerDisputeAbsentBusinessOperatorSummary = {
+  totalRecords: number;
+  minYear?: number;
+  maxYear?: number;
+  minNegotiationDate?: string;
+  maxNegotiationDate?: string;
+  uniqueRespondentNameCount: number;
+  uniqueComplainantNameCount: number;
+  recordsWithComplainantName: number;
+  recordsWithDisputeContent: number;
+  recordsWithNegotiationDate: number;
+  recordsWithYearMismatch: number;
+  byYear: Array<{ year: number; recordCount: number; uniqueRespondentNameCount: number }>;
+  byNegotiationMonth: Array<{ negotiationMonthKey: string; recordCount: number; uniqueRespondentNameCount: number }>;
+  byRespondent: Array<{ respondentName: string; recordCount: number; firstYear?: number; latestYear?: number; firstNegotiationDate?: string; latestNegotiationDate?: string }>;
+  byKeywordCategory: Array<{ disputeKeywordCategory: ConsumerDisputeKeywordCategory; count: number }>;
+  topDisputeKeywords: Array<{ keyword: string; count: number }>;
+  resourceBreakdown: Array<{ resourceName: string; recordCount: number }>;
+};
+
+export type ConsumerDisputeAbsentBusinessOperatorFilters = {
+  search: string;
+  year: string;
+  yearFrom: string;
+  yearTo: string;
+  negotiationDateFrom: string;
+  negotiationDateTo: string;
+  respondentName: string;
+  disputeKeywordCategory: string;
+  hasNegotiationDate: string;
+  hasDisputeContent: string;
+  yearMismatch: string;
+  resourceName: string;
 };

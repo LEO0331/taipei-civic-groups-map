@@ -2724,5 +2724,71 @@
       "District codes preserved as strings and mapped to Taipei district names",
       "No geocoding performed; map uses district centroid summaries only"
     ]
+  },
+  "consumerDisputeAbsentBusinessOperators": {
+    "source": "臺北市消費爭議無故不到場協商之被申訴企業經營者列表",
+    "sourceAgency": "法務局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=c15e49fd-f511-46c8-8613-0ad91f370bfd",
+    "category": "法律",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "updateFrequency": "每1年",
+    "convertedAt": "2026-07-01T05:49:16.867Z",
+    "resources": [
+      {
+        "resourceName": "109年度無故不到場協商之被申訴企業經營者列表",
+        "inputFile": "109年度無故不到場協商之被申訴企業經營者列表.csv",
+        "fileSize": 32225,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "inputRows": 392,
+        "outputRecords": 391
+      },
+      {
+        "resourceName": "110年度無故不到場協商之被申訴企業經營者列表",
+        "inputFile": "110年度無故不到場協商之被申訴企業經營者列表.csv",
+        "fileSize": 33765,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "inputRows": 426,
+        "outputRecords": 425
+      },
+      {
+        "resourceName": "111年度無故不到場協商之被申訴企業經營者列表",
+        "inputFile": "111年度無故不到場協商之被申訴企業經營者列表.csv",
+        "fileSize": 34267,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "inputRows": 437,
+        "outputRecords": 436
+      },
+      {
+        "resourceName": "無故不到場協商之被申訴企業經營者列表",
+        "inputFile": "無故不到場協商之被申訴企業經營者列表.csv",
+        "fileSize": 60923,
+        "encoding": "UTF-8-SIG / UTF-8",
+        "inputRows": 829,
+        "outputRecords": 825
+      }
+    ],
+    "outputRecords": 2077,
+    "invalidYearExamples": [],
+    "invalidDateExamples": [
+      "111年度無故不到場協商之被申訴企業經營者列表: 110921"
+    ],
+    "duplicateKeys": [
+      "109年度無故不到場協商之被申訴企業經營者列表|2020|馬來西亞商馬亞洲航空有限公司|翁○○|1090810|機票退票爭議",
+      "110年度無故不到場協商之被申訴企業經營者列表|2021|新加坡商蝦皮娛樂電商有限公司|林○○|1100823|通訊交易消費爭議",
+      "111年度無故不到場協商之被申訴企業經營者列表|2022|富胖達股份有限公司|張○○|1111031|食品外送消費爭議",
+      "無故不到場協商之被申訴企業經營者列表|2024|詠薪建設有限公司|張○○|1131226|新成屋買賣",
+      "無故不到場協商之被申訴企業經營者列表|2024|proxy|吳○○|1131008|網路購物",
+      "無故不到場協商之被申訴企業經營者列表|2023|自然物語生態工作室|吳○○|1120821|寵物美容消費爭議",
+      "無故不到場協商之被申訴企業經營者列表|2023|喜貓喜狗寵物美容|吳○○|1120821|寵物美容消費爭議"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "All values read as strings and trimmed",
+      "Resource names preserved",
+      "ROC years and negotiation dates parsed",
+      "Duplicate rows deduped by year/respondent/complainant/date/content",
+      "No coordinates, geocoding, map markers, or company registration matching created"
+    ]
   }
 }

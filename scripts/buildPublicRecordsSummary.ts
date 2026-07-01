@@ -1,9 +1,9 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeSummary, CivicGroupSummary, CompanyRegistrationChangeSummary, ContractedVaccinationMedicalProviderSummary, ElderlyWelfareInstitutionSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, PubliclyFundedHpvVaccinationProviderSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary, TelepsychologyCounselingInstitutionSummary } from '../src/types';
+import type { BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeSummary, CivicGroupSummary, CompanyRegistrationChangeSummary, ConsumerDisputeAbsentBusinessOperatorSummary, ContractedVaccinationMedicalProviderSummary, ElderlyWelfareInstitutionSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, PubliclyFundedHpvVaccinationProviderSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary, TelepsychologyCounselingInstitutionSummary } from '../src/types';
 
 const dataDir = join(process.cwd(), 'public/data');
-const [civicGroups, performingArtsGroups, vaccinationProviders, hpvProviders, elderlyWelfare, biotechCompanies, telepsychology, publicLiabilityInsurance, businessChanges, companyChanges, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, nangangCompanies, animalHospitals] = await Promise.all([
+const [civicGroups, performingArtsGroups, vaccinationProviders, hpvProviders, elderlyWelfare, biotechCompanies, telepsychology, publicLiabilityInsurance, businessChanges, companyChanges, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, consumerDisputeAbsence, nangangCompanies, animalHospitals] = await Promise.all([
   readFile(join(dataDir, 'civic-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as CivicGroupSummary),
   readFile(join(dataDir, 'performing-arts-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as PerformingArtsGroupSummary),
   readFile(join(dataDir, 'contracted-vaccination-medical-provider-summary.json'), 'utf8').then((text) => JSON.parse(text) as ContractedVaccinationMedicalProviderSummary),
@@ -22,6 +22,7 @@ const [civicGroups, performingArtsGroups, vaccinationProviders, hpvProviders, el
   readFile(join(dataDir, 'registered-cram-school-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredCramSchoolSummary),
   readFile(join(dataDir, 'registered-hotel-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredHotelSummary),
   readFile(join(dataDir, 'labor-standard-act-violation-summary.json'), 'utf8').then((text) => JSON.parse(text) as LaborStandardActViolationSummary),
+  readFile(join(dataDir, 'consumer-dispute-absent-business-operator-summary.json'), 'utf8').then((text) => JSON.parse(text) as ConsumerDisputeAbsentBusinessOperatorSummary),
   readFile(join(dataDir, 'nangang-software-park-company-summary.json'), 'utf8').then((text) => JSON.parse(text) as NangangSoftwareParkCompanySummary),
   readFile(join(dataDir, 'registered-animal-hospital-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredAnimalHospitalSummary),
 ]);
@@ -46,6 +47,7 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
     registeredCramSchools: { recordCount: registeredCramSchools.totalRecords, districtCount: registeredCramSchools.districtCount },
     registeredHotels: { recordCount: registeredHotels.totalRecords, districtCount: registeredHotels.districtCount, totalRoomCount: registeredHotels.totalRoomCount },
     laborStandardActViolationRecords: { recordCount: laborViolations.totalRecords, uniqueBusinessOrEmployerNameCount: laborViolations.uniqueBusinessOrEmployerNameCount, totalPenaltyAmountNtd: laborViolations.totalPenaltyAmountNtd },
+    consumerDisputeAbsentBusinessOperators: { recordCount: consumerDisputeAbsence.totalRecords, uniqueRespondentNameCount: consumerDisputeAbsence.uniqueRespondentNameCount, recordsWithNegotiationDate: consumerDisputeAbsence.recordsWithNegotiationDate, recordsWithYearMismatch: consumerDisputeAbsence.recordsWithYearMismatch },
     nangangSoftwareParkCompanies: { recordCount: nangangCompanies.totalRecords, uniqueBusinessIdCount: nangangCompanies.uniqueBusinessIdCount, recordsWithValidCoordinates: nangangCompanies.recordsWithValidCoordinates },
     registeredAnimalHospitals: { recordCount: animalHospitals.totalRecords, districtCount: animalHospitals.districtCount, uniqueAddressCount: animalHospitals.uniqueAddressCount },
   },

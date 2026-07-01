@@ -1,0 +1,44 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=c15e49fd-f511-46c8-8613-0ad91f370bfd",
+  "downloadedAt": "2026-07-01T05:48:29.661Z",
+  "resources": [
+    {
+      "resourceName": "109年度無故不到場協商之被申訴企業經營者列表",
+      "sourceUrl": "local-file",
+      "fileName": "109年度無故不到場協商之被申訴企業經營者列表.csv",
+      "fileSize": 32225,
+      "notes": [
+        "Copied from 109年度無故不到場協商之被申訴企業經營者列表.csv"
+      ]
+    },
+    {
+      "resourceName": "110年度無故不到場協商之被申訴企業經營者列表",
+      "sourceUrl": "local-file",
+      "fileName": "110年度無故不到場協商之被申訴企業經營者列表.csv",
+      "fileSize": 33765,
+      "notes": [
+        "Copied from 110年度無故不到場協商之被申訴企業經營者列表.csv"
+      ]
+    },
+    {
+      "resourceName": "111年度無故不到場協商之被申訴企業經營者列表",
+      "sourceUrl": "local-file",
+      "fileName": "111年度無故不到場協商之被申訴企業經營者列表.csv",
+      "fileSize": 34267,
+      "notes": [
+        "Copied from 111年度無故不到場協商之被申訴企業經營者列表.csv"
+      ]
+    },
+    {
+      "resourceName": "無故不到場協商之被申訴企業經營者列表",
+      "sourceUrl": "local-file",
+      "fileName": "無故不到場協商之被申訴企業經營者列表.csv",
+      "fileSize": 60923,
+      "notes": [
+        "Copied from 無故不到場協商之被申訴企業經營者列表.csv"
+      ]
+    }
+  ],
+  "warnings": [],
+  "previous": {}
+}

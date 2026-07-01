@@ -1,9 +1,9 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeSummary, CivicGroupSummary, CompanyRegistrationChangeSummary, ConsumerDisputeAbsentBusinessOperatorSummary, ContractedVaccinationMedicalProviderSummary, ElderlyWelfareInstitutionSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, PubliclyFundedHpvVaccinationProviderSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary, TelepsychologyCounselingInstitutionSummary } from '../src/types';
+import type { BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeSummary, CivicGroupSummary, CompanyRegistrationChangeSummary, ConsumerDisputeAbsentBusinessOperatorSummary, ContractedVaccinationMedicalProviderSummary, ElderlyWelfareInstitutionSummary, InfantCareCenterEvaluationSummary, IndustryGrantSummary, LaborStandardActViolationSummary, MetroProcurementScheduleSummary, NangangSoftwareParkCompanySummary, PerformingArtsGroupSummary, PubliclyFundedHpvVaccinationProviderSummary, QuasiPublicInfantCareCenterSummary, RegisteredAnimalHospitalSummary, RegisteredCramSchoolSummary, RegisteredHotelSummary, RegisteredLaborUnionSummary, TaipeiTravelAccommodationZhSummary, TelepsychologyCounselingInstitutionSummary } from '../src/types';
 
 const dataDir = join(process.cwd(), 'public/data');
-const [civicGroups, performingArtsGroups, vaccinationProviders, hpvProviders, elderlyWelfare, biotechCompanies, telepsychology, publicLiabilityInsurance, businessChanges, companyChanges, laborUnions, infantCare, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, consumerDisputeAbsence, nangangCompanies, animalHospitals] = await Promise.all([
+const [civicGroups, performingArtsGroups, vaccinationProviders, hpvProviders, elderlyWelfare, biotechCompanies, telepsychology, publicLiabilityInsurance, businessChanges, companyChanges, laborUnions, infantCare, infantCareEvaluations, travelAccommodations, industryGrants, metroProcurement, registeredCramSchools, registeredHotels, laborViolations, consumerDisputeAbsence, nangangCompanies, animalHospitals] = await Promise.all([
   readFile(join(dataDir, 'civic-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as CivicGroupSummary),
   readFile(join(dataDir, 'performing-arts-group-summary.json'), 'utf8').then((text) => JSON.parse(text) as PerformingArtsGroupSummary),
   readFile(join(dataDir, 'contracted-vaccination-medical-provider-summary.json'), 'utf8').then((text) => JSON.parse(text) as ContractedVaccinationMedicalProviderSummary),
@@ -16,6 +16,7 @@ const [civicGroups, performingArtsGroups, vaccinationProviders, hpvProviders, el
   readFile(join(dataDir, 'company-registration-change-summary.json'), 'utf8').then((text) => JSON.parse(text) as CompanyRegistrationChangeSummary),
   readFile(join(dataDir, 'registered-labor-union-summary.json'), 'utf8').then((text) => JSON.parse(text) as RegisteredLaborUnionSummary),
   readFile(join(dataDir, 'quasi-public-infant-care-center-summary.json'), 'utf8').then((text) => JSON.parse(text) as QuasiPublicInfantCareCenterSummary),
+  readFile(join(dataDir, 'infant-care-center-evaluation-summary.json'), 'utf8').then((text) => JSON.parse(text) as InfantCareCenterEvaluationSummary),
   readFile(join(dataDir, 'taipei-travel-accommodation-zh-summary.json'), 'utf8').then((text) => JSON.parse(text) as TaipeiTravelAccommodationZhSummary),
   readFile(join(dataDir, 'industry-grant-summary.json'), 'utf8').then((text) => JSON.parse(text) as IndustryGrantSummary),
   readFile(join(dataDir, 'metro-procurement-summary.json'), 'utf8').then((text) => JSON.parse(text) as MetroProcurementScheduleSummary),
@@ -41,6 +42,7 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
     companyRegistrationChangeRecords: { recordCount: companyChanges.totalRecords, districtCount: companyChanges.districtCount, recordsWithValidCoordinates: companyChanges.recordsWithValidCoordinates, recordsWithEventDate: companyChanges.recordsWithEventDate },
     registeredLaborUnions: { recordCount: laborUnions.totalRecords, districtCount: laborUnions.districtCount, taipeiAddressCount: laborUnions.taipeiAddressCount },
     quasiPublicInfantCareCenters: { recordCount: infantCare.totalRecords, districtCount: infantCare.districtCount, totalApprovedCapacity: infantCare.totalApprovedCapacity, totalActualEnrollment: infantCare.totalActualEnrollment },
+    infantCareCenterEvaluationResults: { institutionCount: infantCareEvaluations.totalInstitutions, yearRecordCount: infantCareEvaluations.totalInstitutionYearRecords, districtCount: infantCareEvaluations.districtCount, latestEvaluationYear: infantCareEvaluations.latestEvaluationYear },
     taipeiTravelAccommodationsZh: { recordCount: travelAccommodations.totalRecords, districtCount: travelAccommodations.districtCount, totalRoomCount: travelAccommodations.totalRoomCount },
     industryGrantRecipients: { recordCount: industryGrants.totalRecords, uniqueCompanyCount: industryGrants.uniqueCompanyCount },
     metroProcurementSchedule: { recordCount: metroProcurement.totalRecords, periodCount: metroProcurement.periodCount },

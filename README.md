@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, contracted vaccination medical providers, publicly funded HPV vaccination providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, contracted vaccination medical providers, publicly funded HPV vaccination providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
 
 ## Purpose
 
@@ -18,6 +18,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市核准公司設立變更解散清冊](https://data.taipei/dataset/detail?id=0a1f284d-e985-4c39-b0b5-53389fbfa6e9): company registration change records, establishment/modification/dissolution event types, unified business numbers, source coordinates, event dates, and district summaries.
 - [臺北市各工會名單及聯絡方式](https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48): registered labor union directory, union-type grouping, contact-address parsing, phone classification, and district summaries.
 - [臺北市準公共化托嬰中心](https://data.taipei/dataset/detail?id=aeaaa517-089c-42a7-ad5b-60fef89c3545): quasi-public infant care center directory, district summaries, approved capacity, actual enrollment, listed capacity gap, occupancy rate, and evaluation-result grouping.
+- [臺北市托嬰中心評鑑結果](https://data.taipei/dataset/detail?id=e7b45593-9d44-469c-97fa-f1a52c69ebaa): infant care center evaluation result records, district-code parsing, ROC year-column parsing, wide-to-long conversion, grade/status normalization, and special-note preservation.
 - [臺北市老人福利機構名冊](https://data.taipei/dataset/detail?id=d455b149-1a2f-4d5a-a9a8-315eb71f51f6): elderly welfare institution directory, institution attributes, care-recipient categories, district summaries, and approved bed-count fields.
 - [臺北市生技廠商企業名錄](https://data.taipei/dataset/detail?id=a05ee8ee-d7f1-4024-86c1-e2f97f2120bf): biotech company directory, company names, unified business numbers, registered addresses, company phones, industry categories, and converted source coordinates.
 - [臺北市產業發展獎勵補助計畫獲獎勵補助廠商基本資料](https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695): industry grant recipient companies, approved subsidy amounts, project budgets, grant fields, and industry categories.
@@ -89,6 +90,12 @@ The dataset has no coordinates. The map uses Taipei district centroid bubbles on
 ## Additional module: Quasi-Public Infant Care Centers / 準公共化托嬰中心
 
 Infant care centers remain the separate `quasi_public_infant_care_centers` module. The source uses UTF-8-SIG, with Big5/CP950 fallback. Conversion preserves phone text, parses district/address/road name, parses approved capacity and actual enrollment, derives listed capacity gap and occupancy rate, and splits evaluation results into ROC year and grade.
+
+## Additional module: Infant Care Center Evaluation Results / 托嬰中心評鑑結果
+
+Infant care evaluation results remain the separate `infant_care_center_evaluation_results` childcare and social welfare module. Conversion decodes UTF-8-SIG with Big5 fallback, parses district and district code, converts ROC year columns into both institution-level records and institution-year records, normalizes evaluation grade/status, and preserves special result notes.
+
+The dataset has districts but no addresses or official coordinates, so the module uses district-level bubbles only and creates no exact markers or geocoding. It does not claim real-time vacancy, fee comparison, service guarantee, parent recommendation, official ranking, violation finding, legal advice, or official endorsement.
 
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Listed capacity gap is not real-time vacancy. The module does not claim real-time availability, service-quality guarantee, recommendation, childcare advice, pricing, operating status, ranking, or official endorsement.
 
@@ -185,6 +192,10 @@ Generated files:
 - `public/data/registered-labor-union-summary.json`
 - `public/data/quasi-public-infant-care-centers.json`
 - `public/data/quasi-public-infant-care-center-summary.json`
+- `public/data/infant-care-center-evaluation-institutions.json`
+- `public/data/infant-care-center-evaluation-year-records.json`
+- `public/data/infant-care-center-evaluation-summary.json`
+- `public/data/infant-care-center-evaluation-latest.json`
 - `public/data/elderly-welfare-institutions.json`
 - `public/data/elderly-welfare-institution-summary.json`
 - `public/data/biotech-company-directory.json`
@@ -277,6 +288,14 @@ Infant care center data can be loaded from the uploaded CSV or an official resou
 ```bash
 npm run data:fetch:infant-care -- --force --local=/absolute/path/to/臺北市準公共化托嬰中心.csv
 npm run data:convert:infant-care
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Infant care center evaluation result data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:infant-care-evaluations -- --force --local=/absolute/path/to/臺北市托嬰中心評鑑結果.csv
+npm run data:convert:infant-care-evaluations
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 
@@ -418,6 +437,8 @@ This site presents public records for exploration and organization. The modules 
 Registered labor union directory data is a public contact directory only. It does not represent legal status, membership eligibility, recommendation, labor-relations advice, ranking, or official endorsement. Chairperson names are shown only in source details.
 
 Quasi-public infant care center data is a public directory only. It does not represent real-time vacancy, service-quality guarantee, recommendation ranking, childcare advice, pricing information, operating status, or official endorsement. Listed capacity gap is derived from source fields and is not real-time vacancy.
+
+Infant care center evaluation result data is for source-field lookup and statistical organization only. It does not represent real-time vacancy, fee levels, service quality guarantee, child safety guarantee, parent selection advice, violation or penalty conclusions, real-time operating status, official ranking, legal advice, or official endorsement.
 
 Elderly welfare institution directory data is for lookup, district distribution, and public-data exploration only. It does not represent real-time vacancy, admission eligibility, fees, subsidy eligibility, care quality, recommendation ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 

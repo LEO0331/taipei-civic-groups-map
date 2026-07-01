@@ -2790,5 +2790,40 @@
       "Duplicate rows deduped by year/respondent/complainant/date/content",
       "No coordinates, geocoding, map markers, or company registration matching created"
     ]
+  },
+  "infantCareCenterEvaluationResults": {
+    "source": "臺北市托嬰中心評鑑結果",
+    "sourceAgency": "社會局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=e7b45593-9d44-469c-97fa-f1a52c69ebaa",
+    "category": "社福",
+    "serviceCategory": "生育保健",
+    "datasetType": "網路服務",
+    "updateFrequency": "每1年",
+    "inputFile": "infant-care-center-evaluation-results.csv",
+    "convertedAt": "2026-07-01T06:02:30.586Z",
+    "fileSize": 21520,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 292,
+    "outputInstitutions": 292,
+    "outputYearRecords": 1460,
+    "yearColumns": [
+      "110年",
+      "111年",
+      "112年",
+      "113年",
+      "114年"
+    ],
+    "duplicateInstitutionNameExamples": [],
+    "duplicateSourceSequenceNumberExamples": [],
+    "duplicateKeys": [],
+    "duplicateLongKeys": [],
+    "unknownEvaluationResultExamples": [],
+    "warnings": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Wide year columns converted to institution-level and institution-year records",
+      "Raw evaluation result text preserved",
+      "No addresses, geocoding, exact markers, or quasi-public auto-join created"
+    ]
   }
 }

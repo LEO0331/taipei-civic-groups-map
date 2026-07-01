@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -1430,4 +1430,105 @@ export type ConsumerDisputeAbsentBusinessOperatorFilters = {
   hasDisputeContent: string;
   yearMismatch: string;
   resourceName: string;
+};
+
+export type InfantCareCenterEvaluationGrade = 'excellent' | 'a' | 'b' | 'c' | 'd' | 'not_evaluated' | 'closed_or_suspended' | 'other' | 'unknown';
+export type InfantCareCenterEvaluationStatus = 'evaluated' | 'guidance_passed' | 'guidance_required' | 'closed' | 'suspended' | 'not_evaluated' | 'special_note' | 'unknown';
+
+export type InfantCareCenterEvaluationInstitutionRecord = {
+  id: string;
+  module: 'infant_care_center_evaluation_results';
+  sourceSequenceNumber?: number;
+  institutionName: string;
+  institutionNameNormalized?: string;
+  district?: string;
+  districtCode?: string;
+  districtFromCode?: string;
+  districtMismatch: boolean;
+  yearlyResults: Record<string, {
+    rocYear: number;
+    year: number;
+    evaluationResultRaw?: string;
+    evaluationResultNormalized?: string;
+    evaluationGrade: InfantCareCenterEvaluationGrade;
+    evaluationStatus: InfantCareCenterEvaluationStatus;
+    evaluationNote?: string;
+    isEvaluated: boolean;
+  }>;
+  latestEvaluationYear?: number;
+  latestEvaluationRocYear?: number;
+  latestEvaluationResultRaw?: string;
+  latestEvaluationGrade?: InfantCareCenterEvaluationGrade;
+  latestEvaluationStatus?: InfantCareCenterEvaluationStatus;
+  evaluatedYearCount: number;
+  missingYearCount: number;
+  specialNoteCount: number;
+  sourceRecordHash: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type InfantCareCenterEvaluationYearRecord = {
+  id: string;
+  module: 'infant_care_center_evaluation_results';
+  sourceSequenceNumber?: number;
+  institutionName: string;
+  institutionNameNormalized?: string;
+  district?: string;
+  districtCode?: string;
+  districtFromCode?: string;
+  districtMismatch: boolean;
+  evaluationRocYear: number;
+  evaluationYear: number;
+  evaluationResultRaw?: string;
+  evaluationResultNormalized?: string;
+  evaluationGrade: InfantCareCenterEvaluationGrade;
+  evaluationStatus: InfantCareCenterEvaluationStatus;
+  evaluationNote?: string;
+  isEvaluated: boolean;
+  isExcellentOrEquivalent: boolean;
+  isAOrEquivalent: boolean;
+  isBOrEquivalent: boolean;
+  isCOrEquivalent: boolean;
+  isDOrEquivalent: boolean;
+  isClosedOrSuspended: boolean;
+  hasSpecialNote: boolean;
+  sourceRecordHash: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type InfantCareCenterEvaluationSummary = {
+  totalInstitutions: number;
+  totalInstitutionYearRecords: number;
+  evaluatedRecordCount: number;
+  missingEvaluationRecordCount: number;
+  districtCount: number;
+  evaluationYearCount: number;
+  minEvaluationYear?: number;
+  maxEvaluationYear?: number;
+  latestEvaluationYear?: number;
+  latestYearEvaluatedInstitutionCount: number;
+  latestYearMissingInstitutionCount: number;
+  latestYearByGrade: Array<{ evaluationGrade: InfantCareCenterEvaluationGrade; count: number }>;
+  latestYearByStatus: Array<{ evaluationStatus: InfantCareCenterEvaluationStatus; count: number }>;
+  byYear: Array<{ evaluationYear: number; evaluationRocYear: number; institutionCount: number; evaluatedCount: number; missingCount: number; excellentCount: number; aCount: number; bCount: number; cCount: number; dCount: number; closedOrSuspendedCount: number; specialNoteCount: number }>;
+  byDistrictLatestYear: Array<{ district: string; institutionCount: number; evaluatedCount: number; missingCount: number; excellentCount: number; aCount: number; bCount: number; cCount: number; dCount: number; closedOrSuspendedCount: number; specialNoteCount: number }>;
+  byDistrictAllYears: Array<{ district: string; institutionCount: number; evaluatedRecordCount: number; excellentCount: number; aCount: number; bCount: number; cCount: number; dCount: number; closedOrSuspendedCount: number }>;
+  institutionsWithSpecialNotes: Array<{ institutionName: string; district?: string; evaluationYear: number; evaluationResultRaw?: string }>;
+  possibleQuasiPublicNameMatchCount?: number;
+  dataQuality: { districtCodeMappedCount: number; districtMismatchCount: number; missingInstitutionNameCount: number; unknownEvaluationResultCount: number; duplicateInstitutionNameCount: number };
+};
+
+export type InfantCareCenterEvaluationFilters = {
+  search: string;
+  district: string;
+  districtCode: string;
+  evaluationYear: string;
+  latestEvaluationGrade: string;
+  latestEvaluationStatus: string;
+  anyYearGrade: string;
+  hasLatestResult: string;
+  closedOrSuspended: string;
+  specialNote: string;
 };

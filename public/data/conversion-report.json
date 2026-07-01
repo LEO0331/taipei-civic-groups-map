@@ -2685,5 +2685,44 @@
       "TWD97 / EPSG:3826-like coordinates are converted to WGS84",
       "Responsible person is preserved for expanded details only"
     ]
+  },
+  "publiclyFundedHpvVaccinationProviders": {
+    "source": "臺北市公費HPV疫苗特約醫療院所",
+    "sourceAgency": "衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=96f143fe-4c95-4d88-9985-77f28e2d2c3d",
+    "theme": "醫療",
+    "serviceCategory": "就醫",
+    "updateFrequency": "不定期更新",
+    "officialResourceUpdateTime": "2026-04-14 17:33:04",
+    "officialMetadataUpdateTime": "2026-06-18 09:33:20",
+    "inputFile": "publicly-funded-hpv-vaccination-providers.csv",
+    "convertedAt": "2026-07-01T00:40:13.281Z",
+    "fileSize": 9276,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 98,
+    "outputRecords": 98,
+    "unknownDistrictCodes": [],
+    "addressWarnings": [],
+    "districtMismatchWarnings": [],
+    "phoneWarnings": [],
+    "duplicateProviderNames": [],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市中山區中山北路二段92號",
+        "count": 2
+      }
+    ],
+    "duplicatePhones": [
+      {
+        "value": "(02)25433535",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "District codes preserved as strings and mapped to Taipei district names",
+      "No geocoding performed; map uses district centroid summaries only"
+    ]
   }
 }

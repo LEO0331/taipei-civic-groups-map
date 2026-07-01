@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, contracted vaccination medical providers, publicly funded HPV vaccination providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
 
 ## Purpose
 
@@ -12,6 +12,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市演藝團體名冊](https://data.taipei/dataset/detail?id=f56e77c6-cc69-480c-8ba4-057fc7e1d8d6): performing-arts group registry, source application categories, registration numbers, competent authority fields, registered-address parsing, website preservation, and district summaries.
 - [臺北市各項預防接種合約醫療院所](https://data.taipei/dataset/detail?id=ec201f0a-2efa-4426-9439-a8daea7b33c7): contracted vaccination provider directory, source vaccination service flags, phone and voice reservation fields, district/address/road parsing, and district summaries.
 - [臺北市公費HPV疫苗特約醫療院所](https://data.taipei/dataset/detail?id=96f143fe-4c95-4d88-9985-77f28e2d2c3d): publicly funded HPV vaccination provider directory, district-code mapping, address/road parsing, phone lookup, and district summaries.
+- [臺北市兒童醫療補助特約院所名冊](https://data.taipei/dataset/detail?id=3cc250f5-9f5a-4670-ac7b-f13ecd316032): child medical subsidy contracted provider directory, provider-code parsing, administrative-area parsing, outside-Taipei preservation, address/road parsing, phone lookup, and area summaries.
 - [臺北市可執行通訊心理諮商之心理機構](https://data.taipei/dataset/detail?id=428a78d5-867a-4e55-9630-040a89c8cd94): telepsychology counseling institution directory, institution types, district/address/road parsing, phone/extension/mobile fields, and district summaries.
 - [臺北市營業場所投保公共意外險清冊](https://data.taipei/dataset/detail?id=5880bb98-ab6a-476c-ae55-37564b0d0fc9): business premises public liability insurance records, registration numbers, categories, source coordinates, policy expiry dates, and expiry-status summaries based only on source dates.
 - [臺北市核准商業設立、變更及歇業登記等異動資料清冊](https://data.taipei/dataset/detail?id=5fdefcca-e0a6-41bc-a520-7c8f067caad3): business registration change records, establishment/modification/closure event types, business numbers, source coordinates, event dates, and district summaries.
@@ -56,6 +57,12 @@ The dataset has no official coordinates. The map uses district centroid bubbles 
 HPV vaccination providers remain the separate `publicly_funded_hpv_vaccination_providers` healthcare and vaccination module. The uploaded UTF-8-SIG CSV includes sequence number, district code, provider name, address, and phone. Conversion preserves district codes as strings, maps them to Taipei district names, parses address districts/roads, reconciles district-code and address districts, and preserves phone text.
 
 The dataset has no official coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. The module does not claim real-time clinic hours, appointment availability, vaccine stock, vaccination eligibility, fees, medical advice, vaccination advice, service-quality ranking, or official endorsement.
+
+## Additional module: Child Medical Subsidy Contracted Providers / 兒童醫療補助特約院所名冊
+
+Child medical subsidy contracted providers remain the separate `child_medical_subsidy_contracted_providers` healthcare and child-welfare public-record module. The UTF-8-SIG CSV includes sequence number, provider code, clinic name, administrative area, address, and phone. Conversion preserves provider codes as text, parses Taipei districts and outside-Taipei area values without forcing them into Taipei districts, normalizes `台北市` to `臺北市`, extracts road names where practical, classifies phone values, and reports duplicate provider codes, addresses, phones, and fallback keys.
+
+The dataset has no official coordinates. The map uses Taipei district centroid bubbles only for Taipei records; outside-Taipei areas remain in summaries and the directory. The module does not claim real-time clinic hours, appointment availability, subsidy eligibility, subsidy amount, fees, medical advice, pediatric care advice, service-quality ranking, emergency service, real-time operating status, or official endorsement.
 
 ## Additional module: Telepsychology Counseling Institutions / 可執行通訊心理諮商之心理機構
 
@@ -179,6 +186,8 @@ Generated files:
 - `public/data/contracted-vaccination-medical-provider-summary.json`
 - `public/data/publicly-funded-hpv-vaccination-providers.json`
 - `public/data/publicly-funded-hpv-vaccination-provider-summary.json`
+- `public/data/child-medical-subsidy-contracted-providers.json`
+- `public/data/child-medical-subsidy-contracted-provider-summary.json`
 - `public/data/telepsychology-counseling-institutions.json`
 - `public/data/telepsychology-counseling-institution-summary.json`
 - `public/data/business-premises-public-liability-insurance-records.json`
@@ -296,6 +305,14 @@ Infant care center evaluation result data can be loaded from the uploaded CSV or
 ```bash
 npm run data:fetch:infant-care-evaluations -- --force --local=/absolute/path/to/臺北市托嬰中心評鑑結果.csv
 npm run data:convert:infant-care-evaluations
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Child medical subsidy contracted provider data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:child-medical-subsidy-providers -- --force --local=/absolute/path/to/臺北市兒童醫療補助特約院所名冊.csv
+npm run data:convert:child-medical-subsidy-providers
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

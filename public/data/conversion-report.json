@@ -2825,5 +2825,93 @@
       "Raw evaluation result text preserved",
       "No addresses, geocoding, exact markers, or quasi-public auto-join created"
     ]
+  },
+  "childMedicalSubsidyContractedProviders": {
+    "source": "臺北市兒童醫療補助特約院所名冊",
+    "sourceAgency": "衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=3cc250f5-9f5a-4670-ac7b-f13ecd316032",
+    "category": "醫療",
+    "serviceCategory": "就醫",
+    "datasetType": "原始資料",
+    "updateFrequency": "不定期更新",
+    "officialResourceUpdateTime": "2026-06-17 08:46:03",
+    "officialMetadataUpdateTime": "2026-06-17 08:46:26",
+    "inputFile": "child-medical-subsidy-contracted-providers.csv",
+    "convertedAt": "2026-07-01T06:20:37.331Z",
+    "fileSize": 31414,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 300,
+    "outputRecords": 300,
+    "duplicateProviderNames": [],
+    "duplicateProviderCodes": [
+      {
+        "value": "101090517",
+        "count": 7
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市中山區中山北路二段92號",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區成福路21號",
+        "count": 2
+      }
+    ],
+    "duplicatePhones": [
+      {
+        "value": "02-25553000",
+        "count": 11
+      },
+      {
+        "value": "02-55713333",
+        "count": 3
+      },
+      {
+        "value": "02-25433535",
+        "count": 2
+      },
+      {
+        "value": "02-25323036",
+        "count": 3
+      },
+      {
+        "value": "02-23123456",
+        "count": 2
+      },
+      {
+        "value": "02-27862687",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "areaWarnings": [],
+    "addressWarnings": [
+      "長庚醫療財團法人林口長庚紀念醫院:District not parsed from address",
+      "衛生福利部臺北醫院:District not parsed from address",
+      "衛生福利部基隆醫院:District not parsed from address",
+      "醫療財團法人羅許基金會羅東博愛醫院:District not parsed from address",
+      "馬偕醫療財團法人淡水馬偕紀念醫院:District not parsed from address",
+      "醫療財團法人徐元智先生醫藥基金會亞東紀念醫院:District not parsed from address",
+      "衛生福利部雙和醫院(委託臺北醫學大學興建經營):District not parsed from address",
+      "天主教靈醫會醫療財團法人羅東聖母醫院:District not parsed from address"
+    ],
+    "districtMismatchWarnings": [],
+    "phoneWarnings": [],
+    "outsideTaipeiAreas": [
+      "龜山區",
+      "新莊區",
+      "基隆市",
+      "宜蘭縣",
+      "新北市"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Provider codes preserved as text",
+      "Outside-Taipei area values preserved and not forced into Taipei districts",
+      "No geocoding performed; Taipei records use district centroid summaries only",
+      "This is not appointment, subsidy-eligibility, fee, medical-advice, pediatric-recommendation, emergency, quality-ranking, or endorsement data"
+    ]
   }
 }

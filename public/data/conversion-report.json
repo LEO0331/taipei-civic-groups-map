@@ -3253,5 +3253,408 @@
       "Animal-hospital matching is limited to a normalized institution-name key and is not treated as an official relationship",
       "This is not clinic-hours, emergency-service, appointment, specialist-certification, service-quality, complaint, disciplinary, medical-advice, legal-advice, recommendation, or endorsement data"
     ]
+  },
+  "occupationalSafetyHealthViolationRecords": {
+    "source": "臺北市政府勞動局違反職業安全衛生法事業單位及事業主公布總表",
+    "sourceAgency": "勞動局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=3e2ad23f-21fa-4084-a4de-4fd7f5293550",
+    "category": "勞動",
+    "serviceCategory": "求職及就業",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市政府勞動局違反職業安全衛生法事業單位及事業主公布總表",
+    "officialResourceUpdateTime": "2026-05-14 13:49:48",
+    "officialMetadataUpdateTime": "2026-05-14 13:50:04",
+    "updateFrequency": "每1月",
+    "inputFile": "occupational-safety-health-violation-records.csv",
+    "convertedAt": "2026-07-02T05:39:01.962Z",
+    "fileSize": 5394337,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 17406,
+    "outputRecords": 17406,
+    "duplicatePenaltyDocumentNumbers": [
+      {
+        "value": "北市勞職字第10637625300號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10635187800號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10634823400號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10633206400號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10634855900號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10634030700號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10546104000號",
+        "count": 2
+      },
+      {
+        "value": "府勞職字第10433104400號",
+        "count": 2
+      },
+      {
+        "value": "府勞職字第10434713900號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10441150900號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10533154500號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10536493900號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10537546700號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10545583100號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10543128300號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10543240600號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10542648900號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10533005400號",
+        "count": 2
+      },
+      {
+        "value": "府勞職字第10434978900號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10441099500號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10438129000號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10441164500號",
+        "count": 2
+      },
+      {
+        "value": "北市勞職字第10440772000號",
+        "count": 2
+      },
+      {
+        "value": "府勞職字第10434580602號",
+        "count": 2
+      },
+      {
+        "value": "府勞職字第10430937101號",
+        "count": 2
+      }
+    ],
+    "duplicateBusinessNames": [
+      {
+        "value": "辰豐營造股份有限公司",
+        "count": 41
+      },
+      {
+        "value": "原廣工程有限公司",
+        "count": 10
+      },
+      {
+        "value": "晶華國際酒店股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "錢櫃企業股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "華熊營造股份有限公司",
+        "count": 136
+      },
+      {
+        "value": "高度營造有限公司",
+        "count": 11
+      },
+      {
+        "value": "昶明營造股份有限公司",
+        "count": 39
+      },
+      {
+        "value": "驊本實業有限公司",
+        "count": 4
+      },
+      {
+        "value": "同豐營造工程股份有限公司",
+        "count": 37
+      },
+      {
+        "value": "中華工程股份有限公司",
+        "count": 86
+      },
+      {
+        "value": "禾進營造工程有限公司",
+        "count": 22
+      },
+      {
+        "value": "樹盛營造股份有限公司",
+        "count": 60
+      },
+      {
+        "value": "旺邦營造股份有限公司",
+        "count": 13
+      },
+      {
+        "value": "偉榮工程有限公司",
+        "count": 3
+      },
+      {
+        "value": "欣建營造股份有限公司",
+        "count": 16
+      },
+      {
+        "value": "金盟營造股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "臺灣大林組營造股份有限公司",
+        "count": 51
+      },
+      {
+        "value": "益昌營造股份有限公司",
+        "count": 21
+      },
+      {
+        "value": "三井工程股份有限公司",
+        "count": 30
+      },
+      {
+        "value": "呂發興業有限公司",
+        "count": 5
+      },
+      {
+        "value": "永青營造工程股份有限公司",
+        "count": 2
+      },
+      {
+        "value": "永溢營造股份有限公司",
+        "count": 6
+      },
+      {
+        "value": "崇偉營造工程股份有限公司",
+        "count": 11
+      },
+      {
+        "value": "第寶營造工程有限公司",
+        "count": 11
+      },
+      {
+        "value": "齊晉工程有限公司",
+        "count": 5
+      },
+      {
+        "value": "邦興營造有限公司",
+        "count": 10
+      },
+      {
+        "value": "登煌營造有限公司",
+        "count": 15
+      },
+      {
+        "value": "開揚營造股份有限公司",
+        "count": 4
+      },
+      {
+        "value": "富渝營造有限公司",
+        "count": 9
+      },
+      {
+        "value": "帆登營造股份有限公司",
+        "count": 35
+      }
+    ],
+    "duplicatePrimaryKeys": [
+      "北市勞職字第10637625300號|富麗營造有限公司|2017-10-02",
+      "北市勞職字第10634823400號|偉銓營造有限公司|2017-07-06",
+      "北市勞職字第10634855900號|安固營造工程股份有限公司|2017-07-06",
+      "北市勞職字第10543240600號|有程營造有限公司|2017-01-17",
+      "北市勞職字第10542648900號|齊裕營造股份有限公司|2016-12-20",
+      "府勞職字第10430937101號|納祖德(即哈佛診所)君|2015-05-05"
+    ],
+    "duplicateFallbackKeys": [
+      "北市勞職字第10637625300號|富麗營造有限公司|2017-10-02",
+      "北市勞職字第10634823400號|偉銓營造有限公司|2017-07-06",
+      "北市勞職字第10634855900號|安固營造工程股份有限公司|2017-07-06",
+      "北市勞職字第10543240600號|有程營造有限公司|2017-01-17",
+      "北市勞職字第10542648900號|齊裕營造股份有限公司|2016-12-20",
+      "府勞職字第10430937101號|納祖德(即哈佛診所)君|2015-05-05"
+    ],
+    "duplicateNameDatePairs": [
+      {
+        "value": "益昌營造股份有限公司|2026-06-05",
+        "count": 2
+      },
+      {
+        "value": "陳子儀|2026-05-05",
+        "count": 2
+      },
+      {
+        "value": "華軒營造股份有限公司|2026-05-05",
+        "count": 2
+      },
+      {
+        "value": "益昌營造股份有限公司|2026-05-05",
+        "count": 2
+      },
+      {
+        "value": "大陸工程股份有限公司|2026-05-05",
+        "count": 2
+      },
+      {
+        "value": "福清營造股份有限公司|2026-05-05",
+        "count": 2
+      },
+      {
+        "value": "祥泉營造有限公司|2026-04-03",
+        "count": 2
+      },
+      {
+        "value": "豐興營造工程有限公司|2026-04-03",
+        "count": 2
+      },
+      {
+        "value": "原廣工程有限公司|2026-04-03",
+        "count": 2
+      },
+      {
+        "value": "曾子寧（即鼎暉工程行）|2026-04-03",
+        "count": 2
+      },
+      {
+        "value": "世國營造有限公司|2026-03-05",
+        "count": 2
+      },
+      {
+        "value": "衡億工程有限公司|2026-02-05",
+        "count": 2
+      },
+      {
+        "value": "地樺營造事業股份有限公司|2026-02-05",
+        "count": 2
+      },
+      {
+        "value": "華熊營造股份有限公司|2026-01-05",
+        "count": 2
+      },
+      {
+        "value": "臺灣森永製菓股份有限公司|2025-12-05",
+        "count": 2
+      },
+      {
+        "value": "永溢營造股份有限公司|2025-12-05",
+        "count": 2
+      },
+      {
+        "value": "盛德營造股份有限公司|2025-12-05",
+        "count": 2
+      },
+      {
+        "value": "林泰良|2025-11-05",
+        "count": 2
+      },
+      {
+        "value": "禾進營造工程有限公司|2025-11-05",
+        "count": 2
+      },
+      {
+        "value": "辰豐營造股份有限公司|2025-09-05",
+        "count": 3
+      },
+      {
+        "value": "中華工程股份有限公司|2025-08-05",
+        "count": 2
+      },
+      {
+        "value": "鵬霖營造股份有限公司|2025-08-05",
+        "count": 2
+      },
+      {
+        "value": "福清營造股份有限公司|2025-08-05",
+        "count": 2
+      },
+      {
+        "value": "華熊營造股份有限公司|2025-07-07",
+        "count": 2
+      },
+      {
+        "value": "三星營造股份有限公司|2025-07-07",
+        "count": 2
+      },
+      {
+        "value": "首鋼營造股份有限公司|2025-07-07",
+        "count": 2
+      },
+      {
+        "value": "吉宗營造股份有限公司|2025-07-07",
+        "count": 2
+      },
+      {
+        "value": "榮金營造工程股份有限公司|2025-07-07",
+        "count": 2
+      },
+      {
+        "value": "登山營造股份有限公司|2025-07-07",
+        "count": 2
+      },
+      {
+        "value": "臺灣大林組營造股份有限公司|2025-07-07",
+        "count": 2
+      }
+    ],
+    "dateWarnings": [],
+    "articleWarnings": [],
+    "contentWarnings": [
+      "天成醫療社團法人天晟醫院:11",
+      "天主教耕莘醫療財團法人耕莘醫院:12",
+      "社團法人中華產業協會:301",
+      "佳齡診所:314",
+      "華林診所:325",
+      "基督復臨安息日會醫療財團法人臺安醫院:486",
+      "博仁綜合醫院:505",
+      "創健診所:895",
+      "梅約內科診所:928",
+      "中國勞工安全衛生管理學會:7910",
+      "三美健康事業有限公司:7959",
+      "光紅建聖股份有限公司:12661"
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback",
+      "Dates parsed from ROC compact values such as 1150605",
+      "Penalty document numbers are preserved as text",
+      "No address, district, or coordinates supplied; no map layer created",
+      "This is not real-time workplace safety status, complete compliance history, employer evaluation, credit rating, investment/procurement/employment/legal advice, criminal record, hazard map, or endorsement data"
+    ]
   }
 }

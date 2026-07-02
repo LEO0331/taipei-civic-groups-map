@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -1773,6 +1773,102 @@ export type LaborStandardActViolationFilters = {
   hasPenaltyAmount: string;
   hasResponsiblePersonName: string;
   hasNote: string;
+};
+
+export type OccupationalSafetyHealthViolationContentCategory =
+  | 'fall_prevention' | 'construction_safety' | 'machinery_equipment_safety'
+  | 'electrical_safety' | 'chemical_or_hazardous_substance' | 'health_management'
+  | 'education_training' | 'contractor_management' | 'reporting_or_documentation'
+  | 'work_environment' | 'other' | 'unknown';
+
+export type OccupationalSafetyHealthViolationRecord = {
+  id: string;
+  module: 'occupational_safety_health_violation_records';
+  announcementDateRaw?: string;
+  announcementDate?: string;
+  announcementYear?: number;
+  announcementMonth?: number;
+  announcementYearMonth?: string;
+  penaltyDateRaw?: string;
+  penaltyDate?: string;
+  penaltyYear?: number;
+  penaltyMonth?: number;
+  penaltyYearMonth?: string;
+  daysBetweenPenaltyAndAnnouncement?: number;
+  penaltyDocumentNumber?: string;
+  penaltyDocumentNumberNormalized?: string;
+  businessOrOrganizationName: string;
+  businessOrOrganizationNameNormalized?: string;
+  responsiblePersonName?: string;
+  responsiblePersonNameNormalized?: string;
+  violatedOshActArticleRaw?: string;
+  violatedOshActArticle?: string;
+  violatedOshActArticleNormalized?: string;
+  violatedArticleTokens: string[];
+  violationContent?: string;
+  violationContentNormalized?: string;
+  violationContentCategories: OccupationalSafetyHealthViolationContentCategory[];
+  note?: string;
+  hasNote: boolean;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+  legalBasis: '職業安全衛生法';
+};
+
+export type OccupationalSafetyHealthViolationSummary = {
+  totalRecords: number;
+  minAnnouncementDate?: string;
+  maxAnnouncementDate?: string;
+  minPenaltyDate?: string;
+  maxPenaltyDate?: string;
+  announcementYearCount: number;
+  penaltyYearCount: number;
+  uniqueBusinessOrOrganizationNameCount: number;
+  uniqueResponsiblePersonNameCount: number;
+  uniquePenaltyDocumentNumberCount: number;
+  uniqueViolatedArticleCount: number;
+  recordsWithResponsiblePersonName: number;
+  recordsWithViolationContent: number;
+  recordsWithNote: number;
+  byAnnouncementYear: Array<{ year: number; count: number; uniqueBusinessOrOrganizationNameCount: number }>;
+  byAnnouncementYearMonth: Array<{ yearMonth: string; count: number; uniqueBusinessOrOrganizationNameCount: number }>;
+  byPenaltyYear: Array<{ year: number; count: number; uniqueBusinessOrOrganizationNameCount: number }>;
+  byViolatedArticle: Array<{ violatedArticle: string; count: number; uniqueBusinessOrOrganizationNameCount: number }>;
+  byViolationContentCategory: Array<{ category: OccupationalSafetyHealthViolationContentCategory; count: number; uniqueBusinessOrOrganizationNameCount: number }>;
+  byAnnouncementPenaltyLagBucket: Array<{ bucket: string; count: number }>;
+  topBusinessOrOrganizationNames: Array<{ businessOrOrganizationName: string; count: number; latestAnnouncementDate?: string; latestPenaltyDate?: string }>;
+  topResponsiblePersonNames: Array<{ responsiblePersonName: string; count: number }>;
+  dataQuality: {
+    missingAnnouncementDateCount: number;
+    invalidAnnouncementDateCount: number;
+    missingPenaltyDateCount: number;
+    invalidPenaltyDateCount: number;
+    missingPenaltyDocumentNumberCount: number;
+    missingBusinessOrOrganizationNameCount: number;
+    missingResponsiblePersonNameCount: number;
+    missingViolatedArticleCount: number;
+    missingViolationContentCount: number;
+    duplicatePenaltyDocumentNumberCount: number;
+    duplicateFallbackKeyCount: number;
+  };
+};
+
+export type OccupationalSafetyHealthViolationFilters = {
+  search: string;
+  announcementYear: string;
+  announcementYearMonth: string;
+  announcementDateFrom: string;
+  announcementDateTo: string;
+  penaltyYear: string;
+  penaltyYearMonth: string;
+  penaltyDateFrom: string;
+  penaltyDateTo: string;
+  violatedArticle: string;
+  violationContentCategory: string;
+  hasNote: string;
+  businessOrOrganizationName: string;
+  penaltyDocumentNumber: string;
 };
 
 export type ConsumerDisputeKeywordCategory =

@@ -3177,5 +3177,81 @@
       "No geocoding performed; map uses district centroid summaries only",
       "This is not crime, fraud-risk, complaint, violation, law-enforcement, real-time operating-status, credit-rating, loan-advice, investment-advice, financial-advice, legal-advice, quality-ranking, recommendation, or endorsement data"
     ]
+  },
+  "veterinarianProfessionalRegistry": {
+    "source": "臺北市獸醫師資訊",
+    "sourceAgency": "產業局動保處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=4173b423-0c34-468e-a16d-5a7e7a06148e",
+    "category": "農業",
+    "serviceCategory": "求職及就業",
+    "datasetType": "原始資料",
+    "resourceName": "提供臺北市獸醫師資料",
+    "officialResourceUpdateTime": "2025-06-10 16:54:53",
+    "officialMetadataUpdateTime": "2025-12-29 13:35:58",
+    "updateFrequency": "不定期更新",
+    "coverageStart": "1996-01-01",
+    "coverageEnd": "2024-06-21",
+    "inputFile": "veterinarian-professional-registry.csv",
+    "convertedAt": "2026-07-02T01:20:40.584Z",
+    "fileSize": 73856,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 895,
+    "outputRecords": 895,
+    "duplicateVeterinarianNames": [
+      {
+        "value": "林怡君",
+        "count": 2
+      },
+      {
+        "value": "張佑安",
+        "count": 2
+      },
+      {
+        "value": "黃國倫",
+        "count": 2
+      }
+    ],
+    "duplicatePracticeLicenseNumbers": [
+      {
+        "value": "北市獸師執字第1102216號",
+        "count": 2
+      },
+      {
+        "value": "北市獸師執字第1122511號",
+        "count": 2
+      }
+    ],
+    "duplicateVeterinarianNameInstitutionPairs": [],
+    "duplicatePrimaryKeys": [],
+    "duplicateFallbackKeys": [],
+    "cityCodeWarnings": [],
+    "cityCountyWarnings": [],
+    "licenseNumberWarnings": [
+      "張哲誠:北市獸佐執字第85011號",
+      "吳曉陽:北市獸佐執字第93035號",
+      "廖宜楨:北市獸佐執字第92031號",
+      "邱煌裕:北市獸佐執字第89028號",
+      "廖文雄:北市獸佐執字第88025號",
+      "陳進泉:北市獸佐執字第95037號",
+      "駱有福:北市獸佐執字第86018號",
+      "羅楷翔:北市獸佐執字第97044號",
+      "魏珠玲:北市獸佐執字第96041號",
+      "戴瑩乾:北市獸佐執字第87023號",
+      "許右憲:北市獸佐執字第95038號",
+      "廖和順:北市獸佐執字第86020號",
+      "胡誌文:北市獸佐執字第96042號",
+      "彭家渝:北市獸佐執字第86016號",
+      "張新裕:北市獸佐執字第85015號",
+      "康文玄:北市獸佐執字第92034號",
+      "洪財旺:北市獸佐執字第86017號",
+      "夏清江:北市獸佐執字第85001號",
+      "甘家銘:北市獸佐執字第98047號"
+    ],
+    "notes": [
+      "Veterinarian practice license numbers are preserved as text and not parsed as numeric identifiers",
+      "No addresses, phones, districts, or official coordinates are present, so no map points are generated",
+      "Animal-hospital matching is limited to a normalized institution-name key and is not treated as an official relationship",
+      "This is not clinic-hours, emergency-service, appointment, specialist-certification, service-quality, complaint, disciplinary, medical-advice, legal-advice, recommendation, or endorsement data"
+    ]
   }
 }

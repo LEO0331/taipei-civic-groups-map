@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -25,6 +25,7 @@ export type DisabilityEmploymentServiceCategory = 'employment_support' | 'vocati
 export type ShelteredWorkshopBusinessItemCategory = 'retail' | 'food_and_beverage' | 'gas_station' | 'manufacturing' | 'cleaning_service' | 'assistive_device_service' | 'laundry' | 'auto_service' | 'office_support' | 'printing_packaging' | 'maintenance_repair' | 'agriculture_food_processing' | 'mixed' | 'other_service' | 'unknown';
 export type ShelteredWorkshopServiceCategory = 'workshop_business' | 'food_retail_service' | 'cleaning_or_laundry' | 'assistive_support' | 'vehicle_related_service' | 'office_or_packaging_support' | 'other' | 'unknown';
 export type PawnshopLicenseNumberFormat = 'simple_numeric' | 'numeric_with_dash' | 'mixed' | 'missing' | 'unknown';
+export type VeterinarianPracticeLicenseNumberFormat = 'taipei_veterinarian_practice_license' | 'other_veterinarian_license' | 'numeric_only' | 'mixed' | 'missing' | 'unknown';
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
 export type TelepsychologyPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
@@ -1572,6 +1573,64 @@ export type RegisteredAnimalHospitalFilters = {
   phoneType: string;
   hasPhone: string;
   hasResponsiblePersonName: string;
+};
+
+export type VeterinarianProfessionalRegistryRecord = {
+  id: string;
+  module: 'veterinarian_professional_registry';
+  cityCode?: string;
+  cityCodeNormalized?: string;
+  cityCounty?: string;
+  cityCountyNormalized?: string;
+  cityCountyIsTaipei: boolean;
+  veterinarianName: string;
+  veterinarianNameNormalized?: string;
+  practiceLicenseNumber: string;
+  practiceLicenseNumberNormalized?: string;
+  practiceLicenseNumberFormat: VeterinarianPracticeLicenseNumberFormat;
+  practiceLicenseIssuedCityCodeCandidate?: string;
+  practiceLicenseYearCandidate?: string;
+  serviceVeterinaryInstitutionName: string;
+  serviceVeterinaryInstitutionNameNormalized?: string;
+  possibleAnimalHospitalMatchKey?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type VeterinarianProfessionalRegistrySummary = {
+  totalRecords: number;
+  uniqueVeterinarianNameCount: number;
+  uniquePracticeLicenseNumberCount: number;
+  uniqueServiceVeterinaryInstitutionNameCount: number;
+  cityCodeCount: number;
+  cityCountyCount: number;
+  recordsWithTaipeiCityCounty: number;
+  byCityCounty: Array<{ cityCounty: string; count: number }>;
+  byServiceVeterinaryInstitution: Array<{ serviceVeterinaryInstitutionName: string; veterinarianCount: number; uniquePracticeLicenseNumberCount: number }>;
+  byLicenseNumberFormat: Array<{ practiceLicenseNumberFormat: VeterinarianPracticeLicenseNumberFormat; count: number }>;
+  topServiceVeterinaryInstitutions: Array<{ serviceVeterinaryInstitutionName: string; veterinarianCount: number; uniquePracticeLicenseNumberCount: number }>;
+  dataQuality: {
+    missingCityCodeCount: number;
+    missingCityCountyCount: number;
+    missingVeterinarianNameCount: number;
+    missingPracticeLicenseNumberCount: number;
+    missingServiceVeterinaryInstitutionNameCount: number;
+    duplicateVeterinarianNameCount: number;
+    duplicatePracticeLicenseNumberCount: number;
+    duplicateVeterinarianNameInstitutionPairCount: number;
+    duplicateFallbackKeyCount: number;
+    nonTaipeiCityCountyCount: number;
+  };
+};
+
+export type VeterinarianProfessionalRegistryFilters = {
+  search: string;
+  cityCode: string;
+  cityCounty: string;
+  licenseNumberFormat: string;
+  serviceVeterinaryInstitutionName: string;
+  cityCountyIsTaipei: string;
 };
 
 export type NangangSoftwareParkCompany = {

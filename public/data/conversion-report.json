@@ -3124,5 +3124,58 @@
       "No geocoding performed; map uses district centroid summaries only",
       "This is not job-vacancy, real-time service-capacity, placement-guarantee, subsidy/welfare-eligibility, vocational-rehabilitation/disability-assessment, quality-ranking, accessibility-certification, legal-compliance, procurement/consumption-recommendation, medical-advice, legal-advice, or endorsement data"
     ]
+  },
+  "licensedPawnshopDirectory": {
+    "source": "臺北市政府警察局當舖業資料清冊",
+    "sourceAgency": "警察局刑警大隊",
+    "sourcePage": "https://data.taipei/dataset/detail?id=024da777-25b0-4bee-b1b9-2f8ceb8bd68a",
+    "category": "治安",
+    "serviceCategory": "生活安全及品質",
+    "datasetType": "原始資料",
+    "officialResourceUpdateTime": "2025-06-17 09:21:00",
+    "officialMetadataUpdateTime": "2025-06-17 09:21:21",
+    "updateFrequency": "不定期更新",
+    "inputFile": "licensed-pawnshop-directory.csv",
+    "convertedAt": "2026-07-02T00:53:02.516Z",
+    "fileSize": 16669,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 287,
+    "outputRecords": 287,
+    "duplicateLicenseNumbers": [],
+    "duplicatePawnshopNames": [],
+    "duplicateBusinessAddresses": [
+      {
+        "value": "臺北市士林區重慶北路4段157號1樓",
+        "count": 2
+      }
+    ],
+    "duplicateSourceSequenceNumbers": [],
+    "duplicateFallbackKeys": [],
+    "licenseNumberWarnings": [
+      "恒生:10700024-3(補)",
+      "景美分處:110北市動010-8",
+      "寶誠:10900102-4(補)",
+      "松隆分處:110北市動001-10",
+      "順隆:10400231-1(補)",
+      "利隆:9700161-3（補）",
+      "大安分處:103北市動002-3",
+      "雙園分處:108北市動004-11",
+      "龍山分處:109北市動005-11",
+      "士林分處:107北市動011-7",
+      "大同分處:110北市動008-10",
+      "中山分處:110北市動009-13",
+      "北投分處:103北市動012-5"
+    ],
+    "addressWarnings": [
+      "麒興:District not parsed from address",
+      "陽信:District not parsed from address"
+    ],
+    "cityCountyWarnings": [],
+    "notes": [
+      "Big5 / CP950 decoded with UTF-8-SIG fallback",
+      "License numbers preserved as text and not parsed as numbers",
+      "No geocoding performed; map uses district centroid summaries only",
+      "This is not crime, fraud-risk, complaint, violation, law-enforcement, real-time operating-status, credit-rating, loan-advice, investment-advice, financial-advice, legal-advice, quality-ranking, recommendation, or endorsement data"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -24,6 +24,7 @@ export type DisabilityEmploymentBusinessItemCategory = 'vocational_rehabilitatio
 export type DisabilityEmploymentServiceCategory = 'employment_support' | 'vocational_rehabilitation' | 'workplace_or_business_resource' | 'training_and_counseling' | 'assistive_support' | 'other' | 'unknown';
 export type ShelteredWorkshopBusinessItemCategory = 'retail' | 'food_and_beverage' | 'gas_station' | 'manufacturing' | 'cleaning_service' | 'assistive_device_service' | 'laundry' | 'auto_service' | 'office_support' | 'printing_packaging' | 'maintenance_repair' | 'agriculture_food_processing' | 'mixed' | 'other_service' | 'unknown';
 export type ShelteredWorkshopServiceCategory = 'workshop_business' | 'food_retail_service' | 'cleaning_or_laundry' | 'assistive_support' | 'vehicle_related_service' | 'office_or_packaging_support' | 'other' | 'unknown';
+export type PawnshopLicenseNumberFormat = 'simple_numeric' | 'numeric_with_dash' | 'mixed' | 'missing' | 'unknown';
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
 export type TelepsychologyPhoneType = 'taipei_landline' | 'other_landline' | 'mobile' | 'extension' | 'multiple' | 'missing' | 'unknown';
@@ -784,6 +785,61 @@ export type ShelteredWorkshopDirectoryFilters = {
   hasPhone: string;
   phoneType: string;
   unifiedBusinessNumberValid: string;
+  addressParsed: string;
+};
+
+export type LicensedPawnshopDirectoryRecord = {
+  id: string;
+  module: 'licensed_pawnshop_directory';
+  sourceSequenceNumber?: number;
+  licenseNumber: string;
+  licenseNumberNormalized?: string;
+  licenseNumberFormat: PawnshopLicenseNumberFormat;
+  pawnshopName: string;
+  pawnshopNameNormalized?: string;
+  businessAddress: string;
+  businessAddressNormalized?: string;
+  districtFromAddress?: string;
+  isTaipeiDistrict: boolean;
+  taipeiDistrict?: string;
+  outsideTaipeiArea?: string;
+  roadName?: string;
+  cityCounty?: string;
+  cityCountyNormalized?: string;
+  cityCountyIsTaipei: boolean;
+  locationPrecision: LocationPrecision;
+  longitude?: number;
+  latitude?: number;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type LicensedPawnshopDirectorySummary = {
+  totalRecords: number;
+  uniqueLicenseNumberCount: number;
+  uniquePawnshopNameCount: number;
+  uniqueBusinessAddressCount: number;
+  cityCountyCount: number;
+  taipeiDistrictCount: number;
+  recordsWithAddress: number;
+  recordsWithParsedDistrictFromAddress: number;
+  recordsWithCityCountyTaipei: number;
+  byDistrict: Array<{ district: string; pawnshopCount: number; uniqueAddressCount: number; uniqueLicenseNumberCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number }>;
+  byLicenseNumberFormat: Array<{ licenseNumberFormat: PawnshopLicenseNumberFormat; count: number }>;
+  byCityCounty: Array<{ cityCounty: string; count: number }>;
+  dataQuality: { missingLicenseNumberCount: number; missingPawnshopNameCount: number; missingBusinessAddressCount: number; unparsedAddressDistrictCount: number; duplicateLicenseNumberCount: number; duplicatePawnshopNameCount: number; duplicateBusinessAddressCount: number; duplicateFallbackKeyCount: number; nonTaipeiCityCountyCount: number };
+};
+
+export type LicensedPawnshopDirectoryFilters = {
+  search: string;
+  district: string;
+  cityCounty: string;
+  licenseNumberFormat: string;
+  roadName: string;
+  cityCountyIsTaipei: string;
   addressParsed: string;
 };
 

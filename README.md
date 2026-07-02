@@ -2,7 +2,9 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, licensed pawnshops, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、合法當舖、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
+
+Licensed business and public safety records: Taipei City Police Department licensed pawnshop directory / 特許行業與公共安全公開資料：臺北市政府警察局當舖業資料清冊
 
 ## Purpose
 
@@ -16,6 +18,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市假牙補助醫療院所名單](https://data.taipei/dataset/detail?id=76b8b514-e793-4cca-8dcf-065d5af4b760): denture subsidy medical provider directory, Big5/CP950 decoding, subsidy-type parsing, provider branch preservation, address/road parsing, phone lookup, and district summaries.
 - [臺北市身障就業資源地圖](https://data.taipei/dataset/detail?id=c5aafda8-ef14-4f66-a6b7-d5da995a14b5): disability employment and vocational rehabilitation resource directory, Big5/CP950 decoding, ROC year parsing, business item grouping, service-category grouping, address/road parsing, phone lookup, and district summaries.
 - [臺北市庇護工場名冊](https://data.taipei/dataset/detail?id=fb88e4fd-c287-4fbb-91ab-0ed1fbeaf28c): sheltered workshop directory, Big5/CP950 decoding, ROC year parsing, business item and service helper categories, unified business number preservation, address/road parsing, phone lookup, and district summaries.
+- [臺北市政府警察局當舖業資料清冊](https://data.taipei/dataset/detail?id=024da777-25b0-4bee-b1b9-2f8ceb8bd68a): licensed pawnshop directory, Big5/CP950 decoding, license-number text preservation, pawnshop name lookup, business address/road parsing, city/county parsing, and district summaries.
 - [臺北市可執行通訊心理諮商之心理機構](https://data.taipei/dataset/detail?id=428a78d5-867a-4e55-9630-040a89c8cd94): telepsychology counseling institution directory, institution types, district/address/road parsing, phone/extension/mobile fields, and district summaries.
 - [臺北市營業場所投保公共意外險清冊](https://data.taipei/dataset/detail?id=5880bb98-ab6a-476c-ae55-37564b0d0fc9): business premises public liability insurance records, registration numbers, categories, source coordinates, policy expiry dates, and expiry-status summaries based only on source dates.
 - [臺北市核准商業設立、變更及歇業登記等異動資料清冊](https://data.taipei/dataset/detail?id=5fdefcca-e0a6-41bc-a520-7c8f067caad3): business registration change records, establishment/modification/closure event types, business numbers, source coordinates, event dates, and district summaries.
@@ -84,6 +87,12 @@ The dataset has addresses but no official coordinates. The map uses Taipei distr
 Sheltered workshops remain the separate `sheltered_workshop_directory` labor, employment, and vocational rehabilitation public-record module. The Big5/CP950 CSV includes 編號, 年度, 工場名稱, 營業項目, 聯絡人, 地址, 電話, and 統一編號. Conversion decodes Big5 first with UTF-8-SIG fallback, parses ROC years, preserves workshop names, contacts, phone text, and unified business numbers, groups business items and service categories as UI helper categories, parses Taipei districts and road names, and reports duplicate names, addresses, phones, unified business numbers, sequence numbers, and fallback keys.
 
 The dataset has addresses but no official coordinates. The map uses Taipei district centroid bubbles only, and the directory provides address-based Google Maps lookup links. The module does not claim job vacancies, real-time service capacity, placement guarantees, subsidy or welfare eligibility, vocational rehabilitation or disability assessment, quality ranking, accessibility certification, legal compliance, procurement or consumption recommendation, medical advice, legal advice, or official endorsement.
+
+## Additional module: Licensed Pawnshop Directory / 當舖業資料清冊
+
+Licensed pawnshops remain the separate `licensed_pawnshop_directory` business-registration, licensed-trade, and public-safety public-record module. The Big5/CP950 CSV includes 序號, 許可證號, 當舖名稱, 營業地址, and 縣市. Conversion decodes Big5 first with UTF-8-SIG fallback, preserves license numbers as text, parses pawnshop names, business addresses, Taipei districts, road names, and city/county values, and reports duplicate license numbers, names, business addresses, source sequence numbers, and fallback keys.
+
+The dataset has addresses but no official coordinates. The map uses Taipei district centroid bubbles only, and the directory provides address-based Google Maps lookup links. The module is not a crime record, fraud-risk list, consumer complaint record, illegal pawnshop list, regulatory violation record, law-enforcement action record, loan recommendation, credit advice, investment advice, financial advice, legal advice, real-time operating status, service-quality ranking, or official endorsement.
 
 ## Additional module: Telepsychology Counseling Institutions / 可執行通訊心理諮商之心理機構
 
@@ -215,6 +224,8 @@ Generated files:
 - `public/data/disability-employment-resource-map-summary.json`
 - `public/data/sheltered-workshop-directory.json`
 - `public/data/sheltered-workshop-directory-summary.json`
+- `public/data/licensed-pawnshop-directory.json`
+- `public/data/licensed-pawnshop-directory-summary.json`
 - `public/data/telepsychology-counseling-institutions.json`
 - `public/data/telepsychology-counseling-institution-summary.json`
 - `public/data/business-premises-public-liability-insurance-records.json`
@@ -324,6 +335,14 @@ Sheltered workshop data can be loaded from the uploaded CSV or an official resou
 ```bash
 npm run data:fetch:sheltered-workshops -- --force --local=/absolute/path/to/1150410臺北市庇護工場名冊.csv
 npm run data:convert:sheltered-workshops
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Licensed pawnshop data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:licensed-pawnshops -- --force --local=/absolute/path/to/1120105臺北市政府警察局當舖業資料清冊.csv
+npm run data:convert:licensed-pawnshops
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

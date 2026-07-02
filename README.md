@@ -2,9 +2,11 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, licensed pawnshops, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law and OSH compliance publication records, consumer dispute absence notices, Nangang Software Park companies, registered animal hospitals, veterinarian professional registry, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、合法當舖、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規與職安法公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、動物醫院一覽表、獸醫師資訊、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, licensed pawnshops, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law and OSH compliance publication records, consumer dispute absence notices, Nangang Software Park companies, Dawannan Industrial Area companies, registered animal hospitals, veterinarian professional registry, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、合法當舖、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規與職安法公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、大彎南段工業區廠商、動物醫院一覽表、獸醫師資訊、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
 
 Licensed business and public safety records: Taipei City Police Department licensed pawnshop directory / 特許行業與公共安全公開資料：臺北市政府警察局當舖業資料清冊
+
+Industrial areas, companies, and business public records: Dawannan Industrial Area company directory / 產業園區、公司與商業公開資料：大彎南段工業區廠商名錄
 
 ## Purpose
 
@@ -37,6 +39,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市政府勞動局違反職業安全衛生法事業單位及事業主公布總表](https://data.taipei/dataset/detail?id=3e2ad23f-21fa-4084-a4de-4fd7f5293550): Occupational Safety and Health Act violation publication records, announcement/penalty dates, penalty document numbers, business or organization names, violated article tokens, and broad content categories.
 - [臺北市消費爭議無故不到場協商之被申訴企業經營者列表](https://data.taipei/dataset/detail?id=c15e49fd-f511-46c8-8613-0ad91f370bfd): consumer dispute absence notice records, multiple annual CSV resources, resource-name preservation, ROC year parsing, negotiation-date parsing, respondent/complainant lookup, and dispute-content keyword tags.
 - [臺北市南港軟體工業園區廠商資料名錄](https://data.taipei/dataset/detail?id=6b7c48b4-03a6-4fcc-b172-9cee415c20b9): Nangang Software Park public company directory, business IDs, addresses, detected TWD97/WGS84 coordinates, and grouped map locations.
+- [臺北市大彎南段工業區廠商名錄](https://data.taipei/dataset/detail?id=dd950d9c-01c0-452d-b8d0-f9cf38f3a55d): Dawannan Industrial Area company directory, unified business numbers preserved as text, company names, company addresses, postal-code/district/road parsing, ADDR_X/ADDR_Y projected coordinate parsing, TWD97 TM2 121 to WGS84 conversion with Taipei bounds validation, address and road summaries, and distinction from company/business registration records and Nangang Software Park records.
 - [臺北市動物醫院一覽表](https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94): animal hospital public directory records, district summaries, road-name grouping, phone lookup, and address-based map links.
 - [臺北市獸醫師資訊](https://data.taipei/dataset/detail?id=4173b423-0c34-468e-a16d-5a7e7a06148e): veterinarian professional registry records, practice license number text preservation, service veterinary institution summaries, and no-map table/search views because the source has no address, district, phone, or coordinates.
 
@@ -281,6 +284,8 @@ Generated files:
 - `public/data/consumer-dispute-absent-business-operator-latest.json`
 - `public/data/nangang-software-park-companies.json`
 - `public/data/nangang-software-park-company-summary.json`
+- `public/data/dawannan-industrial-area-company-directory.json`
+- `public/data/dawannan-industrial-area-company-summary.json`
 - `public/data/registered-animal-hospitals.json`
 - `public/data/registered-animal-hospital-summary.json`
 - `public/data/veterinarian-professional-registry.json`
@@ -504,6 +509,8 @@ Nangang Software Park company data can be loaded from the uploaded CSV or an off
 ```bash
 npm run data:fetch:nangang-software-park -- --force --local=/absolute/path/to/臺北市南港軟體工業園區.csv
 npm run data:convert:nangang-software-park
+npm run data:fetch:dawannan-companies -- --force --local=/absolute/path/to/臺北市大彎南段工業區廠商名錄.csv
+npm run data:convert:dawannan-companies
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

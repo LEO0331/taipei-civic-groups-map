@@ -3656,5 +3656,251 @@
       "No address, district, or coordinates supplied; no map layer created",
       "This is not real-time workplace safety status, complete compliance history, employer evaluation, credit rating, investment/procurement/employment/legal advice, criminal record, hazard map, or endorsement data"
     ]
+  },
+  "dawannanIndustrialAreaCompanyDirectory": {
+    "source": "臺北市大彎南段工業區廠商名錄",
+    "sourceAgency": "產業局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=dd950d9c-01c0-452d-b8d0-f9cf38f3a55d",
+    "theme": "經濟",
+    "serviceCategory": "開創事業",
+    "updateFrequency": "不定期更新",
+    "officialResourceUpdateTime": "2026-06-02 09:03:06",
+    "officialMetadataUpdateTime": "2026-06-02 15:07:42",
+    "collectionPeriodStart": "2007-01-01",
+    "inputFile": "dawannan-industrial-area-company-directory.csv",
+    "convertedAt": "2026-07-02T06:32:03.694Z",
+    "fileSize": 134734,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 1352,
+    "outputRecords": 1352,
+    "invalidUnifiedBusinessNumbers": [],
+    "addressWarnings": [],
+    "coordinateWarnings": [],
+    "duplicateUnifiedBusinessNumbers": [],
+    "duplicateCompanyNames": [],
+    "duplicateCompanyAddresses": [
+      {
+        "value": "114臺北市內湖區新湖一路218號1樓",
+        "count": 14
+      },
+      {
+        "value": "114臺北市內湖區行愛路140巷27號5樓",
+        "count": 3
+      },
+      {
+        "value": "114臺北市內湖區行善路48巷15號7樓",
+        "count": 7
+      },
+      {
+        "value": "114臺北市內湖區行善路188號4樓",
+        "count": 7
+      },
+      {
+        "value": "114臺北市內湖區行善路58號4樓之3",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區行善路398號1樓",
+        "count": 3
+      },
+      {
+        "value": "114臺北市內湖區新湖一路398號7樓之2",
+        "count": 9
+      },
+      {
+        "value": "114臺北市內湖區新湖一路97號3樓",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區行愛路100號2樓",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區行愛路100號3樓",
+        "count": 3
+      },
+      {
+        "value": "114臺北市內湖區新湖一路8號6樓",
+        "count": 3
+      },
+      {
+        "value": "114臺北市內湖區新湖一路360號1樓",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區新湖三路168號6樓",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區新湖三路189號2樓",
+        "count": 6
+      },
+      {
+        "value": "114臺北市內湖區行愛路140巷28號6樓",
+        "count": 19
+      },
+      {
+        "value": "114臺北市內湖區新湖二路180號5樓",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區行忠路60號7樓之1",
+        "count": 3
+      },
+      {
+        "value": "114臺北市內湖區行忠路66巷19號5樓",
+        "count": 2
+      },
+      {
+        "value": "114臺北市內湖區新湖二路211號",
+        "count": 12
+      },
+      {
+        "value": "114臺北市內湖區新湖三路237號6樓",
+        "count": 7
+      }
+    ],
+    "duplicateCoordinatePairs": [
+      {
+        "value": "308619,2773194",
+        "count": 2
+      },
+      {
+        "value": "308629,2772723",
+        "count": 44
+      },
+      {
+        "value": "308442,2772941",
+        "count": 7
+      },
+      {
+        "value": "308063,2772298",
+        "count": 10
+      },
+      {
+        "value": "308484,2772417",
+        "count": 16
+      },
+      {
+        "value": "308046,2772200",
+        "count": 21
+      },
+      {
+        "value": "307875,2772451",
+        "count": 4
+      },
+      {
+        "value": "308108,2772203",
+        "count": 17
+      },
+      {
+        "value": "308978,2772891",
+        "count": 9
+      },
+      {
+        "value": "308911,2772959",
+        "count": 12
+      },
+      {
+        "value": "308142,2772380",
+        "count": 8
+      },
+      {
+        "value": "308391,2773029",
+        "count": 3
+      },
+      {
+        "value": "307879,2772426",
+        "count": 2
+      },
+      {
+        "value": "308240,2772346",
+        "count": 2
+      },
+      {
+        "value": "308576,2772895",
+        "count": 14
+      },
+      {
+        "value": "307962,2772416",
+        "count": 2
+      },
+      {
+        "value": "307957,2772373",
+        "count": 11
+      },
+      {
+        "value": "308819,2772850",
+        "count": 2
+      },
+      {
+        "value": "308364,2773066",
+        "count": 16
+      },
+      {
+        "value": "308525,2773104",
+        "count": 12
+      }
+    ],
+    "coordinateQuality": {
+      "hasProjectedCoordinates": 1352,
+      "convertedToWgs84": 1352,
+      "notConvertedProjectedCoordinate": 0,
+      "invalidProjectedCoordinate": 0,
+      "missingProjectedCoordinate": 0,
+      "uniqueProjectedXCount": 281,
+      "uniqueProjectedYCount": 273,
+      "uniqueCoordinatePairCount": 312
+    },
+    "dataQuality": {
+      "missingUnifiedBusinessNumberCount": 0,
+      "invalidUnifiedBusinessNumberFormatCount": 0,
+      "missingCompanyNameCount": 0,
+      "missingCompanyAddressCount": 0,
+      "unparsedAddressDistrictCount": 0,
+      "duplicateUnifiedBusinessNumberCount": 0,
+      "duplicateCompanyNameCount": 0,
+      "duplicateCompanyAddressCount": 625,
+      "duplicateCoordinatePairCount": 1040,
+      "duplicateFallbackKeyCount": 0
+    },
+    "sampleConvertedCoordinates": [
+      {
+        "projectedX": 308619,
+        "projectedY": 2773194,
+        "longitude": 121.58103465409069,
+        "latitude": 25.06582122884923
+      },
+      {
+        "projectedX": 308629,
+        "projectedY": 2772723,
+        "longitude": 121.58111371190778,
+        "latitude": 25.06156872883231
+      },
+      {
+        "projectedX": 308442,
+        "projectedY": 2772941,
+        "longitude": 121.579269550706,
+        "latitude": 25.06354404024219
+      },
+      {
+        "projectedX": 308629,
+        "projectedY": 2772723,
+        "longitude": 121.58111371190778,
+        "latitude": 25.06156872883231
+      },
+      {
+        "projectedX": 308063,
+        "projectedY": 2772298,
+        "longitude": 121.57548598678737,
+        "latitude": 25.05775373885284
+      }
+    ],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 fallback",
+      "Unified business numbers preserved as strings",
+      "ADDR_X / ADDR_Y are treated as projected coordinates, not longitude / latitude",
+      "TWD97 TM2 zone 121 conversion is reused from the existing Taipei coordinate helper and validated against Taipei bounds"
+    ]
   }
 }

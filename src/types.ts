@@ -1,8 +1,10 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
+export type CoordinateConversionStatus = 'converted_to_wgs84' | 'not_converted_projected_coordinate' | 'invalid_projected_coordinate' | 'missing_projected_coordinate' | 'not_attempted';
+export type IndustrialAreaCompanyLocationPrecision = 'projected_coordinate_converted' | 'projected_coordinate_unconverted' | 'address_only' | 'district_only' | 'missing';
 export type CompanyNameKeywordTag = 'technology' | 'software' | 'biotech' | 'medical' | 'energy' | 'semiconductor' | 'data_or_digital' | 'media_or_creative' | 'investment_or_asset' | 'other' | 'unknown';
 export type AnimalHospitalPhoneType = 'landline' | 'mobile' | 'extension' | 'unknown';
 export type RegisteredLaborUnionType = 'occupational_union' | 'enterprise_union' | 'industrial_union' | 'union_federation' | 'other' | 'unknown';
@@ -1682,6 +1684,88 @@ export type NangangSoftwareParkCompanyFilters = {
   keywordTag: string;
   coordinateStatus: string;
   hasValidCoordinate: string;
+};
+
+export type DawannanIndustrialAreaCompanyRecord = {
+  id: string;
+  module: 'dawannan_industrial_area_company_directory';
+  unifiedBusinessNumber: string;
+  unifiedBusinessNumberNormalized?: string;
+  unifiedBusinessNumberValidFormat: boolean;
+  companyName: string;
+  companyNameNormalized?: string;
+  companyAddress: string;
+  companyAddressNormalized?: string;
+  postalCode?: string;
+  districtFromAddress?: string;
+  isTaipeiDistrict: boolean;
+  taipeiDistrict?: string;
+  roadName?: string;
+  projectedXRaw?: string;
+  projectedYRaw?: string;
+  projectedX?: number;
+  projectedY?: number;
+  hasProjectedCoordinates: boolean;
+  projectedCoordinateSystemAssumption?: 'TWD97_TM2_121' | 'unknown_projected_coordinate';
+  wgs84Longitude?: number;
+  wgs84Latitude?: number;
+  coordinateConversionStatus: CoordinateConversionStatus;
+  locationPrecision: IndustrialAreaCompanyLocationPrecision;
+  googleMapsQuery?: string;
+  source: string;
+  sourceAgency: string;
+  industrialAreaName: '大彎南段工業區';
+};
+
+export type DawannanIndustrialAreaCompanySummary = {
+  totalRecords: number;
+  uniqueUnifiedBusinessNumberCount: number;
+  uniqueCompanyNameCount: number;
+  uniqueCompanyAddressCount: number;
+  uniqueCoordinatePairCount: number;
+  taipeiDistrictCount: number;
+  recordsWithAddress: number;
+  recordsWithParsedDistrictFromAddress: number;
+  recordsWithProjectedCoordinates: number;
+  recordsWithConvertedWgs84Coordinates: number;
+  byDistrict: Array<{ district: string; companyCount: number; uniqueAddressCount: number; uniqueCoordinatePairCount: number }>;
+  byRoadName: Array<{ roadName: string; companyCount: number; uniqueAddressCount: number }>;
+  byAddress: Array<{ companyAddress: string; companyCount: number; coordinatePair?: { projectedX?: number; projectedY?: number; wgs84Longitude?: number; wgs84Latitude?: number } }>;
+  byCoordinatePair: Array<{ key: string; companyCount: number; sampleAddress?: string; sampleCompanies: string[]; projectedX?: number; projectedY?: number; wgs84Longitude?: number; wgs84Latitude?: number }>;
+  coordinateQuality: {
+    hasProjectedCoordinates: number;
+    convertedToWgs84: number;
+    notConvertedProjectedCoordinate: number;
+    invalidProjectedCoordinate: number;
+    missingProjectedCoordinate: number;
+    uniqueProjectedXCount: number;
+    uniqueProjectedYCount: number;
+    uniqueCoordinatePairCount: number;
+  };
+  dataQuality: {
+    missingUnifiedBusinessNumberCount: number;
+    invalidUnifiedBusinessNumberFormatCount: number;
+    missingCompanyNameCount: number;
+    missingCompanyAddressCount: number;
+    unparsedAddressDistrictCount: number;
+    duplicateUnifiedBusinessNumberCount: number;
+    duplicateCompanyNameCount: number;
+    duplicateCompanyAddressCount: number;
+    duplicateCoordinatePairCount: number;
+    duplicateFallbackKeyCount: number;
+  };
+};
+
+export type DawannanIndustrialAreaCompanyFilters = {
+  search: string;
+  district: string;
+  roadName: string;
+  postalCode: string;
+  unifiedBusinessNumberValidFormat: string;
+  hasProjectedCoordinates: string;
+  coordinateConversionStatus: string;
+  duplicateAddressGroup: string;
+  duplicateCoordinateGroup: string;
 };
 
 export type LaborViolationTopicTag =

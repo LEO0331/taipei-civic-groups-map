@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -35,6 +35,11 @@ export type LicensedSpecialEntertainmentLocationPrecision = 'official_coordinate
 export type RecyclingItemCategory = 'paper' | 'plastic' | 'aluminum' | 'iron' | 'metal' | 'copper' | 'glass' | 'it_equipment' | 'electronics' | 'dry_battery' | 'lead_acid_battery' | 'lighting' | 'paper_container' | 'plastic_container' | 'aluminum_container' | 'iron_container' | 'vehicle' | 'tire' | 'hardware' | 'other' | 'unknown';
 export type RecyclingOrganizationLocationPrecision = 'district_address' | 'geocoded_address_approximate' | 'official_coordinate' | 'district_only' | 'missing';
 export type RecyclingOrganizationGeocodingStatus = 'not_attempted' | 'not_geocoded_address_only' | 'geocoded_approximate' | 'official_coordinate' | 'failed' | 'not_applicable';
+export type CemeteryTypeCategory = 'managed_cemetery' | 'cemetery' | 'other' | 'unknown';
+export type CemeteryBurialStatusCategory = 'fully_burial_prohibited' | 'rotational_burial_application_accepted' | 'reserved_life_grave_application_accepted' | 'other' | 'unknown';
+export type CemeteryOpeningHoursCategory = 'all_day' | 'time_range' | 'other' | 'unknown';
+export type CemeteryCoordinateQuality = 'valid_wgs84_taipei' | 'outside_taipei_bounds' | 'invalid' | 'missing';
+export type CemeteryLocationPrecision = 'official_coordinate' | 'district_location_description' | 'district_only' | 'missing';
 export type VeterinarianPracticeLicenseNumberFormat = 'taipei_veterinarian_practice_license' | 'other_veterinarian_license' | 'numeric_only' | 'mixed' | 'missing' | 'unknown';
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
@@ -1150,6 +1155,107 @@ export type RegisteredRecyclingBusinessOrganizationFilters = {
   addressLooksLikeOpenLotOrNearby: string;
   geocodingStatus: string;
   locationPrecision: string;
+};
+
+export type CemeteryPublicFacilityRecord = {
+  id: string;
+  module: 'cemetery_public_facilities';
+  sourceSequenceNumber?: number;
+  sourceSequenceNumberNormalized?: string;
+  cemeteryTypeRaw: string;
+  cemeteryTypeCategory: CemeteryTypeCategory;
+  districtName: string;
+  districtNameNormalized?: string;
+  isTaipeiDistrict: boolean;
+  cemeteryName: string;
+  cemeteryNameNormalized?: string;
+  cemeteryLocationDescription: string;
+  cemeteryLocationDescriptionNormalized?: string;
+  roadName?: string;
+  locationDescriptionLooksApproximate: boolean;
+  burialStatusRaw: string;
+  burialStatusCategory: CemeteryBurialStatusCategory;
+  isBurialProhibited: boolean;
+  isApplicationMentioned: boolean;
+  openingHoursRaw: string;
+  openingHoursCategory: CemeteryOpeningHoursCategory;
+  isAllDayOpen: boolean;
+  latitude?: number;
+  longitude?: number;
+  coordinateValid: boolean;
+  coordinateQuality: CemeteryCoordinateQuality;
+  coordinatePairKey?: string;
+  locationPrecision: CemeteryLocationPrecision;
+  note?: string;
+  noteNormalized?: string;
+  hasNote: boolean;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type CemeteryPublicFacilitySummary = {
+  totalRecords: number;
+  districtCount: number;
+  uniqueCemeteryNameCount: number;
+  uniqueLocationDescriptionCount: number;
+  uniqueCoordinatePairCount: number;
+  managedCemeteryCount: number;
+  cemeteryCount: number;
+  burialProhibitedCount: number;
+  applicationMentionedCount: number;
+  allDayOpenCount: number;
+  timeRangeOpenCount: number;
+  recordsWithValidCoordinates: number;
+  recordsWithInvalidCoordinates: number;
+  recordsWithApproximateLocationDescription: number;
+  recordsWithNotes: number;
+  byDistrict: Array<{ districtName: string; count: number; managedCemeteryCount: number; cemeteryCount: number; burialProhibitedCount: number; applicationMentionedCount: number; validCoordinateCount: number }>;
+  byCemeteryType: Array<{ cemeteryTypeRaw: string; cemeteryTypeCategory: CemeteryTypeCategory; count: number; districtCount: number }>;
+  byBurialStatus: Array<{ burialStatusRaw: string; burialStatusCategory: CemeteryBurialStatusCategory; count: number; districtCount: number }>;
+  byOpeningHours: Array<{ openingHoursRaw: string; openingHoursCategory: CemeteryOpeningHoursCategory; count: number; districtCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number; districtCount: number }>;
+  coordinateQuality: { validWgs84Taipei: number; outsideTaipeiBounds: number; invalid: number; missing: number; duplicateCoordinatePairCount: number };
+  dataQuality: {
+    missingSequenceNumberCount: number;
+    duplicateSequenceNumberCount: number;
+    missingCemeteryTypeCount: number;
+    unknownCemeteryTypeCount: number;
+    missingDistrictCount: number;
+    unknownDistrictCount: number;
+    missingCemeteryNameCount: number;
+    duplicateCemeteryNameCount: number;
+    missingLocationDescriptionCount: number;
+    duplicateLocationDescriptionCount: number;
+    missingBurialStatusCount: number;
+    unknownBurialStatusCount: number;
+    missingOpeningHoursCount: number;
+    unknownOpeningHoursCount: number;
+    missingLatitudeCount: number;
+    missingLongitudeCount: number;
+    invalidCoordinateCount: number;
+    duplicateCoordinatePairCount: number;
+    duplicateFallbackKeyCount: number;
+  };
+};
+
+export type CemeteryPublicFacilityFilters = {
+  search: string;
+  cemeteryTypeRaw: string;
+  districtName: string;
+  burialStatusRaw: string;
+  burialStatusCategory: string;
+  isBurialProhibited: string;
+  isApplicationMentioned: string;
+  openingHoursRaw: string;
+  openingHoursCategory: string;
+  isAllDayOpen: string;
+  coordinateQuality: string;
+  locationPrecision: string;
+  locationDescriptionLooksApproximate: string;
+  roadName: string;
+  hasNote: string;
 };
 
 export type TelepsychologyCounselingInstitutionRecord = {

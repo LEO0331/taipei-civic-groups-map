@@ -4042,5 +4042,221 @@
       "No business/company matching generated in v1",
       "This is not real-time operating status, opening-hours, admission, age-restriction, consumer-advice, public-safety-risk, violation-record, legal-advice, investment-advice, credit-rating, or endorsement data"
     ]
+  },
+  "licensedSpecialEntertainmentBusinessOperators": {
+    "source": "臺北市合法八大行業業者清冊",
+    "sourceAgency": "產業局商業處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=dd0548f2-0372-4e4f-8c74-9a4121f27d35",
+    "category": "觀光",
+    "serviceCategory": "休閒旅遊",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市合法八大行業業者清冊",
+    "officialResourceUpdateTime": "2025-10-31 16:20:26",
+    "officialMetadataUpdateTime": "2026-03-02 15:04:36",
+    "updateFrequency": "不定期更新",
+    "inputFile": "licensed-special-entertainment-business-operators.csv",
+    "convertedAt": "2026-07-03T01:19:09.293Z",
+    "fileSize": 17305,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 124,
+    "outputRecords": 124,
+    "duplicateSequenceNumbers": [],
+    "duplicateCompanyOrBusinessNames": [],
+    "duplicateBusinessRegistrationNumbers": [],
+    "duplicateBusinessPremisesAddresses": [],
+    "duplicateCoordinatePairs": [
+      {
+        "coordinatePairKey": "121.525633,25.055036",
+        "count": 5,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.525684,25.059581",
+        "count": 5,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.525656,25.058487",
+        "count": 4,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.525713,25.059774",
+        "count": 4,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.525431,25.059536",
+        "count": 3,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.543542,25.041886",
+        "count": 3,
+        "districtNames": [
+          "大安區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.551773,25.041678",
+        "count": 3,
+        "districtNames": [
+          "大安區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.566021,25.035668",
+        "count": 3,
+        "districtNames": [
+          "信義區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.505939,25.045787",
+        "count": 2,
+        "districtNames": [
+          "萬華區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.508889,25.042733",
+        "count": 2,
+        "districtNames": [
+          "中正區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.516409,25.062750",
+        "count": 2,
+        "districtNames": [
+          "大同區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.523775,25.049447",
+        "count": 2,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.524317,25.058199",
+        "count": 2,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.524448,25.060413",
+        "count": 2,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.524821,25.050484",
+        "count": 2,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.526106,25.060164",
+        "count": 2,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.526856,25.058271",
+        "count": 2,
+        "districtNames": [
+          "中山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.540634,24.991821",
+        "count": 2,
+        "districtNames": [
+          "文山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.547988,25.051988",
+        "count": 2,
+        "districtNames": [
+          "松山區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.548289,25.041747",
+        "count": 2,
+        "districtNames": [
+          "大安區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.552017,25.041671",
+        "count": 2,
+        "districtNames": [
+          "大安區"
+        ]
+      },
+      {
+        "coordinatePairKey": "121.567734,25.035564",
+        "count": 2,
+        "districtNames": [
+          "信義區"
+        ]
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "warnings": {
+      "sequence": [],
+      "registration": [],
+      "industry": [],
+      "district": [],
+      "address": [],
+      "coordinate": []
+    },
+    "dataQuality": {
+      "missingSequenceNumberCount": 0,
+      "duplicateSequenceNumberCount": 0,
+      "missingCompanyOrBusinessNameCount": 0,
+      "duplicateCompanyOrBusinessNameCount": 0,
+      "missingBusinessRegistrationNumberCount": 0,
+      "duplicateBusinessRegistrationNumberCount": 0,
+      "invalidBusinessRegistrationNumberCount": 0,
+      "missingResponsiblePersonNameCount": 0,
+      "missingOperatingIndustryCount": 0,
+      "unknownOperatingIndustryCategoryCount": 0,
+      "missingDistrictCount": 0,
+      "unknownDistrictCount": 0,
+      "missingAddressCount": 0,
+      "duplicateAddressCount": 0,
+      "missingCoordinateCount": 0,
+      "invalidCoordinateCount": 0,
+      "outsideTaipeiCoordinateCount": 0,
+      "duplicateFallbackKeyCount": 0
+    },
+    "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback",
+      "Business registration numbers preserved as text to keep leading zeros",
+      "Official WGS84 coordinates are used only when both latitude and longitude are finite and within broad Taipei bounds",
+      "Same-coordinate records are grouped in the map UI instead of adding a clustering dependency",
+      "No automatic coordinate swapping performed",
+      "No business/company matching generated in v1",
+      "This is not real-time operating status, opening-hours, admission, age-restriction, consumer-advice, public-safety-risk, violation-record, legal-advice, investment-advice, credit-rating, or endorsement data"
+    ]
   }
 }

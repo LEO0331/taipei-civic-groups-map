@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -29,6 +29,9 @@ export type ShelteredWorkshopServiceCategory = 'workshop_business' | 'food_retai
 export type PawnshopLicenseNumberFormat = 'simple_numeric' | 'numeric_with_dash' | 'mixed' | 'missing' | 'unknown';
 export type LicensedArcadeLocationPrecision = 'district_address' | 'geocoded_address_approximate' | 'official_coordinate' | 'district_only' | 'missing';
 export type LicensedArcadeGeocodingStatus = 'not_attempted' | 'not_geocoded_address_only' | 'geocoded_approximate' | 'official_coordinate' | 'failed' | 'not_applicable';
+export type SpecialEntertainmentBusinessIndustryCategory = 'karaoke_or_audio_visual_singing' | 'bar' | 'dance_hall' | 'dance_club' | 'nightclub' | 'hostess_bar_or_jiujia' | 'sauna' | 'multi_category' | 'other' | 'unknown';
+export type LicensedSpecialEntertainmentCoordinateQuality = 'valid_wgs84_taipei' | 'outside_taipei_bounds' | 'invalid' | 'missing';
+export type LicensedSpecialEntertainmentLocationPrecision = 'official_coordinate' | 'district_address' | 'district_only' | 'missing';
 export type VeterinarianPracticeLicenseNumberFormat = 'taipei_veterinarian_practice_license' | 'other_veterinarian_license' | 'numeric_only' | 'mixed' | 'missing' | 'unknown';
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
@@ -927,6 +930,103 @@ export type LicensedElectronicGameArcadeOperatorFilters = {
   geocodingStatus: string;
   locationPrecision: string;
   validBusinessRegistrationNumberFormat: string;
+};
+
+export type LicensedSpecialEntertainmentBusinessOperatorRecord = {
+  id: string;
+  module: 'licensed_special_entertainment_business_operators';
+  sourceSequenceNumber?: number;
+  sourceSequenceNumberNormalized?: string;
+  companyOrBusinessName: string;
+  companyOrBusinessNameNormalized?: string;
+  businessRegistrationNumber: string;
+  businessRegistrationNumberNormalized?: string;
+  businessRegistrationNumberValidFormat: boolean;
+  responsiblePersonName?: string;
+  responsiblePersonNameNormalized?: string;
+  operatingIndustryRaw?: string;
+  operatingIndustryDisplay: string;
+  operatingIndustryItems: string[];
+  operatingIndustryCategories: SpecialEntertainmentBusinessIndustryCategory[];
+  isMultiIndustryOperator: boolean;
+  districtName: string;
+  districtNameNormalized?: string;
+  isTaipeiDistrict: boolean;
+  businessPremisesAddress: string;
+  businessPremisesAddressNormalized?: string;
+  roadName?: string;
+  addressLooksLikeComplexUnit: boolean;
+  longitude?: number;
+  latitude?: number;
+  coordinateQuality: LicensedSpecialEntertainmentCoordinateQuality;
+  coordinateValid: boolean;
+  coordinatePairKey?: string;
+  locationPrecision: LicensedSpecialEntertainmentLocationPrecision;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type LicensedSpecialEntertainmentBusinessOperatorSummary = {
+  totalRecords: number;
+  districtCount: number;
+  uniqueCompanyOrBusinessNameCount: number;
+  uniqueBusinessRegistrationNumberCount: number;
+  uniqueResponsiblePersonNameCount: number;
+  uniqueAddressCount: number;
+  uniqueRoadNameCount: number;
+  operatingIndustryItemCount: number;
+  operatingIndustryCategoryCount: number;
+  recordsWithValidCoordinates: number;
+  recordsWithComplexUnitAddress: number;
+  recordsWithValidBusinessRegistrationNumberFormat: number;
+  multiIndustryOperatorCount: number;
+  duplicateCoordinatePairCount: number;
+  byDistrict: Array<{ districtName: string; count: number; uniqueAddressCount: number; uniqueBusinessRegistrationNumberCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number; districtCount: number }>;
+  byOperatingIndustryItem: Array<{ operatingIndustryItem: string; count: number }>;
+  byOperatingIndustryCategory: Array<{ operatingIndustryCategory: SpecialEntertainmentBusinessIndustryCategory; count: number }>;
+  byCoordinateQuality: Array<{ coordinateQuality: LicensedSpecialEntertainmentCoordinateQuality; count: number }>;
+  byLocationPrecision: Array<{ locationPrecision: LicensedSpecialEntertainmentLocationPrecision; count: number }>;
+  byBusinessRegistrationNumberFormatValidity: Array<{ valid: boolean; count: number }>;
+  byComplexUnitAddress: Array<{ addressLooksLikeComplexUnit: boolean; count: number }>;
+  byMultiIndustryOperator: Array<{ isMultiIndustryOperator: boolean; count: number }>;
+  topCompanyOrBusinessNames: Array<{ companyOrBusinessName: string; count: number; districtName?: string }>;
+  duplicateCoordinatePairs: Array<{ coordinatePairKey: string; count: number; districtNames: string[] }>;
+  dataQuality: {
+    missingSequenceNumberCount: number;
+    duplicateSequenceNumberCount: number;
+    missingCompanyOrBusinessNameCount: number;
+    duplicateCompanyOrBusinessNameCount: number;
+    missingBusinessRegistrationNumberCount: number;
+    duplicateBusinessRegistrationNumberCount: number;
+    invalidBusinessRegistrationNumberCount: number;
+    missingResponsiblePersonNameCount: number;
+    missingOperatingIndustryCount: number;
+    unknownOperatingIndustryCategoryCount: number;
+    missingDistrictCount: number;
+    unknownDistrictCount: number;
+    missingAddressCount: number;
+    duplicateAddressCount: number;
+    missingCoordinateCount: number;
+    invalidCoordinateCount: number;
+    outsideTaipeiCoordinateCount: number;
+    duplicateFallbackKeyCount: number;
+  };
+};
+
+export type LicensedSpecialEntertainmentBusinessOperatorFilters = {
+  search: string;
+  districtName: string;
+  operatingIndustryItem: string;
+  operatingIndustryCategory: string;
+  isMultiIndustryOperator: string;
+  roadName: string;
+  addressLooksLikeComplexUnit: string;
+  coordinateQuality: string;
+  locationPrecision: string;
+  businessRegistrationNumberValidFormat: string;
 };
 
 export type TelepsychologyCounselingInstitutionRecord = {

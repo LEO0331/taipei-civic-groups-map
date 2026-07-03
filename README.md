@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, recycling business organizations, cemetery public facilities, licensed pawnshops, licensed electronic game arcade operators, licensed special entertainment business operators, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law, OSH, and Gender Equality in Employment Act compliance publication records, consumer dispute absence notices, Nangang Software Park companies, Dawannan Industrial Area companies, registered animal hospitals, veterinarian professional registry, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、回收業機構、公墓與生命禮儀公共設施、合法當舖、合法電子遊戲場業者、合法八大行業業者、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規、職安法與性別平等工作法公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、大彎南段工業區廠商、動物醫院一覽表、獸醫師資訊、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, recycling business organizations, registered factories, cemetery public facilities, licensed pawnshops, licensed electronic game arcade operators, licensed special entertainment business operators, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law, OSH, and Gender Equality in Employment Act compliance publication records, consumer dispute absence notices, Nangang Software Park companies, Dawannan Industrial Area companies, registered animal hospitals, veterinarian professional registry, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、回收業機構、登記工廠、公墓與生命禮儀公共設施、合法當舖、合法電子遊戲場業者、合法八大行業業者、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規、職安法與性別平等工作法公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、大彎南段工業區廠商、動物醫院一覽表、獸醫師資訊、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
 
 Civil affairs, funeral services, and public facilities: cemetery public facilities / 民政、生命禮儀與公共設施：各區公墓資訊
 
@@ -10,7 +10,7 @@ Licensed business and public safety records: Taipei City Police Department licen
 
 Licensed businesses and regulated industry directories: licensed electronic game arcade operators and licensed special entertainment business operators / 合法登記業者與特許行業清冊：合法電子遊戲場業者與合法八大行業業者
 
-Industrial areas, companies, and business public records: Dawannan Industrial Area company directory / 產業園區、公司與商業公開資料：大彎南段工業區廠商名錄
+Industry, factories, companies, and business public records: registered factory distribution and Dawannan Industrial Area company directory / 產業、工廠、公司與商業公開資料：登記工廠分布圖及基本資料、大彎南段工業區廠商名錄
 
 Labor law violation and publication records: Gender Equality in Employment Act violation records / 勞動法規違規與公告資料：性別平等工作法違規公布紀錄
 
@@ -27,6 +27,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市身障就業資源地圖](https://data.taipei/dataset/detail?id=c5aafda8-ef14-4f66-a6b7-d5da995a14b5): disability employment and vocational rehabilitation resource directory, Big5/CP950 decoding, ROC year parsing, business item grouping, service-category grouping, address/road parsing, phone lookup, and district summaries.
 - [臺北市庇護工場名冊](https://data.taipei/dataset/detail?id=fb88e4fd-c287-4fbb-91ab-0ed1fbeaf28c): sheltered workshop directory, Big5/CP950 decoding, ROC year parsing, business item and service helper categories, unified business number preservation, address/road parsing, phone lookup, and district summaries.
 - [臺北市回收業機構名冊](https://data.taipei/dataset/detail?id=49a8e600-313d-48ba-b35f-5ff093d4cff1): recycling business organization directory, Big5/CP950 decoding with UTF-8-SIG fallback, business registration number and mobile preservation as text, recycling storage site address parsing, district/road extraction, recyclable-item parsing, and address-based directory display without official coordinates.
+- [臺北市登記工廠分布圖及基本資料](https://data.taipei/dataset/detail?id=c8215f0d-20fa-4350-bcd9-da82432c2c9d): registered factory distribution/basic information, UTF-8-SIG decoding with Big5/CP950 fallback, factory registration ID/name/address/responsible-person source-field preservation, district/road/floor-unit parsing, ADDR_X/ADDR_Y projected coordinate parsing, TWD97 TM2 121 to WGS84 conversion with Taipei bounds validation, grouped marker display for shared coordinates, and no factory boundary, entrance, operating status, pollution, safety, compliance, credit, investment, or legal claim.
 - [臺北市各區公墓資訊](https://data.taipei/dataset/detail?id=041287ab-e528-49c6-99eb-a37ef329a121): cemetery public facility registry, UTF-8-SIG decoding with Big5/CP950 fallback, sequence/type/district/name/location/burial-status/opening-hour parsing, official coordinate validation, source-coordinate marker display, and no cemetery boundary, entrance, individual grave, application eligibility, legal advice, tourism recommendation, or land-value claim.
 - [臺北市政府警察局當舖業資料清冊](https://data.taipei/dataset/detail?id=024da777-25b0-4bee-b1b9-2f8ceb8bd68a): licensed pawnshop directory, Big5/CP950 decoding, license-number text preservation, pawnshop name lookup, business address/road parsing, city/county parsing, and district summaries.
 - [臺北市合法電子遊戲場業者清冊](https://data.taipei/dataset/detail?id=20774fbb-5671-4850-b307-af6b5976077d): licensed electronic game arcade operator directory, UTF-8-SIG decoding with Big5/CP950 fallback, `seqno`/`序號` support, company/business name parsing, business registration number preservation as text, district trimming/validation, premises address parsing, complex unit address detection, external map lookup links, and district/address-list display without official coordinates.
@@ -260,6 +261,8 @@ Generated files:
 - `public/data/licensed-special-entertainment-business-operator-summary.json`
 - `public/data/registered-recycling-business-organizations.json`
 - `public/data/registered-recycling-business-organization-summary.json`
+- `public/data/registered-factory-distribution.json`
+- `public/data/registered-factory-summary.json`
 - `public/data/telepsychology-counseling-institutions.json`
 - `public/data/telepsychology-counseling-institution-summary.json`
 - `public/data/business-premises-public-liability-insurance-records.json`
@@ -377,6 +380,14 @@ Recycling business organization data can be loaded from the uploaded CSV or an o
 ```bash
 npm run data:fetch:recycling-organizations -- --force --local=/absolute/path/to/臺北市回收業機構名冊.csv
 npm run data:convert:recycling-organizations
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Registered factory data can be loaded from the uploaded CSV or an official resource:
+
+```bash
+npm run data:fetch:registered-factories -- --force --local=/absolute/path/to/臺北市登記工廠分布圖及基本資料.csv
+npm run data:convert:registered-factories
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

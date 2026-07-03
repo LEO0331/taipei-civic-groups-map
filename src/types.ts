@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'registered_factory_distribution' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -40,6 +40,10 @@ export type CemeteryBurialStatusCategory = 'fully_burial_prohibited' | 'rotation
 export type CemeteryOpeningHoursCategory = 'all_day' | 'time_range' | 'other' | 'unknown';
 export type CemeteryCoordinateQuality = 'valid_wgs84_taipei' | 'outside_taipei_bounds' | 'invalid' | 'missing';
 export type CemeteryLocationPrecision = 'official_coordinate' | 'district_location_description' | 'district_only' | 'missing';
+export type FactoryCoordinateSystem = 'twd97_tm2_zone_121' | 'wgs84' | 'unknown';
+export type FactoryCoordinateConversionStatus = 'converted_from_twd97_tm2' | 'already_wgs84' | 'invalid_source_coordinate' | 'outside_taipei_bounds_after_conversion' | 'missing' | 'conversion_failed' | 'unknown';
+export type RegisteredFactoryCoordinateQuality = 'valid_converted_wgs84_taipei' | 'valid_wgs84_taipei' | 'outside_taipei_bounds' | 'invalid' | 'missing';
+export type RegisteredFactoryLocationPrecision = 'converted_source_coordinate' | 'official_wgs84_coordinate' | 'district_address' | 'district_only' | 'missing';
 export type VeterinarianPracticeLicenseNumberFormat = 'taipei_veterinarian_practice_license' | 'other_veterinarian_license' | 'numeric_only' | 'mixed' | 'missing' | 'unknown';
 export type TelepsychologyInstitutionType = 'counseling_clinic' | 'psychological_treatment_clinic' | 'foundation' | 'school' | 'other' | 'unknown';
 export type TelepsychologyContactMethod = 'phone' | 'extension' | 'mobile';
@@ -2178,6 +2182,89 @@ export type DawannanIndustrialAreaCompanyFilters = {
   coordinateConversionStatus: string;
   duplicateAddressGroup: string;
   duplicateCoordinateGroup: string;
+};
+
+export type RegisteredFactoryRecord = {
+  id: string;
+  module: 'registered_factory_distribution';
+  factoryRegistrationId: string;
+  factoryRegistrationIdNormalized?: string;
+  factoryName: string;
+  factoryNameNormalized?: string;
+  factoryAddress: string;
+  factoryAddressNormalized?: string;
+  districtNameFromAddress?: string;
+  isTaipeiDistrict: boolean;
+  roadName?: string;
+  addressLooksLikeMultiFloorOrUnit: boolean;
+  responsiblePersonName: string;
+  responsiblePersonNameNormalized?: string;
+  sourceCoordinateX?: string;
+  sourceCoordinateY?: string;
+  sourceCoordinateXNumber?: number;
+  sourceCoordinateYNumber?: number;
+  sourceCoordinateSystem: FactoryCoordinateSystem;
+  latitude?: number;
+  longitude?: number;
+  coordinateConversionStatus: FactoryCoordinateConversionStatus;
+  coordinateValid: boolean;
+  coordinateQuality: RegisteredFactoryCoordinateQuality;
+  coordinatePairKey?: string;
+  locationPrecision: RegisteredFactoryLocationPrecision;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type RegisteredFactorySummary = {
+  totalRecords: number;
+  districtCount: number;
+  uniqueFactoryRegistrationIdCount: number;
+  uniqueFactoryNameCount: number;
+  uniqueFactoryAddressCount: number;
+  uniqueResponsiblePersonNameCount: number;
+  uniqueRoadNameCount: number;
+  uniqueCoordinatePairCount: number;
+  recordsWithConvertedCoordinates: number;
+  recordsWithValidCoordinates: number;
+  recordsWithInvalidCoordinates: number;
+  recordsWithMultiFloorOrUnitAddress: number;
+  byDistrict: Array<{ districtName: string; count: number; uniqueFactoryNameCount: number; uniqueAddressCount: number; uniqueResponsiblePersonNameCount: number; validCoordinateCount: number }>;
+  byRoadName: Array<{ roadName: string; count: number; districtCount: number; uniqueFactoryNameCount: number }>;
+  topResponsiblePersonNames: Array<{ responsiblePersonName: string; count: number; districtCount: number }>;
+  topSharedAddresses: Array<{ factoryAddress: string; count: number; districtName?: string }>;
+  byCoordinatePair: Array<{ key: string; count: number; sampleAddress?: string; sampleFactoryNames: string[]; longitude?: number; latitude?: number }>;
+  byCoordinateConversionStatus: Array<{ coordinateConversionStatus: FactoryCoordinateConversionStatus; count: number }>;
+  coordinateQuality: { validConvertedWgs84Taipei: number; validWgs84Taipei: number; outsideTaipeiBounds: number; invalid: number; missing: number; duplicateCoordinatePairCount: number };
+  dataQuality: {
+    missingFactoryRegistrationIdCount: number;
+    duplicateFactoryRegistrationIdCount: number;
+    missingFactoryNameCount: number;
+    duplicateFactoryNameCount: number;
+    missingFactoryAddressCount: number;
+    duplicateFactoryAddressCount: number;
+    unparsedDistrictFromAddressCount: number;
+    missingResponsiblePersonNameCount: number;
+    missingSourceCoordinateXCount: number;
+    missingSourceCoordinateYCount: number;
+    invalidSourceCoordinateCount: number;
+    coordinateConversionFailedCount: number;
+    outsideTaipeiBoundsAfterConversionCount: number;
+    duplicateConvertedCoordinatePairCount: number;
+    duplicateFallbackKeyCount: number;
+  };
+};
+
+export type RegisteredFactoryFilters = {
+  search: string;
+  districtNameFromAddress: string;
+  roadName: string;
+  addressLooksLikeMultiFloorOrUnit: string;
+  coordinateConversionStatus: string;
+  coordinateQuality: string;
+  locationPrecision: string;
+  hasValidConvertedCoordinates: string;
 };
 
 export type LaborViolationTopicTag =

@@ -4508,5 +4508,271 @@
       "Markers use validated source coordinates only",
       "Points are cemetery reference locations, not boundaries, entrances, routes, individual grave locations, availability, eligibility, legal advice, tourism recommendation, or endorsement"
     ]
+  },
+  "registeredFactoryDistribution": {
+    "source": "臺北市登記工廠分布圖及基本資料",
+    "sourceAgency": "產業局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=c8215f0d-20fa-4350-bcd9-da82432c2c9d",
+    "category": "經濟",
+    "serviceCategory": "開創事業",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市登記工廠分布圖及基本資料",
+    "officialResourceUpdateTime": "2026-06-02 09:07:38",
+    "officialMetadataUpdateTime": "2026-06-02 14:37:03",
+    "updateFrequency": "每1月",
+    "collectionPeriodStart": "1952-01-01",
+    "inputFile": "registered-factory-distribution.csv",
+    "convertedAt": "2026-07-03T06:54:54.952Z",
+    "fileSize": 104912,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 882,
+    "outputRecords": 882,
+    "sourceCoordinateRange": {
+      "x": {
+        "min": 296998,
+        "max": 312532
+      },
+      "y": {
+        "min": 2763744,
+        "max": 2781179
+      }
+    },
+    "assumedSourceCoordinateSystem": "TWD97_TM2_121",
+    "convertedCoordinateRange": {
+      "longitude": {
+        "min": 121.46606977411695,
+        "max": 121.61976442280498
+      },
+      "latitude": {
+        "min": 24.980606762162708,
+        "max": 25.138245927996756
+      }
+    },
+    "duplicateFactoryRegistrationIds": [],
+    "duplicateFactoryNames": [
+      {
+        "value": "迅展企業股份有限公司臺北廠",
+        "count": 2
+      },
+      {
+        "value": "旭光紙器工業有限公司",
+        "count": 2
+      }
+    ],
+    "duplicateFactoryAddresses": [
+      {
+        "value": "臺北市內湖區西康里文湖街6號7樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區中南里忠孝東路7段517號",
+        "count": 2
+      },
+      {
+        "value": "臺北市北投區1德里立功街151號3樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區玉成里南港路3段143號",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區石潭里新明路143巷8號",
+        "count": 2
+      },
+      {
+        "value": "臺北市北投區8仙里大度路155號",
+        "count": 2
+      },
+      {
+        "value": "臺北市內湖區西湖里內湖路1段320號3樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市南港區西新里南港路3段47巷2號3樓",
+        "count": 2
+      }
+    ],
+    "duplicateConvertedCoordinatePairs": [
+      {
+        "value": "121.575795|25.070789",
+        "count": 2
+      },
+      {
+        "value": "121.522387|25.087047",
+        "count": 2
+      },
+      {
+        "value": "121.574901|25.074656",
+        "count": 2
+      },
+      {
+        "value": "121.591146|25.055670",
+        "count": 2
+      },
+      {
+        "value": "121.560678|25.085951",
+        "count": 2
+      },
+      {
+        "value": "121.600047|25.060094",
+        "count": 2
+      },
+      {
+        "value": "121.599544|25.060566",
+        "count": 2
+      },
+      {
+        "value": "121.561957|25.085856",
+        "count": 3
+      },
+      {
+        "value": "121.523122|25.085140",
+        "count": 4
+      },
+      {
+        "value": "121.590745|25.054850",
+        "count": 2
+      },
+      {
+        "value": "121.573966|25.080339",
+        "count": 2
+      },
+      {
+        "value": "121.590662|25.056132",
+        "count": 2
+      },
+      {
+        "value": "121.602174|25.061196",
+        "count": 2
+      },
+      {
+        "value": "121.574275|25.076492",
+        "count": 2
+      },
+      {
+        "value": "121.602982|25.058349",
+        "count": 3
+      },
+      {
+        "value": "121.578865|25.068150",
+        "count": 2
+      },
+      {
+        "value": "121.603279|25.058167",
+        "count": 2
+      },
+      {
+        "value": "121.580274|25.062177",
+        "count": 4
+      },
+      {
+        "value": "121.582762|25.068577",
+        "count": 3
+      },
+      {
+        "value": "121.576250|25.072665",
+        "count": 2
+      },
+      {
+        "value": "121.595062|25.062145",
+        "count": 2
+      },
+      {
+        "value": "121.471210|25.127773",
+        "count": 2
+      },
+      {
+        "value": "121.585113|25.058511",
+        "count": 2
+      },
+      {
+        "value": "121.602578|25.062837",
+        "count": 2
+      },
+      {
+        "value": "121.581392|25.065955",
+        "count": 2
+      },
+      {
+        "value": "121.590986|25.055481",
+        "count": 2
+      },
+      {
+        "value": "121.612302|25.052930",
+        "count": 2
+      },
+      {
+        "value": "121.574543|25.074342",
+        "count": 3
+      },
+      {
+        "value": "121.472812|25.126495",
+        "count": 2
+      },
+      {
+        "value": "121.581734|25.062713",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "multiFloorAddressExamples": [
+      "臺北市內湖區湖元里瑞湖街178巷15號2至4樓",
+      "臺北市內湖區西康里內湖路1段91巷38弄5、7號1樓",
+      "臺北市內湖區週美里新明路246巷3弄22號2樓",
+      "臺北市內湖區港墘里內湖路1段388號2樓、2樓之1、2樓之2",
+      "臺北市士林區前港里承德路4段186號2樓",
+      "臺北市內湖區港墘里瑞光路258巷50號3樓",
+      "臺北市內湖區湖元里瑞湖街161號1樓",
+      "臺北市內湖區週美里新明路321巷10弄5號1樓",
+      "臺北市南港區西新里南港路3段50巷13號1樓",
+      "臺北市士林區前港里後港街185號1樓",
+      "臺北市內湖區葫洲里安美街165號3樓",
+      "臺北市北投區中央南路2段32號1樓",
+      "臺北市內湖區蘆洲里潭美街551號3樓",
+      "臺北市內湖區西康里文湖街6號7樓",
+      "臺北市北投區8仙里中央南路2段16之2號3樓",
+      "臺北市內湖區葫洲里安美街161、163號8樓",
+      "臺北市內湖區葫洲里潭美街590號6樓",
+      "臺北市內湖區葫洲里安康路106巷59號1樓",
+      "臺北市松山區精忠里敦化北路405巷123弄9號1、2樓",
+      "臺北市內湖區葫洲里潭美街543號3樓"
+    ],
+    "warnings": {
+      "registrationId": [],
+      "address": [],
+      "coordinate": []
+    },
+    "coordinateQuality": {
+      "validConvertedWgs84Taipei": 882,
+      "validWgs84Taipei": 0,
+      "outsideTaipeiBounds": 0,
+      "invalid": 0,
+      "missing": 0,
+      "duplicateCoordinatePairCount": 121
+    },
+    "dataQuality": {
+      "missingFactoryRegistrationIdCount": 0,
+      "duplicateFactoryRegistrationIdCount": 0,
+      "missingFactoryNameCount": 0,
+      "duplicateFactoryNameCount": 2,
+      "missingFactoryAddressCount": 0,
+      "duplicateFactoryAddressCount": 8,
+      "unparsedDistrictFromAddressCount": 0,
+      "missingResponsiblePersonNameCount": 0,
+      "missingSourceCoordinateXCount": 0,
+      "missingSourceCoordinateYCount": 0,
+      "invalidSourceCoordinateCount": 0,
+      "coordinateConversionFailedCount": 0,
+      "outsideTaipeiBoundsAfterConversionCount": 0,
+      "duplicateConvertedCoordinatePairCount": 121,
+      "duplicateFallbackKeyCount": 0
+    },
+    "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback",
+      "Factory registration IDs are preserved as text",
+      "ADDR_X / ADDR_Y are treated as projected TWD97 TM2 zone 121 coordinates, not longitude / latitude",
+      "Converted WGS84 points are for source-record lookup only, not factory boundaries, entrances, production areas, operating status, pollution risk, safety risk, compliance, credit, or investment advice"
+    ]
   }
 }

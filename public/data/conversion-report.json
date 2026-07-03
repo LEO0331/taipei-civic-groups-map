@@ -3990,5 +3990,57 @@
       "No business/company matching generated in v1",
       "This is not real-time workplace gender equality status, complete compliance history, employer evaluation, workplace culture evaluation, credit/investment/procurement/employment/legal advice, criminal record, discrimination risk scoring, or endorsement data"
     ]
+  },
+  "licensedElectronicGameArcadeOperators": {
+    "source": "臺北市合法電子遊戲場業者清冊",
+    "sourceAgency": "產業局商業處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=20774fbb-5671-4850-b307-af6b5976077d",
+    "category": "觀光",
+    "serviceCategory": "休閒旅遊",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市合法電子遊戲場業者清冊",
+    "officialResourceUpdateTime": "2025-10-31 16:25:06",
+    "officialMetadataUpdateTime": "2026-03-02 15:05:59",
+    "updateFrequency": "不定期更新",
+    "inputFile": "licensed-electronic-game-arcade-operators.csv",
+    "convertedAt": "2026-07-03T00:44:12.514Z",
+    "fileSize": 734,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 8,
+    "outputRecords": 8,
+    "duplicateSequenceNumbers": [],
+    "duplicateCompanyOrBusinessNames": [],
+    "duplicateBusinessRegistrationNumbers": [],
+    "duplicateBusinessPremisesAddresses": [],
+    "duplicateFallbackKeys": [],
+    "warnings": {
+      "sequence": [],
+      "registration": [],
+      "district": [],
+      "address": []
+    },
+    "dataQuality": {
+      "missingSequenceNumberCount": 0,
+      "duplicateSequenceNumberCount": 0,
+      "missingCompanyOrBusinessNameCount": 0,
+      "duplicateCompanyOrBusinessNameCount": 0,
+      "missingBusinessRegistrationNumberCount": 0,
+      "duplicateBusinessRegistrationNumberCount": 0,
+      "invalidBusinessRegistrationNumberCount": 0,
+      "missingDistrictCount": 0,
+      "unknownDistrictCount": 0,
+      "missingAddressCount": 0,
+      "duplicateAddressCount": 0,
+      "missingNoteCount": 8,
+      "duplicateFallbackKeyCount": 0
+    },
+    "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback",
+      "Business registration numbers preserved as text to keep leading zeros",
+      "No automatic geocoding performed; no exact map markers created",
+      "External map lookup links are query strings only, not official coordinates",
+      "No business/company matching generated in v1",
+      "This is not real-time operating status, opening-hours, admission, age-restriction, consumer-advice, public-safety-risk, violation-record, legal-advice, investment-advice, credit-rating, or endorsement data"
+    ]
   }
 }

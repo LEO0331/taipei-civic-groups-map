@@ -4774,5 +4774,141 @@
       "ADDR_X / ADDR_Y are treated as projected TWD97 TM2 zone 121 coordinates, not longitude / latitude",
       "Converted WGS84 points are for source-record lookup only, not factory boundaries, entrances, production areas, operating status, pollution risk, safety risk, compliance, credit, or investment advice"
     ]
+  },
+  "licensedAnimalMedicineSellers": {
+    "source": "臺北市動物用藥品販賣業者名冊",
+    "sourceAgency": "臺北市政府產業發展局動物保護處",
+    "officialSourceAgencyShort": "產業局動保處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=9100b52e-f939-492f-9a8f-ba0adbd304ce",
+    "category": "農業",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "resourceName": "提供動物用藥品販賣業者名冊",
+    "officialResourceUpdateTime": "2025-06-11 16:31:11",
+    "officialMetadataUpdateTime": "2025-12-29 13:36:58",
+    "updateFrequency": "不定期更新",
+    "inputFile": "licensed-animal-medicine-sellers.csv",
+    "convertedAt": "2026-07-03T07:11:30.487Z",
+    "fileSize": 18709,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 217,
+    "outputRecords": 217,
+    "duplicateSellerLicenseNumbers": [],
+    "duplicateBusinessRegistrationNumbers": [],
+    "duplicateCompanyNames": [
+      {
+        "value": "麥可貿易有限公司",
+        "count": 2
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "臺北市新生北路3段11巷43號(24142新北市三重區文化南路46號16樓之1)",
+        "count": 2
+      },
+      {
+        "value": "臺北市長安西路119號6樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市民權東路六段一六○號八樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區安和路1段113號9樓之2",
+        "count": 2
+      },
+      {
+        "value": "臺北市信義區信義路5段5號",
+        "count": 2
+      },
+      {
+        "value": "臺北市中正區忠孝東路2段112號8樓",
+        "count": 2
+      },
+      {
+        "value": "臺北市大安區忠孝東路4段320號5樓(限辦公室用)",
+        "count": 2
+      },
+      {
+        "value": "臺北市大同區民生西路249號",
+        "count": 2
+      },
+      {
+        "value": "臺北市文山區溪州街69號",
+        "count": 2
+      }
+    ],
+    "duplicatePhones": [
+      {
+        "value": "27352233",
+        "count": 2
+      },
+      {
+        "value": "27941604",
+        "count": 2
+      },
+      {
+        "value": "25221005",
+        "count": 2
+      },
+      {
+        "value": "25032636",
+        "count": 2
+      },
+      {
+        "value": "02-25672182",
+        "count": 2
+      },
+      {
+        "value": "2608-6677",
+        "count": 2
+      },
+      {
+        "value": "23037111",
+        "count": 2
+      }
+    ],
+    "warnings": {
+      "license": [],
+      "business": [
+        "北市動藥販字0697:F221958705",
+        "北市動藥販字0705:T122246221",
+        "北市動藥販字0765:N122069738",
+        "北市動藥販字0773:G120987292",
+        "北市動藥販字0813:F125342818",
+        "北市動藥販字0835:F104101451"
+      ],
+      "address": [
+        "北市動藥販字0001:台北市復興北路156號7樓",
+        "北市動藥販字0032:台北巿松江路87號17樓",
+        "北市動藥販字0033:台北巿忠孝東路4段166號9樓之3",
+        "北市動藥販字0037:台北市龍江路235號8樓之2",
+        "北市動藥販字0038:台北市松江路129號9樓",
+        "北市動藥販字0059:台北市承德路二段十二號六樓之一",
+        "北市動藥販字0061:台北縣淡水鎮義山里下圭柔山七十之十五號",
+        "北市動藥販字0064:台北市建國北路2段88號4樓",
+        "北市動藥販字0070:台北市長安西路106號4樓之3",
+        "北市動藥販字0081:台北巿松江路十七號四樓",
+        "北市動藥販字0094:台北巿民族東路680號5樓",
+        "北市動藥販字0098:台北市長安西路78巷1弄10號2樓",
+        "北市動藥販字0114:621嘉義縣民雄工業區成功五街二號",
+        "北市動藥販字0116:臺北市天津接62號7樓",
+        "北市動藥販字0144:台北市信義路四段二十四號三樓之二",
+        "北市動藥販字0151:台北巿長安東路二段一七一號四樓之一",
+        "北市動藥販字0163:台北市吉林路45號6樓",
+        "北市動藥販字0203:114台北市內胡區新湖二路158號5樓",
+        "北市動藥販字0216:338桃園縣蘆竹鄉錦華路六一號",
+        "北市動藥販字0221:台北市新生北路3段11巷43號 (24142新北市三重區文化南路46號16樓之1)"
+      ],
+      "phone": []
+    },
+    "notes": [
+      "CP950 / Big5 decoded first with UTF-8-SIG fallback.",
+      "Business registration numbers and phones preserved as text.",
+      "No official coordinates supplied; no geocoding performed.",
+      "External map links are address queries, not official coordinates.",
+      "No medical, medication, safety, compliance, real-time operating, credit, legal, or investment claims are inferred."
+    ]
   }
 }

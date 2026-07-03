@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -1952,6 +1952,132 @@ export type OccupationalSafetyHealthViolationFilters = {
   violationContentCategory: string;
   hasNote: string;
   businessOrOrganizationName: string;
+  penaltyDocumentNumber: string;
+};
+
+export type GenderEqualityWorkActNameVersion = 'gender_equality_in_employment_act' | 'act_of_gender_equality_in_employment_old_name' | 'mixed_or_unclear' | 'none' | 'unknown';
+export type GenderEqualityWorkViolationContentCategory =
+  | 'workplace_sexual_harassment_prevention' | 'pregnancy_discrimination'
+  | 'gender_or_sexual_orientation_discrimination' | 'parental_leave_or_childcare_rights'
+  | 'retaliation_or_adverse_treatment' | 'recruitment_or_employment_discrimination'
+  | 'retirement_severance_resignation_dismissal_discrimination'
+  | 'complaint_or_prevention_procedure' | 'fine_or_publication_only'
+  | 'no_violation_period' | 'other' | 'unknown';
+export type FineAmountCategory = 'none_or_not_applicable' | 'under_50000' | '50000_to_99999' | '100000_to_299999' | '300000_to_499999' | '500000_or_more' | 'missing' | 'unknown';
+
+export type GenderEqualityWorkActViolationRecord = {
+  id: string;
+  module: 'gender_equality_work_act_violation_records';
+  sourceSequenceNumber?: number;
+  announcementDateRaw?: string;
+  announcementDate?: string;
+  announcementYear?: number;
+  announcementMonth?: number;
+  announcementYearMonth?: string;
+  penaltyDateRaw?: string;
+  penaltyDate?: string;
+  penaltyYear?: number;
+  penaltyMonth?: number;
+  penaltyYearMonth?: string;
+  daysBetweenPenaltyAndAnnouncement?: number;
+  penaltyDocumentNumber?: string;
+  penaltyDocumentNumberNormalized?: string;
+  businessOrganizationOrNaturalPersonName: string;
+  businessOrganizationOrNaturalPersonNameNormalized?: string;
+  representativeName?: string;
+  representativeNameNormalized?: string;
+  violatedGenderEqualityWorkActArticleRaw?: string;
+  violatedGenderEqualityWorkActArticle?: string;
+  violatedGenderEqualityWorkActArticleNormalized?: string;
+  violatedArticleTokens: string[];
+  actNameVersion: GenderEqualityWorkActNameVersion;
+  violationContent?: string;
+  violationContentNormalized?: string;
+  violationContentCategories: GenderEqualityWorkViolationContentCategory[];
+  fineAmountRaw?: string;
+  fineAmount?: number;
+  fineAmountCategory: FineAmountCategory;
+  hasFineAmount: boolean;
+  note?: string;
+  hasNote: boolean;
+  isNoViolationPeriodRecord: boolean;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+  legalBasis: '性別平等工作法';
+};
+
+export type GenderEqualityWorkActViolationSummary = {
+  totalRecords: number;
+  violationRecordCount: number;
+  noViolationPeriodRecordCount: number;
+  minAnnouncementDate?: string;
+  maxAnnouncementDate?: string;
+  minPenaltyDate?: string;
+  maxPenaltyDate?: string;
+  announcementYearCount: number;
+  penaltyYearCount: number;
+  uniqueBusinessOrganizationOrNaturalPersonNameCount: number;
+  uniqueRepresentativeNameCount: number;
+  uniquePenaltyDocumentNumberCount: number;
+  uniqueViolatedArticleCount: number;
+  recordsWithRepresentativeName: number;
+  recordsWithViolationContent: number;
+  recordsWithFineAmount: number;
+  recordsWithNote: number;
+  totalFineAmount?: number;
+  minFineAmount?: number;
+  maxFineAmount?: number;
+  averageFineAmount?: number;
+  medianFineAmount?: number;
+  byAnnouncementYear: Array<{ year: number; count: number; violationRecordCount: number; noViolationPeriodRecordCount: number; uniqueNameCount: number; totalFineAmount?: number }>;
+  byAnnouncementYearMonth: Array<{ yearMonth: string; count: number; violationRecordCount: number; noViolationPeriodRecordCount: number; uniqueNameCount: number; totalFineAmount?: number }>;
+  byPenaltyYear: Array<{ year: number; count: number; uniqueNameCount: number; totalFineAmount?: number }>;
+  byViolatedArticle: Array<{ violatedArticle: string; count: number; uniqueNameCount: number; totalFineAmount?: number }>;
+  byViolationContentCategory: Array<{ category: GenderEqualityWorkViolationContentCategory; count: number; uniqueNameCount: number; totalFineAmount?: number }>;
+  byFineAmountCategory: Array<{ fineAmountCategory: FineAmountCategory; count: number }>;
+  byActNameVersion: Array<{ actNameVersion: GenderEqualityWorkActNameVersion; count: number }>;
+  byAnnouncementPenaltyLagBucket: Array<{ bucket: string; count: number }>;
+  topBusinessOrganizationOrNaturalPersonNames: Array<{ name: string; count: number; latestAnnouncementDate?: string; latestPenaltyDate?: string; totalFineAmount?: number }>;
+  topViolationContents: Array<{ violationContent: string; count: number }>;
+  dataQuality: {
+    missingAnnouncementDateCount: number;
+    invalidAnnouncementDateCount: number;
+    missingPenaltyDateCount: number;
+    invalidPenaltyDateCount: number;
+    missingPenaltyDocumentNumberCount: number;
+    missingBusinessOrganizationOrNaturalPersonNameCount: number;
+    missingRepresentativeNameCount: number;
+    missingViolatedArticleCount: number;
+    missingViolationContentCount: number;
+    missingFineAmountCount: number;
+    invalidFineAmountCount: number;
+    duplicatePenaltyDocumentNumberCount: number;
+    duplicateFallbackKeyCount: number;
+    noViolationRowsWithPenaltyDataCount: number;
+  };
+};
+
+export type GenderEqualityWorkActViolationFilters = {
+  search: string;
+  includeNoViolationPeriodRecords: string;
+  announcementYear: string;
+  announcementYearMonth: string;
+  announcementDateFrom: string;
+  announcementDateTo: string;
+  penaltyYear: string;
+  penaltyYearMonth: string;
+  penaltyDateFrom: string;
+  penaltyDateTo: string;
+  violatedArticle: string;
+  actNameVersion: string;
+  violationContentCategory: string;
+  fineAmountCategory: string;
+  fineAmountMin: string;
+  fineAmountMax: string;
+  hasFineAmount: string;
+  hasNote: string;
+  name: string;
   penaltyDocumentNumber: string;
 };
 

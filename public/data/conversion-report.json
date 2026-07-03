@@ -4258,5 +4258,149 @@
       "No business/company matching generated in v1",
       "This is not real-time operating status, opening-hours, admission, age-restriction, consumer-advice, public-safety-risk, violation-record, legal-advice, investment-advice, credit-rating, or endorsement data"
     ]
+  },
+  "registeredRecyclingBusinessOrganizations": {
+    "source": "臺北市回收業機構名冊",
+    "sourceAgency": "環保局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=49a8e600-313d-48ba-b35f-5ff093d4cff1",
+    "category": "環保",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市回收業機構名冊",
+    "officialResourceUpdateTime": "2024-08-06 14:51:49",
+    "officialMetadataUpdateTime": "2024-08-06 14:52:03",
+    "updateFrequency": "不定期更新",
+    "collectionPeriodEnd": "2016-05-01",
+    "inputFile": "registered-recycling-business-organizations.csv",
+    "convertedAt": "2026-07-03T01:47:05.574Z",
+    "fileSize": 16843,
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 110,
+    "outputRecords": 110,
+    "duplicateSequenceNumbers": [],
+    "duplicateOrganizationNames": [],
+    "duplicateBusinessRegistrationNumbers": [
+      {
+        "value": "16304113",
+        "count": 2
+      },
+      {
+        "value": "22196817",
+        "count": 2
+      },
+      {
+        "value": "12856682",
+        "count": 2
+      },
+      {
+        "value": "94800552",
+        "count": 2
+      },
+      {
+        "value": "27355433",
+        "count": 2
+      },
+      {
+        "value": "70544076",
+        "count": 2
+      },
+      {
+        "value": "88164549",
+        "count": 2
+      }
+    ],
+    "duplicateAddresses": [
+      {
+        "value": "士林區延平北路8段133巷65號旁",
+        "count": 5
+      },
+      {
+        "value": "北投區大業路517巷55號旁",
+        "count": 2
+      },
+      {
+        "value": "北投區承德路7段401巷179號",
+        "count": 2
+      },
+      {
+        "value": "北投區洲美街251號之6",
+        "count": 2
+      },
+      {
+        "value": "內湖區大湖街131巷12-1號",
+        "count": 2
+      },
+      {
+        "value": "內湖區安康路296號",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "openLotOrNearbyAddressExamples": [
+      "大同區敦煌路27之3號",
+      "大同區涼州街1之5號",
+      "大同區錦西街52巷15號對面",
+      "中山區濱江街353之2號",
+      "大安區和平東路3段606巷13號對面",
+      "士林區延平北路8段133巷65號旁",
+      "士林區延平北路8段133巷65號旁",
+      "士林區延平北路8段133巷65號旁",
+      "士林區延平北路8段133巷65號旁",
+      "士林區延平北路8段133巷65號旁",
+      "士林區延平北路8段2巷153弄53之3號",
+      "士林區延平北路8段2巷151弄63號斜對面",
+      "士林區延平北路9段237巷3弄15號旁",
+      "北投區大業路517巷55號旁",
+      "北投區大業路517巷55號旁",
+      "北投區洲美街251號之6",
+      "北投區洲美街251號之6",
+      "北投區承德路7段393巷107號旁空地",
+      "北投區洲美街265之2號",
+      "內湖區舊宗路2段135巷16號旁"
+    ],
+    "warnings": {
+      "sequence": [],
+      "registration": [
+        "鴻富企業行:Invalid business registration number format",
+        "逢泰行:Invalid business registration number format",
+        "盛?企業社:Invalid business registration number format"
+      ],
+      "phone": [],
+      "mobile": [],
+      "address": [],
+      "regulatedItems": [
+        "慈濟功德會(南港舊莊環保教育站):廢塑膠容器、廢資訊物品、廢照明光源、廢乾電池、廢玻璃容器、廢光碟片"
+      ],
+      "generalItems": []
+    },
+    "dataQuality": {
+      "missingSequenceNumberCount": 0,
+      "duplicateSequenceNumberCount": 0,
+      "missingOrganizationNameCount": 0,
+      "duplicateOrganizationNameCount": 0,
+      "missingBusinessRegistrationNumberCount": 9,
+      "duplicateBusinessRegistrationNumberCount": 7,
+      "invalidBusinessRegistrationNumberCount": 3,
+      "missingResponsiblePersonNameCount": 1,
+      "missingPhoneNumberCount": 23,
+      "missingMobilePhoneNumberCount": 16,
+      "missingContactPersonNameCount": 73,
+      "missingAddressCount": 0,
+      "duplicateAddressCount": 6,
+      "unparsedDistrictFromAddressCount": 0,
+      "missingRegulatedRecyclableItemsCount": 7,
+      "missingGeneralWasteRecyclingItemsCount": 9,
+      "unknownRegulatedRecyclableItemCount": 8,
+      "unknownGeneralWasteRecyclingItemCount": 9,
+      "duplicateFallbackKeyCount": 0
+    },
+    "notes": [
+      "Big5 / CP950 decoded with UTF-8-SIG fallback",
+      "Business registration numbers and mobile phones preserved as text",
+      "No automatic geocoding performed; no exact map markers created",
+      "External map lookup links are query strings only, not official coordinates",
+      "No business/company matching generated in v1",
+      "This is not real-time operating status, service availability, accepted-item guarantee, public drop-off permission, waste pickup booking, pollution risk, violation record, legal advice, investment advice, credit rating, or endorsement data"
+    ]
   }
 }

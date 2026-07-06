@@ -1,0 +1,34 @@
+{
+  "sourceUrl": "https://data.taipei/dataset/detail?id=c32bc515-c984-4929-881f-31528e24fb13",
+  "downloadedAt": "2026-07-06T01:02:21.551Z",
+  "resources": [
+    {
+      "resourceName": "111年度臺北市特定寵物業評鑑成果",
+      "sourceUrl": "local-file",
+      "file": "111-specific-pet-business-evaluation-results.csv",
+      "fileSize": 15568,
+      "notes": [
+        "Copied from 111臺北市特定寵物業分區名冊.csv"
+      ]
+    },
+    {
+      "resourceName": "113年度臺北市特定寵物業評鑑成果",
+      "sourceUrl": "local-file",
+      "file": "113-specific-pet-business-evaluation-results.csv",
+      "fileSize": 19203,
+      "notes": [
+        "Copied from 113臺北市特定寵物業分區名冊.csv"
+      ]
+    },
+    {
+      "resourceName": "114年度臺北市特定寵物業評鑑成果",
+      "sourceUrl": "local-file",
+      "file": "114-specific-pet-business-evaluation-results.csv",
+      "fileSize": 19570,
+      "notes": [
+        "Copied from 114年度臺北市特定寵物業評鑑成果.csv"
+      ]
+    }
+  ],
+  "previous": {}
+}

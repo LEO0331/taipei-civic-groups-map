@@ -4910,5 +4910,97 @@
       "External map links are address queries, not official coordinates.",
       "No medical, medication, safety, compliance, real-time operating, credit, legal, or investment claims are inferred."
     ]
+  },
+  "specificPetBusinessEvaluationResults": {
+    "source": "臺北市特定寵物業評鑑成果",
+    "sourceAgency": "臺北市政府產業發展局動物保護處",
+    "officialSourceAgencyShort": "產業局動保處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=c32bc515-c984-4929-881f-31528e24fb13",
+    "category": "農業",
+    "serviceCategory": "公共資訊",
+    "datasetType": "原始資料",
+    "resourceNames": [
+      "111年度臺北市特定寵物業評鑑成果",
+      "113年度臺北市特定寵物業評鑑成果",
+      "114年度臺北市特定寵物業評鑑成果"
+    ],
+    "convertedAt": "2026-07-06T01:33:43.815Z",
+    "resources": [
+      {
+        "resourceName": "111年度臺北市特定寵物業評鑑成果",
+        "file": "111-specific-pet-business-evaluation-results.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "inputRows": 139,
+        "fileSize": 15568
+      },
+      {
+        "resourceName": "113年度臺北市特定寵物業評鑑成果",
+        "file": "113-specific-pet-business-evaluation-results.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "inputRows": 166,
+        "fileSize": 19203
+      },
+      {
+        "resourceName": "114年度臺北市特定寵物業評鑑成果",
+        "file": "114-specific-pet-business-evaluation-results.csv",
+        "encoding": "CP950 / Big5-compatible",
+        "inputRows": 189,
+        "fileSize": 19570
+      }
+    ],
+    "outputRecords": 494,
+    "latestYearRecords": 189,
+    "duplicateLicenseNumbersWithinYear": [
+      {
+        "value": "111|V1110326-00",
+        "count": 2
+      },
+      {
+        "value": "111|V1110316-00",
+        "count": 2
+      },
+      {
+        "value": "113|V1130387-00",
+        "count": 2
+      }
+    ],
+    "warnings": {
+      "resourceYear": [],
+      "city": [],
+      "district": [],
+      "postalCode": [],
+      "license": [],
+      "expiration": [],
+      "phone": [],
+      "address": [],
+      "businessItems": [],
+      "grade": [
+        "111-specific-pet-business-evaluation-results.csv:7:新設",
+        "111-specific-pet-business-evaluation-results.csv:8:新設",
+        "111-specific-pet-business-evaluation-results.csv:9:新設",
+        "111-specific-pet-business-evaluation-results.csv:10:新設",
+        "111-specific-pet-business-evaluation-results.csv:11:新設",
+        "111-specific-pet-business-evaluation-results.csv:12:新設",
+        "111-specific-pet-business-evaluation-results.csv:16:新設",
+        "111-specific-pet-business-evaluation-results.csv:17:新設",
+        "111-specific-pet-business-evaluation-results.csv:18:新設",
+        "111-specific-pet-business-evaluation-results.csv:19:換發",
+        "111-specific-pet-business-evaluation-results.csv:20:換發",
+        "111-specific-pet-business-evaluation-results.csv:21:新設",
+        "111-specific-pet-business-evaluation-results.csv:22:新設",
+        "111-specific-pet-business-evaluation-results.csv:31:新設",
+        "111-specific-pet-business-evaluation-results.csv:33:新設",
+        "111-specific-pet-business-evaluation-results.csv:34:新設",
+        "111-specific-pet-business-evaluation-results.csv:35:換發",
+        "111-specific-pet-business-evaluation-results.csv:36:換發",
+        "111-specific-pet-business-evaluation-results.csv:37:新設",
+        "111-specific-pet-business-evaluation-results.csv:38:換發"
+      ]
+    },
+    "notes": [
+      "No official coordinates supplied; no geocoding performed.",
+      "Records are preserved across years; latest-year records are generated separately.",
+      "No pet shop recommendation, pet quality, veterinary advice, medication advice, real-time operating, real-time license, complete compliance, legal, credit, or investment claims are inferred."
+    ]
   }
 }

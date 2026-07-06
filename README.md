@@ -2,7 +2,7 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
-Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, recycling business organizations, registered factories, cemetery public facilities, licensed pawnshops, licensed electronic game arcade operators, licensed special entertainment business operators, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law, OSH, and Gender Equality in Employment Act compliance publication records, consumer dispute absence notices, Nangang Software Park companies, Dawannan Industrial Area companies, registered animal hospitals, licensed animal medicine sellers, veterinarian professional registry, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、回收業機構、登記工廠、公墓與生命禮儀公共設施、合法當舖、合法電子遊戲場業者、合法八大行業業者、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規、職安法與性別平等工作法公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、大彎南段工業區廠商、動物醫院一覽表、動物用藥品販賣業者、獸醫師資訊、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
+Public-record modules: civic groups, performing arts groups, registered labor unions, disability employment resources, sheltered workshops, recycling business organizations, registered factories, cemetery public facilities, licensed pawnshops, licensed electronic game arcade operators, licensed special entertainment business operators, contracted vaccination medical providers, publicly funded HPV vaccination providers, child medical subsidy contracted providers, denture subsidy medical providers, telepsychology counseling institutions, business premises public liability insurance records, business registration change records, company registration change records, industry grants, biotech company directory, Taipei Metro procurement schedules, registered cram schools, registered hotels, Taipei Travel accommodations, labor-law, OSH, and Gender Equality in Employment Act compliance publication records, consumer dispute absence notices, Nangang Software Park companies, Dawannan Industrial Area companies, registered animal hospitals, licensed animal medicine sellers, specific pet business evaluation results, veterinarian professional registry, quasi-public infant care centers, infant care center evaluation results, and elderly welfare institutions / 公開資料模組：人民團體、演藝團體、工會名單、身障就業資源、庇護工場、回收業機構、登記工廠、公墓與生命禮儀公共設施、合法當舖、合法電子遊戲場業者、合法八大行業業者、各項預防接種合約醫療院所、公費HPV疫苗特約醫療院所、兒童醫療補助特約院所名冊、假牙補助醫療院所名單、可執行通訊心理諮商之心理機構、營業場所投保公共意外險清冊、商業異動、公司異動、產業補助、生技廠商企業名錄、捷運採購時程、立案補習班、一般旅館名冊、臺北旅遊網住宿資料、勞動法規、職安法與性別平等工作法公開紀錄、消費爭議不到場公告、南港軟體工業園區廠商、大彎南段工業區廠商、動物醫院一覽表、動物用藥品販賣業者、特定寵物業評鑑成果、獸醫師資訊、準公共化托嬰中心、托嬰中心評鑑結果與老人福利機構名冊
 
 Civil affairs, funeral services, and public facilities: cemetery public facilities / 民政、生命禮儀與公共設施：各區公墓資訊
 
@@ -10,7 +10,7 @@ Licensed business and public safety records: Taipei City Police Department licen
 
 Licensed businesses and regulated industry directories: licensed electronic game arcade operators and licensed special entertainment business operators / 合法登記業者與特許行業清冊：合法電子遊戲場業者與合法八大行業業者
 
-Animal protection, veterinary, and animal medicine businesses: licensed animal medicine sellers / 動物保護、獸醫與動物用藥業者：動物用藥品販賣業者名冊
+Animal protection, veterinary, pet businesses, and animal medicine businesses: licensed animal medicine sellers and specific pet business evaluation results / 動物保護、獸醫、寵物業者與動物用藥業者：動物用藥品販賣業者名冊、特定寵物業評鑑成果
 
 Industry, factories, companies, and business public records: registered factory distribution and Dawannan Industrial Area company directory / 產業、工廠、公司與商業公開資料：登記工廠分布圖及基本資料、大彎南段工業區廠商名錄
 
@@ -56,6 +56,7 @@ The app presents separate Taipei Open Data modules:
 - [臺北市大彎南段工業區廠商名錄](https://data.taipei/dataset/detail?id=dd950d9c-01c0-452d-b8d0-f9cf38f3a55d): Dawannan Industrial Area company directory, unified business numbers preserved as text, company names, company addresses, postal-code/district/road parsing, ADDR_X/ADDR_Y projected coordinate parsing, TWD97 TM2 121 to WGS84 conversion with Taipei bounds validation, address and road summaries, and distinction from company/business registration records and Nangang Software Park records.
 - [臺北市動物醫院一覽表](https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94): animal hospital public directory records, district summaries, road-name grouping, phone lookup, and address-based map links.
 - [臺北市動物用藥品販賣業者名冊](https://data.taipei/dataset/detail?id=9100b52e-f939-492f-9a8f-ba0adbd304ce): licensed animal medicine seller directory, CP950/Big5 decoding with UTF-8-SIG fallback, seller license number and business registration number text parsing, company name/address/phone parsing, old Taipei address normalization, outside-Taipei hint detection, district/road extraction, address-list display with external map lookup links, and no official coordinates, medical advice, medication advice, drug safety, product quality, real-time license, compliance, investment, or legal claim.
+- [臺北市特定寵物業評鑑成果](https://data.taipei/dataset/detail?id=c32bc515-c984-4929-881f-31528e24fb13): multi-resource annual specific pet business evaluation records, UTF-8/Big5 decoding, license/date/company/address/item/grade parsing, latest-year exports, district and grade summaries, address-list display with external map lookup links, and no geocoding, recommendation, ranking, medical/pet-care advice, real-time license, compliance, investment, or legal claim.
 - [臺北市獸醫師資訊](https://data.taipei/dataset/detail?id=4173b423-0c34-468e-a16d-5a7e7a06148e): veterinarian professional registry records, practice license number text preservation, service veterinary institution summaries, and no-map table/search views because the source has no address, district, phone, or coordinates.
 
 Traditional Chinese is the default language; English is available in the header.
@@ -315,6 +316,7 @@ Generated files:
 - `public/data/registered-animal-hospital-summary.json`
 - `public/data/licensed-animal-medicine-sellers.json`
 - `public/data/licensed-animal-medicine-seller-summary.json`
+- `public/data/specific-pet-business-evaluation-results/*.json`
 - `public/data/veterinarian-professional-registry.json`
 - `public/data/veterinarian-professional-registry-summary.json`
 - `public/data/public-records-summary.json`
@@ -578,6 +580,14 @@ Animal medicine seller data can be loaded from the uploaded CSV or an official r
 ```bash
 npm run data:fetch:animal-medicine-sellers -- --force --local=/absolute/path/to/販賣業許可證及廠商資料.csv
 npm run data:convert:animal-medicine-sellers
+tsx scripts/buildPublicRecordsSummary.ts
+```
+
+Specific pet business evaluation result data can be loaded from the uploaded annual CSVs:
+
+```bash
+npm run data:fetch:pet-business-evaluations -- --force --local=/absolute/path/to/111臺北市特定寵物業分區名冊.csv --name=111年度臺北市特定寵物業評鑑成果 --local=/absolute/path/to/113臺北市特定寵物業分區名冊.csv --name=113年度臺北市特定寵物業評鑑成果 --local=/absolute/path/to/114年度臺北市特定寵物業評鑑成果.csv --name=114年度臺北市特定寵物業評鑑成果
+npm run data:convert:pet-business-evaluations
 tsx scripts/buildPublicRecordsSummary.ts
 ```
 

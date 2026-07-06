@@ -1,4 +1,4 @@
-const CACHE = 'taipei-civic-groups-v37';
+const CACHE = 'taipei-civic-groups-v38';
 const BASE = '/taipei-civic-groups-map/';
 const DATA = [
   `${BASE}data/civic-groups.json`,
@@ -76,6 +76,13 @@ const DATA = [
   `${BASE}data/registered-animal-hospital-summary.json`,
   `${BASE}data/licensed-animal-medicine-sellers.json`,
   `${BASE}data/licensed-animal-medicine-seller-summary.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/records.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/summary.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/district-summary.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/evaluation-grade-summary.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/business-item-summary.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/latest-year-records.json`,
+  `${BASE}data/specific-pet-business-evaluation-results/year-comparison.json`,
   `${BASE}data/veterinarian-professional-registry.json`,
   `${BASE}data/veterinarian-professional-registry-summary.json`,
   `${BASE}data/public-records-summary.json`,

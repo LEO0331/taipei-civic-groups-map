@@ -79,7 +79,7 @@ export function parseEmploymentAgencyAddress(raw: unknown) {
   const institutionAddressNormalized = normalize(parsed);
   const districtNameFromAddress = DISTRICTS.find((district) => parsed?.includes(district));
   const body = districtNameFromAddress && parsed ? parsed.slice(parsed.indexOf(districtNameFromAddress) + districtNameFromAddress.length) : parsed;
-  const roadName = body?.match(/([一-龥]+?(?:路|街|大道)(?:[一二三四五六七八九十\d]+段)?)/)?.[1];
+  const roadName = body?.match(/([一-龥]+?(?:路|街|大道)(?:[一二三四五六七八九十\d０-９]+段)?)/)?.[1];
   return {
     institutionAddress,
     institutionAddressNormalized,

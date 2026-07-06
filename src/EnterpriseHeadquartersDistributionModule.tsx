@@ -19,17 +19,19 @@ const options = (records: EnterpriseHeadquartersRecord[], key: (r: EnterpriseHea
 
 function Filters({ records, filters, setFilters, language }: { records: EnterpriseHeadquartersRecord[]; filters: EnterpriseHeadquartersFilters; setFilters: (filters: EnterpriseHeadquartersFilters) => void; language: Language }) {
   const zh = language === 'zh';
-  const select = (key: keyof EnterpriseHeadquartersFilters, label: string, values: string[], render = (v: string) => v) => <label><span>{label}</span><select value={filters[key]} onChange={(e) => setFilters({ ...filters, [key]: e.target.value })}><option value="">{zh ? '全部' : 'All'}</option>{values.map((v) => <option value={v} key={v}>{render(v)}</option>)}</select></label>;
-  return <section className="filters"><label className="search"><span>{zh ? '搜尋' : 'Search'}</span><input value={filters.search} onChange={(e) => setFilters({ ...filters, search: e.target.value })} placeholder={zh ? '搜尋企業名稱、公司地址、行政區或產業類別' : 'Search company name, address, district, or industry category'} /></label>
-    {select('districtNameFromAddress', zh ? '行政區' : 'District', options(records, (r) => r.districtNameFromAddress))}
-    {select('roadName', zh ? '道路' : 'Road', options(records, (r) => r.roadName))}
-    {select('industryCategoryGroup', zh ? '產業類別群組' : 'Industry category group', options(records, (r) => r.industryCategoryGroup), (v) => groupLabel(v, zh))}
-    {select('industryCategoryRaw', zh ? '來源產業類別' : 'Raw industry category', options(records, (r) => r.industryCategoryRaw))}
-    {select('recognitionStatusRelativeToBuildDate', zh ? '相對建置日認定狀態' : 'Recognition status', options(records, (r) => r.recognitionStatusRelativeToBuildDate), (v) => statusLabel(v, zh))}
-    {select('coordinateConversionStatus', zh ? '座標轉換狀態' : 'Coordinate conversion status', options(records, (r) => r.coordinateConversionStatus), (v) => conversionLabel(v, zh))}
-    {select('coordinateQuality', zh ? '座標品質' : 'Coordinate quality', options(records, (r) => r.coordinateQuality), (v) => qualityLabel(v, zh))}
-    {select('hasValidConvertedCoordinates', zh ? '有有效轉換座標' : 'Has valid converted coordinates', ['yes', 'no'], (v) => v === 'yes' ? (zh ? '是' : 'Yes') : (zh ? '否' : 'No'))}
-    <button onClick={() => setFilters(empty)}>{zh ? '清除篩選' : 'Clear filters'}</button></section>;
+  const select = (key: keyof EnterpriseHeadquartersFilters, label: string, values: string[], render = (v: string) => v) => <label>{label}<select value={filters[key]} onChange={(e) => setFilters({ ...filters, [key]: e.target.value })}><option value="">{zh ? '全部' : 'All'}</option>{values.map((v) => <option value={v} key={v}>{render(v)}</option>)}</select></label>;
+  return <aside className="filters"><label className="search"><span aria-hidden="true">⌕</span><input value={filters.search} onChange={(e) => setFilters({ ...filters, search: e.target.value })} placeholder={zh ? '搜尋企業名稱、公司地址、行政區或產業類別' : 'Search company name, address, district, or industry category'} /></label>
+    <div className="filter-grid grant-filters">
+      {select('districtNameFromAddress', zh ? '行政區' : 'District', options(records, (r) => r.districtNameFromAddress))}
+      {select('roadName', zh ? '道路' : 'Road', options(records, (r) => r.roadName))}
+      {select('industryCategoryGroup', zh ? '產業類別群組' : 'Industry category group', options(records, (r) => r.industryCategoryGroup), (v) => groupLabel(v, zh))}
+      {select('industryCategoryRaw', zh ? '來源產業類別' : 'Raw industry category', options(records, (r) => r.industryCategoryRaw))}
+      {select('recognitionStatusRelativeToBuildDate', zh ? '相對建置日認定狀態' : 'Recognition status', options(records, (r) => r.recognitionStatusRelativeToBuildDate), (v) => statusLabel(v, zh))}
+      {select('coordinateConversionStatus', zh ? '座標轉換狀態' : 'Coordinate conversion status', options(records, (r) => r.coordinateConversionStatus), (v) => conversionLabel(v, zh))}
+      {select('coordinateQuality', zh ? '座標品質' : 'Coordinate quality', options(records, (r) => r.coordinateQuality), (v) => qualityLabel(v, zh))}
+      {select('hasValidConvertedCoordinates', zh ? '有有效轉換座標' : 'Has valid converted coordinates', ['yes', 'no'], (v) => v === 'yes' ? (zh ? '是' : 'Yes') : (zh ? '否' : 'No'))}
+    </div>
+    {Object.values(filters).some(Boolean) && <button className="text-button" onClick={() => setFilters(empty)}>{zh ? '清除篩選' : 'Clear filters'}</button>}</aside>;
 }
 
 function MapView({ records, language }: { records: EnterpriseHeadquartersRecord[]; language: Language }) {

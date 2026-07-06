@@ -5002,5 +5002,127 @@
       "Records are preserved across years; latest-year records are generated separately.",
       "No pet shop recommendation, pet quality, veterinary advice, medication advice, real-time operating, real-time license, complete compliance, legal, credit, or investment claims are inferred."
     ]
+  },
+  "enterpriseHeadquartersDistribution": {
+    "source": "臺北市企業營運總部分布圖",
+    "sourceAgency": "產業局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=d23e6ef4-3b78-4e74-8f8e-93cbe0c66515",
+    "category": "經濟",
+    "serviceCategory": "開創事業",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市企業營運總部分布圖",
+    "officialResourceUpdateTime": "2026-06-02 09:00:54",
+    "officialMetadataUpdateTime": "2026-06-02 15:10:31",
+    "updateFrequency": "每6月",
+    "collectionPeriodStart": "2008-01-01",
+    "inputFile": "enterprise-headquarters-distribution.csv",
+    "convertedAt": "2026-07-06T03:23:36.850Z",
+    "fileSize": 9781,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 79,
+    "outputRecords": 79,
+    "sourceCoordinateRange": {
+      "x": {
+        "min": 297307,
+        "max": 312163
+      },
+      "y": {
+        "min": 2768771,
+        "max": 2779916
+      }
+    },
+    "assumedSourceCoordinateSystem": "TWD97_TM2_121",
+    "convertedCoordinateRange": {
+      "longitude": {
+        "min": 121.46913557037227,
+        "max": 121.61612497706449
+      },
+      "latitude": {
+        "min": 25.02601107623206,
+        "max": 25.12680202317799
+      }
+    },
+    "duplicateCompanyNames": [],
+    "duplicateCompanyAddresses": [
+      {
+        "value": "臺北市內湖區基湖路37號12樓",
+        "count": 2
+      }
+    ],
+    "duplicateRecognitionPeriods": [
+      {
+        "value": "1130611-1160610",
+        "count": 2
+      },
+      {
+        "value": "1150309-1180308",
+        "count": 3
+      }
+    ],
+    "duplicateConvertedCoordinatePairs": [
+      {
+        "value": "121.564882|25.079561",
+        "count": 2
+      },
+      {
+        "value": "121.574141|25.034900",
+        "count": 2
+      },
+      {
+        "value": "121.549258|25.026011",
+        "count": 3
+      },
+      {
+        "value": "121.585816|25.064602",
+        "count": 2
+      },
+      {
+        "value": "121.611420|25.055046",
+        "count": 3
+      },
+      {
+        "value": "121.566082|25.038777",
+        "count": 2
+      }
+    ],
+    "duplicateFallbackKeys": [],
+    "warnings": {
+      "companyName": [],
+      "useDate": [],
+      "address": [],
+      "category": [],
+      "coordinate": []
+    },
+    "coordinateQuality": {
+      "validConvertedWgs84Taipei": 79,
+      "validWgs84Taipei": 0,
+      "outsideTaipeiBounds": 0,
+      "invalid": 0,
+      "missing": 0,
+      "duplicateCoordinatePairCount": 8
+    },
+    "dataQuality": {
+      "missingCompanyNameCount": 0,
+      "duplicateCompanyNameCount": 0,
+      "missingUseDateCount": 0,
+      "invalidUseDateCount": 0,
+      "missingCompanyAddressCount": 0,
+      "duplicateCompanyAddressCount": 1,
+      "unparsedDistrictFromAddressCount": 0,
+      "missingIndustryCategoryCount": 0,
+      "unknownIndustryCategoryGroupCount": 0,
+      "missingSourceCoordinateXCount": 0,
+      "missingSourceCoordinateYCount": 0,
+      "invalidSourceCoordinateCount": 0,
+      "coordinateConversionFailedCount": 0,
+      "outsideTaipeiBoundsAfterConversionCount": 0,
+      "duplicateCoordinatePairCount": 8,
+      "duplicateFallbackKeyCount": 0
+    },
+    "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback",
+      "ADDR_X / ADDR_Y are treated as projected TWD97 TM2 zone 121 coordinates, not longitude / latitude",
+      "Converted WGS84 points are for enterprise headquarters source-record lookup only, not company boundaries, office boundaries, entrances, real-time operating status, hiring status, compliance, credit, stock, investment, or real-estate advice"
+    ]
   }
 }

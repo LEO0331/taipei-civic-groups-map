@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'registered_factory_distribution' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'licensed_animal_medicine_sellers' | 'specific_pet_business_evaluation_results' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'registered_factory_distribution' | 'enterprise_headquarters_distribution' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'licensed_animal_medicine_sellers' | 'specific_pet_business_evaluation_results' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -44,6 +44,11 @@ export type FactoryCoordinateSystem = 'twd97_tm2_zone_121' | 'wgs84' | 'unknown'
 export type FactoryCoordinateConversionStatus = 'converted_from_twd97_tm2' | 'already_wgs84' | 'invalid_source_coordinate' | 'outside_taipei_bounds_after_conversion' | 'missing' | 'conversion_failed' | 'unknown';
 export type RegisteredFactoryCoordinateQuality = 'valid_converted_wgs84_taipei' | 'valid_wgs84_taipei' | 'outside_taipei_bounds' | 'invalid' | 'missing';
 export type RegisteredFactoryLocationPrecision = 'converted_source_coordinate' | 'official_wgs84_coordinate' | 'district_address' | 'district_only' | 'missing';
+export type EnterpriseHeadquartersIndustryCategoryGroup = 'electronic_information' | 'consumer_life_chemical' | 'metal_machinery_electrical' | 'technical_services' | 'other' | 'unknown';
+export type EnterpriseHeadquartersCoordinateSystem = 'twd97_tm2_zone_121' | 'wgs84' | 'unknown';
+export type EnterpriseHeadquartersCoordinateConversionStatus = 'converted_from_twd97_tm2' | 'already_wgs84' | 'invalid_source_coordinate' | 'outside_taipei_bounds_after_conversion' | 'missing' | 'conversion_failed' | 'unknown';
+export type EnterpriseHeadquartersCoordinateQuality = 'valid_converted_wgs84_taipei' | 'valid_wgs84_taipei' | 'outside_taipei_bounds' | 'invalid' | 'missing';
+export type EnterpriseHeadquartersLocationPrecision = 'converted_source_coordinate' | 'official_wgs84_coordinate' | 'district_address' | 'district_only' | 'missing';
 export type AnimalMedicineSellerLocationPrecision = 'district_address' | 'geocoded_address_approximate' | 'district_only' | 'address_only_unparsed_district' | 'outside_taipei_or_old_address_hint' | 'missing';
 export type AnimalMedicineSellerGeocodingStatus = 'not_attempted' | 'not_geocoded_address_only' | 'geocoded_approximate' | 'failed' | 'not_applicable';
 export type AnimalMedicineSellerCoordinateSource = 'none' | 'geocoded';
@@ -2199,6 +2204,109 @@ export type SpecificPetBusinessEvaluationFilters = {
   postalCodeValidFormat: string;
   locationPrecision: string;
   geocodingStatus: string;
+};
+
+export type EnterpriseHeadquartersRecord = {
+  id: string;
+  module: 'enterprise_headquarters_distribution';
+  companyName: string;
+  companyNameNormalized?: string;
+  useDateRaw: string;
+  recognitionPeriodRaw: string;
+  recognitionStartRocDate?: string;
+  recognitionEndRocDate?: string;
+  recognitionStartGregorianDate?: string;
+  recognitionEndGregorianDate?: string;
+  recognitionPeriodParsed: boolean;
+  recognitionStatusRelativeToBuildDate?: 'active_on_build_date' | 'expired_on_build_date' | 'future_on_build_date' | 'unknown';
+  companyAddress: string;
+  companyAddressNormalized?: string;
+  districtNameFromAddress?: string;
+  isTaipeiDistrict: boolean;
+  roadName?: string;
+  addressLooksLikeMultiFloorOrUnit: boolean;
+  industryCategoryRaw: string;
+  industryCategoryNormalized?: string;
+  industryCategoryGroup: EnterpriseHeadquartersIndustryCategoryGroup;
+  sourceCoordinateX: string;
+  sourceCoordinateY: string;
+  sourceCoordinateXNumber?: number;
+  sourceCoordinateYNumber?: number;
+  sourceCoordinateSystem: EnterpriseHeadquartersCoordinateSystem;
+  latitude?: number;
+  longitude?: number;
+  coordinateConversionStatus: EnterpriseHeadquartersCoordinateConversionStatus;
+  coordinateValid: boolean;
+  coordinateQuality: EnterpriseHeadquartersCoordinateQuality;
+  coordinatePairKey?: string;
+  locationPrecision: EnterpriseHeadquartersLocationPrecision;
+  googleMapsQuery?: string;
+  sourceRecordHash?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type EnterpriseHeadquartersSummary = {
+  totalRecords: number;
+  districtCount: number;
+  uniqueCompanyNameCount: number;
+  uniqueCompanyAddressCount: number;
+  uniqueIndustryCategoryRawCount: number;
+  uniqueIndustryCategoryGroupCount: number;
+  uniqueCoordinatePairCount: number;
+  recordsWithParsedRecognitionPeriod: number;
+  recordsActiveOnBuildDate: number;
+  recordsExpiredOnBuildDate: number;
+  recordsWithValidConvertedCoordinates: number;
+  recordsWithInvalidCoordinates: number;
+  recordsWithMultiFloorOrUnitAddress: number;
+  byDistrict: Array<{ districtName: string; count: number; uniqueCompanyNameCount: number; uniqueAddressCount: number; validCoordinateCount: number; topIndustryCategoryGroup?: EnterpriseHeadquartersIndustryCategoryGroup }>;
+  byIndustryCategoryGroup: Array<{ industryCategoryGroup: EnterpriseHeadquartersIndustryCategoryGroup; industryCategoryLabelZh: string; count: number; districtCount: number; uniqueAddressCount: number }>;
+  byIndustryCategoryRaw: Array<{ industryCategoryRaw: string; count: number }>;
+  byRoadName: Array<{ roadName: string; count: number; districtCount: number; industryCategoryGroupCount: number }>;
+  byRecognitionStartYear: Array<{ year: number; count: number }>;
+  byRecognitionEndYear: Array<{ year: number; count: number }>;
+  byRecognitionStatus: Array<{ recognitionStatusRelativeToBuildDate: string; count: number }>;
+  byCoordinateConversionStatus: Array<{ coordinateConversionStatus: EnterpriseHeadquartersCoordinateConversionStatus; count: number }>;
+  byCoordinateQuality: Array<{ coordinateQuality: EnterpriseHeadquartersCoordinateQuality; count: number }>;
+  byCoordinatePair: Array<{ key: string; count: number; sampleAddress?: string; sampleCompanyNames: string[]; longitude?: number; latitude?: number }>;
+  topSharedAddresses: Array<{ companyAddress: string; count: number; districtName?: string }>;
+  coordinateQuality: { validConvertedWgs84Taipei: number; validWgs84Taipei: number; outsideTaipeiBounds: number; invalid: number; missing: number; duplicateCoordinatePairCount: number };
+  dataQuality: {
+    missingCompanyNameCount: number;
+    duplicateCompanyNameCount: number;
+    missingUseDateCount: number;
+    invalidUseDateCount: number;
+    missingCompanyAddressCount: number;
+    duplicateCompanyAddressCount: number;
+    unparsedDistrictFromAddressCount: number;
+    missingIndustryCategoryCount: number;
+    unknownIndustryCategoryGroupCount: number;
+    missingSourceCoordinateXCount: number;
+    missingSourceCoordinateYCount: number;
+    invalidSourceCoordinateCount: number;
+    coordinateConversionFailedCount: number;
+    outsideTaipeiBoundsAfterConversionCount: number;
+    duplicateCoordinatePairCount: number;
+    duplicateFallbackKeyCount: number;
+  };
+};
+
+export type EnterpriseHeadquartersFilters = {
+  search: string;
+  districtNameFromAddress: string;
+  roadName: string;
+  industryCategoryRaw: string;
+  industryCategoryNormalized: string;
+  industryCategoryGroup: string;
+  recognitionStartYear: string;
+  recognitionEndYear: string;
+  recognitionStatusRelativeToBuildDate: string;
+  addressLooksLikeMultiFloorOrUnit: string;
+  coordinateConversionStatus: string;
+  coordinateQuality: string;
+  locationPrecision: string;
+  hasValidConvertedCoordinates: string;
 };
 
 export type VeterinarianProfessionalRegistryRecord = {

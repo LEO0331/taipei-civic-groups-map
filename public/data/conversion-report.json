@@ -5124,5 +5124,109 @@
       "ADDR_X / ADDR_Y are treated as projected TWD97 TM2 zone 121 coordinates, not longitude / latitude",
       "Converted WGS84 points are for enterprise headquarters source-record lookup only, not company boundaries, office boundaries, entrances, real-time operating status, hiring status, compliance, credit, stock, investment, or real-estate advice"
     ]
+  },
+  "employmentAgencyIntermediaryCompanies": {
+    "source": "臺北市仲介公司資料",
+    "sourceAgency": "臺北市政府勞動局重建處",
+    "officialSourceAgencyShort": "勞動局重建處",
+    "sourcePage": "https://data.taipei/dataset/detail?id=e39d8ba6-999f-48bb-a8ad-c3c27ee90c78",
+    "category": "勞動",
+    "serviceCategory": "開創事業",
+    "datasetType": "原始資料",
+    "resourceName": "臺北市仲介公司資料",
+    "officialResourceUpdateTime": "2025-06-07 22:03:26",
+    "officialMetadataUpdateTime": "2026-03-24 09:45:46",
+    "updateFrequency": "不定期更新",
+    "inputFile": "employment-agency-intermediary-companies.csv",
+    "convertedAt": "2026-07-06T04:08:15.396Z",
+    "fileSize": 53889,
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 266,
+    "outputRecords": 266,
+    "duplicateSequenceNumbers": [],
+    "duplicateInstitutionNames": [],
+    "duplicateInstitutionAddresses": [],
+    "duplicatePhones": [
+      {
+        "value": "02-23920109",
+        "count": 3
+      },
+      {
+        "value": "02-27082929",
+        "count": 2
+      },
+      {
+        "value": "02-25156557",
+        "count": 2
+      },
+      {
+        "value": "02-25994588",
+        "count": 2
+      }
+    ],
+    "duplicateResponsiblePersonOrManagerNames": [
+      {
+        "value": "黃杲傑",
+        "count": 2
+      },
+      {
+        "value": "陳福水",
+        "count": 2
+      },
+      {
+        "value": "宋淑貞",
+        "count": 2
+      },
+      {
+        "value": "蔡宗志",
+        "count": 2
+      },
+      {
+        "value": "黎金生",
+        "count": 2
+      },
+      {
+        "value": "陳怡寧",
+        "count": 2
+      },
+      {
+        "value": "陳玉芬",
+        "count": 2
+      },
+      {
+        "value": "許書揚",
+        "count": 2
+      },
+      {
+        "value": "吳添財",
+        "count": 2
+      },
+      {
+        "value": "鄧碧琪",
+        "count": 2
+      }
+    ],
+    "duplicateUnifiedBusinessNumbers": [],
+    "warnings": {
+      "sequence": [],
+      "grade": [],
+      "address": [],
+      "phone": [],
+      "fax": [],
+      "scope": [],
+      "association": [],
+      "businessNumber": [
+        "187:4436033"
+      ],
+      "item": [],
+      "staff": []
+    },
+    "notes": [
+      "UTF-8-SIG / UTF-8 decoded first with CP950 / Big5 fallback.",
+      "Sequence numbers, phones, faxes, unified business numbers, business item codes, and staff counts are read as text before parsing.",
+      "No official coordinates supplied; no geocoding performed and no exact markers are generated.",
+      "External map links are address queries, not official coordinates.",
+      "No agency recommendation, ranking, service-quality, real-time operating, real-time license, compliance, credit, investment, job-seeking, migrant-worker placement, or legal-advice claims are inferred."
+    ]
   }
 }

@@ -5347,5 +5347,24 @@
     "outputRecords": 51,
     "duplicateInstitutionCodes": [],
     "invalidBedCounts": []
+  },
+  "outOfCityFuneralServiceBusinesses": {
+    "convertedAt": "2026-07-13T05:46:36.348Z",
+    "headers": [
+      "公司名稱",
+      "負責人",
+      "郵遞區號",
+      "公司所在地",
+      "電話"
+    ],
+    "outputRecords": 1181,
+    "duplicates": [
+      "冠紘有限公司|基隆市仁愛區南榮路151巷2號1樓|932356751"
+    ],
+    "missingFields": [],
+    "notes": [
+      "Addresses are registered locations outside Taipei and not Taipei service locations.",
+      "No geocoding or map markers created."
+    ]
   }
 }

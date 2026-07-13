@@ -3273,3 +3273,5 @@ export type InfantCareCenterEvaluationFilters = {
   closedOrSuspended: string;
   specialNote: string;
 };
+export type OutOfCityFuneralServiceBusinessRecord={id:string;module:'out_of_city_funeral_service_businesses';registryType:'out_of_city_cross_jurisdiction';companyName?:string;companyNameNormalized?:string;responsiblePerson?:string;responsiblePersonNormalized?:string;postalCode?:string;postalCodeNormalized?:string;companyAddress?:string;companyAddressNormalized?:string;sourceCityOrCounty?:string;phone?:string;phoneNormalized?:string;hasPhone:boolean;googleMapsQuery?:string;source:string;sourceAgency:string};
+export type OutOfCityFuneralServiceBusinessSummary={totalRecords:number;cityCountyCount:number;uniqueCompanyNameCount:number;recordsWithPhone:number;recordsWithoutPhone:number;bySourceCityOrCounty:Array<{cityOrCounty:string;count:number}>};export type OutOfCityFuneralServiceBusinessFilters={search:string;sourceCityOrCounty:string;hasPhone:string};

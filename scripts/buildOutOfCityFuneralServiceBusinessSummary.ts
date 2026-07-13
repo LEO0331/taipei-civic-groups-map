@@ -1,0 +1,1 @@
+import{readFile,writeFile}from'node:fs/promises';import{join}from'node:path';import{summary}from'../src/lib/outOfCityFuneralServiceBusinesses';const d=join(process.cwd(),'public/data/out-of-city-funeral-service-businesses'),r=JSON.parse(await readFile(join(d,'records.json'),'utf8'));await writeFile(join(d,'summary.json'),JSON.stringify(summary(r)));

@@ -5228,5 +5228,22 @@
       "External map links are address queries, not official coordinates.",
       "No agency recommendation, ranking, service-quality, real-time operating, real-time license, compliance, credit, investment, job-seeking, migrant-worker placement, or legal-advice claims are inferred."
     ]
+  },
+  "seniorGroupMealServiceSites": {
+    "source": "臺北市銀髮族服務_臺北市老人共餐單位一覽表",
+    "sourceAgency": "臺北市政府社會局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=fe55795c-a220-4b88-bde1-5b994321f8af",
+    "inputFile": "senior-group-meal-service-sites.csv",
+    "fileSize": 61013,
+    "convertedAt": "2026-07-13T01:34:31.390Z",
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 429,
+    "outputRecords": 429,
+    "duplicateKeys": [],
+    "notes": [
+      "UTF-8-SIG, Big5, and CP950 supported.",
+      "Phone numbers and district codes are treated as strings.",
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

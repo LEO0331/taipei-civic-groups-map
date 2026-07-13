@@ -1,5 +1,5 @@
 export type Language = 'zh' | 'en';
-export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'employment_agency_intermediary_companies' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'registered_factory_distribution' | 'enterprise_headquarters_distribution' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'licensed_animal_medicine_sellers' | 'specific_pet_business_evaluation_results' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
+export type PublicRecordModule = 'civic_groups' | 'registered_labor_unions' | 'performing_arts_groups' | 'contracted_vaccination_medical_providers' | 'publicly_funded_hpv_vaccination_providers' | 'child_medical_subsidy_contracted_providers' | 'denture_subsidy_medical_providers' | 'disability_employment_resource_map' | 'sheltered_workshop_directory' | 'employment_agency_intermediary_companies' | 'licensed_pawnshop_directory' | 'licensed_electronic_game_arcade_operators' | 'licensed_special_entertainment_business_operators' | 'registered_recycling_business_organizations' | 'registered_factory_distribution' | 'enterprise_headquarters_distribution' | 'cemetery_public_facilities' | 'telepsychology_counseling_institutions' | 'elderly_welfare_institutions' | 'senior_group_meal_service_sites' | 'biotech_company_directory' | 'business_premises_public_liability_insurance_records' | 'business_registration_change_records' | 'company_registration_change_records' | 'industry_grant_recipients' | 'metro_procurement_schedule' | 'registered_cram_schools' | 'registered_hotels' | 'taipei_travel_accommodations_zh' | 'labor_standard_act_violation_records' | 'occupational_safety_health_violation_records' | 'gender_equality_work_act_violation_records' | 'consumer_dispute_absent_business_operators' | 'nangang_software_park_companies' | 'dawannan_industrial_area_company_directory' | 'registered_animal_hospitals' | 'licensed_animal_medicine_sellers' | 'specific_pet_business_evaluation_results' | 'veterinarian_professional_registry' | 'quasi_public_infant_care_centers' | 'infant_care_center_evaluation_results';
 export type LocationPrecision = 'exact' | 'district_centroid' | 'address_only' | 'outside_taipei_or_unparsed' | 'missing';
 export type CoordinateStatus = 'valid' | 'missing' | 'outlier' | 'unparsed';
 export type CoordinateSourceType = 'wgs84' | 'twd97_epsg_3826' | 'unknown';
@@ -1715,6 +1715,39 @@ export type ElderlyWelfareInstitutionFilters = {
   approvedMax: string;
   bedCountMismatch: string;
 };
+
+export type SeniorGroupMealServiceSiteRecord = {
+  id: string;
+  module: 'senior_group_meal_service_sites';
+  sourceSequenceNumber?: string;
+  siteName?: string;
+  siteNameNormalized?: string;
+  districtName?: string;
+  districtNameNormalized?: string;
+  districtCode?: string;
+  districtCodeNormalized?: string;
+  address?: string;
+  addressNormalized?: string;
+  roadName?: string;
+  phone?: string;
+  phoneNormalized?: string;
+  hasPhone: boolean;
+  googleMapsQuery?: string;
+  source: string;
+  sourceAgency: string;
+};
+
+export type SeniorGroupMealServiceSiteSummary = {
+  totalRecords: number;
+  districtCount: number;
+  uniqueSiteNameCount: number;
+  recordsWithPhone: number;
+  recordsWithoutPhone: number;
+  recordsWithAddress: number;
+  byDistrict: Array<{ district: string; count: number }>;
+};
+
+export type SeniorGroupMealServiceSiteFilters = { search: string; district: string; hasPhone: string };
 
 export type IndustryGrantRecipient = {
   id: string;

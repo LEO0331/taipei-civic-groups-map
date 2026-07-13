@@ -90,4 +90,14 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
     veterinarianProfessionalRegistry: { recordCount: veterinarians.totalRecords, uniqueVeterinarianNameCount: veterinarians.uniqueVeterinarianNameCount, uniquePracticeLicenseNumberCount: veterinarians.uniquePracticeLicenseNumberCount, uniqueServiceVeterinaryInstitutionNameCount: veterinarians.uniqueServiceVeterinaryInstitutionNameCount, cityCountyCount: veterinarians.cityCountyCount, recordsWithTaipeiCityCounty: veterinarians.recordsWithTaipeiCityCounty },
   },
 }));
+const publicSummaryPath = join(dataDir, 'public-records-summary.json');
+const publicSummary = JSON.parse(await readFile(publicSummaryPath, 'utf8'));
+const seniorGroupMealServiceSites = JSON.parse(await readFile(join(dataDir, 'senior-group-meal-service-sites/summary.json'), 'utf8'));
+publicSummary.modules.seniorGroupMealServiceSites = {
+  recordCount: seniorGroupMealServiceSites.totalRecords,
+  districtCount: seniorGroupMealServiceSites.districtCount,
+  uniqueSiteNameCount: seniorGroupMealServiceSites.uniqueSiteNameCount,
+  recordsWithPhone: seniorGroupMealServiceSites.recordsWithPhone,
+};
+await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

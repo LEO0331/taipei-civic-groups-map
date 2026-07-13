@@ -1,0 +1,11 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=fe55795c-a220-4b88-bde1-5b994321f8af",
+  "sourceUrl": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=86d839db-85c7-48b0-991b-dc86922eb093",
+  "datasetId": "fe55795c-a220-4b88-bde1-5b994321f8af",
+  "downloadedAt": "2026-07-13T01:34:12.464Z",
+  "fileSize": 61013,
+  "notes": [
+    "Official resource URL used."
+  ],
+  "previous": {}
+}

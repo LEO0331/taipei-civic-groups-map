@@ -163,6 +163,8 @@ The dataset has no coordinates. The map uses district centroid bubbles only, and
 
 Elderly welfare institutions remain the separate `elderly_welfare_institutions` module. Conversion preserves sequence numbers, institution attributes, institution names, districts, addresses, phone text, care-recipient categories, and approved bed counts for long-term care, nursing care, dementia care, and residential care.
 
+Senior group meal service sites are a separate `senior_group_meal_service_sites` module sourced from Taipei City public data. It preserves source sequence number, site name, district, district code, address, and phone as directory fields; it provides district summaries and external map lookup links only. The source supplies no confirmed official coordinates, so the app does not create exact markers or automatically geocode addresses.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

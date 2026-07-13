@@ -51,6 +51,8 @@ const DATA = [
   `${BASE}data/infant-care-center-evaluation-latest.json`,
   `${BASE}data/elderly-welfare-institutions.json`,
   `${BASE}data/elderly-welfare-institution-summary.json`,
+  `${BASE}data/senior-group-meal-service-sites/records.json`,
+  `${BASE}data/senior-group-meal-service-sites/summary.json`,
   `${BASE}data/biotech-company-directory.json`,
   `${BASE}data/biotech-company-directory-summary.json`,
   `${BASE}data/taipei-travel-accommodations-zh.json`,

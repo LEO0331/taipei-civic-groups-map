@@ -92,24 +92,36 @@ await writeFile(join(dataDir, 'public-records-summary.json'), JSON.stringify({
 }));
 const publicSummaryPath = join(dataDir, 'public-records-summary.json');
 const publicSummary = JSON.parse(await readFile(publicSummaryPath, 'utf8'));
-const seniorGroupMealServiceSites = JSON.parse(await readFile(join(dataDir, 'senior-group-meal-service-sites/summary.json'), 'utf8'));
+const readDatasetSummary = async (directory: string) => JSON.parse(await readFile(join(dataDir, directory, 'summary.json'), 'utf8'));
+const seniorGroupMealServiceSites = await readDatasetSummary('senior-group-meal-service-sites');
 publicSummary.modules.seniorGroupMealServiceSites = {
   recordCount: seniorGroupMealServiceSites.totalRecords,
   districtCount: seniorGroupMealServiceSites.districtCount,
   uniqueSiteNameCount: seniorGroupMealServiceSites.uniqueSiteNameCount,
   recordsWithPhone: seniorGroupMealServiceSites.recordsWithPhone,
 };
-const publicPneumococcalVaccineProviders = JSON.parse(await readFile(join(dataDir, 'public-pneumococcal-vaccine-providers/summary.json'), 'utf8'));
+const publicPneumococcalVaccineProviders = await readDatasetSummary('public-pneumococcal-vaccine-providers');
 publicSummary.modules.publicPneumococcalVaccineMedicalProviders = {
   recordCount: publicPneumococcalVaccineProviders.totalRecords,
   districtCount: publicPneumococcalVaccineProviders.districtCount,
   uniqueProviderNameCount: publicPneumococcalVaccineProviders.uniqueProviderNameCount,
   recordsWithPhone: publicPneumococcalVaccineProviders.recordsWithPhone,
 };
-const majorElectricityUsers = JSON.parse(await readFile(join(dataDir, 'major-electricity-users/summary.json'), 'utf8'));
+const majorElectricityUsers = await readDatasetSummary('major-electricity-users');
 publicSummary.modules.majorElectricityUsers = { recordCount: majorElectricityUsers.totalRecords, uniqueUserNameCount: majorElectricityUsers.uniqueUserNameCount, cityCount: majorElectricityUsers.cityCount, recordsWithNote: majorElectricityUsers.recordsWithNote };
-const earlyInterventionMedicalProviders = JSON.parse(await readFile(join(dataDir, 'early-intervention-medical-providers/summary.json'), 'utf8'));
+const earlyInterventionMedicalProviders = await readDatasetSummary('early-intervention-medical-providers');
 publicSummary.modules.earlyInterventionMedicalProviders = { recordCount: earlyInterventionMedicalProviders.totalRecords, districtCount: earlyInterventionMedicalProviders.districtCount, uniqueProviderNameCount: earlyInterventionMedicalProviders.uniqueProviderNameCount, recordsWithPhone: earlyInterventionMedicalProviders.recordsWithPhone };
-const registeredPostpartumCareInstitutions = JSON.parse(await readFile(join(dataDir, 'registered-postpartum-care-institutions/summary.json'), 'utf8'));publicSummary.modules.registeredPostpartumCareInstitutions={recordCount:registeredPostpartumCareInstitutions.totalRecords,districtCount:registeredPostpartumCareInstitutions.districtCount,totalBedCount:registeredPostpartumCareInstitutions.totalBedCount,recordsWithEvaluationResult:registeredPostpartumCareInstitutions.recordsWithEvaluationResult};
+const registeredPostpartumCareInstitutions = await readDatasetSummary('registered-postpartum-care-institutions');
+publicSummary.modules.registeredPostpartumCareInstitutions = { recordCount: registeredPostpartumCareInstitutions.totalRecords, districtCount: registeredPostpartumCareInstitutions.districtCount, totalBedCount: registeredPostpartumCareInstitutions.totalBedCount, recordsWithEvaluationResult: registeredPostpartumCareInstitutions.recordsWithEvaluationResult };
+const outOfCityFuneralServiceBusinesses = await readDatasetSummary('out-of-city-funeral-service-businesses');
+publicSummary.modules.outOfCityFuneralServiceBusinesses = { recordCount: outOfCityFuneralServiceBusinesses.totalRecords, cityCountyCount: outOfCityFuneralServiceBusinesses.cityCountyCount, recordsWithPhone: outOfCityFuneralServiceBusinesses.recordsWithPhone };
+const generalDentalMedicalInstitutions = await readDatasetSummary('general-dental-medical-institutions');
+publicSummary.modules.generalDentalMedicalInstitutions = { recordCount: generalDentalMedicalInstitutions.totalRecords, districtCount: generalDentalMedicalInstitutions.districtCount, uniqueInstitutionNameCount: generalDentalMedicalInstitutions.uniqueInstitutionNameCount, recordsWithPhone: generalDentalMedicalInstitutions.recordsWithPhone };
+const diabetesSharedCareMedicalInstitutions = await readDatasetSummary('diabetes-shared-care-medical-institutions');
+publicSummary.modules.diabetesSharedCareMedicalInstitutions = { recordCount: diabetesSharedCareMedicalInstitutions.totalRecords, districtCount: diabetesSharedCareMedicalInstitutions.districtCount, uniqueInstitutionNameCount: diabetesSharedCareMedicalInstitutions.uniqueInstitutionNameCount, recordsWithPhone: diabetesSharedCareMedicalInstitutions.recordsWithPhone };
+const hotelHygieneCertificationDirectory = await readDatasetSummary('hotel-hygiene-certification-directory');
+publicSummary.modules.hotelHygieneCertificationDirectory = { recordCount: hotelHygieneCertificationDirectory.totalRecords };
+const kindergartenBasicEvaluationPassRecords = await readDatasetSummary('kindergarten-basic-evaluation-pass-records');
+publicSummary.modules.kindergartenBasicEvaluationPassRecords = { recordCount: kindergartenBasicEvaluationPassRecords.totalRecords, districtCount: kindergartenBasicEvaluationPassRecords.districtCount, uniqueKindergartenCount: kindergartenBasicEvaluationPassRecords.uniqueKindergartenCount, academicYearCount: kindergartenBasicEvaluationPassRecords.academicYearCount };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

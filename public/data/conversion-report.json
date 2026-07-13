@@ -5368,7 +5368,7 @@
     ]
   },
   "generalDentalMedicalInstitutions": {
-    "convertedAt": "2026-07-13T05:51:54.637Z",
+    "convertedAt": "2026-07-13T06:35:51.373Z",
     "headers": [
       "序號",
       "機構名稱",
@@ -5381,6 +5381,7 @@
     "missingFields": [],
     "unknownDistricts": [],
     "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback.",
       "No official coordinates supplied; no exact markers or geocoding created."
     ]
   },
@@ -5399,7 +5400,8 @@
     ]
   },
   "diabetesSharedCareMedicalInstitutions": {
-    "convertedAt": "2026-07-13T06:15:59.325Z",
+    "convertedAt": "2026-07-13T06:33:37.884Z",
+    "encoding": "CP950 / Big5-compatible",
     "headers": [
       "序號",
       "行政區域代碼",
@@ -5410,8 +5412,11 @@
     "outputRecords": 183,
     "duplicates": [],
     "missingFields": [],
+    "unknownDistrictCodes": [],
     "unknownDistricts": [],
     "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback.",
+      "District is resolved from the official code before address fallback.",
       "No official coordinates supplied; no exact markers or geocoding created."
     ]
   },

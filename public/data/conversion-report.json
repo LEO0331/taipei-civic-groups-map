@@ -5245,5 +5245,22 @@
       "Phone numbers and district codes are treated as strings.",
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "publicPneumococcalVaccineMedicalProviders": {
+    "source": "臺北市公費肺炎鏈球菌疫苗合約醫療院所名單",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=92934ab2-3509-4a6b-9cee-9ac556ca2f65",
+    "inputFile": "public-pneumococcal-vaccine-providers.csv",
+    "fileSize": 26049,
+    "convertedAt": "2026-07-13T02:00:41.070Z",
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 288,
+    "outputRecords": 288,
+    "duplicateKeys": [],
+    "notes": [
+      "UTF-8-SIG, Big5, and CP950 supported.",
+      "Phone numbers and district codes are treated as strings.",
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

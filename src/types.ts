@@ -1749,6 +1749,10 @@ export type SeniorGroupMealServiceSiteSummary = {
 
 export type SeniorGroupMealServiceSiteFilters = { search: string; district: string; hasPhone: string };
 
+export type PublicPneumococcalVaccineMedicalProviderRecord = { id: string; module: 'public_pneumococcal_vaccine_medical_providers'; sourceSequenceNumber?: string; districtCode?: string; districtCodeNormalized?: string; districtNameFromAddress?: string; providerName?: string; providerNameNormalized?: string; address?: string; addressNormalized?: string; roadName?: string; phone?: string; phoneNormalized?: string; hasPhone: boolean; googleMapsQuery?: string; source: string; sourceAgency: string };
+export type PublicPneumococcalVaccineMedicalProviderSummary = { totalRecords: number; districtCount: number; uniqueProviderNameCount: number; recordsWithPhone: number; recordsWithoutPhone: number; recordsWithAddress: number; byDistrict: Array<{ district: string; count: number }> };
+export type PublicPneumococcalVaccineMedicalProviderFilters = { search: string; district: string; hasPhone: string };
+
 export type IndustryGrantRecipient = {
   id: string;
   module: 'industry_grant_recipients';

@@ -45,6 +45,7 @@ import SpecificPetBusinessEvaluationResultsModule from './SpecificPetBusinessEva
 import VeterinarianProfessionalRegistryModule from './VeterinarianProfessionalRegistryModule';
 import DistrictComparison from './DistrictComparison';
 import PubliclyFundedHpvVaccinationProvidersModule from './PubliclyFundedHpvVaccinationProvidersModule';
+import PublicPneumococcalVaccineProvidersModule from './PublicPneumococcalVaccineProvidersModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -419,6 +420,8 @@ export default function App() {
   const [elderlyWelfareSummary, setElderlyWelfareSummary] = useState<ElderlyWelfareInstitutionSummary | null>(null);
   const [seniorGroupMealServiceSiteRecords, setSeniorGroupMealServiceSiteRecords] = useState<SeniorGroupMealServiceSiteRecord[]>([]);
   const [seniorGroupMealServiceSiteSummary, setSeniorGroupMealServiceSiteSummary] = useState<SeniorGroupMealServiceSiteSummary | null>(null);
+  const [publicPneumococcalVaccineProviderRecords, setPublicPneumococcalVaccineProviderRecords] = useState<PublicPneumococcalVaccineMedicalProviderRecord[]>([]);
+  const [publicPneumococcalVaccineProviderSummary, setPublicPneumococcalVaccineProviderSummary] = useState<PublicPneumococcalVaccineMedicalProviderSummary | null>(null);
   const [biotechCompanyRecords, setBiotechCompanyRecords] = useState<BiotechCompanyDirectoryRecord[]>([]);
   const [biotechCompanySummary, setBiotechCompanySummary] = useState<BiotechCompanyDirectorySummary | null>(null);
   const [travelAccommodationRecords, setTravelAccommodationRecords] = useState<TaipeiTravelAccommodationZhRecord[]>([]);
@@ -601,6 +604,8 @@ export default function App() {
       .catch(() => setLoadError(true));
   }, []);
 
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/public-pneumococcal-vaccine-providers/records.json'), loadJson('data/public-pneumococcal-vaccine-providers/summary.json')]).then(([records, providerSummary]) => { setPublicPneumococcalVaccineProviderRecords(records); setPublicPneumococcalVaccineProviderSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
+
   useEffect(() => {
     document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
     document.title = t.title;
@@ -621,6 +626,7 @@ export default function App() {
     ['comparison', t.comparison], ['overview', t.overview], ['notes', t.notes],
   ];
   tabs.splice(1, 0, ['seniorGroupMealServiceSites', language === 'zh' ? '老人共餐單位' : 'Senior Group Meal Service Sites']);
+  tabs.splice(2, 0, ['publicPneumococcalVaccineProviders', language === 'zh' ? '公費肺炎鏈球菌疫苗院所' : 'Pneumococcal Vaccine Providers']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -661,6 +667,7 @@ export default function App() {
       {tab === 'infantCareEvaluations' && infantCareEvaluationSummary && <InfantCareCenterEvaluationResultsModule institutions={infantCareEvaluationInstitutions} yearRecords={infantCareEvaluationYearRecords} summary={infantCareEvaluationSummary} quasiPublicRecords={infantCareRecords} language={language} />}
       {tab === 'elderlyWelfare' && elderlyWelfareSummary && <ElderlyWelfareInstitutionsModule records={elderlyWelfareRecords} summary={elderlyWelfareSummary} language={language} />}
       {tab === 'seniorGroupMealServiceSites' && seniorGroupMealServiceSiteSummary && <SeniorGroupMealServiceSitesModule records={seniorGroupMealServiceSiteRecords} summary={seniorGroupMealServiceSiteSummary} language={language} />}
+      {tab === 'publicPneumococcalVaccineProviders' && publicPneumococcalVaccineProviderSummary && <PublicPneumococcalVaccineProvidersModule records={publicPneumococcalVaccineProviderRecords} summary={publicPneumococcalVaccineProviderSummary} language={language} />}
       {tab === 'biotechCompanies' && biotechCompanySummary && <BiotechCompanyDirectoryModule records={biotechCompanyRecords} summary={biotechCompanySummary} related={{ grants: grantSummary?.totalRecords, nangang: nangangCompanySummary?.totalRecords, companyChanges: companyChangeSummary?.totalRecords, businessChanges: businessChangeSummary?.totalRecords }} language={language} />}
       {tab === 'travelAccommodations' && travelAccommodationSummary && <TaipeiTravelAccommodationsZhModule records={travelAccommodationRecords} summary={travelAccommodationSummary} registeredHotelSummary={hotelSummary ?? undefined} language={language} />}
       {tab === 'grants' && grantSummary && <IndustryModule records={grantRecords} summary={grantSummary} language={language} />}

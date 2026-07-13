@@ -99,5 +99,12 @@ publicSummary.modules.seniorGroupMealServiceSites = {
   uniqueSiteNameCount: seniorGroupMealServiceSites.uniqueSiteNameCount,
   recordsWithPhone: seniorGroupMealServiceSites.recordsWithPhone,
 };
+const publicPneumococcalVaccineProviders = JSON.parse(await readFile(join(dataDir, 'public-pneumococcal-vaccine-providers/summary.json'), 'utf8'));
+publicSummary.modules.publicPneumococcalVaccineMedicalProviders = {
+  recordCount: publicPneumococcalVaccineProviders.totalRecords,
+  districtCount: publicPneumococcalVaccineProviders.districtCount,
+  uniqueProviderNameCount: publicPneumococcalVaccineProviders.uniqueProviderNameCount,
+  recordsWithPhone: publicPneumococcalVaccineProviders.recordsWithPhone,
+};
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

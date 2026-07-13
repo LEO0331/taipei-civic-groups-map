@@ -5331,5 +5331,21 @@
       "Only the verified early-intervention directory schema was included.",
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "registeredPostpartumCareInstitutions": {
+    "convertedAt": "2026-07-13T03:26:02.116Z",
+    "headers": [
+      "編號",
+      "機構代碼",
+      "機構名稱",
+      "產後護理床開放床數",
+      "嬰兒床開放床數",
+      "機構地址",
+      "連絡電話",
+      "督考或評鑑結果"
+    ],
+    "outputRecords": 51,
+    "duplicateInstitutionCodes": [],
+    "invalidBedCounts": []
   }
 }

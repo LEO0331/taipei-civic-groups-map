@@ -15,6 +15,8 @@ const DATA = [
   `${BASE}data/major-electricity-users/summary.json`,
   `${BASE}data/early-intervention-medical-providers/records.json`,
   `${BASE}data/early-intervention-medical-providers/summary.json`,
+  `${BASE}data/registered-postpartum-care-institutions/records.json`,
+  `${BASE}data/registered-postpartum-care-institutions/summary.json`,
   `${BASE}data/child-medical-subsidy-contracted-providers.json`,
   `${BASE}data/child-medical-subsidy-contracted-provider-summary.json`,
   `${BASE}data/denture-subsidy-medical-providers.json`,

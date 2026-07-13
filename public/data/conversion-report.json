@@ -5262,5 +5262,23 @@
       "Phone numbers and district codes are treated as strings.",
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "majorElectricityUsers": {
+    "source": "臺北市用電大戶資料",
+    "sourceAgency": "臺北市政府產業發展局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=67d1474b-b236-4c1c-b56f-2e12d852688b",
+    "inputFile": "major-electricity-users.csv",
+    "fileSize": 20062,
+    "convertedAt": "2026-07-13T02:28:17.152Z",
+    "encoding": "CP950 / Big5-compatible",
+    "inputRows": 421,
+    "outputRecords": 421,
+    "duplicateKeys": [],
+    "invalidRecords": [],
+    "notes": [
+      "UTF-8-SIG, Big5, and CP950 supported.",
+      "All source fields are treated as strings.",
+      "No electricity amounts, addresses, coordinates, emissions, efficiency, or operating status are provided."
+    ]
   }
 }

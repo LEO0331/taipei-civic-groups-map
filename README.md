@@ -167,6 +167,8 @@ Senior group meal service sites are a separate `senior_group_meal_service_sites`
 
 Publicly funded pneumococcal vaccine providers are a separate `public_pneumococcal_vaccine_medical_providers` module. It preserves source sequence number, district code, provider name, address, and phone, parses Taipei districts from addresses where possible, and presents district summaries plus external map lookup only. It does not create exact markers or infer vaccine supply, eligibility, appointments, hours, fees, or medical advice.
 
+Major electricity users are a separate `major_electricity_users` module. It preserves the source user name, city, city code, and note fields, and offers cautious name-keyword organization labels for filtering only. The source contains no consumption amounts, addresses, coordinates, emissions, efficiency scores, or operating-status fields; the app creates no map markers or electricity-use rankings.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

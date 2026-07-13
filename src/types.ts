@@ -1753,6 +1753,11 @@ export type PublicPneumococcalVaccineMedicalProviderRecord = { id: string; modul
 export type PublicPneumococcalVaccineMedicalProviderSummary = { totalRecords: number; districtCount: number; uniqueProviderNameCount: number; recordsWithPhone: number; recordsWithoutPhone: number; recordsWithAddress: number; byDistrict: Array<{ district: string; count: number }> };
 export type PublicPneumococcalVaccineMedicalProviderFilters = { search: string; district: string; hasPhone: string };
 
+export type MajorElectricityUserOrganizationType = 'company' | 'government' | 'school' | 'hospital' | 'association' | 'other' | 'unknown';
+export type MajorElectricityUserRecord = { id: string; module: 'major_electricity_users'; sourceSequenceNumber?: string; userName?: string; userNameNormalized?: string; cityName?: string; cityNameNormalized?: string; cityCode?: string; cityCodeNormalized?: string; note?: string; noteNormalized?: string; hasNote: boolean; organizationType: MajorElectricityUserOrganizationType; source: string; sourceAgency: string };
+export type MajorElectricityUserSummary = { totalRecords: number; uniqueUserNameCount: number; cityCount: number; recordsWithNote: number; recordsWithoutNote: number; byCity: Array<{ city: string; count: number }>; byOrganizationType: Array<{ organizationType: MajorElectricityUserOrganizationType; count: number }> };
+export type MajorElectricityUserFilters = { search: string; city: string; organizationType: string; hasNote: string };
+
 export type IndustryGrantRecipient = {
   id: string;
   module: 'industry_grant_recipients';

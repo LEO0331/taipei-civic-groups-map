@@ -11,6 +11,8 @@ const DATA = [
   `${BASE}data/publicly-funded-hpv-vaccination-provider-summary.json`,
   `${BASE}data/public-pneumococcal-vaccine-providers/records.json`,
   `${BASE}data/public-pneumococcal-vaccine-providers/summary.json`,
+  `${BASE}data/major-electricity-users/records.json`,
+  `${BASE}data/major-electricity-users/summary.json`,
   `${BASE}data/child-medical-subsidy-contracted-providers.json`,
   `${BASE}data/child-medical-subsidy-contracted-provider-summary.json`,
   `${BASE}data/denture-subsidy-medical-providers.json`,

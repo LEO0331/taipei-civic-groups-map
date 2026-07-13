@@ -5366,5 +5366,22 @@
       "Addresses are registered locations outside Taipei and not Taipei service locations.",
       "No geocoding or map markers created."
     ]
+  },
+  "generalDentalMedicalInstitutions": {
+    "convertedAt": "2026-07-13T05:51:54.637Z",
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 1425,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownDistricts": [],
+    "notes": [
+      "No official coordinates supplied; no exact markers or geocoding created."
+    ]
   }
 }

@@ -175,6 +175,8 @@ Early-intervention hospitals and clinics are a separate `early_intervention_medi
 
 Registered postpartum care institutions are available as `registered_postpartum_care_institutions`. Conversion preserves institution codes, address, contact, source bed-count, and evaluation-result fields; these are not real-time vacancies, quality recommendations, or care advice, and the source has no confirmed coordinates.
 
+General dental medical institutions are provided by the separate `general_dental_medical_institutions` module. It preserves source sequence number, institution name, postal code, address, and phone; it supplies district summaries and external address lookup only, with no coordinate markers or claims about hours, appointments, treatments, fees, quality, or advice.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

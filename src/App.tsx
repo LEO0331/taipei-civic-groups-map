@@ -48,6 +48,7 @@ import PubliclyFundedHpvVaccinationProvidersModule from './PubliclyFundedHpvVacc
 import PublicPneumococcalVaccineProvidersModule from './PublicPneumococcalVaccineProvidersModule';
 import MajorElectricityUsersModule from './MajorElectricityUsersModule';
 import EarlyInterventionMedicalProvidersModule from './EarlyInterventionMedicalProvidersModule';
+import GeneralDentalMedicalInstitutionsModule from './GeneralDentalMedicalInstitutionsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -428,6 +429,8 @@ export default function App() {
   const [majorElectricityUserSummary, setMajorElectricityUserSummary] = useState<MajorElectricityUserSummary | null>(null);
   const [earlyInterventionMedicalProviderRecords, setEarlyInterventionMedicalProviderRecords] = useState<EarlyInterventionMedicalProviderRecord[]>([]);
   const [earlyInterventionMedicalProviderSummary, setEarlyInterventionMedicalProviderSummary] = useState<EarlyInterventionMedicalProviderSummary | null>(null);
+  const [generalDentalMedicalInstitutionRecords, setGeneralDentalMedicalInstitutionRecords] = useState<GeneralDentalMedicalInstitutionRecord[]>([]);
+  const [generalDentalMedicalInstitutionSummary, setGeneralDentalMedicalInstitutionSummary] = useState<GeneralDentalMedicalInstitutionSummary | null>(null);
   const [biotechCompanyRecords, setBiotechCompanyRecords] = useState<BiotechCompanyDirectoryRecord[]>([]);
   const [biotechCompanySummary, setBiotechCompanySummary] = useState<BiotechCompanyDirectorySummary | null>(null);
   const [travelAccommodationRecords, setTravelAccommodationRecords] = useState<TaipeiTravelAccommodationZhRecord[]>([]);
@@ -613,6 +616,7 @@ export default function App() {
   useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/public-pneumococcal-vaccine-providers/records.json'), loadJson('data/public-pneumococcal-vaccine-providers/summary.json')]).then(([records, providerSummary]) => { setPublicPneumococcalVaccineProviderRecords(records); setPublicPneumococcalVaccineProviderSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
   useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/major-electricity-users/records.json'), loadJson('data/major-electricity-users/summary.json')]).then(([records, electricitySummary]) => { setMajorElectricityUserRecords(records); setMajorElectricityUserSummary(electricitySummary); }).catch(() => setLoadError(true)); }, []);
   useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/early-intervention-medical-providers/records.json'), loadJson('data/early-intervention-medical-providers/summary.json')]).then(([records, providerSummary]) => { setEarlyInterventionMedicalProviderRecords(records); setEarlyInterventionMedicalProviderSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/general-dental-medical-institutions/records.json'), loadJson('data/general-dental-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setGeneralDentalMedicalInstitutionRecords(records); setGeneralDentalMedicalInstitutionSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
 
   useEffect(() => {
     document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
@@ -637,6 +641,7 @@ export default function App() {
   tabs.splice(2, 0, ['publicPneumococcalVaccineProviders', language === 'zh' ? '公費肺炎鏈球菌疫苗院所' : 'Pneumococcal Vaccine Providers']);
   tabs.splice(3, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
   tabs.splice(4, 0, ['earlyInterventionMedicalProviders', language === 'zh' ? '早期療育醫療院所' : 'Early Intervention Providers']);
+  tabs.splice(5, 0, ['generalDentalMedicalInstitutions', language === 'zh' ? '牙醫一般科醫療機構' : 'General Dental Institutions']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -680,6 +685,7 @@ export default function App() {
       {tab === 'publicPneumococcalVaccineProviders' && publicPneumococcalVaccineProviderSummary && <PublicPneumococcalVaccineProvidersModule records={publicPneumococcalVaccineProviderRecords} summary={publicPneumococcalVaccineProviderSummary} language={language} />}
       {tab === 'majorElectricityUsers' && majorElectricityUserSummary && <MajorElectricityUsersModule records={majorElectricityUserRecords} summary={majorElectricityUserSummary} language={language} />}
       {tab === 'earlyInterventionMedicalProviders' && earlyInterventionMedicalProviderSummary && <EarlyInterventionMedicalProvidersModule records={earlyInterventionMedicalProviderRecords} summary={earlyInterventionMedicalProviderSummary} language={language} />}
+      {tab === 'generalDentalMedicalInstitutions' && generalDentalMedicalInstitutionSummary && <GeneralDentalMedicalInstitutionsModule records={generalDentalMedicalInstitutionRecords} summary={generalDentalMedicalInstitutionSummary} language={language} />}
       {tab === 'biotechCompanies' && biotechCompanySummary && <BiotechCompanyDirectoryModule records={biotechCompanyRecords} summary={biotechCompanySummary} related={{ grants: grantSummary?.totalRecords, nangang: nangangCompanySummary?.totalRecords, companyChanges: companyChangeSummary?.totalRecords, businessChanges: businessChangeSummary?.totalRecords }} language={language} />}
       {tab === 'travelAccommodations' && travelAccommodationSummary && <TaipeiTravelAccommodationsZhModule records={travelAccommodationRecords} summary={travelAccommodationSummary} registeredHotelSummary={hotelSummary ?? undefined} language={language} />}
       {tab === 'grants' && grantSummary && <IndustryModule records={grantRecords} summary={grantSummary} language={language} />}

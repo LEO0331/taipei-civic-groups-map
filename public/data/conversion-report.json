@@ -5333,7 +5333,7 @@
     ]
   },
   "registeredPostpartumCareInstitutions": {
-    "convertedAt": "2026-07-13T03:26:02.116Z",
+    "convertedAt": "2026-07-13T06:42:04.714Z",
     "headers": [
       "編號",
       "機構代碼",
@@ -5349,7 +5349,7 @@
     "invalidBedCounts": []
   },
   "outOfCityFuneralServiceBusinesses": {
-    "convertedAt": "2026-07-13T05:46:36.348Z",
+    "convertedAt": "2026-07-13T06:42:05.310Z",
     "headers": [
       "公司名稱",
       "負責人",
@@ -5363,6 +5363,7 @@
     ],
     "missingFields": [],
     "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback.",
       "Addresses are registered locations outside Taipei and not Taipei service locations.",
       "No geocoding or map markers created."
     ]

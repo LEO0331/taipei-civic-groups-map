@@ -5280,5 +5280,56 @@
       "All source fields are treated as strings.",
       "No electricity amounts, addresses, coordinates, emissions, efficiency, or operating status are provided."
     ]
+  },
+  "earlyInterventionMedicalProviders": {
+    "source": "臺北市早期療育合約醫院及早療診所一覽表",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=d12064cb-9fc5-493f-997e-6a30fcb7e65d",
+    "convertedAt": "2026-07-13T03:11:29.019Z",
+    "resourceSchemas": [
+      {
+        "file": "early-intervention-contract-providers.csv",
+        "headers": [
+          "類別",
+          "項次",
+          "醫療機構名稱",
+          "行政區",
+          "住址",
+          "電話",
+          "分機",
+          "112年醫院督考等第"
+        ],
+        "encoding": "UTF-8-SIG / UTF-8",
+        "included": true,
+        "reason": "early-intervention provider schema"
+      },
+      {
+        "file": "public-health-medical-group.csv",
+        "headers": [
+          "序號",
+          "醫療機構名稱",
+          "地址",
+          "訪查項目",
+          "連絡電話",
+          "手機",
+          "物理治療",
+          "職能治療",
+          "語言治療",
+          "心理治療",
+          "等第",
+          "等第",
+          "複查"
+        ],
+        "encoding": "UTF-8-SIG / UTF-8",
+        "included": false,
+        "reason": "unrelated schema excluded"
+      }
+    ],
+    "outputRecords": 20,
+    "duplicateKeys": [],
+    "notes": [
+      "Only the verified early-intervention directory schema was included.",
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

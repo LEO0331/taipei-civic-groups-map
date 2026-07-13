@@ -1,0 +1,17 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=d12064cb-9fc5-493f-997e-6a30fcb7e65d",
+  "resources": [
+    {
+      "name": "public-health-medical-group",
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=962031e0-616f-4ba6-ac44-49b99b5b8223",
+      "fileSize": 7879,
+      "downloadedAt": "2026-07-13T03:11:28.243Z"
+    },
+    {
+      "name": "early-intervention-contract-providers",
+      "url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=33b40930-3ec7-4210-8621-f740f858f10e",
+      "fileSize": 2555,
+      "downloadedAt": "2026-07-13T03:11:28.406Z"
+    }
+  ]
+}

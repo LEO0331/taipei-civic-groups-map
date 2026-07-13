@@ -1758,6 +1758,10 @@ export type MajorElectricityUserRecord = { id: string; module: 'major_electricit
 export type MajorElectricityUserSummary = { totalRecords: number; uniqueUserNameCount: number; cityCount: number; recordsWithNote: number; recordsWithoutNote: number; byCity: Array<{ city: string; count: number }>; byOrganizationType: Array<{ organizationType: MajorElectricityUserOrganizationType; count: number }> };
 export type MajorElectricityUserFilters = { search: string; city: string; organizationType: string; hasNote: string };
 
+export type EarlyInterventionMedicalProviderRecord = { id: string; module: 'early_intervention_medical_providers'; sourceResourceName: string; providerCategory?: string; sourceSequenceNumber?: string; providerName?: string; providerNameNormalized?: string; districtCode?: string; districtNameFromAddress?: string; address?: string; addressNormalized?: string; roadName?: string; phone?: string; extension?: string; fullPhone?: string; phoneNormalized?: string; hasPhone: boolean; evaluationGrade?: string; serviceTypes: string[]; googleMapsQuery?: string; source: string; sourceAgency: string };
+export type EarlyInterventionMedicalProviderSummary = { totalRecords:number; districtCount:number; uniqueProviderNameCount:number; recordsWithPhone:number; recordsWithPhysicalTherapy:number; recordsWithOccupationalTherapy:number; recordsWithSpeechTherapy:number; recordsWithPsychologicalTherapy:number; byDistrict:Array<{district:string;count:number}>; byCategory:Array<{category:string;count:number}>; byServiceType:Array<{serviceType:string;count:number}> };
+export type EarlyInterventionMedicalProviderFilters = { search:string; district:string; providerCategory:string; serviceType:string; evaluationGrade:string; hasPhone:string };
+
 export type IndustryGrantRecipient = {
   id: string;
   module: 'industry_grant_recipients';

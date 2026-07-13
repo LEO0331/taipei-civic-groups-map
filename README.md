@@ -169,6 +169,8 @@ Publicly funded pneumococcal vaccine providers are a separate `public_pneumococc
 
 Major electricity users are a separate `major_electricity_users` module. It preserves the source user name, city, city code, and note fields, and offers cautious name-keyword organization labels for filtering only. The source contains no consumption amounts, addresses, coordinates, emissions, efficiency scores, or operating-status fields; the app creates no map markers or electricity-use rankings.
 
+Early-intervention hospitals and clinics are a separate `early_intervention_medical_providers` module. The pipeline inspects both official CSV schemas, records them in the conversion report, and includes only the verified early-intervention contract-provider directory. It provides address-based lookup, district summaries, and no exact map markers or medical/eligibility claims.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

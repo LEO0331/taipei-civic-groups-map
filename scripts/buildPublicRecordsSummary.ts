@@ -108,5 +108,7 @@ publicSummary.modules.publicPneumococcalVaccineMedicalProviders = {
 };
 const majorElectricityUsers = JSON.parse(await readFile(join(dataDir, 'major-electricity-users/summary.json'), 'utf8'));
 publicSummary.modules.majorElectricityUsers = { recordCount: majorElectricityUsers.totalRecords, uniqueUserNameCount: majorElectricityUsers.uniqueUserNameCount, cityCount: majorElectricityUsers.cityCount, recordsWithNote: majorElectricityUsers.recordsWithNote };
+const earlyInterventionMedicalProviders = JSON.parse(await readFile(join(dataDir, 'early-intervention-medical-providers/summary.json'), 'utf8'));
+publicSummary.modules.earlyInterventionMedicalProviders = { recordCount: earlyInterventionMedicalProviders.totalRecords, districtCount: earlyInterventionMedicalProviders.districtCount, uniqueProviderNameCount: earlyInterventionMedicalProviders.uniqueProviderNameCount, recordsWithPhone: earlyInterventionMedicalProviders.recordsWithPhone };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

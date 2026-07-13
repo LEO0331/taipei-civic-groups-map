@@ -5397,5 +5397,22 @@
     "notes": [
       "Raw source fields preserved pending schema-specific normalization. No geocoding or exact markers created."
     ]
+  },
+  "diabetesSharedCareMedicalInstitutions": {
+    "convertedAt": "2026-07-13T06:15:59.325Z",
+    "headers": [
+      "序號",
+      "行政區域代碼",
+      "醫事機構名稱",
+      "醫事機構電話",
+      "醫事機構地址"
+    ],
+    "outputRecords": 183,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownDistricts": [],
+    "notes": [
+      "No official coordinates supplied; no exact markers or geocoding created."
+    ]
   }
 }

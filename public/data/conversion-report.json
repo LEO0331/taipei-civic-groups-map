@@ -5383,5 +5383,19 @@
     "notes": [
       "No official coordinates supplied; no exact markers or geocoding created."
     ]
+  },
+  "hotelHygieneCertificationDirectory": {
+    "convertedAt": "2026-07-13T06:14:05.457Z",
+    "headers": [
+      "報名類別",
+      "業者名稱",
+      "營業場所地址",
+      "評核結果",
+      "認證有效日期"
+    ],
+    "outputRecords": 172,
+    "notes": [
+      "Raw source fields preserved pending schema-specific normalization. No geocoding or exact markers created."
+    ]
   }
 }

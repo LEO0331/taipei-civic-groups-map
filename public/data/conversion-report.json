@@ -5414,5 +5414,19 @@
     "notes": [
       "No official coordinates supplied; no exact markers or geocoding created."
     ]
+  },
+  "kindergartenBasicEvaluationPassRecords": {
+    "convertedAt": "2026-07-13T06:20:46.103Z",
+    "headers": [
+      "縣市代碼",
+      "行政區",
+      "幼兒園",
+      "設立別",
+      "評鑑學年度"
+    ],
+    "outputRecords": 372,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownEstablishmentTypes": []
   }
 }

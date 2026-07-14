@@ -1,0 +1,16 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=fb607e44-ddbb-4f75-a8c3-c0baa6201eb6",
+  "downloadedAt": "2026-07-14T00:56:34.252Z",
+  "resources": [
+    {
+      "sourceUrl": "https://data.taipei/api/dataset/fb607e44-ddbb-4f75-a8c3-c0baa6201eb6/resource/2a798667-41da-4769-8ec2-9864ea96a639/download",
+      "file": "resource-1.csv",
+      "fileSize": 11800
+    },
+    {
+      "sourceUrl": "https://data.taipei/api/dataset/fb607e44-ddbb-4f75-a8c3-c0baa6201eb6/resource/3092a3a4-73ae-452f-b419-120b4493f0a9/download",
+      "file": "resource-2.csv",
+      "fileSize": 11635
+    }
+  ]
+}

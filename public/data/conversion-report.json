@@ -5632,5 +5632,37 @@
       "Venue text was inspected before conversion; it is not automatically geocoded and does not create map markers.",
       "Opening hours are source text, not real-time availability."
     ]
+  },
+  "schoolchildDentalPreventiveCareProviders": {
+    "convertedAt": "2026-07-14T00:57:35.573Z",
+    "encodings": {
+      "resource-1.csv": "UTF-8-SIG / UTF-8",
+      "resource-2.csv": "UTF-8-SIG / UTF-8"
+    },
+    "schemas": {
+      "resource-1.csv": [
+        "項次",
+        "行政區域代碼",
+        "牙科醫療院所",
+        "地址",
+        "電話"
+      ],
+      "resource-2.csv": [
+        "項次",
+        "行政區域代碼",
+        "牙科醫療院所",
+        "地址",
+        "電話"
+      ]
+    },
+    "outputRecords": 265,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownDistricts": [],
+    "notes": [
+      "Both official CSV resources were inspected before schema mapping.",
+      "Service type remains explicit per source record.",
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

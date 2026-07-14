@@ -1,0 +1,11 @@
+import { mkdir, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+const datasetId = '2154ce42-42e6-4fdb-8356-d961cb2b0987';
+const sourcePage = `https://data.taipei/dataset/detail?id=${datasetId}`;
+const directory = join(process.cwd(), 'data/raw/street-performer-venues');
+const page = await fetch(sourcePage); if (!page.ok) throw new Error(`${page.status} ${page.statusText}`);
+const html = (await page.text()).replaceAll('\\u0026', '&');
+const path = html.match(new RegExp(`/api/dataset/${datasetId}/resource/[0-9a-f-]{36}/download[^"'<>]*`, 'i'))?.[0];
+if (!path) throw new Error('No CSV resource found on the official dataset page.');
+const sourceUrl = `https://data.taipei${path}`, response = await fetch(sourceUrl); if (!response.ok) throw new Error(`Download failed: ${response.status}`);
+const bytes = Buffer.from(await response.arrayBuffer()); await mkdir(directory, { recursive: true }); await writeFile(join(directory, 'records.csv'), bytes); await writeFile(join(directory, 'fetch-metadata.json'), JSON.stringify({ sourcePage, sourceUrl, downloadedAt: new Date().toISOString(), fileSize: bytes.length }, null, 2)); console.log(`Downloaded street performer venues CSV (${bytes.length} bytes).`);

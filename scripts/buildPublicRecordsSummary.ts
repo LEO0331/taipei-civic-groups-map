@@ -133,5 +133,7 @@ const schoolchildDentalPreventiveCareProviders = await readDatasetSummary('schoo
 publicSummary.modules.schoolchildDentalPreventiveCareProviders = { recordCount: schoolchildDentalPreventiveCareProviders.totalRecords, uniqueInstitutionCount: schoolchildDentalPreventiveCareProviders.uniqueInstitutionCount, districtCount: schoolchildDentalPreventiveCareProviders.districtCount, recordsWithPhone: schoolchildDentalPreventiveCareProviders.recordsWithPhone };
 const generalWesternMedicineInstitutions = await readDatasetSummary('general-western-medicine-institutions');
 publicSummary.modules.generalWesternMedicineInstitutions = { recordCount: generalWesternMedicineInstitutions.totalRecords, uniqueInstitutionNameCount: generalWesternMedicineInstitutions.uniqueInstitutionNameCount, districtCount: generalWesternMedicineInstitutions.districtCount, recordsWithPhone: generalWesternMedicineInstitutions.recordsWithPhone };
+const socialWelfareFoundations = await readDatasetSummary('social-welfare-foundations');
+publicSummary.modules.socialWelfareFoundations = { recordCount: socialWelfareFoundations.totalRecords, districtCount: socialWelfareFoundations.districtCount, foundationCategoryCount: socialWelfareFoundations.foundationCategoryCount, recordsWithPhone: socialWelfareFoundations.recordsWithPhone };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

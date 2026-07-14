@@ -5681,5 +5681,36 @@
     "notes": [
       "No official coordinates supplied; no automatic geocoding or exact markers created."
     ]
+  },
+  "socialWelfareFoundations": {
+    "convertedAt": "2026-07-14T01:08:08.228Z",
+    "headers": [
+      "序號",
+      "名稱",
+      "電話",
+      "地址",
+      "代碼編號",
+      "行政區",
+      "立案字號",
+      "成立日期",
+      "類別"
+    ],
+    "outputRecords": 213,
+    "duplicates": [
+      "n20157",
+      "n20157",
+      "n20157",
+      "n20157",
+      "n20157",
+      "n20157",
+      "n20157",
+      "n20157"
+    ],
+    "invalidDates": [],
+    "missingNames": [],
+    "unknownCategories": [],
+    "notes": [
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

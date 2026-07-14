@@ -5664,5 +5664,22 @@
       "Service type remains explicit per source record.",
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "generalWesternMedicineInstitutions": {
+    "convertedAt": "2026-07-14T01:00:27.566Z",
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 656,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownDistricts": [],
+    "notes": [
+      "No official coordinates supplied; no automatic geocoding or exact markers created."
+    ]
   }
 }

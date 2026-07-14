@@ -131,5 +131,7 @@ const streetPerformerVenues = await readDatasetSummary('street-performer-venues'
 publicSummary.modules.streetPerformerVenues = { recordCount: streetPerformerVenues.totalRecords, managingAuthorityCount: streetPerformerVenues.uniqueManagingAuthorityCount, performanceTypeCategoryCount: streetPerformerVenues.performanceTypeCategoryCount, recordsWithPhone: streetPerformerVenues.recordsWithPhone };
 const schoolchildDentalPreventiveCareProviders = await readDatasetSummary('schoolchild-dental-preventive-care-providers');
 publicSummary.modules.schoolchildDentalPreventiveCareProviders = { recordCount: schoolchildDentalPreventiveCareProviders.totalRecords, uniqueInstitutionCount: schoolchildDentalPreventiveCareProviders.uniqueInstitutionCount, districtCount: schoolchildDentalPreventiveCareProviders.districtCount, recordsWithPhone: schoolchildDentalPreventiveCareProviders.recordsWithPhone };
+const generalWesternMedicineInstitutions = await readDatasetSummary('general-western-medicine-institutions');
+publicSummary.modules.generalWesternMedicineInstitutions = { recordCount: generalWesternMedicineInstitutions.totalRecords, uniqueInstitutionNameCount: generalWesternMedicineInstitutions.uniqueInstitutionNameCount, districtCount: generalWesternMedicineInstitutions.districtCount, recordsWithPhone: generalWesternMedicineInstitutions.recordsWithPhone };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

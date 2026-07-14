@@ -5591,5 +5591,23 @@
       "No official coordinates supplied; no automatic geocoding or exact markers created.",
       "Licence status is calculated only relative to this data build date."
     ]
+  },
+  "hospitalHemodialysisResources": {
+    "convertedAt": "2026-07-14T00:49:20.738Z",
+    "encoding": "CP950 / Big5-compatible",
+    "headers": [
+      "項次",
+      "機構名稱",
+      "行政區域代碼",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 24,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownDistrictCodes": [],
+    "notes": [
+      "No official coordinates supplied; no automatic geocoding or exact markers created."
+    ]
   }
 }

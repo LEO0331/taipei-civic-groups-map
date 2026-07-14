@@ -125,5 +125,7 @@ const kindergartenBasicEvaluationPassRecords = await readDatasetSummary('kinderg
 publicSummary.modules.kindergartenBasicEvaluationPassRecords = { recordCount: kindergartenBasicEvaluationPassRecords.totalRecords, districtCount: kindergartenBasicEvaluationPassRecords.districtCount, uniqueKindergartenCount: kindergartenBasicEvaluationPassRecords.uniqueKindergartenCount, academicYearCount: kindergartenBasicEvaluationPassRecords.academicYearCount };
 const domesticEmploymentServiceAgencies = await readDatasetSummary('domestic-employment-service-agencies');
 publicSummary.modules.domesticEmploymentServiceAgencies = { recordCount: domesticEmploymentServiceAgencies.totalRecords, districtCount: domesticEmploymentServiceAgencies.districtCount, uniqueLicenseNumberCount: domesticEmploymentServiceAgencies.uniqueLicenseNumberCount, recordsWithPhone: domesticEmploymentServiceAgencies.recordsWithPhone };
+const hospitalHemodialysisResources = await readDatasetSummary('hospital-hemodialysis-resources');
+publicSummary.modules.hospitalHemodialysisResources = { recordCount: hospitalHemodialysisResources.totalRecords, districtCount: hospitalHemodialysisResources.districtCount, uniqueInstitutionNameCount: hospitalHemodialysisResources.uniqueInstitutionNameCount, recordsWithPhone: hospitalHemodialysisResources.recordsWithPhone };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

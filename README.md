@@ -698,3 +698,8 @@ Labor Standards Act violation publication records are administrative publication
 Consumer dispute absence notice records are public notice records for lookup and statistical organization only. They do not represent a complete consumer complaint database, fraud determination, legal liability determination, court judgment, administrative penalty amount, credit rating, real-time operating status, consumer advice, investment signal, blacklist, legal advice, or official endorsement.
 
 Animal hospital directory data is for lookup, district distribution, and public-data exploration only. It does not represent medical quality, real-time operating status, emergency service, pricing, veterinarian schedules, recommendation, medical advice, or official endorsement. Responsible-person names are shown only in source details.
+# Taipei Civic Groups Map
+
+## Domestic employment service agencies
+
+The `domestic_employment_service_agencies` module is a separate public directory for Taipei-licensed private agencies that place Taiwanese nationals in domestic employment. It is not merged with the general employment-agency intermediary-company directory. Refresh it with `npm run data:fetch:domestic-employment-service-agencies` and `npm run data:convert:domestic-employment-service-agencies`.

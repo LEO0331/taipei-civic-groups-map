@@ -84,6 +84,10 @@ dd { margin: 0; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
 .procurement-notes { margin-top: 28px; }
 .comparison-map { margin: 0 0 28px; }
 .comparison-scroll { overflow-x: auto; border: 1px solid #c8c0b2; }
+.pagination { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: 14px; font-size: 13px; }
+.pagination button, .copy-button { padding: 6px 9px; border: 1px solid #9ea9a6; background: #fffaf0; color: #203744; cursor: pointer; font: inherit; }
+.pagination button:disabled { cursor: not-allowed; opacity: .5; }
+.copy-button { margin-left: 6px; font-size: 11px; }
 table { width: 100%; min-width: 1300px; border-collapse: collapse; background: #fffaf0; font-size: 12px; }
 th, td { padding: 10px; border: 1px solid #d5cec1; text-align: left; vertical-align: top; }
 thead th { background: #203744; color: #fff; }

@@ -5754,5 +5754,26 @@
       "Ambiguous 院所 field preserved as institutionFieldRaw.",
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "petRegistrationStations": {
+    "convertedAt": "2026-07-15T03:37:54.099Z",
+    "headers": [
+      "縣市",
+      "編號",
+      "寵物登記機構名稱",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 297,
+    "duplicates": [],
+    "missingNames": [],
+    "missingAddresses": [],
+    "malformedPhones": [],
+    "unknownDistricts": [
+      "row 51"
+    ],
+    "notes": [
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

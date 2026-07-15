@@ -5712,5 +5712,47 @@
     "notes": [
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "bottledGasRetailers": {
+    "convertedAt": "2026-07-15T03:31:38.526Z",
+    "headers": [
+      "行政區",
+      "瓦斯行名稱",
+      "營業地址",
+      "電話",
+      "售價-元/每桶16公斤",
+      "售價-元/每桶20公斤",
+      "位置X座標",
+      "位置Y座標"
+    ],
+    "outputRecords": 70,
+    "notes": [
+      "Source coordinates detected as TWD97 and converted only when valid. Prices are source-listed averages, not real-time prices."
+    ]
+  },
+  "rotavirusVaccineSubsidyProviders": {
+    "convertedAt": "2026-07-15T03:33:26.882Z",
+    "headers": [
+      "行政區",
+      "院所",
+      "機構類別",
+      "院所名稱",
+      "地址",
+      "電話",
+      "語音預約"
+    ],
+    "outputRecords": 135,
+    "duplicates": [],
+    "missingNames": [],
+    "unknownCategories": [],
+    "malformedPhones": [],
+    "unmappedVoiceAppointmentValues": [
+      "row 49:(02)23567890",
+      "row 52:(02)23567890"
+    ],
+    "notes": [
+      "Ambiguous 院所 field preserved as institutionFieldRaw.",
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

@@ -1,0 +1,24 @@
+{
+  "source": "臺北市生育補助合約醫院",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "編號",
+    "行政區",
+    "醫療機構",
+    "孕前健康檢查生理男性門診",
+    "孕前健康檢查生理女性門診",
+    "孕前健康檢查生理女性加選抗穆勒氏管荷爾蒙檢查AMH",
+    "初期孕婦唐氏症篩檢",
+    "中期孕婦唐氏症篩檢",
+    "非侵入性胎兒染色體檢測NIPT",
+    "子癲前症篩檢"
+  ],
+  "recordCount": 67,
+  "duplicates": [],
+  "missingInstitutions": [],
+  "unknownDistricts": [],
+  "unmappedServiceValues": [],
+  "skippedRows": [
+    69
+  ]
+}

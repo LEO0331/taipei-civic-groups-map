@@ -89,6 +89,7 @@
     "data:convert:pet-registration-stations": "tsx scripts/convertPetRegistrationStations.ts",
     "data:convert:domestic-employment-service-agencies": "tsx scripts/convertDomesticEmploymentServiceAgencies.ts",
     "data:convert:kindergarten-basic-evaluation-pass-records": "tsx scripts/convertKindergartenBasicEvaluationPassRecords.ts",
+    "data:convert:five-cancer-screening-providers": "tsx scripts/convertFiveCancerScreeningProviders.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

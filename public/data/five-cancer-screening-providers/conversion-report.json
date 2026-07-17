@@ -1,0 +1,28 @@
+{
+  "source": "臺北市五癌篩檢醫療院所",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "行政區",
+    "醫事機構代碼",
+    "院所名稱",
+    "地址",
+    "聯絡電話",
+    "子宮頸癌篩檢",
+    "口腔癌篩檢",
+    "大腸癌篩檢",
+    "乳癌篩檢",
+    "肺癌篩檢",
+    "貼心小提醒"
+  ],
+  "recordCount": 477,
+  "duplicates": [
+    "3501014476",
+    "3501101849",
+    "3501113090",
+    "3501114328"
+  ],
+  "missingInstitutions": [],
+  "malformedPhones": [],
+  "unknownDistricts": [],
+  "unmappedScreeningValues": []
+}

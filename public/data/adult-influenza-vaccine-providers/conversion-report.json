@@ -1,0 +1,18 @@
+{
+  "source": "臺北市流感疫苗合約醫療院所(成人)",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "行政區域代碼",
+    "院所名稱",
+    "地址",
+    "電話",
+    "語音預約"
+  ],
+  "recordCount": 382,
+  "duplicates": [],
+  "missingNames": [],
+  "missingAddresses": [],
+  "malformedPhones": [],
+  "unknownDistricts": []
+}

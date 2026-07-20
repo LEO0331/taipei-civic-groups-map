@@ -1,0 +1,22 @@
+{
+  "source": "臺北市老人安養暨長期照顧機構評鑑",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話",
+    "104年評鑑成績",
+    "105年評鑑成績",
+    "106年評鑑成績",
+    "107年評鑑成績",
+    "108年評鑑成績"
+  ],
+  "recordCount": 97,
+  "duplicates": [],
+  "missingInstitutions": [],
+  "malformedPhones": [],
+  "unknownDistricts": [],
+  "unmappedEvaluationValues": []
+}

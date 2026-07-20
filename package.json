@@ -91,6 +91,7 @@
     "data:convert:kindergarten-basic-evaluation-pass-records": "tsx scripts/convertKindergartenBasicEvaluationPassRecords.ts",
     "data:convert:five-cancer-screening-providers": "tsx scripts/convertFiveCancerScreeningProviders.ts",
     "data:convert:fertility-subsidy-contracted-hospitals": "tsx scripts/convertFertilitySubsidyContractedHospitals.ts",
+    "data:convert:senior-care-institution-evaluations": "tsx scripts/convertSeniorCareInstitutionEvaluations.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

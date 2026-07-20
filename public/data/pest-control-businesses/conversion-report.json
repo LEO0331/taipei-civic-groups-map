@@ -1,0 +1,20 @@
+{
+  "source": "臺北市病媒防治業者",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "編號",
+    "許可證",
+    "字號",
+    "公司名稱",
+    "公司電話",
+    "手機",
+    "公司地址",
+    "負責人"
+  ],
+  "recordCount": 187,
+  "duplicates": [],
+  "missingNames": [],
+  "missingAddresses": [],
+  "malformedPhones": [],
+  "unresolvedDistricts": []
+}

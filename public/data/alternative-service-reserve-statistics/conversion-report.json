@@ -1,0 +1,25 @@
+{
+  "source": "臺北市替代役備役列管人數分析統計",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "年",
+    "月",
+    "組別",
+    "役別",
+    "梯退人數",
+    "零退人數",
+    "遷入人數",
+    "小計人數"
+  ],
+  "inputRows": 769,
+  "recordCount": 768,
+  "duplicates": [
+    "114|7|治安維護組|其他"
+  ],
+  "invalidDates": [],
+  "invalidCounts": [],
+  "missingGroups": [],
+  "subtotalInconsistencies": [
+    "115|6|防災救護組|消防役"
+  ]
+}

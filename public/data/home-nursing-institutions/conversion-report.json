@@ -1,0 +1,19 @@
+{
+  "source": "臺北市居家護理所",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "序號",
+    "縣市別代碼",
+    "機構名稱",
+    "地址",
+    "電話"
+  ],
+  "inputRows": 51,
+  "recordCount": 51,
+  "duplicates": [],
+  "missingNames": [],
+  "missingAddresses": [],
+  "malformedPhones": [],
+  "unknownCityCodes": [],
+  "unresolvedDistricts": []
+}

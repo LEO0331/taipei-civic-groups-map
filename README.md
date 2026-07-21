@@ -728,6 +728,10 @@ Consumer dispute absence notice records are public notice records for lookup and
 Animal hospital directory data is for lookup, district distribution, and public-data exploration only. It does not represent medical quality, real-time operating status, emergency service, pricing, veterinarian schedules, recommendation, medical advice, or official endorsement. Responsible-person names are shown only in source details.
 # Taipei Civic Groups Map
 
+## Taipei Home Nursing Institutions
+
+The `home_nursing_institutions` dashboard is a local-data directory for the official Taipei home nursing institution list. Refresh its customer-facing records and data-quality report with `npm run data:convert:home-nursing-institutions`. Addresses are provided only for external map search; the dashboard does not create map markers or infer service coverage.
+
 ## Domestic employment service agencies
 
 The `domestic_employment_service_agencies` module is a separate public directory for Taipei-licensed private agencies that place Taiwanese nationals in domestic employment. It is not merged with the general employment-agency intermediary-company directory. Refresh it with `npm run data:fetch:domestic-employment-service-agencies` and `npm run data:convert:domestic-employment-service-agencies`.

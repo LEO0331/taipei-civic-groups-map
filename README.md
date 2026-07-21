@@ -736,6 +736,10 @@ The `home_nursing_institutions` dashboard is a local-data directory for the offi
 
 The `optometry_institutions` dashboard is a local-data directory for the official Taipei optometry institution list. Refresh its local records and data-quality report with `npm run data:convert:optometry-institutions`. Addresses are provided only for external map search; the dashboard does not create map markers or imply medical capability or service availability.
 
+## General Chinese Medicine Institutions
+
+The `general_chinese_medicine_institutions` dashboard is a local-data directory for the official Taipei general Chinese-medicine institution list. Refresh its local records and data-quality report with `npm run data:convert:general-chinese-medicine-institutions`. Addresses are provided only for external map search; the dashboard does not create map markers or imply current services, treatment, quality, or medical capability.
+
 ## Domestic employment service agencies
 
 The `domestic_employment_service_agencies` module is a separate public directory for Taipei-licensed private agencies that place Taiwanese nationals in domestic employment. It is not merged with the general employment-agency intermediary-company directory. Refresh it with `npm run data:fetch:domestic-employment-service-agencies` and `npm run data:convert:domestic-employment-service-agencies`.

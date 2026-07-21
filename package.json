@@ -98,6 +98,7 @@
     "data:convert:licensed-waste-cooking-oil-collectors": "tsx scripts/convertLicensedWasteCookingOilCollectors.ts",
     "data:convert:home-nursing-institutions": "tsx scripts/convertHomeNursingInstitutions.ts",
     "data:convert:optometry-institutions": "tsx scripts/convertOptometryInstitutions.ts",
+    "data:convert:general-chinese-medicine-institutions": "tsx scripts/convertGeneralChineseMedicineInstitutions.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

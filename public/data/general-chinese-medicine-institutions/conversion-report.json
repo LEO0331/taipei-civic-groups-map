@@ -1,0 +1,21 @@
+{
+  "source": "臺北市中醫一般科醫療機構",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話"
+  ],
+  "inputRows": 640,
+  "recordCount": 640,
+  "duplicates": [],
+  "missingNames": [],
+  "missingAddresses": [],
+  "malformedPhones": [
+    "445"
+  ],
+  "unknownPostalCodes": [],
+  "unresolvedDistricts": []
+}

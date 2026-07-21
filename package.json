@@ -100,6 +100,7 @@
     "data:convert:optometry-institutions": "tsx scripts/convertOptometryInstitutions.ts",
     "data:convert:general-chinese-medicine-institutions": "tsx scripts/convertGeneralChineseMedicineInstitutions.ts",
     "data:convert:alternative-service-reserve-statistics": "tsx scripts/convertAlternativeServiceReserveStatistics.ts",
+    "data:convert:medical-laboratories": "tsx scripts/convertMedicalLaboratories.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

@@ -1,0 +1,26 @@
+{
+  "source": "臺北市醫事檢驗所",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話"
+  ],
+  "inputRows": 45,
+  "recordCount": 45,
+  "duplicates": [],
+  "missingNames": [],
+  "missingAddresses": [],
+  "malformedPhones": [
+    "8",
+    "12",
+    "15",
+    "26",
+    "30",
+    "38"
+  ],
+  "unknownPostalCodes": [],
+  "unresolvedDistricts": []
+}

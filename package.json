@@ -96,6 +96,7 @@
     "data:convert:pest-control-businesses": "tsx scripts/convertPestControlBusinesses.ts",
     "data:convert:adult-influenza-vaccine-providers": "tsx scripts/convertAdultInfluenzaVaccineProviders.ts",
     "data:convert:licensed-waste-cooking-oil-collectors": "tsx scripts/convertLicensedWasteCookingOilCollectors.ts",
+    "data:convert:home-nursing-institutions": "tsx scripts/convertHomeNursingInstitutions.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

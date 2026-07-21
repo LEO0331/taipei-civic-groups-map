@@ -66,6 +66,7 @@ import PestControlBusinessesModule from './PestControlBusinessesModule';
 import AdultInfluenzaVaccineProvidersModule from './AdultInfluenzaVaccineProvidersModule';
 import LicensedWasteCookingOilCollectorsModule from './LicensedWasteCookingOilCollectorsModule';
 import HomeNursingInstitutionsModule from './HomeNursingInstitutionsModule';
+import OptometryInstitutionsModule from './OptometryInstitutionsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -670,6 +671,7 @@ export default function App() {
   tabs.splice(9, 0, ['adultInfluenzaVaccineProviders', language === 'zh' ? '流感疫苗合約醫療院所（成人）' : 'Adult Influenza Vaccine Providers']);
   tabs.splice(10, 0, ['licensedWasteCookingOilCollectors', language === 'zh' ? '廢食用油回收清除機構' : 'Licensed Waste Cooking Oil Collectors']);
   tabs.splice(11, 0, ['homeNursingInstitutions', language === 'zh' ? '臺北市居家護理所' : 'Taipei Home Nursing Institutions']);
+  tabs.splice(12, 0, ['optometryInstitutions', language === 'zh' ? '臺北市驗光所' : 'Taipei Optometry Institutions']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -724,6 +726,7 @@ export default function App() {
       />}
       {tab === 'rotavirusVaccineSubsidyProviders' && <GeneratedDatasetDirectoryModule language={language} title={language==='zh'?'輪狀病毒疫苗補助合約醫療院所':'Rotavirus Vaccine Subsidy Providers'} subtitle={language==='zh'?'院所類別與語音預約資訊均為來源欄位，不代表即時可預約或疫苗供應。':'Institution category and voice-appointment information are source fields, not real-time booking or vaccine supply.'} records={rotavirusVaccineSubsidyProviderRecords} columns={[["institutionName",language==='zh'?'院所名稱':'Institution name'],["institutionCategory",language==='zh'?'機構類別':'Institution category'],["districtName",language==='zh'?'行政區':'District'],["address",language==='zh'?'地址':'Address'],["phone",language==='zh'?'電話':'Phone'],["voiceAppointmentRaw",language==='zh'?'語音預約資訊':'Voice appointment information'],["googleMapsQuery",language==='zh'?'地圖查詢':'Map lookup']]} notice={language==='zh'?'本資料不代表即時疫苗庫存、補助或接種資格、預約、語音預約、服務時間、費用、醫療品質、診斷或醫療建議；請向院所或臺北市政府衛生局確認。':'This dataset does not represent real-time stock, subsidy or vaccination eligibility, appointments, voice booking, hours, fees, quality, diagnosis, or medical advice. Confirm with the provider or Taipei City Department of Health.'}/>}
       {tab === 'homeNursingInstitutions' && <HomeNursingInstitutionsModule language={language} />}
+      {tab === 'optometryInstitutions' && <OptometryInstitutionsModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

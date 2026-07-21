@@ -732,6 +732,10 @@ Animal hospital directory data is for lookup, district distribution, and public-
 
 The `home_nursing_institutions` dashboard is a local-data directory for the official Taipei home nursing institution list. Refresh its customer-facing records and data-quality report with `npm run data:convert:home-nursing-institutions`. Addresses are provided only for external map search; the dashboard does not create map markers or infer service coverage.
 
+## Taipei Optometry Institutions
+
+The `optometry_institutions` dashboard is a local-data directory for the official Taipei optometry institution list. Refresh its local records and data-quality report with `npm run data:convert:optometry-institutions`. Addresses are provided only for external map search; the dashboard does not create map markers or imply medical capability or service availability.
+
 ## Domestic employment service agencies
 
 The `domestic_employment_service_agencies` module is a separate public directory for Taipei-licensed private agencies that place Taiwanese nationals in domestic employment. It is not merged with the general employment-agency intermediary-company directory. Refresh it with `npm run data:fetch:domestic-employment-service-agencies` and `npm run data:convert:domestic-employment-service-agencies`.

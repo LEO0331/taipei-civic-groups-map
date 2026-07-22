@@ -1,0 +1,30 @@
+{
+  "source": "臺北市營業場所衛生優良自主管理分級認證業者名冊〖美容美髮業〗",
+  "sourcePage": "https://data.taipei/dataset/detail?id=374d85bb-fe2f-4768-abd9-7a32922ac756",
+  "encoding": "CP950 / Big5-compatible",
+  "buildDate": "2026-07-22",
+  "sourceFields": [
+    "報名類別",
+    "業者名稱",
+    "營業場所地址",
+    "評核結果",
+    "有效日期"
+  ],
+  "inputRows": 86,
+  "outputRecords": 86,
+  "missingBusinessNames": [],
+  "missingAddresses": [],
+  "unresolvedDistricts": [],
+  "unknownRegistrationCategories": [],
+  "unknownEvaluationResults": [],
+  "invalidValidityDates": [],
+  "duplicateRows": [],
+  "conflictingEvaluationResults": [],
+  "multipleValidityDates": [],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950 supported.",
+    "All source fields are preserved as strings.",
+    "Derived validity status is relative only to the local build date.",
+    "No official coordinates are supplied; no geocoding or exact markers are created."
+  ]
+}

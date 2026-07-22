@@ -1,5 +1,6 @@
 {
-  "source": "臺北市老人安養暨長期照顧機構評鑑",
+  "source": "臺北市老人安養暨長期照顧機構評鑑成績",
+  "sourcePage": "https://data.taipei/dataset/detail?id=2334ffb4-e17c-47d8-8091-4b974d576a06",
   "encoding": "UTF-8-SIG / UTF-8",
   "sourceFields": [
     "序號",
@@ -13,10 +14,51 @@
     "107年評鑑成績",
     "108年評鑑成績"
   ],
-  "recordCount": 97,
-  "duplicates": [],
-  "missingInstitutions": [],
+  "evaluationYearColumns": [
+    {
+      "header": "104年評鑑成績",
+      "rocYear": 104
+    },
+    {
+      "header": "105年評鑑成績",
+      "rocYear": 105
+    },
+    {
+      "header": "106年評鑑成績",
+      "rocYear": 106
+    },
+    {
+      "header": "107年評鑑成績",
+      "rocYear": 107
+    },
+    {
+      "header": "108年評鑑成績",
+      "rocYear": 108
+    }
+  ],
+  "inputRows": 97,
+  "outputRecords": 97,
+  "duplicateRows": [],
+  "missingInstitutionNames": [],
+  "missingAddresses": [],
+  "invalidPostalCodes": [],
   "malformedPhones": [],
-  "unknownDistricts": [],
-  "unmappedEvaluationValues": []
+  "unresolvedDistricts": [],
+  "unknownEvaluationResultCategories": [],
+  "knownSourceEvaluationResultLabels": [
+    "丙等(再予考評為乙等)",
+    "乙等",
+    "優等",
+    "甲等"
+  ],
+  "duplicatedYearColumns": [],
+  "noEvaluationResults": [],
+  "conflictingResults": [],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950 supported.",
+    "Source values are preserved as strings.",
+    "Evaluation categories preserve official result labels rather than imposing an ordinal scale.",
+    "Blank results are source states, not failures.",
+    "No official coordinates are supplied; no geocoding or exact map markers are created."
+  ]
 }

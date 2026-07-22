@@ -1,4 +1,4 @@
-const CACHE = 'taipei-civic-groups-v68';
+const CACHE = 'taipei-civic-groups-v69';
 const BASE = '/taipei-civic-groups-map/';
 const DATA = [
   `${BASE}data/civic-groups.json`,
@@ -63,6 +63,7 @@ const DATA = [
   `${BASE}data/medical-laboratories/conversion-report.json`,
   `${BASE}data/community-care-service-sites/records.json`,
   `${BASE}data/community-care-service-sites/conversion-report.json`,
+  `${BASE}data/senior-care-capacity-and-occupancy/records.json`,
   `${BASE}data/domestic-employment-service-agencies/records.json`,
   `${BASE}data/domestic-employment-service-agencies/summary.json`,
   `${BASE}data/hotel-hygiene-certification-directory/records.json`,

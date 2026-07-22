@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+It includes TB contact-screening partner providers as a local static directory of source-recorded institutions, physicians, specialties, and clinic information. It has no addresses or coordinates, so it provides no map markers and does not confirm current clinic hours, screening availability, appointments, eligibility, or enrollment.
+
 The dashboard includes a local-static-data directory for Taipei City Fire Department approved gas water-heater installation businesses and technicians, with filtering, CSV download, and external address lookup only; it does not assert current qualifications or service availability.
 
 It also includes a local-static-data directory for Taipei visually impaired massage establishments, with annual and district summaries, filtering, CSV download, and external address lookup only; it does not assert current operation, appointments, service quality, or medical effects.

@@ -106,6 +106,7 @@
     "data:convert:domestic-employment-agency-evaluations": "tsx scripts/convertDomesticEmploymentAgencyEvaluations.ts",
     "data:convert:lodging-business-penalty-records": "tsx scripts/convertLodgingBusinessPenaltyRecords.ts",
     "data:convert:community-public-childcare-homes": "tsx scripts/convertCommunityPublicChildcareHomes.ts",
+    "data:convert:tb-contact-screening-partner-providers": "tsx scripts/convertTbContactScreeningPartnerProviders.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

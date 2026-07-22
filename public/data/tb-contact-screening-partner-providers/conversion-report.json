@@ -1,0 +1,24 @@
+{
+  "source": "台北市結核病接觸者胸部X光檢查暨丙型干擾素血液測驗(IGRA)合作醫療院所名單",
+  "sourcePage": "https://data.taipei/dataset/detail?id=c4557036-8e61-448d-ad68-7f350b6dd30f",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "編號",
+    "縣市",
+    "醫療機構名稱",
+    "醫師姓名",
+    "專科別",
+    "門診時間"
+  ],
+  "inputRows": 265,
+  "outputRecords": 265,
+  "duplicates": [],
+  "missingInstitutions": [],
+  "missingPhysicians": [],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950 supported.",
+    "All source fields are read as strings.",
+    "No address or coordinates are supplied; no geocoding or map markers are created.",
+    "Clinic hours are preserved as source-recorded descriptive text only."
+  ]
+}

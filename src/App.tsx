@@ -74,6 +74,7 @@ import CommunityCareServiceSitesModule from './CommunityCareServiceSitesModule';
 import SeniorCareCapacityAndOccupancyModule from './SeniorCareCapacityAndOccupancyModule';
 import DomesticEmploymentAgencyEvaluationsModule from './DomesticEmploymentAgencyEvaluationsModule';
 import LodgingBusinessPenaltyRecordsModule from './LodgingBusinessPenaltyRecordsModule';
+import CommunityPublicChildcareHomesModule from './CommunityPublicChildcareHomesModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -686,6 +687,7 @@ export default function App() {
   tabs.splice(17, 0, ['seniorCareCapacityAndOccupancy', language === 'zh' ? '老人照顧容量與實際進住統計' : 'Senior Care Capacity and Occupancy']);
   tabs.splice(18, 0, ['domesticEmploymentAgencyEvaluations', language === 'zh' ? '私立就業服務機構評鑑成績' : 'Domestic Employment Agency Evaluation Results']);
   tabs.splice(19, 0, ['lodgingBusinessPenaltyRecords', language === 'zh' ? '旅宿業裁罰紀錄表' : 'Lodging Business Penalty Records']);
+  tabs.splice(20, 0, ['communityPublicChildcareHomes', language === 'zh' ? '社區公共托育家園' : 'Community Public Childcare Homes']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -748,6 +750,7 @@ export default function App() {
       {tab === 'seniorCareCapacityAndOccupancy' && <SeniorCareCapacityAndOccupancyModule language={language} />}
       {tab === 'domesticEmploymentAgencyEvaluations' && <DomesticEmploymentAgencyEvaluationsModule language={language} />}
       {tab === 'lodgingBusinessPenaltyRecords' && <LodgingBusinessPenaltyRecordsModule language={language} />}
+      {tab === 'communityPublicChildcareHomes' && <CommunityPublicChildcareHomesModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

@@ -744,6 +744,10 @@ The `general_chinese_medicine_institutions` dashboard is a local-data directory 
 
 The `alternative_service_reserve_statistics` dashboard presents local static records from Taipei's alternative-service reserve administrative statistics. Refresh its records and data-quality report with `npm run data:convert:alternative-service-reserve-statistics`. Source subtotals are preserved; the dashboard does not create maps or infer individual status, mobilizable manpower, military capability, or readiness.
 
+## Lodging Business Penalty Records
+
+The `lodging_business_penalty_records` dashboard presents historical public penalty records only. Refresh it with `npm run data:convert:lodging-business-penalty-records`; it remains separate from hotel directories and hygiene-certification datasets.
+
 ## Taipei Medical Laboratories
 
 The `medical_laboratories` dashboard is a local-data directory for the official Taipei medical laboratory list. Refresh it with `npm run data:convert:medical-laboratories`; addresses are for external map search only.

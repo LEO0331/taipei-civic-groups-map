@@ -72,6 +72,8 @@ import AlternativeServiceReserveStatisticsModule from './AlternativeServiceReser
 import MedicalLaboratoriesModule from './MedicalLaboratoriesModule';
 import CommunityCareServiceSitesModule from './CommunityCareServiceSitesModule';
 import SeniorCareCapacityAndOccupancyModule from './SeniorCareCapacityAndOccupancyModule';
+import DomesticEmploymentAgencyEvaluationsModule from './DomesticEmploymentAgencyEvaluationsModule';
+import LodgingBusinessPenaltyRecordsModule from './LodgingBusinessPenaltyRecordsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -682,6 +684,8 @@ export default function App() {
   tabs.splice(15, 0, ['medicalLaboratories', language === 'zh' ? '臺北市醫事檢驗所' : 'Taipei Medical Laboratories']);
   tabs.splice(16, 0, ['communityCareServiceSites', language === 'zh' ? '社區照顧關懷據點' : 'Community Care Service Sites']);
   tabs.splice(17, 0, ['seniorCareCapacityAndOccupancy', language === 'zh' ? '老人照顧容量與實際進住統計' : 'Senior Care Capacity and Occupancy']);
+  tabs.splice(18, 0, ['domesticEmploymentAgencyEvaluations', language === 'zh' ? '私立就業服務機構評鑑成績' : 'Domestic Employment Agency Evaluation Results']);
+  tabs.splice(19, 0, ['lodgingBusinessPenaltyRecords', language === 'zh' ? '旅宿業裁罰紀錄表' : 'Lodging Business Penalty Records']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -742,6 +746,8 @@ export default function App() {
       {tab === 'medicalLaboratories' && <MedicalLaboratoriesModule language={language} />}
       {tab === 'communityCareServiceSites' && <CommunityCareServiceSitesModule language={language} />}
       {tab === 'seniorCareCapacityAndOccupancy' && <SeniorCareCapacityAndOccupancyModule language={language} />}
+      {tab === 'domesticEmploymentAgencyEvaluations' && <DomesticEmploymentAgencyEvaluationsModule language={language} />}
+      {tab === 'lodgingBusinessPenaltyRecords' && <LodgingBusinessPenaltyRecordsModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

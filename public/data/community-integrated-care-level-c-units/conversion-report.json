@@ -1,0 +1,53 @@
+{
+  "source": "臺北市銀髮族服務_社區整體照顧服務體系C級單位一覽表",
+  "sourcePage": "https://data.taipei/dataset/detail?id=48a04f42-094e-46a0-a279-b4d8b703a7b3",
+  "sourceUpdateDate": "2025-06-11 18:47:18",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "據點名稱",
+    "行政區",
+    "行政區代碼",
+    "據點地址",
+    "電話"
+  ],
+  "inputRows": 292,
+  "outputRecords": 292,
+  "missingSiteNames": [],
+  "missingAddresses": [],
+  "missingPhones": [],
+  "malformedDistrictCodes": [],
+  "unresolvedDistricts": [],
+  "districtConflicts": [],
+  "duplicateRows": [],
+  "sameSiteNameMultipleAddresses": [],
+  "sameAddressMultipleSiteNames": [
+    {
+      "address": "臺北市士林區名山里雨聲街68號（芝山岩 區民活動中心）",
+      "siteNames": [
+        "臺北市士林區芝山岩社區發展協會",
+        "臺北市士林區幸福名山社區發展協 會"
+      ]
+    },
+    {
+      "address": "臺北市大安區龍陣里瑞安街75號3樓",
+      "siteNames": [
+        "臺北市長立健康樂活協會",
+        "臺北市大安區龍陣里辦公處"
+      ]
+    },
+    {
+      "address": "臺北市松山區安平里寶清街42號1樓、2樓",
+      "siteNames": [
+        "社團法人台北市銀髮族協會(松山)",
+        "臺北市松山區安平社區發展協會"
+      ]
+    }
+  ],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950 supported.",
+    "Sequence numbers, district codes, and phone numbers are preserved as strings.",
+    "No official coordinates are supplied; no geocoding or exact markers are created.",
+    "The directory does not represent real-time service, capacity, operation, availability, or eligibility."
+  ]
+}

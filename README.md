@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+Community Integrated Care Level C units are shown as a separate local-static directory. It does not confirm current Level C status, operation, capacity, appointments, service availability, eligibility, fees, staffing, care quality, or medical capability.
+
 Public influenza antiviral medicine providers are a separate local-static directory of source-recorded contracted institutions. It does not confirm current medicine inventory, treatment eligibility, appointments, current contracts, operation, or treatment availability.
 
 Beauty and hairdressing hygiene certifications are a separate local-static dashboard of source-recorded evaluation results and validity dates. Its derived status is calculated only from the local build date and is not confirmation of a business's current certification, operation, hygiene, safety, or quality.

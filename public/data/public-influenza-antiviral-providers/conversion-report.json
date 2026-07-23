@@ -1,0 +1,31 @@
+{
+  "source": "臺北市公費流感抗病毒藥劑合約院所",
+  "sourcePage": "https://data.taipei/dataset/detail?id=c9ad5931-42e5-4698-96b8-1353cf4f5416",
+  "sourceUpdateDate": "2024-12-05 14:40:55",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "十碼章",
+    "醫院名稱",
+    "縣市別",
+    "行政區",
+    "地址",
+    "連絡電話"
+  ],
+  "inputRows": 388,
+  "outputRecords": 388,
+  "missingInstitutionNames": [],
+  "missingInstitutionCodes": [],
+  "unexpectedInstitutionCodes": [],
+  "missingAddresses": [],
+  "missingPhones": [],
+  "unresolvedDistricts": [],
+  "duplicateRows": [],
+  "conflictingInstitutionCodeMappings": [],
+  "multipleCodesForSameNameAndAddress": [],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950 supported.",
+    "Institution codes and phone numbers are preserved as strings.",
+    "No official coordinates are supplied; no geocoding or exact markers are created.",
+    "This directory does not represent real-time medicine inventory, eligibility, appointments, or treatment availability."
+  ]
+}

@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+Public influenza antiviral medicine providers are a separate local-static directory of source-recorded contracted institutions. It does not confirm current medicine inventory, treatment eligibility, appointments, current contracts, operation, or treatment availability.
+
 Beauty and hairdressing hygiene certifications are a separate local-static dashboard of source-recorded evaluation results and validity dates. Its derived status is calculated only from the local build date and is not confirmation of a business's current certification, operation, hygiene, safety, or quality.
 
 Senior welfare institution evaluations are presented as a separate, local-static dashboard of source-recorded historical results. It preserves the evaluation year alongside every result and does not treat the latest available record as a current rating, quality score, capacity, admission, or operating-status claim.

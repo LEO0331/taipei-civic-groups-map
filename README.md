@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+Subsidized senior residential placement institutions are shown as a separate historical local-static directory. Inclusion, placement, subsidy, capacity, and evaluation fields do not confirm current eligibility, availability, or institutional status.
+
 Registered after-school care centres are shown as a separate local-static directory. Approved capacity is a source-recorded approval measure, not current enrolment or availability, and the data does not confirm current operating or permit status.
 
 Community Integrated Care Level C units are shown as a separate local-static directory. It does not confirm current Level C status, operation, capacity, appointments, service availability, eligibility, fees, staffing, care quality, or medical capability.

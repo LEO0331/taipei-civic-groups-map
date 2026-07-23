@@ -1,0 +1,31 @@
+{
+  "source": "臺北市銀髮族服務_老人收容安置補助名冊",
+  "sourcePage": "https://data.taipei/dataset/detail?id=23aff01f-67a3-461f-9fda-2fafe4ec9284",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "機構地址",
+    "機構電話",
+    "負責人",
+    "105年評鑑成績",
+    "105年度衛福部評鑑成績",
+    "106年評鑑成績",
+    "107年評鑑成績",
+    "108年評鑑成績"
+  ],
+  "inputRows": 100,
+  "outputRecords": 100,
+  "missingNames": [],
+  "missingAddresses": [],
+  "malformedPhones": [],
+  "unresolvedDistricts": [],
+  "missingResponsiblePeople": [],
+  "duplicateRows": [],
+  "noEvaluationData": [],
+  "notes": [
+    "Evaluation authorities remain separate source fields.",
+    "Blank results are source states, not failures.",
+    "No official coordinates supplied; no geocoding or exact markers created."
+  ]
+}

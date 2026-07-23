@@ -79,6 +79,7 @@ import TbContactScreeningPartnerProvidersModule from './TbContactScreeningPartne
 import BeautyHairdressingHygieneCertificationsModule from './BeautyHairdressingHygieneCertificationsModule';
 import PublicInfluenzaAntiviralProvidersModule from './PublicInfluenzaAntiviralProvidersModule';
 import CommunityIntegratedCareLevelCUnitsModule from './CommunityIntegratedCareLevelCUnitsModule';
+import RegisteredAfterSchoolCareCentresModule from './RegisteredAfterSchoolCareCentresModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -696,6 +697,7 @@ export default function App() {
   tabs.splice(22, 0, ['beautyHairdressingHygieneCertifications', language === 'zh' ? '美容美髮業衛生優良認證' : 'Beauty and Hairdressing Hygiene Certifications']);
   tabs.splice(23, 0, ['publicInfluenzaAntiviralProviders', language === 'zh' ? '公費流感抗病毒藥劑合約院所' : 'Public Influenza Antiviral Medicine Providers']);
   tabs.splice(24, 0, ['communityIntegratedCareLevelCUnits', language === 'zh' ? '社區整體照顧服務體系 C 級單位' : 'Community Integrated Care Level C Units']);
+  tabs.splice(25, 0, ['registeredAfterSchoolCareCentres', language === 'zh' ? '立案課照中心' : 'Registered After-School Care Centres']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -763,6 +765,7 @@ export default function App() {
       {tab === 'beautyHairdressingHygieneCertifications' && <BeautyHairdressingHygieneCertificationsModule language={language} />}
       {tab === 'publicInfluenzaAntiviralProviders' && <PublicInfluenzaAntiviralProvidersModule language={language} />}
       {tab === 'communityIntegratedCareLevelCUnits' && <CommunityIntegratedCareLevelCUnitsModule language={language} />}
+      {tab === 'registeredAfterSchoolCareCentres' && <RegisteredAfterSchoolCareCentresModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+Registered after-school care centres are shown as a separate local-static directory. Approved capacity is a source-recorded approval measure, not current enrolment or availability, and the data does not confirm current operating or permit status.
+
 Community Integrated Care Level C units are shown as a separate local-static directory. It does not confirm current Level C status, operation, capacity, appointments, service availability, eligibility, fees, staffing, care quality, or medical capability.
 
 Public influenza antiviral medicine providers are a separate local-static directory of source-recorded contracted institutions. It does not confirm current medicine inventory, treatment eligibility, appointments, current contracts, operation, or treatment availability.

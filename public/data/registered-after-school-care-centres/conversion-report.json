@@ -1,0 +1,37 @@
+{
+  "source": "臺北市立案課照中心資訊",
+  "sourcePage": "https://data.taipei/dataset/detail?id=cf409676-40bf-4fcc-90b6-36ee48b3f413",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "縣市",
+    "行政區",
+    "郵遞區號",
+    "課照中心代碼",
+    "課照中心名稱",
+    "地址",
+    "許可證日期",
+    "營業狀態",
+    "設立別",
+    "電話",
+    "負責人",
+    "立案狀態",
+    "核定人數【人】"
+  ],
+  "inputRows": 206,
+  "outputRecords": 206,
+  "missingNames": [],
+  "missingCodes": [],
+  "malformedDates": [],
+  "invalidCapacity": [],
+  "missingAddresses": [],
+  "malformedPhones": [],
+  "unresolvedDistricts": [],
+  "duplicateRows": [],
+  "notes": [
+    "Source values preserved as strings.",
+    "ROC and Gregorian permit dates are parsed only when complete.",
+    "Approved capacity is not current enrolment or vacancy.",
+    "No official coordinates supplied; no geocoding or exact markers created."
+  ]
+}

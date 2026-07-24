@@ -1,0 +1,33 @@
+{
+  "source": "臺北市家庭醫學科醫療機構",
+  "sourcePage": "https://data.taipei/dataset/detail?id=34e855c7-7808-46d2-b9b1-f7244fe2b9b5",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話"
+  ],
+  "inputRows": 198,
+  "outputRecords": 198,
+  "missingNames": [],
+  "missingAddresses": [],
+  "missingPhones": [
+    "50",
+    "61",
+    "64",
+    "129",
+    "171",
+    "182"
+  ],
+  "malformedPhones": [],
+  "invalidPostalCodes": [],
+  "unresolvedDistricts": [],
+  "duplicateRows": [],
+  "notes": [
+    "Source values are treated as strings.",
+    "No official coordinates supplied; no geocoding or exact markers created.",
+    "The directory does not represent current services, appointments, operation, treatment availability, or medical quality."
+  ]
+}

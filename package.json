@@ -117,6 +117,8 @@
     "data:convert:registered-after-school-care-centres": "tsx scripts/convertRegisteredAfterSchoolCareCentres.ts",
     "data:fetch:subsidized-senior-residential-placement-institutions": "tsx scripts/fetchSubsidizedSeniorResidentialPlacementInstitutions.ts",
     "data:convert:subsidized-senior-residential-placement-institutions": "tsx scripts/convertSubsidizedSeniorResidentialPlacementInstitutions.ts",
+    "data:fetch:family-medicine-institutions": "tsx scripts/fetchFamilyMedicineInstitutions.ts",
+    "data:convert:family-medicine-institutions": "tsx scripts/convertFamilyMedicineInstitutions.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",
     "data:convert:denture-subsidy-providers": "tsx scripts/convertDentureSubsidyMedicalProviders.ts && tsx scripts/buildDentureSubsidyMedicalProviderSummary.ts",
     "data:convert:disability-employment-resources": "tsx scripts/convertDisabilityEmploymentResourceMap.ts && tsx scripts/buildDisabilityEmploymentResourceMapSummary.ts",

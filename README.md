@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+Family medicine institutions are shown as a separate local-static public directory. It does not confirm current operation, appointments, clinician attendance, services, tests, treatments, fees, quality, or recommendation.
+
 Subsidized senior residential placement institutions are shown as a separate historical local-static directory. Inclusion, placement, subsidy, capacity, and evaluation fields do not confirm current eligibility, availability, or institutional status.
 
 Registered after-school care centres are shown as a separate local-static directory. Approved capacity is a source-recorded approval measure, not current enrolment or availability, and the data does not confirm current operating or permit status.

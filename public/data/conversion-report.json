@@ -5775,5 +5775,36 @@
     "notes": [
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "plasticSurgeryMedicalInstitutions": {
+    "convertedAt": "2026-07-24T08:52:04.043Z",
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "inputRows": 141,
+    "outputRecords": 141,
+    "duplicateRows": [],
+    "missingInstitutionName": [],
+    "missingAddress": [],
+    "missingPhone": [
+      25,
+      99,
+      112,
+      138
+    ],
+    "malformedPhone": [],
+    "invalidPostalCode": [],
+    "unresolvedDistrict": [],
+    "sameInstitutionNameMultipleAddresses": [],
+    "sameAddressDifferentInstitutionNames": [],
+    "notes": [
+      "Source values are preserved as strings.",
+      "UTF-8-SIG is supported with Big5 and CP950 fallbacks.",
+      "No coordinates, automatic geocoding, or exact map markers are created."
+    ]
   }
 }

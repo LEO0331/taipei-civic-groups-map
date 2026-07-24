@@ -223,6 +223,8 @@ Registered postpartum care institutions are available as `registered_postpartum_
 
 General dental medical institutions are provided by the separate `general_dental_medical_institutions` module. It preserves source sequence number, institution name, postal code, address, and phone; it supplies district summaries and external address lookup only, with no coordinate markers or claims about hours, appointments, treatments, fees, quality, or advice.
 
+Plastic surgery medical institutions are provided by the separate `plastic_surgery_medical_institutions` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=eab0da4e-0a6e-432e-80da-dcddeed0fef3). It uses local static source records for district and postal-code summaries, contact lookup, and external address search only; it does not establish current operations, procedures, appointments, physician attendance, medical quality, safety, outcomes, or recommendations.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

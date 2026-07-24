@@ -1,0 +1,23 @@
+{
+  "source": "臺北市美容醫學業務醫療機構113年督考統計",
+  "sourcePage": "https://data.taipei/dataset/detail?id=ddfef24a-2901-43b1-b821-fd42b8ed0f79",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "縣市別",
+    "行政區",
+    "機構代碼",
+    "診所名稱"
+  ],
+  "inputRows": 517,
+  "outputRecords": 517,
+  "missingNames": [],
+  "missingCodes": [],
+  "missingDistricts": [],
+  "duplicateRows": [],
+  "notes": [
+    "All actual source fields are preserved under supervisionFields.",
+    "The source CSV contains directory fields only; no inspection, score, violation, or compliance fields are invented.",
+    "This is a 2024 supervision-period dataset, not current status."
+  ]
+}

@@ -2,6 +2,8 @@
 
 Mobile-first bilingual explorer for Taipei public records.
 
+Cosmetic-medicine supervision statistics are shown as a separate 2024 historical local-static dataset. The source contains only institution-identification fields and does not establish current compliance, quality, safety, services, or operation.
+
 Family medicine institutions are shown as a separate local-static public directory. It does not confirm current operation, appointments, clinician attendance, services, tests, treatments, fees, quality, or recommendation.
 
 Subsidized senior residential placement institutions are shown as a separate historical local-static directory. Inclusion, placement, subsidy, capacity, and evaluation fields do not confirm current eligibility, availability, or institutional status.

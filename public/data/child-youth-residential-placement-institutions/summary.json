@@ -1,0 +1,53 @@
+{
+  "totalRecords": 22,
+  "uniqueInstitutions": 22,
+  "districtsCovered": 11,
+  "totalApprovedBeds": 485,
+  "totalApplicableBeds": 30,
+  "byDistrict": [
+    {
+      "label": "文山區",
+      "value": 4
+    },
+    {
+      "label": "萬華區",
+      "value": 4
+    },
+    {
+      "label": "北投區",
+      "value": 3
+    },
+    {
+      "label": "內湖區",
+      "value": 2
+    },
+    {
+      "label": "中正區",
+      "value": 2
+    },
+    {
+      "label": "士林區",
+      "value": 2
+    },
+    {
+      "label": "松山區",
+      "value": 1
+    },
+    {
+      "label": "大安區",
+      "value": 1
+    },
+    {
+      "label": "信義區",
+      "value": 1
+    },
+    {
+      "label": "中山區",
+      "value": 1
+    },
+    {
+      "label": "南港區",
+      "value": 1
+    }
+  ]
+}

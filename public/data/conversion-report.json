@@ -5806,5 +5806,50 @@
       "UTF-8-SIG is supported with Big5 and CP950 fallbacks.",
       "No coordinates, automatic geocoding, or exact map markers are created."
     ]
+  },
+  "indigenousCommunityOrganizations": {
+    "convertedAt": "2026-07-27T00:36:36.951Z",
+    "headers": [
+      "項次編號",
+      "社團/團體",
+      "地址",
+      "縣市名稱",
+      "行政區域",
+      "縣市別代碼",
+      "郵遞區號"
+    ],
+    "inputRows": 72,
+    "outputRecords": 72,
+    "duplicateRows": [],
+    "missingOrganizationName": [],
+    "missingAddress": [],
+    "missingCityCode": [],
+    "malformedCityCode": [],
+    "invalidPostalCode": [],
+    "unresolvedDistrict": [
+      12,
+      26,
+      61,
+      62,
+      67,
+      68,
+      70,
+      73
+    ],
+    "locationConflicts": [],
+    "sameOrganizationNameMultipleAddresses": [],
+    "sameAddressMultipleOrganizations": [
+      "臺北市松山區敦化北路50巷23號3樓",
+      "臺北市中正區金山南路一段9號9樓",
+      "臺北市大安區市民大道3段150巷5號12樓",
+      "臺北市南港區興中路28巷1號2樓",
+      "臺北市信義區忠孝東路4段500號b1",
+      "臺北市大同區民權西路106號b1",
+      "新北市新店區安德街171號4樓"
+    ],
+    "notes": [
+      "Official city and district fields are preserved without address-based replacement.",
+      "No coordinates, automatic geocoding, or exact map markers are created."
+    ]
   }
 }

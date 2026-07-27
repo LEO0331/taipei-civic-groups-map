@@ -1,0 +1,191 @@
+{
+  "totalRecords": 72,
+  "uniqueOrganizationNames": 72,
+  "districtsRepresented": 18,
+  "citiesRepresented": 2,
+  "postalCodesRepresented": 18,
+  "completeAddressRecords": 72,
+  "validDistrictRecords": 64,
+  "districtWithMostOrganizations": "中正區",
+  "byDistrict": [
+    {
+      "label": "中正區",
+      "value": 11
+    },
+    {
+      "label": "大安區",
+      "value": 7
+    },
+    {
+      "label": "內湖區",
+      "value": 7
+    },
+    {
+      "label": "南港區",
+      "value": 6
+    },
+    {
+      "label": "文山區",
+      "value": 5
+    },
+    {
+      "label": "北投區",
+      "value": 5
+    },
+    {
+      "label": "松山區",
+      "value": 5
+    },
+    {
+      "label": "信義區",
+      "value": 5
+    },
+    {
+      "label": "士林區",
+      "value": 4
+    },
+    {
+      "label": "大同區",
+      "value": 4
+    },
+    {
+      "label": "中山區",
+      "value": 4
+    },
+    {
+      "label": "新店區",
+      "value": 3
+    },
+    {
+      "label": "中和區",
+      "value": 1
+    },
+    {
+      "label": "永和區",
+      "value": 1
+    },
+    {
+      "label": "新莊區",
+      "value": 1
+    },
+    {
+      "label": "萬華區",
+      "value": 1
+    },
+    {
+      "label": "樹林區",
+      "value": 1
+    },
+    {
+      "label": "鶯歌區",
+      "value": 1
+    }
+  ],
+  "byCity": [
+    {
+      "label": "臺北市",
+      "value": 64
+    },
+    {
+      "label": "新北市",
+      "value": 8
+    }
+  ],
+  "byPostalCode": [
+    {
+      "label": "100",
+      "value": 11
+    },
+    {
+      "label": "106",
+      "value": 7
+    },
+    {
+      "label": "114",
+      "value": 7
+    },
+    {
+      "label": "115",
+      "value": 6
+    },
+    {
+      "label": "105",
+      "value": 5
+    },
+    {
+      "label": "110",
+      "value": 5
+    },
+    {
+      "label": "112",
+      "value": 5
+    },
+    {
+      "label": "116",
+      "value": 5
+    },
+    {
+      "label": "103",
+      "value": 4
+    },
+    {
+      "label": "104",
+      "value": 4
+    },
+    {
+      "label": "111",
+      "value": 4
+    },
+    {
+      "label": "231",
+      "value": 3
+    },
+    {
+      "label": "108",
+      "value": 1
+    },
+    {
+      "label": "234",
+      "value": 1
+    },
+    {
+      "label": "235",
+      "value": 1
+    },
+    {
+      "label": "238",
+      "value": 1
+    },
+    {
+      "label": "239",
+      "value": 1
+    },
+    {
+      "label": "242",
+      "value": 1
+    }
+  ],
+  "addressCompleteness": [
+    {
+      "label": "complete",
+      "value": 72
+    },
+    {
+      "label": "incomplete",
+      "value": 0
+    }
+  ],
+  "districtPostalConsistency": [
+    {
+      "label": "consistent",
+      "value": 72
+    },
+    {
+      "label": "conflict",
+      "value": 0
+    }
+  ],
+  "sourceFileUpdatedAt": "2025-05-23 17:27:54",
+  "metadataUpdatedAt": "2026-06-17 11:38:15",
+  "sourceUrl": "https://data.taipei/api/dataset/a955716f-54ba-425f-ac74-0600cfe50f21/resource/f3e66912-f360-4987-932d-c888a37dc956/download"
+}

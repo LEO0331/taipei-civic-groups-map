@@ -121,6 +121,8 @@
     "data:convert:family-medicine-institutions": "tsx scripts/convertFamilyMedicineInstitutions.ts",
     "data:fetch:plastic-surgery-medical-institutions": "tsx scripts/fetchPlasticSurgeryMedicalInstitutions.ts",
     "data:convert:plastic-surgery-medical-institutions": "tsx scripts/convertPlasticSurgeryMedicalInstitutions.ts",
+    "data:fetch:indigenous-community-organizations": "tsx scripts/fetchIndigenousCommunityOrganizations.ts",
+    "data:convert:indigenous-community-organizations": "tsx scripts/convertIndigenousCommunityOrganizations.ts",
     "data:fetch:cosmetic-medicine-supervision-2024": "tsx scripts/fetchCosmeticMedicineSupervision2024.ts",
     "data:convert:cosmetic-medicine-supervision-2024": "tsx scripts/convertCosmeticMedicineSupervision2024.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",

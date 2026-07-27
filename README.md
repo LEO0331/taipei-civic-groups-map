@@ -151,6 +151,12 @@ The dataset has no official coordinates. The map uses Taipei district centroid b
 
 It supports district, institution type, organizational attribute, service-model, website, and source-quantity filters; summary cards and charts; raw-source inspection; CSV export; website links; and external map lookup. Addresses are not geocoded and the module creates no exact map markers. The data must not be used to confirm an available bed, admission, eligibility, waiting-list status, service quality, medical need, urgency, or official recommendation; users must confirm current details directly with the institution or competent authority.
 
+## Taipei Ophthalmology Institutions / 臺北市眼科醫療機構
+
+`ophthalmology_institutions` is a separate local-JSON directory of source-recorded institution names, postal codes, contact addresses, and telephone numbers. It offers bilingual search, filters, cards, charts, sortable and paginated records, source-field details, copy actions, telephone and external map-search links, plus filtered CSV export.
+
+The dataset has no official coordinates. The module does not geocode addresses or create exact map markers, and it does not establish current operation, appointments, physician attendance, particular treatments, emergency capability, fees, quality, safety, or official recommendation.
+
 ## Additional module: Denture Subsidy Medical Providers / 假牙補助醫療院所名單
 
 Denture subsidy medical providers remain the separate `denture_subsidy_medical_providers` elderly-welfare and healthcare-subsidy public-record module. The Big5/CP950 CSV includes subsidy type, area, provider name, address, and contact phone. Conversion decodes Big5 first with UTF-8-SIG fallback, preserves hospital branch names, parses Taipei districts and road names, classifies phone values, and reports duplicate provider names, addresses, phones, and fallback keys.

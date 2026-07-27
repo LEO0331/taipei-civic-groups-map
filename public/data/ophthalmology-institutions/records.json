@@ -1,0 +1,2928 @@
+[
+  {
+    "id": "1",
+    "sourceSequenceNumber": "1",
+    "institutionName": "國立台灣大學醫學院附設醫院",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區中山南路７、８號；常德街１號",
+    "phone": "02 23123456",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區中山南路７、８號；常德街１號 國立台灣大學醫學院附設醫院",
+    "sourceValues": {
+      "序號": "1",
+      "機構名稱": "國立台灣大學醫學院附設醫院",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區中山南路７、８號；常德街１號",
+      "電話": "02 23123456"
+    }
+  },
+  {
+    "id": "2",
+    "sourceSequenceNumber": "2",
+    "institutionName": "台北站前諾貝爾眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區忠孝西路1段36號1樓",
+    "phone": "2388-5566",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區忠孝西路1段36號1樓 台北站前諾貝爾眼科診所",
+    "sourceValues": {
+      "序號": "2",
+      "機構名稱": "台北站前諾貝爾眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區忠孝西路1段36號1樓",
+      "電話": "2388-5566"
+    }
+  },
+  {
+    "id": "3",
+    "sourceSequenceNumber": "3",
+    "institutionName": "濰視眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區館前路43號(2樓)",
+    "phone": "02-23816189",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區館前路43號(2樓) 濰視眼科診所",
+    "sourceValues": {
+      "序號": "3",
+      "機構名稱": "濰視眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區館前路43號(2樓)",
+      "電話": "02-23816189"
+    }
+  },
+  {
+    "id": "4",
+    "sourceSequenceNumber": "4",
+    "institutionName": "台北澄清眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區忠孝西路1段80號3樓",
+    "phone": "02-23121128",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區忠孝西路1段80號3樓 台北澄清眼科診所",
+    "sourceValues": {
+      "序號": "4",
+      "機構名稱": "台北澄清眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區忠孝西路1段80號3樓",
+      "電話": "02-23121128"
+    }
+  },
+  {
+    "id": "5",
+    "sourceSequenceNumber": "5",
+    "institutionName": "台北公園諾貝爾眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區公園路13號5樓",
+    "phone": "2370-5666",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區公園路13號5樓 台北公園諾貝爾眼科診所",
+    "sourceValues": {
+      "序號": "5",
+      "機構名稱": "台北公園諾貝爾眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區公園路13號5樓",
+      "電話": "2370-5666"
+    }
+  },
+  {
+    "id": "6",
+    "sourceSequenceNumber": "6",
+    "institutionName": "目急國際診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區武昌街一段77號6樓之17",
+    "phone": "2312-1175",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區武昌街一段77號6樓之17 目急國際診所",
+    "sourceValues": {
+      "序號": "6",
+      "機構名稱": "目急國際診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區武昌街一段77號6樓之17",
+      "電話": "2312-1175"
+    }
+  },
+  {
+    "id": "7",
+    "sourceSequenceNumber": "7",
+    "institutionName": "蔡瑞芳眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區羅斯福路一段73號(實際營業地址一層)、75號2樓",
+    "phone": "02-33938088",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區羅斯福路一段73號(實際營業地址一層)、75號2樓 蔡瑞芳眼科診所",
+    "sourceValues": {
+      "序號": "7",
+      "機構名稱": "蔡瑞芳眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區羅斯福路一段73號(實際營業地址一層)、75號2樓",
+      "電話": "02-33938088"
+    }
+  },
+  {
+    "id": "8",
+    "sourceSequenceNumber": "8",
+    "institutionName": "博士眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區羅斯福路二段70號4樓之6、70號4樓之7、70號4樓之8",
+    "phone": "02-23943660",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區羅斯福路二段70號4樓之6、70號4樓之7、70號4樓之8 博士眼科診所",
+    "sourceValues": {
+      "序號": "8",
+      "機構名稱": "博士眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區羅斯福路二段70號4樓之6、70號4樓之7、70號4樓之8",
+      "電話": "02-23943660"
+    }
+  },
+  {
+    "id": "9",
+    "sourceSequenceNumber": "9",
+    "institutionName": "站前大學眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區館前路8號3樓",
+    "phone": "2375-2558",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區館前路8號3樓 站前大學眼科診所",
+    "sourceValues": {
+      "序號": "9",
+      "機構名稱": "站前大學眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區館前路8號3樓",
+      "電話": "2375-2558"
+    }
+  },
+  {
+    "id": "10",
+    "sourceSequenceNumber": "10",
+    "institutionName": "林超群眼科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區重慶南路一段143號2樓",
+    "phone": "02-23122020",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區重慶南路一段143號2樓 林超群眼科診所",
+    "sourceValues": {
+      "序號": "10",
+      "機構名稱": "林超群眼科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區重慶南路一段143號2樓",
+      "電話": "02-23122020"
+    }
+  },
+  {
+    "id": "11",
+    "sourceSequenceNumber": "11",
+    "institutionName": "郵政醫院（委託中英醫療社團法人經營）",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區福州街14號",
+    "phone": "02-23956755",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區福州街14號 郵政醫院（委託中英醫療社團法人經營）",
+    "sourceValues": {
+      "序號": "11",
+      "機構名稱": "郵政醫院（委託中英醫療社團法人經營）",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區福州街14號",
+      "電話": "02-23956755"
+    }
+  },
+  {
+    "id": "12",
+    "sourceSequenceNumber": "12",
+    "institutionName": "醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區永綏街8至14號",
+    "phone": "02-23111525",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中正區永綏街8至14號 醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+    "sourceValues": {
+      "序號": "12",
+      "機構名稱": "醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區永綏街8至14號",
+      "電話": "02-23111525"
+    }
+  },
+  {
+    "id": "13",
+    "sourceSequenceNumber": "13",
+    "institutionName": "黃眼科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區重慶北路三段２５６號２樓",
+    "phone": "(02) 2593-3039",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大同區重慶北路三段２５６號２樓 黃眼科診所",
+    "sourceValues": {
+      "序號": "13",
+      "機構名稱": "黃眼科診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區重慶北路三段２５６號２樓",
+      "電話": "(02) 2593-3039"
+    }
+  },
+  {
+    "id": "14",
+    "sourceSequenceNumber": "14",
+    "institutionName": "包眼科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區保安街５４之１號",
+    "phone": "(02) 2553-7526",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大同區保安街５４之１號 包眼科診所",
+    "sourceValues": {
+      "序號": "14",
+      "機構名稱": "包眼科診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區保安街５４之１號",
+      "電話": "(02) 2553-7526"
+    }
+  },
+  {
+    "id": "15",
+    "sourceSequenceNumber": "15",
+    "institutionName": "臺北市立聯合醫院",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區鄭州路145號",
+    "phone": "2552-3234",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大同區鄭州路145號 臺北市立聯合醫院",
+    "sourceValues": {
+      "序號": "15",
+      "機構名稱": "臺北市立聯合醫院",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區鄭州路145號",
+      "電話": "2552-3234"
+    }
+  },
+  {
+    "id": "16",
+    "sourceSequenceNumber": "16",
+    "institutionName": "台全診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區承德路1段17之1號(1樓)、17之2號(1樓)、17之3號(1樓)、17之4號(1樓)及17號地下1層",
+    "phone": "02-25558111",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大同區承德路1段17之1號(1樓)、17之2號(1樓)、17之3號(1樓)、17之4號(1樓)及17號地下1層 台全診所",
+    "sourceValues": {
+      "序號": "16",
+      "機構名稱": "台全診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區承德路1段17之1號(1樓)、17之2號(1樓)、17之3號(1樓)、17之4號(1樓)及17號地下1層",
+      "電話": "02-25558111"
+    }
+  },
+  {
+    "id": "17",
+    "sourceSequenceNumber": "17",
+    "institutionName": "余自興眼科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區重慶北路三段二一三號一樓",
+    "phone": "(02) 2595-9320",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大同區重慶北路三段二一三號一樓 余自興眼科診所",
+    "sourceValues": {
+      "序號": "17",
+      "機構名稱": "余自興眼科診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區重慶北路三段二一三號一樓",
+      "電話": "(02) 2595-9320"
+    }
+  },
+  {
+    "id": "18",
+    "sourceSequenceNumber": "18",
+    "institutionName": "聚英尊爵視光眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區樂群二路173號1樓及187號2樓之1",
+    "phone": "8502-6011",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區樂群二路173號1樓及187號2樓之1 聚英尊爵視光眼科診所",
+    "sourceValues": {
+      "序號": "18",
+      "機構名稱": "聚英尊爵視光眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區樂群二路173號1樓及187號2樓之1",
+      "電話": "8502-6011"
+    }
+  },
+  {
+    "id": "19",
+    "sourceSequenceNumber": "19",
+    "institutionName": "瑞光眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區南京東路一段25號、25號2樓",
+    "phone": "2523-6949",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區南京東路一段25號、25號2樓 瑞光眼科診所",
+    "sourceValues": {
+      "序號": "19",
+      "機構名稱": "瑞光眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區南京東路一段25號、25號2樓",
+      "電話": "2523-6949"
+    }
+  },
+  {
+    "id": "20",
+    "sourceSequenceNumber": "20",
+    "institutionName": "北安聯合診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區北安路569之2號 569之3號 569之4號 569之1號二 樓 569之2號二 樓 569之3號二 樓 569之4號二 樓",
+    "phone": "2533-7777",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區北安路569之2號 569之3號 569之4號 569之1號二 樓 569之2號二 樓 569之3號二 樓 569之4號二 樓 北安聯合診所",
+    "sourceValues": {
+      "序號": "20",
+      "機構名稱": "北安聯合診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區北安路569之2號 569之3號 569之4號 569之1號二 樓 569之2號二 樓 569之3號二 樓 569之4號二 樓",
+      "電話": "2533-7777"
+    }
+  },
+  {
+    "id": "21",
+    "sourceSequenceNumber": "21",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區中山北路2段92號",
+    "phone": "02-25433535",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區中山北路2段92號 台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+    "sourceValues": {
+      "序號": "21",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區中山北路2段92號",
+      "電話": "02-25433535"
+    }
+  },
+  {
+    "id": "22",
+    "sourceSequenceNumber": "22",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區中山北路二段９２號",
+    "phone": "(02) 2543-3535",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區中山北路二段９２號 台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "sourceValues": {
+      "序號": "22",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區中山北路二段９２號",
+      "電話": "(02) 2543-3535"
+    }
+  },
+  {
+    "id": "23",
+    "sourceSequenceNumber": "23",
+    "institutionName": "柏克萊眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區明水路573號1樓",
+    "phone": "02-25330909",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區明水路573號1樓 柏克萊眼科診所",
+    "sourceValues": {
+      "序號": "23",
+      "機構名稱": "柏克萊眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區明水路573號1樓",
+      "電話": "02-25330909"
+    }
+  },
+  {
+    "id": "24",
+    "sourceSequenceNumber": "24",
+    "institutionName": "民生展欣眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民生東路三段92號",
+    "phone": "(02)2501-7958",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區民生東路三段92號 民生展欣眼科診所",
+    "sourceValues": {
+      "序號": "24",
+      "機構名稱": "民生展欣眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民生東路三段92號",
+      "電話": "(02)2501-7958"
+    }
+  },
+  {
+    "id": "25",
+    "sourceSequenceNumber": "25",
+    "institutionName": "又喜明眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區北安路594號(1樓)",
+    "phone": "02-25323089",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區北安路594號(1樓) 又喜明眼科診所",
+    "sourceValues": {
+      "序號": "25",
+      "機構名稱": "又喜明眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區北安路594號(1樓)",
+      "電話": "02-25323089"
+    }
+  },
+  {
+    "id": "26",
+    "sourceSequenceNumber": "26",
+    "institutionName": "優視眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民生東路一段30號2樓",
+    "phone": "2568-1718",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區民生東路一段30號2樓 優視眼科診所",
+    "sourceValues": {
+      "序號": "26",
+      "機構名稱": "優視眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民生東路一段30號2樓",
+      "電話": "2568-1718"
+    }
+  },
+  {
+    "id": "27",
+    "sourceSequenceNumber": "27",
+    "institutionName": "聚英視光眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民權東路3段46號1樓、48號1樓、54號1樓及56號1樓",
+    "phone": "2502-5091",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區民權東路3段46號1樓、48號1樓、54號1樓及56號1樓 聚英視光眼科診所",
+    "sourceValues": {
+      "序號": "27",
+      "機構名稱": "聚英視光眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民權東路3段46號1樓、48號1樓、54號1樓及56號1樓",
+      "電話": "2502-5091"
+    }
+  },
+  {
+    "id": "28",
+    "sourceSequenceNumber": "28",
+    "institutionName": "德容聯合診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區吉林路197號、197號2樓",
+    "phone": "(02) 2564-3076",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區吉林路197號、197號2樓 德容聯合診所",
+    "sourceValues": {
+      "序號": "28",
+      "機構名稱": "德容聯合診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區吉林路197號、197號2樓",
+      "電話": "(02) 2564-3076"
+    }
+  },
+  {
+    "id": "29",
+    "sourceSequenceNumber": "29",
+    "institutionName": "蔡瓊瑤眼科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區龍江路２７１巷６號",
+    "phone": "(02) 2505-9276",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區龍江路２７１巷６號 蔡瓊瑤眼科診所",
+    "sourceValues": {
+      "序號": "29",
+      "機構名稱": "蔡瓊瑤眼科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區龍江路２７１巷６號",
+      "電話": "(02) 2505-9276"
+    }
+  },
+  {
+    "id": "30",
+    "sourceSequenceNumber": "30",
+    "institutionName": "長春眼科聯合診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區建國北路二段６６號",
+    "phone": "(02) 2517-7060",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市中山區建國北路二段６６號 長春眼科聯合診所",
+    "sourceValues": {
+      "序號": "30",
+      "機構名稱": "長春眼科聯合診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區建國北路二段６６號",
+      "電話": "(02) 2517-7060"
+    }
+  },
+  {
+    "id": "31",
+    "sourceSequenceNumber": "31",
+    "institutionName": "三軍總醫院松山分院附設民眾診療服務處",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區健康路１３１號",
+    "phone": "(02) 2746-2151",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區健康路１３１號 三軍總醫院松山分院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "31",
+      "機構名稱": "三軍總醫院松山分院附設民眾診療服務處",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區健康路１３１號",
+      "電話": "(02) 2746-2151"
+    }
+  },
+  {
+    "id": "32",
+    "sourceSequenceNumber": "32",
+    "institutionName": "長庚醫療財團法人台北長庚紀念醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區敦化北路199號(暫未開放)、197號(暫未開放)、臺北市松山區敦化北路199巷6號、 臺北市松山區民生東路三段130巷9號2、3、B1、B2樓、臺北市松山區南京東路3段337號5、6、9、10樓。",
+    "phone": "(02) 2713-5211",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區敦化北路199號(暫未開放)、197號(暫未開放)、臺北市松山區敦化北路199巷6號、 臺北市松山區民生東路三段130巷9號2、3、B1、B2樓、臺北市松山區南京東路3段337號5、6、9、10樓。 長庚醫療財團法人台北長庚紀念醫院",
+    "sourceValues": {
+      "序號": "32",
+      "機構名稱": "長庚醫療財團法人台北長庚紀念醫院",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區敦化北路199號(暫未開放)、197號(暫未開放)、臺北市松山區敦化北路199巷6號、 臺北市松山區民生東路三段130巷9號2、3、B1、B2樓、臺北市松山區南京東路3段337號5、6、9、10樓。",
+      "電話": "(02) 2713-5211"
+    }
+  },
+  {
+    "id": "33",
+    "sourceSequenceNumber": "33",
+    "institutionName": "基督復臨安息日會醫療財團法人臺安醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區八德路二段424,426號",
+    "phone": "(02) 2771-8151",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區八德路二段424,426號 基督復臨安息日會醫療財團法人臺安醫院",
+    "sourceValues": {
+      "序號": "33",
+      "機構名稱": "基督復臨安息日會醫療財團法人臺安醫院",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區八德路二段424,426號",
+      "電話": "(02) 2771-8151"
+    }
+  },
+  {
+    "id": "34",
+    "sourceSequenceNumber": "34",
+    "institutionName": "博仁綜合醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區光復北路66號、68號地下一層、68號、68號2至7樓、68號2樓之1至7樓之1、68號2樓之2至7樓之2",
+    "phone": "(02) 2578-6677",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區光復北路66號、68號地下一層、68號、68號2至7樓、68號2樓之1至7樓之1、68號2樓之2至7樓之2 博仁綜合醫院",
+    "sourceValues": {
+      "序號": "34",
+      "機構名稱": "博仁綜合醫院",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區光復北路66號、68號地下一層、68號、68號2至7樓、68號2樓之1至7樓之1、68號2樓之2至7樓之2",
+      "電話": "(02) 2578-6677"
+    }
+  },
+  {
+    "id": "35",
+    "sourceSequenceNumber": "35",
+    "institutionName": "林志聖眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區三民路１４０號",
+    "phone": "(02) 2769-2376",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區三民路１４０號 林志聖眼科診所",
+    "sourceValues": {
+      "序號": "35",
+      "機構名稱": "林志聖眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區三民路１４０號",
+      "電話": "(02) 2769-2376"
+    }
+  },
+  {
+    "id": "36",
+    "sourceSequenceNumber": "36",
+    "institutionName": "尚群眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路五段４３號１樓",
+    "phone": "(02) 2749-3176",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區南京東路五段４３號１樓 尚群眼科診所",
+    "sourceValues": {
+      "序號": "36",
+      "機構名稱": "尚群眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路五段４３號１樓",
+      "電話": "(02) 2749-3176"
+    }
+  },
+  {
+    "id": "37",
+    "sourceSequenceNumber": "37",
+    "institutionName": "傅眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區八德路三段156號3樓",
+    "phone": "(02) 2577-2112",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區八德路三段156號3樓 傅眼科診所",
+    "sourceValues": {
+      "序號": "37",
+      "機構名稱": "傅眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區八德路三段156號3樓",
+      "電話": "(02) 2577-2112"
+    }
+  },
+  {
+    "id": "38",
+    "sourceSequenceNumber": "38",
+    "institutionName": "方一強眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區民生東路四段１０１號２樓",
+    "phone": "(02) 8712-6815",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區民生東路四段１０１號２樓 方一強眼科診所",
+    "sourceValues": {
+      "序號": "38",
+      "機構名稱": "方一強眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區民生東路四段１０１號２樓",
+      "電話": "(02) 8712-6815"
+    }
+  },
+  {
+    "id": "39",
+    "sourceSequenceNumber": "39",
+    "institutionName": "日聖眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區新中街３５號",
+    "phone": "2746-5068",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區新中街３５號 日聖眼科診所",
+    "sourceValues": {
+      "序號": "39",
+      "機構名稱": "日聖眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區新中街３５號",
+      "電話": "2746-5068"
+    }
+  },
+  {
+    "id": "40",
+    "sourceSequenceNumber": "40",
+    "institutionName": "奧斯卡眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區敦化南路1段7號2樓及3樓之1",
+    "phone": "2570-2299",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區敦化南路1段7號2樓及3樓之1 奧斯卡眼科診所",
+    "sourceValues": {
+      "序號": "40",
+      "機構名稱": "奧斯卡眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區敦化南路1段7號2樓及3樓之1",
+      "電話": "2570-2299"
+    }
+  },
+  {
+    "id": "41",
+    "sourceSequenceNumber": "41",
+    "institutionName": "怡碩視光眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區復興北路313巷28號",
+    "phone": "2546-2219",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區復興北路313巷28號 怡碩視光眼科診所",
+    "sourceValues": {
+      "序號": "41",
+      "機構名稱": "怡碩視光眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區復興北路313巷28號",
+      "電話": "2546-2219"
+    }
+  },
+  {
+    "id": "42",
+    "sourceSequenceNumber": "42",
+    "institutionName": "松山信合美眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區三民路 9號、9之3號、9之4號、9之5號、9之6號、9之8號",
+    "phone": "2756-2626",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區三民路 9號、9之3號、9之4號、9之5號、9之6號、9之8號 松山信合美眼科診所",
+    "sourceValues": {
+      "序號": "42",
+      "機構名稱": "松山信合美眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區三民路 9號、9之3號、9之4號、9之5號、9之6號、9之8號",
+      "電話": "2756-2626"
+    }
+  },
+  {
+    "id": "43",
+    "sourceSequenceNumber": "43",
+    "institutionName": "?眼明眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路三段309號2樓",
+    "phone": "2712-0777",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區南京東路三段309號2樓 ?眼明眼科診所",
+    "sourceValues": {
+      "序號": "43",
+      "機構名稱": "?眼明眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路三段309號2樓",
+      "電話": "2712-0777"
+    }
+  },
+  {
+    "id": "44",
+    "sourceSequenceNumber": "44",
+    "institutionName": "松山大愛眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路五段269號1、2、3樓",
+    "phone": "2633-0142",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區南京東路五段269號1、2、3樓 松山大愛眼科診所",
+    "sourceValues": {
+      "序號": "44",
+      "機構名稱": "松山大愛眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路五段269號1、2、3樓",
+      "電話": "2633-0142"
+    }
+  },
+  {
+    "id": "45",
+    "sourceSequenceNumber": "45",
+    "institutionName": "聖光眼科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路四段181、183號",
+    "phone": "02-2718-3663",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市松山區南京東路四段181、183號 聖光眼科診所",
+    "sourceValues": {
+      "序號": "45",
+      "機構名稱": "聖光眼科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路四段181、183號",
+      "電話": "02-2718-3663"
+    }
+  },
+  {
+    "id": "46",
+    "sourceSequenceNumber": "46",
+    "institutionName": "曹眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路二段２６９號２樓",
+    "phone": "(02) 2705-6576",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區和平東路二段２６９號２樓 曹眼科診所",
+    "sourceValues": {
+      "序號": "46",
+      "機構名稱": "曹眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路二段２６９號２樓",
+      "電話": "(02) 2705-6576"
+    }
+  },
+  {
+    "id": "47",
+    "sourceSequenceNumber": "47",
+    "institutionName": "東方美學診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路4段63號4樓",
+    "phone": "(09) 6622-3098",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區信義路4段63號4樓 東方美學診所",
+    "sourceValues": {
+      "序號": "47",
+      "機構名稱": "東方美學診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路4段63號4樓",
+      "電話": "(09) 6622-3098"
+    }
+  },
+  {
+    "id": "48",
+    "sourceSequenceNumber": "48",
+    "institutionName": "宏恩醫療財團法人宏恩綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路四段71巷1號、仁 愛路四段61號、仁愛路四段91巷16號",
+    "phone": "(02) 2771-3161",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區仁愛路四段71巷1號、仁 愛路四段61號、仁愛路四段91巷16號 宏恩醫療財團法人宏恩綜合醫院",
+    "sourceValues": {
+      "序號": "48",
+      "機構名稱": "宏恩醫療財團法人宏恩綜合醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路四段71巷1號、仁 愛路四段61號、仁愛路四段91巷16號",
+      "電話": "(02) 2771-3161"
+    }
+  },
+  {
+    "id": "49",
+    "sourceSequenceNumber": "49",
+    "institutionName": "中心診所醫療財團法人中心綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路四段７７號",
+    "phone": "(02) 2751-0221",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區忠孝東路四段７７號 中心診所醫療財團法人中心綜合醫院",
+    "sourceValues": {
+      "序號": "49",
+      "機構名稱": "中心診所醫療財團法人中心綜合醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路四段７７號",
+      "電話": "(02) 2751-0221"
+    }
+  },
+  {
+    "id": "50",
+    "sourceSequenceNumber": "50",
+    "institutionName": "國泰醫療財團法人國泰綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路四段266巷6號，280號",
+    "phone": "(02) 2708-2121",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區仁愛路四段266巷6號，280號 國泰醫療財團法人國泰綜合醫院",
+    "sourceValues": {
+      "序號": "50",
+      "機構名稱": "國泰醫療財團法人國泰綜合醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路四段266巷6號，280號",
+      "電話": "(02) 2708-2121"
+    }
+  },
+  {
+    "id": "51",
+    "sourceSequenceNumber": "51",
+    "institutionName": "敦南諾貝爾眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區敦化南路1段216號3樓",
+    "phone": "2740-0960",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區敦化南路1段216號3樓 敦南諾貝爾眼科診所",
+    "sourceValues": {
+      "序號": "51",
+      "機構名稱": "敦南諾貝爾眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區敦化南路1段216號3樓",
+      "電話": "2740-0960"
+    }
+  },
+  {
+    "id": "52",
+    "sourceSequenceNumber": "52",
+    "institutionName": "朝沐和安診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路4段137號6樓之1",
+    "phone": "02-27754606",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區仁愛路4段137號6樓之1 朝沐和安診所",
+    "sourceValues": {
+      "序號": "52",
+      "機構名稱": "朝沐和安診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路4段137號6樓之1",
+      "電話": "02-27754606"
+    }
+  },
+  {
+    "id": "53",
+    "sourceSequenceNumber": "53",
+    "institutionName": "仁愛濰視眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區復興南路1段 243號3樓、3樓之1",
+    "phone": "(02)2703-3168",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區復興南路1段 243號3樓、3樓之1 仁愛濰視眼科診所",
+    "sourceValues": {
+      "序號": "53",
+      "機構名稱": "仁愛濰視眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區復興南路1段 243號3樓、3樓之1",
+      "電話": "(02)2703-3168"
+    }
+  },
+  {
+    "id": "54",
+    "sourceSequenceNumber": "54",
+    "institutionName": "宸光眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路4段199巷13號1樓",
+    "phone": "(02)2701-9168",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區信義路4段199巷13號1樓 宸光眼科診所",
+    "sourceValues": {
+      "序號": "54",
+      "機構名稱": "宸光眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路4段199巷13號1樓",
+      "電話": "(02)2701-9168"
+    }
+  },
+  {
+    "id": "55",
+    "sourceSequenceNumber": "55",
+    "institutionName": "董曉青眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區安和路二段69巷6號2樓",
+    "phone": "(02) 2738-3591",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區安和路二段69巷6號2樓 董曉青眼科診所",
+    "sourceValues": {
+      "序號": "55",
+      "機構名稱": "董曉青眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區安和路二段69巷6號2樓",
+      "電話": "(02) 2738-3591"
+    }
+  },
+  {
+    "id": "56",
+    "sourceSequenceNumber": "56",
+    "institutionName": "劉達昌眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路三段２３８號",
+    "phone": "(02) 2732-3792",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區和平東路三段２３８號 劉達昌眼科診所",
+    "sourceValues": {
+      "序號": "56",
+      "機構名稱": "劉達昌眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路三段２３８號",
+      "電話": "(02) 2732-3792"
+    }
+  },
+  {
+    "id": "57",
+    "sourceSequenceNumber": "57",
+    "institutionName": "大學眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區新生南路3段54之3號1樓、54巷2號2樓、54巷2號2樓之1",
+    "phone": "02-23688055",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區新生南路3段54之3號1樓、54巷2號2樓、54巷2號2樓之1 大學眼科診所",
+    "sourceValues": {
+      "序號": "57",
+      "機構名稱": "大學眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區新生南路3段54之3號1樓、54巷2號2樓、54巷2號2樓之1",
+      "電話": "02-23688055"
+    }
+  },
+  {
+    "id": "58",
+    "sourceSequenceNumber": "58",
+    "institutionName": "通化延吉診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路四段２６５巷３６號",
+    "phone": "2705-9009",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區信義路四段２６５巷３６號 通化延吉診所",
+    "sourceValues": {
+      "序號": "58",
+      "機構名稱": "通化延吉診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路四段２６５巷３６號",
+      "電話": "2705-9009"
+    }
+  },
+  {
+    "id": "59",
+    "sourceSequenceNumber": "59",
+    "institutionName": "忠孝大學眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路4段178號1樓、178號2樓、178之1號1樓、178之1號2樓",
+    "phone": "2740-7890",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區忠孝東路4段178號1樓、178號2樓、178之1號1樓、178之1號2樓 忠孝大學眼科診所",
+    "sourceValues": {
+      "序號": "59",
+      "機構名稱": "忠孝大學眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路4段178號1樓、178號2樓、178之1號1樓、178之1號2樓",
+      "電話": "2740-7890"
+    }
+  },
+  {
+    "id": "60",
+    "sourceSequenceNumber": "60",
+    "institutionName": "和平大愛眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路一段六號二樓",
+    "phone": "2365-2727",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區和平東路一段六號二樓 和平大愛眼科診所",
+    "sourceValues": {
+      "序號": "60",
+      "機構名稱": "和平大愛眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路一段六號二樓",
+      "電話": "2365-2727"
+    }
+  },
+  {
+    "id": "61",
+    "sourceSequenceNumber": "61",
+    "institutionName": "長松眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區大安路一段一二六巷一號",
+    "phone": "2740-2102",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區大安路一段一二六巷一號 長松眼科診所",
+    "sourceValues": {
+      "序號": "61",
+      "機構名稱": "長松眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區大安路一段一二六巷一號",
+      "電話": "2740-2102"
+    }
+  },
+  {
+    "id": "62",
+    "sourceSequenceNumber": "62",
+    "institutionName": "中山醫療社團法人中山醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路四段112巷11號、12號、13弄6、8號1樓",
+    "phone": "02-27081166",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區仁愛路四段112巷11號、12號、13弄6、8號1樓 中山醫療社團法人中山醫院",
+    "sourceValues": {
+      "序號": "62",
+      "機構名稱": "中山醫療社團法人中山醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路四段112巷11號、12號、13弄6、8號1樓",
+      "電話": "02-27081166"
+    }
+  },
+  {
+    "id": "63",
+    "sourceSequenceNumber": "63",
+    "institutionName": "國立臺灣大學醫學院附設醫院癌醫中心分院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區基隆路 3段155巷57號",
+    "phone": "02-23220322",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區基隆路 3段155巷57號 國立臺灣大學醫學院附設醫院癌醫中心分院",
+    "sourceValues": {
+      "序號": "63",
+      "機構名稱": "國立臺灣大學醫學院附設醫院癌醫中心分院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區基隆路 3段155巷57號",
+      "電話": "02-23220322"
+    }
+  },
+  {
+    "id": "64",
+    "sourceSequenceNumber": "64",
+    "institutionName": "王暉政眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區師大路１１０號１Ｆ",
+    "phone": "(02) 2362-9033",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區師大路１１０號１Ｆ 王暉政眼科診所",
+    "sourceValues": {
+      "序號": "64",
+      "機構名稱": "王暉政眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區師大路１１０號１Ｆ",
+      "電話": "(02) 2362-9033"
+    }
+  },
+  {
+    "id": "65",
+    "sourceSequenceNumber": "65",
+    "institutionName": "星星親子眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路三段114號2樓",
+    "phone": "2708-0809",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區信義路三段114號2樓 星星親子眼科診所",
+    "sourceValues": {
+      "序號": "65",
+      "機構名稱": "星星親子眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路三段114號2樓",
+      "電話": "2708-0809"
+    }
+  },
+  {
+    "id": "66",
+    "sourceSequenceNumber": "66",
+    "institutionName": "永悅診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路四段50號7樓",
+    "phone": "2731-1949",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區忠孝東路四段50號7樓 永悅診所",
+    "sourceValues": {
+      "序號": "66",
+      "機構名稱": "永悅診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路四段50號7樓",
+      "電話": "2731-1949"
+    }
+  },
+  {
+    "id": "67",
+    "sourceSequenceNumber": "67",
+    "institutionName": "珍世明眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路4段98號2樓",
+    "phone": "2755-2298",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區信義路4段98號2樓 珍世明眼科診所",
+    "sourceValues": {
+      "序號": "67",
+      "機構名稱": "珍世明眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路4段98號2樓",
+      "電話": "2755-2298"
+    }
+  },
+  {
+    "id": "68",
+    "sourceSequenceNumber": "68",
+    "institutionName": "優爾視眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區敦化南路一段283號2樓、2樓之1",
+    "phone": "2708-6609",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區敦化南路一段283號2樓、2樓之1 優爾視眼科診所",
+    "sourceValues": {
+      "序號": "68",
+      "機構名稱": "優爾視眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區敦化南路一段283號2樓、2樓之1",
+      "電話": "2708-6609"
+    }
+  },
+  {
+    "id": "69",
+    "sourceSequenceNumber": "69",
+    "institutionName": "和欣視光眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路3段274號(實際營業地址:1樓、地下層)",
+    "phone": "2738-1568",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區和平東路3段274號(實際營業地址:1樓、地下層) 和欣視光眼科診所",
+    "sourceValues": {
+      "序號": "69",
+      "機構名稱": "和欣視光眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路3段274號(實際營業地址:1樓、地下層)",
+      "電話": "2738-1568"
+    }
+  },
+  {
+    "id": "70",
+    "sourceSequenceNumber": "70",
+    "institutionName": "大安聚英視光眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區金山南路2段2號3樓",
+    "phone": "02-33936868",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區金山南路2段2號3樓 大安聚英視光眼科診所",
+    "sourceValues": {
+      "序號": "70",
+      "機構名稱": "大安聚英視光眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區金山南路2段2號3樓",
+      "電話": "02-33936868"
+    }
+  },
+  {
+    "id": "71",
+    "sourceSequenceNumber": "71",
+    "institutionName": "大安眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路1段258號",
+    "phone": "02-23656363",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區和平東路1段258號 大安眼科診所",
+    "sourceValues": {
+      "序號": "71",
+      "機構名稱": "大安眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路1段258號",
+      "電話": "02-23656363"
+    }
+  },
+  {
+    "id": "72",
+    "sourceSequenceNumber": "72",
+    "institutionName": "大安?眼明眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區復興南路1段103號2樓之1",
+    "phone": "2778-1988",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區復興南路1段103號2樓之1 大安?眼明眼科診所",
+    "sourceValues": {
+      "序號": "72",
+      "機構名稱": "大安?眼明眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區復興南路1段103號2樓之1",
+      "電話": "2778-1988"
+    }
+  },
+  {
+    "id": "73",
+    "sourceSequenceNumber": "73",
+    "institutionName": "尹書田醫療財團法人書田泌尿科眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區建國南路2段276號1樓、2樓、4樓、4樓之1、B1、B1之1、278號1樓",
+    "phone": "2369-0211",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市大安區建國南路2段276號1樓、2樓、4樓、4樓之1、B1、B1之1、278號1樓 尹書田醫療財團法人書田泌尿科眼科診所",
+    "sourceValues": {
+      "序號": "73",
+      "機構名稱": "尹書田醫療財團法人書田泌尿科眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區建國南路2段276號1樓、2樓、4樓、4樓之1、B1、B1之1、278號1樓",
+      "電話": "2369-0211"
+    }
+  },
+  {
+    "id": "74",
+    "sourceSequenceNumber": "74",
+    "institutionName": "陽光眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區貴陽街二段81號、83號2樓",
+    "phone": "02-23716961",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區貴陽街二段81號、83號2樓 陽光眼科診所",
+    "sourceValues": {
+      "序號": "74",
+      "機構名稱": "陽光眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區貴陽街二段81號、83號2樓",
+      "電話": "02-23716961"
+    }
+  },
+  {
+    "id": "75",
+    "sourceSequenceNumber": "75",
+    "institutionName": "光晶妍寶島眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區萬大路355號1樓(含夾層)",
+    "phone": "2301-3556",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區萬大路355號1樓(含夾層) 光晶妍寶島眼科診所",
+    "sourceValues": {
+      "序號": "75",
+      "機構名稱": "光晶妍寶島眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區萬大路355號1樓(含夾層)",
+      "電話": "2301-3556"
+    }
+  },
+  {
+    "id": "76",
+    "sourceSequenceNumber": "76",
+    "institutionName": "日光眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區和平西路三段85號(實際營業地址：1、2樓)",
+    "phone": "2306-3789",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區和平西路三段85號(實際營業地址：1、2樓) 日光眼科診所",
+    "sourceValues": {
+      "序號": "76",
+      "機構名稱": "日光眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區和平西路三段85號(實際營業地址：1、2樓)",
+      "電話": "2306-3789"
+    }
+  },
+  {
+    "id": "77",
+    "sourceSequenceNumber": "77",
+    "institutionName": "吳淑芬眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區環河南路二段195號",
+    "phone": "2306-0328",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區環河南路二段195號 吳淑芬眼科診所",
+    "sourceValues": {
+      "序號": "77",
+      "機構名稱": "吳淑芬眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區環河南路二段195號",
+      "電話": "2306-0328"
+    }
+  },
+  {
+    "id": "78",
+    "sourceSequenceNumber": "78",
+    "institutionName": "好視多眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區萬大路257號",
+    "phone": "2339-2100",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區萬大路257號 好視多眼科診所",
+    "sourceValues": {
+      "序號": "78",
+      "機構名稱": "好視多眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區萬大路257號",
+      "電話": "2339-2100"
+    }
+  },
+  {
+    "id": "79",
+    "sourceSequenceNumber": "79",
+    "institutionName": "視強眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區中華路二段５９８號之４",
+    "phone": "(02) 2307-5344",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區中華路二段５９８號之４ 視強眼科診所",
+    "sourceValues": {
+      "序號": "79",
+      "機構名稱": "視強眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區中華路二段５９８號之４",
+      "電話": "(02) 2307-5344"
+    }
+  },
+  {
+    "id": "80",
+    "sourceSequenceNumber": "80",
+    "institutionName": "鄭眼科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區莒光路１２３號",
+    "phone": "(02) 2308-1086",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區莒光路１２３號 鄭眼科診所",
+    "sourceValues": {
+      "序號": "80",
+      "機構名稱": "鄭眼科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區莒光路１２３號",
+      "電話": "(02) 2308-1086"
+    }
+  },
+  {
+    "id": "81",
+    "sourceSequenceNumber": "81",
+    "institutionName": "財團法人台灣省私立台北仁濟院附設仁濟醫院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區廣州街２００，２４３號",
+    "phone": "(02) 2302-1131",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區廣州街２００，２４３號 財團法人台灣省私立台北仁濟院附設仁濟醫院",
+    "sourceValues": {
+      "序號": "81",
+      "機構名稱": "財團法人台灣省私立台北仁濟院附設仁濟醫院",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區廣州街２００，２４３號",
+      "電話": "(02) 2302-1131"
+    }
+  },
+  {
+    "id": "82",
+    "sourceSequenceNumber": "82",
+    "institutionName": "西園醫療社團法人西園醫院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區西園路二段266、268、270、272、276號、185、187、189號",
+    "phone": "02-23329888",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區西園路二段266、268、270、272、276號、185、187、189號 西園醫療社團法人西園醫院",
+    "sourceValues": {
+      "序號": "82",
+      "機構名稱": "西園醫療社團法人西園醫院",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區西園路二段266、268、270、272、276號、185、187、189號",
+      "電話": "02-23329888"
+    }
+  },
+  {
+    "id": "83",
+    "sourceSequenceNumber": "83",
+    "institutionName": "國立臺灣大學醫學院附設醫院北護分院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區康定路３７號、臺北市萬華區內江街87號、臺北市萬華區內江街87號、臺北市萬華區內江街89號 (文教大樓1樓及供應樓1至2樓)",
+    "phone": "(02) 2371-7101",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市萬華區康定路３７號、臺北市萬華區內江街87號、臺北市萬華區內江街87號、臺北市萬華區內江街89號 (文教大樓1樓及供應樓1至2樓) 國立臺灣大學醫學院附設醫院北護分院",
+    "sourceValues": {
+      "序號": "83",
+      "機構名稱": "國立臺灣大學醫學院附設醫院北護分院",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區康定路３７號、臺北市萬華區內江街87號、臺北市萬華區內江街87號、臺北市萬華區內江街89號 (文教大樓1樓及供應樓1至2樓)",
+      "電話": "(02) 2371-7101"
+    }
+  },
+  {
+    "id": "84",
+    "sourceSequenceNumber": "84",
+    "institutionName": "新眼光眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區忠孝東路五段508之1號及518號",
+    "phone": "2346-0266",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區忠孝東路五段508之1號及518號 新眼光眼科診所",
+    "sourceValues": {
+      "序號": "84",
+      "機構名稱": "新眼光眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區忠孝東路五段508之1號及518號",
+      "電話": "2346-0266"
+    }
+  },
+  {
+    "id": "85",
+    "sourceSequenceNumber": "85",
+    "institutionName": "遠見眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區信義路5段7號84樓之1",
+    "phone": "",
+    "hasAddress": true,
+    "hasPhone": false,
+    "externalMapQuery": "臺北市信義區信義路5段7號84樓之1 遠見眼科診所",
+    "sourceValues": {
+      "序號": "85",
+      "機構名稱": "遠見眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區信義路5段7號84樓之1",
+      "電話": ""
+    }
+  },
+  {
+    "id": "86",
+    "sourceSequenceNumber": "86",
+    "institutionName": "合安眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區基隆路2段189號",
+    "phone": "2378-8288",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區基隆路2段189號 合安眼科診所",
+    "sourceValues": {
+      "序號": "86",
+      "機構名稱": "合安眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區基隆路2段189號",
+      "電話": "2378-8288"
+    }
+  },
+  {
+    "id": "87",
+    "sourceSequenceNumber": "87",
+    "institutionName": "晶愛眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區莊敬路454號、454號2樓",
+    "phone": "02-87809696",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區莊敬路454號、454號2樓 晶愛眼科診所",
+    "sourceValues": {
+      "序號": "87",
+      "機構名稱": "晶愛眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區莊敬路454號、454號2樓",
+      "電話": "02-87809696"
+    }
+  },
+  {
+    "id": "88",
+    "sourceSequenceNumber": "88",
+    "institutionName": "陳逸川眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區松德路89號(1樓)及松德路95號、97號1樓",
+    "phone": "2346-6262",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區松德路89號(1樓)及松德路95號、97號1樓 陳逸川眼科診所",
+    "sourceValues": {
+      "序號": "88",
+      "機構名稱": "陳逸川眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區松德路89號(1樓)及松德路95號、97號1樓",
+      "電話": "2346-6262"
+    }
+  },
+  {
+    "id": "89",
+    "sourceSequenceNumber": "89",
+    "institutionName": "德明眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區松山路二一二號",
+    "phone": "2766-9980",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區松山路二一二號 德明眼科診所",
+    "sourceValues": {
+      "序號": "89",
+      "機構名稱": "德明眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區松山路二一二號",
+      "電話": "2766-9980"
+    }
+  },
+  {
+    "id": "90",
+    "sourceSequenceNumber": "90",
+    "institutionName": "101諾貝爾眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區信義路5段18號1樓(含夾層)",
+    "phone": "02-27582889",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區信義路5段18號1樓(含夾層) 101諾貝爾眼科診所",
+    "sourceValues": {
+      "序號": "90",
+      "機構名稱": "101諾貝爾眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區信義路5段18號1樓(含夾層)",
+      "電話": "02-27582889"
+    }
+  },
+  {
+    "id": "91",
+    "sourceSequenceNumber": "91",
+    "institutionName": "黎明眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區忠孝東路五段135號七樓",
+    "phone": "2762-5333",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區忠孝東路五段135號七樓 黎明眼科診所",
+    "sourceValues": {
+      "序號": "91",
+      "機構名稱": "黎明眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區忠孝東路五段135號七樓",
+      "電話": "2762-5333"
+    }
+  },
+  {
+    "id": "92",
+    "sourceSequenceNumber": "92",
+    "institutionName": "吳潮峰眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區永吉路３４１號１Ｆ",
+    "phone": "(02) 2761-9240",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區永吉路３４１號１Ｆ 吳潮峰眼科診所",
+    "sourceValues": {
+      "序號": "92",
+      "機構名稱": "吳潮峰眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區永吉路３４１號１Ｆ",
+      "電話": "(02) 2761-9240"
+    }
+  },
+  {
+    "id": "93",
+    "sourceSequenceNumber": "93",
+    "institutionName": "高眼科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區莊敬路２１６號１Ｆ",
+    "phone": "(02) 2758-9595",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區莊敬路２１６號１Ｆ 高眼科診所",
+    "sourceValues": {
+      "序號": "93",
+      "機構名稱": "高眼科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區莊敬路２１６號１Ｆ",
+      "電話": "(02) 2758-9595"
+    }
+  },
+  {
+    "id": "94",
+    "sourceSequenceNumber": "94",
+    "institutionName": "臺北醫學大學附設醫院",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區吳興街２５2號、250號",
+    "phone": "(02) 2737-2181",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市信義區吳興街２５2號、250號 臺北醫學大學附設醫院",
+    "sourceValues": {
+      "序號": "94",
+      "機構名稱": "臺北醫學大學附設醫院",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區吳興街２５2號、250號",
+      "電話": "(02) 2737-2181"
+    }
+  },
+  {
+    "id": "95",
+    "sourceSequenceNumber": "95",
+    "institutionName": "保安眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區大東路44號",
+    "phone": "2883-2868",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區大東路44號 保安眼科診所",
+    "sourceValues": {
+      "序號": "95",
+      "機構名稱": "保安眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區大東路44號",
+      "電話": "2883-2868"
+    }
+  },
+  {
+    "id": "96",
+    "sourceSequenceNumber": "96",
+    "institutionName": "明澄眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區劍潭路68號1樓",
+    "phone": "(02)2885-8186",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區劍潭路68號1樓 明澄眼科診所",
+    "sourceValues": {
+      "序號": "96",
+      "機構名稱": "明澄眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區劍潭路68號1樓",
+      "電話": "(02)2885-8186"
+    }
+  },
+  {
+    "id": "97",
+    "sourceSequenceNumber": "97",
+    "institutionName": "天母忠明2020眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區天母西路10號2樓之1、2樓之4",
+    "phone": "2873-2020",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區天母西路10號2樓之1、2樓之4 天母忠明2020眼科診所",
+    "sourceValues": {
+      "序號": "97",
+      "機構名稱": "天母忠明2020眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區天母西路10號2樓之1、2樓之4",
+      "電話": "2873-2020"
+    }
+  },
+  {
+    "id": "98",
+    "sourceSequenceNumber": "98",
+    "institutionName": "元群眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區文林路437號1,2樓",
+    "phone": "2888-1711",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區文林路437號1,2樓 元群眼科診所",
+    "sourceValues": {
+      "序號": "98",
+      "機構名稱": "元群眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區文林路437號1,2樓",
+      "電話": "2888-1711"
+    }
+  },
+  {
+    "id": "99",
+    "sourceSequenceNumber": "99",
+    "institutionName": "志明眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區天母東路8巷83號",
+    "phone": "2874-3105",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區天母東路8巷83號 志明眼科診所",
+    "sourceValues": {
+      "序號": "99",
+      "機構名稱": "志明眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區天母東路8巷83號",
+      "電話": "2874-3105"
+    }
+  },
+  {
+    "id": "100",
+    "sourceSequenceNumber": "100",
+    "institutionName": "祐聖眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區延平北路五段３１６號",
+    "phone": "(02) 2811-8583",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區延平北路五段３１６號 祐聖眼科診所",
+    "sourceValues": {
+      "序號": "100",
+      "機構名稱": "祐聖眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區延平北路五段３１６號",
+      "電話": "(02) 2811-8583"
+    }
+  },
+  {
+    "id": "101",
+    "sourceSequenceNumber": "101",
+    "institutionName": "士林眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區文林路488之1號4樓",
+    "phone": "(02) 2836-4668",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區文林路488之1號4樓 士林眼科診所",
+    "sourceValues": {
+      "序號": "101",
+      "機構名稱": "士林眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區文林路488之1號4樓",
+      "電話": "(02) 2836-4668"
+    }
+  },
+  {
+    "id": "102",
+    "sourceSequenceNumber": "102",
+    "institutionName": "葉眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區延平北路5段173號(實際使用1、2層）",
+    "phone": "02-28129595",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區延平北路5段173號(實際使用1、2層） 葉眼科診所",
+    "sourceValues": {
+      "序號": "102",
+      "機構名稱": "葉眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區延平北路5段173號(實際使用1、2層）",
+      "電話": "02-28129595"
+    }
+  },
+  {
+    "id": "103",
+    "sourceSequenceNumber": "103",
+    "institutionName": "橙光耳鼻喉科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區大南路284號1樓、286號1樓",
+    "phone": "02-28883222",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區大南路284號1樓、286號1樓 橙光耳鼻喉科診所",
+    "sourceValues": {
+      "序號": "103",
+      "機構名稱": "橙光耳鼻喉科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區大南路284號1樓、286號1樓",
+      "電話": "02-28883222"
+    }
+  },
+  {
+    "id": "104",
+    "sourceSequenceNumber": "104",
+    "institutionName": "境靜眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路5段626號1樓",
+    "phone": "02-28322382",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區中山北路5段626號1樓 境靜眼科診所",
+    "sourceValues": {
+      "序號": "104",
+      "機構名稱": "境靜眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路5段626號1樓",
+      "電話": "02-28322382"
+    }
+  },
+  {
+    "id": "105",
+    "sourceSequenceNumber": "105",
+    "institutionName": "士林大學眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區文林路496號(含夾層)、498號(含夾層)、500號及500號2樓",
+    "phone": "02-28316938",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區文林路496號(含夾層)、498號(含夾層)、500號及500號2樓 士林大學眼科診所",
+    "sourceValues": {
+      "序號": "105",
+      "機構名稱": "士林大學眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區文林路496號(含夾層)、498號(含夾層)、500號及500號2樓",
+      "電話": "02-28316938"
+    }
+  },
+  {
+    "id": "106",
+    "sourceSequenceNumber": "106",
+    "institutionName": "吳俊昇眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路六段４３4號１樓",
+    "phone": "(02) 2873-4987",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區中山北路六段４３4號１樓 吳俊昇眼科診所",
+    "sourceValues": {
+      "序號": "106",
+      "機構名稱": "吳俊昇眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路六段４３4號１樓",
+      "電話": "(02) 2873-4987"
+    }
+  },
+  {
+    "id": "107",
+    "sourceSequenceNumber": "107",
+    "institutionName": "梁如蘭眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路六段２６６號１樓",
+    "phone": "(02) 2833-8539",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區中山北路六段２６６號１樓 梁如蘭眼科診所",
+    "sourceValues": {
+      "序號": "107",
+      "機構名稱": "梁如蘭眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路六段２６６號１樓",
+      "電話": "(02) 2833-8539"
+    }
+  },
+  {
+    "id": "108",
+    "sourceSequenceNumber": "108",
+    "institutionName": "張松柏眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區忠誠路二段58號2樓",
+    "phone": "(02) 2835-7668",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區忠誠路二段58號2樓 張松柏眼科診所",
+    "sourceValues": {
+      "序號": "108",
+      "機構名稱": "張松柏眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區忠誠路二段58號2樓",
+      "電話": "(02) 2835-7668"
+    }
+  },
+  {
+    "id": "109",
+    "sourceSequenceNumber": "109",
+    "institutionName": "新光醫療財團法人新光吳火獅紀念醫院",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區文昌路95號及士商路51號、51號2樓、51號3樓、51號4樓、51號5樓、51號6樓、51號7樓、53號、55號、57號、臺北市士林區基河路252號1樓",
+    "phone": "(02) 2833-2211",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區文昌路95號及士商路51號、51號2樓、51號3樓、51號4樓、51號5樓、51號6樓、51號7樓、53號、55號、57號、臺北市士林區基河路252號1樓 新光醫療財團法人新光吳火獅紀念醫院",
+    "sourceValues": {
+      "序號": "109",
+      "機構名稱": "新光醫療財團法人新光吳火獅紀念醫院",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區文昌路95號及士商路51號、51號2樓、51號3樓、51號4樓、51號5樓、51號6樓、51號7樓、53號、55號、57號、臺北市士林區基河路252號1樓",
+      "電話": "(02) 2833-2211"
+    }
+  },
+  {
+    "id": "110",
+    "sourceSequenceNumber": "110",
+    "institutionName": "佳視得眼科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區天母北路11-1號1樓",
+    "phone": "02-28756230",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市士林區天母北路11-1號1樓 佳視得眼科診所",
+    "sourceValues": {
+      "序號": "110",
+      "機構名稱": "佳視得眼科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區天母北路11-1號1樓",
+      "電話": "02-28756230"
+    }
+  },
+  {
+    "id": "111",
+    "sourceSequenceNumber": "111",
+    "institutionName": "陳如芬眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區石牌路一段50號(1、2樓)",
+    "phone": "(02) 2822-3745",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區石牌路一段50號(1、2樓) 陳如芬眼科診所",
+    "sourceValues": {
+      "序號": "111",
+      "機構名稱": "陳如芬眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區石牌路一段50號(1、2樓)",
+      "電話": "(02) 2822-3745"
+    }
+  },
+  {
+    "id": "112",
+    "sourceSequenceNumber": "112",
+    "institutionName": "怡鳴眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區中央北路一段一三六號一樓",
+    "phone": "02-28954952",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區中央北路一段一三六號一樓 怡鳴眼科診所",
+    "sourceValues": {
+      "序號": "112",
+      "機構名稱": "怡鳴眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區中央北路一段一三六號一樓",
+      "電話": "02-28954952"
+    }
+  },
+  {
+    "id": "113",
+    "sourceSequenceNumber": "113",
+    "institutionName": "臺北榮民總醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區石牌路二段201號、322號",
+    "phone": "(02) 2871-2121",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區石牌路二段201號、322號 臺北榮民總醫院",
+    "sourceValues": {
+      "序號": "113",
+      "機構名稱": "臺北榮民總醫院",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區石牌路二段201號、322號",
+      "電話": "(02) 2871-2121"
+    }
+  },
+  {
+    "id": "114",
+    "sourceSequenceNumber": "114",
+    "institutionName": "牛津眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區石牌路2段364號1樓及366號1樓",
+    "phone": "02-28756586",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區石牌路2段364號1樓及366號1樓 牛津眼科診所",
+    "sourceValues": {
+      "序號": "114",
+      "機構名稱": "牛津眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區石牌路2段364號1樓及366號1樓",
+      "電話": "02-28756586"
+    }
+  },
+  {
+    "id": "115",
+    "sourceSequenceNumber": "115",
+    "institutionName": "倍視眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區西安街一段357號(實際使用:1樓)",
+    "phone": "02-28282020",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區西安街一段357號(實際使用:1樓) 倍視眼科診所",
+    "sourceValues": {
+      "序號": "115",
+      "機構名稱": "倍視眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區西安街一段357號(實際使用:1樓)",
+      "電話": "02-28282020"
+    }
+  },
+  {
+    "id": "116",
+    "sourceSequenceNumber": "116",
+    "institutionName": "劉怜瑛眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區裕民六路126號",
+    "phone": "02-28250126",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區裕民六路126號 劉怜瑛眼科診所",
+    "sourceValues": {
+      "序號": "116",
+      "機構名稱": "劉怜瑛眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區裕民六路126號",
+      "電話": "02-28250126"
+    }
+  },
+  {
+    "id": "117",
+    "sourceSequenceNumber": "117",
+    "institutionName": "孫劍鴻眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區東華街一段392號1樓",
+    "phone": "02-28235931,28201913",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區東華街一段392號1樓 孫劍鴻眼科診所",
+    "sourceValues": {
+      "序號": "117",
+      "機構名稱": "孫劍鴻眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區東華街一段392號1樓",
+      "電話": "02-28235931,28201913"
+    }
+  },
+  {
+    "id": "118",
+    "sourceSequenceNumber": "118",
+    "institutionName": "王景平眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區中央南路一段205號",
+    "phone": "2894-6580",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區中央南路一段205號 王景平眼科診所",
+    "sourceValues": {
+      "序號": "118",
+      "機構名稱": "王景平眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區中央南路一段205號",
+      "電話": "2894-6580"
+    }
+  },
+  {
+    "id": "119",
+    "sourceSequenceNumber": "119",
+    "institutionName": "臺北市立聯合醫院附設北投門診部",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區新市街30號5樓",
+    "phone": "2891-2670",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區新市街30號5樓 臺北市立聯合醫院附設北投門診部",
+    "sourceValues": {
+      "序號": "119",
+      "機構名稱": "臺北市立聯合醫院附設北投門診部",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區新市街30號5樓",
+      "電話": "2891-2670"
+    }
+  },
+  {
+    "id": "120",
+    "sourceSequenceNumber": "120",
+    "institutionName": "昱新眼科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區光明路一○四號一樓",
+    "phone": "02-28919380",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區光明路一○四號一樓 昱新眼科診所",
+    "sourceValues": {
+      "序號": "120",
+      "機構名稱": "昱新眼科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區光明路一○四號一樓",
+      "電話": "02-28919380"
+    }
+  },
+  {
+    "id": "121",
+    "sourceSequenceNumber": "121",
+    "institutionName": "振興醫療財團法人振興醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區振興街４５號",
+    "phone": "(02) 2826-4400",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區振興街４５號 振興醫療財團法人振興醫院",
+    "sourceValues": {
+      "序號": "121",
+      "機構名稱": "振興醫療財團法人振興醫院",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區振興街４５號",
+      "電話": "(02) 2826-4400"
+    }
+  },
+  {
+    "id": "122",
+    "sourceSequenceNumber": "122",
+    "institutionName": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區立德路１２５號",
+    "phone": "02-28970011",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市北投區立德路１２５號 醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "sourceValues": {
+      "序號": "122",
+      "機構名稱": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區立德路１２５號",
+      "電話": "02-28970011"
+    }
+  },
+  {
+    "id": "123",
+    "sourceSequenceNumber": "123",
+    "institutionName": "中國醫藥大學附設醫院臺北分院",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路二段360號、362號",
+    "phone": "02-27919696",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區內湖路二段360號、362號 中國醫藥大學附設醫院臺北分院",
+    "sourceValues": {
+      "序號": "123",
+      "機構名稱": "中國醫藥大學附設醫院臺北分院",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路二段360號、362號",
+      "電話": "02-27919696"
+    }
+  },
+  {
+    "id": "124",
+    "sourceSequenceNumber": "124",
+    "institutionName": "魏穀年診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路一段４０３號",
+    "phone": "(02) 2657-2691",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區內湖路一段４０３號 魏穀年診所",
+    "sourceValues": {
+      "序號": "124",
+      "機構名稱": "魏穀年診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路一段４０３號",
+      "電話": "(02) 2657-2691"
+    }
+  },
+  {
+    "id": "125",
+    "sourceSequenceNumber": "125",
+    "institutionName": "宋小兒科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路二段２５號",
+    "phone": "(02) 2799-9366",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區內湖路二段２５號 宋小兒科診所",
+    "sourceValues": {
+      "序號": "125",
+      "機構名稱": "宋小兒科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路二段２５號",
+      "電話": "(02) 2799-9366"
+    }
+  },
+  {
+    "id": "126",
+    "sourceSequenceNumber": "126",
+    "institutionName": "鑫美光視光眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路1段 512號1樓",
+    "phone": "8791-9990",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區內湖路1段 512號1樓 鑫美光視光眼科診所",
+    "sourceValues": {
+      "序號": "126",
+      "機構名稱": "鑫美光視光眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路1段 512號1樓",
+      "電話": "8791-9990"
+    }
+  },
+  {
+    "id": "127",
+    "sourceSequenceNumber": "127",
+    "institutionName": "展欣眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區金湖路382號（1樓）",
+    "phone": "02-26342538",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區金湖路382號（1樓） 展欣眼科診所",
+    "sourceValues": {
+      "序號": "127",
+      "機構名稱": "展欣眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區金湖路382號（1樓）",
+      "電話": "02-26342538"
+    }
+  },
+  {
+    "id": "128",
+    "sourceSequenceNumber": "128",
+    "institutionName": "禾馨眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區行忠路195號1、2樓",
+    "phone": "2790-3833",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區行忠路195號1、2樓 禾馨眼科診所",
+    "sourceValues": {
+      "序號": "128",
+      "機構名稱": "禾馨眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區行忠路195號1、2樓",
+      "電話": "2790-3833"
+    }
+  },
+  {
+    "id": "129",
+    "sourceSequenceNumber": "129",
+    "institutionName": "內湖大學眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區文德路100號1、2樓",
+    "phone": "2795-1001",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區文德路100號1、2樓 內湖大學眼科診所",
+    "sourceValues": {
+      "序號": "129",
+      "機構名稱": "內湖大學眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區文德路100號1、2樓",
+      "電話": "2795-1001"
+    }
+  },
+  {
+    "id": "130",
+    "sourceSequenceNumber": "130",
+    "institutionName": "內湖翰林眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區成功路3段183號2樓",
+    "phone": "8792-2296",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區成功路3段183號2樓 內湖翰林眼科診所",
+    "sourceValues": {
+      "序號": "130",
+      "機構名稱": "內湖翰林眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路3段183號2樓",
+      "電話": "8792-2296"
+    }
+  },
+  {
+    "id": "131",
+    "sourceSequenceNumber": "131",
+    "institutionName": "哈佛眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區基湖路10巷66號1樓",
+    "phone": "2627-0707",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區基湖路10巷66號1樓 哈佛眼科診所",
+    "sourceValues": {
+      "序號": "131",
+      "機構名稱": "哈佛眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區基湖路10巷66號1樓",
+      "電話": "2627-0707"
+    }
+  },
+  {
+    "id": "132",
+    "sourceSequenceNumber": "132",
+    "institutionName": "陳喬鴻眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路一段300號3樓之2、3樓之3",
+    "phone": "8751-5125",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區內湖路一段300號3樓之2、3樓之3 陳喬鴻眼科診所",
+    "sourceValues": {
+      "序號": "132",
+      "機構名稱": "陳喬鴻眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路一段300號3樓之2、3樓之3",
+      "電話": "8751-5125"
+    }
+  },
+  {
+    "id": "133",
+    "sourceSequenceNumber": "133",
+    "institutionName": "宏仁眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區環山路一段2號",
+    "phone": "2799-0361",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區環山路一段2號 宏仁眼科診所",
+    "sourceValues": {
+      "序號": "133",
+      "機構名稱": "宏仁眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區環山路一段2號",
+      "電話": "2799-0361"
+    }
+  },
+  {
+    "id": "134",
+    "sourceSequenceNumber": "134",
+    "institutionName": "大愛眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區東湖路15號1樓",
+    "phone": "2631-2338",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區東湖路15號1樓 大愛眼科診所",
+    "sourceValues": {
+      "序號": "134",
+      "機構名稱": "大愛眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區東湖路15號1樓",
+      "電話": "2631-2338"
+    }
+  },
+  {
+    "id": "135",
+    "sourceSequenceNumber": "135",
+    "institutionName": "東湖眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區東湖路137號",
+    "phone": "2633-6728",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區東湖路137號 東湖眼科診所",
+    "sourceValues": {
+      "序號": "135",
+      "機構名稱": "東湖眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區東湖路137號",
+      "電話": "2633-6728"
+    }
+  },
+  {
+    "id": "136",
+    "sourceSequenceNumber": "136",
+    "institutionName": "國泰醫療財團法人內湖國泰診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區瑞光路337號(1、2、3、4樓)",
+    "phone": "02-87972121",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區瑞光路337號(1、2、3、4樓) 國泰醫療財團法人內湖國泰診所",
+    "sourceValues": {
+      "序號": "136",
+      "機構名稱": "國泰醫療財團法人內湖國泰診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區瑞光路337號(1、2、3、4樓)",
+      "電話": "02-87972121"
+    }
+  },
+  {
+    "id": "137",
+    "sourceSequenceNumber": "137",
+    "institutionName": "成功眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區成功路四段２８號４樓之２",
+    "phone": "(02) 2793-3544",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區成功路四段２８號４樓之２ 成功眼科診所",
+    "sourceValues": {
+      "序號": "137",
+      "機構名稱": "成功眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路四段２８號４樓之２",
+      "電話": "(02) 2793-3544"
+    }
+  },
+  {
+    "id": "138",
+    "sourceSequenceNumber": "138",
+    "institutionName": "吳振光眼科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區成功路四段四十二號三樓、五樓",
+    "phone": "(02) 2792-5399",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市內湖區成功路四段四十二號三樓、五樓 吳振光眼科診所",
+    "sourceValues": {
+      "序號": "138",
+      "機構名稱": "吳振光眼科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路四段四十二號三樓、五樓",
+      "電話": "(02) 2792-5399"
+    }
+  },
+  {
+    "id": "139",
+    "sourceSequenceNumber": "139",
+    "institutionName": "三軍總醫院附設民眾診療服務處",
+    "postalCode": "114",
+    "districtName": "中正區",
+    "address": "臺北市內湖區成功路二段325號；臺北市中正區汀州路3段40號",
+    "phone": "",
+    "hasAddress": true,
+    "hasPhone": false,
+    "externalMapQuery": "臺北市內湖區成功路二段325號；臺北市中正區汀州路3段40號 三軍總醫院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "139",
+      "機構名稱": "三軍總醫院附設民眾診療服務處",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路二段325號；臺北市中正區汀州路3段40號",
+      "電話": ""
+    }
+  },
+  {
+    "id": "140",
+    "sourceSequenceNumber": "140",
+    "institutionName": "湯眼科診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區研究院路一段１６９號１樓",
+    "phone": "(02) 2788-8739",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市南港區研究院路一段１６９號１樓 湯眼科診所",
+    "sourceValues": {
+      "序號": "140",
+      "機構名稱": "湯眼科診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區研究院路一段１６９號１樓",
+      "電話": "(02) 2788-8739"
+    }
+  },
+  {
+    "id": "141",
+    "sourceSequenceNumber": "141",
+    "institutionName": "南港諾貝爾眼科診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區忠孝東路五段980號(1、2樓)",
+    "phone": "7709-7388",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市南港區忠孝東路五段980號(1、2樓) 南港諾貝爾眼科診所",
+    "sourceValues": {
+      "序號": "141",
+      "機構名稱": "南港諾貝爾眼科診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區忠孝東路五段980號(1、2樓)",
+      "電話": "7709-7388"
+    }
+  },
+  {
+    "id": "142",
+    "sourceSequenceNumber": "142",
+    "institutionName": "李信成眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路四段54之7號1樓",
+    "phone": "2937-5637",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區興隆路四段54之7號1樓 李信成眼科診所",
+    "sourceValues": {
+      "序號": "142",
+      "機構名稱": "李信成眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路四段54之7號1樓",
+      "電話": "2937-5637"
+    }
+  },
+  {
+    "id": "143",
+    "sourceSequenceNumber": "143",
+    "institutionName": "旭明眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區景興路203號",
+    "phone": "02-86638683",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區景興路203號 旭明眼科診所",
+    "sourceValues": {
+      "序號": "143",
+      "機構名稱": "旭明眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區景興路203號",
+      "電話": "02-86638683"
+    }
+  },
+  {
+    "id": "144",
+    "sourceSequenceNumber": "144",
+    "institutionName": "蘇黎世診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路3段28號(1樓、2樓)",
+    "phone": "(09) 8381-7697",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區興隆路3段28號(1樓、2樓) 蘇黎世診所",
+    "sourceValues": {
+      "序號": "144",
+      "機構名稱": "蘇黎世診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路3段28號(1樓、2樓)",
+      "電話": "(09) 8381-7697"
+    }
+  },
+  {
+    "id": "145",
+    "sourceSequenceNumber": "145",
+    "institutionName": "文山上明眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路2段198號(1樓)、196號2樓之1",
+    "phone": "",
+    "hasAddress": true,
+    "hasPhone": false,
+    "externalMapQuery": "臺北市文山區興隆路2段198號(1樓)、196號2樓之1 文山上明眼科診所",
+    "sourceValues": {
+      "序號": "145",
+      "機構名稱": "文山上明眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路2段198號(1樓)、196號2樓之1",
+      "電話": ""
+    }
+  },
+  {
+    "id": "146",
+    "sourceSequenceNumber": "146",
+    "institutionName": "晶贊眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路3段73號(1樓、2樓)",
+    "phone": "02-29325558",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區興隆路3段73號(1樓、2樓) 晶贊眼科診所",
+    "sourceValues": {
+      "序號": "146",
+      "機構名稱": "晶贊眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路3段73號(1樓、2樓)",
+      "電話": "02-29325558"
+    }
+  },
+  {
+    "id": "147",
+    "sourceSequenceNumber": "147",
+    "institutionName": "達特楊璟美眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區羅斯福路6段292號1樓",
+    "phone": "",
+    "hasAddress": true,
+    "hasPhone": false,
+    "externalMapQuery": "臺北市文山區羅斯福路6段292號1樓 達特楊璟美眼科診所",
+    "sourceValues": {
+      "序號": "147",
+      "機構名稱": "達特楊璟美眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區羅斯福路6段292號1樓",
+      "電話": ""
+    }
+  },
+  {
+    "id": "148",
+    "sourceSequenceNumber": "148",
+    "institutionName": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路三段111號",
+    "phone": "(02) 2930-7930",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區興隆路三段111號 臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "sourceValues": {
+      "序號": "148",
+      "機構名稱": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路三段111號",
+      "電話": "(02) 2930-7930"
+    }
+  },
+  {
+    "id": "149",
+    "sourceSequenceNumber": "149",
+    "institutionName": "慈慧內科眼科聯合診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區羅斯福路五段264號",
+    "phone": "(02) 2932-8036",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區羅斯福路五段264號 慈慧內科眼科聯合診所",
+    "sourceValues": {
+      "序號": "149",
+      "機構名稱": "慈慧內科眼科聯合診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區羅斯福路五段264號",
+      "電話": "(02) 2932-8036"
+    }
+  },
+  {
+    "id": "150",
+    "sourceSequenceNumber": "150",
+    "institutionName": "瀚霖眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路二段６７號",
+    "phone": "(02) 2933-3771",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區興隆路二段６７號 瀚霖眼科診所",
+    "sourceValues": {
+      "序號": "150",
+      "機構名稱": "瀚霖眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路二段６７號",
+      "電話": "(02) 2933-3771"
+    }
+  },
+  {
+    "id": "151",
+    "sourceSequenceNumber": "151",
+    "institutionName": "目欣眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區木新路二段１２０號",
+    "phone": "(02) 2939-1900",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區木新路二段１２０號 目欣眼科診所",
+    "sourceValues": {
+      "序號": "151",
+      "機構名稱": "目欣眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區木新路二段１２０號",
+      "電話": "(02) 2939-1900"
+    }
+  },
+  {
+    "id": "152",
+    "sourceSequenceNumber": "152",
+    "institutionName": "高鳴傑 眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區木新路三段223號",
+    "phone": "(02) 2937-6108",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區木新路三段223號 高鳴傑 眼科診所",
+    "sourceValues": {
+      "序號": "152",
+      "機構名稱": "高鳴傑 眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區木新路三段223號",
+      "電話": "(02) 2937-6108"
+    }
+  },
+  {
+    "id": "153",
+    "sourceSequenceNumber": "153",
+    "institutionName": "陳啟義眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路三段204號１樓",
+    "phone": "02 22395988",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區興隆路三段204號１樓 陳啟義眼科診所",
+    "sourceValues": {
+      "序號": "153",
+      "機構名稱": "陳啟義眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路三段204號１樓",
+      "電話": "02 22395988"
+    }
+  },
+  {
+    "id": "154",
+    "sourceSequenceNumber": "154",
+    "institutionName": "景福眼科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區羅斯福路六段318號",
+    "phone": "2395-8620",
+    "hasAddress": true,
+    "hasPhone": true,
+    "externalMapQuery": "臺北市文山區羅斯福路六段318號 景福眼科診所",
+    "sourceValues": {
+      "序號": "154",
+      "機構名稱": "景福眼科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區羅斯福路六段318號",
+      "電話": "2395-8620"
+    }
+  }
+]

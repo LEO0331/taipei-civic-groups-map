@@ -156,5 +156,13 @@ publicSummary.modules.disabilityInstitutionCapacityAndVacancies = {
   recordsWithSourceQuantity: disabilityInstitutionCapacityAndVacancies.recordsWithSourceQuantity,
   fieldMeaning: disabilityInstitutionCapacityAndVacancies.fieldMeaning,
 };
+const ophthalmologyInstitutions = await readDatasetSummary('ophthalmology-institutions');
+publicSummary.modules.ophthalmologyInstitutions = {
+  recordCount: ophthalmologyInstitutions.totalRecords,
+  uniqueInstitutionNameCount: ophthalmologyInstitutions.uniqueInstitutionNames,
+  districtCount: ophthalmologyInstitutions.districtsCovered,
+  postalCodeCount: ophthalmologyInstitutions.postalCodesRepresented,
+  recordsWithPhone: ophthalmologyInstitutions.recordsWithPhone,
+};
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

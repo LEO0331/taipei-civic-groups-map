@@ -1,0 +1,112 @@
+{
+  "totalRecords": 143,
+  "uniqueInstitutionNames": 143,
+  "districtsCovered": 12,
+  "postalCodesRepresented": 12,
+  "recordsWithAddresses": 143,
+  "recordsWithPhones": 139,
+  "districtWithMostInstitutions": "大安區",
+  "byDistrict": [
+    {
+      "label": "大安區",
+      "value": 40
+    },
+    {
+      "label": "中山區",
+      "value": 29
+    },
+    {
+      "label": "內湖區",
+      "value": 11
+    },
+    {
+      "label": "中正區",
+      "value": 10
+    },
+    {
+      "label": "信義區",
+      "value": 9
+    },
+    {
+      "label": "北投區",
+      "value": 8
+    },
+    {
+      "label": "松山區",
+      "value": 8
+    },
+    {
+      "label": "萬華區",
+      "value": 8
+    },
+    {
+      "label": "士林區",
+      "value": 7
+    },
+    {
+      "label": "文山區",
+      "value": 6
+    },
+    {
+      "label": "大同區",
+      "value": 5
+    },
+    {
+      "label": "南港區",
+      "value": 2
+    }
+  ],
+  "byPostalCode": [
+    {
+      "label": "106",
+      "value": 40
+    },
+    {
+      "label": "104",
+      "value": 29
+    },
+    {
+      "label": "114",
+      "value": 12
+    },
+    {
+      "label": "100",
+      "value": 9
+    },
+    {
+      "label": "110",
+      "value": 9
+    },
+    {
+      "label": "105",
+      "value": 8
+    },
+    {
+      "label": "108",
+      "value": 8
+    },
+    {
+      "label": "112",
+      "value": 8
+    },
+    {
+      "label": "111",
+      "value": 7
+    },
+    {
+      "label": "116",
+      "value": 6
+    },
+    {
+      "label": "103",
+      "value": 5
+    },
+    {
+      "label": "115",
+      "value": 2
+    }
+  ],
+  "sourceFileUpdatedAt": "2025-06-11 15:10:52",
+  "metadataUpdatedAt": "2026-07-14 13:12:52",
+  "sourceUrl": "https://data.taipei/api/dataset/83dc0502-245a-4d77-99f4-786127cedea2/resource/ba860191-ad03-49a3-8df4-29e0a01f3026/download"
+}

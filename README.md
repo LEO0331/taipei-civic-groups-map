@@ -231,6 +231,8 @@ Licensed Natural Gas Pipeline Contractors are provided by the separate `licensed
 
 Community Development Associations are provided by the separate `community_development_associations` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=e81a07f7-8137-4019-a96f-210a00ef72a3). It retains only source-published association and contact fields, validates direct WGS84 coordinates before showing association-address markers, and does not establish current leadership, activity, registration validity, membership, services, coverage, or recommendation.
 
+Obstetrics and Gynecology Institutions are provided by the separate `obstetrics_gynecology_institutions` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=83dc0502-245a-4d77-99f4-786127cedea2). It uses local source records for district and postal-code summaries, contact lookup, and external address search only; it does not establish current operation, appointments, physician attendance, delivery, prenatal care, fertility, screening, surgery, emergency care, quality, safety, or recommendation.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

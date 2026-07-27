@@ -6024,5 +6024,39 @@
       "Official WGS84 longitude/latitude fields are shown only after Taipei-bound validation.",
       "Official district-code mapping is retained; address and postal checks do not overwrite it."
     ]
+  },
+  "obstetricsGynecologyInstitutions": {
+    "convertedAt": "2026-07-27T00:51:17.858Z",
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "inputRows": 143,
+    "outputRecords": 143,
+    "duplicates": [],
+    "missingNames": [],
+    "missingAddresses": [],
+    "missingPhones": [
+      57,
+      112,
+      123,
+      127
+    ],
+    "badPhones": [
+      93
+    ],
+    "badPostal": [],
+    "unknownDistricts": [],
+    "sameInstitutionMultipleAddresses": [],
+    "sameAddressMultipleInstitutions": [
+      "臺北市文山區木柵路4段141號1樓及143號1樓"
+    ],
+    "notes": [
+      "Source values are preserved as strings.",
+      "No official coordinates, geocoding, or exact markers are created."
+    ]
   }
 }

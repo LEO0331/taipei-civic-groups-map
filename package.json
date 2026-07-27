@@ -125,6 +125,8 @@
     "data:convert:indigenous-community-organizations": "tsx scripts/convertIndigenousCommunityOrganizations.ts",
     "data:fetch:licensed-natural-gas-pipeline-contractors": "tsx scripts/fetchLicensedNaturalGasPipelineContractors.ts",
     "data:convert:licensed-natural-gas-pipeline-contractors": "tsx scripts/convertLicensedNaturalGasPipelineContractors.ts",
+    "data:fetch:community-development-associations": "tsx scripts/fetchCommunityDevelopmentAssociations.ts",
+    "data:convert:community-development-associations": "tsx scripts/convertCommunityDevelopmentAssociations.ts",
     "data:fetch:cosmetic-medicine-supervision-2024": "tsx scripts/fetchCosmeticMedicineSupervision2024.ts",
     "data:convert:cosmetic-medicine-supervision-2024": "tsx scripts/convertCosmeticMedicineSupervision2024.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",

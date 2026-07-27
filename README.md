@@ -229,6 +229,8 @@ Taipei Indigenous Community Organizations are provided by the separate `indigeno
 
 Licensed Natural Gas Pipeline Contractors are provided by the separate `licensed_natural_gas_pipeline_contractors` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=3a7f9832-d020-4a6d-9b4d-6727fc149352). Source `ADDR_X`/`ADDR_Y` values are verified as TWD97 / TM2 zone 121-style and converted to WGS84 only when they pass Taipei bounds; markers are registered business-address references, not pipeline routes, worksites, coverage areas, licence-validity confirmation, or recommendations.
 
+Community Development Associations are provided by the separate `community_development_associations` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=e81a07f7-8137-4019-a96f-210a00ef72a3). It retains only source-published association and contact fields, validates direct WGS84 coordinates before showing association-address markers, and does not establish current leadership, activity, registration validity, membership, services, coverage, or recommendation.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

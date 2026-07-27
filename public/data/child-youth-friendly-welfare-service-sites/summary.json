@@ -1,0 +1,197 @@
+{
+  "updatedAt": "2026-07-27T07:20:32.115Z",
+  "totalRecords": 26,
+  "uniqueInstitutions": 23,
+  "uniqueProgrammes": 25,
+  "districtsWithServiceSites": 10,
+  "sourceRecordedServiceAreas": 10,
+  "recordsWithPhone": 26,
+  "recordsWithAddress": 26,
+  "recordsWithCompleteCoreFields": 26,
+  "byDistrict": [
+    {
+      "label": "中正區",
+      "value": 6
+    },
+    {
+      "label": "文山區",
+      "value": 4
+    },
+    {
+      "label": "萬華區",
+      "value": 4
+    },
+    {
+      "label": "中山區",
+      "value": 3
+    },
+    {
+      "label": "內湖區",
+      "value": 3
+    },
+    {
+      "label": "大同區",
+      "value": 2
+    },
+    {
+      "label": "北投區",
+      "value": 1
+    },
+    {
+      "label": "松山區",
+      "value": 1
+    },
+    {
+      "label": "信義區",
+      "value": 1
+    },
+    {
+      "label": "南港區",
+      "value": 1
+    }
+  ],
+  "byProgramme": [
+    {
+      "label": "友善兒少福利服務據點",
+      "value": 2
+    },
+    {
+      "label": "「小星光陪讀班」友善兒童少年福利服務據點計畫",
+      "value": 1
+    },
+    {
+      "label": "「拉他們一把」社區弱勢家庭服務計畫",
+      "value": 1
+    },
+    {
+      "label": "108年度迎曦學園-接觸點友善兒童少年福利服務據點",
+      "value": 1
+    },
+    {
+      "label": "108年度萬華區「小荳荳關懷園地」社區兒童照顧計畫",
+      "value": 1
+    },
+    {
+      "label": "108年萬華青年次分區兒少友善據點服務計畫",
+      "value": 1
+    },
+    {
+      "label": "616幸福工作站",
+      "value": 1
+    },
+    {
+      "label": "大橋據點",
+      "value": 1
+    },
+    {
+      "label": "中山區友善兒少福利服務據點",
+      "value": 1
+    },
+    {
+      "label": "友善兒少福利服務-純潔古亭據點",
+      "value": 1
+    },
+    {
+      "label": "友善兒童少年服務據點-兒童課後生活照顧",
+      "value": 1
+    },
+    {
+      "label": "友善兒童少年服務據點-青少年課後生活照顧",
+      "value": 1
+    },
+    {
+      "label": "兒少夢想力學苑",
+      "value": 1
+    },
+    {
+      "label": "牧人學堂(星光班)",
+      "value": 1
+    },
+    {
+      "label": "社區兒童少年關懷服務據點計畫",
+      "value": 1
+    },
+    {
+      "label": "南港花Young樂學堂-久如社區兒少活動小站",
+      "value": 1
+    },
+    {
+      "label": "南機場學苑-友善兒少福利服務據點",
+      "value": 1
+    },
+    {
+      "label": "弱勢家庭兒童社區照顧服務計畫",
+      "value": 1
+    },
+    {
+      "label": "救世軍友善兒少福利服務據點",
+      "value": 1
+    },
+    {
+      "label": "陪他穩定成長、展望未來",
+      "value": 1
+    },
+    {
+      "label": "愛鄰木柵舊社區兒少據點",
+      "value": 1
+    },
+    {
+      "label": "新興據點",
+      "value": 1
+    },
+    {
+      "label": "萬芳地區兒少服務計畫",
+      "value": 1
+    },
+    {
+      "label": "萬華社區兒少關懷據點",
+      "value": 1
+    },
+    {
+      "label": "臺北市北投區社區學生輔導關懷服務據點",
+      "value": 1
+    }
+  ],
+  "byServiceArea": [
+    {
+      "label": "中正區",
+      "value": 6
+    },
+    {
+      "label": "文山區",
+      "value": 4
+    },
+    {
+      "label": "萬華區",
+      "value": 4
+    },
+    {
+      "label": "中山區",
+      "value": 3
+    },
+    {
+      "label": "內湖區",
+      "value": 3
+    },
+    {
+      "label": "大同區",
+      "value": 2
+    },
+    {
+      "label": "北投區",
+      "value": 1
+    },
+    {
+      "label": "松山區",
+      "value": 1
+    },
+    {
+      "label": "信義區",
+      "value": 1
+    },
+    {
+      "label": "南港區",
+      "value": 1
+    }
+  ]
+}

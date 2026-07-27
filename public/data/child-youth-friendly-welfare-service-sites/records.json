@@ -1,0 +1,652 @@
+[
+  {
+    "id": "4c50f42ec2150f71",
+    "institutionName": "社團法人中華青少年純潔運動協會",
+    "programmeName": "萬華社區兒少關懷據點",
+    "phoneRaw": "(02)23098844",
+    "phone": "(02)23098844",
+    "address": "臺北市萬華區寶興街80巷25號",
+    "districtName": "萬華區",
+    "serviceAreaRaw": "萬華區",
+    "serviceAreas": [
+      "萬華區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市萬華區寶興街80巷25號 社團法人中華青少年純潔運動協會",
+    "sourceValues": {
+      "機構名稱": "社團法人中華青少年純潔運動協會",
+      "計畫名稱": "萬華社區兒少關懷據點",
+      "電話": "(02)23098844",
+      "地址": "臺北市萬華區寶興街80巷25號",
+      "服務區域": "萬華區"
+    }
+  },
+  {
+    "id": "c92a807b9bda4147",
+    "institutionName": "財團法人台北市立心慈善基金會",
+    "programmeName": "108年度萬華區「小荳荳關懷園地」社區兒童照顧計畫",
+    "phoneRaw": "(02)23320710",
+    "phone": "(02)23320710",
+    "address": "臺北市萬華區東園街19號三樓",
+    "districtName": "萬華區",
+    "serviceAreaRaw": "萬華區",
+    "serviceAreas": [
+      "萬華區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市萬華區東園街19號三樓 財團法人台北市立心慈善基金會",
+    "sourceValues": {
+      "機構名稱": "財團法人台北市立心慈善基金會",
+      "計畫名稱": "108年度萬華區「小荳荳關懷園地」社區兒童照顧計畫",
+      "電話": "(02)23320710",
+      "地址": "臺北市萬華區東園街19號三樓",
+      "服務區域": "萬華區"
+    }
+  },
+  {
+    "id": "7b10f5282ea8c0e2",
+    "institutionName": "社團法人台灣社區鴻羽關懷協會",
+    "programmeName": "兒少夢想力學苑",
+    "phoneRaw": "(02)29012017",
+    "phone": "(02)29012017",
+    "address": "臺北市萬華區西藏路125巷7之2號",
+    "districtName": "萬華區",
+    "serviceAreaRaw": "萬華區",
+    "serviceAreas": [
+      "萬華區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市萬華區西藏路125巷7之2號 社團法人台灣社區鴻羽關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人台灣社區鴻羽關懷協會",
+      "計畫名稱": "兒少夢想力學苑",
+      "電話": "(02)29012017",
+      "地址": "臺北市萬華區西藏路125巷7之2號",
+      "服務區域": "萬華區"
+    }
+  },
+  {
+    "id": "d9368266081788db",
+    "institutionName": "社團法人社區實踐協會",
+    "programmeName": "108年萬華青年次分區兒少友善據點服務計畫",
+    "phoneRaw": "(02)23394933",
+    "phone": "(02)23394933",
+    "address": "臺北市萬華區萬大路137巷14、16號一樓",
+    "districtName": "萬華區",
+    "serviceAreaRaw": "萬華區",
+    "serviceAreas": [
+      "萬華區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市萬華區萬大路137巷14、16號一樓 社團法人社區實踐協會",
+    "sourceValues": {
+      "機構名稱": "社團法人社區實踐協會",
+      "計畫名稱": "108年萬華青年次分區兒少友善據點服務計畫",
+      "電話": "(02)23394933",
+      "地址": "臺北市萬華區萬大路137巷14、16號一樓",
+      "服務區域": "萬華區"
+    }
+  },
+  {
+    "id": "84e0e0e6cd84442b",
+    "institutionName": "財團法人靖娟兒童安全文教基金會",
+    "programmeName": "弱勢家庭兒童社區照顧服務計畫",
+    "phoneRaw": "(02)23391305",
+    "phone": "(02)23391305",
+    "address": "臺北市中正區汀州路一段123號",
+    "districtName": "中正區",
+    "serviceAreaRaw": "中正區",
+    "serviceAreas": [
+      "中正區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中正區汀州路一段123號 財團法人靖娟兒童安全文教基金會",
+    "sourceValues": {
+      "機構名稱": "財團法人靖娟兒童安全文教基金會",
+      "計畫名稱": "弱勢家庭兒童社區照顧服務計畫",
+      "電話": "(02)23391305",
+      "地址": "臺北市中正區汀州路一段123號",
+      "服務區域": "中正區"
+    }
+  },
+  {
+    "id": "17fc362737ba3f40",
+    "institutionName": "社團法人中華青少年純潔運動協會",
+    "programmeName": "友善兒少福利服務-純潔古亭據點",
+    "phoneRaw": "(02)23641334",
+    "phone": "(02)23641334",
+    "address": "臺北市中正區水源路臨28號",
+    "districtName": "中正區",
+    "serviceAreaRaw": "中正區",
+    "serviceAreas": [
+      "中正區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中正區水源路臨28號 社團法人中華青少年純潔運動協會",
+    "sourceValues": {
+      "機構名稱": "社團法人中華青少年純潔運動協會",
+      "計畫名稱": "友善兒少福利服務-純潔古亭據點",
+      "電話": "(02)23641334",
+      "地址": "臺北市中正區水源路臨28號",
+      "服務區域": "中正區"
+    }
+  },
+  {
+    "id": "13cdfa25675797d0",
+    "institutionName": "社團法人臺北市臻佶祥社會服務協會",
+    "programmeName": "南機場學苑-友善兒少福利服務據點",
+    "phoneRaw": "(02)23036281",
+    "phone": "(02)23036281",
+    "address": "臺北市中正區中華路二段315巷16、18號",
+    "districtName": "中正區",
+    "serviceAreaRaw": "中正區",
+    "serviceAreas": [
+      "中正區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中正區中華路二段315巷16、18號 社團法人臺北市臻佶祥社會服務協會",
+    "sourceValues": {
+      "機構名稱": "社團法人臺北市臻佶祥社會服務協會",
+      "計畫名稱": "南機場學苑-友善兒少福利服務據點",
+      "電話": "(02)23036281",
+      "地址": "臺北市中正區中華路二段315巷16、18號",
+      "服務區域": "中正區"
+    }
+  },
+  {
+    "id": "10852f8147e9e9db",
+    "institutionName": "社團法人台灣基督教展翔天地全人發展協會",
+    "programmeName": "友善兒童少年服務據點-青少年課後生活照顧",
+    "phoneRaw": "(02)23656123",
+    "phone": "(02)23656123",
+    "address": "臺北市中正區汀洲路三段127號1樓",
+    "districtName": "中正區",
+    "serviceAreaRaw": "中正區",
+    "serviceAreas": [
+      "中正區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中正區汀洲路三段127號1樓 社團法人台灣基督教展翔天地全人發展協會",
+    "sourceValues": {
+      "機構名稱": "社團法人台灣基督教展翔天地全人發展協會",
+      "計畫名稱": "友善兒童少年服務據點-青少年課後生活照顧",
+      "電話": "(02)23656123",
+      "地址": "臺北市中正區汀洲路三段127號1樓",
+      "服務區域": "中正區"
+    }
+  },
+  {
+    "id": "db5aca01408786cc",
+    "institutionName": "社團法人台灣基督教展翔天地全人發展協會",
+    "programmeName": "友善兒童少年服務據點-兒童課後生活照顧",
+    "phoneRaw": "(02)23656123",
+    "phone": "(02)23656123",
+    "address": "臺北市中正區金門街9-23號1樓",
+    "districtName": "中正區",
+    "serviceAreaRaw": "中正區",
+    "serviceAreas": [
+      "中正區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中正區金門街9-23號1樓 社團法人台灣基督教展翔天地全人發展協會",
+    "sourceValues": {
+      "機構名稱": "社團法人台灣基督教展翔天地全人發展協會",
+      "計畫名稱": "友善兒童少年服務據點-兒童課後生活照顧",
+      "電話": "(02)23656123",
+      "地址": "臺北市中正區金門街9-23號1樓",
+      "服務區域": "中正區"
+    }
+  },
+  {
+    "id": "c31bb85fb866bb0f",
+    "institutionName": "台北市歐伊寇斯OIKOS社區關懷協會",
+    "programmeName": "「小星光陪讀班」友善兒童少年福利服務據點計畫",
+    "phoneRaw": "(02)23414322",
+    "phone": "(02)23414322",
+    "address": "臺北市中正區杭州南路一段15之1號B1",
+    "districtName": "中正區",
+    "serviceAreaRaw": "中正區",
+    "serviceAreas": [
+      "中正區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中正區杭州南路一段15之1號B1 台北市歐伊寇斯OIKOS社區關懷協會",
+    "sourceValues": {
+      "機構名稱": "台北市歐伊寇斯OIKOS社區關懷協會",
+      "計畫名稱": "「小星光陪讀班」友善兒童少年福利服務據點計畫",
+      "電話": "(02)23414322",
+      "地址": "臺北市中正區杭州南路一段15之1號B1",
+      "服務區域": "中正區"
+    }
+  },
+  {
+    "id": "edd09d192eb198f0",
+    "institutionName": "社團法人台北市原住民關懷協會",
+    "programmeName": "中山區友善兒少福利服務據點",
+    "phoneRaw": "(02)25818669",
+    "phone": "(02)25818669",
+    "address": "臺北市中山區中山北路二段137巷18之12號B1",
+    "districtName": "中山區",
+    "serviceAreaRaw": "中山區",
+    "serviceAreas": [
+      "中山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中山區中山北路二段137巷18之12號B1 社團法人台北市原住民關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人台北市原住民關懷協會",
+      "計畫名稱": "中山區友善兒少福利服務據點",
+      "電話": "(02)25818669",
+      "地址": "臺北市中山區中山北路二段137巷18之12號B1",
+      "服務區域": "中山區"
+    }
+  },
+  {
+    "id": "8fc0659cc74b748a",
+    "institutionName": "財團法人台北市基督教勵友中心",
+    "programmeName": "新興據點",
+    "phoneRaw": "(02)25951905",
+    "phone": "(02)25951905",
+    "address": "臺北市中山區雙城街43巷2號",
+    "districtName": "中山區",
+    "serviceAreaRaw": "中山區",
+    "serviceAreas": [
+      "中山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中山區雙城街43巷2號 財團法人台北市基督教勵友中心",
+    "sourceValues": {
+      "機構名稱": "財團法人台北市基督教勵友中心",
+      "計畫名稱": "新興據點",
+      "電話": "(02)25951905",
+      "地址": "臺北市中山區雙城街43巷2號",
+      "服務區域": "中山區"
+    }
+  },
+  {
+    "id": "5bfe9f4934209748",
+    "institutionName": "中華社區厝邊頭尾營造協會",
+    "programmeName": "「拉他們一把」社區弱勢家庭服務計畫",
+    "phoneRaw": "(02)27717334",
+    "phone": "(02)27717334",
+    "address": "臺北市中山區建國北路一段33巷45,47號一樓",
+    "districtName": "中山區",
+    "serviceAreaRaw": "中山區",
+    "serviceAreas": [
+      "中山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市中山區建國北路一段33巷45,47號一樓 中華社區厝邊頭尾營造協會",
+    "sourceValues": {
+      "機構名稱": "中華社區厝邊頭尾營造協會",
+      "計畫名稱": "「拉他們一把」社區弱勢家庭服務計畫",
+      "電話": "(02)27717334",
+      "地址": "臺北市中山區建國北路一段33巷45,47號一樓",
+      "服務區域": "中山區"
+    }
+  },
+  {
+    "id": "9a69710a987be037",
+    "institutionName": "社團法人中華牧人關懷協會",
+    "programmeName": "牧人學堂(星光班)",
+    "phoneRaw": "(02)29358877",
+    "phone": "(02)29358877",
+    "address": "臺北市大同區錦西街51號",
+    "districtName": "大同區",
+    "serviceAreaRaw": "大同區",
+    "serviceAreas": [
+      "大同區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市大同區錦西街51號 社團法人中華牧人關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人中華牧人關懷協會",
+      "計畫名稱": "牧人學堂(星光班)",
+      "電話": "(02)29358877",
+      "地址": "臺北市大同區錦西街51號",
+      "服務區域": "大同區"
+    }
+  },
+  {
+    "id": "04fd95acc48b50ef",
+    "institutionName": "財團法人台北市基督教勵友中心",
+    "programmeName": "大橋據點",
+    "phoneRaw": "(02)25974784",
+    "phone": "(02)25974784",
+    "address": "臺北市大同區迪化街二段67號",
+    "districtName": "大同區",
+    "serviceAreaRaw": "大同區",
+    "serviceAreas": [
+      "大同區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市大同區迪化街二段67號 財團法人台北市基督教勵友中心",
+    "sourceValues": {
+      "機構名稱": "財團法人台北市基督教勵友中心",
+      "計畫名稱": "大橋據點",
+      "電話": "(02)25974784",
+      "地址": "臺北市大同區迪化街二段67號",
+      "服務區域": "大同區"
+    }
+  },
+  {
+    "id": "8a607e4f71b033e2",
+    "institutionName": "社團法人臺北市樂服社區關懷協會",
+    "programmeName": "友善兒少福利服務據點",
+    "phoneRaw": "(02)29340385",
+    "phone": "(02)29340385",
+    "address": "臺北市文山區羅斯福路五段176巷34號",
+    "districtName": "文山區",
+    "serviceAreaRaw": "文山區",
+    "serviceAreas": [
+      "文山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市文山區羅斯福路五段176巷34號 社團法人臺北市樂服社區關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人臺北市樂服社區關懷協會",
+      "計畫名稱": "友善兒少福利服務據點",
+      "電話": "(02)29340385",
+      "地址": "臺北市文山區羅斯福路五段176巷34號",
+      "服務區域": "文山區"
+    }
+  },
+  {
+    "id": "3334e161def7c5b5",
+    "institutionName": "臺北市文山區明興社區發展協會",
+    "programmeName": "友善兒少福利服務據點",
+    "phoneRaw": "(02)22340391",
+    "phone": "(02)22340391",
+    "address": "臺北市文山區明興里木柵路二段109巷25弄6號1樓",
+    "districtName": "文山區",
+    "serviceAreaRaw": "文山區",
+    "serviceAreas": [
+      "文山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市文山區明興里木柵路二段109巷25弄6號1樓 臺北市文山區明興社區發展協會",
+    "sourceValues": {
+      "機構名稱": "臺北市文山區明興社區發展協會",
+      "計畫名稱": "友善兒少福利服務據點",
+      "電話": "(02)22340391",
+      "地址": "臺北市文山區明興里木柵路二段109巷25弄6號1樓",
+      "服務區域": "文山區"
+    }
+  },
+  {
+    "id": "2562e714973be5ff",
+    "institutionName": "台灣愛鄰社區服務協會",
+    "programmeName": "愛鄰木柵舊社區兒少據點",
+    "phoneRaw": "(02)29369996",
+    "phone": "(02)29369996",
+    "address": "臺北市文山區木柵路三段77號6樓",
+    "districtName": "文山區",
+    "serviceAreaRaw": "文山區",
+    "serviceAreas": [
+      "文山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市文山區木柵路三段77號6樓 台灣愛鄰社區服務協會",
+    "sourceValues": {
+      "機構名稱": "台灣愛鄰社區服務協會",
+      "計畫名稱": "愛鄰木柵舊社區兒少據點",
+      "電話": "(02)29369996",
+      "地址": "臺北市文山區木柵路三段77號6樓",
+      "服務區域": "文山區"
+    }
+  },
+  {
+    "id": "1a6ea6f02bbfaade",
+    "institutionName": "社團法人台北市基督教萬芳浸信會",
+    "programmeName": "萬芳地區兒少服務計畫",
+    "phoneRaw": "(02)22303518",
+    "phone": "(02)22303518",
+    "address": "臺北市文山區萬美街一段19巷5號",
+    "districtName": "文山區",
+    "serviceAreaRaw": "文山區",
+    "serviceAreas": [
+      "文山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市文山區萬美街一段19巷5號 社團法人台北市基督教萬芳浸信會",
+    "sourceValues": {
+      "機構名稱": "社團法人台北市基督教萬芳浸信會",
+      "計畫名稱": "萬芳地區兒少服務計畫",
+      "電話": "(02)22303518",
+      "地址": "臺北市文山區萬美街一段19巷5號",
+      "服務區域": "文山區"
+    }
+  },
+  {
+    "id": "b825b40ee26eb379",
+    "institutionName": "社團法人台北市基督教活水江河全人關懷協會",
+    "programmeName": "社區兒童少年關懷服務據點計畫",
+    "phoneRaw": "(02)27641232",
+    "phone": "(02)27641232",
+    "address": "臺北市信義區松信路163號B1-1",
+    "districtName": "信義區",
+    "serviceAreaRaw": "信義區",
+    "serviceAreas": [
+      "信義區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市信義區松信路163號B1-1 社團法人台北市基督教活水江河全人關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人台北市基督教活水江河全人關懷協會",
+      "計畫名稱": "社區兒童少年關懷服務據點計畫",
+      "電話": "(02)27641232",
+      "地址": "臺北市信義區松信路163號B1-1",
+      "服務區域": "信義區"
+    }
+  },
+  {
+    "id": "024288b6261402ba",
+    "institutionName": "社團法人中華民國更生少年關懷協會",
+    "programmeName": "616幸福工作站",
+    "phoneRaw": "(02)27693258",
+    "phone": "(02)27693258",
+    "address": "臺北市松山區民生東路五段36巷8弄7號一樓",
+    "districtName": "松山區",
+    "serviceAreaRaw": "松山區",
+    "serviceAreas": [
+      "松山區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市松山區民生東路五段36巷8弄7號一樓 社團法人中華民國更生少年關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人中華民國更生少年關懷協會",
+      "計畫名稱": "616幸福工作站",
+      "電話": "(02)27693258",
+      "地址": "臺北市松山區民生東路五段36巷8弄7號一樓",
+      "服務區域": "松山區"
+    }
+  },
+  {
+    "id": "5092690ca7f68f97",
+    "institutionName": "中華民國天使之家全人關懷協會",
+    "programmeName": "陪他穩定成長、展望未來",
+    "phoneRaw": "(02)27909454",
+    "phone": "(02)27909454",
+    "address": "臺北市內湖區成功路二段242號一樓",
+    "districtName": "內湖區",
+    "serviceAreaRaw": "內湖區",
+    "serviceAreas": [
+      "內湖區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市內湖區成功路二段242號一樓 中華民國天使之家全人關懷協會",
+    "sourceValues": {
+      "機構名稱": "中華民國天使之家全人關懷協會",
+      "計畫名稱": "陪他穩定成長、展望未來",
+      "電話": "(02)27909454",
+      "地址": "臺北市內湖區成功路二段242號一樓",
+      "服務區域": "內湖區"
+    }
+  },
+  {
+    "id": "4d7b4cfe22d002da",
+    "institutionName": "財團法人基督教救世軍",
+    "programmeName": "救世軍友善兒少福利服務據點",
+    "phoneRaw": "(02)27990098",
+    "phone": "(02)27990098",
+    "address": "臺北市內湖區內湖路一段285巷63弄7號1樓",
+    "districtName": "內湖區",
+    "serviceAreaRaw": "內湖區",
+    "serviceAreas": [
+      "內湖區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市內湖區內湖路一段285巷63弄7號1樓 財團法人基督教救世軍",
+    "sourceValues": {
+      "機構名稱": "財團法人基督教救世軍",
+      "計畫名稱": "救世軍友善兒少福利服務據點",
+      "電話": "(02)27990098",
+      "地址": "臺北市內湖區內湖路一段285巷63弄7號1樓",
+      "服務區域": "內湖區"
+    }
+  },
+  {
+    "id": "0cb0a1bb217b5a39",
+    "institutionName": "社團法人臺北市接觸點社區關懷協會",
+    "programmeName": "108年度迎曦學園-接觸點友善兒童少年福利服務據點",
+    "phoneRaw": "(02)27945837",
+    "phone": "(02)27945837",
+    "address": "臺北市內湖區明興里木柵路二段109巷25弄6號1樓",
+    "districtName": "內湖區",
+    "serviceAreaRaw": "內湖區",
+    "serviceAreas": [
+      "內湖區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市內湖區明興里木柵路二段109巷25弄6號1樓 社團法人臺北市接觸點社區關懷協會",
+    "sourceValues": {
+      "機構名稱": "社團法人臺北市接觸點社區關懷協會",
+      "計畫名稱": "108年度迎曦學園-接觸點友善兒童少年福利服務據點",
+      "電話": "(02)27945837",
+      "地址": "臺北市內湖區明興里木柵路二段109巷25弄6號1樓",
+      "服務區域": "內湖區"
+    }
+  },
+  {
+    "id": "80e4f87294d55b64",
+    "institutionName": "財團法人台北市北投文化基金會",
+    "programmeName": "臺北市北投區社區學生輔導關懷服務據點",
+    "phoneRaw": "(02)28917453",
+    "phone": "(02)28917453",
+    "address": "臺北市北投區中央南路一段45號之1",
+    "districtName": "北投區",
+    "serviceAreaRaw": "北投區",
+    "serviceAreas": [
+      "北投區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市北投區中央南路一段45號之1 財團法人台北市北投文化基金會",
+    "sourceValues": {
+      "機構名稱": "財團法人台北市北投文化基金會",
+      "計畫名稱": "臺北市北投區社區學生輔導關懷服務據點",
+      "電話": "(02)28917453",
+      "地址": "臺北市北投區中央南路一段45號之1",
+      "服務區域": "北投區"
+    }
+  },
+  {
+    "id": "3e354dfbdbe116cd",
+    "institutionName": "臺北市南港區久如社區發展協會",
+    "programmeName": "南港花Young樂學堂-久如社區兒少活動小站",
+    "phoneRaw": "(02)26516600",
+    "phone": "(02)26516600",
+    "address": "臺北市南港區研究院路2段208號1樓",
+    "districtName": "南港區",
+    "serviceAreaRaw": "南港區",
+    "serviceAreas": [
+      "南港區"
+    ],
+    "hasPhone": true,
+    "hasAddress": true,
+    "hasProgramme": true,
+    "hasServiceArea": true,
+    "externalMapQuery": "臺北市南港區研究院路2段208號1樓 臺北市南港區久如社區發展協會",
+    "sourceValues": {
+      "機構名稱": "臺北市南港區久如社區發展協會",
+      "計畫名稱": "南港花Young樂學堂-久如社區兒少活動小站",
+      "電話": "(02)26516600",
+      "地址": "臺北市南港區研究院路2段208號1樓",
+      "服務區域": "南港區"
+    }
+  }
+]

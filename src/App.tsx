@@ -92,6 +92,7 @@ import ArtsCulturalVenuesModule from './ArtsCulturalVenuesModule';
 import PsychiatricClinicsModule from './PsychiatricClinicsModule';
 import LicensedAssistedReproductionInstitutionsModule from './LicensedAssistedReproductionInstitutionsModule';
 import ChildYouthResidentialPlacementInstitutionsModule from './ChildYouthResidentialPlacementInstitutionsModule';
+import ChildYouthFriendlyWelfareServiceSitesModule from './ChildYouthFriendlyWelfareServiceSitesModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -193,7 +194,7 @@ const zhTabLabels: Record<string, string> = {
   familyMedicineInstitutions: '家庭醫學科醫療機構', cosmeticMedicineSupervision2024: '醫美醫療機構督導統計', plasticSurgeryMedicalInstitutions: '整形外科醫療機構',
   indigenousCommunityOrganizations: '臺北市原住民社團', licensedNaturalGasPipelineContractors: '天然氣導管承裝業', communityDevelopmentAssociations: '社區發展協會',
   obstetricsGynecologyInstitutions: '婦產科醫療機構', artsCulturalVenues: '臺北市藝文場館', psychiatricClinics: '精神科診所',
-  licensedAssistedReproductionInstitutions: '特約人工生殖機構', childYouthResidentialPlacementInstitutions: '兒少安置及教養機構',
+  licensedAssistedReproductionInstitutions: '特約人工生殖機構', childYouthResidentialPlacementInstitutions: '兒少安置及教養機構', childYouthFriendlyWelfareServiceSites: '兒少友善福利服務據點',
 };
 
 function BarChart({ data, label }: { data: Array<{ label: string; count: number }>; label: string }) {
@@ -730,6 +731,7 @@ export default function App() {
     ['comparison', t.comparison], ['overview', t.overview], ['notes', t.notes],
   ];
   tabs.splice(1, 0, ['seniorGroupMealServiceSites', language === 'zh' ? '老人共餐單位' : 'Senior Group Meal Service Sites']);
+  tabs.splice(2, 0, ['childYouthFriendlyWelfareServiceSites', language === 'zh' ? '兒少友善福利服務據點' : 'Child and Youth Friendly Welfare Service Sites']);
   tabs.splice(2, 0, ['publicPneumococcalVaccineProviders', language === 'zh' ? '公費肺炎鏈球菌疫苗院所' : 'Pneumococcal Vaccine Providers']);
   tabs.splice(3, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
   tabs.splice(4, 0, ['earlyInterventionMedicalProviders', language === 'zh' ? '早期療育醫療院所' : 'Early Intervention Providers']);
@@ -847,6 +849,7 @@ export default function App() {
       {tab === 'psychiatricClinics' && <PsychiatricClinicsModule language={language} />}
       {tab === 'licensedAssistedReproductionInstitutions' && <LicensedAssistedReproductionInstitutionsModule language={language} />}
       {tab === 'childYouthResidentialPlacementInstitutions' && <ChildYouthResidentialPlacementInstitutionsModule language={language} />}
+      {tab === 'childYouthFriendlyWelfareServiceSites' && <ChildYouthFriendlyWelfareServiceSitesModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

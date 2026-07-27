@@ -139,5 +139,13 @@ const petRegistrationStations = await readDatasetSummary('pet-registration-stati
 publicSummary.modules.petRegistrationStations = { recordCount: petRegistrationStations.totalRecords, uniqueStationNameCount: petRegistrationStations.uniqueStationNameCount, districtCount: petRegistrationStations.districtCount, recordsWithPhone: petRegistrationStations.recordsWithPhone };
 const bottledGasRetailers = await readDatasetSummary('bottled-gas-retailers');
 publicSummary.modules.bottledGasRetailers = { recordCount: bottledGasRetailers.totalRecords, validCoordinateCount: bottledGasRetailers.validCoordinateCount, districtCount: bottledGasRetailers.districtCount, recordsWith16KgPrice: bottledGasRetailers.recordsWith16KgPrice, recordsWith20KgPrice: bottledGasRetailers.recordsWith20KgPrice };
+const childYouthFriendlyWelfareServiceSites = await readDatasetSummary('child-youth-friendly-welfare-service-sites');
+publicSummary.modules.childYouthFriendlyWelfareServiceSites = {
+  recordCount: childYouthFriendlyWelfareServiceSites.totalRecords,
+  institutionCount: childYouthFriendlyWelfareServiceSites.uniqueInstitutions,
+  programmeCount: childYouthFriendlyWelfareServiceSites.uniqueProgrammes,
+  districtCount: childYouthFriendlyWelfareServiceSites.districtsWithServiceSites,
+  recordsWithPhone: childYouthFriendlyWelfareServiceSites.recordsWithPhone,
+};
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

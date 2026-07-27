@@ -1,21 +1,30 @@
 {
-  "childYouthResidentialPlacementInstitutions": {
+  "childYouthFriendlyWelfareServiceSites": {
+    "updatedAt": "2026-07-27T07:20:32.115Z",
     "headers": [
       "機構名稱",
-      "地址",
+      "計畫名稱",
       "電話",
-      "行政區代碼",
-      "屬性",
-      "服務對象",
-      "核定服務床位數量",
-      "可申請床位數量",
-      "說明",
-      "評鑑"
+      "地址",
+      "服務區域"
     ],
-    "outputRecords": 22,
+    "inputRows": 26,
+    "outputRecords": 26,
+    "exactDuplicatesRemoved": 0,
+    "missingInstitutionName": 0,
+    "missingProgrammeName": 0,
+    "missingAddress": 0,
+    "missingTelephoneNumber": 0,
+    "malformedTelephoneNumber": 0,
+    "unresolvedDistrict": 0,
+    "missingServiceArea": 0,
+    "sameInstitutionAndProgrammeMultipleAddresses": 0,
+    "sameAddressMultipleInstitutions": 0,
+    "conflictingServiceAreaDescriptions": 0,
     "notes": [
-      "Capacity values are source-recorded administrative figures, not occupancy or live vacancies.",
-      "No child-level information, geocoding, or exact markers."
+      "Only exact duplicate source rows are collapsed.",
+      "Service-area text is preserved; structured values are split only at explicit separators.",
+      "Addresses are not geocoded and no exact map markers are created."
     ]
   }
 }

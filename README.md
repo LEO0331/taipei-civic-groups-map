@@ -139,6 +139,10 @@ The dataset has no official coordinates. The map uses district centroid bubbles 
 
 Child medical subsidy contracted providers remain the separate `child_medical_subsidy_contracted_providers` healthcare and child-welfare public-record module. The UTF-8-SIG CSV includes sequence number, provider code, clinic name, administrative area, address, and phone. Conversion preserves provider codes as text, parses Taipei districts and outside-Taipei area values without forcing them into Taipei districts, normalizes `台北市` to `臺北市`, extracts road names where practical, classifies phone values, and reports duplicate provider codes, addresses, phones, and fallback keys.
 
+## Child and youth friendly welfare service sites / 兒少友善福利服務據點
+
+`child_youth_friendly_welfare_service_sites` is a separate public-service directory for source-recorded institutions, programmes, telephone numbers, addresses, and service areas. It preserves the complete source programme and service-area text, derives a physical-site district only when the address is unambiguous, and does not geocode addresses or create exact markers. The customer-facing module provides local-JSON search, filters, charts, a paginated directory, raw-source details, copy actions, external map lookup, and filtered CSV export. It is not an eligibility, capacity, appointment, referral, emergency-response, childcare, placement, counselling, or case-management system.
+
 The dataset has no official coordinates. The map uses Taipei district centroid bubbles only for Taipei records; outside-Taipei areas remain in summaries and the directory. The module does not claim real-time clinic hours, appointment availability, subsidy eligibility, subsidy amount, fees, medical advice, pediatric care advice, service-quality ranking, emergency service, real-time operating status, or official endorsement.
 
 ## Additional module: Denture Subsidy Medical Providers / 假牙補助醫療院所名單

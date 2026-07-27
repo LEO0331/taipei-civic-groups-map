@@ -1,0 +1,94 @@
+{
+  "totalRecords": 47,
+  "uniqueVenueNames": 47,
+  "citiesRepresented": 1,
+  "districtsCovered": 11,
+  "buildingAttributeCategories": 8,
+  "recordsWithPhones": 46,
+  "recordsWithAddresses": 47,
+  "venuesWithOfficialWebsites": 42,
+  "venuesWithCulturalAffairsPages": 47,
+  "byDistrict": [
+    {
+      "label": "中正區",
+      "value": 13
+    },
+    {
+      "label": "萬華區",
+      "value": 7
+    },
+    {
+      "label": "士林區",
+      "value": 6
+    },
+    {
+      "label": "大同區",
+      "value": 6
+    },
+    {
+      "label": "中山區",
+      "value": 4
+    },
+    {
+      "label": "北投區",
+      "value": 4
+    },
+    {
+      "label": "大安區",
+      "value": 2
+    },
+    {
+      "label": "松山區",
+      "value": 2
+    },
+    {
+      "label": "文山區",
+      "value": 1
+    },
+    {
+      "label": "信義區",
+      "value": 1
+    },
+    {
+      "label": "南港區",
+      "value": 1
+    }
+  ],
+  "byAttribute": [
+    {
+      "label": "直轄市定古蹟",
+      "value": 12
+    },
+    {
+      "label": "歷史建築",
+      "value": 8
+    },
+    {
+      "label": "一般建築",
+      "value": 6
+    },
+    {
+      "label": "國定古蹟",
+      "value": 1
+    },
+    {
+      "label": "聚落",
+      "value": 1
+    },
+    {
+      "label": "紀念建築",
+      "value": 1
+    },
+    {
+      "label": "聚落建築群",
+      "value": 1
+    },
+    {
+      "label": "文化景觀",
+      "value": 1
+    }
+  ],
+  "sourceFileUpdatedAt": "2026-03-23 14:37:40",
+  "metadataUpdatedAt": "2026-04-15 15:27:48",
+  "sourceUrl": "https://data.taipei/api/dataset/f058688f-1fd0-40d4-85e6-18267484cd18/resource/e290a9e2-1c97-4bfc-b720-b640153a3c1d/download"
+}

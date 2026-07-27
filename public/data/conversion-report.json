@@ -6058,5 +6058,51 @@
       "Source values are preserved as strings.",
       "No official coordinates, geocoding, or exact markers are created."
     ]
+  },
+  "artsCulturalVenues": {
+    "convertedAt": "2026-07-27T00:57:21.738Z",
+    "headers": [
+      "編號",
+      "館所名稱",
+      "建物屬性",
+      "館所市話",
+      "所在縣市",
+      "詳細地址",
+      "館所網址",
+      "文化局對應頁面連結"
+    ],
+    "outputRecords": 47,
+    "dups": [],
+    "missingNames": [],
+    "missingAddress": [],
+    "missingPhone": [
+      32
+    ],
+    "badPhone": [],
+    "unknownDistrict": [],
+    "unknownAttr": [
+      4,
+      5,
+      9,
+      12,
+      13,
+      14,
+      16,
+      17,
+      23,
+      24,
+      32,
+      33,
+      36,
+      40,
+      41,
+      45
+    ],
+    "badSite": [],
+    "badPage": [],
+    "notes": [
+      "Only http and https links are exposed.",
+      "No coordinates, geocoding, or exact map markers are created."
+    ]
   }
 }

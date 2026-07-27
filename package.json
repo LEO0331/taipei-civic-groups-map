@@ -137,6 +137,8 @@
     "data:convert:licensed-assisted-reproduction-institutions": "tsx scripts/convertLicensedAssistedReproductionInstitutions.ts",
     "data:fetch:child-youth-residential-placement-institutions": "tsx scripts/fetchChildYouthResidentialPlacementInstitutions.ts",
     "data:convert:child-youth-residential-placement-institutions": "tsx scripts/convertChildYouthResidentialPlacementInstitutions.ts",
+    "data:fetch:contracted-senior-health-examination-providers": "tsx scripts/fetchContractedSeniorHealthExaminationProviders.ts",
+    "data:convert:contracted-senior-health-examination-providers": "tsx scripts/convertContractedSeniorHealthExaminationProviders.ts",
     "data:fetch:cosmetic-medicine-supervision-2024": "tsx scripts/fetchCosmeticMedicineSupervision2024.ts",
     "data:convert:cosmetic-medicine-supervision-2024": "tsx scripts/convertCosmeticMedicineSupervision2024.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",

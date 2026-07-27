@@ -152,6 +152,50 @@ const emptyFilters: CivicGroupFilters = {
   search: '', district: '', category: '', decade: '', yearFrom: '', yearTo: '', phone: '',
 };
 
+const zhUiCopy: Record<string, string> = {
+  title: '臺北公共資料探索儀表板', subtitle: '以臺北市公開資料建立的查詢、比較與資料品質檢視工具。',
+  civicGroups: '人民團體', performingArtsGroups: '表演藝術團體', vaccinationProviders: '預防接種合約醫療院所', hpvProviders: 'HPV 疫苗合約醫療院所',
+  childMedicalSubsidyProviders: '兒童醫療補助合約院所', dentureSubsidyProviders: '假牙補助合約院所', disabilityEmploymentResources: '身心障礙就業資源',
+  shelteredWorkshops: '庇護工場', employmentAgencies: '私立就業服務機構', licensedPawnshops: '合法當舖', licensedArcades: '電子遊戲場業',
+  licensedSpecialEntertainment: '特種娛樂業', recyclingOrganizations: '回收業者', registeredFactories: '登記工廠', enterpriseHeadquarters: '企業總部',
+  cemeteryPublicFacilities: '公墓設施', telepsychology: '通訊心理諮商機構', publicLiabilityInsurance: '公共意外責任保險',
+  businessChanges: '商業登記異動', companyChanges: '公司登記異動', laborUnions: '工會', infantCareCenters: '準公共托嬰中心',
+  infantCareEvaluations: '托嬰中心評鑑', elderlyWelfare: '老人福利機構', biotechCompanies: '生技公司', travelAccommodations: '旅宿資料',
+  industryGrants: '產業補助', metroProcurement: '捷運採購', registeredCramSchools: '立案補習班', registeredHotels: '立案旅館',
+  laborViolations: '勞基法違規紀錄', oshViolations: '職業安全衛生違規紀錄', genderEqualityViolations: '性別平等工作法違規紀錄',
+  consumerDisputeAbsence: '消費爭議未到場業者', nangangCompanies: '南港軟體園區公司', dawannanCompanies: '大南灣工業區公司',
+  animalHospitals: '動物醫院', animalMedicineSellers: '動物用藥品販賣業者', petBusinessEvaluations: '特定寵物業評鑑', veterinarians: '獸醫師名冊',
+  comparison: '行政區比較', overview: '總覽', notes: '資料說明', map: '地圖', directory: '名冊', search: '搜尋', district: '行政區', category: '類別',
+  decade: '成立年代', phone: '電話', all: '全部', yes: '有', no: '無', from: '起始年份', to: '結束年份', clear: '清除篩選',
+  found: '筆紀錄', address: '地址', phoneLabel: '電話', source: '資料來源', loading: '資料載入中…', loadError: '資料載入失敗，請重新整理頁面。',
+  footer: '資料均來自臺北市及相關政府公開資料；實際服務、資格、地址與狀態請向主管機關或各機構確認。',
+};
+
+const zhTabLabels: Record<string, string> = {
+  seniorGroupMealServiceSites: '老人共餐單位一覽表', publicPneumococcalVaccineProviders: '公費肺炎鏈球菌疫苗合約醫療院所',
+  majorElectricityUsers: '臺北市用電大戶資料', earlyInterventionMedicalProviders: '早期療育合約醫療院所', generalDentalMedicalInstitutions: '牙醫一般科醫療機構',
+  diabetesSharedCareMedicalInstitutions: '糖尿病共照網醫事機構', waterPipeInstallationContractors: '自來水管承裝商業者',
+  seniorCareInstitutionEvaluations: '老人安養暨長期照顧機構評鑑', fertilitySubsidyContractedHospitals: '生育補助合約醫院', fiveCancerScreeningProviders: '五癌篩檢醫療院所',
+  rabiesVaccinationVeterinaryClinics: '狂犬病疫苗獸醫診療機構', seniorServiceSiteCourses: '銀髮族據點課程', taipeiGovernmentApplicationServices: '台北服務通申辦服務',
+  psychiatricRehabilitationAndNursingInstitutions: '精神復健暨精神護理機構', culturalArtsFoundations: '文化藝術財團法人', visuallyImpairedMassageEstablishments: '視障按摩院所名冊',
+  approvedGasWaterHeaterInstallers: '核准燃氣熱水器承裝業及技術士', petRegistrationStations: '寵物登記站名冊', bottledGasRetailers: '桶裝瓦斯零售商',
+  rotavirusVaccineSubsidyProviders: '輪狀病毒疫苗補助合約醫療院所', socialWelfareFoundations: '社會福利基金會', generalWesternMedicineInstitutions: '西醫一般科醫療機構',
+  schoolchildDentalPreventiveCareProviders: '學童牙齒預防保健醫療院所', streetPerformerVenues: '街頭藝人展演場地', hospitalHemodialysisResources: '公私立醫院血液透析資源',
+  domesticEmploymentServiceAgencies: '仲介本國人國內工作私立就業服務機構', postpartumCareInstitutions: '產後護理機構', outCityFuneralBusinesses: '外縣市殯葬業者',
+  hotelHygieneDirectory: '旅館衛生認證', kindergartenEvaluationPass: '幼兒園評鑑通過名單', pestControlBusinesses: '病媒防治業者',
+  adultInfluenzaVaccineProviders: '成人流感疫苗合約醫療院所', licensedWasteCookingOilCollectors: '廢食用油脂回收清除業者', homeNursingInstitutions: '居家護理機構',
+  optometryInstitutions: '驗光所', generalChineseMedicineInstitutions: '中醫一般科醫療機構', alternativeServiceReserveStatistics: '替代役備役役男統計',
+  medicalLaboratories: '醫事檢驗所', communityCareServiceSites: '社區照顧關懷據點', seniorCareCapacityAndOccupancy: '老人照顧機構床位與入住資訊',
+  domesticEmploymentAgencyEvaluations: '私立就業服務機構評鑑結果', lodgingBusinessPenaltyRecords: '旅宿業裁罰紀錄表', communityPublicChildcareHomes: '社區公共托育家園',
+  tbContactScreeningPartnerProviders: '結核病接觸者檢查合作醫療院所', beautyHairdressingHygieneCertifications: '美容美髮衛生認證',
+  publicInfluenzaAntiviralProviders: '公費流感抗病毒藥劑合約醫療院所', communityIntegratedCareLevelCUnits: '社區整合型服務中心 C 級據點',
+  registeredAfterSchoolCareCentres: '立案課後照顧中心', subsidizedSeniorResidentialPlacementInstitutions: '老人住宅安置補助機構',
+  familyMedicineInstitutions: '家庭醫學科醫療機構', cosmeticMedicineSupervision2024: '醫美醫療機構督導統計', plasticSurgeryMedicalInstitutions: '整形外科醫療機構',
+  indigenousCommunityOrganizations: '臺北市原住民社團', licensedNaturalGasPipelineContractors: '天然氣導管承裝業', communityDevelopmentAssociations: '社區發展協會',
+  obstetricsGynecologyInstitutions: '婦產科醫療機構', artsCulturalVenues: '臺北市藝文場館', psychiatricClinics: '精神科診所',
+  licensedAssistedReproductionInstitutions: '特約人工生殖機構', childYouthResidentialPlacementInstitutions: '兒少安置及教養機構',
+};
+
 function BarChart({ data, label }: { data: Array<{ label: string; count: number }>; label: string }) {
   const max = Math.max(...data.map((item) => item.count), 1);
   return <section className="chart">
@@ -170,7 +214,7 @@ function FilterPanel({ filters, setFilters, language, decades }: {
   filters: CivicGroupFilters; setFilters: (filters: CivicGroupFilters) => void;
   language: Language; decades: string[];
 }) {
-  const t = copy[language];
+  const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
   const update = (key: keyof CivicGroupFilters, value: string) => setFilters({ ...filters, [key]: value });
   return <aside className="filters" aria-label={language === 'zh' ? '篩選條件' : 'Filters'}>
     <label className="search"><span aria-hidden="true">⌕</span><input aria-label={t.search} value={filters.search} onChange={(event) => update('search', event.target.value)} placeholder={t.search} /></label>
@@ -196,7 +240,7 @@ function FilterPanel({ filters, setFilters, language, decades }: {
 
 function GroupDirectory({ groups, language }: { groups: CivicGroup[]; language: Language }) {
   const [limit, setLimit] = useState(60);
-  const t = copy[language];
+  const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
   useEffect(() => setLimit(60), [groups]);
   return <div className="directory-list">
     {groups.slice(0, limit).map((group) => <article className="group-row" key={group.id}>
@@ -217,7 +261,7 @@ function GroupDirectory({ groups, language }: { groups: CivicGroup[]; language: 
 function CivicMap({ summary, language, openDistrict }: {
   summary: CivicGroupSummary; language: Language; openDistrict: (district: string) => void;
 }) {
-  const t = copy[language];
+  const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
   return <div className="map-wrap">
     <div className="notice">{t.mapNotice}</div>
     <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
@@ -235,7 +279,7 @@ function CivicMap({ summary, language, openDistrict }: {
 }
 
 function Overview({ summary, groups, language }: { summary: CivicGroupSummary; groups: CivicGroup[]; language: Language }) {
-  const t = copy[language];
+  const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
   const years = groups.flatMap((group) => group.foundedYear ?? []);
   const topDistrict = summary.byDistrict[0];
   const topCategory = summary.byInferredCategory[0];
@@ -514,7 +558,7 @@ export default function App() {
   }>({});
   const [filters, setFilters] = useState(emptyFilters);
   const [loadError, setLoadError] = useState(false);
-  const t = copy[language];
+  const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
 
   useEffect(() => {
     const loadJson = async (path: string) => {
@@ -722,13 +766,14 @@ export default function App() {
   tabs.splice(35, 0, ['psychiatricClinics', language === 'zh' ? '臺北市精神科診所' : 'Taipei Psychiatric Clinics']);
   tabs.splice(36, 0, ['licensedAssistedReproductionInstitutions', language === 'zh' ? '特約人工生殖機構名單' : 'Licensed Assisted Reproduction Institutions']);
   tabs.splice(37, 0, ['childYouthResidentialPlacementInstitutions', language === 'zh' ? '兒童及少年安置機構' : 'Child and Youth Residential Placement Institutions']);
+  const displayedTabs = language === 'zh' ? tabs.map(([id, label]) => [id, zhTabLabels[id] ?? label] as [string, string]) : tabs;
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
     <header>
       <div className="masthead"><div className="brand-mark">北</div><div><p>TAIPEI · OPEN DIRECTORY</p><h1>{t.title}</h1><span>{t.subtitle}</span></div>
         <button className="language" onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')} aria-label="Switch language">{language === 'zh' ? 'EN' : '中文'}</button></div>
-      <nav aria-label={language === 'zh' ? '主要導覽' : 'Main navigation'}>{tabs.map(([id, label]) => <button aria-pressed={tab === id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
+      <nav aria-label={language === 'zh' ? '主要導覽' : 'Main navigation'}>{displayedTabs.map(([id, label]) => <button aria-pressed={tab === id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
     </header>
     <main>
       {loadError && <p className="status" role="alert">{t.loadError}</p>}

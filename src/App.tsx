@@ -90,6 +90,7 @@ import CommunityDevelopmentAssociationsModule from './CommunityDevelopmentAssoci
 import ObstetricsGynecologyInstitutionsModule from './ObstetricsGynecologyInstitutionsModule';
 import ArtsCulturalVenuesModule from './ArtsCulturalVenuesModule';
 import PsychiatricClinicsModule from './PsychiatricClinicsModule';
+import LicensedAssistedReproductionInstitutionsModule from './LicensedAssistedReproductionInstitutionsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -718,6 +719,7 @@ export default function App() {
   tabs.splice(33, 0, ['obstetricsGynecologyInstitutions', language === 'zh' ? '婦產科醫療機構' : 'Obstetrics and Gynecology Institutions']);
   tabs.splice(34, 0, ['artsCulturalVenues', language === 'zh' ? '臺北市藝文館所' : 'Taipei Arts and Cultural Venues']);
   tabs.splice(35, 0, ['psychiatricClinics', language === 'zh' ? '臺北市精神科診所' : 'Taipei Psychiatric Clinics']);
+  tabs.splice(36, 0, ['licensedAssistedReproductionInstitutions', language === 'zh' ? '特約人工生殖機構名單' : 'Licensed Assisted Reproduction Institutions']);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -796,6 +798,7 @@ export default function App() {
       {tab === 'obstetricsGynecologyInstitutions' && <ObstetricsGynecologyInstitutionsModule language={language} />}
       {tab === 'artsCulturalVenues' && <ArtsCulturalVenuesModule language={language} />}
       {tab === 'psychiatricClinics' && <PsychiatricClinicsModule language={language} />}
+      {tab === 'licensedAssistedReproductionInstitutions' && <LicensedAssistedReproductionInstitutionsModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

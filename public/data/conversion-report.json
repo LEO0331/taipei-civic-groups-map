@@ -6142,5 +6142,19 @@
       "No coordinates or geocoding.",
       "No mental-health profiling or recommendations."
     ]
+  },
+  "licensedAssistedReproductionInstitutions": {
+    "headers": [
+      "序號",
+      "縣市別",
+      "補助方案之特約人工生殖機構名稱",
+      "全民健康保險特約醫療院所",
+      "備註"
+    ],
+    "outputRecords": 102,
+    "notes": [
+      "Blank or unclear NHI source values remain unknown.",
+      "No addresses, coordinates, or maps are created."
+    ]
   }
 }

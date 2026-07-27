@@ -147,5 +147,14 @@ publicSummary.modules.childYouthFriendlyWelfareServiceSites = {
   districtCount: childYouthFriendlyWelfareServiceSites.districtsWithServiceSites,
   recordsWithPhone: childYouthFriendlyWelfareServiceSites.recordsWithPhone,
 };
+const disabilityInstitutionCapacityAndVacancies = await readDatasetSummary('disability-institution-capacity-and-vacancies');
+publicSummary.modules.disabilityInstitutionCapacityAndVacancies = {
+  recordCount: disabilityInstitutionCapacityAndVacancies.totalRecords,
+  institutionCount: disabilityInstitutionCapacityAndVacancies.uniqueInstitutions,
+  districtCount: disabilityInstitutionCapacityAndVacancies.districtsCovered,
+  institutionTypeCount: disabilityInstitutionCapacityAndVacancies.institutionTypes,
+  recordsWithSourceQuantity: disabilityInstitutionCapacityAndVacancies.recordsWithSourceQuantity,
+  fieldMeaning: disabilityInstitutionCapacityAndVacancies.fieldMeaning,
+};
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

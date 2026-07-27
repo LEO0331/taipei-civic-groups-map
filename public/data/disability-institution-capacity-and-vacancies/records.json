@@ -1,0 +1,3642 @@
+[
+  {
+    "id": "3f5a3682c7c3d9f4",
+    "sourceSequenceNumber": "1",
+    "districtName": "士林區",
+    "organizationAttributeRaw": "公立",
+    "organizationAttribute": "公立",
+    "institutionName": "臺北市立陽明教養院(華岡院區)",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "29",
+    "fullTimeResidentialBeds": 29,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "1",
+    "emergencyShortTermPlacementBeds": 1,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "29",
+        "quantity": 29,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "1",
+        "quantity": 1,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential",
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市士林區凱旋路61巷4弄9號",
+    "websiteRaw": "https://www.ym.gov.taipei/",
+    "website": "https://www.ym.gov.taipei/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市士林區凱旋路61巷4弄9號 臺北市立陽明教養院(華岡院區)",
+    "sourceValues": {
+      "序號": "1",
+      "行政區": "士林區",
+      "屬性": "公立",
+      "機構名稱": "臺北市立陽明教養院(華岡院區)",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "29",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "1",
+      "地址": "臺北市士林區凱旋路61巷4弄9號",
+      "網址": "https://www.ym.gov.taipei/"
+    }
+  },
+  {
+    "id": "22f4b72df5314c05",
+    "sourceSequenceNumber": "2",
+    "districtName": "北投區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市永明發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市北投區石牌路2段115號4-6F",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市北投區石牌路2段115號4-6F 臺北市永明發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "2",
+      "行政區": "北投區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市永明發展中心(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市北投區石牌路2段115號4-6F",
+      "網址": ""
+    }
+  },
+  {
+    "id": "29b1f95fcfb74f29",
+    "sourceSequenceNumber": "3",
+    "districtName": "中正區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市弘愛服務中心",
+    "institutionTypeRaw": "住宿服務 日間服務",
+    "institutionType": "住宿服務 日間服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "2",
+    "fullTimeResidentialBeds": 2,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "3",
+    "emergencyShortTermPlacementBeds": 3,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "3",
+        "quantity": 3,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential",
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中正區濟南路2段46號4樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中正區濟南路2段46號4樓 臺北市弘愛服務中心",
+    "sourceValues": {
+      "序號": "3",
+      "行政區": "中正區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市弘愛服務中心",
+      "機構類型": "住宿服務 日間服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "2",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "3",
+      "地址": "臺北市中正區濟南路2段46號4樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "3a35369917775b99",
+    "sourceSequenceNumber": "4",
+    "districtName": "中正區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市城中發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "2",
+    "earlyInterventionDayCareBeds": 2,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "early_intervention_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中正區汀州路2段172號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中正區汀州路2段172號 臺北市城中發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "4",
+      "行政區": "中正區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市城中發展中心(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "2",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中正區汀州路2段172號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "1e917f0b2b655789",
+    "sourceSequenceNumber": "5",
+    "districtName": "南港區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市東明扶愛家園",
+    "institutionTypeRaw": "住宿/日間照顧服務",
+    "institutionType": "住宿/日間照顧服務",
+    "adultDayCareRaw": "12",
+    "adultDayCareBeds": 12,
+    "fullTimeResidentialRaw": "2",
+    "fullTimeResidentialBeds": 2,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "3",
+    "emergencyShortTermPlacementBeds": 3,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "12",
+        "quantity": 12,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "3",
+        "quantity": 3,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care",
+      "full_time_residential",
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市南港區南港路2段38巷8弄1號",
+    "websiteRaw": "https://ycswf.org.tw/service-location/",
+    "website": "https://ycswf.org.tw/service-location/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市南港區南港路2段38巷8弄1號 臺北市東明扶愛家園",
+    "sourceValues": {
+      "序號": "5",
+      "行政區": "南港區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市東明扶愛家園",
+      "機構類型": "住宿/日間照顧服務",
+      "成人日間照顧床位數量": "12",
+      "全日型住宿床位數量": "2",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "3",
+      "地址": "臺北市南港區南港路2段38巷8弄1號",
+      "網址": "https://ycswf.org.tw/service-location/"
+    }
+  },
+  {
+    "id": "3057c602c5192d9b",
+    "sourceSequenceNumber": "6",
+    "districtName": "中山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市博愛發展中心",
+    "institutionTypeRaw": "基河：日間服務(敬業三路160號)",
+    "institutionType": "基河：日間服務(敬業三路160號)",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中山區敬業三路160號",
+    "websiteRaw": "http://www.diyi.org.tw/",
+    "website": "http://www.diyi.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中山區敬業三路160號 臺北市博愛發展中心",
+    "sourceValues": {
+      "序號": "6",
+      "行政區": "中山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市博愛發展中心",
+      "機構類型": "基河：日間服務(敬業三路160號)",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中山區敬業三路160號",
+      "網址": "http://www.diyi.org.tw/"
+    }
+  },
+  {
+    "id": "762fbcd407128b5e",
+    "sourceSequenceNumber": "7",
+    "districtName": "信義區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市恆愛發展中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "10",
+    "adultDayCareBeds": 10,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "10",
+        "quantity": 10,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市信義區松隆路36號6樓",
+    "websiteRaw": "http://www.diyi.org.tw/",
+    "website": "http://www.diyi.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市信義區松隆路36號6樓 臺北市恆愛發展中心",
+    "sourceValues": {
+      "序號": "7",
+      "行政區": "信義區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市恆愛發展中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "10",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市信義區松隆路36號6樓",
+      "網址": "http://www.diyi.org.tw/"
+    }
+  },
+  {
+    "id": "a13bd39962d9a9da",
+    "sourceSequenceNumber": "8",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市萬芳啟能中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區萬美街1段51號1樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區萬美街1段51號1樓 臺北市萬芳啟能中心",
+    "sourceValues": {
+      "序號": "8",
+      "行政區": "文山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市萬芳啟能中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區萬美街1段51號1樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "d537a7d03c88ca82",
+    "sourceSequenceNumber": "9",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市萬芳發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "6",
+    "earlyInterventionDayCareBeds": 6,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "6",
+        "quantity": 6,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "early_intervention_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區萬美街1段55號2樓",
+    "websiteRaw": "http://web.syinlu.org.tw/",
+    "website": "http://web.syinlu.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區萬美街1段55號2樓 臺北市萬芳發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "9",
+      "行政區": "文山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市萬芳發展中心(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "6",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區萬美街1段55號2樓",
+      "網址": "http://web.syinlu.org.tw/"
+    }
+  },
+  {
+    "id": "22359f6878d744c3",
+    "sourceSequenceNumber": "10",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市一壽照顧中心",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "9",
+    "fullTimeResidentialBeds": 9,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "9",
+        "quantity": 9,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區一壽街22號3、4樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區一壽街22號3、4樓 臺北市一壽照顧中心",
+    "sourceValues": {
+      "序號": "10",
+      "行政區": "文山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市一壽照顧中心",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "9",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區一壽街22號3、4樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "6c8e0d51dc78f65f",
+    "sourceSequenceNumber": "11",
+    "districtName": "中和區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "崇愛發展中心",
+    "institutionTypeRaw": "住宿服務 日間服務",
+    "institutionType": "住宿服務 日間服務",
+    "adultDayCareRaw": "7",
+    "adultDayCareBeds": 7,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "7",
+        "quantity": 7,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "新北市中和區中和市圓通路143之1號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "新北市中和區中和市圓通路143之1號 崇愛發展中心",
+    "sourceValues": {
+      "序號": "11",
+      "行政區": "中和區",
+      "屬性": "公設民營",
+      "機構名稱": "崇愛發展中心",
+      "機構類型": "住宿服務 日間服務",
+      "成人日間照顧床位數量": "7",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "新北市中和區中和市圓通路143之1號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "b13412e6fcdb1c63",
+    "sourceSequenceNumber": "12",
+    "districtName": "士林區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市三玉啟能中心",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市士林區忠誠路2段53巷7號3、4、7樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市士林區忠誠路2段53巷7號3、4、7樓 臺北市三玉啟能中心",
+    "sourceValues": {
+      "序號": "12",
+      "行政區": "士林區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市三玉啟能中心",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市士林區忠誠路2段53巷7號3、4、7樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "dbe4c5f381784d63",
+    "sourceSequenceNumber": "13",
+    "districtName": "中正區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市健軍團體家庭",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中正區汀州路3段60巷2弄6號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中正區汀州路3段60巷2弄6號 臺北市健軍團體家庭",
+    "sourceValues": {
+      "序號": "13",
+      "行政區": "中正區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市健軍團體家庭",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中正區汀州路3段60巷2弄6號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "ef8b216675faa206",
+    "sourceSequenceNumber": "14",
+    "districtName": "信義區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市三興團體家庭",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "2",
+    "emergencyShortTermPlacementBeds": 2,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市信義區吳興街156巷6號3樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市信義區吳興街156巷6號3樓 臺北市三興團體家庭",
+    "sourceValues": {
+      "序號": "14",
+      "行政區": "信義區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市三興團體家庭",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "2",
+      "地址": "臺北市信義區吳興街156巷6號3樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "e4f43cb8529e8304",
+    "sourceSequenceNumber": "15",
+    "districtName": "內湖區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市金龍發展中心",
+    "institutionTypeRaw": "日間服務 住宿服務",
+    "institutionType": "日間服務 住宿服務",
+    "adultDayCareRaw": "7",
+    "adultDayCareBeds": 7,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "7",
+        "quantity": 7,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市內湖區金龍路136之1號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市內湖區金龍路136之1號 臺北市金龍發展中心",
+    "sourceValues": {
+      "序號": "15",
+      "行政區": "內湖區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市金龍發展中心",
+      "機構類型": "日間服務 住宿服務",
+      "成人日間照顧床位數量": "7",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市內湖區金龍路136之1號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "ce05e2872656a815",
+    "sourceSequenceNumber": "16",
+    "districtName": "南港區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市南港養護中心",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市南港區松河街550號1樓",
+    "websiteRaw": "https://ycswf.org.tw/",
+    "website": "https://ycswf.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市南港區松河街550號1樓 臺北市南港養護中心",
+    "sourceValues": {
+      "序號": "16",
+      "行政區": "南港區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市南港養護中心",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市南港區松河街550號1樓",
+      "網址": "https://ycswf.org.tw/"
+    }
+  },
+  {
+    "id": "76e7088d24942435",
+    "sourceSequenceNumber": "17",
+    "districtName": "大同區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市大龍養護中心",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "5",
+    "fullTimeResidentialBeds": 5,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "1",
+    "emergencyShortTermPlacementBeds": 1,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "5",
+        "quantity": 5,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "1",
+        "quantity": 1,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential",
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市大同區民族西路105號1-3樓",
+    "websiteRaw": "https://www.eden.org.tw/branches_detail.php?detailId=JCU5OCMh&rePageUrl=L2JyYW5jaGVzLnBocD8mY2l0eV9pZD0xJnRlYW1faWQ9NA%3D%3D",
+    "website": "https://www.eden.org.tw/branches_detail.php?detailId=JCU5OCMh&rePageUrl=L2JyYW5jaGVzLnBocD8mY2l0eV9pZD0xJnRlYW1faWQ9NA%3D%3D",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市大同區民族西路105號1-3樓 臺北市大龍養護中心",
+    "sourceValues": {
+      "序號": "17",
+      "行政區": "大同區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市大龍養護中心",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "5",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "1",
+      "地址": "臺北市大同區民族西路105號1-3樓",
+      "網址": "https://www.eden.org.tw/branches_detail.php?detailId=JCU5OCMh&rePageUrl=L2JyYW5jaGVzLnBocD8mY2l0eV9pZD0xJnRlYW1faWQ9NA%3D%3D"
+    }
+  },
+  {
+    "id": "6f62cf2e7e0adc2e",
+    "sourceSequenceNumber": "18",
+    "districtName": "士林區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市永福之家",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "4",
+    "fullTimeResidentialBeds": 4,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "2",
+    "emergencyShortTermPlacementBeds": 2,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "4",
+        "quantity": 4,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential",
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市士林區莊頂路2號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市士林區莊頂路2號 臺北市永福之家",
+    "sourceValues": {
+      "序號": "18",
+      "行政區": "士林區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市永福之家",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "4",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "2",
+      "地址": "臺北市士林區莊頂路2號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "67b3cb5fb853362a",
+    "sourceSequenceNumber": "19",
+    "districtName": "士林區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立聖安娜之家",
+    "institutionTypeRaw": "日間服務 住宿服務",
+    "institutionType": "日間服務 住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市士林區士林區中山北路7段181巷1號",
+    "websiteRaw": "http://www.stanneshome.org.tw/",
+    "website": "http://www.stanneshome.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市士林區士林區中山北路7段181巷1號 臺北市私立聖安娜之家",
+    "sourceValues": {
+      "序號": "19",
+      "行政區": "士林區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立聖安娜之家",
+      "機構類型": "日間服務 住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市士林區士林區中山北路7段181巷1號",
+      "網址": "http://www.stanneshome.org.tw/"
+    }
+  },
+  {
+    "id": "77a473ae41c7e79e",
+    "sourceSequenceNumber": "20",
+    "districtName": "北投區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立育成裕民發展中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市北投區裕民一路41巷2弄18號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市北投區裕民一路41巷2弄18號 臺北市私立育成裕民發展中心",
+    "sourceValues": {
+      "序號": "20",
+      "行政區": "北投區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立育成裕民發展中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市北投區裕民一路41巷2弄18號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "28f858b2696f29fe",
+    "sourceSequenceNumber": "21",
+    "districtName": "中山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立陽光重建中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "41",
+    "adultDayCareBeds": 41,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "41",
+        "quantity": 41,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中山區南京東路3段91號3樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中山區南京東路3段91號3樓 臺北市私立陽光重建中心",
+    "sourceValues": {
+      "序號": "21",
+      "行政區": "中山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立陽光重建中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "41",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中山區南京東路3段91號3樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "da15fb875ce39ed0",
+    "sourceSequenceNumber": "22",
+    "districtName": "萬華區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立育仁啟能中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "4",
+    "adultDayCareBeds": 4,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "4",
+        "quantity": 4,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市萬華區柳州街41號4樓",
+    "websiteRaw": "http://www.kjswf.org.tw",
+    "website": "http://www.kjswf.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市萬華區柳州街41號4樓 臺北市私立育仁啟能中心",
+    "sourceValues": {
+      "序號": "22",
+      "行政區": "萬華區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立育仁啟能中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "4",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市萬華區柳州街41號4樓",
+      "網址": "http://www.kjswf.org.tw"
+    }
+  },
+  {
+    "id": "1ac602773bebee91",
+    "sourceSequenceNumber": "23",
+    "districtName": "萬華區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立育仁兒童發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市萬華區萬大路387巷15號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市萬華區萬大路387巷15號 臺北市私立育仁兒童發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "23",
+      "行政區": "萬華區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立育仁兒童發展中心(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市萬華區萬大路387巷15號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "acb00b63b6feb7c8",
+    "sourceSequenceNumber": "24",
+    "districtName": "中正區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立創世清寒植物人安養院",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "2",
+    "fullTimeResidentialBeds": 2,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中正區北平東路28號2樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中正區北平東路28號2樓 臺北市私立創世清寒植物人安養院",
+    "sourceValues": {
+      "序號": "24",
+      "行政區": "中正區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立創世清寒植物人安養院",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "2",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中正區北平東路28號2樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "fb3838b69954962b",
+    "sourceSequenceNumber": "25",
+    "districtName": "中山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立心路兒童發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "1",
+    "earlyInterventionDayCareBeds": 1,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "1",
+        "quantity": 1,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "early_intervention_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中山區復興北路232號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中山區復興北路232號 臺北市私立心路兒童發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "25",
+      "行政區": "中山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立心路兒童發展中心(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "1",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中山區復興北路232號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "9d9c93d9d878f9ff",
+    "sourceSequenceNumber": "26",
+    "districtName": "信義區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立第一兒童發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "9",
+    "earlyInterventionDayCareBeds": 9,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "9",
+        "quantity": 9,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "early_intervention_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市信義區信義路5段150巷316號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市信義區信義路5段150巷316號 臺北市私立第一兒童發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "26",
+      "行政區": "信義區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立第一兒童發展中心(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "9",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市信義區信義路5段150巷316號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "093f15a9bcfedc69",
+    "sourceSequenceNumber": "27",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立心路社區家園",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區福興路63巷4弄29號",
+    "websiteRaw": "http://web.syinlu.org.tw/",
+    "website": "http://web.syinlu.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區福興路63巷4弄29號 臺北市私立心路社區家園",
+    "sourceValues": {
+      "序號": "27",
+      "行政區": "文山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立心路社區家園",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區福興路63巷4弄29號",
+      "網址": "http://web.syinlu.org.tw/"
+    }
+  },
+  {
+    "id": "7b7ba59d594cc915",
+    "sourceSequenceNumber": "28",
+    "districtName": "士林區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立自立社區學園",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市士林區德行西路93巷7號B1-1",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市士林區德行西路93巷7號B1-1 臺北市私立自立社區學園",
+    "sourceValues": {
+      "序號": "28",
+      "行政區": "士林區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立自立社區學園",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市士林區德行西路93巷7號B1-1",
+      "網址": ""
+    }
+  },
+  {
+    "id": "aa2bb83a8543a6cc",
+    "sourceSequenceNumber": "29",
+    "districtName": "內湖區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立婦幼家園(兼辦早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "3",
+    "earlyInterventionDayCareBeds": 3,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "3",
+        "quantity": 3,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "early_intervention_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市內湖區民權東路六段180巷42弄6號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市內湖區民權東路六段180巷42弄6號 臺北市私立婦幼家園(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "29",
+      "行政區": "內湖區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立婦幼家園(兼辦早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "3",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市內湖區民權東路六段180巷42弄6號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "aea05ee64cfd0fd9",
+    "sourceSequenceNumber": "30",
+    "districtName": "北投區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立陽明養護中心",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市北投區公館路209巷18號",
+    "websiteRaw": "http://www.ymbt.org.tw",
+    "website": "http://www.ymbt.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市北投區公館路209巷18號 臺北市私立陽明養護中心",
+    "sourceValues": {
+      "序號": "30",
+      "行政區": "北投區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立陽明養護中心",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市北投區公館路209巷18號",
+      "網址": "http://www.ymbt.org.tw"
+    }
+  },
+  {
+    "id": "0d587030ca2d5fcd",
+    "sourceSequenceNumber": "31",
+    "districtName": "北投區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立至德聽語中心(提供早療服務)",
+    "institutionTypeRaw": "日間服務 早期療育",
+    "institutionType": "日間服務 早期療育",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市北投區振興街45號(健康大樓3樓)",
+    "websiteRaw": "http://hh1314.org.tw/",
+    "website": "http://hh1314.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市北投區振興街45號(健康大樓3樓) 臺北市私立至德聽語中心(提供早療服務)",
+    "sourceValues": {
+      "序號": "31",
+      "行政區": "北投區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立至德聽語中心(提供早療服務)",
+      "機構類型": "日間服務 早期療育",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市北投區振興街45號(健康大樓3樓)",
+      "網址": "http://hh1314.org.tw/"
+    }
+  },
+  {
+    "id": "0d6ac67a70dd1f3b",
+    "sourceSequenceNumber": "32",
+    "districtName": "北投區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立彩虹村家園",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "1",
+    "fullTimeResidentialBeds": 1,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "1",
+        "quantity": 1,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市北投區泉源路華南巷18號1樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市北投區泉源路華南巷18號1樓 臺北市私立彩虹村家園",
+    "sourceValues": {
+      "序號": "32",
+      "行政區": "北投區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立彩虹村家園",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "1",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市北投區泉源路華南巷18號1樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "994aa530552b8fcb",
+    "sourceSequenceNumber": "33",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立文山創世清寒植物人安養院",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "49",
+    "fullTimeResidentialBeds": 49,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "49",
+        "quantity": 49,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區萬和街6、8號5樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區萬和街6、8號5樓 臺北市私立文山創世清寒植物人安養院",
+    "sourceValues": {
+      "序號": "33",
+      "行政區": "文山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立文山創世清寒植物人安養院",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "49",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區萬和街6、8號5樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "55cd3dada5f1b043",
+    "sourceSequenceNumber": "34",
+    "districtName": "信義區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立永愛發展中心",
+    "institutionTypeRaw": "住宿/日間照顧服務",
+    "institutionType": "住宿/日間照顧服務",
+    "adultDayCareRaw": "2",
+    "adultDayCareBeds": 2,
+    "fullTimeResidentialRaw": "3",
+    "fullTimeResidentialBeds": 3,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "3",
+        "quantity": 3,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care",
+      "full_time_residential"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市信義區信義路5段150巷316號3-6樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市信義區信義路5段150巷316號3-6樓 臺北市私立永愛發展中心",
+    "sourceValues": {
+      "序號": "34",
+      "行政區": "信義區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立永愛發展中心",
+      "機構類型": "住宿/日間照顧服務",
+      "成人日間照顧床位數量": "2",
+      "全日型住宿床位數量": "3",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市信義區信義路5段150巷316號3-6樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "57c9c949149e4ba0",
+    "sourceSequenceNumber": "35",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立世美家園",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "12",
+    "adultDayCareBeds": 12,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "12",
+        "quantity": 12,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區萬芳路51號",
+    "websiteRaw": "http://www.yko.com.tw/",
+    "website": "http://www.yko.com.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區萬芳路51號 臺北市私立世美家園",
+    "sourceValues": {
+      "序號": "35",
+      "行政區": "文山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立世美家園",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "12",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區萬芳路51號",
+      "網址": "http://www.yko.com.tw/"
+    }
+  },
+  {
+    "id": "0c3605c8cda717b3",
+    "sourceSequenceNumber": "36",
+    "districtName": "松山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立八德服務中心",
+    "institutionTypeRaw": "開放式服務",
+    "institutionType": "開放式服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市松山區八德路3段155巷4弄35號",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市松山區八德路3段155巷4弄35號 臺北市私立八德服務中心",
+    "sourceValues": {
+      "序號": "36",
+      "行政區": "松山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立八德服務中心",
+      "機構類型": "開放式服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市松山區八德路3段155巷4弄35號",
+      "網址": ""
+    }
+  },
+  {
+    "id": "e842b6370af8ad54",
+    "sourceSequenceNumber": "37",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "臺北市私立活泉之家",
+    "institutionTypeRaw": "開放式服務",
+    "institutionType": "開放式服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區萬美街1段55號3樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區萬美街1段55號3樓 臺北市私立活泉之家",
+    "sourceValues": {
+      "序號": "37",
+      "行政區": "文山區",
+      "屬性": "私立",
+      "機構名稱": "臺北市私立活泉之家",
+      "機構類型": "開放式服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區萬美街1段55號3樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "5bbde8f99ddb50a9",
+    "sourceSequenceNumber": "38",
+    "districtName": "松山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市慈祐發展中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "7",
+    "adultDayCareBeds": 7,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "7",
+        "quantity": 7,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市松山區八德路4段688號3-4樓",
+    "websiteRaw": "http://www.ican.org.tw",
+    "website": "http://www.ican.org.tw/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市松山區八德路4段688號3-4樓 臺北市慈祐發展中心",
+    "sourceValues": {
+      "序號": "38",
+      "行政區": "松山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市慈祐發展中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "7",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市松山區八德路4段688號3-4樓",
+      "網址": "http://www.ican.org.tw"
+    }
+  },
+  {
+    "id": "eb58682cac0a91c7",
+    "sourceSequenceNumber": "39",
+    "districtName": "大同區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市大同發展中心(兼辦早療服務)",
+    "institutionTypeRaw": "早療服務 日間服務",
+    "institutionType": "早療服務 日間服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市大同區昌吉街52號6-7樓",
+    "websiteRaw": "https://www.facebook.com/taipeiDaTong/",
+    "website": "https://www.facebook.com/taipeiDaTong/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市大同區昌吉街52號6-7樓 臺北市大同發展中心(兼辦早療服務)",
+    "sourceValues": {
+      "序號": "39",
+      "行政區": "大同區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市大同發展中心(兼辦早療服務)",
+      "機構類型": "早療服務 日間服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市大同區昌吉街52號6-7樓",
+      "網址": "https://www.facebook.com/taipeiDaTong/"
+    }
+  },
+  {
+    "id": "3767d37169dc3871",
+    "sourceSequenceNumber": "40",
+    "districtName": "信義區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市政府社會局委託經營管理臺北市信義身障社區長照機構(日間照顧)",
+    "institutionTypeRaw": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "institutionType": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "adultDayCareRaw": "16",
+    "adultDayCareBeds": 16,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "16",
+        "quantity": 16,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市信義區信義路5段15號5樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市信義區信義路5段15號5樓 臺北市政府社會局委託經營管理臺北市信義身障社區長照機構(日間照顧)",
+    "sourceValues": {
+      "序號": "40",
+      "行政區": "信義區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市政府社會局委託經營管理臺北市信義身障社區長照機構(日間照顧)",
+      "機構類型": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+      "成人日間照顧床位數量": "16",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市信義區信義路5段15號5樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "4ddba595f5c2fa59",
+    "sourceSequenceNumber": "41",
+    "districtName": "松山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市政府社會局委託經營管理臺北市民生身障社區長照機構(日間照顧)",
+    "institutionTypeRaw": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "institutionType": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "adultDayCareRaw": "27",
+    "adultDayCareBeds": 27,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "27",
+        "quantity": 27,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市松山區民生東路5段163之1號7樓",
+    "websiteRaw": "https://www.eden.org.tw/branches_detail.php?detailId=JCUyNDMjIQ==&rePageUrl=L2JyYW5jaGVzLnBocD8mcGFnZT0xMA%3D%3D",
+    "website": "https://www.eden.org.tw/branches_detail.php?detailId=JCUyNDMjIQ==&rePageUrl=L2JyYW5jaGVzLnBocD8mcGFnZT0xMA%3D%3D",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市松山區民生東路5段163之1號7樓 臺北市政府社會局委託經營管理臺北市民生身障社區長照機構(日間照顧)",
+    "sourceValues": {
+      "序號": "41",
+      "行政區": "松山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市政府社會局委託經營管理臺北市民生身障社區長照機構(日間照顧)",
+      "機構類型": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+      "成人日間照顧床位數量": "27",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市松山區民生東路5段163之1號7樓",
+      "網址": "https://www.eden.org.tw/branches_detail.php?detailId=JCUyNDMjIQ==&rePageUrl=L2JyYW5jaGVzLnBocD8mcGFnZT0xMA%3D%3D"
+    }
+  },
+  {
+    "id": "a5d8b38be6b47137",
+    "sourceSequenceNumber": "42",
+    "districtName": "松山區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "財團法人喜憨兒社會福利基金會附設臺北市私立松山身障社區長照機構(日間照顧)",
+    "institutionTypeRaw": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "institutionType": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "adultDayCareRaw": "14",
+    "adultDayCareBeds": 14,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "14",
+        "quantity": 14,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市松山區南京東路5段356號6樓之2",
+    "websiteRaw": "http://www.c-are-us.org.tw/social_service/daytime_service/72",
+    "website": "http://www.c-are-us.org.tw/social_service/daytime_service/72",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市松山區南京東路5段356號6樓之2 財團法人喜憨兒社會福利基金會附設臺北市私立松山身障社區長照機構(日間照顧)",
+    "sourceValues": {
+      "序號": "42",
+      "行政區": "松山區",
+      "屬性": "私立",
+      "機構名稱": "財團法人喜憨兒社會福利基金會附設臺北市私立松山身障社區長照機構(日間照顧)",
+      "機構類型": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+      "成人日間照顧床位數量": "14",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市松山區南京東路5段356號6樓之2",
+      "網址": "http://www.c-are-us.org.tw/social_service/daytime_service/72"
+    }
+  },
+  {
+    "id": "80bed4edc01f2f56",
+    "sourceSequenceNumber": "43",
+    "districtName": "士林區",
+    "organizationAttributeRaw": "私立",
+    "organizationAttribute": "私立",
+    "institutionName": "財團法人廣青文教基金會附設臺北市私立士林身障社區長照機構(日間照顧)",
+    "institutionTypeRaw": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "institutionType": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "adultDayCareRaw": "5",
+    "adultDayCareBeds": 5,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "5",
+        "quantity": 5,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市士林區後港街189號1樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市士林區後港街189號1樓 財團法人廣青文教基金會附設臺北市私立士林身障社區長照機構(日間照顧)",
+    "sourceValues": {
+      "序號": "43",
+      "行政區": "士林區",
+      "屬性": "私立",
+      "機構名稱": "財團法人廣青文教基金會附設臺北市私立士林身障社區長照機構(日間照顧)",
+      "機構類型": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+      "成人日間照顧床位數量": "5",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市士林區後港街189號1樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "8b01137b97356689",
+    "sourceSequenceNumber": "44",
+    "districtName": "中山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市政府社會局委託財團法人喜憨兒社會福利基金會經營管理中山身障社區長照機構(日間照顧)",
+    "institutionTypeRaw": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "institutionType": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+    "adultDayCareRaw": "20",
+    "adultDayCareBeds": 20,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "20",
+        "quantity": 20,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "adult_day_care"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中山區長安西路5巷2號4樓",
+    "websiteRaw": "https://www.c-are-us.org.tw/social_service/daytime_service/72",
+    "website": "https://www.c-are-us.org.tw/social_service/daytime_service/72",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中山區長安西路5巷2號4樓 臺北市政府社會局委託財團法人喜憨兒社會福利基金會經營管理中山身障社區長照機構(日間照顧)",
+    "sourceValues": {
+      "序號": "44",
+      "行政區": "中山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市政府社會局委託財團法人喜憨兒社會福利基金會經營管理中山身障社區長照機構(日間照顧)",
+      "機構類型": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+      "成人日間照顧床位數量": "20",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中山區長安西路5巷2號4樓",
+      "網址": "https://www.c-are-us.org.tw/social_service/daytime_service/72"
+    }
+  },
+  {
+    "id": "a9d6e23b90a08004",
+    "sourceSequenceNumber": "45",
+    "districtName": "中正區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市南海發展中心",
+    "institutionTypeRaw": "日間服務",
+    "institutionType": "日間服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市中正區延平南路207號1樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市中正區延平南路207號1樓 臺北市南海發展中心",
+    "sourceValues": {
+      "序號": "45",
+      "行政區": "中正區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市南海發展中心",
+      "機構類型": "日間服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市中正區延平南路207號1樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "a791afa9258ea12b",
+    "sourceSequenceNumber": "46",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市興隆團體家庭",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "0",
+    "fullTimeResidentialBeds": 0,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "4",
+    "nightResidentialBeds": 4,
+    "emergencyShortTermPlacementRaw": "2",
+    "emergencyShortTermPlacementBeds": 2,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "4",
+        "quantity": 4,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "2",
+        "quantity": 2,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "night_residential",
+      "emergency_short_term_placement"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區木柵路2段138巷33號3樓",
+    "websiteRaw": "",
+    "website": null,
+    "hasAddress": true,
+    "hasWebsite": false,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區木柵路2段138巷33號3樓 臺北市興隆團體家庭",
+    "sourceValues": {
+      "序號": "46",
+      "行政區": "文山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市興隆團體家庭",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "0",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "4",
+      "緊急短期安置床位數量": "2",
+      "地址": "臺北市文山區木柵路2段138巷33號3樓",
+      "網址": ""
+    }
+  },
+  {
+    "id": "a17bdc9636d34f13",
+    "sourceSequenceNumber": "47",
+    "districtName": "文山區",
+    "organizationAttributeRaw": "公設民營",
+    "organizationAttribute": "公設民營",
+    "institutionName": "臺北市興隆照顧中心",
+    "institutionTypeRaw": "住宿服務",
+    "institutionType": "住宿服務",
+    "adultDayCareRaw": "0",
+    "adultDayCareBeds": 0,
+    "fullTimeResidentialRaw": "1",
+    "fullTimeResidentialBeds": 1,
+    "earlyInterventionDayCareRaw": "0",
+    "earlyInterventionDayCareBeds": 0,
+    "nightResidentialRaw": "0",
+    "nightResidentialBeds": 0,
+    "emergencyShortTermPlacementRaw": "0",
+    "emergencyShortTermPlacementBeds": 0,
+    "serviceCapacities": [
+      {
+        "serviceType": "adult_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "full_time_residential",
+        "sourceRaw": "1",
+        "quantity": 1,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "early_intervention_day_care",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "night_residential",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      },
+      {
+        "serviceType": "emergency_short_term_placement",
+        "sourceRaw": "0",
+        "quantity": 0,
+        "valueMeaning": "capacity"
+      }
+    ],
+    "supportedServiceTypes": [
+      "full_time_residential"
+    ],
+    "vacancyStatusRaw": "",
+    "sourceRecordDate": null,
+    "address": "臺北市文山區興隆路4段105巷45號2樓",
+    "websiteRaw": "https://www.facebook.com/276461929214711/",
+    "website": "https://www.facebook.com/276461929214711/",
+    "hasAddress": true,
+    "hasWebsite": true,
+    "hasAnyServiceCapacity": true,
+    "externalMapQuery": "臺北市文山區興隆路4段105巷45號2樓 臺北市興隆照顧中心",
+    "sourceValues": {
+      "序號": "47",
+      "行政區": "文山區",
+      "屬性": "公設民營",
+      "機構名稱": "臺北市興隆照顧中心",
+      "機構類型": "住宿服務",
+      "成人日間照顧床位數量": "0",
+      "全日型住宿床位數量": "1",
+      "早療日間照顧": "0",
+      "夜間型住宿床位數量": "0",
+      "緊急短期安置床位數量": "0",
+      "地址": "臺北市文山區興隆路4段105巷45號2樓",
+      "網址": "https://www.facebook.com/276461929214711/"
+    }
+  }
+]

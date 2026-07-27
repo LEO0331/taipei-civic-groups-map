@@ -145,6 +145,12 @@ Child medical subsidy contracted providers remain the separate `child_medical_su
 
 The dataset has no official coordinates. The map uses Taipei district centroid bubbles only for Taipei records; outside-Taipei areas remain in summaries and the directory. The module does not claim real-time clinic hours, appointment availability, subsidy eligibility, subsidy amount, fees, medical advice, pediatric care advice, service-quality ranking, emergency service, real-time operating status, or official endorsement.
 
+## Disability institution service capacity records / 身心障礙機構服務容量資料
+
+`disability_institution_capacity_and_vacancies` presents the public source as a local, searchable directory of disability institutions, service models, and source-recorded bed quantities. The source's five service fields are labelled as bed quantities, so the dashboard labels them as capacity records rather than real-time vacancies or availability.
+
+It supports district, institution type, organizational attribute, service-model, website, and source-quantity filters; summary cards and charts; raw-source inspection; CSV export; website links; and external map lookup. Addresses are not geocoded and the module creates no exact map markers. The data must not be used to confirm an available bed, admission, eligibility, waiting-list status, service quality, medical need, urgency, or official recommendation; users must confirm current details directly with the institution or competent authority.
+
 ## Additional module: Denture Subsidy Medical Providers / 假牙補助醫療院所名單
 
 Denture subsidy medical providers remain the separate `denture_subsidy_medical_providers` elderly-welfare and healthcare-subsidy public-record module. The Big5/CP950 CSV includes subsidy type, area, provider name, address, and contact phone. Conversion decodes Big5 first with UTF-8-SIG fallback, preserves hospital branch names, parses Taipei districts and road names, classifies phone values, and reports duplicate provider names, addresses, phones, and fallback keys.

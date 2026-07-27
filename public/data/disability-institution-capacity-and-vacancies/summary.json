@@ -1,0 +1,160 @@
+{
+  "updatedAt": "2026-07-27T07:35:03.699Z",
+  "totalRecords": 47,
+  "uniqueInstitutions": 47,
+  "districtsCovered": 12,
+  "institutionTypes": 10,
+  "recordsWithWebsite": 19,
+  "recordsWithSourceQuantity": 47,
+  "byDistrict": [
+    {
+      "label": "文山區",
+      "value": 9
+    },
+    {
+      "label": "士林區",
+      "value": 6
+    },
+    {
+      "label": "北投區",
+      "value": 5
+    },
+    {
+      "label": "中正區",
+      "value": 5
+    },
+    {
+      "label": "信義區",
+      "value": 5
+    },
+    {
+      "label": "中山區",
+      "value": 4
+    },
+    {
+      "label": "松山區",
+      "value": 4
+    },
+    {
+      "label": "南港區",
+      "value": 2
+    },
+    {
+      "label": "內湖區",
+      "value": 2
+    },
+    {
+      "label": "大同區",
+      "value": 2
+    },
+    {
+      "label": "萬華區",
+      "value": 2
+    },
+    {
+      "label": "中和區",
+      "value": 1
+    }
+  ],
+  "byInstitutionType": [
+    {
+      "label": "住宿服務",
+      "value": 16
+    },
+    {
+      "label": "日間服務 早期療育",
+      "value": 8
+    },
+    {
+      "label": "日間服務",
+      "value": 8
+    },
+    {
+      "label": "服務項目： 1、身體及生活照顧服務。 2、協助及促進自我照顧能力。 3、辦理預防及延緩失能程度惡化之各項活動。 4、輔具衛教及操作指導。 5、臨時及短期照顧或喘息服務。 6、提供維護服務對象及其家庭照顧者各項權益措施、個案照顧管理及健康福利諮詢。 7、依個案或家屬需求提供或連結交通接送服務。 8、其他長期照顧服務項目。",
+      "value": 5
+    },
+    {
+      "label": "住宿服務 日間服務",
+      "value": 2
+    },
+    {
+      "label": "住宿/日間照顧服務",
+      "value": 2
+    },
+    {
+      "label": "日間服務 住宿服務",
+      "value": 2
+    },
+    {
+      "label": "開放式服務",
+      "value": 2
+    },
+    {
+      "label": "基河：日間服務(敬業三路160號)",
+      "value": 1
+    },
+    {
+      "label": "早療服務 日間服務",
+      "value": 1
+    }
+  ],
+  "byAttribute": [
+    {
+      "label": "公設民營",
+      "value": 25
+    },
+    {
+      "label": "私立",
+      "value": 21
+    },
+    {
+      "label": "公立",
+      "value": 1
+    }
+  ],
+  "byServiceModel": [
+    {
+      "label": "adult_day_care",
+      "value": 14
+    },
+    {
+      "label": "full_time_residential",
+      "value": 11
+    },
+    {
+      "label": "emergency_short_term_placement",
+      "value": 7
+    },
+    {
+      "label": "early_intervention_day_care",
+      "value": 5
+    },
+    {
+      "label": "night_residential",
+      "value": 1
+    }
+  ],
+  "quantitiesByServiceModel": [
+    {
+      "label": "adult_day_care",
+      "value": 184
+    },
+    {
+      "label": "full_time_residential",
+      "value": 107
+    },
+    {
+      "label": "early_intervention_day_care",
+      "value": 21
+    },
+    {
+      "label": "night_residential",
+      "value": 4
+    },
+    {
+      "label": "emergency_short_term_placement",
+      "value": 14
+    }
+  ],
+  "fieldMeaning": "capacity"
+}

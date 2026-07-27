@@ -93,6 +93,7 @@ import PsychiatricClinicsModule from './PsychiatricClinicsModule';
 import LicensedAssistedReproductionInstitutionsModule from './LicensedAssistedReproductionInstitutionsModule';
 import ChildYouthResidentialPlacementInstitutionsModule from './ChildYouthResidentialPlacementInstitutionsModule';
 import ChildYouthFriendlyWelfareServiceSitesModule from './ChildYouthFriendlyWelfareServiceSitesModule';
+import DisabilityInstitutionCapacityAndVacanciesModule from './DisabilityInstitutionCapacityAndVacanciesModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -733,7 +734,8 @@ export default function App() {
   tabs.splice(1, 0, ['seniorGroupMealServiceSites', language === 'zh' ? '老人共餐單位' : 'Senior Group Meal Service Sites']);
   tabs.splice(2, 0, ['childYouthFriendlyWelfareServiceSites', language === 'zh' ? '兒少友善福利服務據點' : 'Child and Youth Friendly Welfare Service Sites']);
   tabs.splice(2, 0, ['publicPneumococcalVaccineProviders', language === 'zh' ? '公費肺炎鏈球菌疫苗院所' : 'Pneumococcal Vaccine Providers']);
-  tabs.splice(3, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
+  tabs.splice(3, 0, ['disabilityInstitutionCapacityAndVacancies', language === 'zh' ? '身心障礙機構服務容量資料' : 'Disability Institution Service Capacity Records']);
+  tabs.splice(4, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
   tabs.splice(4, 0, ['earlyInterventionMedicalProviders', language === 'zh' ? '早期療育醫療院所' : 'Early Intervention Providers']);
   tabs.splice(5, 0, ['generalDentalMedicalInstitutions', language === 'zh' ? '牙醫一般科醫療機構' : 'General Dental Institutions']);
   tabs.splice(6, 0, ['diabetesSharedCareMedicalInstitutions', language === 'zh' ? '糖尿病共照網醫事機構' : 'Diabetes Shared Care Institutions']);
@@ -850,6 +852,7 @@ export default function App() {
       {tab === 'licensedAssistedReproductionInstitutions' && <LicensedAssistedReproductionInstitutionsModule language={language} />}
       {tab === 'childYouthResidentialPlacementInstitutions' && <ChildYouthResidentialPlacementInstitutionsModule language={language} />}
       {tab === 'childYouthFriendlyWelfareServiceSites' && <ChildYouthFriendlyWelfareServiceSitesModule language={language} />}
+      {tab === 'disabilityInstitutionCapacityAndVacancies' && <DisabilityInstitutionCapacityAndVacanciesModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

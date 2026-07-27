@@ -6104,5 +6104,43 @@
       "Only http and https links are exposed.",
       "No coordinates, geocoding, or exact map markers are created."
     ]
+  },
+  "psychiatricClinics": {
+    "headers": [
+      "序號",
+      "行政區域代碼",
+      "診所名稱",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 86,
+    "dup": [],
+    "missingName": [],
+    "missingAddress": [],
+    "missingPhone": [
+      70
+    ],
+    "badPhone": [],
+    "badCode": [],
+    "conflict": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "notes": [
+      "No coordinates or geocoding.",
+      "No mental-health profiling or recommendations."
+    ]
   }
 }

@@ -1,0 +1,58 @@
+{
+  "totalRecords": 86,
+  "uniqueClinicNames": 86,
+  "districtsCovered": 11,
+  "completeAddressRecords": 86,
+  "recordsWithPhones": 85,
+  "validDistrictCodes": 86,
+  "districtWithMostClinics": "中正區",
+  "byDistrict": [
+    {
+      "label": "中正區",
+      "value": 21
+    },
+    {
+      "label": "大安區",
+      "value": 19
+    },
+    {
+      "label": "松山區",
+      "value": 10
+    },
+    {
+      "label": "士林區",
+      "value": 8
+    },
+    {
+      "label": "信義區",
+      "value": 8
+    },
+    {
+      "label": "內湖區",
+      "value": 5
+    },
+    {
+      "label": "北投區",
+      "value": 5
+    },
+    {
+      "label": "文山區",
+      "value": 4
+    },
+    {
+      "label": "萬華區",
+      "value": 3
+    },
+    {
+      "label": "大同區",
+      "value": 2
+    },
+    {
+      "label": "南港區",
+      "value": 1
+    }
+  ],
+  "sourceFileUpdatedAt": "2026-06-16 10:30:06",
+  "metadataUpdatedAt": "2026-07-13 15:55:04",
+  "sourceUrl": "https://data.taipei/api/dataset/ee6c8acd-9a5f-4551-9686-88bf98f3541c/resource/4ab4665d-e17b-4ec7-9189-c49e8564f955/download"
+}

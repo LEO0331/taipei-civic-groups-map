@@ -131,6 +131,8 @@
     "data:convert:obstetrics-gynecology-institutions": "tsx scripts/convertObstetricsGynecologyInstitutions.ts",
     "data:fetch:arts-cultural-venues": "tsx scripts/fetchArtsCulturalVenues.ts",
     "data:convert:arts-cultural-venues": "tsx scripts/convertArtsCulturalVenues.ts",
+    "data:fetch:psychiatric-clinics": "tsx scripts/fetchPsychiatricClinics.ts",
+    "data:convert:psychiatric-clinics": "tsx scripts/convertPsychiatricClinics.ts",
     "data:fetch:cosmetic-medicine-supervision-2024": "tsx scripts/fetchCosmeticMedicineSupervision2024.ts",
     "data:convert:cosmetic-medicine-supervision-2024": "tsx scripts/convertCosmeticMedicineSupervision2024.ts",
     "data:convert:child-medical-subsidy-providers": "tsx scripts/convertChildMedicalSubsidyContractedProviders.ts && tsx scripts/buildChildMedicalSubsidyContractedProviderSummary.ts",

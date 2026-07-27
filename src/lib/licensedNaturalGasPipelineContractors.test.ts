@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { parseApprovalDate, parseNaturalGasContractorCoordinates } from './licensedNaturalGasPipelineContractors';
+
+test('converts verified TWD97 TM2 121 coordinates', () => { const point = parseNaturalGasContractorCoordinates('308998.121', '2773514.468'); assert.equal(point.coordinateSystem, 'twd97_tm2_121'); assert.equal(point.hasValidCoordinates, true); assert.ok(point.longitude! > 121.5 && point.longitude! < 121.7); assert.ok(point.latitude! > 25 && point.latitude! < 25.2); });
+test('accepts validated WGS84 and rejects missing, swapped, and out-of-range coordinates', () => { assert.equal(parseNaturalGasContractorCoordinates('121.55', '25.05').hasValidCoordinates, true); assert.equal(parseNaturalGasContractorCoordinates('', '').hasValidCoordinates, false); assert.equal(parseNaturalGasContractorCoordinates('2773514.468', '308998.121').hasValidCoordinates, false); assert.equal(parseNaturalGasContractorCoordinates('250000', '2700000').hasValidCoordinates, false); });
+test('parses complete ROC or Gregorian approval dates only', () => { assert.deepEqual(parseApprovalDate('1001209'), { approvalDate: '2011-12-09', approvalYear: 2011 }); assert.deepEqual(parseApprovalDate('20250102'), { approvalDate: '2025-01-02', approvalYear: 2025 }); assert.deepEqual(parseApprovalDate('10012'), { approvalDate: null, approvalYear: null }); });

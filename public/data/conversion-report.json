@@ -5851,5 +5851,47 @@
       "Official city and district fields are preserved without address-based replacement.",
       "No coordinates, automatic geocoding, or exact map markers are created."
     ]
+  },
+  "licensedNaturalGasPipelineContractors": {
+    "convertedAt": "2026-07-27T00:41:46.045Z",
+    "headers": [
+      "NAME",
+      "CERT",
+      "BAN_NO",
+      "SUMADDR",
+      "RNAME",
+      "ESTAB_DATE",
+      "ESTAB_NO",
+      "ADDR_X",
+      "ADDR_Y"
+    ],
+    "inputRows": 38,
+    "outputRecords": 38,
+    "duplicateRows": [],
+    "missingContractorName": [],
+    "missingLicenceNumber": [],
+    "malformedBusinessRegistrationNumber": [],
+    "missingAddress": [],
+    "unresolvedDistrict": [],
+    "malformedApprovalDate": [],
+    "invalidCoordinates": [],
+    "sameLicenceDifferentContractors": [],
+    "sameBusinessRegistrationDifferentNames": [],
+    "coordinateSystem": "TWD97 / TM2 zone 121 detected from source numeric ranges and converted to WGS84 only after Taipei-bound validation.",
+    "sourceCoordinateRange": {
+      "x": [
+        300208.29,
+        311858.831
+      ],
+      "y": [
+        2764176.453,
+        2779134
+      ]
+    },
+    "notes": [
+      "Licence and business-registration values are preserved as strings.",
+      "Approval dates are historical source records, not current-licence confirmation.",
+      "No pipeline routes, inferred work sites, service areas, or invalid-coordinate markers are created."
+    ]
   }
 }

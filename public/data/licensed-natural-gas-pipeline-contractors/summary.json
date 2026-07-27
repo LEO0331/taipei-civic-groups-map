@@ -1,0 +1,193 @@
+{
+  "totalRecords": 38,
+  "uniqueContractors": 38,
+  "uniqueLicenceNumbers": 38,
+  "uniqueBusinessRegistrationNumbers": 38,
+  "districtsCovered": 12,
+  "recordsWithParsedApprovalDates": 38,
+  "validMapLocations": 38,
+  "missingValidCoordinates": 0,
+  "earliestApprovalDate": "2011-11-07",
+  "latestApprovalDate": "2026-04-09",
+  "byDistrict": [
+    {
+      "label": "信義區",
+      "value": 12
+    },
+    {
+      "label": "內湖區",
+      "value": 4
+    },
+    {
+      "label": "士林區",
+      "value": 3
+    },
+    {
+      "label": "北投區",
+      "value": 3
+    },
+    {
+      "label": "松山區",
+      "value": 3
+    },
+    {
+      "label": "萬華區",
+      "value": 3
+    },
+    {
+      "label": "大安區",
+      "value": 2
+    },
+    {
+      "label": "中山區",
+      "value": 2
+    },
+    {
+      "label": "文山區",
+      "value": 2
+    },
+    {
+      "label": "南港區",
+      "value": 2
+    },
+    {
+      "label": "大同區",
+      "value": 1
+    },
+    {
+      "label": "中正區",
+      "value": 1
+    }
+  ],
+  "approvalsByYear": [
+    {
+      "label": "2012",
+      "value": 19
+    },
+    {
+      "label": "2024",
+      "value": 4
+    },
+    {
+      "label": "2011",
+      "value": 3
+    },
+    {
+      "label": "2016",
+      "value": 2
+    },
+    {
+      "label": "2018",
+      "value": 2
+    },
+    {
+      "label": "2021",
+      "value": 2
+    },
+    {
+      "label": "2026",
+      "value": 2
+    },
+    {
+      "label": "2015",
+      "value": 1
+    },
+    {
+      "label": "2017",
+      "value": 1
+    },
+    {
+      "label": "2020",
+      "value": 1
+    },
+    {
+      "label": "2022",
+      "value": 1
+    }
+  ],
+  "cumulativeApprovals": [
+    {
+      "label": "2011",
+      "value": 3
+    },
+    {
+      "label": "2012",
+      "value": 22
+    },
+    {
+      "label": "2015",
+      "value": 23
+    },
+    {
+      "label": "2016",
+      "value": 25
+    },
+    {
+      "label": "2017",
+      "value": 26
+    },
+    {
+      "label": "2018",
+      "value": 28
+    },
+    {
+      "label": "2020",
+      "value": 29
+    },
+    {
+      "label": "2021",
+      "value": 31
+    },
+    {
+      "label": "2022",
+      "value": 32
+    },
+    {
+      "label": "2024",
+      "value": 36
+    },
+    {
+      "label": "2026",
+      "value": 38
+    }
+  ],
+  "coordinateStatus": [
+    {
+      "label": "valid",
+      "value": 38
+    },
+    {
+      "label": "invalid",
+      "value": 0
+    }
+  ],
+  "licenceStatus": [
+    {
+      "label": "with_licence",
+      "value": 38
+    },
+    {
+      "label": "without_licence",
+      "value": 0
+    }
+  ],
+  "coordinateSystem": [
+    {
+      "label": "twd97_tm2_121",
+      "value": 38
+    }
+  ],
+  "sourceCoordinateRange": {
+    "x": [
+      300208.29,
+      311858.831
+    ],
+    "y": [
+      2764176.453,
+      2779134
+    ]
+  },
+  "sourceFileUpdatedAt": "2026-07-03 09:54:19",
+  "metadataUpdatedAt": "2026-07-06 14:28:03",
+  "sourceUrl": "https://data.taipei/api/dataset/3a7f9832-d020-4a6d-9b4d-6727fc149352/resource/e95e7e35-b812-48ba-ac72-71fdd76f2997/download"
+}

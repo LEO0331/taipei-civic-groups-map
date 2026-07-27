@@ -227,6 +227,8 @@ Plastic surgery medical institutions are provided by the separate `plastic_surge
 
 Taipei Indigenous Community Organizations are provided by the separate `indigenous_community_organizations` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=a955716f-54ba-425f-ac74-0600cfe50f21). It preserves the source city, district, city-code, postal-code, and address fields as static public records; it does not establish current activity, membership, services, cultural affiliation, public access, or recommendation.
 
+Licensed Natural Gas Pipeline Contractors are provided by the separate `licensed_natural_gas_pipeline_contractors` module, sourced from [Taipei Open Data](https://data.taipei/dataset/detail?id=3a7f9832-d020-4a6d-9b4d-6727fc149352). Source `ADDR_X`/`ADDR_Y` values are verified as TWD97 / TM2 zone 121-style and converted to WGS84 only when they pass Taipei bounds; markers are registered business-address references, not pipeline routes, worksites, coverage areas, licence-validity confirmation, or recommendations.
+
 The dataset has no coordinates. The map uses district centroid bubbles only, and the directory provides address-based Google Maps lookup links. Approved bed counts are source registry fields, not real-time vacancy. The module does not claim admission eligibility, fees, subsidy eligibility, care quality, recommendation, ranking, medical advice, long-term care advice, legal advice, or official endorsement.
 
 ## Additional module: Biotech Company Directory / 生技廠商企業名錄

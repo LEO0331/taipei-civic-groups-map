@@ -97,6 +97,7 @@ import DisabilityInstitutionCapacityAndVacanciesModule from './DisabilityInstitu
 import OphthalmologyInstitutionsModule from './OphthalmologyInstitutionsModule';
 import TaipeiCulturalHeritageAssetsModule from './TaipeiCulturalHeritageAssetsModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
+import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -741,6 +742,7 @@ export default function App() {
   tabs.splice(4, 0, ['ophthalmologyInstitutions', language === 'zh' ? '臺北市眼科醫療機構' : 'Taipei Ophthalmology Institutions']);
   tabs.splice(5, 0, ['taipeiCulturalHeritageAssets', language === 'zh' ? '臺北市文化資產' : 'Taipei Cultural Heritage Assets']);
   tabs.splice(6, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
+  tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(4, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
   tabs.splice(4, 0, ['earlyInterventionMedicalProviders', language === 'zh' ? '早期療育醫療院所' : 'Early Intervention Providers']);
   tabs.splice(5, 0, ['generalDentalMedicalInstitutions', language === 'zh' ? '牙醫一般科醫療機構' : 'General Dental Institutions']);
@@ -862,6 +864,7 @@ export default function App() {
       {tab === 'ophthalmologyInstitutions' && <OphthalmologyInstitutionsModule language={language} />}
       {tab === 'taipeiCulturalHeritageAssets' && <TaipeiCulturalHeritageAssetsModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
+      {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}
       {tab === 'pestControlBusinesses' && <PestControlBusinessesModule language={language} />}

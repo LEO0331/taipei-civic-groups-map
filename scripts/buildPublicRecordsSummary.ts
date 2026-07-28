@@ -175,5 +175,7 @@ publicSummary.modules.taipeiCulturalHeritageAssets = {
 };
 const hospicePalliativeCareInstitutions = await readDatasetSummary('hospice-palliative-care-institutions');
 publicSummary.modules.hospicePalliativeCareInstitutions = { recordCount: hospicePalliativeCareInstitutions.totalRecords, uniqueInstitutionNameCount: hospicePalliativeCareInstitutions.uniqueInstitutionNames, cityCount: hospicePalliativeCareInstitutions.cities, contractCategoryCount: hospicePalliativeCareInstitutions.contractCategories, recordsWithOfficialBedUsageLink: hospicePalliativeCareInstitutions.recordsWithBedUsageLinks };
+const privateSeniorCareInstitutions = await readDatasetSummary('private-senior-residential-long-term-care-institutions');
+publicSummary.modules.privateSeniorResidentialLongTermCareInstitutions = { recordCount: privateSeniorCareInstitutions.totalRecords, uniqueInstitutionCount: privateSeniorCareInstitutions.uniqueInstitutions, districtCount: privateSeniorCareInstitutions.districtsCovered, totalApprovedBeds: privateSeniorCareInstitutions.totalApprovedBeds, recordsWithValidCapacity: privateSeniorCareInstitutions.recordsWithValidCapacity };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

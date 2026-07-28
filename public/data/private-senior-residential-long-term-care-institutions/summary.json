@@ -1,0 +1,79 @@
+{
+  "updatedAt": "2026-07-28T02:50:03.581Z",
+  "totalRecords": 88,
+  "uniqueInstitutions": 88,
+  "districtsCovered": 12,
+  "institutionAttributes": 1,
+  "totalApprovedBeds": 3423,
+  "recordsWithValidCapacity": 88,
+  "byDistrict": [
+    {
+      "label": "北投區",
+      "value": 23
+    },
+    {
+      "label": "文山區",
+      "value": 11
+    },
+    {
+      "label": "大同區",
+      "value": 10
+    },
+    {
+      "label": "中山區",
+      "value": 9
+    },
+    {
+      "label": "士林區",
+      "value": 7
+    },
+    {
+      "label": "大安區",
+      "value": 6
+    },
+    {
+      "label": "內湖區",
+      "value": 6
+    },
+    {
+      "label": "萬華區",
+      "value": 6
+    },
+    {
+      "label": "松山區",
+      "value": 4
+    },
+    {
+      "label": "中正區",
+      "value": 3
+    },
+    {
+      "label": "信義區",
+      "value": 2
+    },
+    {
+      "label": "南港區",
+      "value": 1
+    }
+  ],
+  "byAttribute": [
+    {
+      "label": "私立",
+      "value": 88
+    }
+  ],
+  "byCareType": [
+    {
+      "label": "nursing_care",
+      "value": 86
+    },
+    {
+      "label": "long_term_care",
+      "value": 4
+    },
+    {
+      "label": "dementia_care",
+      "value": 1
+    }
+  ]
+}

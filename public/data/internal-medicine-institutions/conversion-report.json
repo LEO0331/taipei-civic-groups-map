@@ -1,0 +1,15 @@
+{
+  "internalMedicineInstitutions": {
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 225,
+    "notes": [
+      "No coordinates, appointments, capacity, or medical service details are supplied or inferred."
+    ]
+  }
+}

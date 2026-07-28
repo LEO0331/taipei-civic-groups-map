@@ -1,0 +1,1748 @@
+[
+  {
+    "id": "1",
+    "sourceSequenceNumber": "1",
+    "institutionName": "國立台灣大學醫學院附設醫院",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區中山南路7號",
+    "phoneRaw": "02 2312 3456",
+    "phoneNumbers": [
+      "02 2312 3456"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區中山南路7號 國立台灣大學醫學院附設醫院",
+    "sourceValues": {
+      "序號": "1",
+      "機構名稱": "國立台灣大學醫學院附設醫院",
+      "郵遞區號": "100",
+      "地址": "台北市中正區中山南路7號",
+      "電話": "02 2312 3456"
+    }
+  },
+  {
+    "id": "2",
+    "sourceSequenceNumber": "2",
+    "institutionName": "紹毅內兒科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區八德路一段52號",
+    "phoneRaw": "02 2393 0791",
+    "phoneNumbers": [
+      "02 2393 0791"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區八德路一段52號 紹毅內兒科診所",
+    "sourceValues": {
+      "序號": "2",
+      "機構名稱": "紹毅內兒科診所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區八德路一段52號",
+      "電話": "02 2393 0791"
+    }
+  },
+  {
+    "id": "3",
+    "sourceSequenceNumber": "3",
+    "institutionName": "柏安診所",
+    "postalCode": "100",
+    "districtName": "中山區",
+    "address": "台北市中山區長安東路二段88號10樓",
+    "phoneRaw": "(02)2501-9010",
+    "phoneNumbers": [
+      "(02)2501-9010"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區長安東路二段88號10樓 柏安診所",
+    "sourceValues": {
+      "序號": "3",
+      "機構名稱": "柏安診所",
+      "郵遞區號": "100",
+      "地址": "台北市中山區長安東路二段88號10樓",
+      "電話": "(02)2501-9010"
+    }
+  },
+  {
+    "id": "4",
+    "sourceSequenceNumber": "4",
+    "institutionName": "家禾診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區三元街217號",
+    "phoneRaw": "02 2333 1368",
+    "phoneNumbers": [
+      "02 2333 1368"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區三元街217號 家禾診所",
+    "sourceValues": {
+      "序號": "4",
+      "機構名稱": "家禾診所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區三元街217號",
+      "電話": "02 2333 1368"
+    }
+  },
+  {
+    "id": "6",
+    "sourceSequenceNumber": "6",
+    "institutionName": "醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區永綏街8號",
+    "phoneRaw": "?02 2311 1525",
+    "phoneNumbers": [
+      "?02 2311 1525"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區永綏街8號 醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+    "sourceValues": {
+      "序號": "6",
+      "機構名稱": "醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區永綏街8號",
+      "電話": "?02 2311 1525"
+    }
+  },
+  {
+    "id": "7",
+    "sourceSequenceNumber": "7",
+    "institutionName": "臺北市立聯合醫院",
+    "postalCode": "103",
+    "districtName": "",
+    "address": "臺北市鄭州路145號",
+    "phoneRaw": "(02)2552-3234",
+    "phoneNumbers": [
+      "(02)2552-3234"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": false,
+    "externalMapQuery": "臺北市鄭州路145號 臺北市立聯合醫院",
+    "sourceValues": {
+      "序號": "7",
+      "機構名稱": "臺北市立聯合醫院",
+      "郵遞區號": "103",
+      "地址": "臺北市鄭州路145號",
+      "電話": "(02)2552-3234"
+    }
+  },
+  {
+    "id": "8",
+    "sourceSequenceNumber": "8",
+    "institutionName": "和泰內科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區南京西路406號8樓",
+    "phoneRaw": "02 2559 0575",
+    "phoneNumbers": [
+      "02 2559 0575"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區南京西路406號8樓 和泰內科診所",
+    "sourceValues": {
+      "序號": "8",
+      "機構名稱": "和泰內科診所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區南京西路406號8樓",
+      "電話": "02 2559 0575"
+    }
+  },
+  {
+    "id": "9",
+    "sourceSequenceNumber": "9",
+    "institutionName": "佑佳內科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區承德路二段142號一樓",
+    "phoneRaw": "02 2557 5687",
+    "phoneNumbers": [
+      "02 2557 5687"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區承德路二段142號一樓 佑佳內科診所",
+    "sourceValues": {
+      "序號": "9",
+      "機構名稱": "佑佳內科診所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區承德路二段142號一樓",
+      "電話": "02 2557 5687"
+    }
+  },
+  {
+    "id": "10",
+    "sourceSequenceNumber": "10",
+    "institutionName": "喜聖診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區長安西路235號",
+    "phoneRaw": "?02 2559 5078",
+    "phoneNumbers": [
+      "?02 2559 5078"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區長安西路235號 喜聖診所",
+    "sourceValues": {
+      "序號": "10",
+      "機構名稱": "喜聖診所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區長安西路235號",
+      "電話": "?02 2559 5078"
+    }
+  },
+  {
+    "id": "11",
+    "sourceSequenceNumber": "11",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區中山北路二段92號",
+    "phoneRaw": "?02 2543 3535",
+    "phoneNumbers": [
+      "?02 2543 3535"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區中山北路二段92號 台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "sourceValues": {
+      "序號": "11",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+      "郵遞區號": "104",
+      "地址": "台北市中山區中山北路二段92號",
+      "電話": "?02 2543 3535"
+    }
+  },
+  {
+    "id": "12",
+    "sourceSequenceNumber": "12",
+    "institutionName": "宏林診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區民生西路6號",
+    "phoneRaw": "02 2561 8979",
+    "phoneNumbers": [
+      "02 2561 8979"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區民生西路6號 宏林診所",
+    "sourceValues": {
+      "序號": "12",
+      "機構名稱": "宏林診所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區民生西路6號",
+      "電話": "02 2561 8979"
+    }
+  },
+  {
+    "id": "13",
+    "sourceSequenceNumber": "13",
+    "institutionName": "柏安診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區長安東路二段88號10樓",
+    "phoneRaw": "02 2501 9010",
+    "phoneNumbers": [
+      "02 2501 9010"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區長安東路二段88號10樓 柏安診所",
+    "sourceValues": {
+      "序號": "13",
+      "機構名稱": "柏安診所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區長安東路二段88號10樓",
+      "電話": "02 2501 9010"
+    }
+  },
+  {
+    "id": "14",
+    "sourceSequenceNumber": "14",
+    "institutionName": "元林診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區吉林路239號3 樓",
+    "phoneRaw": "?02 2542 2508",
+    "phoneNumbers": [
+      "?02 2542 2508"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區吉林路239號3 樓 元林診所",
+    "sourceValues": {
+      "序號": "14",
+      "機構名稱": "元林診所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區吉林路239號3 樓",
+      "電話": "?02 2542 2508"
+    }
+  },
+  {
+    "id": "15",
+    "sourceSequenceNumber": "15",
+    "institutionName": "怡仁診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區中山北路一段82號5樓",
+    "phoneRaw": "02 2581 5656",
+    "phoneNumbers": [
+      "02 2581 5656"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區中山北路一段82號5樓 怡仁診所",
+    "sourceValues": {
+      "序號": "15",
+      "機構名稱": "怡仁診所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區中山北路一段82號5樓",
+      "電話": "02 2581 5656"
+    }
+  },
+  {
+    "id": "16",
+    "sourceSequenceNumber": "16",
+    "institutionName": "祐腎內科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區南京東路四段50號",
+    "phoneRaw": "02 2570 2368",
+    "phoneNumbers": [
+      "02 2570 2368"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區南京東路四段50號 祐腎內科診所",
+    "sourceValues": {
+      "序號": "16",
+      "機構名稱": "祐腎內科診所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區南京東路四段50號",
+      "電話": "02 2570 2368"
+    }
+  },
+  {
+    "id": "17",
+    "sourceSequenceNumber": "17",
+    "institutionName": "安禾聯合診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區民權東路三段178號3樓",
+    "phoneRaw": "02 2713 7889",
+    "phoneNumbers": [
+      "02 2713 7889"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區民權東路三段178號3樓 安禾聯合診所",
+    "sourceValues": {
+      "序號": "17",
+      "機構名稱": "安禾聯合診所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區民權東路三段178號3樓",
+      "電話": "02 2713 7889"
+    }
+  },
+  {
+    "id": "18",
+    "sourceSequenceNumber": "18",
+    "institutionName": "安德聯合診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區八德路三段34號4樓",
+    "phoneRaw": "02 2570 5886",
+    "phoneNumbers": [
+      "02 2570 5886"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區八德路三段34號4樓 安德聯合診所",
+    "sourceValues": {
+      "序號": "18",
+      "機構名稱": "安德聯合診所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區八德路三段34號4樓",
+      "電話": "02 2570 5886"
+    }
+  },
+  {
+    "id": "19",
+    "sourceSequenceNumber": "19",
+    "institutionName": "博仁綜合醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路66號",
+    "phoneRaw": "02 2578 6677",
+    "phoneNumbers": [
+      "02 2578 6677"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區光復北路66號 博仁綜合醫院",
+    "sourceValues": {
+      "序號": "19",
+      "機構名稱": "博仁綜合醫院",
+      "郵遞區號": "105",
+      "地址": "台北市松山區光復北路66號",
+      "電話": "02 2578 6677"
+    }
+  },
+  {
+    "id": "20",
+    "sourceSequenceNumber": "20",
+    "institutionName": "基督復臨安息日會醫療財團法人臺安醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區敦化南路二段76號11樓",
+    "phoneRaw": "02 2706 6575",
+    "phoneNumbers": [
+      "02 2706 6575"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區敦化南路二段76號11樓 基督復臨安息日會醫療財團法人臺安醫院",
+    "sourceValues": {
+      "序號": "20",
+      "機構名稱": "基督復臨安息日會醫療財團法人臺安醫院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區敦化南路二段76號11樓",
+      "電話": "02 2706 6575"
+    }
+  },
+  {
+    "id": "21",
+    "sourceSequenceNumber": "21",
+    "institutionName": "長庚醫療財團法人台北長庚紀念醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區南京東路三段337號",
+    "phoneRaw": "02 2713 5211",
+    "phoneNumbers": [
+      "02 2713 5211"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區南京東路三段337號 長庚醫療財團法人台北長庚紀念醫院",
+    "sourceValues": {
+      "序號": "21",
+      "機構名稱": "長庚醫療財團法人台北長庚紀念醫院",
+      "郵遞區號": "105",
+      "地址": "台北市松山區南京東路三段337號",
+      "電話": "02 2713 5211"
+    }
+  },
+  {
+    "id": "22",
+    "sourceSequenceNumber": "22",
+    "institutionName": "三軍總醫院松山分院附設民眾診療服務處",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區健康路131號",
+    "phoneRaw": "?02 2764 2151",
+    "phoneNumbers": [
+      "?02 2764 2151"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區健康路131號 三軍總醫院松山分院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "22",
+      "機構名稱": "三軍總醫院松山分院附設民眾診療服務處",
+      "郵遞區號": "105",
+      "地址": "台北市松山區健康路131號",
+      "電話": "?02 2764 2151"
+    }
+  },
+  {
+    "id": "23",
+    "sourceSequenceNumber": "23",
+    "institutionName": "信德診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區敦化南路1段362號5樓",
+    "phoneRaw": "?02 2701 9055",
+    "phoneNumbers": [
+      "?02 2701 9055"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區敦化南路1段362號5樓 信德診所",
+    "sourceValues": {
+      "序號": "23",
+      "機構名稱": "信德診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區敦化南路1段362號5樓",
+      "電話": "?02 2701 9055"
+    }
+  },
+  {
+    "id": "24",
+    "sourceSequenceNumber": "24",
+    "institutionName": "杏保醫網信康診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區敦化南路二段335號1樓",
+    "phoneRaw": "02 2377 1363",
+    "phoneNumbers": [
+      "02 2377 1363"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區敦化南路二段335號1樓 杏保醫網信康診所",
+    "sourceValues": {
+      "序號": "24",
+      "機構名稱": "杏保醫網信康診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區敦化南路二段335號1樓",
+      "電話": "02 2377 1363"
+    }
+  },
+  {
+    "id": "25",
+    "sourceSequenceNumber": "25",
+    "institutionName": "國立臺灣大學醫學院附設醫院癌醫中心分院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區基隆路三段155巷57號1樓",
+    "phoneRaw": "02 2322 0322",
+    "phoneNumbers": [
+      "02 2322 0322"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區基隆路三段155巷57號1樓 國立臺灣大學醫學院附設醫院癌醫中心分院",
+    "sourceValues": {
+      "序號": "25",
+      "機構名稱": "國立臺灣大學醫學院附設醫院癌醫中心分院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區基隆路三段155巷57號1樓",
+      "電話": "02 2322 0322"
+    }
+  },
+  {
+    "id": "26",
+    "sourceSequenceNumber": "26",
+    "institutionName": "中山醫療社團法人中山醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段112巷11號",
+    "phoneRaw": "02 2708 1166",
+    "phoneNumbers": [
+      "02 2708 1166"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區仁愛路四段112巷11號 中山醫療社團法人中山醫院",
+    "sourceValues": {
+      "序號": "26",
+      "機構名稱": "中山醫療社團法人中山醫院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區仁愛路四段112巷11號",
+      "電話": "02 2708 1166"
+    }
+  },
+  {
+    "id": "27",
+    "sourceSequenceNumber": "27",
+    "institutionName": "國泰醫療財團法人國泰綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段280號",
+    "phoneRaw": "02 2708 2121",
+    "phoneNumbers": [
+      "02 2708 2121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區仁愛路四段280號 國泰醫療財團法人國泰綜合醫院",
+    "sourceValues": {
+      "序號": "27",
+      "機構名稱": "國泰醫療財團法人國泰綜合醫院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區仁愛路四段280號",
+      "電話": "02 2708 2121"
+    }
+  },
+  {
+    "id": "28",
+    "sourceSequenceNumber": "28",
+    "institutionName": "中心診所醫療財團法人中心綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路四段77號",
+    "phoneRaw": "?02-2751-0221",
+    "phoneNumbers": [
+      "?02-2751-0221"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區忠孝東路四段77號 中心診所醫療財團法人中心綜合醫院",
+    "sourceValues": {
+      "序號": "28",
+      "機構名稱": "中心診所醫療財團法人中心綜合醫院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區忠孝東路四段77號",
+      "電話": "?02-2751-0221"
+    }
+  },
+  {
+    "id": "29",
+    "sourceSequenceNumber": "29",
+    "institutionName": "宏恩醫療財團法人宏恩綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段61號",
+    "phoneRaw": "02 2771 3161",
+    "phoneNumbers": [
+      "02 2771 3161"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區仁愛路四段61號 宏恩醫療財團法人宏恩綜合醫院",
+    "sourceValues": {
+      "序號": "29",
+      "機構名稱": "宏恩醫療財團法人宏恩綜合醫院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區仁愛路四段61號",
+      "電話": "02 2771 3161"
+    }
+  },
+  {
+    "id": "30",
+    "sourceSequenceNumber": "30",
+    "institutionName": "秀傳醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區光復南路116巷1號",
+    "phoneRaw": "02 2771 7172",
+    "phoneNumbers": [
+      "02 2771 7172"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區光復南路116巷1號 秀傳醫院",
+    "sourceValues": {
+      "序號": "30",
+      "機構名稱": "秀傳醫院",
+      "郵遞區號": "106",
+      "地址": "台北市大安區光復南路116巷1號",
+      "電話": "02 2771 7172"
+    }
+  },
+  {
+    "id": "31",
+    "sourceSequenceNumber": "31",
+    "institutionName": "羅斯福診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區羅斯福路三段253號2樓",
+    "phoneRaw": "02 2369 4964",
+    "phoneNumbers": [
+      "02 2369 4964"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區羅斯福路三段253號2樓 羅斯福診所",
+    "sourceValues": {
+      "序號": "31",
+      "機構名稱": "羅斯福診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區羅斯福路三段253號2樓",
+      "電話": "02 2369 4964"
+    }
+  },
+  {
+    "id": "32",
+    "sourceSequenceNumber": "32",
+    "institutionName": "皇家診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區羅斯福路三段227號10樓",
+    "phoneRaw": "?02 2369 1450",
+    "phoneNumbers": [
+      "?02 2369 1450"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區羅斯福路三段227號10樓 皇家診所",
+    "sourceValues": {
+      "序號": "32",
+      "機構名稱": "皇家診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區羅斯福路三段227號10樓",
+      "電話": "?02 2369 1450"
+    }
+  },
+  {
+    "id": "33",
+    "sourceSequenceNumber": "33",
+    "institutionName": "杏心診所",
+    "postalCode": "106",
+    "districtName": "",
+    "address": "金山南路二段218號5樓",
+    "phoneRaw": "02-23278799",
+    "phoneNumbers": [
+      "02-23278799"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": false,
+    "externalMapQuery": "金山南路二段218號5樓 杏心診所",
+    "sourceValues": {
+      "序號": "33",
+      "機構名稱": "杏心診所",
+      "郵遞區號": "106",
+      "地址": "金山南路二段218號5樓",
+      "電話": "02-23278799"
+    }
+  },
+  {
+    "id": "34",
+    "sourceSequenceNumber": "34",
+    "institutionName": "安仁診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區安和路一段29號6 樓",
+    "phoneRaw": "?02 8773 3676",
+    "phoneNumbers": [
+      "?02 8773 3676"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區安和路一段29號6 樓 安仁診所",
+    "sourceValues": {
+      "序號": "34",
+      "機構名稱": "安仁診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區安和路一段29號6 樓",
+      "電話": "?02 8773 3676"
+    }
+  },
+  {
+    "id": "35",
+    "sourceSequenceNumber": "35",
+    "institutionName": "信禾診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段281號2樓",
+    "phoneRaw": "02 2703 5758",
+    "phoneNumbers": [
+      "02 2703 5758"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路四段281號2樓 信禾診所",
+    "sourceValues": {
+      "序號": "35",
+      "機構名稱": "信禾診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路四段281號2樓",
+      "電話": "02 2703 5758"
+    }
+  },
+  {
+    "id": "36",
+    "sourceSequenceNumber": "36",
+    "institutionName": "櫟安診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區金山南路二段200號11樓",
+    "phoneRaw": "02 2358 2138",
+    "phoneNumbers": [
+      "02 2358 2138"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區金山南路二段200號11樓 櫟安診所",
+    "sourceValues": {
+      "序號": "36",
+      "機構名稱": "櫟安診所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區金山南路二段200號11樓",
+      "電話": "02 2358 2138"
+    }
+  },
+  {
+    "id": "37",
+    "sourceSequenceNumber": "37",
+    "institutionName": "萬澤內科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區萬大路425-1號2, 3, 4樓",
+    "phoneRaw": "02 2339 7018",
+    "phoneNumbers": [
+      "02 2339 7018"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區萬大路425-1號2, 3, 4樓 萬澤內科診所",
+    "sourceValues": {
+      "序號": "37",
+      "機構名稱": "萬澤內科診所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區萬大路425-1號2, 3, 4樓",
+      "電話": "02 2339 7018"
+    }
+  },
+  {
+    "id": "38",
+    "sourceSequenceNumber": "38",
+    "institutionName": "佳德內科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路一段200號2樓",
+    "phoneRaw": "02 2302 2276",
+    "phoneNumbers": [
+      "02 2302 2276"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區西園路一段200號2樓 佳德內科診所",
+    "sourceValues": {
+      "序號": "38",
+      "機構名稱": "佳德內科診所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區西園路一段200號2樓",
+      "電話": "02 2302 2276"
+    }
+  },
+  {
+    "id": "39",
+    "sourceSequenceNumber": "39",
+    "institutionName": "台北透析診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路一段200號3 樓",
+    "phoneRaw": "?02 2338 2398",
+    "phoneNumbers": [
+      "?02 2338 2398"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區西園路一段200號3 樓 台北透析診所",
+    "sourceValues": {
+      "序號": "39",
+      "機構名稱": "台北透析診所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區西園路一段200號3 樓",
+      "電話": "?02 2338 2398"
+    }
+  },
+  {
+    "id": "40",
+    "sourceSequenceNumber": "40",
+    "institutionName": "國立臺灣大學醫學院附設醫院北護分院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區內江街87號",
+    "phoneRaw": "02 2371 7101",
+    "phoneNumbers": [
+      "02 2371 7101"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區內江街87號 國立臺灣大學醫學院附設醫院北護分院",
+    "sourceValues": {
+      "序號": "40",
+      "機構名稱": "國立臺灣大學醫學院附設醫院北護分院",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區內江街87號",
+      "電話": "02 2371 7101"
+    }
+  },
+  {
+    "id": "41",
+    "sourceSequenceNumber": "41",
+    "institutionName": "西園醫療社團法人西園醫院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路二段270號",
+    "phoneRaw": "02 2307 6968",
+    "phoneNumbers": [
+      "02 2307 6968"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區西園路二段270號 西園醫療社團法人西園醫院",
+    "sourceValues": {
+      "序號": "41",
+      "機構名稱": "西園醫療社團法人西園醫院",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區西園路二段270號",
+      "電話": "02 2307 6968"
+    }
+  },
+  {
+    "id": "42",
+    "sourceSequenceNumber": "42",
+    "institutionName": "同仁院醫療財團法人萬華醫院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區中華路2段606巷6號",
+    "phoneRaw": "02-23059292",
+    "phoneNumbers": [
+      "02-23059292"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區中華路2段606巷6號 同仁院醫療財團法人萬華醫院",
+    "sourceValues": {
+      "序號": "42",
+      "機構名稱": "同仁院醫療財團法人萬華醫院",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區中華路2段606巷6號",
+      "電話": "02-23059292"
+    }
+  },
+  {
+    "id": "43",
+    "sourceSequenceNumber": "43",
+    "institutionName": "松禾診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區松山路130號3樓",
+    "phoneRaw": "02 2766 6738",
+    "phoneNumbers": [
+      "02 2766 6738"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區松山路130號3樓 松禾診所",
+    "sourceValues": {
+      "序號": "43",
+      "機構名稱": "松禾診所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區松山路130號3樓",
+      "電話": "02 2766 6738"
+    }
+  },
+  {
+    "id": "44",
+    "sourceSequenceNumber": "44",
+    "institutionName": "臺北醫學大學附設醫院",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區吳興街252號",
+    "phoneRaw": "02 2737 2181",
+    "phoneNumbers": [
+      "02 2737 2181"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區吳興街252號 臺北醫學大學附設醫院",
+    "sourceValues": {
+      "序號": "44",
+      "機構名稱": "臺北醫學大學附設醫院",
+      "郵遞區號": "110",
+      "地址": "台北市信義區吳興街252號",
+      "電話": "02 2737 2181"
+    }
+  },
+  {
+    "id": "45",
+    "sourceSequenceNumber": "45",
+    "institutionName": "佳康內科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區基隆路二段109號8樓",
+    "phoneRaw": "02 2738 4770",
+    "phoneNumbers": [
+      "02 2738 4770"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區基隆路二段109號8樓 佳康內科診所",
+    "sourceValues": {
+      "序號": "45",
+      "機構名稱": "佳康內科診所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區基隆路二段109號8樓",
+      "電話": "02 2738 4770"
+    }
+  },
+  {
+    "id": "46",
+    "sourceSequenceNumber": "46",
+    "institutionName": "禾旭診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區大南路323-1號12樓",
+    "phoneRaw": "02 2882 9797",
+    "phoneNumbers": [
+      "02 2882 9797"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區大南路323-1號12樓 禾旭診所",
+    "sourceValues": {
+      "序號": "46",
+      "機構名稱": "禾旭診所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區大南路323-1號12樓",
+      "電話": "02 2882 9797"
+    }
+  },
+  {
+    "id": "47",
+    "sourceSequenceNumber": "47",
+    "institutionName": "新光醫療財團法人新光吳火獅紀念醫院",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區文昌路95號",
+    "phoneRaw": "02 2833 2211",
+    "phoneNumbers": [
+      "02 2833 2211"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區文昌路95號 新光醫療財團法人新光吳火獅紀念醫院",
+    "sourceValues": {
+      "序號": "47",
+      "機構名稱": "新光醫療財團法人新光吳火獅紀念醫院",
+      "郵遞區號": "111",
+      "地址": "台北市士林區文昌路95號",
+      "電話": "02 2833 2211"
+    }
+  },
+  {
+    "id": "48",
+    "sourceSequenceNumber": "48",
+    "institutionName": "福林診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區中山北路五段685號",
+    "phoneRaw": "02 2831 4083",
+    "phoneNumbers": [
+      "02 2831 4083"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區中山北路五段685號 福林診所",
+    "sourceValues": {
+      "序號": "48",
+      "機構名稱": "福林診所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區中山北路五段685號",
+      "電話": "02 2831 4083"
+    }
+  },
+  {
+    "id": "49",
+    "sourceSequenceNumber": "49",
+    "institutionName": "百齡診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區重慶北路四段187號",
+    "phoneRaw": "?02 2811 3113",
+    "phoneNumbers": [
+      "?02 2811 3113"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區重慶北路四段187號 百齡診所",
+    "sourceValues": {
+      "序號": "49",
+      "機構名稱": "百齡診所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區重慶北路四段187號",
+      "電話": "?02 2811 3113"
+    }
+  },
+  {
+    "id": "50",
+    "sourceSequenceNumber": "50",
+    "institutionName": "凱硯診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區中山北路七段108號",
+    "phoneRaw": "02 2876 2828",
+    "phoneNumbers": [
+      "02 2876 2828"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區中山北路七段108號 凱硯診所",
+    "sourceValues": {
+      "序號": "50",
+      "機構名稱": "凱硯診所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區中山北路七段108號",
+      "電話": "02 2876 2828"
+    }
+  },
+  {
+    "id": "51",
+    "sourceSequenceNumber": "51",
+    "institutionName": "怡德診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區文林路342號",
+    "phoneRaw": "02 2883 8099",
+    "phoneNumbers": [
+      "02 2883 8099"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區文林路342號 怡德診所",
+    "sourceValues": {
+      "序號": "51",
+      "機構名稱": "怡德診所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區文林路342號",
+      "電話": "02 2883 8099"
+    }
+  },
+  {
+    "id": "52",
+    "sourceSequenceNumber": "52",
+    "institutionName": "文林診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區裕民六路120號2樓",
+    "phoneRaw": "02 28273690?",
+    "phoneNumbers": [
+      "02 28273690?"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區裕民六路120號2樓 文林診所",
+    "sourceValues": {
+      "序號": "52",
+      "機構名稱": "文林診所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區裕民六路120號2樓",
+      "電話": "02 28273690?"
+    }
+  },
+  {
+    "id": "53",
+    "sourceSequenceNumber": "53",
+    "institutionName": "承新診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台灣北投區北投路二段11號",
+    "phoneRaw": "02 2893 9833",
+    "phoneNumbers": [
+      "02 2893 9833"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台灣北投區北投路二段11號 承新診所",
+    "sourceValues": {
+      "序號": "53",
+      "機構名稱": "承新診所",
+      "郵遞區號": "112",
+      "地址": "台灣北投區北投路二段11號",
+      "電話": "02 2893 9833"
+    }
+  },
+  {
+    "id": "54",
+    "sourceSequenceNumber": "54",
+    "institutionName": "華榮診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區承德路七段90號",
+    "phoneRaw": "02 2828 7070",
+    "phoneNumbers": [
+      "02 2828 7070"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區承德路七段90號 華榮診所",
+    "sourceValues": {
+      "序號": "54",
+      "機構名稱": "華榮診所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區承德路七段90號",
+      "電話": "02 2828 7070"
+    }
+  },
+  {
+    "id": "55",
+    "sourceSequenceNumber": "55",
+    "institutionName": "弘德診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區雙全街66號1樓",
+    "phoneRaw": "02 2893 1816",
+    "phoneNumbers": [
+      "02 2893 1816"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區雙全街66號1樓 弘德診所",
+    "sourceValues": {
+      "序號": "55",
+      "機構名稱": "弘德診所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區雙全街66號1樓",
+      "電話": "02 2893 1816"
+    }
+  },
+  {
+    "id": "56",
+    "sourceSequenceNumber": "56",
+    "institutionName": "崇德診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台灣北投區承德路七段310號",
+    "phoneRaw": "02 2823 7682",
+    "phoneNumbers": [
+      "02 2823 7682"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台灣北投區承德路七段310號 崇德診所",
+    "sourceValues": {
+      "序號": "56",
+      "機構名稱": "崇德診所",
+      "郵遞區號": "112",
+      "地址": "台灣北投區承德路七段310號",
+      "電話": "02 2823 7682"
+    }
+  },
+  {
+    "id": "57",
+    "sourceSequenceNumber": "57",
+    "institutionName": "晟幸診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區石牌路一段71巷9弄19號",
+    "phoneRaw": "?02 2826 1661",
+    "phoneNumbers": [
+      "?02 2826 1661"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區石牌路一段71巷9弄19號 晟幸診所",
+    "sourceValues": {
+      "序號": "57",
+      "機構名稱": "晟幸診所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區石牌路一段71巷9弄19號",
+      "電話": "?02 2826 1661"
+    }
+  },
+  {
+    "id": "58",
+    "sourceSequenceNumber": "58",
+    "institutionName": "和新診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區中央北路一段2號9樓",
+    "phoneRaw": "02 2897 0111",
+    "phoneNumbers": [
+      "02 2897 0111"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區中央北路一段2號9樓 和新診所",
+    "sourceValues": {
+      "序號": "58",
+      "機構名稱": "和新診所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區中央北路一段2號9樓",
+      "電話": "02 2897 0111"
+    }
+  },
+  {
+    "id": "59",
+    "sourceSequenceNumber": "59",
+    "institutionName": "臺北榮民總醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區石牌路二段201號",
+    "phoneRaw": "?02 2871 2121",
+    "phoneNumbers": [
+      "?02 2871 2121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區石牌路二段201號 臺北榮民總醫院",
+    "sourceValues": {
+      "序號": "59",
+      "機構名稱": "臺北榮民總醫院",
+      "郵遞區號": "112",
+      "地址": "台北市北投區石牌路二段201號",
+      "電話": "?02 2871 2121"
+    }
+  },
+  {
+    "id": "60",
+    "sourceSequenceNumber": "60",
+    "institutionName": "臺北市立關渡醫院─委託臺北榮民總醫院經營",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區知行路225巷12號",
+    "phoneRaw": "02 2858 7000",
+    "phoneNumbers": [
+      "02 2858 7000"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區知行路225巷12號 臺北市立關渡醫院─委託臺北榮民總醫院經營",
+    "sourceValues": {
+      "序號": "60",
+      "機構名稱": "臺北市立關渡醫院─委託臺北榮民總醫院經營",
+      "郵遞區號": "112",
+      "地址": "台北市北投區知行路225巷12號",
+      "電話": "02 2858 7000"
+    }
+  },
+  {
+    "id": "61",
+    "sourceSequenceNumber": "61",
+    "institutionName": "振興醫療財團法人振興醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區振興街45號",
+    "phoneRaw": "02 2826 4400",
+    "phoneNumbers": [
+      "02 2826 4400"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區振興街45號 振興醫療財團法人振興醫院",
+    "sourceValues": {
+      "序號": "61",
+      "機構名稱": "振興醫療財團法人振興醫院",
+      "郵遞區號": "112",
+      "地址": "台北市北投區振興街45號",
+      "電話": "02 2826 4400"
+    }
+  },
+  {
+    "id": "62",
+    "sourceSequenceNumber": "62",
+    "institutionName": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區立德路125號",
+    "phoneRaw": "02 2897 0011",
+    "phoneNumbers": [
+      "02 2897 0011"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區立德路125號 醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "sourceValues": {
+      "序號": "62",
+      "機構名稱": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+      "郵遞區號": "112",
+      "地址": "台北市北投區立德路125號",
+      "電話": "02 2897 0011"
+    }
+  },
+  {
+    "id": "63",
+    "sourceSequenceNumber": "63",
+    "institutionName": "國泰醫療財團法人內湖國泰診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區瑞光路337號",
+    "phoneRaw": "02 8797 2121",
+    "phoneNumbers": [
+      "02 8797 2121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區瑞光路337號 國泰醫療財團法人內湖國泰診所",
+    "sourceValues": {
+      "序號": "63",
+      "機構名稱": "國泰醫療財團法人內湖國泰診所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區瑞光路337號",
+      "電話": "02 8797 2121"
+    }
+  },
+  {
+    "id": "64",
+    "sourceSequenceNumber": "64",
+    "institutionName": "康寧醫療財團法人康寧醫院",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路五段420巷26號",
+    "phoneRaw": "02 2634 5500",
+    "phoneNumbers": [
+      "02 2634 5500"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區成功路五段420巷26號 康寧醫療財團法人康寧醫院",
+    "sourceValues": {
+      "序號": "64",
+      "機構名稱": "康寧醫療財團法人康寧醫院",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區成功路五段420巷26號",
+      "電話": "02 2634 5500"
+    }
+  },
+  {
+    "id": "65",
+    "sourceSequenceNumber": "65",
+    "institutionName": "中國醫藥大學附設醫院臺北分院",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區內湖路二段360號",
+    "phoneRaw": "02 2791 9696",
+    "phoneNumbers": [
+      "02 2791 9696"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區內湖路二段360號 中國醫藥大學附設醫院臺北分院",
+    "sourceValues": {
+      "序號": "65",
+      "機構名稱": "中國醫藥大學附設醫院臺北分院",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區內湖路二段360號",
+      "電話": "02 2791 9696"
+    }
+  },
+  {
+    "id": "66",
+    "sourceSequenceNumber": "66",
+    "institutionName": "東成診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區民權東路六段495號2號樓之1",
+    "phoneRaw": "02 2631 6850",
+    "phoneNumbers": [
+      "02 2631 6850"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區民權東路六段495號2號樓之1 東成診所",
+    "sourceValues": {
+      "序號": "66",
+      "機構名稱": "東成診所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區民權東路六段495號2號樓之1",
+      "電話": "02 2631 6850"
+    }
+  },
+  {
+    "id": "67",
+    "sourceSequenceNumber": "67",
+    "institutionName": "洪永祥診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路三段6巷1號",
+    "phoneRaw": "02 8791 7601",
+    "phoneNumbers": [
+      "02 8791 7601"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區成功路三段6巷1號 洪永祥診所",
+    "sourceValues": {
+      "序號": "67",
+      "機構名稱": "洪永祥診所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區成功路三段6巷1號",
+      "電話": "02 8791 7601"
+    }
+  },
+  {
+    "id": "68",
+    "sourceSequenceNumber": "68",
+    "institutionName": "全心圓診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區瑞光路26巷36弄2號",
+    "phoneRaw": "02 2790 9966",
+    "phoneNumbers": [
+      "02 2790 9966"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區瑞光路26巷36弄2號 全心圓診所",
+    "sourceValues": {
+      "序號": "68",
+      "機構名稱": "全心圓診所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區瑞光路26巷36弄2號",
+      "電話": "02 2790 9966"
+    }
+  },
+  {
+    "id": "69",
+    "sourceSequenceNumber": "69",
+    "institutionName": "心力合診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區民權東路六段167號",
+    "phoneRaw": "?02 2791 3169",
+    "phoneNumbers": [
+      "?02 2791 3169"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區民權東路六段167號 心力合診所",
+    "sourceValues": {
+      "序號": "69",
+      "機構名稱": "心力合診所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區民權東路六段167號",
+      "電話": "?02 2791 3169"
+    }
+  },
+  {
+    "id": "70",
+    "sourceSequenceNumber": "70",
+    "institutionName": "全新圓診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市 內湖區 台北市內湖區瑞光路26巷36弄2號2樓、2之1號2樓",
+    "phoneRaw": "02-27906100",
+    "phoneNumbers": [
+      "02-27906100"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市 內湖區 台北市內湖區瑞光路26巷36弄2號2樓、2之1號2樓 全新圓診所",
+    "sourceValues": {
+      "序號": "70",
+      "機構名稱": "全新圓診所",
+      "郵遞區號": "114",
+      "地址": "臺北市 內湖區 台北市內湖區瑞光路26巷36弄2號2樓、2之1號2樓",
+      "電話": "02-27906100"
+    }
+  },
+  {
+    "id": "71",
+    "sourceSequenceNumber": "71",
+    "institutionName": "三軍總醫院附設民眾診療服務處",
+    "postalCode": "115",
+    "districtName": "松山區",
+    "address": "台北市松山區健康路131號",
+    "phoneRaw": "02 2764 2151",
+    "phoneNumbers": [
+      "02 2764 2151"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區健康路131號 三軍總醫院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "71",
+      "機構名稱": "三軍總醫院附設民眾診療服務處",
+      "郵遞區號": "115",
+      "地址": "台北市松山區健康路131號",
+      "電話": "02 2764 2151"
+    }
+  },
+  {
+    "id": "72",
+    "sourceSequenceNumber": "72",
+    "institutionName": "多田診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "台北市南港區忠孝東路六段6號2號樓之1",
+    "phoneRaw": "02 2654 6389",
+    "phoneNumbers": [
+      "02 2654 6389"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市南港區忠孝東路六段6號2號樓之1 多田診所",
+    "sourceValues": {
+      "序號": "72",
+      "機構名稱": "多田診所",
+      "郵遞區號": "115",
+      "地址": "台北市南港區忠孝東路六段6號2號樓之1",
+      "電話": "02 2654 6389"
+    }
+  },
+  {
+    "id": "73",
+    "sourceSequenceNumber": "73",
+    "institutionName": "康禾診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "台北市南港區忠孝東路七段551號",
+    "phoneRaw": "02 2785 5629",
+    "phoneNumbers": [
+      "02 2785 5629"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市南港區忠孝東路七段551號 康禾診所",
+    "sourceValues": {
+      "序號": "73",
+      "機構名稱": "康禾診所",
+      "郵遞區號": "115",
+      "地址": "台北市南港區忠孝東路七段551號",
+      "電話": "02 2785 5629"
+    }
+  },
+  {
+    "id": "74",
+    "sourceSequenceNumber": "74",
+    "institutionName": "景安診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區羅斯福路六段136號2樓",
+    "phoneRaw": "02 2933 0551",
+    "phoneNumbers": [
+      "02 2933 0551"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區羅斯福路六段136號2樓 景安診所",
+    "sourceValues": {
+      "序號": "74",
+      "機構名稱": "景安診所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區羅斯福路六段136號2樓",
+      "電話": "02 2933 0551"
+    }
+  },
+  {
+    "id": "75",
+    "sourceSequenceNumber": "75",
+    "institutionName": "慶如診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區萬慶街18號2樓",
+    "phoneRaw": "?02 2933 7058",
+    "phoneNumbers": [
+      "?02 2933 7058"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區萬慶街18號2樓 慶如診所",
+    "sourceValues": {
+      "序號": "75",
+      "機構名稱": "慶如診所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區萬慶街18號2樓",
+      "電話": "?02 2933 7058"
+    }
+  },
+  {
+    "id": "76",
+    "sourceSequenceNumber": "76",
+    "institutionName": "欣成診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區辛亥路四段128-1號3樓",
+    "phoneRaw": "02 8935 1237",
+    "phoneNumbers": [
+      "02 8935 1237"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區辛亥路四段128-1號3樓 欣成診所",
+    "sourceValues": {
+      "序號": "76",
+      "機構名稱": "欣成診所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區辛亥路四段128-1號3樓",
+      "電話": "02 8935 1237"
+    }
+  },
+  {
+    "id": "77",
+    "sourceSequenceNumber": "77",
+    "institutionName": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路三段111號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區興隆路三段111號 臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "sourceValues": {
+      "序號": "77",
+      "機構名稱": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+      "郵遞區號": "116",
+      "地址": "台北市文山區興隆路三段111號",
+      "電話": ""
+    }
+  }
+]

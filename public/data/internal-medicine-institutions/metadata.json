@@ -1,0 +1,11 @@
+{
+  "datasetTitle": "Taipei Internal Medicine Institutions",
+  "datasetUrl": "https://data.taipei/dataset/detail?id=dbb54bf8-74a8-475d-ae88-a0ec4262c39a",
+  "ingestedAt": "2026-07-28T03:25:25.794Z",
+  "updatedAt": "2026-07-28T03:25:25.791Z",
+  "totalRecords": 225,
+  "uniqueInstitutions": 225,
+  "districtsCovered": 12,
+  "postalCodes": 13,
+  "recordsWithPhone": 221
+}

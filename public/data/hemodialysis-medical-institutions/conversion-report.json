@@ -1,0 +1,15 @@
+{
+  "hemodialysisMedicalInstitutions": {
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 76,
+    "notes": [
+      "No coordinates or capacity data supplied; no geocoding or exact markers created."
+    ]
+  }
+}

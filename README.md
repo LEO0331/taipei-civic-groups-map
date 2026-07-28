@@ -169,6 +169,14 @@ The dataset has no official coordinates. The module does not geocode addresses o
 
 `private_senior_residential_long_term_care_institutions` provides local search of public institution contact records, eligible-resident text, and source-recorded approved-bed quantities. Capacity is never displayed as a real-time vacancy, admission, eligibility, quality, safety, fee, or recommendation signal. Addresses are used only for external map lookup; no exact map markers are created.
 
+## Taipei Hemodialysis Medical Institutions / 臺北市血液透析醫療機構
+
+`hemodialysis_medical_institutions` is a local directory of source-recorded institution names, postal codes, addresses, and telephone numbers. It does not establish current dialysis services, capacity, appointments, new-patient acceptance, emergency capability, fees, coverage, quality, or recommendation. Source addresses provide external map lookup only; the module creates no exact map markers.
+
+## Taipei Internal Medicine Institutions / 臺北市內科醫療機構
+
+`internal_medicine_institutions` is a local directory of source-recorded institution names, postal codes, addresses, and telephone numbers. It does not establish current operation, clinic hours, appointments, physician attendance, internal-medicine subspecialties, treatment availability, fees, coverage, quality, or recommendation. Addresses are provided for external map lookup only; no exact map markers are created.
+
 ## Additional module: Denture Subsidy Medical Providers / 假牙補助醫療院所名單
 
 Denture subsidy medical providers remain the separate `denture_subsidy_medical_providers` elderly-welfare and healthcare-subsidy public-record module. The Big5/CP950 CSV includes subsidy type, area, provider name, address, and contact phone. Conversion decodes Big5 first with UTF-8-SIG fallback, preserves hospital branch names, parses Taipei districts and road names, classifies phone values, and reports duplicate provider names, addresses, phones, and fallback keys.

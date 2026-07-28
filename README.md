@@ -177,6 +177,10 @@ The dataset has no official coordinates. The module does not geocode addresses o
 
 `internal_medicine_institutions` is a local directory of source-recorded institution names, postal codes, addresses, and telephone numbers. It does not establish current operation, clinic hours, appointments, physician attendance, internal-medicine subspecialties, treatment availability, fees, coverage, quality, or recommendation. Addresses are provided for external map lookup only; no exact map markers are created.
 
+## Taipei Occupational Therapy Clinics / 臺北市職能治療所
+
+`occupational_therapy_clinics` is a local directory of source-recorded clinic names, postal codes, addresses, and telephone numbers. It does not establish current operation, appointments, new-client acceptance, treatment availability, therapist attendance, fees, coverage, quality, or recommendation. Addresses are provided for external map lookup only; no exact map markers are created.
+
 ## Additional module: Denture Subsidy Medical Providers / 假牙補助醫療院所名單
 
 Denture subsidy medical providers remain the separate `denture_subsidy_medical_providers` elderly-welfare and healthcare-subsidy public-record module. The Big5/CP950 CSV includes subsidy type, area, provider name, address, and contact phone. Conversion decodes Big5 first with UTF-8-SIG fallback, preserves hospital branch names, parses Taipei districts and road names, classifies phone values, and reports duplicate provider names, addresses, phones, and fallback keys.

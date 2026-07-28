@@ -1,0 +1,682 @@
+[
+  {
+    "id": "1",
+    "sourceSequenceNumber": "1",
+    "postalCode": "100",
+    "clinicName": "彩虹樹職能治療所",
+    "districtName": "中正區",
+    "address": "台北市中正區北平東路20號3樓",
+    "phoneRaw": "02 2391 0586",
+    "phoneNumbers": [
+      "02 2391 0586"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區北平東路20號3樓 彩虹樹職能治療所",
+    "sourceValues": {
+      "序號": "1",
+      "郵遞區號": "100",
+      "機構名稱": "彩虹樹職能治療所",
+      "地址": "台北市中正區北平東路20號3樓",
+      "電話": "02 2391 0586"
+    }
+  },
+  {
+    "id": "2",
+    "sourceSequenceNumber": "2",
+    "postalCode": "104",
+    "clinicName": "愛能大直職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區北安路595巷21號1樓",
+    "phoneRaw": "?02 8509 1121",
+    "phoneNumbers": [
+      "?02 8509 1121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區北安路595巷21號1樓 愛能大直職能治療所",
+    "sourceValues": {
+      "序號": "2",
+      "郵遞區號": "104",
+      "機構名稱": "愛能大直職能治療所",
+      "地址": "台北市中山區北安路595巷21號1樓",
+      "電話": "?02 8509 1121"
+    }
+  },
+  {
+    "id": "3",
+    "sourceSequenceNumber": "3",
+    "postalCode": "104",
+    "clinicName": "愛迪樂中山職能治療所",
+    "districtName": "中山區",
+    "address": "?台北市中山區松江路221巷17號",
+    "phoneRaw": "02-25216043",
+    "phoneNumbers": [
+      "02-25216043"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "?台北市中山區松江路221巷17號 愛迪樂中山職能治療所",
+    "sourceValues": {
+      "序號": "3",
+      "郵遞區號": "104",
+      "機構名稱": "愛迪樂中山職能治療所",
+      "地址": "?台北市中山區松江路221巷17號",
+      "電話": "02-25216043"
+    }
+  },
+  {
+    "id": "4",
+    "sourceSequenceNumber": "4",
+    "postalCode": "104",
+    "clinicName": "好生活居家職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區中山北路三段25之12號",
+    "phoneRaw": "?0956 041 598",
+    "phoneNumbers": [
+      "?0956 041 598"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區中山北路三段25之12號 好生活居家職能治療所",
+    "sourceValues": {
+      "序號": "4",
+      "郵遞區號": "104",
+      "機構名稱": "好生活居家職能治療所",
+      "地址": "台北市中山區中山北路三段25之12號",
+      "電話": "?0956 041 598"
+    }
+  },
+  {
+    "id": "5",
+    "sourceSequenceNumber": "5",
+    "postalCode": "104",
+    "clinicName": "好朋友居家職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區中山北路三段25之12號",
+    "phoneRaw": "?0956 041 598",
+    "phoneNumbers": [
+      "?0956 041 598"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區中山北路三段25之12號 好朋友居家職能治療所",
+    "sourceValues": {
+      "序號": "5",
+      "郵遞區號": "104",
+      "機構名稱": "好朋友居家職能治療所",
+      "地址": "台北市中山區中山北路三段25之12號",
+      "電話": "?0956 041 598"
+    }
+  },
+  {
+    "id": "6",
+    "sourceSequenceNumber": "6",
+    "postalCode": "104",
+    "clinicName": "珂斯汀職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區松江路530號2樓",
+    "phoneRaw": "0933 321 625",
+    "phoneNumbers": [
+      "0933 321 625"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區松江路530號2樓 珂斯汀職能治療所",
+    "sourceValues": {
+      "序號": "6",
+      "郵遞區號": "104",
+      "機構名稱": "珂斯汀職能治療所",
+      "地址": "台北市中山區松江路530號2樓",
+      "電話": "0933 321 625"
+    }
+  },
+  {
+    "id": "7",
+    "sourceSequenceNumber": "7",
+    "postalCode": "104",
+    "clinicName": "暖時光職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區長安東路二段131-2號1樓",
+    "phoneRaw": "02 2797 2225",
+    "phoneNumbers": [
+      "02 2797 2225"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區長安東路二段131-2號1樓 暖時光職能治療所",
+    "sourceValues": {
+      "序號": "7",
+      "郵遞區號": "104",
+      "機構名稱": "暖時光職能治療所",
+      "地址": "台北市中山區長安東路二段131-2號1樓",
+      "電話": "02 2797 2225"
+    }
+  },
+  {
+    "id": "8",
+    "sourceSequenceNumber": "8",
+    "postalCode": "104",
+    "clinicName": "幼思職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區敬業二路69巷55號2樓",
+    "phoneRaw": "02 8502 7002",
+    "phoneNumbers": [
+      "02 8502 7002"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區敬業二路69巷55號2樓 幼思職能治療所",
+    "sourceValues": {
+      "序號": "8",
+      "郵遞區號": "104",
+      "機構名稱": "幼思職能治療所",
+      "地址": "台北市中山區敬業二路69巷55號2樓",
+      "電話": "02 8502 7002"
+    }
+  },
+  {
+    "id": "9",
+    "sourceSequenceNumber": "9",
+    "postalCode": "105",
+    "clinicName": "啟端職能治療所",
+    "districtName": "松山區",
+    "address": "台北市松山區民權東路三段106巷15弄25號2樓",
+    "phoneRaw": "02 2547 1401",
+    "phoneNumbers": [
+      "02 2547 1401"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區民權東路三段106巷15弄25號2樓 啟端職能治療所",
+    "sourceValues": {
+      "序號": "9",
+      "郵遞區號": "105",
+      "機構名稱": "啟端職能治療所",
+      "地址": "台北市松山區民權東路三段106巷15弄25號2樓",
+      "電話": "02 2547 1401"
+    }
+  },
+  {
+    "id": "10",
+    "sourceSequenceNumber": "10",
+    "postalCode": "104",
+    "clinicName": "荃能職能治療所",
+    "districtName": "松山區",
+    "address": "臺北市松山區寶清街89巷46號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區寶清街89巷46號 荃能職能治療所",
+    "sourceValues": {
+      "序號": "10",
+      "郵遞區號": "104",
+      "機構名稱": "荃能職能治療所",
+      "地址": "臺北市松山區寶清街89巷46號",
+      "電話": ""
+    }
+  },
+  {
+    "id": "11",
+    "sourceSequenceNumber": "11",
+    "postalCode": "104",
+    "clinicName": "荷普職能治療所",
+    "districtName": "松山區",
+    "address": "臺北市松山區敦化北路１１４號２樓、１１６號２樓?看地圖",
+    "phoneRaw": "02-77287688",
+    "phoneNumbers": [
+      "02-77287688"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區敦化北路１１４號２樓、１１６號２樓?看地圖 荷普職能治療所",
+    "sourceValues": {
+      "序號": "11",
+      "郵遞區號": "104",
+      "機構名稱": "荷普職能治療所",
+      "地址": "臺北市松山區敦化北路１１４號２樓、１１６號２樓?看地圖",
+      "電話": "02-77287688"
+    }
+  },
+  {
+    "id": "12",
+    "sourceSequenceNumber": "12",
+    "postalCode": "106",
+    "clinicName": "大安宏兒職能治療所",
+    "districtName": "大安區",
+    "address": "台北市大安區復興南路二段210巷20號1樓",
+    "phoneRaw": "?02 2706 2102",
+    "phoneNumbers": [
+      "?02 2706 2102"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區復興南路二段210巷20號1樓 大安宏兒職能治療所",
+    "sourceValues": {
+      "序號": "12",
+      "郵遞區號": "106",
+      "機構名稱": "大安宏兒職能治療所",
+      "地址": "台北市大安區復興南路二段210巷20號1樓",
+      "電話": "?02 2706 2102"
+    }
+  },
+  {
+    "id": "13",
+    "sourceSequenceNumber": "13",
+    "postalCode": "106",
+    "clinicName": "優活職能治療所",
+    "districtName": "",
+    "address": "台北市溫州街22巷8號",
+    "phoneRaw": "02-2369-5990",
+    "phoneNumbers": [
+      "02-2369-5990"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": false,
+    "externalMapQuery": "台北市溫州街22巷8號 優活職能治療所",
+    "sourceValues": {
+      "序號": "13",
+      "郵遞區號": "106",
+      "機構名稱": "優活職能治療所",
+      "地址": "台北市溫州街22巷8號",
+      "電話": "02-2369-5990"
+    }
+  },
+  {
+    "id": "14",
+    "sourceSequenceNumber": "14",
+    "postalCode": "106",
+    "clinicName": "啟端古亭職能治療所",
+    "districtName": "大安區",
+    "address": "台北市大安區羅斯福路三段37號10 樓",
+    "phoneRaw": "?02 2231 2687",
+    "phoneNumbers": [
+      "?02 2231 2687"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區羅斯福路三段37號10 樓 啟端古亭職能治療所",
+    "sourceValues": {
+      "序號": "14",
+      "郵遞區號": "106",
+      "機構名稱": "啟端古亭職能治療所",
+      "地址": "台北市大安區羅斯福路三段37號10 樓",
+      "電話": "?02 2231 2687"
+    }
+  },
+  {
+    "id": "15",
+    "sourceSequenceNumber": "15",
+    "postalCode": "106",
+    "clinicName": "起辰職能治療所",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段65號3樓",
+    "phoneRaw": "?02 2706 8878",
+    "phoneNumbers": [
+      "?02 2706 8878"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路四段65號3樓 起辰職能治療所",
+    "sourceValues": {
+      "序號": "15",
+      "郵遞區號": "106",
+      "機構名稱": "起辰職能治療所",
+      "地址": "台北市大安區信義路四段65號3樓",
+      "電話": "?02 2706 8878"
+    }
+  },
+  {
+    "id": "16",
+    "sourceSequenceNumber": "16",
+    "postalCode": "106",
+    "clinicName": "寶珠職能治療所",
+    "districtName": "大安區",
+    "address": "台北市大安區通化街140巷17號2樓",
+    "phoneRaw": "?02 2732 9012",
+    "phoneNumbers": [
+      "?02 2732 9012"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區通化街140巷17號2樓 寶珠職能治療所",
+    "sourceValues": {
+      "序號": "16",
+      "郵遞區號": "106",
+      "機構名稱": "寶珠職能治療所",
+      "地址": "台北市大安區通化街140巷17號2樓",
+      "電話": "?02 2732 9012"
+    }
+  },
+  {
+    "id": "17",
+    "sourceSequenceNumber": "17",
+    "postalCode": "108",
+    "clinicName": "樂親居家職能治療所",
+    "districtName": "萬華區",
+    "address": "台北市萬華區和平西路三段396號106室",
+    "phoneRaw": "0971 119 909",
+    "phoneNumbers": [
+      "0971 119 909"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區和平西路三段396號106室 樂親居家職能治療所",
+    "sourceValues": {
+      "序號": "17",
+      "郵遞區號": "108",
+      "機構名稱": "樂親居家職能治療所",
+      "地址": "台北市萬華區和平西路三段396號106室",
+      "電話": "0971 119 909"
+    }
+  },
+  {
+    "id": "18",
+    "sourceSequenceNumber": "18",
+    "postalCode": "110",
+    "clinicName": "星星碼頭職能治療所",
+    "districtName": "信義區",
+    "address": "台北市信義區基隆路一段141號5號樓之8",
+    "phoneRaw": "?0981 047 214",
+    "phoneNumbers": [
+      "?0981 047 214"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區基隆路一段141號5號樓之8 星星碼頭職能治療所",
+    "sourceValues": {
+      "序號": "18",
+      "郵遞區號": "110",
+      "機構名稱": "星星碼頭職能治療所",
+      "地址": "台北市信義區基隆路一段141號5號樓之8",
+      "電話": "?0981 047 214"
+    }
+  },
+  {
+    "id": "19",
+    "sourceSequenceNumber": "19",
+    "postalCode": "110",
+    "clinicName": "小島居家職能治療所",
+    "districtName": "信義區",
+    "address": "台北市信義區虎林街201號",
+    "phoneRaw": "0937 737 130",
+    "phoneNumbers": [
+      "0937 737 130"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區虎林街201號 小島居家職能治療所",
+    "sourceValues": {
+      "序號": "19",
+      "郵遞區號": "110",
+      "機構名稱": "小島居家職能治療所",
+      "地址": "台北市信義區虎林街201號",
+      "電話": "0937 737 130"
+    }
+  },
+  {
+    "id": "20",
+    "sourceSequenceNumber": "20",
+    "postalCode": "111",
+    "clinicName": "愛能職能治療所",
+    "districtName": "士林區",
+    "address": "台北市士林區天母北路10-1號1樓",
+    "phoneRaw": "02 2876 8354",
+    "phoneNumbers": [
+      "02 2876 8354"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區天母北路10-1號1樓 愛能職能治療所",
+    "sourceValues": {
+      "序號": "20",
+      "郵遞區號": "111",
+      "機構名稱": "愛能職能治療所",
+      "地址": "台北市士林區天母北路10-1號1樓",
+      "電話": "02 2876 8354"
+    }
+  },
+  {
+    "id": "21",
+    "sourceSequenceNumber": "21",
+    "postalCode": "111",
+    "clinicName": "優兒巧兒童職能治療所",
+    "districtName": "士林區",
+    "address": "台北市士林區忠誠路二段21巷48號",
+    "phoneRaw": "?02 2836 7560",
+    "phoneNumbers": [
+      "?02 2836 7560"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區忠誠路二段21巷48號 優兒巧兒童職能治療所",
+    "sourceValues": {
+      "序號": "21",
+      "郵遞區號": "111",
+      "機構名稱": "優兒巧兒童職能治療所",
+      "地址": "台北市士林區忠誠路二段21巷48號",
+      "電話": "?02 2836 7560"
+    }
+  },
+  {
+    "id": "22",
+    "sourceSequenceNumber": "22",
+    "postalCode": "111",
+    "clinicName": "新康居家職能治療所",
+    "districtName": "士林區",
+    "address": "台北市士林區至誠路二段120巷1號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區至誠路二段120巷1號 新康居家職能治療所",
+    "sourceValues": {
+      "序號": "22",
+      "郵遞區號": "111",
+      "機構名稱": "新康居家職能治療所",
+      "地址": "台北市士林區至誠路二段120巷1號",
+      "電話": ""
+    }
+  },
+  {
+    "id": "23",
+    "sourceSequenceNumber": "23",
+    "postalCode": "220",
+    "clinicName": "大心居家職能治療所",
+    "districtName": "",
+    "address": "新北市板橋區海山路19號1樓",
+    "phoneRaw": "?02 7751 8057",
+    "phoneNumbers": [
+      "?02 7751 8057"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": false,
+    "externalMapQuery": "新北市板橋區海山路19號1樓 大心居家職能治療所",
+    "sourceValues": {
+      "序號": "23",
+      "郵遞區號": "220",
+      "機構名稱": "大心居家職能治療所",
+      "地址": "新北市板橋區海山路19號1樓",
+      "電話": "?02 7751 8057"
+    }
+  },
+  {
+    "id": "24",
+    "sourceSequenceNumber": "24",
+    "postalCode": "112",
+    "clinicName": "安安優腦職能治療所",
+    "districtName": "北投區",
+    "address": "台北市北投區磺港路8號7樓",
+    "phoneRaw": "02 2891 2323",
+    "phoneNumbers": [
+      "02 2891 2323"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區磺港路8號7樓 安安優腦職能治療所",
+    "sourceValues": {
+      "序號": "24",
+      "郵遞區號": "112",
+      "機構名稱": "安安優腦職能治療所",
+      "地址": "台北市北投區磺港路8號7樓",
+      "電話": "02 2891 2323"
+    }
+  },
+  {
+    "id": "25",
+    "sourceSequenceNumber": "25",
+    "postalCode": "112",
+    "clinicName": "稻香職能治療所-委託臺北榮民總醫院經營管理",
+    "districtName": "北投區",
+    "address": "台北市北投區稻香路81號6樓之1",
+    "phoneRaw": "02 2895 6001",
+    "phoneNumbers": [
+      "02 2895 6001"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區稻香路81號6樓之1 稻香職能治療所-委託臺北榮民總醫院經營管理",
+    "sourceValues": {
+      "序號": "25",
+      "郵遞區號": "112",
+      "機構名稱": "稻香職能治療所-委託臺北榮民總醫院經營管理",
+      "地址": "台北市北投區稻香路81號6樓之1",
+      "電話": "02 2895 6001"
+    }
+  },
+  {
+    "id": "26",
+    "sourceSequenceNumber": "26",
+    "postalCode": "114",
+    "clinicName": "沐晨職能治療所",
+    "districtName": "內湖區",
+    "address": "台北市內湖區安泰街125巷19號5樓",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區安泰街125巷19號5樓 沐晨職能治療所",
+    "sourceValues": {
+      "序號": "26",
+      "郵遞區號": "114",
+      "機構名稱": "沐晨職能治療所",
+      "地址": "台北市內湖區安泰街125巷19號5樓",
+      "電話": ""
+    }
+  },
+  {
+    "id": "27",
+    "sourceSequenceNumber": "27",
+    "postalCode": "104",
+    "clinicName": "愛迪樂居家職能治療所",
+    "districtName": "中山區",
+    "address": "台北市中山區民生東路二段127巷19號",
+    "phoneRaw": "02 2521 6043",
+    "phoneNumbers": [
+      "02 2521 6043"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區民生東路二段127巷19號 愛迪樂居家職能治療所",
+    "sourceValues": {
+      "序號": "27",
+      "郵遞區號": "104",
+      "機構名稱": "愛迪樂居家職能治療所",
+      "地址": "台北市中山區民生東路二段127巷19號",
+      "電話": "02 2521 6043"
+    }
+  },
+  {
+    "id": "28",
+    "sourceSequenceNumber": "28",
+    "postalCode": "115",
+    "clinicName": "與樂職能治療所",
+    "districtName": "南港區",
+    "address": "臺北市南港區八德路四段881號2樓",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市南港區八德路四段881號2樓 與樂職能治療所",
+    "sourceValues": {
+      "序號": "28",
+      "郵遞區號": "115",
+      "機構名稱": "與樂職能治療所",
+      "地址": "臺北市南港區八德路四段881號2樓",
+      "電話": ""
+    }
+  },
+  {
+    "id": "29",
+    "sourceSequenceNumber": "29",
+    "postalCode": "116",
+    "clinicName": "壽合居家職能治療所",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路3段221巷4弄14號4樓",
+    "phoneRaw": "0933 004 397",
+    "phoneNumbers": [
+      "0933 004 397"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路3段221巷4弄14號4樓 壽合居家職能治療所",
+    "sourceValues": {
+      "序號": "29",
+      "郵遞區號": "116",
+      "機構名稱": "壽合居家職能治療所",
+      "地址": "臺北市文山區興隆路3段221巷4弄14號4樓",
+      "電話": "0933 004 397"
+    }
+  },
+  {
+    "id": "30",
+    "sourceSequenceNumber": "30",
+    "postalCode": "116",
+    "clinicName": "麥恩居家職能治療所",
+    "districtName": "文山區",
+    "address": "台北市文山區仙岩路16巷46號6 樓 之 14",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區仙岩路16巷46號6 樓 之 14 麥恩居家職能治療所",
+    "sourceValues": {
+      "序號": "30",
+      "郵遞區號": "116",
+      "機構名稱": "麥恩居家職能治療所",
+      "地址": "台北市文山區仙岩路16巷46號6 樓 之 14",
+      "電話": ""
+    }
+  }
+]

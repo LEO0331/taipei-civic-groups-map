@@ -1,0 +1,15 @@
+{
+  "occupationalTherapyClinics": {
+    "headers": [
+      "序號",
+      "郵遞區號",
+      "機構名稱",
+      "地址",
+      "電話"
+    ],
+    "outputRecords": 30,
+    "notes": [
+      "No coordinates, appointments, or treatment details are supplied or inferred."
+    ]
+  }
+}

@@ -115,7 +115,7 @@ export default function GeneratedDatasetDirectoryModule({
   ];
 
   return <section className="workspace">
-    <div className="section-heading"><p>PUBLIC RECORD DIRECTORY</p><h2>{displayTitle}</h2><span>{displaySubtitle}</span></div>
+    <div className="section-heading"><p>{zh ? '公開資料名冊' : 'PUBLIC RECORD DIRECTORY'}</p><h2>{displayTitle}</h2><span>{displaySubtitle}</span></div>
     <div className="subtabs">{tabs.map(([id, label]) => <button key={id} className={view === id ? 'active' : ''} onClick={() => setView(id)}>{label}</button>)}</div>
     <aside className="filters"><label className="search"><span aria-hidden="true">⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={zh ? '搜尋目前名冊欄位' : 'Search displayed fields'} /></label>
       {(districts.length > 0 || hasPhoneField) && <div className="filter-grid">

@@ -5,6 +5,14 @@ type DatasetRecord = Record<string, RecordValue>;
 type View = 'overview' | 'districts' | 'directory' | 'quality' | 'notes';
 
 const zhTitles: Record<string, string> = {
+  'Taipei Ophthalmology Institutions': '臺北市眼科醫療機構',
+  'Taipei Hemodialysis Medical Institutions': '臺北市血液透析醫療機構',
+  'Taipei Internal Medicine Institutions': '臺北市內科醫療機構',
+  'Taipei Occupational Therapy Clinics': '臺北市職能治療所',
+  'Designated Foreigner Health Examination Hospitals': '外國人健檢指定醫院',
+  'Hospice and Palliative Care Institutions': '安寧緩和醫療機構',
+  'Private Senior Residential and Long-Term Care Institutions': '私立老人安養暨長期照顧機構',
+  'Taipei Cultural Heritage Assets': '臺北市文化資產',
   'General Western Medicine Institutions': '西醫一般科醫療機構',
   'Rotavirus Vaccine Subsidy Providers': '輪狀病毒疫苗補助合約醫療院所',
   'Pet Registration Station Directory': '寵物登記站名冊',
@@ -73,9 +81,9 @@ export default function GeneratedDatasetDirectoryModule({
   const [hasPhone, setHasPhone] = useState('');
   const zh = language === 'zh';
   const displayTitle = zh ? zhTitles[title] ?? title : title;
-  const displaySubtitle = zh ? '以公開來源轉換後的資料提供查詢、摘要與欄位檢視。' : subtitle;
-  const displayNotice = zh ? '本資料僅供公開資料查詢與行政區彙整參考，不代表即時營運、服務可用性、資格、費用、品質或官方推薦。實際資訊請向資料來源、各機構或主管機關確認。' : notice;
-  const displayColumns = useMemo(() => columns.map(([key, label]) => [key, zh ? zhFieldLabels[key] ?? label : label] as [string, string]), [columns, zh]);
+  const displaySubtitle = subtitle;
+  const displayNotice = notice;
+  const displayColumns = useMemo(() => columns, [columns]);
   const districts = useMemo(() => [...new Set(records.map(districtOf).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-Hant')), [records]);
   const filteredRecords = useMemo(() => {
     const normalizedSearch = search.trim().toLocaleLowerCase();

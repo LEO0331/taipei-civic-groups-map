@@ -1,0 +1,670 @@
+{
+  "source": "臺北市政府－台北服務通",
+  "sourceUrl": "https://service.taipei/",
+  "generatedAt": "2026-07-28T04:25:37.990Z",
+  "totalRecords": 1645,
+  "categories": [
+    {
+      "label": "殯葬管理處",
+      "value": 22
+    },
+    {
+      "label": "重劃",
+      "value": 12
+    },
+    {
+      "label": "旅館",
+      "value": 11
+    },
+    {
+      "label": "自來水",
+      "value": 9
+    },
+    {
+      "label": "原住民",
+      "value": 8
+    },
+    {
+      "label": "裁決所",
+      "value": 7
+    },
+    {
+      "label": "飼料",
+      "value": 6
+    },
+    {
+      "label": "民宿",
+      "value": 5
+    },
+    {
+      "label": "用戶排水設備",
+      "value": 4
+    },
+    {
+      "label": "地籍清理",
+      "value": 4
+    },
+    {
+      "label": "保育類",
+      "value": 4
+    },
+    {
+      "label": "耕地",
+      "value": 4
+    },
+    {
+      "label": "退還",
+      "value": 4
+    },
+    {
+      "label": "動物展演",
+      "value": 4
+    },
+    {
+      "label": "都市設計及土地使用開發許可審議",
+      "value": 4
+    },
+    {
+      "label": "工程",
+      "value": 3
+    },
+    {
+      "label": "不動產經紀人",
+      "value": 3
+    },
+    {
+      "label": "托育補助",
+      "value": 3
+    },
+    {
+      "label": "汙水下水道",
+      "value": 3
+    },
+    {
+      "label": "低收入戶",
+      "value": 3
+    },
+    {
+      "label": "客家",
+      "value": 3
+    },
+    {
+      "label": "圖資申購",
+      "value": 3
+    },
+    {
+      "label": "下水道",
+      "value": 2
+    },
+    {
+      "label": "不動產經紀業",
+      "value": 2
+    },
+    {
+      "label": "公園使用申請",
+      "value": 2
+    },
+    {
+      "label": "水肥",
+      "value": 2
+    },
+    {
+      "label": "火災",
+      "value": 2
+    },
+    {
+      "label": "民政局",
+      "value": 2
+    },
+    {
+      "label": "民間動物收容",
+      "value": 2
+    },
+    {
+      "label": "老人自費安養中心",
+      "value": 2
+    },
+    {
+      "label": "狗運動公園",
+      "value": 2
+    },
+    {
+      "label": "浮覆地",
+      "value": 2
+    },
+    {
+      "label": "動物用藥品",
+      "value": 2
+    },
+    {
+      "label": "徵收",
+      "value": 2
+    },
+    {
+      "label": "環保葬",
+      "value": 2
+    },
+    {
+      "label": "謄本",
+      "value": 2
+    },
+    {
+      "label": "殯葬處",
+      "value": 2
+    },
+    {
+      "label": "寵物登記",
+      "value": 2
+    },
+    {
+      "label": "獸醫",
+      "value": 2
+    },
+    {
+      "label": "1999音檔",
+      "value": 1
+    },
+    {
+      "label": "乙種國民兵",
+      "value": 1
+    },
+    {
+      "label": "土地登記印鑑",
+      "value": 1
+    },
+    {
+      "label": "大陸地區人民（法人、團體或其他機構）取得設定或移轉不動產許可",
+      "value": 1
+    },
+    {
+      "label": "不動產糾紛",
+      "value": 1
+    },
+    {
+      "label": "中低收入",
+      "value": 1
+    },
+    {
+      "label": "中低收入老人特別照顧津貼",
+      "value": 1
+    },
+    {
+      "label": "化糞池",
+      "value": 1
+    },
+    {
+      "label": "孔廟",
+      "value": 1
+    },
+    {
+      "label": "水庫",
+      "value": 1
+    },
+    {
+      "label": "代理人",
+      "value": 1
+    },
+    {
+      "label": "代處理",
+      "value": 1
+    },
+    {
+      "label": "北投會館",
+      "value": 1
+    },
+    {
+      "label": "史蹟推廣教育",
+      "value": 1
+    },
+    {
+      "label": "外國人",
+      "value": 1
+    },
+    {
+      "label": "外籍看護工",
+      "value": 1
+    },
+    {
+      "label": "幼兒數位卡證",
+      "value": 1
+    },
+    {
+      "label": "生物藥品",
+      "value": 1
+    },
+    {
+      "label": "生前殯葬服務契約業務",
+      "value": 1
+    },
+    {
+      "label": "申請7年輪葬展延",
+      "value": 1
+    },
+    {
+      "label": "申請補發中文火化許可證",
+      "value": 1
+    },
+    {
+      "label": "危機",
+      "value": 1
+    },
+    {
+      "label": "地址隱匿",
+      "value": 1
+    },
+    {
+      "label": "地形圖",
+      "value": 1
+    },
+    {
+      "label": "地政士",
+      "value": 1
+    },
+    {
+      "label": "地籍總歸戶",
+      "value": 1
+    },
+    {
+      "label": "好孕",
+      "value": 1
+    },
+    {
+      "label": "年度演藝團隊",
+      "value": 1
+    },
+    {
+      "label": "托育",
+      "value": 1
+    },
+    {
+      "label": "托嬰中心立案申請",
+      "value": 1
+    },
+    {
+      "label": "早期",
+      "value": 1
+    },
+    {
+      "label": "汙水",
+      "value": 1
+    },
+    {
+      "label": "污水",
+      "value": 1
+    },
+    {
+      "label": "老人修繕住屋補助",
+      "value": 1
+    },
+    {
+      "label": "行人徒步區",
+      "value": 1
+    },
+    {
+      "label": "免票申請",
+      "value": 1
+    },
+    {
+      "label": "役男在營服役",
+      "value": 1
+    },
+    {
+      "label": "役男免役",
+      "value": 1
+    },
+    {
+      "label": "役男延期徵集",
+      "value": 1
+    },
+    {
+      "label": "役男家屬生活扶助",
+      "value": 1
+    },
+    {
+      "label": "投肥",
+      "value": 1
+    },
+    {
+      "label": "投肥證",
+      "value": 1
+    },
+    {
+      "label": "狂犬病",
+      "value": 1
+    },
+    {
+      "label": "身心障礙者生活補助",
+      "value": 1
+    },
+    {
+      "label": "兒童托育",
+      "value": 1
+    },
+    {
+      "label": "兒童街道遊戲",
+      "value": 1
+    },
+    {
+      "label": "委託安置",
+      "value": 1
+    },
+    {
+      "label": "宗教因素替代役",
+      "value": 1
+    },
+    {
+      "label": "居家保母執業登記",
+      "value": 1
+    },
+    {
+      "label": "抵押權",
+      "value": 1
+    },
+    {
+      "label": "法律",
+      "value": 1
+    },
+    {
+      "label": "牧場登記",
+      "value": 1
+    },
+    {
+      "label": "社會救助專戶",
+      "value": 1
+    },
+    {
+      "label": "客家學術",
+      "value": 1
+    },
+    {
+      "label": "室內裝修",
+      "value": 1
+    },
+    {
+      "label": "建國假日花市",
+      "value": 1
+    },
+    {
+      "label": "建築空地維護管理",
+      "value": 1
+    },
+    {
+      "label": "建築線",
+      "value": 1
+    },
+    {
+      "label": "急難",
+      "value": 1
+    },
+    {
+      "label": "恢復供水供電",
+      "value": 1
+    },
+    {
+      "label": "持有保育類",
+      "value": 1
+    },
+    {
+      "label": "政府資訊",
+      "value": 1
+    },
+    {
+      "label": "英文",
+      "value": 1
+    },
+    {
+      "label": "家庭因素替代役",
+      "value": 1
+    },
+    {
+      "label": "容積代金委託估價",
+      "value": 1
+    },
+    {
+      "label": "容積移轉前置作業查詢系統",
+      "value": 1
+    },
+    {
+      "label": "容積移轉書面審查",
+      "value": 1
+    },
+    {
+      "label": "容積移轉許可",
+      "value": 1
+    },
+    {
+      "label": "弱勢兒少醫療補助",
+      "value": 1
+    },
+    {
+      "label": "氣切",
+      "value": 1
+    },
+    {
+      "label": "消費爭議申訴",
+      "value": 1
+    },
+    {
+      "label": "特定寵物",
+      "value": 1
+    },
+    {
+      "label": "租服業許可",
+      "value": 1
+    },
+    {
+      "label": "租服業登記",
+      "value": 1
+    },
+    {
+      "label": "租賃住宅服務業",
+      "value": 1
+    },
+    {
+      "label": "租賃爭議",
+      "value": 1
+    },
+    {
+      "label": "健保",
+      "value": 1
+    },
+    {
+      "label": "動物之家",
+      "value": 1
+    },
+    {
+      "label": "動物安養機構",
+      "value": 1
+    },
+    {
+      "label": "動物認領",
+      "value": 1
+    },
+    {
+      "label": "動物認養",
+      "value": 1
+    },
+    {
+      "label": "參觀",
+      "value": 1
+    },
+    {
+      "label": "參觀汙水處理廠",
+      "value": 1
+    },
+    {
+      "label": "執業執照",
+      "value": 1
+    },
+    {
+      "label": "婦女",
+      "value": 1
+    },
+    {
+      "label": "婦女福利暨家庭支持性服務",
+      "value": 1
+    },
+    {
+      "label": "專業爆竹煙火",
+      "value": 1
+    },
+    {
+      "label": "捷運",
+      "value": 1
+    },
+    {
+      "label": "第一綠地場地使用申請",
+      "value": 1
+    },
+    {
+      "label": "鳥類",
+      "value": 1
+    },
+    {
+      "label": "鳥類登記",
+      "value": 1
+    },
+    {
+      "label": "報備",
+      "value": 1
+    },
+    {
+      "label": "場地租借",
+      "value": 1
+    },
+    {
+      "label": "就學生活補助",
+      "value": 1
+    },
+    {
+      "label": "復樁",
+      "value": 1
+    },
+    {
+      "label": "替代役退役",
+      "value": 1
+    },
+    {
+      "label": "無形文化資產補助",
+      "value": 1
+    },
+    {
+      "label": "結婚",
+      "value": 1
+    },
+    {
+      "label": "絕育補助",
+      "value": 1
+    },
+    {
+      "label": "街貓",
+      "value": 1
+    },
+    {
+      "label": "意外死亡",
+      "value": 1
+    },
+    {
+      "label": "資遣通報",
+      "value": 1
+    },
+    {
+      "label": "路跑活動",
+      "value": 1
+    },
+    {
+      "label": "預約導覽",
+      "value": 1
+    },
+    {
+      "label": "預售屋",
+      "value": 1
+    },
+    {
+      "label": "預售屋備查",
+      "value": 1
+    },
+    {
+      "label": "僱獎",
+      "value": 1
+    },
+    {
+      "label": "圖書翻拍",
+      "value": 1
+    },
+    {
+      "label": "種畜進口",
+      "value": 1
+    },
+    {
+      "label": "緊急救援系統",
+      "value": 1
+    },
+    {
+      "label": "認養照護",
+      "value": 1
+    },
+    {
+      "label": "輔具",
+      "value": 1
+    },
+    {
+      "label": "獎勵補助",
+      "value": 1
+    },
+    {
+      "label": "閱覽",
+      "value": 1
+    },
+    {
+      "label": "環保",
+      "value": 1
+    },
+    {
+      "label": "臨時看護",
+      "value": 1
+    },
+    {
+      "label": "鮮奶週報",
+      "value": 1
+    },
+    {
+      "label": "職能",
+      "value": 1
+    },
+    {
+      "label": "醫療補助",
+      "value": 1
+    },
+    {
+      "label": "醫療輔具",
+      "value": 1
+    },
+    {
+      "label": "寵物保險",
+      "value": 1
+    },
+    {
+      "label": "獸醫佐",
+      "value": 1
+    },
+    {
+      "label": "獸醫診療機構",
+      "value": 1
+    },
+    {
+      "label": "簽證人",
+      "value": 1
+    },
+    {
+      "label": "觀光文宣品",
+      "value": 1
+    },
+    {
+      "label": "AED",
+      "value": 1
+    }
+  ],
+  "recordsWithOnlineApplication": 1634,
+  "recordsWithCounterApplication": 1466
+}

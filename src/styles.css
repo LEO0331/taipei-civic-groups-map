@@ -56,6 +56,10 @@ main { min-height: 70vh; }
 .map-popup p { margin: 7px 0; }
 .map-popup button, .load-more { border: 0; background: #203744; color: white; padding: 9px 12px; cursor: pointer; }
 .directory-list { border-top: 2px solid #203744; }
+.directory-cards { display: grid; gap: 12px; margin-top: 22px; }
+.directory-cards article { padding: 16px; border: 1px solid #c8c0b2; background: #fffaf0; }
+.directory-cards h3 { margin: 0 0 8px; font-size: 18px; }
+.directory-cards p { margin: 7px 0; line-height: 1.55; overflow-wrap: anywhere; }
 .group-row { display: grid; gap: 16px; padding: 22px 2px; border-bottom: 1px solid #c8c0b2; }
 .group-row h3 { margin: 3px 0 10px; font-size: 19px; line-height: 1.4; }
 .eyebrow { margin: 0; color: #9d3f2d; font-size: 11px; letter-spacing: .08em; }
@@ -121,6 +125,7 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
   .procurement-filters { grid-template-columns: repeat(7, 1fr); }
   .workspace { padding: 52px 32px 100px; }
   .group-row { grid-template-columns: minmax(260px, .9fr) 1.4fr; padding: 28px 4px; }
+  .directory-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .summary-grid { grid-template-columns: repeat(4, 1fr); }
   .chart-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .chart:last-child { grid-column: 1 / -1; }

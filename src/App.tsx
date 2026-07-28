@@ -49,6 +49,7 @@ import PublicPneumococcalVaccineProvidersModule from './PublicPneumococcalVaccin
 import MajorElectricityUsersModule from './MajorElectricityUsersModule';
 import EarlyInterventionMedicalProvidersModule from './EarlyInterventionMedicalProvidersModule';
 import GeneralDentalMedicalInstitutionsModule from './GeneralDentalMedicalInstitutionsModule';
+import PediatricMedicalInstitutionsModule from './PediatricMedicalInstitutionsModule';
 import DiabetesSharedCareMedicalInstitutionsModule from './DiabetesSharedCareMedicalInstitutionsModule';
 import GeneratedDatasetDirectoryModule from './GeneratedDatasetDirectoryModule';
 import ApprovedGasWaterHeaterInstallersModule from './ApprovedGasWaterHeaterInstallersModule';
@@ -182,6 +183,7 @@ const zhUiCopy: Record<string, string> = {
 };
 
 const zhTabLabels: Record<string, string> = {
+  pediatricMedicalInstitutions: '臺北市兒科醫療機構',
   seniorGroupMealServiceSites: '老人共餐單位一覽表', publicPneumococcalVaccineProviders: '公費肺炎鏈球菌疫苗合約醫療院所',
   majorElectricityUsers: '臺北市用電大戶資料', earlyInterventionMedicalProviders: '早期療育合約醫療院所', generalDentalMedicalInstitutions: '牙醫一般科醫療機構',
   diabetesSharedCareMedicalInstitutions: '糖尿病共照網醫事機構', waterPipeInstallationContractors: '自來水管承裝商業者',
@@ -754,6 +756,7 @@ export default function App() {
   tabs.splice(4, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
   tabs.splice(4, 0, ['earlyInterventionMedicalProviders', language === 'zh' ? '早期療育醫療院所' : 'Early Intervention Providers']);
   tabs.splice(5, 0, ['generalDentalMedicalInstitutions', language === 'zh' ? '牙醫一般科醫療機構' : 'General Dental Institutions']);
+  tabs.splice(6, 0, ['pediatricMedicalInstitutions', language === 'zh' ? '臺北市兒科醫療機構' : 'Taipei Pediatric Medical Institutions']);
   tabs.splice(6, 0, ['diabetesSharedCareMedicalInstitutions', language === 'zh' ? '糖尿病共照網醫事機構' : 'Diabetes Shared Care Institutions']);
   tabs.splice(7,0,['waterPipeInstallationContractors',language==='zh'?'自來水管承裝商業者':'Water Pipe Installation Contractors'],['seniorCareInstitutionEvaluations',language==='zh'?'老人安養暨長期照顧機構評鑑':'Senior Care Institution Evaluations'],['fertilitySubsidyContractedHospitals',language==='zh'?'生育補助合約醫院':'Fertility Subsidy Contracted Hospitals'],['fiveCancerScreeningProviders',language==='zh'?'五癌篩檢醫療院所':'Five-Cancer Screening Providers'],['rabiesVaccinationVeterinaryClinics',language==='zh'?'狂犬病疫苗獸醫診療機構':'Rabies Vaccination Veterinary Clinics'],['seniorServiceSiteCourses',language==='zh'?'銀髮族據點課程':'Senior Service Site Courses'],['taipeiGovernmentApplicationServices',language==='zh'?'台北服務通申辦服務':'Taipei Government Application Services'],['psychiatricRehabilitationAndNursingInstitutions',language==='zh'?'精神復健暨精神護理機構':'Psychiatric Rehabilitation and Nursing Institutions'],['culturalArtsFoundations',language==='zh'?'文化藝術財團法人':'Culture and Arts Foundations'],['visuallyImpairedMassageEstablishments',language==='zh'?'視障按摩院所名冊':'Visually Impaired Massage Establishments'],['approvedGasWaterHeaterInstallers',language==='zh'?'核准燃氣熱水器承裝業及技術士':'Approved Gas Water Heater Installers'],['petRegistrationStations',language==='zh'?'寵物登記站名冊':'Pet Registration Stations'],['bottledGasRetailers',language==='zh'?'桶裝瓦斯零售商':'Bottled Gas Retailers'],['rotavirusVaccineSubsidyProviders',language==='zh'?'輪狀病毒疫苗補助合約醫療院所':'Rotavirus Vaccine Subsidy Providers'],['socialWelfareFoundations',language==='zh'?'社會福利基金會':'Social Welfare Foundations'],['generalWesternMedicineInstitutions',language==='zh'?'西醫一般科醫療機構':'General Western Medicine Institutions'],['schoolchildDentalPreventiveCareProviders',language==='zh'?'學童牙齒預防保健醫療院所':'Schoolchild Dental Preventive Care Providers'],['streetPerformerVenues',language==='zh'?'街頭藝人展演場地':'Street Performer Venues'],['hospitalHemodialysisResources',language==='zh'?'公私立醫院血液透析資源':'Hospital Hemodialysis Resources'],['domesticEmploymentServiceAgencies',language==='zh'?'仲介本國人國內工作私立就業服務機構':'Domestic Employment Service Agencies'],['postpartumCareInstitutions',language==='zh'?'產後護理機構':'Postpartum Care Institutions'],['outCityFuneralBusinesses',language==='zh'?'外縣市殯葬業者':'Out-of-City Funeral Businesses'],['hotelHygieneDirectory',language==='zh'?'旅館衛生認證':'Hotel Hygiene Certification'],['kindergartenEvaluationPass',language==='zh'?'幼兒園評鑑通過名單':'Kindergarten Evaluation Pass Records']);
   tabs.splice(8, 0, ['pestControlBusinesses', language === 'zh' ? '病媒防治業者名錄' : 'Pest Control Business Directory']);
@@ -831,6 +834,7 @@ export default function App() {
       {tab === 'majorElectricityUsers' && majorElectricityUserSummary && <MajorElectricityUsersModule records={majorElectricityUserRecords} summary={majorElectricityUserSummary} language={language} />}
       {tab === 'earlyInterventionMedicalProviders' && earlyInterventionMedicalProviderSummary && <EarlyInterventionMedicalProvidersModule records={earlyInterventionMedicalProviderRecords} summary={earlyInterventionMedicalProviderSummary} language={language} />}
       {tab === 'generalDentalMedicalInstitutions' && generalDentalMedicalInstitutionSummary && <GeneralDentalMedicalInstitutionsModule records={generalDentalMedicalInstitutionRecords} summary={generalDentalMedicalInstitutionSummary} language={language} />}
+      {tab === 'pediatricMedicalInstitutions' && <PediatricMedicalInstitutionsModule language={language} />}
       {tab === 'diabetesSharedCareMedicalInstitutions' && diabetesSharedCareMedicalInstitutionSummary && <DiabetesSharedCareMedicalInstitutionsModule records={diabetesSharedCareMedicalInstitutionRecords} summary={diabetesSharedCareMedicalInstitutionSummary} language={language} />}
       {tab === 'generalWesternMedicineInstitutions' && <GeneratedDatasetDirectoryModule
         language={language} title={language === 'zh' ? '西醫一般科醫療機構' : 'General Western Medicine Institutions'}

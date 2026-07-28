@@ -1,0 +1,118 @@
+{
+  "datasetId": "8aeb2d36-b806-4461-9763-5c35017049b0",
+  "datasetTitle": "臺北市兒科醫療機構",
+  "datasetUrl": "https://data.taipei/dataset/detail?id=8aeb2d36-b806-4461-9763-5c35017049b0",
+  "totalRecords": 171,
+  "uniqueInstitutionNames": 171,
+  "districtsCovered": 12,
+  "postalCodesRepresented": 12,
+  "recordsWithCompleteAddresses": 171,
+  "recordsWithPhones": 168,
+  "recordsWithResolvedDistricts": 171,
+  "suspectedDuplicateRecords": 0,
+  "districtWithMostInstitutions": "大安區",
+  "byDistrict": [
+    {
+      "label": "大安區",
+      "value": 26
+    },
+    {
+      "label": "士林區",
+      "value": 21
+    },
+    {
+      "label": "中山區",
+      "value": 19
+    },
+    {
+      "label": "松山區",
+      "value": 17
+    },
+    {
+      "label": "北投區",
+      "value": 16
+    },
+    {
+      "label": "內湖區",
+      "value": 15
+    },
+    {
+      "label": "文山區",
+      "value": 14
+    },
+    {
+      "label": "萬華區",
+      "value": 11
+    },
+    {
+      "label": "信義區",
+      "value": 10
+    },
+    {
+      "label": "大同區",
+      "value": 9
+    },
+    {
+      "label": "中正區",
+      "value": 8
+    },
+    {
+      "label": "南港區",
+      "value": 5
+    }
+  ],
+  "byPostalCode": [
+    {
+      "label": "106",
+      "value": 26
+    },
+    {
+      "label": "111",
+      "value": 21
+    },
+    {
+      "label": "104",
+      "value": 19
+    },
+    {
+      "label": "105",
+      "value": 17
+    },
+    {
+      "label": "112",
+      "value": 16
+    },
+    {
+      "label": "114",
+      "value": 16
+    },
+    {
+      "label": "116",
+      "value": 14
+    },
+    {
+      "label": "108",
+      "value": 11
+    },
+    {
+      "label": "110",
+      "value": 10
+    },
+    {
+      "label": "103",
+      "value": 9
+    },
+    {
+      "label": "100",
+      "value": 7
+    },
+    {
+      "label": "115",
+      "value": 5
+    }
+  ],
+  "sourceFileUpdatedAt": "2025-06-11 14:58:56",
+  "metadataUpdatedAt": "2026-07-14 12:58:51",
+  "sourceUrl": "https://data.taipei/api/dataset/8aeb2d36-b806-4461-9763-5c35017049b0/resource/879c295d-b57e-432c-b673-4fe905ba1282/download",
+  "ingestedAt": "2026-07-28T04:37:06.914Z"
+}

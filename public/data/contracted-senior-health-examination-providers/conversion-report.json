@@ -1,0 +1,17 @@
+{
+  "source": "臺北市老人健康檢查特約醫療院所",
+  "encoding": "CP950 / Big5-compatible",
+  "inputRows": 85,
+  "outputRecords": 85,
+  "sourceFields": [
+    "醫事機構名稱",
+    "顯示用地址",
+    "系統辨識用地址",
+    "電話",
+    "分機",
+    "手機"
+  ],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950-compatible decoding is supported."
+  ]
+}

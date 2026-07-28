@@ -1,0 +1,4100 @@
+[
+  {
+    "id": "1",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "1",
+    "institutionName": "國立台灣大學醫學院附設醫院",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區中山南路７、８號；常德街１號",
+    "phoneRaw": "02 23123456",
+    "phoneNumbers": [
+      "02 23123456"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區中山南路７、８號；常德街１號 國立台灣大學醫學院附設醫院",
+    "sourceValues": {
+      "序號": "1",
+      "機構名稱": "國立台灣大學醫學院附設醫院",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區中山南路７、８號；常德街１號",
+      "電話": "02 23123456"
+    }
+  },
+  {
+    "id": "2",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "2",
+    "institutionName": "悅心診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區羅斯福路2段7之2號、7之3號",
+    "phoneRaw": "02-23961008",
+    "phoneNumbers": [
+      "02-23961008"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區羅斯福路2段7之2號、7之3號 悅心診所",
+    "sourceValues": {
+      "序號": "2",
+      "機構名稱": "悅心診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區羅斯福路2段7之2號、7之3號",
+      "電話": "02-23961008"
+    }
+  },
+  {
+    "id": "3",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "3",
+    "institutionName": "周正成小兒科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區徐州路24號",
+    "phoneRaw": "(02) 2351-6830",
+    "phoneNumbers": [
+      "(02) 2351-6830"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區徐州路24號 周正成小兒科診所",
+    "sourceValues": {
+      "序號": "3",
+      "機構名稱": "周正成小兒科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區徐州路24號",
+      "電話": "(02) 2351-6830"
+    }
+  },
+  {
+    "id": "4",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "4",
+    "institutionName": "朱小兒科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區汀州路2段220號1樓",
+    "phoneRaw": "(02) 2365-1810",
+    "phoneNumbers": [
+      "(02) 2365-1810"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區汀州路2段220號1樓 朱小兒科診所",
+    "sourceValues": {
+      "序號": "4",
+      "機構名稱": "朱小兒科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區汀州路2段220號1樓",
+      "電話": "(02) 2365-1810"
+    }
+  },
+  {
+    "id": "5",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "5",
+    "institutionName": "臺北市立聯合醫院附設中正門診部",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區牯嶺街24號1樓",
+    "phoneRaw": "02 23210168",
+    "phoneNumbers": [
+      "02 23210168"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區牯嶺街24號1樓 臺北市立聯合醫院附設中正門診部",
+    "sourceValues": {
+      "序號": "5",
+      "機構名稱": "臺北市立聯合醫院附設中正門診部",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區牯嶺街24號1樓",
+      "電話": "02 23210168"
+    }
+  },
+  {
+    "id": "6",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "6",
+    "institutionName": "國立臺灣大學醫學院附設醫院兒童醫院",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區中山南路8號",
+    "phoneRaw": "2312-3456",
+    "phoneNumbers": [
+      "2312-3456"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區中山南路8號 國立臺灣大學醫學院附設醫院兒童醫院",
+    "sourceValues": {
+      "序號": "6",
+      "機構名稱": "國立臺灣大學醫學院附設醫院兒童醫院",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區中山南路8號",
+      "電話": "2312-3456"
+    }
+  },
+  {
+    "id": "7",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "7",
+    "institutionName": "禾馨婦產科診所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "臺北市中正區懷寧街78號、78號2樓",
+    "phoneRaw": "2361-2323",
+    "phoneNumbers": [
+      "2361-2323"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區懷寧街78號、78號2樓 禾馨婦產科診所",
+    "sourceValues": {
+      "序號": "7",
+      "機構名稱": "禾馨婦產科診所",
+      "郵遞區號": "100",
+      "地址": "臺北市中正區懷寧街78號、78號2樓",
+      "電話": "2361-2323"
+    }
+  },
+  {
+    "id": "8",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "8",
+    "institutionName": "施小兒科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區重慶北路三段２８號",
+    "phoneRaw": "(02) 2594-1935",
+    "phoneNumbers": [
+      "(02) 2594-1935"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區重慶北路三段２８號 施小兒科診所",
+    "sourceValues": {
+      "序號": "8",
+      "機構名稱": "施小兒科診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區重慶北路三段２８號",
+      "電話": "(02) 2594-1935"
+    }
+  },
+  {
+    "id": "9",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "9",
+    "institutionName": "黃博裕小兒科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區赤峰街４９巷２１號",
+    "phoneRaw": "(02) 2559-2440",
+    "phoneNumbers": [
+      "(02) 2559-2440"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區赤峰街４９巷２１號 黃博裕小兒科診所",
+    "sourceValues": {
+      "序號": "9",
+      "機構名稱": "黃博裕小兒科診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區赤峰街４９巷２１號",
+      "電話": "(02) 2559-2440"
+    }
+  },
+  {
+    "id": "10",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "10",
+    "institutionName": "陳重熙內科小兒科診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區保安街３之４號",
+    "phoneRaw": "(02) 2553-5505",
+    "phoneNumbers": [
+      "(02) 2553-5505"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區保安街３之４號 陳重熙內科小兒科診所",
+    "sourceValues": {
+      "序號": "10",
+      "機構名稱": "陳重熙內科小兒科診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區保安街３之４號",
+      "電話": "(02) 2553-5505"
+    }
+  },
+  {
+    "id": "11",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "11",
+    "institutionName": "臺北市立聯合醫院",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區鄭州路145號",
+    "phoneRaw": "2552-3234",
+    "phoneNumbers": [
+      "2552-3234"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區鄭州路145號 臺北市立聯合醫院",
+    "sourceValues": {
+      "序號": "11",
+      "機構名稱": "臺北市立聯合醫院",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區鄭州路145號",
+      "電話": "2552-3234"
+    }
+  },
+  {
+    "id": "12",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "12",
+    "institutionName": "羅源彰診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區長安西路137號",
+    "phoneRaw": "2555-2500",
+    "phoneNumbers": [
+      "2555-2500"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區長安西路137號 羅源彰診所",
+    "sourceValues": {
+      "序號": "12",
+      "機構名稱": "羅源彰診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區長安西路137號",
+      "電話": "2555-2500"
+    }
+  },
+  {
+    "id": "13",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "13",
+    "institutionName": "臺北市立聯合醫院附設大同門診部",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區昌吉街52號(1樓及2樓)",
+    "phoneRaw": "02-25948971",
+    "phoneNumbers": [
+      "02-25948971"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區昌吉街52號(1樓及2樓) 臺北市立聯合醫院附設大同門診部",
+    "sourceValues": {
+      "序號": "13",
+      "機構名稱": "臺北市立聯合醫院附設大同門診部",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區昌吉街52號(1樓及2樓)",
+      "電話": "02-25948971"
+    }
+  },
+  {
+    "id": "14",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "14",
+    "institutionName": "圓山診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區酒泉街131號(1樓)",
+    "phoneRaw": "02-25850036",
+    "phoneNumbers": [
+      "02-25850036"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區酒泉街131號(1樓) 圓山診所",
+    "sourceValues": {
+      "序號": "14",
+      "機構名稱": "圓山診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區酒泉街131號(1樓)",
+      "電話": "02-25850036"
+    }
+  },
+  {
+    "id": "15",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "15",
+    "institutionName": "紘成診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區長安西路53巷7弄1之1號1樓",
+    "phoneRaw": "2-255924120",
+    "phoneNumbers": [
+      "2-255924120"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區長安西路53巷7弄1之1號1樓 紘成診所",
+    "sourceValues": {
+      "序號": "15",
+      "機構名稱": "紘成診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區長安西路53巷7弄1之1號1樓",
+      "電話": "2-255924120"
+    }
+  },
+  {
+    "id": "16",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "16",
+    "institutionName": "悅昇診所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "臺北市大同區錦西街50之1號(1樓)",
+    "phoneRaw": "02-25502664",
+    "phoneNumbers": [
+      "02-25502664"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區錦西街50之1號(1樓) 悅昇診所",
+    "sourceValues": {
+      "序號": "16",
+      "機構名稱": "悅昇診所",
+      "郵遞區號": "103",
+      "地址": "臺北市大同區錦西街50之1號(1樓)",
+      "電話": "02-25502664"
+    }
+  },
+  {
+    "id": "17",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "17",
+    "institutionName": "雙連婦產科小兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民生西路30號4樓",
+    "phoneRaw": "2550-2381",
+    "phoneNumbers": [
+      "2550-2381"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民生西路30號4樓 雙連婦產科小兒科診所",
+    "sourceValues": {
+      "序號": "17",
+      "機構名稱": "雙連婦產科小兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民生西路30號4樓",
+      "電話": "2550-2381"
+    }
+  },
+  {
+    "id": "18",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "18",
+    "institutionName": "臺北市立聯合醫院附設中山門診部",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區松江路３６７號１樓",
+    "phoneRaw": "(02) 2501-4614",
+    "phoneNumbers": [
+      "(02) 2501-4614"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區松江路３６７號１樓 臺北市立聯合醫院附設中山門診部",
+    "sourceValues": {
+      "序號": "18",
+      "機構名稱": "臺北市立聯合醫院附設中山門診部",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區松江路３６７號１樓",
+      "電話": "(02) 2501-4614"
+    }
+  },
+  {
+    "id": "19",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "19",
+    "institutionName": "協和婦女醫院",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區松江路85巷5號1，2，3，4樓、93巷6號1，2，4樓",
+    "phoneRaw": "(02) 2507-2222",
+    "phoneNumbers": [
+      "(02) 2507-2222"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區松江路85巷5號1，2，3，4樓、93巷6號1，2，4樓 協和婦女醫院",
+    "sourceValues": {
+      "序號": "19",
+      "機構名稱": "協和婦女醫院",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區松江路85巷5號1，2，3，4樓、93巷6號1，2，4樓",
+      "電話": "(02) 2507-2222"
+    }
+  },
+  {
+    "id": "20",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "20",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區中山北路2段92號",
+    "phoneRaw": "02-25433535",
+    "phoneNumbers": [
+      "02-25433535"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區中山北路2段92號 台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+    "sourceValues": {
+      "序號": "20",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區中山北路2段92號",
+      "電話": "02-25433535"
+    }
+  },
+  {
+    "id": "21",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "21",
+    "institutionName": "鄭志誠小兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民生東路一段八號",
+    "phoneRaw": "02-25512246",
+    "phoneNumbers": [
+      "02-25512246"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民生東路一段八號 鄭志誠小兒科診所",
+    "sourceValues": {
+      "序號": "21",
+      "機構名稱": "鄭志誠小兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民生東路一段八號",
+      "電話": "02-25512246"
+    }
+  },
+  {
+    "id": "22",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "22",
+    "institutionName": "明誠診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區錦州街446號",
+    "phoneRaw": "2501-3380",
+    "phoneNumbers": [
+      "2501-3380"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區錦州街446號 明誠診所",
+    "sourceValues": {
+      "序號": "22",
+      "機構名稱": "明誠診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區錦州街446號",
+      "電話": "2501-3380"
+    }
+  },
+  {
+    "id": "23",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "23",
+    "institutionName": "愛鄰診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區北安路520之1號",
+    "phoneRaw": "02-25322333",
+    "phoneNumbers": [
+      "02-25322333"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區北安路520之1號 愛鄰診所",
+    "sourceValues": {
+      "序號": "23",
+      "機構名稱": "愛鄰診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區北安路520之1號",
+      "電話": "02-25322333"
+    }
+  },
+  {
+    "id": "24",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "24",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區中山北路二段９２號",
+    "phoneRaw": "(02) 2543-3535",
+    "phoneNumbers": [
+      "(02) 2543-3535"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區中山北路二段９２號 台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "sourceValues": {
+      "序號": "24",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區中山北路二段９２號",
+      "電話": "(02) 2543-3535"
+    }
+  },
+  {
+    "id": "25",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "25",
+    "institutionName": "慶恩小兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區吉林路一一七號",
+    "phoneRaw": "(02) 2568-3199",
+    "phoneNumbers": [
+      "(02) 2568-3199"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區吉林路一一七號 慶恩小兒科診所",
+    "sourceValues": {
+      "序號": "25",
+      "機構名稱": "慶恩小兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區吉林路一一七號",
+      "電話": "(02) 2568-3199"
+    }
+  },
+  {
+    "id": "26",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "26",
+    "institutionName": "寧康聯合診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區龍江路209巷6之1號",
+    "phoneRaw": "2501-3862",
+    "phoneNumbers": [
+      "2501-3862"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區龍江路209巷6之1號 寧康聯合診所",
+    "sourceValues": {
+      "序號": "26",
+      "機構名稱": "寧康聯合診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區龍江路209巷6之1號",
+      "電話": "2501-3862"
+    }
+  },
+  {
+    "id": "27",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "27",
+    "institutionName": "龍江小兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區龍江路１８１－１號１樓",
+    "phoneRaw": "(02) 2515-2433",
+    "phoneNumbers": [
+      "(02) 2515-2433"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區龍江路１８１－１號１樓 龍江小兒科診所",
+    "sourceValues": {
+      "序號": "27",
+      "機構名稱": "龍江小兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區龍江路１８１－１號１樓",
+      "電話": "(02) 2515-2433"
+    }
+  },
+  {
+    "id": "28",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "28",
+    "institutionName": "綠葉親子診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區農安街12之1號(1樓)",
+    "phoneRaw": "(02)2593-5559",
+    "phoneNumbers": [
+      "(02)2593-5559"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區農安街12之1號(1樓) 綠葉親子診所",
+    "sourceValues": {
+      "序號": "28",
+      "機構名稱": "綠葉親子診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區農安街12之1號(1樓)",
+      "電話": "(02)2593-5559"
+    }
+  },
+  {
+    "id": "29",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "29",
+    "institutionName": "四季和安婦幼診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區林森北路452號地下1樓、458號及458號3樓、460號及460號2樓、錦州街23巷3號3樓",
+    "phoneRaw": "02-25677310",
+    "phoneNumbers": [
+      "02-25677310"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區林森北路452號地下1樓、458號及458號3樓、460號及460號2樓、錦州街23巷3號3樓 四季和安婦幼診所",
+    "sourceValues": {
+      "序號": "29",
+      "機構名稱": "四季和安婦幼診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區林森北路452號地下1樓、458號及458號3樓、460號及460號2樓、錦州街23巷3號3樓",
+      "電話": "02-25677310"
+    }
+  },
+  {
+    "id": "30",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "30",
+    "institutionName": "北安聯合診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區北安路569之2號 569之3號 569之4號 569之1號二 樓 569之2號二 樓 569之3號二 樓 569之4號二 樓",
+    "phoneRaw": "2533-7777",
+    "phoneNumbers": [
+      "2533-7777"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區北安路569之2號 569之3號 569之4號 569之1號二 樓 569之2號二 樓 569之3號二 樓 569之4號二 樓 北安聯合診所",
+    "sourceValues": {
+      "序號": "30",
+      "機構名稱": "北安聯合診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區北安路569之2號 569之3號 569之4號 569之1號二 樓 569之2號二 樓 569之3號二 樓 569之4號二 樓",
+      "電話": "2533-7777"
+    }
+  },
+  {
+    "id": "31",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "31",
+    "institutionName": "柏泉內科小兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區北安路５９５巷２０弄５號",
+    "phoneRaw": "(02) 2533-1730",
+    "phoneNumbers": [
+      "(02) 2533-1730"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區北安路５９５巷２０弄５號 柏泉內科小兒科診所",
+    "sourceValues": {
+      "序號": "31",
+      "機構名稱": "柏泉內科小兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區北安路５９５巷２０弄５號",
+      "電話": "(02) 2533-1730"
+    }
+  },
+  {
+    "id": "32",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "32",
+    "institutionName": "葉小兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區長春路２２７號",
+    "phoneRaw": "(02) 5054-8333",
+    "phoneNumbers": [
+      "(02) 5054-8333"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區長春路２２７號 葉小兒科診所",
+    "sourceValues": {
+      "序號": "32",
+      "機構名稱": "葉小兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區長春路２２７號",
+      "電話": "(02) 5054-8333"
+    }
+  },
+  {
+    "id": "33",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "33",
+    "institutionName": "木生婦幼診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區長安東路二段90號1-4樓、88號4樓",
+    "phoneRaw": "02-25012312",
+    "phoneNumbers": [
+      "02-25012312"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區長安東路二段90號1-4樓、88號4樓 木生婦幼診所",
+    "sourceValues": {
+      "序號": "33",
+      "機構名稱": "木生婦幼診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區長安東路二段90號1-4樓、88號4樓",
+      "電話": "02-25012312"
+    }
+  },
+  {
+    "id": "34",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "34",
+    "institutionName": "李堯?內兒科診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民權東路二段２３號",
+    "phoneRaw": "(02) 2596-1172",
+    "phoneNumbers": [
+      "(02) 2596-1172"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路二段２３號 李堯?內兒科診所",
+    "sourceValues": {
+      "序號": "34",
+      "機構名稱": "李堯?內兒科診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民權東路二段２３號",
+      "電話": "(02) 2596-1172"
+    }
+  },
+  {
+    "id": "35",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "35",
+    "institutionName": "陳?輝診所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民生東路二段１０３號",
+    "phoneRaw": "(02) 2522-1796",
+    "phoneNumbers": [
+      "(02) 2522-1796"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民生東路二段１０３號 陳?輝診所",
+    "sourceValues": {
+      "序號": "35",
+      "機構名稱": "陳?輝診所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民生東路二段１０３號",
+      "電話": "(02) 2522-1796"
+    }
+  },
+  {
+    "id": "36",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "36",
+    "institutionName": "安兒康小兒專科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區敦化北路116號、118號、118號2樓",
+    "phoneRaw": "7728-7688",
+    "phoneNumbers": [
+      "7728-7688"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區敦化北路116號、118號、118號2樓 安兒康小兒專科診所",
+    "sourceValues": {
+      "序號": "36",
+      "機構名稱": "安兒康小兒專科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區敦化北路116號、118號、118號2樓",
+      "電話": "7728-7688"
+    }
+  },
+  {
+    "id": "37",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "37",
+    "institutionName": "洪小兒科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區市民大道五段１６５號１樓",
+    "phoneRaw": "(02) 2748-0630",
+    "phoneNumbers": [
+      "(02) 2748-0630"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區市民大道五段１６５號１樓 洪小兒科診所",
+    "sourceValues": {
+      "序號": "37",
+      "機構名稱": "洪小兒科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區市民大道五段１６５號１樓",
+      "電話": "(02) 2748-0630"
+    }
+  },
+  {
+    "id": "38",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "38",
+    "institutionName": "黎博彥診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區民生東路五段230號",
+    "phoneRaw": "2768-2802",
+    "phoneNumbers": [
+      "2768-2802"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區民生東路五段230號 黎博彥診所",
+    "sourceValues": {
+      "序號": "38",
+      "機構名稱": "黎博彥診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區民生東路五段230號",
+      "電話": "2768-2802"
+    }
+  },
+  {
+    "id": "39",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "39",
+    "institutionName": "安禾聯合診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區民權東路三段一七八號三樓",
+    "phoneRaw": "2713-7889",
+    "phoneNumbers": [
+      "2713-7889"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區民權東路三段一七八號三樓 安禾聯合診所",
+    "sourceValues": {
+      "序號": "39",
+      "機構名稱": "安禾聯合診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區民權東路三段一七八號三樓",
+      "電話": "2713-7889"
+    }
+  },
+  {
+    "id": "40",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "40",
+    "institutionName": "林忠志診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路五段291巷20弄3之3號",
+    "phoneRaw": "(02) 2768-9577",
+    "phoneNumbers": [
+      "(02) 2768-9577"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區南京東路五段291巷20弄3之3號 林忠志診所",
+    "sourceValues": {
+      "序號": "40",
+      "機構名稱": "林忠志診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路五段291巷20弄3之3號",
+      "電話": "(02) 2768-9577"
+    }
+  },
+  {
+    "id": "41",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "41",
+    "institutionName": "長庚醫療財團法人台北長庚紀念醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區敦化北路199號(暫未開放)、197號(暫未開放)、臺北市松山區敦化北路199巷6號、 臺北市松山區民生東路三段130巷9號2、3、B1、B2樓、臺北市松山區南京東路3段337號5、6、9、10樓。",
+    "phoneRaw": "(02) 2713-5211",
+    "phoneNumbers": [
+      "(02) 2713-5211"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區敦化北路199號(暫未開放)、197號(暫未開放)、臺北市松山區敦化北路199巷6號、 臺北市松山區民生東路三段130巷9號2、3、B1、B2樓、臺北市松山區南京東路3段337號5、6、9、10樓。 長庚醫療財團法人台北長庚紀念醫院",
+    "sourceValues": {
+      "序號": "41",
+      "機構名稱": "長庚醫療財團法人台北長庚紀念醫院",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區敦化北路199號(暫未開放)、197號(暫未開放)、臺北市松山區敦化北路199巷6號、 臺北市松山區民生東路三段130巷9號2、3、B1、B2樓、臺北市松山區南京東路3段337號5、6、9、10樓。",
+      "電話": "(02) 2713-5211"
+    }
+  },
+  {
+    "id": "42",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "42",
+    "institutionName": "基督復臨安息日會醫療財團法人臺安醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區八德路二段424,426號",
+    "phoneRaw": "(02) 2771-8151",
+    "phoneNumbers": [
+      "(02) 2771-8151"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區八德路二段424,426號 基督復臨安息日會醫療財團法人臺安醫院",
+    "sourceValues": {
+      "序號": "42",
+      "機構名稱": "基督復臨安息日會醫療財團法人臺安醫院",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區八德路二段424,426號",
+      "電話": "(02) 2771-8151"
+    }
+  },
+  {
+    "id": "43",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "43",
+    "institutionName": "華南小兒科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區延吉街３０巷１５號",
+    "phoneRaw": "(02) 2578-6018",
+    "phoneNumbers": [
+      "(02) 2578-6018"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區延吉街３０巷１５號 華南小兒科診所",
+    "sourceValues": {
+      "序號": "43",
+      "機構名稱": "華南小兒科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區延吉街３０巷１５號",
+      "電話": "(02) 2578-6018"
+    }
+  },
+  {
+    "id": "44",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "44",
+    "institutionName": "三軍總醫院松山分院附設民眾診療服務處",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區健康路１３１號",
+    "phoneRaw": "(02) 2746-2151",
+    "phoneNumbers": [
+      "(02) 2746-2151"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區健康路１３１號 三軍總醫院松山分院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "44",
+      "機構名稱": "三軍總醫院松山分院附設民眾診療服務處",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區健康路１３１號",
+      "電話": "(02) 2746-2151"
+    }
+  },
+  {
+    "id": "45",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "45",
+    "institutionName": "博仁綜合醫院",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區光復北路66號、68號地下一層、68號、68號2至7樓、68號2樓之1至7樓之1、68號2樓之2至7樓之2",
+    "phoneRaw": "(02) 2578-6677",
+    "phoneNumbers": [
+      "(02) 2578-6677"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區光復北路66號、68號地下一層、68號、68號2至7樓、68號2樓之1至7樓之1、68號2樓之2至7樓之2 博仁綜合醫院",
+    "sourceValues": {
+      "序號": "45",
+      "機構名稱": "博仁綜合醫院",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區光復北路66號、68號地下一層、68號、68號2至7樓、68號2樓之1至7樓之1、68號2樓之2至7樓之2",
+      "電話": "(02) 2578-6677"
+    }
+  },
+  {
+    "id": "46",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "46",
+    "institutionName": "榮恩耳鼻喉科小兒科聯合診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路五段２５８號",
+    "phoneRaw": "02 27688749",
+    "phoneNumbers": [
+      "02 27688749"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區南京東路五段２５８號 榮恩耳鼻喉科小兒科聯合診所",
+    "sourceValues": {
+      "序號": "46",
+      "機構名稱": "榮恩耳鼻喉科小兒科聯合診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路五段２５８號",
+      "電話": "02 27688749"
+    }
+  },
+  {
+    "id": "47",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "47",
+    "institutionName": "劉內兒科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區民生東路五段148號、148之1號",
+    "phoneRaw": "(02) 2760-3922",
+    "phoneNumbers": [
+      "(02) 2760-3922"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區民生東路五段148號、148之1號 劉內兒科診所",
+    "sourceValues": {
+      "序號": "47",
+      "機構名稱": "劉內兒科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區民生東路五段148號、148之1號",
+      "電話": "(02) 2760-3922"
+    }
+  },
+  {
+    "id": "48",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "48",
+    "institutionName": "康明哲小兒科內科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區三民路１３６巷１５號",
+    "phoneRaw": "(02) 2767-5941",
+    "phoneNumbers": [
+      "(02) 2767-5941"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區三民路１３６巷１５號 康明哲小兒科內科診所",
+    "sourceValues": {
+      "序號": "48",
+      "機構名稱": "康明哲小兒科內科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區三民路１３６巷１５號",
+      "電話": "(02) 2767-5941"
+    }
+  },
+  {
+    "id": "49",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "49",
+    "institutionName": "心田民生診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區民生東路5段105號1樓",
+    "phoneRaw": "2765-3039",
+    "phoneNumbers": [
+      "2765-3039"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區民生東路5段105號1樓 心田民生診所",
+    "sourceValues": {
+      "序號": "49",
+      "機構名稱": "心田民生診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區民生東路5段105號1樓",
+      "電話": "2765-3039"
+    }
+  },
+  {
+    "id": "50",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "50",
+    "institutionName": "江崇萍小兒科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路五段２５１巷２４弄２７號",
+    "phoneRaw": "(02) 2763-2260",
+    "phoneNumbers": [
+      "(02) 2763-2260"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區南京東路五段２５１巷２４弄２７號 江崇萍小兒科診所",
+    "sourceValues": {
+      "序號": "50",
+      "機構名稱": "江崇萍小兒科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路五段２５１巷２４弄２７號",
+      "電話": "(02) 2763-2260"
+    }
+  },
+  {
+    "id": "51",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "51",
+    "institutionName": "車參薇小兒科診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區八德路三段195號１樓",
+    "phoneRaw": "(02) 2577-0101",
+    "phoneNumbers": [
+      "(02) 2577-0101"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區八德路三段195號１樓 車參薇小兒科診所",
+    "sourceValues": {
+      "序號": "51",
+      "機構名稱": "車參薇小兒科診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區八德路三段195號１樓",
+      "電話": "(02) 2577-0101"
+    }
+  },
+  {
+    "id": "52",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "52",
+    "institutionName": "弘宇診所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區民權東路3段160巷2之6號(1樓)",
+    "phoneRaw": "02-27128875",
+    "phoneNumbers": [
+      "02-27128875"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區民權東路3段160巷2之6號(1樓) 弘宇診所",
+    "sourceValues": {
+      "序號": "52",
+      "機構名稱": "弘宇診所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區民權東路3段160巷2之6號(1樓)",
+      "電話": "02-27128875"
+    }
+  },
+  {
+    "id": "53",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "53",
+    "institutionName": "中山醫療社團法人中山醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路四段112巷11號、12號、13弄6、8號1樓",
+    "phoneRaw": "02-27081166",
+    "phoneNumbers": [
+      "02-27081166"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區仁愛路四段112巷11號、12號、13弄6、8號1樓 中山醫療社團法人中山醫院",
+    "sourceValues": {
+      "序號": "53",
+      "機構名稱": "中山醫療社團法人中山醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路四段112巷11號、12號、13弄6、8號1樓",
+      "電話": "02-27081166"
+    }
+  },
+  {
+    "id": "54",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "54",
+    "institutionName": "國泰醫療財團法人國泰綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路四段266巷6號，280號",
+    "phoneRaw": "(02) 2708-2121",
+    "phoneNumbers": [
+      "(02) 2708-2121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區仁愛路四段266巷6號，280號 國泰醫療財團法人國泰綜合醫院",
+    "sourceValues": {
+      "序號": "54",
+      "機構名稱": "國泰醫療財團法人國泰綜合醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路四段266巷6號，280號",
+      "電話": "(02) 2708-2121"
+    }
+  },
+  {
+    "id": "55",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "55",
+    "institutionName": "中心診所醫療財團法人中心綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路四段７７號",
+    "phoneRaw": "(02) 2751-0221",
+    "phoneNumbers": [
+      "(02) 2751-0221"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區忠孝東路四段７７號 中心診所醫療財團法人中心綜合醫院",
+    "sourceValues": {
+      "序號": "55",
+      "機構名稱": "中心診所醫療財團法人中心綜合醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路四段７７號",
+      "電話": "(02) 2751-0221"
+    }
+  },
+  {
+    "id": "56",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "56",
+    "institutionName": "宏恩醫療財團法人宏恩綜合醫院",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區仁愛路四段71巷1號、仁 愛路四段61號、仁愛路四段91巷16號",
+    "phoneRaw": "(02) 2771-3161",
+    "phoneNumbers": [
+      "(02) 2771-3161"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區仁愛路四段71巷1號、仁 愛路四段61號、仁愛路四段91巷16號 宏恩醫療財團法人宏恩綜合醫院",
+    "sourceValues": {
+      "序號": "56",
+      "機構名稱": "宏恩醫療財團法人宏恩綜合醫院",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區仁愛路四段71巷1號、仁 愛路四段61號、仁愛路四段91巷16號",
+      "電話": "(02) 2771-3161"
+    }
+  },
+  {
+    "id": "57",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "57",
+    "institutionName": "臺北市立聯合醫院附設大安門診部",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區辛亥路3段15號",
+    "phoneRaw": "2739-0997",
+    "phoneNumbers": [
+      "2739-0997"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區辛亥路3段15號 臺北市立聯合醫院附設大安門診部",
+    "sourceValues": {
+      "序號": "57",
+      "機構名稱": "臺北市立聯合醫院附設大安門診部",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區辛亥路3段15號",
+      "電話": "2739-0997"
+    }
+  },
+  {
+    "id": "58",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "58",
+    "institutionName": "黃禎祥診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區師大路７１號",
+    "phoneRaw": "(02) 2362-6607",
+    "phoneNumbers": [
+      "(02) 2362-6607"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區師大路７１號 黃禎祥診所",
+    "sourceValues": {
+      "序號": "58",
+      "機構名稱": "黃禎祥診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區師大路７１號",
+      "電話": "(02) 2362-6607"
+    }
+  },
+  {
+    "id": "59",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "59",
+    "institutionName": "陳志明診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路二段３３７號",
+    "phoneRaw": "(02) 2754-9558",
+    "phoneNumbers": [
+      "(02) 2754-9558"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區和平東路二段３３７號 陳志明診所",
+    "sourceValues": {
+      "序號": "59",
+      "機構名稱": "陳志明診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路二段３３７號",
+      "電話": "(02) 2754-9558"
+    }
+  },
+  {
+    "id": "60",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "60",
+    "institutionName": "蔡國仁內兒科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路三段２１７巷４弄２１號",
+    "phoneRaw": "(02) 2751-1916",
+    "phoneNumbers": [
+      "(02) 2751-1916"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區忠孝東路三段２１７巷４弄２１號 蔡國仁內兒科診所",
+    "sourceValues": {
+      "序號": "60",
+      "機構名稱": "蔡國仁內兒科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路三段２１７巷４弄２１號",
+      "電話": "(02) 2751-1916"
+    }
+  },
+  {
+    "id": "61",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "61",
+    "institutionName": "林繼國診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路三段２１７巷１弄１２號１樓",
+    "phoneRaw": "(02) 2731-5568",
+    "phoneNumbers": [
+      "(02) 2731-5568"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區忠孝東路三段２１７巷１弄１２號１樓 林繼國診所",
+    "sourceValues": {
+      "序號": "61",
+      "機構名稱": "林繼國診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路三段２１７巷１弄１２號１樓",
+      "電話": "(02) 2731-5568"
+    }
+  },
+  {
+    "id": "62",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "62",
+    "institutionName": "葉明憲小兒科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區羅斯福路三段１９１號２Ｆ",
+    "phoneRaw": "(02) 2369-1688",
+    "phoneNumbers": [
+      "(02) 2369-1688"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區羅斯福路三段１９１號２Ｆ 葉明憲小兒科診所",
+    "sourceValues": {
+      "序號": "62",
+      "機構名稱": "葉明憲小兒科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區羅斯福路三段１９１號２Ｆ",
+      "電話": "(02) 2369-1688"
+    }
+  },
+  {
+    "id": "63",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "63",
+    "institutionName": "啟誠聯合診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路二段120號1樓、2樓、3樓、4樓",
+    "phoneRaw": "(02) 2378-4380",
+    "phoneNumbers": [
+      "(02) 2378-4380"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區和平東路二段120號1樓、2樓、3樓、4樓 啟誠聯合診所",
+    "sourceValues": {
+      "序號": "63",
+      "機構名稱": "啟誠聯合診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路二段120號1樓、2樓、3樓、4樓",
+      "電話": "(02) 2378-4380"
+    }
+  },
+  {
+    "id": "64",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "64",
+    "institutionName": "呂小兒科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區通化街二十四巷六號一樓",
+    "phoneRaw": "2700-0708",
+    "phoneNumbers": [
+      "2700-0708"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區通化街二十四巷六號一樓 呂小兒科診所",
+    "sourceValues": {
+      "序號": "64",
+      "機構名稱": "呂小兒科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區通化街二十四巷六號一樓",
+      "電話": "2700-0708"
+    }
+  },
+  {
+    "id": "65",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "65",
+    "institutionName": "延吉診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區延吉街二四一巷二弄五號一樓",
+    "phoneRaw": "2703-5082",
+    "phoneNumbers": [
+      "2703-5082"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區延吉街二四一巷二弄五號一樓 延吉診所",
+    "sourceValues": {
+      "序號": "65",
+      "機構名稱": "延吉診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區延吉街二四一巷二弄五號一樓",
+      "電話": "2703-5082"
+    }
+  },
+  {
+    "id": "66",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "66",
+    "institutionName": "劉建宏診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區大安路二段139號",
+    "phoneRaw": "02-2700-2368",
+    "phoneNumbers": [
+      "02-2700-2368"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區大安路二段139號 劉建宏診所",
+    "sourceValues": {
+      "序號": "66",
+      "機構名稱": "劉建宏診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區大安路二段139號",
+      "電話": "02-2700-2368"
+    }
+  },
+  {
+    "id": "67",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "67",
+    "institutionName": "許靜瑛小兒科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路1段230號1樓",
+    "phoneRaw": "2362-9088",
+    "phoneNumbers": [
+      "2362-9088"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區和平東路1段230號1樓 許靜瑛小兒科診所",
+    "sourceValues": {
+      "序號": "67",
+      "機構名稱": "許靜瑛小兒科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路1段230號1樓",
+      "電話": "2362-9088"
+    }
+  },
+  {
+    "id": "68",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "68",
+    "institutionName": "黃文香兒科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區忠孝東路4段250號2樓之1",
+    "phoneRaw": "2731-3305",
+    "phoneNumbers": [
+      "2731-3305"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區忠孝東路4段250號2樓之1 黃文香兒科診所",
+    "sourceValues": {
+      "序號": "68",
+      "機構名稱": "黃文香兒科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區忠孝東路4段250號2樓之1",
+      "電話": "2731-3305"
+    }
+  },
+  {
+    "id": "69",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "69",
+    "institutionName": "健華診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路2段299號(實際營業地址:1樓)",
+    "phoneRaw": "2707-2990",
+    "phoneNumbers": [
+      "2707-2990"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區和平東路2段299號(實際營業地址:1樓) 健華診所",
+    "sourceValues": {
+      "序號": "69",
+      "機構名稱": "健華診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路2段299號(實際營業地址:1樓)",
+      "電話": "2707-2990"
+    }
+  },
+  {
+    "id": "70",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "70",
+    "institutionName": "愛群兒童成長診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路三段155號1、2樓",
+    "phoneRaw": "5599-8330",
+    "phoneNumbers": [
+      "5599-8330"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區信義路三段155號1、2樓 愛群兒童成長診所",
+    "sourceValues": {
+      "序號": "70",
+      "機構名稱": "愛群兒童成長診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路三段155號1、2樓",
+      "電話": "5599-8330"
+    }
+  },
+  {
+    "id": "71",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "71",
+    "institutionName": "安東診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路2段229號(1樓、2樓)",
+    "phoneRaw": "02-23786111",
+    "phoneNumbers": [
+      "02-23786111"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區和平東路2段229號(1樓、2樓) 安東診所",
+    "sourceValues": {
+      "序號": "71",
+      "機構名稱": "安東診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路2段229號(1樓、2樓)",
+      "電話": "02-23786111"
+    }
+  },
+  {
+    "id": "72",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "72",
+    "institutionName": "禾馨大安婦幼診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區新生南路3段4號2樓",
+    "phoneRaw": "3365-2766",
+    "phoneNumbers": [
+      "3365-2766"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區新生南路3段4號2樓 禾馨大安婦幼診所",
+    "sourceValues": {
+      "序號": "72",
+      "機構名稱": "禾馨大安婦幼診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區新生南路3段4號2樓",
+      "電話": "3365-2766"
+    }
+  },
+  {
+    "id": "73",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "73",
+    "institutionName": "和平診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區和平東路1段77之2號(1樓)",
+    "phoneRaw": "02-23912000",
+    "phoneNumbers": [
+      "02-23912000"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區和平東路1段77之2號(1樓) 和平診所",
+    "sourceValues": {
+      "序號": "73",
+      "機構名稱": "和平診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區和平東路1段77之2號(1樓)",
+      "電話": "02-23912000"
+    }
+  },
+  {
+    "id": "74",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "74",
+    "institutionName": "禾馨新生婦幼診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區新生南路3段2號1樓、2號2樓、2號3樓",
+    "phoneRaw": "02-23682333",
+    "phoneNumbers": [
+      "02-23682333"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區新生南路3段2號1樓、2號2樓、2號3樓 禾馨新生婦幼診所",
+    "sourceValues": {
+      "序號": "74",
+      "機構名稱": "禾馨新生婦幼診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區新生南路3段2號1樓、2號2樓、2號3樓",
+      "電話": "02-23682333"
+    }
+  },
+  {
+    "id": "75",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "75",
+    "institutionName": "澤星親子診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區敦化南路1段376號2樓之2",
+    "phoneRaw": "02-2701-8848",
+    "phoneNumbers": [
+      "02-2701-8848"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區敦化南路1段376號2樓之2 澤星親子診所",
+    "sourceValues": {
+      "序號": "75",
+      "機構名稱": "澤星親子診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區敦化南路1段376號2樓之2",
+      "電話": "02-2701-8848"
+    }
+  },
+  {
+    "id": "76",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "76",
+    "institutionName": "愛群小兒專科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區信義路3段170號2樓、170號2樓之1、172號2樓、172號2樓之1",
+    "phoneRaw": "02-55998337",
+    "phoneNumbers": [
+      "02-55998337"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區信義路3段170號2樓、170號2樓之1、172號2樓、172號2樓之1 愛群小兒專科診所",
+    "sourceValues": {
+      "序號": "76",
+      "機構名稱": "愛群小兒專科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區信義路3段170號2樓、170號2樓之1、172號2樓、172號2樓之1",
+      "電話": "02-55998337"
+    }
+  },
+  {
+    "id": "77",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "77",
+    "institutionName": "小禾馨小兒專科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區新生南路3段4號1樓",
+    "phoneRaw": "2369-8833",
+    "phoneNumbers": [
+      "2369-8833"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區新生南路3段4號1樓 小禾馨小兒專科診所",
+    "sourceValues": {
+      "序號": "77",
+      "機構名稱": "小禾馨小兒專科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區新生南路3段4號1樓",
+      "電話": "2369-8833"
+    }
+  },
+  {
+    "id": "78",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "78",
+    "institutionName": "尹書田醫療財團法人書田泌尿科眼科診所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "臺北市大安區建國南路2段276號1樓、2樓、4樓、4樓之1、B1、B1之1、278號1樓",
+    "phoneRaw": "2369-0211",
+    "phoneNumbers": [
+      "2369-0211"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區建國南路2段276號1樓、2樓、4樓、4樓之1、B1、B1之1、278號1樓 尹書田醫療財團法人書田泌尿科眼科診所",
+    "sourceValues": {
+      "序號": "78",
+      "機構名稱": "尹書田醫療財團法人書田泌尿科眼科診所",
+      "郵遞區號": "106",
+      "地址": "臺北市大安區建國南路2段276號1樓、2樓、4樓、4樓之1、B1、B1之1、278號1樓",
+      "電話": "2369-0211"
+    }
+  },
+  {
+    "id": "79",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "79",
+    "institutionName": "國立臺灣大學醫學院附設醫院北護分院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區康定路３７號、臺北市萬華區內江街87號、臺北市萬華區內江街87號、臺北市萬華區內江街89號 (文教大樓1樓及供應樓1至2樓)",
+    "phoneRaw": "(02) 2371-7101",
+    "phoneNumbers": [
+      "(02) 2371-7101"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區康定路３７號、臺北市萬華區內江街87號、臺北市萬華區內江街87號、臺北市萬華區內江街89號 (文教大樓1樓及供應樓1至2樓) 國立臺灣大學醫學院附設醫院北護分院",
+    "sourceValues": {
+      "序號": "79",
+      "機構名稱": "國立臺灣大學醫學院附設醫院北護分院",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區康定路３７號、臺北市萬華區內江街87號、臺北市萬華區內江街87號、臺北市萬華區內江街89號 (文教大樓1樓及供應樓1至2樓)",
+      "電話": "(02) 2371-7101"
+    }
+  },
+  {
+    "id": "80",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "80",
+    "institutionName": "西園醫療社團法人西園醫院",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區西園路二段266、268、270、272、276號、185、187、189號",
+    "phoneRaw": "02-23329888",
+    "phoneNumbers": [
+      "02-23329888"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區西園路二段266、268、270、272、276號、185、187、189號 西園醫療社團法人西園醫院",
+    "sourceValues": {
+      "序號": "80",
+      "機構名稱": "西園醫療社團法人西園醫院",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區西園路二段266、268、270、272、276號、185、187、189號",
+      "電話": "02-23329888"
+    }
+  },
+  {
+    "id": "81",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "81",
+    "institutionName": "鄭內兒科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區艋舺大道430號",
+    "phoneRaw": "(02) 2306-7992",
+    "phoneNumbers": [
+      "(02) 2306-7992"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區艋舺大道430號 鄭內兒科診所",
+    "sourceValues": {
+      "序號": "81",
+      "機構名稱": "鄭內兒科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區艋舺大道430號",
+      "電話": "(02) 2306-7992"
+    }
+  },
+  {
+    "id": "82",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "82",
+    "institutionName": "顏克文診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區貴陽街二段１０３號",
+    "phoneRaw": "(02) 2331-0413",
+    "phoneNumbers": [
+      "(02) 2331-0413"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區貴陽街二段１０３號 顏克文診所",
+    "sourceValues": {
+      "序號": "82",
+      "機構名稱": "顏克文診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區貴陽街二段１０３號",
+      "電話": "(02) 2331-0413"
+    }
+  },
+  {
+    "id": "83",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "83",
+    "institutionName": "林進雄診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區桂林路102號1樓",
+    "phoneRaw": "(02) 2304-0998",
+    "phoneNumbers": [
+      "(02) 2304-0998"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區桂林路102號1樓 林進雄診所",
+    "sourceValues": {
+      "序號": "83",
+      "機構名稱": "林進雄診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區桂林路102號1樓",
+      "電話": "(02) 2304-0998"
+    }
+  },
+  {
+    "id": "84",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "84",
+    "institutionName": "佳安診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區青年路34號",
+    "phoneRaw": "2332-0898",
+    "phoneNumbers": [
+      "2332-0898"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區青年路34號 佳安診所",
+    "sourceValues": {
+      "序號": "84",
+      "機構名稱": "佳安診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區青年路34號",
+      "電話": "2332-0898"
+    }
+  },
+  {
+    "id": "85",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "85",
+    "institutionName": "許孟權小兒科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區西藏路115號",
+    "phoneRaw": "02-23393331",
+    "phoneNumbers": [
+      "02-23393331"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區西藏路115號 許孟權小兒科診所",
+    "sourceValues": {
+      "序號": "85",
+      "機構名稱": "許孟權小兒科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區西藏路115號",
+      "電話": "02-23393331"
+    }
+  },
+  {
+    "id": "86",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "86",
+    "institutionName": "永康診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區桂林路47號1樓2樓及地下1樓",
+    "phoneRaw": "2312-3455",
+    "phoneNumbers": [
+      "2312-3455"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區桂林路47號1樓2樓及地下1樓 永康診所",
+    "sourceValues": {
+      "序號": "86",
+      "機構名稱": "永康診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區桂林路47號1樓2樓及地下1樓",
+      "電話": "2312-3455"
+    }
+  },
+  {
+    "id": "87",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "87",
+    "institutionName": "快樂兒童診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區寶興街121、125、127號",
+    "phoneRaw": "02-23328610",
+    "phoneNumbers": [
+      "02-23328610"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區寶興街121、125、127號 快樂兒童診所",
+    "sourceValues": {
+      "序號": "87",
+      "機構名稱": "快樂兒童診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區寶興街121、125、127號",
+      "電話": "02-23328610"
+    }
+  },
+  {
+    "id": "88",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "88",
+    "institutionName": "青年診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區中華路二段四二四號",
+    "phoneRaw": "2303-2450",
+    "phoneNumbers": [
+      "2303-2450"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區中華路二段四二四號 青年診所",
+    "sourceValues": {
+      "序號": "88",
+      "機構名稱": "青年診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區中華路二段四二四號",
+      "電話": "2303-2450"
+    }
+  },
+  {
+    "id": "89",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "89",
+    "institutionName": "漢宗小兒科診所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區中華路2段434號",
+    "phoneRaw": "2303-9022",
+    "phoneNumbers": [
+      "2303-9022"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市萬華區中華路2段434號 漢宗小兒科診所",
+    "sourceValues": {
+      "序號": "89",
+      "機構名稱": "漢宗小兒科診所",
+      "郵遞區號": "108",
+      "地址": "臺北市萬華區中華路2段434號",
+      "電話": "2303-9022"
+    }
+  },
+  {
+    "id": "90",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "90",
+    "institutionName": "鄭光志小兒科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區松德路23號(實際營業地址:1樓)",
+    "phoneRaw": "(02) 2726-6132",
+    "phoneNumbers": [
+      "(02) 2726-6132"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區松德路23號(實際營業地址:1樓) 鄭光志小兒科診所",
+    "sourceValues": {
+      "序號": "90",
+      "機構名稱": "鄭光志小兒科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區松德路23號(實際營業地址:1樓)",
+      "電話": "(02) 2726-6132"
+    }
+  },
+  {
+    "id": "91",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "91",
+    "institutionName": "臺北醫學大學附設醫院",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區吳興街２５2號、250號",
+    "phoneRaw": "(02) 2737-2181",
+    "phoneNumbers": [
+      "(02) 2737-2181"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區吳興街２５2號、250號 臺北醫學大學附設醫院",
+    "sourceValues": {
+      "序號": "91",
+      "機構名稱": "臺北醫學大學附設醫院",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區吳興街２５2號、250號",
+      "電話": "(02) 2737-2181"
+    }
+  },
+  {
+    "id": "92",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "92",
+    "institutionName": "連小兒科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區松山路４６５巷１１號１Ｆ",
+    "phoneRaw": "(02) 2728-5487",
+    "phoneNumbers": [
+      "(02) 2728-5487"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區松山路４６５巷１１號１Ｆ 連小兒科診所",
+    "sourceValues": {
+      "序號": "92",
+      "機構名稱": "連小兒科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區松山路４６５巷１１號１Ｆ",
+      "電話": "(02) 2728-5487"
+    }
+  },
+  {
+    "id": "93",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "93",
+    "institutionName": "黃啟彰診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區松山路２６１－１號１樓",
+    "phoneRaw": "(02) 2769-6218",
+    "phoneNumbers": [
+      "(02) 2769-6218"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區松山路２６１－１號１樓 黃啟彰診所",
+    "sourceValues": {
+      "序號": "93",
+      "機構名稱": "黃啟彰診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區松山路２６１－１號１樓",
+      "電話": "(02) 2769-6218"
+    }
+  },
+  {
+    "id": "94",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "94",
+    "institutionName": "林應然小兒科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區福德街75號",
+    "phoneRaw": "2759-5328",
+    "phoneNumbers": [
+      "2759-5328"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區福德街75號 林應然小兒科診所",
+    "sourceValues": {
+      "序號": "94",
+      "機構名稱": "林應然小兒科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區福德街75號",
+      "電話": "2759-5328"
+    }
+  },
+  {
+    "id": "95",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "95",
+    "institutionName": "王寬仁診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區虎林街１２１巷１１號１樓",
+    "phoneRaw": "(02) 2720-4952",
+    "phoneNumbers": [
+      "(02) 2720-4952"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區虎林街１２１巷１１號１樓 王寬仁診所",
+    "sourceValues": {
+      "序號": "95",
+      "機構名稱": "王寬仁診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區虎林街１２１巷１１號１樓",
+      "電話": "(02) 2720-4952"
+    }
+  },
+  {
+    "id": "96",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "96",
+    "institutionName": "長風小兒科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區莊敬路３５１號１樓",
+    "phoneRaw": "02-27227943",
+    "phoneNumbers": [
+      "02-27227943"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區莊敬路３５１號１樓 長風小兒科診所",
+    "sourceValues": {
+      "序號": "96",
+      "機構名稱": "長風小兒科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區莊敬路３５１號１樓",
+      "電話": "02-27227943"
+    }
+  },
+  {
+    "id": "97",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "97",
+    "institutionName": "悠亞診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區忠孝東路5段727號",
+    "phoneRaw": "8785-1233",
+    "phoneNumbers": [
+      "8785-1233"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區忠孝東路5段727號 悠亞診所",
+    "sourceValues": {
+      "序號": "97",
+      "機構名稱": "悠亞診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區忠孝東路5段727號",
+      "電話": "8785-1233"
+    }
+  },
+  {
+    "id": "98",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "98",
+    "institutionName": "明輝診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區松隆路282之3號",
+    "phoneRaw": "8787-1235",
+    "phoneNumbers": [
+      "8787-1235"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區松隆路282之3號 明輝診所",
+    "sourceValues": {
+      "序號": "98",
+      "機構名稱": "明輝診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區松隆路282之3號",
+      "電話": "8787-1235"
+    }
+  },
+  {
+    "id": "99",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "99",
+    "institutionName": "富陽劉內兒科診所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "臺北市信義區富陽街４３號１Ｆ",
+    "phoneRaw": "(02) 2732-5132",
+    "phoneNumbers": [
+      "(02) 2732-5132"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區富陽街４３號１Ｆ 富陽劉內兒科診所",
+    "sourceValues": {
+      "序號": "99",
+      "機構名稱": "富陽劉內兒科診所",
+      "郵遞區號": "110",
+      "地址": "臺北市信義區富陽街４３號１Ｆ",
+      "電話": "(02) 2732-5132"
+    }
+  },
+  {
+    "id": "100",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "100",
+    "institutionName": "樹爸爸親子診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區德行東路286號",
+    "phoneRaw": "2838-1838",
+    "phoneNumbers": [
+      "2838-1838"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區德行東路286號 樹爸爸親子診所",
+    "sourceValues": {
+      "序號": "100",
+      "機構名稱": "樹爸爸親子診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區德行東路286號",
+      "電話": "2838-1838"
+    }
+  },
+  {
+    "id": "101",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "101",
+    "institutionName": "貝爾診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路七段82巷9號",
+    "phoneRaw": "2872-9980",
+    "phoneNumbers": [
+      "2872-9980"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中山北路七段82巷9號 貝爾診所",
+    "sourceValues": {
+      "序號": "101",
+      "機構名稱": "貝爾診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路七段82巷9號",
+      "電話": "2872-9980"
+    }
+  },
+  {
+    "id": "102",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "102",
+    "institutionName": "小禾馨士林小兒專科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中正路289號(1樓)",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中正路289號(1樓) 小禾馨士林小兒專科診所",
+    "sourceValues": {
+      "序號": "102",
+      "機構名稱": "小禾馨士林小兒專科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中正路289號(1樓)",
+      "電話": ""
+    }
+  },
+  {
+    "id": "103",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "103",
+    "institutionName": "佩佩婦幼診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路六段182號、182號2樓",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中山北路六段182號、182號2樓 佩佩婦幼診所",
+    "sourceValues": {
+      "序號": "103",
+      "機構名稱": "佩佩婦幼診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路六段182號、182號2樓",
+      "電話": ""
+    }
+  },
+  {
+    "id": "104",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "104",
+    "institutionName": "柳橙親子診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區天母北路35號1樓",
+    "phoneRaw": "2874-2818",
+    "phoneNumbers": [
+      "2874-2818"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區天母北路35號1樓 柳橙親子診所",
+    "sourceValues": {
+      "序號": "104",
+      "機構名稱": "柳橙親子診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區天母北路35號1樓",
+      "電話": "2874-2818"
+    }
+  },
+  {
+    "id": "105",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "105",
+    "institutionName": "新光醫療財團法人新光吳火獅紀念醫院",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區文昌路95號及士商路51號、51號2樓、51號3樓、51號4樓、51號5樓、51號6樓、51號7樓、53號、55號、57號、臺北市士林區基河路252號1樓",
+    "phoneRaw": "(02) 2833-2211",
+    "phoneNumbers": [
+      "(02) 2833-2211"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區文昌路95號及士商路51號、51號2樓、51號3樓、51號4樓、51號5樓、51號6樓、51號7樓、53號、55號、57號、臺北市士林區基河路252號1樓 新光醫療財團法人新光吳火獅紀念醫院",
+    "sourceValues": {
+      "序號": "105",
+      "機構名稱": "新光醫療財團法人新光吳火獅紀念醫院",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區文昌路95號及士商路51號、51號2樓、51號3樓、51號4樓、51號5樓、51號6樓、51號7樓、53號、55號、57號、臺北市士林區基河路252號1樓",
+      "電話": "(02) 2833-2211"
+    }
+  },
+  {
+    "id": "106",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "106",
+    "institutionName": "臺北市立聯合醫院附設士林門診部",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中正路439號",
+    "phoneRaw": "(02) 2881-3039",
+    "phoneNumbers": [
+      "(02) 2881-3039"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中正路439號 臺北市立聯合醫院附設士林門診部",
+    "sourceValues": {
+      "序號": "106",
+      "機構名稱": "臺北市立聯合醫院附設士林門診部",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中正路439號",
+      "電話": "(02) 2881-3039"
+    }
+  },
+  {
+    "id": "107",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "107",
+    "institutionName": "存德小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區文林路460號(實際使用：1樓)",
+    "phoneRaw": "(02) 2834-2567",
+    "phoneNumbers": [
+      "(02) 2834-2567"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區文林路460號(實際使用：1樓) 存德小兒科診所",
+    "sourceValues": {
+      "序號": "107",
+      "機構名稱": "存德小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區文林路460號(實際使用：1樓)",
+      "電話": "(02) 2834-2567"
+    }
+  },
+  {
+    "id": "108",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "108",
+    "institutionName": "元順診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區德行西路１０６號",
+    "phoneRaw": "(02) 2834-0633",
+    "phoneNumbers": [
+      "(02) 2834-0633"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區德行西路１０６號 元順診所",
+    "sourceValues": {
+      "序號": "108",
+      "機構名稱": "元順診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區德行西路１０６號",
+      "電話": "(02) 2834-0633"
+    }
+  },
+  {
+    "id": "109",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "109",
+    "institutionName": "惠周內兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區大北路９６號１樓",
+    "phoneRaw": "(02) 2881-2962",
+    "phoneNumbers": [
+      "(02) 2881-2962"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區大北路９６號１樓 惠周內兒科診所",
+    "sourceValues": {
+      "序號": "109",
+      "機構名稱": "惠周內兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區大北路９６號１樓",
+      "電話": "(02) 2881-2962"
+    }
+  },
+  {
+    "id": "110",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "110",
+    "institutionName": "何啟?診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區德行東路63號",
+    "phoneRaw": "(02) 2837-3890",
+    "phoneNumbers": [
+      "(02) 2837-3890"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區德行東路63號 何啟?診所",
+    "sourceValues": {
+      "序號": "110",
+      "機構名稱": "何啟?診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區德行東路63號",
+      "電話": "(02) 2837-3890"
+    }
+  },
+  {
+    "id": "111",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "111",
+    "institutionName": "林佳宏小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路六段４６２號",
+    "phoneRaw": "(02) 2874-4591",
+    "phoneNumbers": [
+      "(02) 2874-4591"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中山北路六段４６２號 林佳宏小兒科診所",
+    "sourceValues": {
+      "序號": "111",
+      "機構名稱": "林佳宏小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路六段４６２號",
+      "電話": "(02) 2874-4591"
+    }
+  },
+  {
+    "id": "112",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "112",
+    "institutionName": "柯佑民小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區天母東路８巷１９弄５號１樓",
+    "phoneRaw": "(02) 2876-6955",
+    "phoneNumbers": [
+      "(02) 2876-6955"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區天母東路８巷１９弄５號１樓 柯佑民小兒科診所",
+    "sourceValues": {
+      "序號": "112",
+      "機構名稱": "柯佑民小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區天母東路８巷１９弄５號１樓",
+      "電話": "(02) 2876-6955"
+    }
+  },
+  {
+    "id": "113",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "113",
+    "institutionName": "嘉櫻小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區德行西路119號1樓",
+    "phoneRaw": "8866-6202",
+    "phoneNumbers": [
+      "8866-6202"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區德行西路119號1樓 嘉櫻小兒科診所",
+    "sourceValues": {
+      "序號": "113",
+      "機構名稱": "嘉櫻小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區德行西路119號1樓",
+      "電話": "8866-6202"
+    }
+  },
+  {
+    "id": "114",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "114",
+    "institutionName": "張虔熙小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中山北路六段282號",
+    "phoneRaw": "02-28361368",
+    "phoneNumbers": [
+      "02-28361368"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中山北路六段282號 張虔熙小兒科診所",
+    "sourceValues": {
+      "序號": "114",
+      "機構名稱": "張虔熙小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中山北路六段282號",
+      "電話": "02-28361368"
+    }
+  },
+  {
+    "id": "115",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "115",
+    "institutionName": "愛林診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區承德路四段222號、222之1號、222之2號",
+    "phoneRaw": "2883-6881",
+    "phoneNumbers": [
+      "2883-6881"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區承德路四段222號、222之1號、222之2號 愛林診所",
+    "sourceValues": {
+      "序號": "115",
+      "機構名稱": "愛林診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區承德路四段222號、222之1號、222之2號",
+      "電話": "2883-6881"
+    }
+  },
+  {
+    "id": "116",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "116",
+    "institutionName": "忠誠聯合診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區忠誠路2段50巷35號",
+    "phoneRaw": "(02) 8866-1176",
+    "phoneNumbers": [
+      "(02) 8866-1176"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區忠誠路2段50巷35號 忠誠聯合診所",
+    "sourceValues": {
+      "序號": "116",
+      "機構名稱": "忠誠聯合診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區忠誠路2段50巷35號",
+      "電話": "(02) 8866-1176"
+    }
+  },
+  {
+    "id": "117",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "117",
+    "institutionName": "慈田耳鼻喉科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區延平北路五段１８５號１樓",
+    "phoneRaw": "(02) 2812-3595",
+    "phoneNumbers": [
+      "(02) 2812-3595"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區延平北路五段１８５號１樓 慈田耳鼻喉科診所",
+    "sourceValues": {
+      "序號": "117",
+      "機構名稱": "慈田耳鼻喉科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區延平北路五段１８５號１樓",
+      "電話": "(02) 2812-3595"
+    }
+  },
+  {
+    "id": "118",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "118",
+    "institutionName": "何小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區福港街１７６號",
+    "phoneRaw": "(02) 2882-7401",
+    "phoneNumbers": [
+      "(02) 2882-7401"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區福港街１７６號 何小兒科診所",
+    "sourceValues": {
+      "序號": "118",
+      "機構名稱": "何小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區福港街１７６號",
+      "電話": "(02) 2882-7401"
+    }
+  },
+  {
+    "id": "119",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "119",
+    "institutionName": "蕭雨青小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區延平北路五段２９２號１樓",
+    "phoneRaw": "(02) 2812-6415",
+    "phoneNumbers": [
+      "(02) 2812-6415"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區延平北路五段２９２號１樓 蕭雨青小兒科診所",
+    "sourceValues": {
+      "序號": "119",
+      "機構名稱": "蕭雨青小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區延平北路五段２９２號１樓",
+      "電話": "(02) 2812-6415"
+    }
+  },
+  {
+    "id": "120",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "120",
+    "institutionName": "士林小兒科診所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "臺北市士林區中正路249號",
+    "phoneRaw": "2881-2485",
+    "phoneNumbers": [
+      "2881-2485"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中正路249號 士林小兒科診所",
+    "sourceValues": {
+      "序號": "120",
+      "機構名稱": "士林小兒科診所",
+      "郵遞區號": "111",
+      "地址": "臺北市士林區中正路249號",
+      "電話": "2881-2485"
+    }
+  },
+  {
+    "id": "121",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "121",
+    "institutionName": "石牌李診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區西安街一段二八一巷十五號",
+    "phoneRaw": "(02) 2834-2849",
+    "phoneNumbers": [
+      "(02) 2834-2849"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區西安街一段二八一巷十五號 石牌李診所",
+    "sourceValues": {
+      "序號": "121",
+      "機構名稱": "石牌李診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區西安街一段二八一巷十五號",
+      "電話": "(02) 2834-2849"
+    }
+  },
+  {
+    "id": "122",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "122",
+    "institutionName": "振興醫療財團法人振興醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區振興街４５號",
+    "phoneRaw": "(02) 2826-4400",
+    "phoneNumbers": [
+      "(02) 2826-4400"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區振興街４５號 振興醫療財團法人振興醫院",
+    "sourceValues": {
+      "序號": "122",
+      "機構名稱": "振興醫療財團法人振興醫院",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區振興街４５號",
+      "電話": "(02) 2826-4400"
+    }
+  },
+  {
+    "id": "123",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "123",
+    "institutionName": "陳獻明小兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區中央南路一段六十九號１樓",
+    "phoneRaw": "2892-8950",
+    "phoneNumbers": [
+      "2892-8950"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區中央南路一段六十九號１樓 陳獻明小兒科診所",
+    "sourceValues": {
+      "序號": "123",
+      "機構名稱": "陳獻明小兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區中央南路一段六十九號１樓",
+      "電話": "2892-8950"
+    }
+  },
+  {
+    "id": "124",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "124",
+    "institutionName": "李伯匯小兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區石牌路一段93號",
+    "phoneRaw": "(02) 2822-1212",
+    "phoneNumbers": [
+      "(02) 2822-1212"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區石牌路一段93號 李伯匯小兒科診所",
+    "sourceValues": {
+      "序號": "124",
+      "機構名稱": "李伯匯小兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區石牌路一段93號",
+      "電話": "(02) 2822-1212"
+    }
+  },
+  {
+    "id": "125",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "125",
+    "institutionName": "慈恩耳鼻喉科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區中央南路一段十三號",
+    "phoneRaw": "2897-8787",
+    "phoneNumbers": [
+      "2897-8787"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區中央南路一段十三號 慈恩耳鼻喉科診所",
+    "sourceValues": {
+      "序號": "125",
+      "機構名稱": "慈恩耳鼻喉科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區中央南路一段十三號",
+      "電話": "2897-8787"
+    }
+  },
+  {
+    "id": "126",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "126",
+    "institutionName": "陳信方小兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區明德路106號",
+    "phoneRaw": "2820-1068",
+    "phoneNumbers": [
+      "2820-1068"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區明德路106號 陳信方小兒科診所",
+    "sourceValues": {
+      "序號": "126",
+      "機構名稱": "陳信方小兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區明德路106號",
+      "電話": "2820-1068"
+    }
+  },
+  {
+    "id": "127",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "127",
+    "institutionName": "陳柏宏親子診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區明德路124號",
+    "phoneRaw": "2822-5257",
+    "phoneNumbers": [
+      "2822-5257"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區明德路124號 陳柏宏親子診所",
+    "sourceValues": {
+      "序號": "127",
+      "機構名稱": "陳柏宏親子診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區明德路124號",
+      "電話": "2822-5257"
+    }
+  },
+  {
+    "id": "128",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "128",
+    "institutionName": "吉安診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區西安街一段２８１巷１８號",
+    "phoneRaw": "(02) 2823-1832",
+    "phoneNumbers": [
+      "(02) 2823-1832"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區西安街一段２８１巷１８號 吉安診所",
+    "sourceValues": {
+      "序號": "128",
+      "機構名稱": "吉安診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區西安街一段２８１巷１８號",
+      "電話": "(02) 2823-1832"
+    }
+  },
+  {
+    "id": "129",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "129",
+    "institutionName": "黃浩魁小兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區中央北路一段168號",
+    "phoneRaw": "02-28983256",
+    "phoneNumbers": [
+      "02-28983256"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區中央北路一段168號 黃浩魁小兒科診所",
+    "sourceValues": {
+      "序號": "129",
+      "機構名稱": "黃浩魁小兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區中央北路一段168號",
+      "電話": "02-28983256"
+    }
+  },
+  {
+    "id": "130",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "130",
+    "institutionName": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區立德路１２５號",
+    "phoneRaw": "02-28970011",
+    "phoneNumbers": [
+      "02-28970011"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區立德路１２５號 醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "sourceValues": {
+      "序號": "130",
+      "機構名稱": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區立德路１２５號",
+      "電話": "02-28970011"
+    }
+  },
+  {
+    "id": "131",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "131",
+    "institutionName": "鄭素珠診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區自強街一五四號",
+    "phoneRaw": "(02) 2823-5400",
+    "phoneNumbers": [
+      "(02) 2823-5400"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區自強街一五四號 鄭素珠診所",
+    "sourceValues": {
+      "序號": "131",
+      "機構名稱": "鄭素珠診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區自強街一五四號",
+      "電話": "(02) 2823-5400"
+    }
+  },
+  {
+    "id": "132",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "132",
+    "institutionName": "何叔芳小兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區石牌路2段90巷12號1樓",
+    "phoneRaw": "2820-6886",
+    "phoneNumbers": [
+      "2820-6886"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區石牌路2段90巷12號1樓 何叔芳小兒科診所",
+    "sourceValues": {
+      "序號": "132",
+      "機構名稱": "何叔芳小兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區石牌路2段90巷12號1樓",
+      "電話": "2820-6886"
+    }
+  },
+  {
+    "id": "133",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "133",
+    "institutionName": "黃正宏診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區西安街1段359號",
+    "phoneRaw": "02-28217076",
+    "phoneNumbers": [
+      "02-28217076"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區西安街1段359號 黃正宏診所",
+    "sourceValues": {
+      "序號": "133",
+      "機構名稱": "黃正宏診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區西安街1段359號",
+      "電話": "02-28217076"
+    }
+  },
+  {
+    "id": "134",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "134",
+    "institutionName": "臺北榮民總醫院",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區石牌路二段201號、322號",
+    "phoneRaw": "(02) 2871-2121",
+    "phoneNumbers": [
+      "(02) 2871-2121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區石牌路二段201號、322號 臺北榮民總醫院",
+    "sourceValues": {
+      "序號": "134",
+      "機構名稱": "臺北榮民總醫院",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區石牌路二段201號、322號",
+      "電話": "(02) 2871-2121"
+    }
+  },
+  {
+    "id": "135",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "135",
+    "institutionName": "宏恩兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區致遠一路2段99號",
+    "phoneRaw": "2827-1110",
+    "phoneNumbers": [
+      "2827-1110"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區致遠一路2段99號 宏恩兒科診所",
+    "sourceValues": {
+      "序號": "135",
+      "機構名稱": "宏恩兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區致遠一路2段99號",
+      "電話": "2827-1110"
+    }
+  },
+  {
+    "id": "136",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "136",
+    "institutionName": "蔡秉勳小兒科診所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "臺北市北投區中和街二八一號一樓",
+    "phoneRaw": "02-28966525",
+    "phoneNumbers": [
+      "02-28966525"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區中和街二八一號一樓 蔡秉勳小兒科診所",
+    "sourceValues": {
+      "序號": "136",
+      "機構名稱": "蔡秉勳小兒科診所",
+      "郵遞區號": "112",
+      "地址": "臺北市北投區中和街二八一號一樓",
+      "電話": "02-28966525"
+    }
+  },
+  {
+    "id": "137",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "137",
+    "institutionName": "立安診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路二段３６５號１樓",
+    "phoneRaw": "(02) 2793-3632",
+    "phoneNumbers": [
+      "(02) 2793-3632"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區內湖路二段３６５號１樓 立安診所",
+    "sourceValues": {
+      "序號": "137",
+      "機構名稱": "立安診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路二段３６５號１樓",
+      "電話": "(02) 2793-3632"
+    }
+  },
+  {
+    "id": "138",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "138",
+    "institutionName": "劉淦華診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區金龍路43號",
+    "phoneRaw": "(02) 2790-5374",
+    "phoneNumbers": [
+      "(02) 2790-5374"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區金龍路43號 劉淦華診所",
+    "sourceValues": {
+      "序號": "138",
+      "機構名稱": "劉淦華診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區金龍路43號",
+      "電話": "(02) 2790-5374"
+    }
+  },
+  {
+    "id": "139",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "139",
+    "institutionName": "振興內兒科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區成功路三段１９３號",
+    "phoneRaw": "(02) 2790-6179",
+    "phoneNumbers": [
+      "(02) 2790-6179"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區成功路三段１９３號 振興內兒科診所",
+    "sourceValues": {
+      "序號": "139",
+      "機構名稱": "振興內兒科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路三段１９３號",
+      "電話": "(02) 2790-6179"
+    }
+  },
+  {
+    "id": "140",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "140",
+    "institutionName": "宋小兒科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路二段２５號",
+    "phoneRaw": "(02) 2799-9366",
+    "phoneNumbers": [
+      "(02) 2799-9366"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區內湖路二段２５號 宋小兒科診所",
+    "sourceValues": {
+      "序號": "140",
+      "機構名稱": "宋小兒科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路二段２５號",
+      "電話": "(02) 2799-9366"
+    }
+  },
+  {
+    "id": "141",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "141",
+    "institutionName": "魏穀年診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路一段４０３號",
+    "phoneRaw": "(02) 2657-2691",
+    "phoneNumbers": [
+      "(02) 2657-2691"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區內湖路一段４０３號 魏穀年診所",
+    "sourceValues": {
+      "序號": "141",
+      "機構名稱": "魏穀年診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路一段４０３號",
+      "電話": "(02) 2657-2691"
+    }
+  },
+  {
+    "id": "142",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "142",
+    "institutionName": "王慶森診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區港墘路６5號",
+    "phoneRaw": "(02) 2798-6052",
+    "phoneNumbers": [
+      "(02) 2798-6052"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區港墘路６5號 王慶森診所",
+    "sourceValues": {
+      "序號": "142",
+      "機構名稱": "王慶森診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區港墘路６5號",
+      "電話": "(02) 2798-6052"
+    }
+  },
+  {
+    "id": "143",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "143",
+    "institutionName": "中國醫藥大學附設醫院臺北分院",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路二段360號、362號",
+    "phoneRaw": "02-27919696",
+    "phoneNumbers": [
+      "02-27919696"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區內湖路二段360號、362號 中國醫藥大學附設醫院臺北分院",
+    "sourceValues": {
+      "序號": "143",
+      "機構名稱": "中國醫藥大學附設醫院臺北分院",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路二段360號、362號",
+      "電話": "02-27919696"
+    }
+  },
+  {
+    "id": "144",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "144",
+    "institutionName": "康寧醫療財團法人康寧醫院",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區成功路五段４２０巷２６號",
+    "phoneRaw": "2634-5500",
+    "phoneNumbers": [
+      "2634-5500"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區成功路五段４２０巷２６號 康寧醫療財團法人康寧醫院",
+    "sourceValues": {
+      "序號": "144",
+      "機構名稱": "康寧醫療財團法人康寧醫院",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路五段４２０巷２６號",
+      "電話": "2634-5500"
+    }
+  },
+  {
+    "id": "145",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "145",
+    "institutionName": "三軍總醫院附設民眾診療服務處",
+    "postalCode": "114",
+    "districtName": "中正區",
+    "address": "臺北市內湖區成功路二段325號；臺北市中正區汀州路3段40號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區成功路二段325號；臺北市中正區汀州路3段40號 三軍總醫院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "145",
+      "機構名稱": "三軍總醫院附設民眾診療服務處",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區成功路二段325號；臺北市中正區汀州路3段40號",
+      "電話": ""
+    }
+  },
+  {
+    "id": "146",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "146",
+    "institutionName": "國泰醫療財團法人內湖國泰診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區瑞光路337號(1、2、3、4樓)",
+    "phoneRaw": "02-87972121",
+    "phoneNumbers": [
+      "02-87972121"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區瑞光路337號(1、2、3、4樓) 國泰醫療財團法人內湖國泰診所",
+    "sourceValues": {
+      "序號": "146",
+      "機構名稱": "國泰醫療財團法人內湖國泰診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區瑞光路337號(1、2、3、4樓)",
+      "電話": "02-87972121"
+    }
+  },
+  {
+    "id": "147",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "147",
+    "institutionName": "藍曾小兒科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區東湖路１３２號",
+    "phoneRaw": "(02) 2633-5225",
+    "phoneNumbers": [
+      "(02) 2633-5225"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區東湖路１３２號 藍曾小兒科診所",
+    "sourceValues": {
+      "序號": "147",
+      "機構名稱": "藍曾小兒科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區東湖路１３２號",
+      "電話": "(02) 2633-5225"
+    }
+  },
+  {
+    "id": "148",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "148",
+    "institutionName": "小禾馨民權小兒專科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區行忠路191號",
+    "phoneRaw": "2791-0233",
+    "phoneNumbers": [
+      "2791-0233"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區行忠路191號 小禾馨民權小兒專科診所",
+    "sourceValues": {
+      "序號": "148",
+      "機構名稱": "小禾馨民權小兒專科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區行忠路191號",
+      "電話": "2791-0233"
+    }
+  },
+  {
+    "id": "149",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "149",
+    "institutionName": "禾馨民權婦幼診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區民權東路六段42號2樓(之1、之2、之3)、3樓(之1、之2、之3)、4樓(之1、之2、之3)",
+    "phoneRaw": "5571-3333",
+    "phoneNumbers": [
+      "5571-3333"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區民權東路六段42號2樓(之1、之2、之3)、3樓(之1、之2、之3)、4樓(之1、之2、之3) 禾馨民權婦幼診所",
+    "sourceValues": {
+      "序號": "149",
+      "機構名稱": "禾馨民權婦幼診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區民權東路六段42號2樓(之1、之2、之3)、3樓(之1、之2、之3)、4樓(之1、之2、之3)",
+      "電話": "5571-3333"
+    }
+  },
+  {
+    "id": "150",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "150",
+    "institutionName": "禾馨內湖婦幼診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區民權東路六段42號5樓(之1、之2、之3)、6樓(之1、之2、之3)",
+    "phoneRaw": "8792-1103",
+    "phoneNumbers": [
+      "8792-1103"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區民權東路六段42號5樓(之1、之2、之3)、6樓(之1、之2、之3) 禾馨內湖婦幼診所",
+    "sourceValues": {
+      "序號": "150",
+      "機構名稱": "禾馨內湖婦幼診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區民權東路六段42號5樓(之1、之2、之3)、6樓(之1、之2、之3)",
+      "電話": "8792-1103"
+    }
+  },
+  {
+    "id": "151",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "151",
+    "institutionName": "焉醫師診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路2段21號1樓",
+    "phoneRaw": "2793-2008",
+    "phoneNumbers": [
+      "2793-2008"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區內湖路2段21號1樓 焉醫師診所",
+    "sourceValues": {
+      "序號": "151",
+      "機構名稱": "焉醫師診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區內湖路2段21號1樓",
+      "電話": "2793-2008"
+    }
+  },
+  {
+    "id": "152",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "152",
+    "institutionName": "魏之明小兒科診所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區康寧路三段54之6號1樓",
+    "phoneRaw": "2630-6968",
+    "phoneNumbers": [
+      "2630-6968"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市內湖區康寧路三段54之6號1樓 魏之明小兒科診所",
+    "sourceValues": {
+      "序號": "152",
+      "機構名稱": "魏之明小兒科診所",
+      "郵遞區號": "114",
+      "地址": "臺北市內湖區康寧路三段54之6號1樓",
+      "電話": "2630-6968"
+    }
+  },
+  {
+    "id": "153",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "153",
+    "institutionName": "松展診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區忠孝東路六段110巷18號",
+    "phoneRaw": "2763-1373",
+    "phoneNumbers": [
+      "2763-1373"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市南港區忠孝東路六段110巷18號 松展診所",
+    "sourceValues": {
+      "序號": "153",
+      "機構名稱": "松展診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區忠孝東路六段110巷18號",
+      "電話": "2763-1373"
+    }
+  },
+  {
+    "id": "154",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "154",
+    "institutionName": "蔣小兒科診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區玉成街１６６巷３0號１樓",
+    "phoneRaw": "(02) 2651-3761",
+    "phoneNumbers": [
+      "(02) 2651-3761"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市南港區玉成街１６６巷３0號１樓 蔣小兒科診所",
+    "sourceValues": {
+      "序號": "154",
+      "機構名稱": "蔣小兒科診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區玉成街１６６巷３0號１樓",
+      "電話": "(02) 2651-3761"
+    }
+  },
+  {
+    "id": "155",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "155",
+    "institutionName": "李文珍小兒科診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區研究院路2段74號",
+    "phoneRaw": "2651-1871",
+    "phoneNumbers": [
+      "2651-1871"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市南港區研究院路2段74號 李文珍小兒科診所",
+    "sourceValues": {
+      "序號": "155",
+      "機構名稱": "李文珍小兒科診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區研究院路2段74號",
+      "電話": "2651-1871"
+    }
+  },
+  {
+    "id": "156",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "156",
+    "institutionName": "義仁兒科診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區玉成街138號1樓",
+    "phoneRaw": "2651-5929",
+    "phoneNumbers": [
+      "2651-5929"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市南港區玉成街138號1樓 義仁兒科診所",
+    "sourceValues": {
+      "序號": "156",
+      "機構名稱": "義仁兒科診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區玉成街138號1樓",
+      "電話": "2651-5929"
+    }
+  },
+  {
+    "id": "157",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "157",
+    "institutionName": "天仁小兒科診所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "臺北市南港區成福路21號",
+    "phoneRaw": "2786-2687",
+    "phoneNumbers": [
+      "2786-2687"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市南港區成福路21號 天仁小兒科診所",
+    "sourceValues": {
+      "序號": "157",
+      "機構名稱": "天仁小兒科診所",
+      "郵遞區號": "115",
+      "地址": "臺北市南港區成福路21號",
+      "電話": "2786-2687"
+    }
+  },
+  {
+    "id": "158",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "158",
+    "institutionName": "葉洪小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路三段二Ｏ二號一樓",
+    "phoneRaw": "(02) 2230-0055",
+    "phoneNumbers": [
+      "(02) 2230-0055"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路三段二Ｏ二號一樓 葉洪小兒科診所",
+    "sourceValues": {
+      "序號": "158",
+      "機構名稱": "葉洪小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路三段二Ｏ二號一樓",
+      "電話": "(02) 2230-0055"
+    }
+  },
+  {
+    "id": "159",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "159",
+    "institutionName": "洪佑承小兒專科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路四段64之2號",
+    "phoneRaw": "(02) 2936-4708",
+    "phoneNumbers": [
+      "(02) 2936-4708"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路四段64之2號 洪佑承小兒專科診所",
+    "sourceValues": {
+      "序號": "159",
+      "機構名稱": "洪佑承小兒專科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路四段64之2號",
+      "電話": "(02) 2936-4708"
+    }
+  },
+  {
+    "id": "160",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "160",
+    "institutionName": "屈銘軒小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路二段301巷4-2號",
+    "phoneRaw": "2930-8518",
+    "phoneNumbers": [
+      "2930-8518"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路二段301巷4-2號 屈銘軒小兒科診所",
+    "sourceValues": {
+      "序號": "160",
+      "機構名稱": "屈銘軒小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路二段301巷4-2號",
+      "電話": "2930-8518"
+    }
+  },
+  {
+    "id": "161",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "161",
+    "institutionName": "黃偉志小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區萬慶街12號1樓",
+    "phoneRaw": "2935-4556",
+    "phoneNumbers": [
+      "2935-4556"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區萬慶街12號1樓 黃偉志小兒科診所",
+    "sourceValues": {
+      "序號": "161",
+      "機構名稱": "黃偉志小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區萬慶街12號1樓",
+      "電話": "2935-4556"
+    }
+  },
+  {
+    "id": "162",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "162",
+    "institutionName": "震杰小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區景興路129號1樓",
+    "phoneRaw": "8935-1869",
+    "phoneNumbers": [
+      "8935-1869"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區景興路129號1樓 震杰小兒科診所",
+    "sourceValues": {
+      "序號": "162",
+      "機構名稱": "震杰小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區景興路129號1樓",
+      "電話": "8935-1869"
+    }
+  },
+  {
+    "id": "163",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "163",
+    "institutionName": "房國堂小兒專科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區木新路二段269號",
+    "phoneRaw": "8661-6527",
+    "phoneNumbers": [
+      "8661-6527"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區木新路二段269號 房國堂小兒專科診所",
+    "sourceValues": {
+      "序號": "163",
+      "機構名稱": "房國堂小兒專科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區木新路二段269號",
+      "電話": "8661-6527"
+    }
+  },
+  {
+    "id": "164",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "164",
+    "institutionName": "秀心診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區保儀路26巷1號2樓之1",
+    "phoneRaw": "2938-3838",
+    "phoneNumbers": [
+      "2938-3838"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區保儀路26巷1號2樓之1 秀心診所",
+    "sourceValues": {
+      "序號": "164",
+      "機構名稱": "秀心診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區保儀路26巷1號2樓之1",
+      "電話": "2938-3838"
+    }
+  },
+  {
+    "id": "165",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "165",
+    "institutionName": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路三段111號",
+    "phoneRaw": "(02) 2930-7930",
+    "phoneNumbers": [
+      "(02) 2930-7930"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路三段111號 臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "sourceValues": {
+      "序號": "165",
+      "機構名稱": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路三段111號",
+      "電話": "(02) 2930-7930"
+    }
+  },
+  {
+    "id": "166",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "166",
+    "institutionName": "林建輝小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路二段７０號",
+    "phoneRaw": "(02) 2933-4933",
+    "phoneNumbers": [
+      "(02) 2933-4933"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路二段７０號 林建輝小兒科診所",
+    "sourceValues": {
+      "序號": "166",
+      "機構名稱": "林建輝小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路二段７０號",
+      "電話": "(02) 2933-4933"
+    }
+  },
+  {
+    "id": "167",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "167",
+    "institutionName": "興隆內科小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路二段１７號",
+    "phoneRaw": "(02) 2931-1736",
+    "phoneNumbers": [
+      "(02) 2931-1736"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路二段１７號 興隆內科小兒科診所",
+    "sourceValues": {
+      "序號": "167",
+      "機構名稱": "興隆內科小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路二段１７號",
+      "電話": "(02) 2931-1736"
+    }
+  },
+  {
+    "id": "168",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "168",
+    "institutionName": "興隆李內兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路一段１２號",
+    "phoneRaw": "(02) 2931-4537",
+    "phoneNumbers": [
+      "(02) 2931-4537"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路一段１２號 興隆李內兒科診所",
+    "sourceValues": {
+      "序號": "168",
+      "機構名稱": "興隆李內兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路一段１２號",
+      "電話": "(02) 2931-4537"
+    }
+  },
+  {
+    "id": "169",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "169",
+    "institutionName": "保順診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區木新路二段２０６號",
+    "phoneRaw": "(02) 2939-6868",
+    "phoneNumbers": [
+      "(02) 2939-6868"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區木新路二段２０６號 保順診所",
+    "sourceValues": {
+      "序號": "169",
+      "機構名稱": "保順診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區木新路二段２０６號",
+      "電話": "(02) 2939-6868"
+    }
+  },
+  {
+    "id": "170",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "170",
+    "institutionName": "瑞萱診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區景華街一二四號",
+    "phoneRaw": "2930-5313",
+    "phoneNumbers": [
+      "2930-5313"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區景華街一二四號 瑞萱診所",
+    "sourceValues": {
+      "序號": "170",
+      "機構名稱": "瑞萱診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區景華街一二四號",
+      "電話": "2930-5313"
+    }
+  },
+  {
+    "id": "171",
+    "module": "pediatric_medical_institutions",
+    "sourceSequenceNumber": "171",
+    "institutionName": "德安小兒科診所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "臺北市文山區興隆路四段６－１０號",
+    "phoneRaw": "(02) 2939-6454",
+    "phoneNumbers": [
+      "(02) 2939-6454"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區興隆路四段６－１０號 德安小兒科診所",
+    "sourceValues": {
+      "序號": "171",
+      "機構名稱": "德安小兒科診所",
+      "郵遞區號": "116",
+      "地址": "臺北市文山區興隆路四段６－１０號",
+      "電話": "(02) 2939-6454"
+    }
+  }
+]

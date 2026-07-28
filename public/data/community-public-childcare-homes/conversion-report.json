@@ -1,3 +1,11 @@
 {
-  "recordCount": 62
+  "source": "臺北市社區公共托育家園",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "inputRows": 62,
+  "recordCount": 62,
+  "duplicateRows": [],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950-compatible decoding is supported.",
+    "Addresses are used only for external map lookup; no exact map markers are created."
+  ]
 }

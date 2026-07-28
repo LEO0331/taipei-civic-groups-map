@@ -1,0 +1,14 @@
+{
+  "source": "臺北市政府－台北服務通",
+  "sourceUrl": "https://service.taipei/",
+  "encoding": "UTF-8 JSON",
+  "inputRows": 1645,
+  "outputRecords": 1645,
+  "hiddenRecordsExcluded": 0,
+  "missingIdsOrNames": 0,
+  "notes": [
+    "Fetched from the public Taipei Services search endpoint.",
+    "The official search response supplies service names, identifiers, tags, application methods, and online/counter flags.",
+    "The source response does not provide authoritative created or updated dates, so those fields are intentionally empty."
+  ]
+}

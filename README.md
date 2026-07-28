@@ -825,3 +825,7 @@ The `medical_laboratories` dashboard is a local-data directory for the official 
 ## Domestic employment service agencies
 
 The `domestic_employment_service_agencies` module is a separate public directory for Taipei-licensed private agencies that place Taiwanese nationals in domestic employment. It is not merged with the general employment-agency intermediary-company directory. Refresh it with `npm run data:fetch:domestic-employment-service-agencies` and `npm run data:convert:domestic-employment-service-agencies`.
+
+## Taipei Pediatric Medical Institutions
+
+The `pediatric_medical_institutions` module is a local-static directory based on the official Taipei pediatric medical-institution source. Refresh it with `npm run data:fetch:pediatric-medical-institutions` followed by `npm run data:convert:pediatric-medical-institutions`. It supports search, filtering, CSV export, telephone links, and external address lookup only. It does not establish current appointments, pediatrician attendance, services, emergency capability, fees, insurance coverage, medical quality, or a recommendation.

@@ -1,0 +1,12 @@
+{
+  "source": "臺北市政府－台北服務通",
+  "sourceUrl": "https://service.taipei/",
+  "endpoint": "https://service.taipei/TGC_TPOB_API/api/Search/Search",
+  "downloadedAt": "2026-07-28T04:25:37.345Z",
+  "recordCount": 1645,
+  "encoding": "UTF-8 JSON",
+  "notes": [
+    "The endpoint is the public service-search API used by the official Taipei Services website.",
+    "Only public, source-supplied fields are retained."
+  ]
+}

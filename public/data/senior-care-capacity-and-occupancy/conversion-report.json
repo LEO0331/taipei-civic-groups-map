@@ -1,8 +1,15 @@
 {
+  "source": "臺北市老人照顧容量與實際進住統計",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "inputRows": 136,
   "recordCount": 136,
   "invalidPeriods": [],
   "invalidCounts": [],
   "duplicates": [],
   "missingFields": [],
-  "inconsistentTotals": []
+  "inconsistentTotals": [],
+  "notes": [
+    "UTF-8-SIG, Big5, and CP950-compatible decoding is supported.",
+    "Capacity, vacancy, and occupancy figures are source-period aggregates, not real-time availability."
+  ]
 }

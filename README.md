@@ -161,6 +161,10 @@ The dataset has no official coordinates. The module does not geocode addresses o
 
 `taipei_cultural_heritage_assets` is a local, searchable registry of source-recorded asset names, heritage categories and types, responsible authorities, authority codes, geographic areas, and city codes. The official iHeritage API was not used because the build environment could not validate its TLS certificate, so no enrichment, coordinates, or exact map markers are presented. The registry does not establish current visiting access, tickets, tours, accessibility, building condition, safety, ownership, restoration status, or tourism recommendation.
 
+## Hospice and Palliative Care Institutions / 安寧緩和醫療機構
+
+`hospice_palliative_care_institutions` is a local directory of source-recorded business groups, contracted categories, cities or counties, institution names, and external official bed-usage links. It does not fetch or infer live bed availability, admission, referral, eligibility, fees, coverage, care quality, or medical advice. No address, phone, bed count, vacancy count, coordinate, or map marker is fabricated.
+
 ## Additional module: Denture Subsidy Medical Providers / 假牙補助醫療院所名單
 
 Denture subsidy medical providers remain the separate `denture_subsidy_medical_providers` elderly-welfare and healthcare-subsidy public-record module. The Big5/CP950 CSV includes subsidy type, area, provider name, address, and contact phone. Conversion decodes Big5 first with UTF-8-SIG fallback, preserves hospital branch names, parses Taipei districts and road names, classifies phone values, and reports duplicate provider names, addresses, phones, and fallback keys.

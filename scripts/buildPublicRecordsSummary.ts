@@ -173,5 +173,7 @@ publicSummary.modules.taipeiCulturalHeritageAssets = {
   authorityCount: taipeiCulturalHeritageAssets.responsibleAuthorities,
   authoritativeCoordinateCount: taipeiCulturalHeritageAssets.recordsWithAuthoritativeCoordinates,
 };
+const hospicePalliativeCareInstitutions = await readDatasetSummary('hospice-palliative-care-institutions');
+publicSummary.modules.hospicePalliativeCareInstitutions = { recordCount: hospicePalliativeCareInstitutions.totalRecords, uniqueInstitutionNameCount: hospicePalliativeCareInstitutions.uniqueInstitutionNames, cityCount: hospicePalliativeCareInstitutions.cities, contractCategoryCount: hospicePalliativeCareInstitutions.contractCategories, recordsWithOfficialBedUsageLink: hospicePalliativeCareInstitutions.recordsWithBedUsageLinks };
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

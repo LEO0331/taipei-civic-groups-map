@@ -1,0 +1,136 @@
+{
+  "updatedAt": "2026-07-28T01:14:09.225Z",
+  "totalRecords": 85,
+  "uniqueInstitutionNames": 85,
+  "cities": 21,
+  "businessGroups": 6,
+  "contractCategories": 3,
+  "recordsWithBedUsageLinks": 83,
+  "completeCoreRecords": 6,
+  "byContractCategory": [
+    {
+      "label": "地區醫院",
+      "value": 8
+    },
+    {
+      "label": "區域醫院",
+      "value": 6
+    },
+    {
+      "label": "醫學中心",
+      "value": 5
+    }
+  ],
+  "byBusinessGroup": [
+    {
+      "label": "中區",
+      "value": 1
+    },
+    {
+      "label": "北區",
+      "value": 1
+    },
+    {
+      "label": "東區",
+      "value": 1
+    },
+    {
+      "label": "南區",
+      "value": 1
+    },
+    {
+      "label": "高屏",
+      "value": 1
+    },
+    {
+      "label": "臺北",
+      "value": 1
+    }
+  ],
+  "byCity": [
+    {
+      "label": "63000000",
+      "value": 11
+    },
+    {
+      "label": "10019000",
+      "value": 10
+    },
+    {
+      "label": "64000000",
+      "value": 9
+    },
+    {
+      "label": "65000000",
+      "value": 9
+    },
+    {
+      "label": "10021000",
+      "value": 7
+    },
+    {
+      "label": "10002000",
+      "value": 4
+    },
+    {
+      "label": "10013000",
+      "value": 4
+    },
+    {
+      "label": "10015000",
+      "value": 4
+    },
+    {
+      "label": "10020000",
+      "value": 4
+    },
+    {
+      "label": "10003000",
+      "value": 3
+    },
+    {
+      "label": "10008000",
+      "value": 3
+    },
+    {
+      "label": "10010000",
+      "value": 3
+    },
+    {
+      "label": "10014000",
+      "value": 3
+    },
+    {
+      "label": "10007000",
+      "value": 2
+    },
+    {
+      "label": "10017000",
+      "value": 2
+    },
+    {
+      "label": "10004000",
+      "value": 1
+    },
+    {
+      "label": "10005000",
+      "value": 1
+    },
+    {
+      "label": "10009000",
+      "value": 1
+    },
+    {
+      "label": "10016000",
+      "value": 1
+    },
+    {
+      "label": "10018000",
+      "value": 1
+    },
+    {
+      "label": "9020000",
+      "value": 1
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "updatedAt": "2026-07-28T01:07:12.544Z",
+  "totalRecords": 584,
+  "uniqueAssetNames": 583,
+  "heritageCategories": 8,
+  "heritageTypes": 46,
+  "geographicAreas": 13,
+  "responsibleAuthorities": 2,
+  "recordsWithAuthoritativeCoordinates": 0,
+  "recordsWithOfficialDesignationDates": 0,
+  "recordsWithOfficialDetailPages": 0,
+  "byCategory": [
+    {
+      "label": "歷史建築",
+      "value": 355
+    },
+    {
+      "label": "直轄市定古蹟",
+      "value": 187
+    },
+    {
+      "label": "國定古蹟",
+      "value": 20
+    },
+    {
+      "label": "文化景觀",
+      "value": 10
+    },
+    {
+      "label": "紀念建築",
+      "value": 6
+    },
+    {
+      "label": "史蹟",
+      "value": 2
+    },
+    {
+      "label": "國定考古遺址",
+      "value": 2
+    },
+    {
+      "label": "聚落建築群",
+      "value": 2
+    }
+  ],
+  "byType": [
+    {
+      "label": "宅第",
+      "value": 243
+    },
+    {
+      "label": "其他設施",
+      "value": 116
+    },
+    {
+      "label": "寺廟",
+      "value": 28
+    },
+    {
+      "label": "產業",
+      "value": 26
+    },
+    {
+      "label": "衙署",
+      "value": 25
+    },
+    {
+      "label": "商店",
+      "value": 24
+    },
+    {
+      "label": "學校",
+      "value": 18
+    },
+    {
+      "label": "墓葬",
+      "value": 13
+    },
+    {
+      "label": "辦公廳舍",
+      "value": 8
+    },
+    {
+      "label": "教堂",
+      "value": 7
+    },
+    {
+      "label": "其他場域",
+      "value": 5
+    },
+    {
+      "label": "碑碣",
+      "value": 5
+    },
+    {
+      "label": "機關",
+      "value": 5
+    },
+    {
+      "label": "醫院",
+      "value": 5
+    },
+    {
+      "label": "官邸",
+      "value": 4
+    },
+    {
+      "label": "書院",
+      "value": 4
+    },
+    {
+      "label": "牌坊",
+      "value": 4
+    },
+    {
+      "label": "橋樑",
+      "value": 4
+    },
+    {
+      "label": "祠堂",
+      "value": 3
+    },
+    {
+      "label": "宅第,其他設施",
+      "value": 2
+    },
+    {
+      "label": "車站",
+      "value": 2
+    },
+    {
+      "label": "近代宿舍",
+      "value": 2
+    },
+    {
+      "label": "產業,其他設施",
+      "value": 2
+    },
+    {
+      "label": "集會堂",
+      "value": 2
+    },
+    {
+      "label": "歷史名園",
+      "value": 2
+    },
+    {
+      "label": "歷史事件場所",
+      "value": 2
+    },
+    {
+      "label": "關塞",
+      "value": 2
+    },
+    {
+      "label": "水利設施",
+      "value": 1
+    },
+    {
+      "label": "市場,其他設施",
+      "value": 1
+    },
+    {
+      "label": "宅第,商店",
+      "value": 1
+    },
+    {
+      "label": "宅第,產業",
+      "value": 1
+    },
+    {
+      "label": "宅第,學校",
+      "value": 1
+    },
+    {
+      "label": "災難場所",
+      "value": 1
+    },
+    {
+      "label": "拓墾(植)場所",
+      "value": 1
+    },
+    {
+      "label": "城郭",
+      "value": 1
+    },
+    {
+      "label": "祠堂,寺廟",
+      "value": 1
+    },
+    {
+      "label": "商店,宅第",
+      "value": 1
+    },
+    {
+      "label": "商店,醫院,宅第",
+      "value": 1
+    },
+    {
+      "label": "教堂,其他設施",
+      "value": 1
+    },
+    {
+      "label": "產業,宅第",
+      "value": 1
+    },
+    {
+      "label": "博物館",
+      "value": 1
+    },
+    {
+      "label": "堤閘",
+      "value": 1
+    },
+    {
+      "label": "銀行",
+      "value": 1
+    },
+    {
+      "label": "學校,其他設施",
+      "value": 1
+    },
+    {
+      "label": "機關,其他設施",
+      "value": 1
+    },
+    {
+      "label": "機關,集會堂",
+      "value": 1
+    }
+  ],
+  "byArea": [
+    {
+      "label": "大同區",
+      "value": 150
+    },
+    {
+      "label": "中正區",
+      "value": 149
+    },
+    {
+      "label": "大安區",
+      "value": 78
+    },
+    {
+      "label": "士林區",
+      "value": 52
+    },
+    {
+      "label": "北投區",
+      "value": 46
+    },
+    {
+      "label": "萬華區",
+      "value": 40
+    },
+    {
+      "label": "中山區",
+      "value": 25
+    },
+    {
+      "label": "內湖區",
+      "value": 11
+    },
+    {
+      "label": "南港區",
+      "value": 11
+    },
+    {
+      "label": "文山區",
+      "value": 9
+    },
+    {
+      "label": "信義區",
+      "value": 8
+    },
+    {
+      "label": "松山區",
+      "value": 4
+    },
+    {
+      "label": "臺北市",
+      "value": 1
+    }
+  ],
+  "byAuthority": [
+    {
+      "label": "臺北市政府",
+      "value": 562
+    },
+    {
+      "label": "文化部",
+      "value": 22
+    }
+  ]
+}

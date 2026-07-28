@@ -164,5 +164,14 @@ publicSummary.modules.ophthalmologyInstitutions = {
   postalCodeCount: ophthalmologyInstitutions.postalCodesRepresented,
   recordsWithPhone: ophthalmologyInstitutions.recordsWithPhone,
 };
+const taipeiCulturalHeritageAssets = await readDatasetSummary('taipei-cultural-heritage-assets');
+publicSummary.modules.taipeiCulturalHeritageAssets = {
+  recordCount: taipeiCulturalHeritageAssets.totalRecords,
+  uniqueAssetNameCount: taipeiCulturalHeritageAssets.uniqueAssetNames,
+  categoryCount: taipeiCulturalHeritageAssets.heritageCategories,
+  typeCount: taipeiCulturalHeritageAssets.heritageTypes,
+  authorityCount: taipeiCulturalHeritageAssets.responsibleAuthorities,
+  authoritativeCoordinateCount: taipeiCulturalHeritageAssets.recordsWithAuthoritativeCoordinates,
+};
 await writeFile(publicSummaryPath, JSON.stringify(publicSummary));
 console.log('Built public records summary.');

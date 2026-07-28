@@ -1,0 +1,8 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=46119295-2534-4ac9-82d5-5f4653ba15bb",
+  "sourceUrl": "https://data.taipei/api/dataset/46119295-2534-4ac9-82d5-5f4653ba15bb/resource/7ddefbf9-01e5-4365-b5b6-db0a28043108/download",
+  "downloadedAt": "2026-07-28T01:07:11.433Z",
+  "fileSize": 60878,
+  "officialIheritageApi": "https://iheritage.gov.taipei/data/api/designation/data",
+  "enrichment": "not used: API TLS certificate could not be verified in the build environment; no deterministic enrichment was performed"
+}

@@ -829,3 +829,7 @@ The `domestic_employment_service_agencies` module is a separate public directory
 ## Taipei Pediatric Medical Institutions
 
 The `pediatric_medical_institutions` module is a local-static directory based on the official Taipei pediatric medical-institution source. Refresh it with `npm run data:fetch:pediatric-medical-institutions` followed by `npm run data:convert:pediatric-medical-institutions`. It supports search, filtering, CSV export, telephone links, and external address lookup only. It does not establish current appointments, pediatrician attendance, services, emergency capability, fees, insurance coverage, medical quality, or a recommendation.
+
+## Taipei Physical Therapy Clinics
+
+The `physical_therapy_clinics` module is a local static directory sourced from [臺北市物理治療所](https://data.taipei/dataset/detail?id=3a6fc259-9158-4c24-babb-aa271cfc7f36). It preserves source sequence numbers, institution names, postal codes, addresses, telephone text, original source values, CSV update date, metadata update date, and local ingestion date. It supports keyword, district, postal-code, telephone, and address filters, descriptive district/contact completeness charts, source-detail expansion, telephone and copy actions, external address lookup, pagination, sorting, and filtered CSV export. It does not geocode or create exact markers, and it does not establish current operation, appointment availability, treatment availability, fees, insurance coverage, quality, outcomes, or recommendation.

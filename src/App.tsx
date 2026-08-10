@@ -102,6 +102,7 @@ import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSen
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
 import InternalMedicineInstitutionsModule from './InternalMedicineInstitutionsModule';
 import OccupationalTherapyClinicsModule from './OccupationalTherapyClinicsModule';
+import PhysicalTherapyClinicsModule from './PhysicalTherapyClinicsModule';
 import DesignatedForeignerHealthExamHospitalsModule from './DesignatedForeignerHealthExamHospitalsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
@@ -752,7 +753,8 @@ export default function App() {
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
   tabs.splice(9, 0, ['internalMedicineInstitutions', language === 'zh' ? '臺北市內科醫療機構' : 'Taipei Internal Medicine Institutions']);
   tabs.splice(10, 0, ['occupationalTherapyClinics', language === 'zh' ? '臺北市職能治療所' : 'Taipei Occupational Therapy Clinics']);
-  tabs.splice(11, 0, ['designatedForeignerHealthExamHospitals', language === 'zh' ? '外國人健檢指定醫院' : 'Designated Foreigner Health Examination Hospitals']);
+  tabs.splice(11, 0, ['physicalTherapyClinics', language === 'zh' ? '臺北市物理治療所' : 'Taipei Physical Therapy Clinics']);
+  tabs.splice(12, 0, ['designatedForeignerHealthExamHospitals', language === 'zh' ? '外國人健檢指定醫院' : 'Designated Foreigner Health Examination Hospitals']);
   tabs.splice(4, 0, ['majorElectricityUsers', language === 'zh' ? '用電大戶資料' : 'Major Electricity Users']);
   tabs.splice(4, 0, ['earlyInterventionMedicalProviders', language === 'zh' ? '早期療育醫療院所' : 'Early Intervention Providers']);
   tabs.splice(5, 0, ['generalDentalMedicalInstitutions', language === 'zh' ? '牙醫一般科醫療機構' : 'General Dental Institutions']);
@@ -880,6 +882,7 @@ export default function App() {
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}
       {tab === 'internalMedicineInstitutions' && <InternalMedicineInstitutionsModule language={language} />}
       {tab === 'occupationalTherapyClinics' && <OccupationalTherapyClinicsModule language={language} />}
+      {tab === 'physicalTherapyClinics' && <PhysicalTherapyClinicsModule language={language} />}
       {tab === 'designatedForeignerHealthExamHospitals' && <DesignatedForeignerHealthExamHospitalsModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}

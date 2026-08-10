@@ -1,0 +1,2904 @@
+[
+  {
+    "id": "1",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "1",
+    "institutionName": "康富物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區寧波西街3號4樓",
+    "phoneRaw": "02 2343 2200",
+    "phoneNumbers": [
+      "02 2343 2200"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區寧波西街3號4樓 康富物理治療所",
+    "sourceValues": {
+      "序號": "1",
+      "機構名稱": "康富物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區寧波西街3號4樓",
+      "電話": "02 2343 2200"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "2"
+  },
+  {
+    "id": "2",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "2",
+    "institutionName": "夢飛翔物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區羅斯福路一段94號2樓",
+    "phoneRaw": "?02 2322 2223",
+    "phoneNumbers": [
+      "?02 2322 2223"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區羅斯福路一段94號2樓 夢飛翔物理治療所",
+    "sourceValues": {
+      "序號": "2",
+      "機構名稱": "夢飛翔物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區羅斯福路一段94號2樓",
+      "電話": "?02 2322 2223"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "3"
+  },
+  {
+    "id": "3",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "3",
+    "institutionName": "賦爾力物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區金山南路一段73巷1-1號",
+    "phoneRaw": "02 2393 1698",
+    "phoneNumbers": [
+      "02 2393 1698"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區金山南路一段73巷1-1號 賦爾力物理治療所",
+    "sourceValues": {
+      "序號": "3",
+      "機構名稱": "賦爾力物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區金山南路一段73巷1-1號",
+      "電話": "02 2393 1698"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "4"
+  },
+  {
+    "id": "4",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "4",
+    "institutionName": "脊聲動物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區南昌路二段222號11樓之2",
+    "phoneRaw": "02 7730 6339",
+    "phoneNumbers": [
+      "02 7730 6339"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區南昌路二段222號11樓之2 脊聲動物理治療所",
+    "sourceValues": {
+      "序號": "4",
+      "機構名稱": "脊聲動物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區南昌路二段222號11樓之2",
+      "電話": "02 7730 6339"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "5"
+  },
+  {
+    "id": "5",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "5",
+    "institutionName": "阿舟物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區桃源街1號8樓",
+    "phoneRaw": "02 2388 0895",
+    "phoneNumbers": [
+      "02 2388 0895"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區桃源街1號8樓 阿舟物理治療所",
+    "sourceValues": {
+      "序號": "5",
+      "機構名稱": "阿舟物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區桃源街1號8樓",
+      "電話": "02 2388 0895"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "6"
+  },
+  {
+    "id": "6",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "6",
+    "institutionName": "博證物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區青島東路9號3樓",
+    "phoneRaw": "02 2391 9598",
+    "phoneNumbers": [
+      "02 2391 9598"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區青島東路9號3樓 博證物理治療所",
+    "sourceValues": {
+      "序號": "6",
+      "機構名稱": "博證物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區青島東路9號3樓",
+      "電話": "02 2391 9598"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "7"
+  },
+  {
+    "id": "7",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "7",
+    "institutionName": "挺立康物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區忠孝西路一段33號3樓",
+    "phoneRaw": "02 7713 6066",
+    "phoneNumbers": [
+      "02 7713 6066"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區忠孝西路一段33號3樓 挺立康物理治療所",
+    "sourceValues": {
+      "序號": "7",
+      "機構名稱": "挺立康物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區忠孝西路一段33號3樓",
+      "電話": "02 7713 6066"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "8"
+  },
+  {
+    "id": "8",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "8",
+    "institutionName": "生生優動古亭運動物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區福州街10號2樓",
+    "phoneRaw": "02 6605 7889",
+    "phoneNumbers": [
+      "02 6605 7889"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區福州街10號2樓 生生優動古亭運動物理治療所",
+    "sourceValues": {
+      "序號": "8",
+      "機構名稱": "生生優動古亭運動物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區福州街10號2樓",
+      "電話": "02 6605 7889"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "9"
+  },
+  {
+    "id": "9",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "9",
+    "institutionName": "維衡物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區衡陽路20號7樓",
+    "phoneRaw": "02 2388 2318",
+    "phoneNumbers": [
+      "02 2388 2318"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區衡陽路20號7樓 維衡物理治療所",
+    "sourceValues": {
+      "序號": "9",
+      "機構名稱": "維衡物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區衡陽路20號7樓",
+      "電話": "02 2388 2318"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "10"
+  },
+  {
+    "id": "10",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "10",
+    "institutionName": "脊姿維運動物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區金山南路一段67巷10號1樓",
+    "phoneRaw": "0905 531 135",
+    "phoneNumbers": [
+      "0905 531 135"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區金山南路一段67巷10號1樓 脊姿維運動物理治療所",
+    "sourceValues": {
+      "序號": "10",
+      "機構名稱": "脊姿維運動物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區金山南路一段67巷10號1樓",
+      "電話": "0905 531 135"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "11"
+  },
+  {
+    "id": "11",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "11",
+    "institutionName": "暐淩居家物理治療所",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "address": "台北市中正區重慶南路一段57號11樓之6",
+    "phoneRaw": "02 2312 1816",
+    "phoneNumbers": [
+      "02 2312 1816"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區重慶南路一段57號11樓之6 暐淩居家物理治療所",
+    "sourceValues": {
+      "序號": "11",
+      "機構名稱": "暐淩居家物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市中正區重慶南路一段57號11樓之6",
+      "電話": "02 2312 1816"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "12"
+  },
+  {
+    "id": "12",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "12",
+    "institutionName": "森暉物理治療所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區民權西路106號3樓",
+    "phoneRaw": "02 2550 1516",
+    "phoneNumbers": [
+      "02 2550 1516"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區民權西路106號3樓 森暉物理治療所",
+    "sourceValues": {
+      "序號": "12",
+      "機構名稱": "森暉物理治療所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區民權西路106號3樓",
+      "電話": "02 2550 1516"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "13"
+  },
+  {
+    "id": "13",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "13",
+    "institutionName": "碩康物理治療所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區長安西路289號1樓",
+    "phoneRaw": "?0988 616 987",
+    "phoneNumbers": [
+      "?0988 616 987"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區長安西路289號1樓 碩康物理治療所",
+    "sourceValues": {
+      "序號": "13",
+      "機構名稱": "碩康物理治療所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區長安西路289號1樓",
+      "電話": "?0988 616 987"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "14"
+  },
+  {
+    "id": "14",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "14",
+    "institutionName": "瞻穎物理治療所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區南京西路288號3樓之1",
+    "phoneRaw": "02 2550 0211",
+    "phoneNumbers": [
+      "02 2550 0211"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區南京西路288號3樓之1 瞻穎物理治療所",
+    "sourceValues": {
+      "序號": "14",
+      "機構名稱": "瞻穎物理治療所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區南京西路288號3樓之1",
+      "電話": "02 2550 0211"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "15"
+  },
+  {
+    "id": "15",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "15",
+    "institutionName": "燈塔居家物理治療所",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "address": "台北市大同區民族西路95之3號",
+    "phoneRaw": "0937 692 257",
+    "phoneNumbers": [
+      "0937 692 257"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大同區民族西路95之3號 燈塔居家物理治療所",
+    "sourceValues": {
+      "序號": "15",
+      "機構名稱": "燈塔居家物理治療所",
+      "郵遞區號": "103",
+      "地址": "台北市大同區民族西路95之3號",
+      "電話": "0937 692 257"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "16"
+  },
+  {
+    "id": "16",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "16",
+    "institutionName": "愛迪樂中山物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區松江路221巷17號",
+    "phoneRaw": "02 2521 6043",
+    "phoneNumbers": [
+      "02 2521 6043"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區松江路221巷17號 愛迪樂中山物理治療所",
+    "sourceValues": {
+      "序號": "16",
+      "機構名稱": "愛迪樂中山物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區松江路221巷17號",
+      "電話": "02 2521 6043"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "17"
+  },
+  {
+    "id": "17",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "17",
+    "institutionName": "諾得特物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區建國北路二段65號3樓",
+    "phoneRaw": "?02 2500 0658",
+    "phoneNumbers": [
+      "?02 2500 0658"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區建國北路二段65號3樓 諾得特物理治療所",
+    "sourceValues": {
+      "序號": "17",
+      "機構名稱": "諾得特物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區建國北路二段65號3樓",
+      "電話": "?02 2500 0658"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "18"
+  },
+  {
+    "id": "18",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "18",
+    "institutionName": "陽明動身物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區遼寧街119號5 樓",
+    "phoneRaw": "02 8772 9183",
+    "phoneNumbers": [
+      "02 8772 9183"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區遼寧街119號5 樓 陽明動身物理治療所",
+    "sourceValues": {
+      "序號": "18",
+      "機構名稱": "陽明動身物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區遼寧街119號5 樓",
+      "電話": "02 8772 9183"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "19"
+  },
+  {
+    "id": "19",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "19",
+    "institutionName": "全星物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區民權西路35號2樓",
+    "phoneRaw": "02 2599 4881",
+    "phoneNumbers": [
+      "02 2599 4881"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區民權西路35號2樓 全星物理治療所",
+    "sourceValues": {
+      "序號": "19",
+      "機構名稱": "全星物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區民權西路35號2樓",
+      "電話": "02 2599 4881"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "20"
+  },
+  {
+    "id": "20",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "20",
+    "institutionName": "透視物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區林森北路50號5樓之4",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區林森北路50號5樓之4 透視物理治療所",
+    "sourceValues": {
+      "序號": "20",
+      "機構名稱": "透視物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區林森北路50號5樓之4",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "21"
+  },
+  {
+    "id": "21",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "21",
+    "institutionName": "研力物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區南京東路三段28號中國企業大樓2樓",
+    "phoneRaw": "02 2504 1999",
+    "phoneNumbers": [
+      "02 2504 1999"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區南京東路三段28號中國企業大樓2樓 研力物理治療所",
+    "sourceValues": {
+      "序號": "21",
+      "機構名稱": "研力物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區南京東路三段28號中國企業大樓2樓",
+      "電話": "02 2504 1999"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "22"
+  },
+  {
+    "id": "22",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "22",
+    "institutionName": "史塔克運動物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區樂群二路189號5F-3",
+    "phoneRaw": "02 8509 2555",
+    "phoneNumbers": [
+      "02 8509 2555"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區樂群二路189號5F-3 史塔克運動物理治療所",
+    "sourceValues": {
+      "序號": "22",
+      "機構名稱": "史塔克運動物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區樂群二路189號5F-3",
+      "電話": "02 8509 2555"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "23"
+  },
+  {
+    "id": "23",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "23",
+    "institutionName": "新順安物理治療所",
+    "postalCode": "104",
+    "districtName": "中正區",
+    "address": "台北市中正區南京東路二段100號3號3號樓之2",
+    "phoneRaw": "?0918-030-713",
+    "phoneNumbers": [
+      "?0918-030-713"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中正區南京東路二段100號3號3號樓之2 新順安物理治療所",
+    "sourceValues": {
+      "序號": "23",
+      "機構名稱": "新順安物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中正區南京東路二段100號3號3號樓之2",
+      "電話": "?0918-030-713"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "24"
+  },
+  {
+    "id": "24",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "24",
+    "institutionName": "展岳物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區敬業一路128巷30號",
+    "phoneRaw": "02 8502 6290",
+    "phoneNumbers": [
+      "02 8502 6290"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區敬業一路128巷30號 展岳物理治療所",
+    "sourceValues": {
+      "序號": "24",
+      "機構名稱": "展岳物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區敬業一路128巷30號",
+      "電話": "02 8502 6290"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "25"
+  },
+  {
+    "id": "25",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "25",
+    "institutionName": "樂脊物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區復興北路354號3樓",
+    "phoneRaw": "?02 2502 5161",
+    "phoneNumbers": [
+      "?02 2502 5161"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區復興北路354號3樓 樂脊物理治療所",
+    "sourceValues": {
+      "序號": "25",
+      "機構名稱": "樂脊物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區復興北路354號3樓",
+      "電話": "?02 2502 5161"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "26"
+  },
+  {
+    "id": "26",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "26",
+    "institutionName": "明水物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區北安路554巷45號",
+    "phoneRaw": "02 8509 2815",
+    "phoneNumbers": [
+      "02 8509 2815"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區北安路554巷45號 明水物理治療所",
+    "sourceValues": {
+      "序號": "26",
+      "機構名稱": "明水物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區北安路554巷45號",
+      "電話": "02 8509 2815"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "27"
+  },
+  {
+    "id": "27",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "27",
+    "institutionName": "厝邊頭家物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區新生北路二段47號1樓",
+    "phoneRaw": "?02 2537 2293",
+    "phoneNumbers": [
+      "?02 2537 2293"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區新生北路二段47號1樓 厝邊頭家物理治療所",
+    "sourceValues": {
+      "序號": "27",
+      "機構名稱": "厝邊頭家物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區新生北路二段47號1樓",
+      "電話": "?02 2537 2293"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "28"
+  },
+  {
+    "id": "28",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "28",
+    "institutionName": "珂斯汀物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區民生東路三段88巷8號1樓",
+    "phoneRaw": "0933 321 625",
+    "phoneNumbers": [
+      "0933 321 625"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區民生東路三段88巷8號1樓 珂斯汀物理治療所",
+    "sourceValues": {
+      "序號": "28",
+      "機構名稱": "珂斯汀物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區民生東路三段88巷8號1樓",
+      "電話": "0933 321 625"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "29"
+  },
+  {
+    "id": "29",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "29",
+    "institutionName": "安和物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區長安東路二段178號三樓",
+    "phoneRaw": "02 2777 3005",
+    "phoneNumbers": [
+      "02 2777 3005"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區長安東路二段178號三樓 安和物理治療所",
+    "sourceValues": {
+      "序號": "29",
+      "機構名稱": "安和物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區長安東路二段178號三樓",
+      "電話": "02 2777 3005"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "30"
+  },
+  {
+    "id": "30",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "30",
+    "institutionName": "大德物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區復興北路66號3 樓",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區復興北路66號3 樓 大德物理治療所",
+    "sourceValues": {
+      "序號": "30",
+      "機構名稱": "大德物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區復興北路66號3 樓",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "31"
+  },
+  {
+    "id": "31",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "31",
+    "institutionName": "奇癒物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區德惠街2號11樓",
+    "phoneRaw": "02 2592 4663",
+    "phoneNumbers": [
+      "02 2592 4663"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區德惠街2號11樓 奇癒物理治療所",
+    "sourceValues": {
+      "序號": "31",
+      "機構名稱": "奇癒物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區德惠街2號11樓",
+      "電話": "02 2592 4663"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "32"
+  },
+  {
+    "id": "32",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "32",
+    "institutionName": "愛迪樂物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區松江路221巷17號",
+    "phoneRaw": "02 2521 6043",
+    "phoneNumbers": [
+      "02 2521 6043"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區松江路221巷17號 愛迪樂物理治療所",
+    "sourceValues": {
+      "序號": "32",
+      "機構名稱": "愛迪樂物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區松江路221巷17號",
+      "電話": "02 2521 6043"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "33"
+  },
+  {
+    "id": "33",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "33",
+    "institutionName": "三個字物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區天祥路33巷12號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區天祥路33巷12號 三個字物理治療所",
+    "sourceValues": {
+      "序號": "33",
+      "機構名稱": "三個字物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區天祥路33巷12號",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "34"
+  },
+  {
+    "id": "34",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "34",
+    "institutionName": "攀躍物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區德惠街17號6樓",
+    "phoneRaw": "02 2599 6901",
+    "phoneNumbers": [
+      "02 2599 6901"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區德惠街17號6樓 攀躍物理治療所",
+    "sourceValues": {
+      "序號": "34",
+      "機構名稱": "攀躍物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區德惠街17號6樓",
+      "電話": "02 2599 6901"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "35"
+  },
+  {
+    "id": "35",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "35",
+    "institutionName": "勁緻物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區樂群三路71號二樓",
+    "phoneRaw": "?02 8502 5822",
+    "phoneNumbers": [
+      "?02 8502 5822"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區樂群三路71號二樓 勁緻物理治療所",
+    "sourceValues": {
+      "序號": "35",
+      "機構名稱": "勁緻物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區樂群三路71號二樓",
+      "電話": "?02 8502 5822"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "36"
+  },
+  {
+    "id": "36",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "36",
+    "institutionName": "歐首物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區長春路257號",
+    "phoneRaw": "02 2518 2567",
+    "phoneNumbers": [
+      "02 2518 2567"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區長春路257號 歐首物理治療所",
+    "sourceValues": {
+      "序號": "36",
+      "機構名稱": "歐首物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區長春路257號",
+      "電話": "02 2518 2567"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "37"
+  },
+  {
+    "id": "37",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "37",
+    "institutionName": "康睿物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區建國北路一段148號5樓",
+    "phoneRaw": "02 2517 2552",
+    "phoneNumbers": [
+      "02 2517 2552"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區建國北路一段148號5樓 康睿物理治療所",
+    "sourceValues": {
+      "序號": "37",
+      "機構名稱": "康睿物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區建國北路一段148號5樓",
+      "電話": "02 2517 2552"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "38"
+  },
+  {
+    "id": "38",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "38",
+    "institutionName": "艾可居家物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區農安街148號",
+    "phoneRaw": "02 2599 2630",
+    "phoneNumbers": [
+      "02 2599 2630"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區農安街148號 艾可居家物理治療所",
+    "sourceValues": {
+      "序號": "38",
+      "機構名稱": "艾可居家物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區農安街148號",
+      "電話": "02 2599 2630"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "39"
+  },
+  {
+    "id": "39",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "39",
+    "institutionName": "旺得福居家物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "臺北市中山區民權西路20號10樓之11",
+    "phoneRaw": "02-28113890",
+    "phoneNumbers": [
+      "02-28113890"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權西路20號10樓之11 旺得福居家物理治療所",
+    "sourceValues": {
+      "序號": "39",
+      "機構名稱": "旺得福居家物理治療所",
+      "郵遞區號": "104",
+      "地址": "臺北市中山區民權西路20號10樓之11",
+      "電話": "02-28113890"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "40"
+  },
+  {
+    "id": "40",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "40",
+    "institutionName": "適悅物理治療所",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "address": "台北市中山區龍江路144號3樓之1",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市中山區龍江路144號3樓之1 適悅物理治療所",
+    "sourceValues": {
+      "序號": "40",
+      "機構名稱": "適悅物理治療所",
+      "郵遞區號": "104",
+      "地址": "台北市中山區龍江路144號3樓之1",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "41"
+  },
+  {
+    "id": "41",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "41",
+    "institutionName": "永業物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區南京東路四段93號",
+    "phoneRaw": "02 2545 6298",
+    "phoneNumbers": [
+      "02 2545 6298"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區南京東路四段93號 永業物理治療所",
+    "sourceValues": {
+      "序號": "41",
+      "機構名稱": "永業物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區南京東路四段93號",
+      "電話": "02 2545 6298"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "42"
+  },
+  {
+    "id": "42",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "42",
+    "institutionName": "生生優動民生運動物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區延壽街330巷1號",
+    "phoneRaw": "02 2872 1526",
+    "phoneNumbers": [
+      "02 2872 1526"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區延壽街330巷1號 生生優動民生運動物理治療所",
+    "sourceValues": {
+      "序號": "42",
+      "機構名稱": "生生優動民生運動物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區延壽街330巷1號",
+      "電話": "02 2872 1526"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "43"
+  },
+  {
+    "id": "43",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "43",
+    "institutionName": "禾悅物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路8號2樓",
+    "phoneRaw": "02 2578 3923",
+    "phoneNumbers": [
+      "02 2578 3923"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區光復北路8號2樓 禾悅物理治療所",
+    "sourceValues": {
+      "序號": "43",
+      "機構名稱": "禾悅物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區光復北路8號2樓",
+      "電話": "02 2578 3923"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "44"
+  },
+  {
+    "id": "44",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "44",
+    "institutionName": "景能物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路3號3樓",
+    "phoneRaw": "02 2742 2753",
+    "phoneNumbers": [
+      "02 2742 2753"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區光復北路3號3樓 景能物理治療所",
+    "sourceValues": {
+      "序號": "44",
+      "機構名稱": "景能物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區光復北路3號3樓",
+      "電話": "02 2742 2753"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "45"
+  },
+  {
+    "id": "45",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "45",
+    "institutionName": "臺北田徑場物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "臺北市松山區南京東路4段10號",
+    "phoneRaw": "02-2570-2330",
+    "phoneNumbers": [
+      "02-2570-2330"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區南京東路4段10號 臺北田徑場物理治療所",
+    "sourceValues": {
+      "序號": "45",
+      "機構名稱": "臺北田徑場物理治療所",
+      "郵遞區號": "105",
+      "地址": "臺北市松山區南京東路4段10號",
+      "電話": "02-2570-2330"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "46"
+  },
+  {
+    "id": "46",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "46",
+    "institutionName": "連邦物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區南京東路四段52巷11號1樓",
+    "phoneRaw": "02 2579 8170",
+    "phoneNumbers": [
+      "02 2579 8170"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區南京東路四段52巷11號1樓 連邦物理治療所",
+    "sourceValues": {
+      "序號": "46",
+      "機構名稱": "連邦物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區南京東路四段52巷11號1樓",
+      "電話": "02 2579 8170"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "47"
+  },
+  {
+    "id": "47",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "47",
+    "institutionName": "安健維康物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區南京東路四段183號2樓",
+    "phoneRaw": "02 2717 7600",
+    "phoneNumbers": [
+      "02 2717 7600"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區南京東路四段183號2樓 安健維康物理治療所",
+    "sourceValues": {
+      "序號": "47",
+      "機構名稱": "安健維康物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區南京東路四段183號2樓",
+      "電話": "02 2717 7600"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "48"
+  },
+  {
+    "id": "48",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "48",
+    "institutionName": "太陽物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區三民路43巷3號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區三民路43巷3號 太陽物理治療所",
+    "sourceValues": {
+      "序號": "48",
+      "機構名稱": "太陽物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區三民路43巷3號",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "49"
+  },
+  {
+    "id": "49",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "49",
+    "institutionName": "牧仁物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區長春路492號3樓",
+    "phoneRaw": "?02 2517 3712",
+    "phoneNumbers": [
+      "?02 2517 3712"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區長春路492號3樓 牧仁物理治療所",
+    "sourceValues": {
+      "序號": "49",
+      "機構名稱": "牧仁物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區長春路492號3樓",
+      "電話": "?02 2517 3712"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "50"
+  },
+  {
+    "id": "50",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "50",
+    "institutionName": "動知物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區敦化北路120巷22號",
+    "phoneRaw": "02 2545 0968",
+    "phoneNumbers": [
+      "02 2545 0968"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區敦化北路120巷22號 動知物理治療所",
+    "sourceValues": {
+      "序號": "50",
+      "機構名稱": "動知物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區敦化北路120巷22號",
+      "電話": "02 2545 0968"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "51"
+  },
+  {
+    "id": "51",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "51",
+    "institutionName": "康齡安健物理治療所",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "address": "台北市松山區八德路三段225號2號樓之七",
+    "phoneRaw": "02 2578 3330",
+    "phoneNumbers": [
+      "02 2578 3330"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市松山區八德路三段225號2號樓之七 康齡安健物理治療所",
+    "sourceValues": {
+      "序號": "51",
+      "機構名稱": "康齡安健物理治療所",
+      "郵遞區號": "105",
+      "地址": "台北市松山區八德路三段225號2號樓之七",
+      "電話": "02 2578 3330"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "52"
+  },
+  {
+    "id": "52",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "52",
+    "institutionName": "畢士大物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區和平東路二段42號3樓",
+    "phoneRaw": "02 2364 7188",
+    "phoneNumbers": [
+      "02 2364 7188"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區和平東路二段42號3樓 畢士大物理治療所",
+    "sourceValues": {
+      "序號": "52",
+      "機構名稱": "畢士大物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區和平東路二段42號3樓",
+      "電話": "02 2364 7188"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "53"
+  },
+  {
+    "id": "53",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "53",
+    "institutionName": "新衡物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區溫州街52巷19號",
+    "phoneRaw": "02 2362 3936",
+    "phoneNumbers": [
+      "02 2362 3936"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區溫州街52巷19號 新衡物理治療所",
+    "sourceValues": {
+      "序號": "53",
+      "機構名稱": "新衡物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區溫州街52巷19號",
+      "電話": "02 2362 3936"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "54"
+  },
+  {
+    "id": "54",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "54",
+    "institutionName": "回春物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區復興南路一段237號2樓之1",
+    "phoneRaw": "02-27003779",
+    "phoneNumbers": [
+      "02-27003779"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區復興南路一段237號2樓之1 回春物理治療所",
+    "sourceValues": {
+      "序號": "54",
+      "機構名稱": "回春物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區復興南路一段237號2樓之1",
+      "電話": "02-27003779"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "55"
+  },
+  {
+    "id": "55",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "55",
+    "institutionName": "大安晨熙物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路三段172號3樓之1",
+    "phoneRaw": "?02 2709 4886",
+    "phoneNumbers": [
+      "?02 2709 4886"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路三段172號3樓之1 大安晨熙物理治療所",
+    "sourceValues": {
+      "序號": "55",
+      "機構名稱": "大安晨熙物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路三段172號3樓之1",
+      "電話": "?02 2709 4886"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "56"
+  },
+  {
+    "id": "56",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "56",
+    "institutionName": "凱樂信義物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路三段150號4樓之1",
+    "phoneRaw": "02 2703 9060",
+    "phoneNumbers": [
+      "02 2703 9060"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路三段150號4樓之1 凱樂信義物理治療所",
+    "sourceValues": {
+      "序號": "56",
+      "機構名稱": "凱樂信義物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路三段150號4樓之1",
+      "電話": "02 2703 9060"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "57"
+  },
+  {
+    "id": "57",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "57",
+    "institutionName": "川物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區敦化南路二段5號11F-3",
+    "phoneRaw": "02 2784 0261",
+    "phoneNumbers": [
+      "02 2784 0261"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區敦化南路二段5號11F-3 川物理治療所",
+    "sourceValues": {
+      "序號": "57",
+      "機構名稱": "川物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區敦化南路二段5號11F-3",
+      "電話": "02 2784 0261"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "58"
+  },
+  {
+    "id": "58",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "58",
+    "institutionName": "陽明大安物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區新生南路一段165巷1號",
+    "phoneRaw": "02 2709 7922",
+    "phoneNumbers": [
+      "02 2709 7922"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區新生南路一段165巷1號 陽明大安物理治療所",
+    "sourceValues": {
+      "序號": "58",
+      "機構名稱": "陽明大安物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區新生南路一段165巷1號",
+      "電話": "02 2709 7922"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "59"
+  },
+  {
+    "id": "59",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "59",
+    "institutionName": "動晰物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區建國南路一段200號6樓",
+    "phoneRaw": "02 2740 9166",
+    "phoneNumbers": [
+      "02 2740 9166"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區建國南路一段200號6樓 動晰物理治療所",
+    "sourceValues": {
+      "序號": "59",
+      "機構名稱": "動晰物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區建國南路一段200號6樓",
+      "電話": "02 2740 9166"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "60"
+  },
+  {
+    "id": "60",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "60",
+    "institutionName": "艾爾適能物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區敦化南路二段154巷5號1樓",
+    "phoneRaw": "02 2706 0198",
+    "phoneNumbers": [
+      "02 2706 0198"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區敦化南路二段154巷5號1樓 艾爾適能物理治療所",
+    "sourceValues": {
+      "序號": "60",
+      "機構名稱": "艾爾適能物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區敦化南路二段154巷5號1樓",
+      "電話": "02 2706 0198"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "61"
+  },
+  {
+    "id": "61",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "61",
+    "institutionName": "樞適物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路四段178-1號10樓",
+    "phoneRaw": "?02 2779 1357",
+    "phoneNumbers": [
+      "?02 2779 1357"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區忠孝東路四段178-1號10樓 樞適物理治療所",
+    "sourceValues": {
+      "序號": "61",
+      "機構名稱": "樞適物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區忠孝東路四段178-1號10樓",
+      "電話": "?02 2779 1357"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "62"
+  },
+  {
+    "id": "62",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "62",
+    "institutionName": "光合物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路四段177號12樓",
+    "phoneRaw": "02 2779 0937",
+    "phoneNumbers": [
+      "02 2779 0937"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區忠孝東路四段177號12樓 光合物理治療所",
+    "sourceValues": {
+      "序號": "62",
+      "機構名稱": "光合物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區忠孝東路四段177號12樓",
+      "電話": "02 2779 0937"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "63"
+  },
+  {
+    "id": "63",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "63",
+    "institutionName": "秉格物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段151號6樓",
+    "phoneRaw": "02 2701 2651",
+    "phoneNumbers": [
+      "02 2701 2651"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路四段151號6樓 秉格物理治療所",
+    "sourceValues": {
+      "序號": "63",
+      "機構名稱": "秉格物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路四段151號6樓",
+      "電話": "02 2701 2651"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "64"
+  },
+  {
+    "id": "64",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "64",
+    "institutionName": "瞻恒物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區瑞安街23巷8之1號1樓",
+    "phoneRaw": "02 2700 0277",
+    "phoneNumbers": [
+      "02 2700 0277"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區瑞安街23巷8之1號1樓 瞻恒物理治療所",
+    "sourceValues": {
+      "序號": "64",
+      "機構名稱": "瞻恒物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區瑞安街23巷8之1號1樓",
+      "電話": "02 2700 0277"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "65"
+  },
+  {
+    "id": "65",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "65",
+    "institutionName": "大安國際物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路三段111巷2號之4號",
+    "phoneRaw": "?0908 031 062",
+    "phoneNumbers": [
+      "?0908 031 062"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路三段111巷2號之4號 大安國際物理治療所",
+    "sourceValues": {
+      "序號": "65",
+      "機構名稱": "大安國際物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路三段111巷2號之4號",
+      "電話": "?0908 031 062"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "66"
+  },
+  {
+    "id": "66",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "66",
+    "institutionName": "癒健物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區金山南路二段146號3樓",
+    "phoneRaw": "02 3393 6068",
+    "phoneNumbers": [
+      "02 3393 6068"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區金山南路二段146號3樓 癒健物理治療所",
+    "sourceValues": {
+      "序號": "66",
+      "機構名稱": "癒健物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區金山南路二段146號3樓",
+      "電話": "02 3393 6068"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "67"
+  },
+  {
+    "id": "67",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "67",
+    "institutionName": "菲萌物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區復興南路一段259號二樓",
+    "phoneRaw": "?02 2700 1345",
+    "phoneNumbers": [
+      "?02 2700 1345"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區復興南路一段259號二樓 菲萌物理治療所",
+    "sourceValues": {
+      "序號": "67",
+      "機構名稱": "菲萌物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區復興南路一段259號二樓",
+      "電話": "?02 2700 1345"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "68"
+  },
+  {
+    "id": "68",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "68",
+    "institutionName": "康富大安物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區瑞安街276巷16號",
+    "phoneRaw": "02 2706 0672",
+    "phoneNumbers": [
+      "02 2706 0672"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區瑞安街276巷16號 康富大安物理治療所",
+    "sourceValues": {
+      "序號": "68",
+      "機構名稱": "康富大安物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區瑞安街276巷16號",
+      "電話": "02 2706 0672"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "69"
+  },
+  {
+    "id": "69",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "69",
+    "institutionName": "澄心康健物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區建國南路一段270巷27號",
+    "phoneRaw": "02 7733 7576",
+    "phoneNumbers": [
+      "02 7733 7576"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區建國南路一段270巷27號 澄心康健物理治療所",
+    "sourceValues": {
+      "序號": "69",
+      "機構名稱": "澄心康健物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區建國南路一段270巷27號",
+      "電話": "02 7733 7576"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "70"
+  },
+  {
+    "id": "70",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "70",
+    "institutionName": "台北康柏物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路三段172號二樓之一",
+    "phoneRaw": "0970 278 681",
+    "phoneNumbers": [
+      "0970 278 681"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路三段172號二樓之一 台北康柏物理治療所",
+    "sourceValues": {
+      "序號": "70",
+      "機構名稱": "台北康柏物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路三段172號二樓之一",
+      "電話": "0970 278 681"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "71"
+  },
+  {
+    "id": "71",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "71",
+    "institutionName": "揪健康信義物理治療所",
+    "postalCode": "100",
+    "districtName": "信義區",
+    "address": "台北市信義區忠孝東路四段500號 10號樓之2",
+    "phoneRaw": "02 2722 5722",
+    "phoneNumbers": [
+      "02 2722 5722"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區忠孝東路四段500號 10號樓之2 揪健康信義物理治療所",
+    "sourceValues": {
+      "序號": "71",
+      "機構名稱": "揪健康信義物理治療所",
+      "郵遞區號": "100",
+      "地址": "台北市信義區忠孝東路四段500號 10號樓之2",
+      "電話": "02 2722 5722"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "72"
+  },
+  {
+    "id": "72",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "72",
+    "institutionName": "擁悅物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區安和路二段211號4樓",
+    "phoneRaw": "02 2732 3246",
+    "phoneNumbers": [
+      "02 2732 3246"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區安和路二段211號4樓 擁悅物理治療所",
+    "sourceValues": {
+      "序號": "72",
+      "機構名稱": "擁悅物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區安和路二段211號4樓",
+      "電話": "02 2732 3246"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "73"
+  },
+  {
+    "id": "73",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "73",
+    "institutionName": "運科物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區師大路92巷6號2樓",
+    "phoneRaw": "02 2362 8233",
+    "phoneNumbers": [
+      "02 2362 8233"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區師大路92巷6號2樓 運科物理治療所",
+    "sourceValues": {
+      "序號": "73",
+      "機構名稱": "運科物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區師大路92巷6號2樓",
+      "電話": "02 2362 8233"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "74"
+  },
+  {
+    "id": "74",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "74",
+    "institutionName": "適群居家物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區四維路198巷32號",
+    "phoneRaw": "02 2706 3700",
+    "phoneNumbers": [
+      "02 2706 3700"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區四維路198巷32號 適群居家物理治療所",
+    "sourceValues": {
+      "序號": "74",
+      "機構名稱": "適群居家物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區四維路198巷32號",
+      "電話": "02 2706 3700"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "75"
+  },
+  {
+    "id": "75",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "75",
+    "institutionName": "起辰物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段65號3樓",
+    "phoneRaw": "02 2706 8878",
+    "phoneNumbers": [
+      "02 2706 8878"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區信義路四段65號3樓 起辰物理治療所",
+    "sourceValues": {
+      "序號": "75",
+      "機構名稱": "起辰物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區信義路四段65號3樓",
+      "電話": "02 2706 8878"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "76"
+  },
+  {
+    "id": "76",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "76",
+    "institutionName": "哈佛物理治療所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路二段362號7樓",
+    "phoneRaw": "02 8258 8536",
+    "phoneNumbers": [
+      "02 8258 8536"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區西園路二段362號7樓 哈佛物理治療所",
+    "sourceValues": {
+      "序號": "76",
+      "機構名稱": "哈佛物理治療所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區西園路二段362號7樓",
+      "電話": "02 8258 8536"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "77"
+  },
+  {
+    "id": "77",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "77",
+    "institutionName": "純居家物理治療所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區東園街73巷60號三樓",
+    "phoneRaw": "0921 607 540",
+    "phoneNumbers": [
+      "0921 607 540"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區東園街73巷60號三樓 純居家物理治療所",
+    "sourceValues": {
+      "序號": "77",
+      "機構名稱": "純居家物理治療所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區東園街73巷60號三樓",
+      "電話": "0921 607 540"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "78"
+  },
+  {
+    "id": "78",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "78",
+    "institutionName": "幸福物理治療所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路二段13巷12號",
+    "phoneRaw": "02 2302 0306",
+    "phoneNumbers": [
+      "02 2302 0306"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區西園路二段13巷12號 幸福物理治療所",
+    "sourceValues": {
+      "序號": "78",
+      "機構名稱": "幸福物理治療所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區西園路二段13巷12號",
+      "電話": "02 2302 0306"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "79"
+  },
+  {
+    "id": "79",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "79",
+    "institutionName": "漢華物理治療所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路二段254巷5號4樓",
+    "phoneRaw": "?02-23016181",
+    "phoneNumbers": [
+      "?02-23016181"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區西園路二段254巷5號4樓 漢華物理治療所",
+    "sourceValues": {
+      "序號": "79",
+      "機構名稱": "漢華物理治療所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區西園路二段254巷5號4樓",
+      "電話": "?02-23016181"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "80"
+  },
+  {
+    "id": "80",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "80",
+    "institutionName": "宏光物理治療所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區虎林街38號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區虎林街38號 宏光物理治療所",
+    "sourceValues": {
+      "序號": "80",
+      "機構名稱": "宏光物理治療所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區虎林街38號",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "81"
+  },
+  {
+    "id": "81",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "81",
+    "institutionName": "鉑適物理治療所",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "address": "台北市大安區安和路一段79號1樓",
+    "phoneRaw": "02 2758 3285",
+    "phoneNumbers": [
+      "02 2758 3285"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市大安區安和路一段79號1樓 鉑適物理治療所",
+    "sourceValues": {
+      "序號": "81",
+      "機構名稱": "鉑適物理治療所",
+      "郵遞區號": "106",
+      "地址": "台北市大安區安和路一段79號1樓",
+      "電話": "02 2758 3285"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "82"
+  },
+  {
+    "id": "82",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "82",
+    "institutionName": "易康脊足體態物理治療所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區和平東路三段215號3樓",
+    "phoneRaw": "02 8732 1550",
+    "phoneNumbers": [
+      "02 8732 1550"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區和平東路三段215號3樓 易康脊足體態物理治療所",
+    "sourceValues": {
+      "序號": "82",
+      "機構名稱": "易康脊足體態物理治療所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區和平東路三段215號3樓",
+      "電話": "02 8732 1550"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "83"
+  },
+  {
+    "id": "83",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "83",
+    "institutionName": "由朵物理治療所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區基隆路一段103號1樓",
+    "phoneRaw": "02 2749 1899",
+    "phoneNumbers": [
+      "02 2749 1899"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區基隆路一段103號1樓 由朵物理治療所",
+    "sourceValues": {
+      "序號": "83",
+      "機構名稱": "由朵物理治療所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區基隆路一段103號1樓",
+      "電話": "02 2749 1899"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "84"
+  },
+  {
+    "id": "84",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "84",
+    "institutionName": "脊立安居家物理治療所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區永吉路491巷5弄46號",
+    "phoneRaw": "",
+    "phoneNumbers": [],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區永吉路491巷5弄46號 脊立安居家物理治療所",
+    "sourceValues": {
+      "序號": "84",
+      "機構名稱": "脊立安居家物理治療所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區永吉路491巷5弄46號",
+      "電話": ""
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "85"
+  },
+  {
+    "id": "85",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "85",
+    "institutionName": "揪健康運動物理治療所",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "address": "台北市信義區忠孝東路四段500號 10號樓之2",
+    "phoneRaw": "02 2722 5722",
+    "phoneNumbers": [
+      "02 2722 5722"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市信義區忠孝東路四段500號 10號樓之2 揪健康運動物理治療所",
+    "sourceValues": {
+      "序號": "85",
+      "機構名稱": "揪健康運動物理治療所",
+      "郵遞區號": "110",
+      "地址": "台北市信義區忠孝東路四段500號 10號樓之2",
+      "電話": "02 2722 5722"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "86"
+  },
+  {
+    "id": "86",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "86",
+    "institutionName": "生生優動天母運動物理治療所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區忠誠路一段83號",
+    "phoneRaw": "02 2872 8889",
+    "phoneNumbers": [
+      "02 2872 8889"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區忠誠路一段83號 生生優動天母運動物理治療所",
+    "sourceValues": {
+      "序號": "86",
+      "機構名稱": "生生優動天母運動物理治療所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區忠誠路一段83號",
+      "電話": "02 2872 8889"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "87"
+  },
+  {
+    "id": "87",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "87",
+    "institutionName": "樂橙物理治療所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區天母西路22巷1-1號",
+    "phoneRaw": "?02 2877 1201",
+    "phoneNumbers": [
+      "?02 2877 1201"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區天母西路22巷1-1號 樂橙物理治療所",
+    "sourceValues": {
+      "序號": "87",
+      "機構名稱": "樂橙物理治療所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區天母西路22巷1-1號",
+      "電話": "?02 2877 1201"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "88"
+  },
+  {
+    "id": "88",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "88",
+    "institutionName": "安安物理治療所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區重慶北路四段 136號1樓",
+    "phoneRaw": "02 2812 0898",
+    "phoneNumbers": [
+      "02 2812 0898"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區重慶北路四段 136號1樓 安安物理治療所",
+    "sourceValues": {
+      "序號": "88",
+      "機構名稱": "安安物理治療所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區重慶北路四段 136號1樓",
+      "電話": "02 2812 0898"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "89"
+  },
+  {
+    "id": "89",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "89",
+    "institutionName": "慕福物理治療所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區福國路50巷6弄8號",
+    "phoneRaw": "02 2831 2465",
+    "phoneNumbers": [
+      "02 2831 2465"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區福國路50巷6弄8號 慕福物理治療所",
+    "sourceValues": {
+      "序號": "89",
+      "機構名稱": "慕福物理治療所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區福國路50巷6弄8號",
+      "電話": "02 2831 2465"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "90"
+  },
+  {
+    "id": "90",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "90",
+    "institutionName": "尚好物理治療所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區重慶北路四段(迴轉道/延平北路社子/三重)250號3樓",
+    "phoneRaw": "0983 739 660",
+    "phoneNumbers": [
+      "0983 739 660"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區重慶北路四段(迴轉道/延平北路社子/三重)250號3樓 尚好物理治療所",
+    "sourceValues": {
+      "序號": "90",
+      "機構名稱": "尚好物理治療所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區重慶北路四段(迴轉道/延平北路社子/三重)250號3樓",
+      "電話": "0983 739 660"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "91"
+  },
+  {
+    "id": "91",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "91",
+    "institutionName": "跑居家物理治療所",
+    "postalCode": "108",
+    "districtName": "萬華區",
+    "address": "台北市萬華區東園街73巷60號三樓",
+    "phoneRaw": "0921 607 540",
+    "phoneNumbers": [
+      "0921 607 540"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市萬華區東園街73巷60號三樓 跑居家物理治療所",
+    "sourceValues": {
+      "序號": "91",
+      "機構名稱": "跑居家物理治療所",
+      "郵遞區號": "108",
+      "地址": "台北市萬華區東園街73巷60號三樓",
+      "電話": "0921 607 540"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "92"
+  },
+  {
+    "id": "92",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "92",
+    "institutionName": "棨晨居家物理治療所",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "address": "台北市士林區德行東路104巷7弄7號",
+    "phoneRaw": "0983 661 617",
+    "phoneNumbers": [
+      "0983 661 617"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市士林區德行東路104巷7弄7號 棨晨居家物理治療所",
+    "sourceValues": {
+      "序號": "92",
+      "機構名稱": "棨晨居家物理治療所",
+      "郵遞區號": "111",
+      "地址": "台北市士林區德行東路104巷7弄7號",
+      "電話": "0983 661 617"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "93"
+  },
+  {
+    "id": "93",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "93",
+    "institutionName": "雙全物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區明德路7號1樓",
+    "phoneRaw": "0971 772 188",
+    "phoneNumbers": [
+      "0971 772 188"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區明德路7號1樓 雙全物理治療所",
+    "sourceValues": {
+      "序號": "93",
+      "機構名稱": "雙全物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區明德路7號1樓",
+      "電話": "0971 772 188"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "94"
+  },
+  {
+    "id": "94",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "94",
+    "institutionName": "江威漢物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區天母西路124號",
+    "phoneRaw": "02 2828 2892",
+    "phoneNumbers": [
+      "02 2828 2892"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區天母西路124號 江威漢物理治療所",
+    "sourceValues": {
+      "序號": "94",
+      "機構名稱": "江威漢物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區天母西路124號",
+      "電話": "02 2828 2892"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "95"
+  },
+  {
+    "id": "95",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "95",
+    "institutionName": "晉熯脊骨物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區振華街42號1樓",
+    "phoneRaw": "02 2823 5681",
+    "phoneNumbers": [
+      "02 2823 5681"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區振華街42號1樓 晉熯脊骨物理治療所",
+    "sourceValues": {
+      "序號": "95",
+      "機構名稱": "晉熯脊骨物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區振華街42號1樓",
+      "電話": "02 2823 5681"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "96"
+  },
+  {
+    "id": "96",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "96",
+    "institutionName": "陽明物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區石牌路一段166巷22號",
+    "phoneRaw": "02 2827 0453",
+    "phoneNumbers": [
+      "02 2827 0453"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區石牌路一段166巷22號 陽明物理治療所",
+    "sourceValues": {
+      "序號": "96",
+      "機構名稱": "陽明物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區石牌路一段166巷22號",
+      "電話": "02 2827 0453"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "97"
+  },
+  {
+    "id": "97",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "97",
+    "institutionName": "陳子敬物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區致遠三路55巷78號",
+    "phoneRaw": "02 2828 5596",
+    "phoneNumbers": [
+      "02 2828 5596"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區致遠三路55巷78號 陳子敬物理治療所",
+    "sourceValues": {
+      "序號": "97",
+      "機構名稱": "陳子敬物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區致遠三路55巷78號",
+      "電話": "02 2828 5596"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "98"
+  },
+  {
+    "id": "98",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "98",
+    "institutionName": "復力物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區大業路620號1樓",
+    "phoneRaw": "02 2898 2502",
+    "phoneNumbers": [
+      "02 2898 2502"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區大業路620號1樓 復力物理治療所",
+    "sourceValues": {
+      "序號": "98",
+      "機構名稱": "復力物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區大業路620號1樓",
+      "電話": "02 2898 2502"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "99"
+  },
+  {
+    "id": "99",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "99",
+    "institutionName": "禾康物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區光明路223號5樓",
+    "phoneRaw": "02 2892 6223",
+    "phoneNumbers": [
+      "02 2892 6223"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區光明路223號5樓 禾康物理治療所",
+    "sourceValues": {
+      "序號": "99",
+      "機構名稱": "禾康物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區光明路223號5樓",
+      "電話": "02 2892 6223"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "100"
+  },
+  {
+    "id": "100",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "100",
+    "institutionName": "陽明交大領航物理治療所",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "address": "台北市北投區西安街二段167號3樓",
+    "phoneRaw": "02 2826 1698",
+    "phoneNumbers": [
+      "02 2826 1698"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市北投區西安街二段167號3樓 陽明交大領航物理治療所",
+    "sourceValues": {
+      "序號": "100",
+      "機構名稱": "陽明交大領航物理治療所",
+      "郵遞區號": "112",
+      "地址": "台北市北投區西安街二段167號3樓",
+      "電話": "02 2826 1698"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "101"
+  },
+  {
+    "id": "101",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "101",
+    "institutionName": "內湖物理治療所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區內湖路一段615號1樓",
+    "phoneRaw": "02 2793 8750",
+    "phoneNumbers": [
+      "02 2793 8750"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區內湖路一段615號1樓 內湖物理治療所",
+    "sourceValues": {
+      "序號": "101",
+      "機構名稱": "內湖物理治療所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區內湖路一段615號1樓",
+      "電話": "02 2793 8750"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "102"
+  },
+  {
+    "id": "102",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "102",
+    "institutionName": "湖光物理治療所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路四段38號三 樓",
+    "phoneRaw": "02 2792 0234",
+    "phoneNumbers": [
+      "02 2792 0234"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區成功路四段38號三 樓 湖光物理治療所",
+    "sourceValues": {
+      "序號": "102",
+      "機構名稱": "湖光物理治療所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區成功路四段38號三 樓",
+      "電話": "02 2792 0234"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "103"
+  },
+  {
+    "id": "103",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "103",
+    "institutionName": "生生優動內湖運動物理治療所",
+    "postalCode": "114",
+    "districtName": "內湖區",
+    "address": "台北市內湖區內湖路一段727號",
+    "phoneRaw": "02 2799 1526",
+    "phoneNumbers": [
+      "02 2799 1526"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市內湖區內湖路一段727號 生生優動內湖運動物理治療所",
+    "sourceValues": {
+      "序號": "103",
+      "機構名稱": "生生優動內湖運動物理治療所",
+      "郵遞區號": "114",
+      "地址": "台北市內湖區內湖路一段727號",
+      "電話": "02 2799 1526"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "104"
+  },
+  {
+    "id": "104",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "104",
+    "institutionName": "永鑫物理治療所",
+    "postalCode": "115",
+    "districtName": "南港區",
+    "address": "台北市南港區八德路四段885號3樓",
+    "phoneRaw": "0911 278 979",
+    "phoneNumbers": [
+      "0911 278 979"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市南港區八德路四段885號3樓 永鑫物理治療所",
+    "sourceValues": {
+      "序號": "104",
+      "機構名稱": "永鑫物理治療所",
+      "郵遞區號": "115",
+      "地址": "台北市南港區八德路四段885號3樓",
+      "電話": "0911 278 979"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "105"
+  },
+  {
+    "id": "105",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "105",
+    "institutionName": "好物理治療所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區萬隆街64號3F",
+    "phoneRaw": "0920-988-007",
+    "phoneNumbers": [
+      "0920-988-007"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區萬隆街64號3F 好物理治療所",
+    "sourceValues": {
+      "序號": "105",
+      "機構名稱": "好物理治療所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區萬隆街64號3F",
+      "電話": "0920-988-007"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "106"
+  },
+  {
+    "id": "106",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "106",
+    "institutionName": "新安物理治療所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路三段152巷18號1樓",
+    "phoneRaw": "0965 355 691",
+    "phoneNumbers": [
+      "0965 355 691"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區興隆路三段152巷18號1樓 新安物理治療所",
+    "sourceValues": {
+      "序號": "106",
+      "機構名稱": "新安物理治療所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區興隆路三段152巷18號1樓",
+      "電話": "0965 355 691"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "107"
+  },
+  {
+    "id": "107",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "107",
+    "institutionName": "誠星物理治療所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區羅斯福路六段138號2 樓",
+    "phoneRaw": "02 8663 5288",
+    "phoneNumbers": [
+      "02 8663 5288"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區羅斯福路六段138號2 樓 誠星物理治療所",
+    "sourceValues": {
+      "序號": "107",
+      "機構名稱": "誠星物理治療所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區羅斯福路六段138號2 樓",
+      "電話": "02 8663 5288"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "108"
+  },
+  {
+    "id": "108",
+    "module": "physical_therapy_clinics",
+    "sourceSequenceNumber": "108",
+    "institutionName": "艾思物理治療所",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "address": "台北市文山區羅斯福路六段143號",
+    "phoneRaw": "02 8931 0203",
+    "phoneNumbers": [
+      "02 8931 0203"
+    ],
+    "hasAddress": true,
+    "hasPhone": false,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "台北市文山區羅斯福路六段143號 艾思物理治療所",
+    "sourceValues": {
+      "序號": "108",
+      "機構名稱": "艾思物理治療所",
+      "郵遞區號": "116",
+      "地址": "台北市文山區羅斯福路六段143號",
+      "電話": "02 8931 0203"
+    },
+    "source": "臺北市物理治療所",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceRowNumber": "109"
+  }
+]

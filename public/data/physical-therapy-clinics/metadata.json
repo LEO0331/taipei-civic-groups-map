@@ -1,0 +1,23 @@
+{
+  "module": "physical_therapy_clinics",
+  "source": "臺北市物理治療所",
+  "sourceUrl": "https://data.taipei/dataset/detail?id=3a6fc259-9158-4c24-babb-aa271cfc7f36",
+  "csvResourceUrl": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=62851454-6827-45fd-a337-b5c571011fe4",
+  "sourceAgency": "臺北市政府衛生局",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話"
+  ],
+  "csvUpdateDate": "2025-06-06",
+  "metadataUpdateDate": "2026-07-15",
+  "ingestedAt": "2026-08-10T01:45:06.056Z",
+  "recordCount": 108,
+  "notes": [
+    "All source values are retained in sourceValues.",
+    "Districts are derived only from explicit Taipei district text in the official address.",
+    "No coordinates or exact map markers are created."
+  ]
+}

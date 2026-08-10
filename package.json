@@ -38,6 +38,7 @@
     "data:fetch:hemodialysis-medical-institutions": "tsx scripts/fetchHemodialysisMedicalInstitutions.ts",
     "data:fetch:internal-medicine-institutions": "tsx scripts/fetchInternalMedicineInstitutions.ts",
     "data:fetch:occupational-therapy-clinics": "tsx scripts/fetchOccupationalTherapyClinics.ts",
+    "data:convert:physical-therapy-clinics": "tsx scripts/convertPhysicalTherapyClinics.ts",
     "data:fetch:designated-foreigner-health-exam-hospitals": "tsx scripts/fetchDesignatedForeignerHealthExamHospitals.ts",
     "data:fetch:disability-institution-capacity-and-vacancies": "tsx scripts/fetchDisabilityInstitutionCapacityAndVacancies.ts",
     "data:fetch:child-medical-subsidy-providers": "tsx scripts/fetchChildMedicalSubsidyContractedProviders.ts",

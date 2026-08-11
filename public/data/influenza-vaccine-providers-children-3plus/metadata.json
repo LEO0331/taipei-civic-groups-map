@@ -1,0 +1,26 @@
+{
+  "module": "influenza_vaccine_providers_children_3plus",
+  "source": "臺北市流感疫苗合約醫療院所名冊(3歲以上(含3歲)幼童)",
+  "sourceUrl": "https://data.taipei/dataset/detail?id=f2a66aec-9b15-4580-9d04-9e991d45e908",
+  "csvResourceUrl": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=caf1807b-fabf-4db9-8521-6cdd5fa97517",
+  "sourceAgency": "臺北市政府衛生局",
+  "sourceFields": [
+    "序號",
+    "行政區",
+    "院所名稱",
+    "地址",
+    "電話",
+    "語音預約"
+  ],
+  "csvUpdateDate": "2026-03-17",
+  "metadataUpdateDate": "2026-07-13",
+  "ingestedAt": "2026-08-11T01:05:15.591Z",
+  "recordCount": 248,
+  "ageScope": "children age 3 years and above",
+  "notes": [
+    "All six source fields are retained in sourceValues.",
+    "Official district codes are mapped to display names without replacing the raw district value.",
+    "Voice reservation is normalized only from the source value; blank values remain unknown.",
+    "No coordinates or exact map markers are created."
+  ]
+}

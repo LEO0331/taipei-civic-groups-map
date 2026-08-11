@@ -79,6 +79,7 @@ import CommunityPublicChildcareHomesModule from './CommunityPublicChildcareHomes
 import TbContactScreeningPartnerProvidersModule from './TbContactScreeningPartnerProvidersModule';
 import BeautyHairdressingHygieneCertificationsModule from './BeautyHairdressingHygieneCertificationsModule';
 import PublicInfluenzaAntiviralProvidersModule from './PublicInfluenzaAntiviralProvidersModule';
+import InfluenzaVaccineProvidersChildren3PlusModule from './InfluenzaVaccineProvidersChildren3PlusModule';
 import CommunityIntegratedCareLevelCUnitsModule from './CommunityIntegratedCareLevelCUnitsModule';
 import RegisteredAfterSchoolCareCentresModule from './RegisteredAfterSchoolCareCentresModule';
 import SubsidizedSeniorResidentialPlacementInstitutionsModule from './SubsidizedSeniorResidentialPlacementInstitutionsModule';
@@ -777,6 +778,7 @@ export default function App() {
   tabs.splice(21, 0, ['tbContactScreeningPartnerProviders', language === 'zh' ? '結核病接觸者篩檢合作醫療院所' : 'TB Contact Screening Partner Providers']);
   tabs.splice(22, 0, ['beautyHairdressingHygieneCertifications', language === 'zh' ? '美容美髮業衛生優良認證' : 'Beauty and Hairdressing Hygiene Certifications']);
   tabs.splice(23, 0, ['publicInfluenzaAntiviralProviders', language === 'zh' ? '公費流感抗病毒藥劑合約院所' : 'Public Influenza Antiviral Medicine Providers']);
+  tabs.splice(24, 0, ['influenzaVaccineProvidersChildren3Plus', language === 'zh' ? '3歲以上幼童流感疫苗特約院所' : 'Influenza Vaccine Providers for Children Age 3+']);
   tabs.splice(24, 0, ['communityIntegratedCareLevelCUnits', language === 'zh' ? '社區整體照顧服務體系 C 級單位' : 'Community Integrated Care Level C Units']);
   tabs.splice(25, 0, ['registeredAfterSchoolCareCentres', language === 'zh' ? '立案課照中心' : 'Registered After-School Care Centres']);
   tabs.splice(26, 0, ['subsidizedSeniorResidentialPlacementInstitutions', language === 'zh' ? '老人收容安置補助機構' : 'Subsidized Senior Residential Placement Institutions']);
@@ -859,6 +861,7 @@ export default function App() {
       {tab === 'tbContactScreeningPartnerProviders' && <TbContactScreeningPartnerProvidersModule language={language} />}
       {tab === 'beautyHairdressingHygieneCertifications' && <BeautyHairdressingHygieneCertificationsModule language={language} />}
       {tab === 'publicInfluenzaAntiviralProviders' && <PublicInfluenzaAntiviralProvidersModule language={language} />}
+      {tab === 'influenzaVaccineProvidersChildren3Plus' && <InfluenzaVaccineProvidersChildren3PlusModule language={language} />}
       {tab === 'communityIntegratedCareLevelCUnits' && <CommunityIntegratedCareLevelCUnitsModule language={language} />}
       {tab === 'registeredAfterSchoolCareCentres' && <RegisteredAfterSchoolCareCentresModule language={language} />}
       {tab === 'subsidizedSeniorResidentialPlacementInstitutions' && <SubsidizedSeniorResidentialPlacementInstitutionsModule language={language} />}

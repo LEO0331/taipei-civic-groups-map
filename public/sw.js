@@ -83,6 +83,8 @@ const DATA = [
   `${BASE}data/public-influenza-antiviral-providers/records.json`,
   `${BASE}data/public-influenza-antiviral-providers/summary.json`,
   `${BASE}data/public-influenza-antiviral-providers/conversion-report.json`,
+  `${BASE}data/influenza-vaccine-providers-children-3plus/records.json`,
+  `${BASE}data/influenza-vaccine-providers-children-3plus/metadata.json`,
   `${BASE}data/community-integrated-care-level-c-units/records.json`,
   `${BASE}data/community-integrated-care-level-c-units/summary.json`,
   `${BASE}data/community-integrated-care-level-c-units/conversion-report.json`,

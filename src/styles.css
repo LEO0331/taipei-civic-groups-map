@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap');
 
-:root { font-family: "IBM Plex Sans", "Noto Sans TC", sans-serif; color: #203744; background: #f5f1e8; font-synthesis: none; }
+:root { --focus-ring: #d75b3f; font-family: "IBM Plex Sans", "Noto Sans TC", sans-serif; color: #203744; background: #f5f1e8; font-synthesis: none; }
 * { box-sizing: border-box; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 3px; }
 body { margin: 0; min-width: 320px; }
 button, input, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -114,6 +115,17 @@ tbody th { background: #e9e4d9; }
 .notes-grid h3 { margin-top: 0; }
 .notes-grid p { max-width: 720px; line-height: 1.8; }
 footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size: 12px; line-height: 1.7; }
+.data-trust { margin: 20px auto 0; max-width: 1180px; padding: 0 18px; color: #243b4a; font-size: 13px; line-height: 1.55; }
+.data-trust-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 11px 14px; border: 1px solid #b8ccd0; border-radius: 10px; background: #f3f8f7; }
+.data-trust-summary strong { color: #102a43; }
+.data-trust-status { border-radius: 999px; padding: 2px 8px; font-weight: 700; }
+.data-trust-status.current { background: #dbeee4; color: #17633d; }
+.data-trust-status.aging { background: #fff0ce; color: #865300; }
+.data-trust-status.stale, .data-trust-status.unknown { background: #f9ded8; color: #9b3320; }
+.data-trust details { padding: 8px 2px 0; }
+.data-trust summary { cursor: pointer; color: #175b62; font-weight: 700; }
+.data-trust p { max-width: 920px; margin: 8px 0; }
+.module-loading { margin: 28px auto; max-width: 1180px; padding: 18px; color: #175b62; font-weight: 700; text-align: center; }
 
 @media (min-width: 760px) {
   .masthead { min-height: 260px; padding: 44px 32px; gap: 22px; align-items: center; }

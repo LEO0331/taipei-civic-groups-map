@@ -28,8 +28,18 @@ jobs:
         env:
           NODE_OPTIONS: --dns-result-order=ipv4first
       - run: npm run data:convert
+      - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - name: Upload data release evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-release-evidence
+          path: |
+            public/data/data-trust-manifest.json
+            public/data/data-release-summary.json
+            public/data/conversion-report.json
+          if-no-files-found: error
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

@@ -50,7 +50,7 @@ export async function convertSpecificPetBusinessEvaluationResults() {
       const today = new Date().toISOString().slice(0, 10);
       records.push({
         id: sourceRecordHash.slice(0, 12), module: 'specific_pet_business_evaluation_results',
-        sourceEvaluationYearRoc: year.sourceEvaluationYearRoc, sourceEvaluationYearGregorian: year.sourceEvaluationYearGregorian, sourceResourceName: resourceName, resourceType: year.resourceType,
+        sourceEvaluationYearRoc: year.sourceEvaluationYearRoc!, sourceEvaluationYearGregorian: year.sourceEvaluationYearGregorian!, sourceResourceName: resourceName, resourceType: year.resourceType,
         cityName: city.cityName ?? '', cityNameNormalized: city.cityNameNormalized,
         districtName: district.districtName ?? '', districtNameNormalized: district.districtNameNormalized, isTaipeiDistrict: district.isTaipeiDistrict,
         postalCode: postal.postalCode, postalCodeNormalized: postal.postalCodeNormalized, postalCodeValidFormat: postal.validFormat,

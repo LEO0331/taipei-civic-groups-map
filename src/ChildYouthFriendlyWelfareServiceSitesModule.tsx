@@ -29,7 +29,7 @@ export default function ChildYouthFriendlyWelfareServiceSitesModule({ language }
     const [items, conversion] = await Promise.all([
       fetch(`${import.meta.env.BASE_URL}data/child-youth-friendly-welfare-service-sites/records.json`).then((response) => response.json()),
       fetch(`${import.meta.env.BASE_URL}data/conversion-report.json`).then((response) => response.ok ? response.json() : {}),
-    ]); setRecords(items); setReport(conversion.childYouthFriendlyWelfareServiceSites ?? null);
+    ]); setRecords(items); setReport((conversion as { childYouthFriendlyWelfareServiceSites?: Record<string, number> }).childYouthFriendlyWelfareServiceSites ?? null);
   }; load().catch(() => setRecords([])); }, []);
   const districts = useMemo(() => [...new Set(records.map((record) => record.districtName).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-Hant')), [records]);
   const areas = useMemo(() => [...new Set(records.map((record) => record.serviceAreaRaw).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-Hant')), [records]);

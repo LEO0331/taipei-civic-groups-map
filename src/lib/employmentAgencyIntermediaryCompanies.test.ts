@@ -96,7 +96,7 @@ test('parses address, contact and unified business number fields as text', () =>
 });
 
 test('builds summaries and filters intermediary company records', () => {
-  const records = [base, { ...base, id: 'b', sourceSequenceNumber: 2, sourceSequenceNumberNormalized: '2', evaluationGrade: '尚無', evaluationGradeCategory: 'not_available', institutionName: '乙公司', institutionNameNormalized: '乙公司', districtNameFromAddress: '中山區', intermediaryAssociation: undefined, intermediaryAssociationCategory: 'missing', hasIntermediaryAssociation: false, professionalStaffCount: 1, bilingualEmploymentPermitStaffCount: 0, employeeCount: 4, staffSizeCategory: 'micro', hasBilingualEmploymentPermitStaff: false }];
+  const records: EmploymentAgencyIntermediaryCompanyRecord[] = [base, { ...base, id: 'b', sourceSequenceNumber: 2, sourceSequenceNumberNormalized: '2', evaluationGrade: '尚無', evaluationGradeCategory: 'not_available', institutionName: '乙公司', institutionNameNormalized: '乙公司', districtNameFromAddress: '中山區', intermediaryAssociation: undefined, intermediaryAssociationCategory: 'missing', hasIntermediaryAssociation: false, professionalStaffCount: 1, bilingualEmploymentPermitStaffCount: 0, employeeCount: 4, staffSizeCategory: 'micro', hasBilingualEmploymentPermitStaff: false }];
   const summary = buildEmploymentAgencyIntermediaryCompanySummary(records);
   assert.equal(summary.totalRecords, 2);
   assert.equal(summary.districtCount, 2);

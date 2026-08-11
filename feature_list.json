@@ -1,0 +1,44 @@
+{
+  "features": [
+    {
+      "id": "maintenance-harness",
+      "name": "Agent development harness",
+      "description": "Keep project instructions, feature state, handoff notes, and repeatable verification current.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "2026-08-11: harness validation passed at 100/100."
+    },
+    {
+      "id": "maintenance-directory-data",
+      "name": "Directory data and conversion maintenance",
+      "description": "Refresh or convert only the public dataset targeted by the active request; preserve raw source values and update derived summaries/tests when needed.",
+      "dependencies": ["maintenance-harness"],
+      "status": "ready",
+      "evidence": "No active dataset refresh is requested."
+    },
+    {
+      "id": "maintenance-frontend",
+      "name": "Directory frontend maintenance",
+      "description": "Improve scoped React UI behavior, language consistency, accessibility, and presentation without changing unsupported factual claims.",
+      "dependencies": ["maintenance-harness"],
+      "status": "ready",
+      "evidence": "No active frontend task is recorded."
+    },
+    {
+      "id": "trust-safeguards",
+      "name": "Freshness, privacy-default, and small-sample safeguards",
+      "description": "Expose metadata-based data freshness, disclose local/external data handling, and mask 1–4 record sensitive summaries where the safeguard is enabled.",
+      "dependencies": ["maintenance-harness"],
+      "status": "done",
+      "evidence": "2026-08-11: generated a 78-directory data-trust manifest, added the dashboard trust panel, and protected small voice-reservation counts in the children age 3+ influenza module. npm test (90 tests) and npm run build passed."
+    },
+    {
+      "id": "release-quality-guardrails",
+      "name": "Release quality guardrails",
+      "description": "Prevent deployments with TypeScript errors, preserve build-time data evidence, and maintain lightweight accessibility and loading contracts.",
+      "dependencies": ["maintenance-harness", "trust-safeguards"],
+      "status": "done",
+      "evidence": "2026-08-11: TypeScript is clean and enforced in the Pages workflow; deployments upload generated data-release evidence. 93 tests and production build pass."
+    }
+  ]
+}

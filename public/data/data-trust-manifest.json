@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "datasetDirectoryCount": 78,
+  "datedDatasetCount": 22,
+  "entries": [
+    {
+      "id": "adult-influenza-vaccine-providers"
+    },
+    {
+      "id": "alternative-service-reserve-statistics"
+    },
+    {
+      "id": "approved-gas-water-heater-installers"
+    },
+    {
+      "id": "arts-cultural-venues",
+      "sourceUpdatedAt": "2026-03-23 14:37:40"
+    },
+    {
+      "id": "beauty-hairdressing-hygiene-certifications"
+    },
+    {
+      "id": "bottled-gas-retailers"
+    },
+    {
+      "id": "child-youth-friendly-welfare-service-sites",
+      "sourceUpdatedAt": "2026-07-27T07:20:32.115Z"
+    },
+    {
+      "id": "child-youth-residential-placement-institutions"
+    },
+    {
+      "id": "community-care-service-sites"
+    },
+    {
+      "id": "community-development-associations",
+      "sourceUpdatedAt": "2026-03-31 15:13:03"
+    },
+    {
+      "id": "community-integrated-care-level-c-units"
+    },
+    {
+      "id": "community-public-childcare-homes"
+    },
+    {
+      "id": "contracted-senior-health-examination-providers"
+    },
+    {
+      "id": "cosmetic-medicine-supervision-2024",
+      "sourceUpdatedAt": "2026-01-07 16:42:06"
+    },
+    {
+      "id": "cultural-arts-foundations"
+    },
+    {
+      "id": "designated-foreigner-health-exam-hospitals",
+      "sourceUpdatedAt": "2026-07-28T03:36:12.662Z"
+    },
+    {
+      "id": "diabetes-shared-care-medical-institutions"
+    },
+    {
+      "id": "disability-institution-capacity-and-vacancies",
+      "sourceUpdatedAt": "2026-07-27T07:35:03.699Z"
+    },
+    {
+      "id": "domestic-employment-agency-evaluations"
+    },
+    {
+      "id": "domestic-employment-service-agencies"
+    },
+    {
+      "id": "early-intervention-medical-providers"
+    },
+    {
+      "id": "employment-agency-intermediary-companies"
+    },
+    {
+      "id": "enterprise-headquarters-distribution"
+    },
+    {
+      "id": "family-medicine-institutions"
+    },
+    {
+      "id": "fertility-subsidy-contracted-hospitals"
+    },
+    {
+      "id": "five-cancer-screening-providers"
+    },
+    {
+      "id": "general-chinese-medicine-institutions"
+    },
+    {
+      "id": "general-dental-medical-institutions"
+    },
+    {
+      "id": "general-western-medicine-institutions"
+    },
+    {
+      "id": "hemodialysis-medical-institutions",
+      "sourceUpdatedAt": "2026-07-28T02:53:31.510Z"
+    },
+    {
+      "id": "home-nursing-institutions"
+    },
+    {
+      "id": "hospice-palliative-care-institutions",
+      "sourceUpdatedAt": "2026-07-28T01:14:09.225Z"
+    },
+    {
+      "id": "hospital-hemodialysis-resources"
+    },
+    {
+      "id": "hotel-hygiene-certification-directory"
+    },
+    {
+      "id": "indigenous-community-organizations",
+      "sourceUpdatedAt": "2025-05-23 17:27:54"
+    },
+    {
+      "id": "influenza-vaccine-providers-children-3plus",
+      "sourceName": "臺北市流感疫苗合約醫療院所名冊(3歲以上(含3歲)幼童)",
+      "sourceUpdatedAt": "2026-03-17"
+    },
+    {
+      "id": "internal-medicine-institutions",
+      "sourceUpdatedAt": "2026-07-28T03:25:25.791Z"
+    },
+    {
+      "id": "kindergarten-basic-evaluation-pass-records"
+    },
+    {
+      "id": "labor-standard-act-violation-records"
+    },
+    {
+      "id": "licensed-assisted-reproduction-institutions",
+      "sourceUpdatedAt": "2025-11-13 10:13:39"
+    },
+    {
+      "id": "licensed-natural-gas-pipeline-contractors",
+      "sourceUpdatedAt": "2026-07-03 09:54:19"
+    },
+    {
+      "id": "licensed-waste-cooking-oil-collectors"
+    },
+    {
+      "id": "lodging-business-penalty-records"
+    },
+    {
+      "id": "major-electricity-users"
+    },
+    {
+      "id": "medical-laboratories"
+    },
+    {
+      "id": "obstetrics-gynecology-institutions",
+      "sourceUpdatedAt": "2025-06-11 15:10:52"
+    },
+    {
+      "id": "occupational-therapy-clinics",
+      "sourceUpdatedAt": "2026-07-28T03:32:32.249Z"
+    },
+    {
+      "id": "ophthalmology-institutions",
+      "sourceUpdatedAt": "2026-07-27T07:41:10.763Z"
+    },
+    {
+      "id": "optometry-institutions"
+    },
+    {
+      "id": "out-of-city-funeral-service-businesses"
+    },
+    {
+      "id": "pediatric-medical-institutions",
+      "sourceUpdatedAt": "2025-06-11 14:58:56"
+    },
+    {
+      "id": "pest-control-businesses"
+    },
+    {
+      "id": "pet-registration-stations"
+    },
+    {
+      "id": "physical-therapy-clinics",
+      "sourceName": "臺北市物理治療所",
+      "sourceUpdatedAt": "2025-06-06"
+    },
+    {
+      "id": "plastic-surgery-medical-institutions",
+      "sourceUpdatedAt": "2025-06-11 15:13:06"
+    },
+    {
+      "id": "private-senior-residential-long-term-care-institutions",
+      "sourceUpdatedAt": "2026-07-28T02:50:03.581Z"
+    },
+    {
+      "id": "psychiatric-clinics",
+      "sourceUpdatedAt": "2026-06-16 10:30:06"
+    },
+    {
+      "id": "psychiatric-rehabilitation-and-nursing-institutions"
+    },
+    {
+      "id": "public-influenza-antiviral-providers"
+    },
+    {
+      "id": "public-pneumococcal-vaccine-providers"
+    },
+    {
+      "id": "rabies-vaccination-veterinary-clinics"
+    },
+    {
+      "id": "registered-after-school-care-centres"
+    },
+    {
+      "id": "registered-postpartum-care-institutions"
+    },
+    {
+      "id": "rotavirus-vaccine-subsidy-providers"
+    },
+    {
+      "id": "schoolchild-dental-preventive-care-providers"
+    },
+    {
+      "id": "senior-care-capacity-and-occupancy"
+    },
+    {
+      "id": "senior-care-institution-evaluations"
+    },
+    {
+      "id": "senior-group-meal-service-sites"
+    },
+    {
+      "id": "senior-service-site-courses"
+    },
+    {
+      "id": "social-welfare-foundations"
+    },
+    {
+      "id": "specific-pet-business-evaluation-results"
+    },
+    {
+      "id": "street-performer-venues"
+    },
+    {
+      "id": "subsidized-senior-residential-placement-institutions"
+    },
+    {
+      "id": "taipei-cultural-heritage-assets",
+      "sourceUpdatedAt": "2026-07-28T01:07:12.544Z"
+    },
+    {
+      "id": "taipei-government-application-services"
+    },
+    {
+      "id": "tb-contact-screening-partner-providers"
+    },
+    {
+      "id": "visually-impaired-massage-establishments"
+    },
+    {
+      "id": "water-pipe-installation-contractors"
+    }
+  ]
+}

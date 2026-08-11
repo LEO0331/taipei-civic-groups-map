@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "tsx scripts/buildDataTrustManifest.ts",
     "build": "vite build",
     "typecheck": "tsc -b",
     "preview": "vite preview",
     "test": "tsx --test src/lib/*.test.ts",
+    "test:accessibility": "tsx --test src/lib/uiContract.test.ts",
     "data:fetch:civic-groups": "tsx scripts/fetchCivicGroups.ts",
     "data:fetch:performing-arts": "tsx scripts/fetchPerformingArtsGroups.ts",
     "data:fetch:vaccination-providers": "tsx scripts/fetchContractedVaccinationMedicalProviders.ts",

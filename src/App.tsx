@@ -1,5 +1,6 @@
 // @ts-nocheck
-import { useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import DataTrustPanel from './DataTrustPanel';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
@@ -79,7 +80,6 @@ import CommunityPublicChildcareHomesModule from './CommunityPublicChildcareHomes
 import TbContactScreeningPartnerProvidersModule from './TbContactScreeningPartnerProvidersModule';
 import BeautyHairdressingHygieneCertificationsModule from './BeautyHairdressingHygieneCertificationsModule';
 import PublicInfluenzaAntiviralProvidersModule from './PublicInfluenzaAntiviralProvidersModule';
-import InfluenzaVaccineProvidersChildren3PlusModule from './InfluenzaVaccineProvidersChildren3PlusModule';
 import CommunityIntegratedCareLevelCUnitsModule from './CommunityIntegratedCareLevelCUnitsModule';
 import RegisteredAfterSchoolCareCentresModule from './RegisteredAfterSchoolCareCentresModule';
 import SubsidizedSeniorResidentialPlacementInstitutionsModule from './SubsidizedSeniorResidentialPlacementInstitutionsModule';
@@ -103,7 +103,6 @@ import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSen
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
 import InternalMedicineInstitutionsModule from './InternalMedicineInstitutionsModule';
 import OccupationalTherapyClinicsModule from './OccupationalTherapyClinicsModule';
-import PhysicalTherapyClinicsModule from './PhysicalTherapyClinicsModule';
 import DesignatedForeignerHealthExamHospitalsModule from './DesignatedForeignerHealthExamHospitalsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
@@ -113,6 +112,13 @@ import type {
   TaipeiTravelAccommodationZhRecord, TaipeiTravelAccommodationZhSummary, PerformingArtsGroupRecord, PerformingArtsGroupSummary,
   BiotechCompanyDirectoryRecord, BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceRecord, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeRecord, BusinessRegistrationChangeSummary, CemeteryPublicFacilityRecord, CemeteryPublicFacilitySummary, ChildMedicalSubsidyContractedProviderRecord, ChildMedicalSubsidyContractedProviderSummary, CompanyRegistrationChangeRecord, CompanyRegistrationChangeSummary, ConsumerDisputeAbsentBusinessOperatorRecord, ConsumerDisputeAbsentBusinessOperatorSummary, ContractedVaccinationMedicalProviderRecord, ContractedVaccinationMedicalProviderSummary, DentureSubsidyMedicalProviderRecord, DentureSubsidyMedicalProviderSummary, DisabilityEmploymentResourceRecord, DisabilityEmploymentResourceSummary, ElderlyWelfareInstitutionRecord, ElderlyWelfareInstitutionSummary, EmploymentAgencyIntermediaryCompanyRecord, EmploymentAgencyIntermediaryCompanySummary, InfantCareCenterEvaluationInstitutionRecord, InfantCareCenterEvaluationSummary, InfantCareCenterEvaluationYearRecord, LicensedAnimalMedicineSellerRecord, LicensedAnimalMedicineSellerSummary, LicensedElectronicGameArcadeOperatorRecord, LicensedElectronicGameArcadeOperatorSummary, LicensedPawnshopDirectoryRecord, LicensedPawnshopDirectorySummary, LicensedSpecialEntertainmentBusinessOperatorRecord, LicensedSpecialEntertainmentBusinessOperatorSummary, PubliclyFundedHpvVaccinationProviderRecord, PubliclyFundedHpvVaccinationProviderSummary, RegisteredFactoryRecord, RegisteredFactorySummary, RegisteredRecyclingBusinessOrganizationRecord, RegisteredRecyclingBusinessOrganizationSummary, ShelteredWorkshopDirectoryRecord, ShelteredWorkshopDirectorySummary, TelepsychologyCounselingInstitutionRecord, TelepsychologyCounselingInstitutionSummary,
 } from './types';
+
+const InfluenzaVaccineProvidersChildren3PlusModule = lazy(() => import('./InfluenzaVaccineProvidersChildren3PlusModule'));
+const PhysicalTherapyClinicsModule = lazy(() => import('./PhysicalTherapyClinicsModule'));
+
+function DirectoryModuleLoading({ language }: { language: Language }) {
+  return <p className="module-loading" role="status">{language === 'zh' ? '正在載入資料目錄…' : 'Loading directory…'}</p>;
+}
 
 const copy = {
   zh: {
@@ -803,6 +809,7 @@ export default function App() {
       <nav aria-label={language === 'zh' ? '主要導覽' : 'Main navigation'}>{displayedTabs.map(([id, label]) => <button aria-pressed={tab === id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
     </header>
     <main>
+      <DataTrustPanel language={language} activeDataset={{ physicalTherapyClinics: 'physical-therapy-clinics', influenzaVaccineProvidersChildren3Plus: 'influenza-vaccine-providers-children-3plus' }[tab]} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
       {loadError && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && (!summary || !performingArtsSummary || !vaccinationProviderSummary || !hpvProviderSummary || !childMedicalSubsidyProviderSummary || !dentureSubsidyProviderSummary || !disabilityEmploymentResourceSummary || !shelteredWorkshopSummary || !employmentAgencySummary || !licensedPawnshopSummary || !licensedArcadeSummary || !licensedSpecialEntertainmentSummary || !recyclingOrganizationSummary || !registeredFactorySummary || !enterpriseHeadquartersSummary || !cemeterySummary || !telepsychologySummary || !publicLiabilitySummary || !businessChangeSummary || !companyChangeSummary || !laborUnionSummary || !infantCareSummary || !infantCareEvaluationSummary || !elderlyWelfareSummary || !biotechCompanySummary || !travelAccommodationSummary || !grantSummary || !procurementSummary || !cramSchoolSummary || !hotelSummary || !laborViolationSummary || !laborViolationManifest || !oshViolationSummary || !genderEqualityViolationSummary || !consumerDisputeSummary || !nangangCompanySummary || !dawannanCompanySummary || !animalHospitalSummary || !animalMedicineSellerSummary || !petBusinessEvaluationSummary || !veterinarianSummary) && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
@@ -861,7 +868,7 @@ export default function App() {
       {tab === 'tbContactScreeningPartnerProviders' && <TbContactScreeningPartnerProvidersModule language={language} />}
       {tab === 'beautyHairdressingHygieneCertifications' && <BeautyHairdressingHygieneCertificationsModule language={language} />}
       {tab === 'publicInfluenzaAntiviralProviders' && <PublicInfluenzaAntiviralProvidersModule language={language} />}
-      {tab === 'influenzaVaccineProvidersChildren3Plus' && <InfluenzaVaccineProvidersChildren3PlusModule language={language} />}
+      {tab === 'influenzaVaccineProvidersChildren3Plus' && <Suspense fallback={<DirectoryModuleLoading language={language} />}><InfluenzaVaccineProvidersChildren3PlusModule language={language} /></Suspense>}
       {tab === 'communityIntegratedCareLevelCUnits' && <CommunityIntegratedCareLevelCUnitsModule language={language} />}
       {tab === 'registeredAfterSchoolCareCentres' && <RegisteredAfterSchoolCareCentresModule language={language} />}
       {tab === 'subsidizedSeniorResidentialPlacementInstitutions' && <SubsidizedSeniorResidentialPlacementInstitutionsModule language={language} />}
@@ -885,7 +892,7 @@ export default function App() {
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}
       {tab === 'internalMedicineInstitutions' && <InternalMedicineInstitutionsModule language={language} />}
       {tab === 'occupationalTherapyClinics' && <OccupationalTherapyClinicsModule language={language} />}
-      {tab === 'physicalTherapyClinics' && <PhysicalTherapyClinicsModule language={language} />}
+      {tab === 'physicalTherapyClinics' && <Suspense fallback={<DirectoryModuleLoading language={language} />}><PhysicalTherapyClinicsModule language={language} /></Suspense>}
       {tab === 'designatedForeignerHealthExamHospitals' && <DesignatedForeignerHealthExamHospitalsModule language={language} />}
       {tab === 'licensedWasteCookingOilCollectors' && <LicensedWasteCookingOilCollectorsModule language={language} />}
       {tab === 'adultInfluenzaVaccineProviders' && <AdultInfluenzaVaccineProvidersModule language={language} />}

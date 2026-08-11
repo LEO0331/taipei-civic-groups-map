@@ -8,6 +8,8 @@
 
 ## Latest Evidence
 
+- 2026-08-11: replaced the accumulated mixed-language README with a concise English canonical guide and added `README.zh-TW.md` as its Traditional Chinese counterpart. Both documents link to each other and cover onboarding, catalogue maintenance, data-refresh caution, verification, deployment, and public-data limits. Verified headings and language links; `npm run typecheck`, `npm test` (96 tests), `npm run build`, and `git diff --check` passed.
+
 - 2026-08-11: replaced the overflowing dataset tab strip with a searchable public-data catalogue. It groups every directory under seven public-service themes, preserves the selected dataset and existing modules, and throws during development if a new dataset lacks a category. The mobile catalogue is full-screen and includes in-context search. Manual QA confirmed desktop overlay stacking, mobile search, and selection of the designated foreigner health-examination directory. `npm test` (96 tests), `npm run typecheck`, `npm run build`, and `git diff --check` passed.
 
 - 2026-08-11: completed release quality guardrails. The Pages workflow now runs `npm run typecheck` after conversion and retains the trust manifest, release summary, and conversion report as deploy evidence. Corrected existing TypeScript diagnostics with narrow type-preserving changes. Added keyboard focus styling, accessibility source-contract tests, and lazy loading for the physical-therapy and children age 3+ influenza directories. `npm run typecheck`, `npm test` (93 tests), `npm run build`, and `git diff --check` passed.

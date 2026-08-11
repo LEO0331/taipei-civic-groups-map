@@ -39,6 +39,14 @@
       "dependencies": ["maintenance-harness", "trust-safeguards"],
       "status": "done",
       "evidence": "2026-08-11: TypeScript is clean and enforced in the Pages workflow; deployments upload generated data-release evidence. 93 tests and production build pass."
+    },
+    {
+      "id": "catalogue-navigation",
+      "name": "Searchable dataset catalogue navigation",
+      "description": "Replace the overflowing horizontal dataset strip with categorized browse and search controls that preserve existing directory views.",
+      "dependencies": ["maintenance-harness", "release-quality-guardrails"],
+      "status": "done",
+      "evidence": "2026-08-11: all dashboard datasets have an enforced topic category, desktop uses a searchable overlay catalogue, and mobile uses a full-screen searchable catalogue. 96 tests, typecheck, build, and manual desktop/mobile QA passed."
     }
   ]
 }

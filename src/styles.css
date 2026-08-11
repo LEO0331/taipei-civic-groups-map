@@ -7,16 +7,38 @@ body { margin: 0; min-width: 320px; }
 button, input, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 a { color: #9d3f2d; }
-header { background: #203744; color: #fff9ed; }
+header { position: relative; z-index: 1000; background: #203744; color: #fff9ed; }
 .masthead { min-height: 208px; padding: 28px 20px 24px; display: flex; align-items: flex-start; gap: 14px; position: relative; max-width: 1280px; margin: auto; }
 .brand-mark { width: 46px; height: 46px; border: 1px solid #d75b3f; color: #ef8569; display: grid; place-items: center; font-size: 22px; flex: 0 0 auto; }
 .masthead p, .section-heading p { margin: 2px 0 18px; font-size: 10px; letter-spacing: .18em; font-weight: 600; opacity: .72; }
 h1 { margin: 0; max-width: 720px; font-size: clamp(30px, 8vw, 64px); line-height: 1.04; letter-spacing: -.045em; }
 .masthead span { display: block; max-width: 610px; margin-top: 14px; color: #c9d2d4; font-size: 14px; line-height: 1.6; }
 .language { position: absolute; top: 28px; right: 20px; color: inherit; background: transparent; border: 1px solid #708087; padding: 8px 11px; cursor: pointer; }
-nav { display: flex; overflow-x: auto; max-width: 1280px; margin: auto; padding: 0 12px; border-top: 1px solid #425760; }
-nav button { flex: 1 0 auto; min-width: 110px; color: #bec9cb; background: transparent; border: 0; border-bottom: 3px solid transparent; padding: 16px 12px 13px; cursor: pointer; }
-nav button.active { color: #fff; border-color: #d75b3f; }
+.catalogue-nav { position: relative; border-top: 1px solid #425760; }
+.catalogue-nav-inner { display: flex; gap: 10px; max-width: 1280px; margin: auto; padding: 12px 20px; }
+.catalogue-trigger, .catalogue-search input { min-height: 46px; color: #fff9ed; border: 1px solid #61747b; background: #19313d; font: inherit; }
+.catalogue-trigger { display: flex; flex: 1 1 420px; align-items: center; gap: 10px; padding: 0 14px; cursor: pointer; text-align: left; }
+.catalogue-trigger > span:first-child { color: #ef8569; font-size: 12px; font-weight: 700; letter-spacing: .08em; white-space: nowrap; }
+.catalogue-trigger-current { overflow: hidden; flex: 1; color: #d5dddd; text-overflow: ellipsis; white-space: nowrap; }
+.catalogue-search { flex: 1 1 360px; }
+.catalogue-search input { width: 100%; padding: 0 14px; }
+.catalogue-search input::placeholder { color: #b7c4c7; }
+.catalogue-popover { position: absolute; z-index: 1001; left: 0; right: 0; max-height: min(72vh, 760px); overflow: auto; border-top: 1px solid #61747b; border-bottom: 4px solid #d75b3f; background: #fff9ed; box-shadow: 0 16px 34px rgb(16 42 67 / .28); color: #203744; }
+.catalogue-popover-heading, .catalogue-grid, .catalogue-empty { max-width: 1280px; margin: auto; padding-left: 20px; padding-right: 20px; }
+.catalogue-popover-heading { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 12px; border-bottom: 1px solid #d8d0c3; }
+.catalogue-popover-heading p { margin: 0 0 4px; color: #9d3f2d; font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+.catalogue-popover-heading strong { font-size: 18px; }
+.catalogue-close { width: 38px; height: 38px; border: 1px solid #9aabb0; background: transparent; color: #203744; font-size: 26px; cursor: pointer; }
+.catalogue-popover-search { display: none; }
+.catalogue-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; padding-top: 8px; padding-bottom: 22px; }
+.catalogue-category { padding: 16px 0; border-bottom: 1px solid #d8d0c3; }
+.catalogue-category h2 { display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px; font-size: 15px; }
+.catalogue-category h2 span { color: #6e7c81; font-size: 12px; font-weight: 500; }
+.catalogue-category div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+.catalogue-category button { min-width: 0; padding: 7px 8px; border: 0; border-left: 2px solid transparent; background: transparent; color: #284856; cursor: pointer; font: inherit; font-size: 13px; line-height: 1.35; text-align: left; }
+.catalogue-category button:hover, .catalogue-category button.active { border-left-color: #d75b3f; background: #f1ebe0; color: #102a43; font-weight: 700; }
+.catalogue-empty { padding-top: 30px; padding-bottom: 34px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 main { min-height: 70vh; }
 .status { max-width: 1280px; margin: 28px auto; padding: 18px; color: #663025; background: #f1d8ca; }
 .filters { position: sticky; top: 0; z-index: 900; padding: 14px 16px; background: rgba(245,241,232,.97); border-bottom: 1px solid #cbc4b6; backdrop-filter: blur(8px); }
@@ -127,10 +149,24 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
 .data-trust p { max-width: 920px; margin: 8px 0; }
 .module-loading { margin: 28px auto; max-width: 1180px; padding: 18px; color: #175b62; font-weight: 700; text-align: center; }
 
+@media (max-width: 759px) {
+  .catalogue-nav-inner { flex-direction: column; padding: 10px 14px; }
+  .catalogue-trigger, .catalogue-search { flex-basis: auto; }
+  .catalogue-popover { position: fixed; top: 0; bottom: 0; max-height: none; border-top: 0; }
+  .catalogue-popover-heading, .catalogue-grid, .catalogue-empty { padding-left: 18px; padding-right: 18px; }
+  .catalogue-popover-heading { position: sticky; top: 0; z-index: 1; background: #fff9ed; }
+  .catalogue-popover-search { display: block; padding: 12px 18px; background: #fff9ed; }
+  .catalogue-popover-search input { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid #61747b; background: #fffdf7; color: #203744; font: inherit; }
+  .catalogue-grid { grid-template-columns: 1fr; }
+  .catalogue-category div { grid-template-columns: 1fr; }
+  .catalogue-category button { min-height: 42px; }
+}
+
 @media (min-width: 760px) {
   .masthead { min-height: 260px; padding: 44px 32px; gap: 22px; align-items: center; }
   .language { top: 44px; right: 32px; }
-  nav { padding: 0 24px; }
+  .catalogue-nav-inner { padding-left: 32px; padding-right: 32px; }
+  .catalogue-popover-heading, .catalogue-grid, .catalogue-empty { padding-left: 32px; padding-right: 32px; }
   .filters { padding: 16px 32px; }
   .filter-grid { grid-template-columns: repeat(6, 1fr); }
   .grant-filters { grid-template-columns: repeat(5, 1fr); }

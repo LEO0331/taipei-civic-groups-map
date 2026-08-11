@@ -4,10 +4,12 @@ import test from 'node:test';
 
 const readSource = (path: string) => readFile(new URL(path, import.meta.url), 'utf8');
 
-test('the application keeps the primary directory controls labelled and stateful', async () => {
+test('the application keeps the primary directory controls labelled, searchable, and stateful', async () => {
   const source = await readSource('../App.tsx');
-  assert.match(source, /<nav aria-label=/);
-  assert.match(source, /aria-pressed=\{tab === id\}/);
+  assert.match(source, /<nav className="catalogue-nav" aria-label=/);
+  assert.match(source, /aria-expanded=\{catalogueOpen\}/);
+  assert.match(source, /catalogue-search/);
+  assert.match(source, /aria-current=\{tab === id \? 'page' : undefined\}/);
   assert.match(source, /DirectoryModuleLoading/);
 });
 

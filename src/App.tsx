@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import DataTrustPanel from './DataTrustPanel';
+import { buildDatasetCatalogue } from './lib/datasetCatalogue';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
@@ -478,6 +479,8 @@ function CombinedOverview({ civic, performingArts, vaccinationProviders, hpvProv
 export default function App() {
   const [language, setLanguage] = useState<Language>('zh');
   const [tab, setTab] = useState<string>('civic');
+  const [catalogueOpen, setCatalogueOpen] = useState(false);
+  const [catalogueQuery, setCatalogueQuery] = useState('');
   const [civicView, setCivicView] = useState<'map' | 'directory' | 'overview'>('map');
   const [groups, setGroups] = useState<CivicGroup[]>([]);
   const [summary, setSummary] = useState<CivicGroupSummary | null>(null);
@@ -800,13 +803,28 @@ export default function App() {
   tabs.splice(36, 0, ['licensedAssistedReproductionInstitutions', language === 'zh' ? '特約人工生殖機構名單' : 'Licensed Assisted Reproduction Institutions']);
   tabs.splice(37, 0, ['childYouthResidentialPlacementInstitutions', language === 'zh' ? '兒童及少年安置機構' : 'Child and Youth Residential Placement Institutions']);
   const displayedTabs = language === 'zh' ? tabs.map(([id, label]) => [id, zhTabLabels[id] ?? label] as [string, string]) : tabs;
+  const catalogue = useMemo(() => buildDatasetCatalogue(displayedTabs, language, catalogueQuery), [displayedTabs, language, catalogueQuery]);
+  const activeDatasetLabel = displayedTabs.find(([id]) => id === tab)?.[1];
+  const selectDataset = (id: string) => { setTab(id); setCatalogueOpen(false); setCatalogueQuery(''); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
     <header>
       <div className="masthead"><div className="brand-mark">北</div><div><p>TAIPEI · OPEN DIRECTORY</p><h1>{t.title}</h1><span>{t.subtitle}</span></div>
         <button className="language" onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')} aria-label="Switch language">{language === 'zh' ? 'EN' : '中文'}</button></div>
-      <nav aria-label={language === 'zh' ? '主要導覽' : 'Main navigation'}>{displayedTabs.map(([id, label]) => <button aria-pressed={tab === id} className={tab === id ? 'active' : ''} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
+      <nav className="catalogue-nav" aria-label={language === 'zh' ? '資料目錄' : 'Data catalogue'}>
+        <div className="catalogue-nav-inner">
+          <button className="catalogue-trigger" type="button" aria-expanded={catalogueOpen} aria-controls="dataset-catalogue" onClick={() => setCatalogueOpen((open) => !open)}>
+            <span>{language === 'zh' ? '資料目錄' : 'Data catalogue'}</span><span className="catalogue-trigger-current">{activeDatasetLabel}</span><span aria-hidden="true">⌄</span>
+          </button>
+          <label className="catalogue-search"><span className="sr-only">{language === 'zh' ? '搜尋資料集' : 'Search datasets'}</span><input value={catalogueQuery} onFocus={() => setCatalogueOpen(true)} onChange={(event) => { setCatalogueQuery(event.target.value); setCatalogueOpen(true); }} placeholder={language === 'zh' ? '搜尋資料集或服務' : 'Search datasets or services'} /></label>
+        </div>
+        {catalogueOpen && <div className="catalogue-popover" id="dataset-catalogue">
+          <div className="catalogue-popover-heading"><div><p>{language === 'zh' ? '公共資料目錄' : 'PUBLIC DATA CATALOGUE'}</p><strong>{language === 'zh' ? '依主題探索資料集' : 'Browse datasets by topic'}</strong></div><button type="button" className="catalogue-close" onClick={() => { setCatalogueOpen(false); setCatalogueQuery(''); }} aria-label={language === 'zh' ? '關閉資料目錄' : 'Close data catalogue'}>×</button></div>
+          <label className="catalogue-popover-search"><span className="sr-only">{language === 'zh' ? '搜尋資料集' : 'Search datasets'}</span><input value={catalogueQuery} onChange={(event) => setCatalogueQuery(event.target.value)} placeholder={language === 'zh' ? '搜尋資料集或服務' : 'Search datasets or services'} /></label>
+          {catalogue.length ? <div className="catalogue-grid">{catalogue.map((category) => <section className="catalogue-category" key={category.id}><h2>{category.title}<span>{category.items.length}</span></h2><div>{category.items.map(([id, label]) => <button type="button" key={id} className={tab === id ? 'active' : ''} aria-current={tab === id ? 'page' : undefined} onClick={() => selectDataset(id)}>{label}</button>)}</div></section>)}</div> : <p className="catalogue-empty" role="status">{language === 'zh' ? '找不到符合的資料集，請嘗試其他關鍵字。' : 'No matching datasets. Try another keyword.'}</p>}
+        </div>}
+      </nav>
     </header>
     <main>
       <DataTrustPanel language={language} activeDataset={{ physicalTherapyClinics: 'physical-therapy-clinics', influenzaVaccineProvidersChildren3Plus: 'influenza-vaccine-providers-children-3plus' }[tab]} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />

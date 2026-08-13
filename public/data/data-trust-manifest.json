@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 86,
-  "datedDatasetCount": 30,
+  "datasetDirectoryCount": 88,
+  "datedDatasetCount": 32,
   "entries": [
     {
       "id": "adult-influenza-vaccine-providers"
@@ -51,6 +51,10 @@
     },
     {
       "id": "cultural-arts-foundations"
+    },
+    {
+      "id": "dermatology-medical-institutions",
+      "sourceUpdatedAt": "2025-06-11T15:08:38+08:00"
     },
     {
       "id": "designated-foreigner-health-exam-hospitals",
@@ -103,6 +107,10 @@
     },
     {
       "id": "general-western-medicine-institutions"
+    },
+    {
+      "id": "government-ethics-offices",
+      "sourceUpdatedAt": "2026-06-29T08:37:03+08:00"
     },
     {
       "id": "hakka-organizations",

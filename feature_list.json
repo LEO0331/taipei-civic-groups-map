@@ -89,6 +89,14 @@
       "evidence": "2026-08-13: fetched and converted 26 official source rows. Verified that the location field contains addresses, not coordinates; implemented address-only external map lookup, practical contact filters, source-preserving export, and data-quality disclosure."
     },
     {
+      "id": "government-ethics-offices",
+      "name": "Taipei Government ethics office contacts",
+      "description": "Present public agency contact records without inferring case jurisdiction, current telephone staffing, wrongdoing, or integrity risk.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: corrected the official CSV field mapping, converted 73 source records, and added catalogue-discoverable local search, contact actions, source detail, and CSV export without a map or case-handling claims."
+    },
+    {
       "id": "fixed-site-temporary-childcare",
       "name": "Taipei fixed-site temporary childcare directory",
       "description": "Present official fixed-site temporary-childcare location records without inferring real-time booking, vacancies, age limits, hours, fees, eligibility, safety, or quality.",

@@ -42,6 +42,10 @@ Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatal
 
 `fixed_site_temporary_childcare` is a local snapshot of Taipei's fixed-site temporary-childcare directory. It preserves the five official fields, offers source-preserving location/contact filters and external address lookup only, and never represents real-time reservations, vacancies, opening hours, age limits, fees, eligibility, safety, or service quality. Refresh it with `npm run data:fetch:fixed-site-temporary-childcare` followed by `npm run data:convert:fixed-site-temporary-childcare`.
 
+### Government ethics office contacts
+
+`government_ethics_offices` is a local snapshot of Taipei City Government ethics-office contacts. It preserves the official agency, area-code, and telephone fields, and provides no map because the source has no address or coordinates. It does not establish case jurisdiction, case acceptance, real-time phone staffing, legal advice, or wrongdoing by an agency or person. Refresh it with `npm run data:fetch:government-ethics-offices` followed by `npm run data:convert:government-ethics-offices`.
+
 ### Internal medicine institutions
 
 `internal_medicine_institutions` is a local snapshot of Taipei’s internal-medicine institution directory. It retains the five official fields, derives districts only from explicit address text or a conservative Taipei postal-code map, and exposes source/update metadata and quality flags. It is not real-time clinic, physician, appointment, or subspecialty availability information. Refresh it with `npm run data:fetch:internal-medicine-institutions` followed by `npm run data:convert:internal-medicine-institutions`.

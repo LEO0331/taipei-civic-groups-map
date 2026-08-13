@@ -1,0 +1,14 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=2e31d3b4-21b5-404e-9091-cc4fd363ba71",
+  "sourceAgency": "臺北市政府政風處",
+  "sourceFileUpdatedAt": "2026-06-29T08:37:03+08:00",
+  "metadataUpdatedAt": "2026-06-29T08:37:18+08:00",
+  "headers": [
+    "序號",
+    "行政區域代碼",
+    "縣市代碼",
+    "機關",
+    "電話"
+  ],
+  "outputRecords": 73
+}

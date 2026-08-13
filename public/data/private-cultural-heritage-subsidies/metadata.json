@@ -1,0 +1,14 @@
+{
+  "key": "private_cultural_heritage_subsidies",
+  "label": {
+    "zh": "私有文化資產補助案",
+    "en": "Private Cultural Heritage Subsidies"
+  },
+  "sourcePage": "https://data.taipei/dataset/detail?id=24205a7e-278a-4e78-9033-47ec5cf74595",
+  "sourceAgency": "臺北市政府文化局",
+  "sourceUpdatedAt": "2026-06-18T12:56:42+08:00",
+  "coverageStart": "2007-01-01",
+  "coverageEnd": "2026-06-30",
+  "updateFrequency": "irregular",
+  "recordCount": 292
+}

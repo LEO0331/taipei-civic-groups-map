@@ -18,6 +18,22 @@ Directories are grouped by public-service topic: health and medical care; social
 
 Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts). When adding a dataset, give it one deliberate category and useful search terms; an uncategorized dataset is rejected rather than silently hidden from the catalogue.
 
+### Private cultural heritage subsidies
+
+`private_cultural_heritage_subsidies` is a local snapshot of Taipei’s private cultural-heritage subsidy records. It preserves the five source columns, adds conservative ROC/Gregorian year and amount parsing, and labels project-text categories and exact name-and-area registry comparisons as derived—not official—information. Refresh it with `npm run data:fetch:private-cultural-heritage-subsidies` followed by `npm run data:convert:private-cultural-heritage-subsidies`.
+
+### Travel medicine clinics
+
+`travel_medicine_clinics` is a local snapshot of the Taipei Department of Health travel-medicine outpatient hospital directory. It preserves the official contact, address, department, and self-paid mpox-service fields. “Listed as available” means only that the source explicitly marks the record; it is not real-time stock, appointment, eligibility, or price information. Refresh it with `npm run data:fetch:travel-medicine-clinics` followed by `npm run data:convert:travel-medicine-clinics`.
+
+### Taipei Hakka organizations
+
+`hakka_organizations` is a local snapshot of the 109 ROC year (2020) Taipei Hakka Organizations Registry. It preserves every actual CSV column while presenting only its source-recorded registry fields. A later file update does not make organization or leader information current. Refresh it with `npm run data:fetch:hakka-organizations` followed by `npm run data:convert:hakka-organizations`.
+
+### Hospital discharge-to-LTC partners
+
+`hospital_discharge_long_term_care_partners` is a local snapshot of Taipei hospitals listed for discharge preparation linked with long-term-care services. Its location field is an address, so the directory offers external map lookup only—no geocoding or markers. Listing does not establish immediate services, capacity, eligibility, fees, or suitability. Refresh it with `npm run data:fetch:hospital-discharge-long-term-care-partners` followed by `npm run data:convert:hospital-discharge-long-term-care-partners`.
+
 ## Quick start
 
 Requirements: Node.js 22 and npm.

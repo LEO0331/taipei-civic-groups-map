@@ -1,0 +1,34 @@
+{
+  "hakkaOrganizations": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=0be09825-0507-4624-8c4b-3872b5117fae",
+    "sourceAgency": "臺北市政府客家事務委員會",
+    "sourceFileUpdatedAt": "2025-06-12T16:16:44+08:00",
+    "metadataUpdatedAt": "2025-12-18T13:45:28+08:00",
+    "updateFrequency": "irregular",
+    "headers": [
+      "編號",
+      "單位名稱",
+      "理事長/會長",
+      "省市縣市鄉鎮市區代碼",
+      "資料提供",
+      "負責組室",
+      "編輯人"
+    ],
+    "inputRows": 45,
+    "outputRecords": 45,
+    "issueCount": 0,
+    "issues": {
+      "duplicateSequenceNumber": [],
+      "duplicateOrganizationName": [],
+      "exactDuplicateRows": [],
+      "sameOrganizationDifferentLeaders": [],
+      "missingOrganizationName": [],
+      "missingLeaderValue": []
+    },
+    "notes": [
+      "All actual source columns are preserved in sourceValues.",
+      "This is a 109 ROC year (2020) registry. A later file-update date does not establish current organization status or leadership.",
+      "No address, contact, district, website, or coordinates are supplied or inferred."
+    ]
+  }
+}

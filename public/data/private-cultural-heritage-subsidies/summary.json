@@ -1,0 +1,172 @@
+{
+  "totalRecords": 292,
+  "uniqueAssetNames": 140,
+  "totalValidApprovedSubsidyTwd": 814060708.8,
+  "recordsWithValidAmount": 288,
+  "earliestGregorianYear": 2007,
+  "latestGregorianYear": 2026,
+  "areasRepresented": 11,
+  "repeatedSubsidyAssets": 64,
+  "byYear": [
+    {
+      "label": "2020",
+      "value": 29
+    },
+    {
+      "label": "2022",
+      "value": 23
+    },
+    {
+      "label": "2025",
+      "value": 22
+    },
+    {
+      "label": "2012",
+      "value": 17
+    },
+    {
+      "label": "2021",
+      "value": 17
+    },
+    {
+      "label": "2024",
+      "value": 17
+    },
+    {
+      "label": "2008",
+      "value": 15
+    },
+    {
+      "label": "2009",
+      "value": 15
+    },
+    {
+      "label": "2013",
+      "value": 15
+    },
+    {
+      "label": "2018",
+      "value": 15
+    },
+    {
+      "label": "2015",
+      "value": 14
+    },
+    {
+      "label": "2010",
+      "value": 13
+    },
+    {
+      "label": "2016",
+      "value": 13
+    },
+    {
+      "label": "2026",
+      "value": 13
+    },
+    {
+      "label": "2007",
+      "value": 11
+    },
+    {
+      "label": "2019",
+      "value": 11
+    },
+    {
+      "label": "2011",
+      "value": 10
+    },
+    {
+      "label": "2017",
+      "value": 9
+    },
+    {
+      "label": "2014",
+      "value": 8
+    },
+    {
+      "label": "2023",
+      "value": 5
+    }
+  ],
+  "byArea": [
+    {
+      "label": "大同區",
+      "value": 87
+    },
+    {
+      "label": "北投區",
+      "value": 51
+    },
+    {
+      "label": "萬華區",
+      "value": 51
+    },
+    {
+      "label": "大安區",
+      "value": 27
+    },
+    {
+      "label": "中正區",
+      "value": 27
+    },
+    {
+      "label": "中山區",
+      "value": 16
+    },
+    {
+      "label": "內湖區",
+      "value": 15
+    },
+    {
+      "label": "士林區",
+      "value": 9
+    },
+    {
+      "label": "信義區",
+      "value": 4
+    },
+    {
+      "label": "文山區",
+      "value": 3
+    },
+    {
+      "label": "松山區",
+      "value": 1
+    }
+  ],
+  "byProjectCategory": [
+    {
+      "label": "restoration",
+      "value": 150
+    },
+    {
+      "label": "other",
+      "value": 54
+    },
+    {
+      "label": "planning_design",
+      "value": 51
+    },
+    {
+      "label": "routine_maintenance",
+      "value": 43
+    },
+    {
+      "label": "management_maintenance",
+      "value": 37
+    },
+    {
+      "label": "emergency_repair",
+      "value": 35
+    },
+    {
+      "label": "survey_research",
+      "value": 9
+    },
+    {
+      "label": "disaster_prevention",
+      "value": 6
+    }
+  ]
+}

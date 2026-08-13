@@ -1,0 +1,812 @@
+[
+  {
+    "id": "6b86b273ff34fce1",
+    "sourceSequenceNumber": "1",
+    "organizationName": "大臺北地區范姜宗親會",
+    "leaderRaw": "范姜會長",
+    "leaderName": "范姜會長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "1",
+      "單位名稱": "大臺北地區范姜宗親會",
+      "理事長/會長": "范姜會長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "d4735e3a265e16ee",
+    "sourceSequenceNumber": "2",
+    "organizationName": "大臺北鍾姓宗親會/ 新北市詔安客家文化促進協會(創會會長)",
+    "leaderRaw": "鍾理事長",
+    "leaderName": "鍾理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "2",
+      "單位名稱": "大臺北鍾姓宗親會/ 新北市詔安客家文化促進協會(創會會長)",
+      "理事長/會長": "鍾理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "4e07408562bedb8b",
+    "sourceSequenceNumber": "3",
+    "organizationName": "中華世界客家婦女協會",
+    "leaderRaw": "吳理事長",
+    "leaderName": "吳理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "3",
+      "單位名稱": "中華世界客家婦女協會",
+      "理事長/會長": "吳理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "4b227777d4dd1fc6",
+    "sourceSequenceNumber": "4",
+    "organizationName": "中華民國三叔公客家傳統劇演藝協會",
+    "leaderRaw": "邱理事長",
+    "leaderName": "邱理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "4",
+      "單位名稱": "中華民國三叔公客家傳統劇演藝協會",
+      "理事長/會長": "邱理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "ef2d127de37b942b",
+    "sourceSequenceNumber": "5",
+    "organizationName": "中華孝教善業總會",
+    "leaderRaw": "劉理事長",
+    "leaderName": "劉理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "5",
+      "單位名稱": "中華孝教善業總會",
+      "理事長/會長": "劉理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "e7f6c011776e8db7",
+    "sourceSequenceNumber": "6",
+    "organizationName": "中華海峽兩岸客家文經交流協會",
+    "leaderRaw": "劉理事長",
+    "leaderName": "劉理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "6",
+      "單位名稱": "中華海峽兩岸客家文經交流協會",
+      "理事長/會長": "劉理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "7902699be42c8a8e",
+    "sourceSequenceNumber": "7",
+    "organizationName": "中華道教三山國王慈善會",
+    "leaderRaw": "楊理事長",
+    "leaderName": "楊理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "7",
+      "單位名稱": "中華道教三山國王慈善會",
+      "理事長/會長": "楊理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "2c624232cdd22177",
+    "sourceSequenceNumber": "8",
+    "organizationName": "世界客屬總會",
+    "leaderRaw": "范理事長",
+    "leaderName": "范理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "8",
+      "單位名稱": "世界客屬總會",
+      "理事長/會長": "范理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "19581e27de7ced00",
+    "sourceSequenceNumber": "9",
+    "organizationName": "永福生活圈社區發展協會",
+    "leaderRaw": "呂理事長",
+    "leaderName": "呂理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "9",
+      "單位名稱": "永福生活圈社區發展協會",
+      "理事長/會長": "呂理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "4a44dc15364204a8",
+    "sourceSequenceNumber": "10",
+    "organizationName": "全球客家郵報社",
+    "leaderRaw": "李社長",
+    "leaderName": "李社長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "10",
+      "單位名稱": "全球客家郵報社",
+      "理事長/會長": "李社長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "4fc82b26aecb47d2",
+    "sourceSequenceNumber": "11",
+    "organizationName": "客家雜誌社",
+    "leaderRaw": "陳發行人",
+    "leaderName": "陳發行人",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "11",
+      "單位名稱": "客家雜誌社",
+      "理事長/會長": "陳發行人",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "6b51d431df5d7f14",
+    "sourceSequenceNumber": "12",
+    "organizationName": "中華民國路跑協會",
+    "leaderRaw": "范姜理事長",
+    "leaderName": "范姜理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "12",
+      "單位名稱": "中華民國路跑協會",
+      "理事長/會長": "范姜理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "3fdba35f04dc8c46",
+    "sourceSequenceNumber": "13",
+    "organizationName": "范姜宗親總會",
+    "leaderRaw": "范姜總會長",
+    "leaderName": "范姜總會長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "13",
+      "單位名稱": "范姜宗親總會",
+      "理事長/會長": "范姜總會長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "8527a891e2241369",
+    "sourceSequenceNumber": "14",
+    "organizationName": "財團法人台灣省新竹縣褒忠亭",
+    "leaderRaw": "林董事長",
+    "leaderName": "林董事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "14",
+      "單位名稱": "財團法人台灣省新竹縣褒忠亭",
+      "理事長/會長": "林董事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "e629fa6598d73276",
+    "sourceSequenceNumber": "15",
+    "organizationName": "財團法人伯仲文教基金會 世界客屬總會(總會長)",
+    "leaderRaw": "吳董事長",
+    "leaderName": "吳董事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "15",
+      "單位名稱": "財團法人伯仲文教基金會 世界客屬總會(總會長)",
+      "理事長/會長": "吳董事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "b17ef6d19c7a5b1e",
+    "sourceSequenceNumber": "16",
+    "organizationName": "財團法人寶島客家電台",
+    "leaderRaw": "劉台長",
+    "leaderName": "劉台長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "16",
+      "單位名稱": "財團法人寶島客家電台",
+      "理事長/會長": "劉台長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "4523540f1504cd17",
+    "sourceSequenceNumber": "17",
+    "organizationName": "開心會",
+    "leaderRaw": "溫會長",
+    "leaderName": "溫會長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "17",
+      "單位名稱": "開心會",
+      "理事長/會長": "溫會長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "4ec9599fc203d176",
+    "sourceSequenceNumber": "18",
+    "organizationName": "大夥房文化協會",
+    "leaderRaw": "羅理事長",
+    "leaderName": "羅理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "18",
+      "單位名稱": "大夥房文化協會",
+      "理事長/會長": "羅理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "9400f1b21cb527d7",
+    "sourceSequenceNumber": "19",
+    "organizationName": "臺北市中原客家崇正會",
+    "leaderRaw": "潘理事長",
+    "leaderName": "潘理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "19",
+      "單位名稱": "臺北市中原客家崇正會",
+      "理事長/會長": "潘理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "f5ca38f748a1d6ea",
+    "sourceSequenceNumber": "20",
+    "organizationName": "臺北市六堆客家會",
+    "leaderRaw": "廖理事長",
+    "leaderName": "廖理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "20",
+      "單位名稱": "臺北市六堆客家會",
+      "理事長/會長": "廖理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "6f4b6612125fb3a0",
+    "sourceSequenceNumber": "21",
+    "organizationName": "臺北市北區客家會",
+    "leaderRaw": "楊理事長",
+    "leaderName": "楊理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "21",
+      "單位名稱": "臺北市北區客家會",
+      "理事長/會長": "楊理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "785f3ec7eb32f30b",
+    "sourceSequenceNumber": "22",
+    "organizationName": "臺北市南庄同鄉會",
+    "leaderRaw": "謝理事長",
+    "leaderName": "謝理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "22",
+      "單位名稱": "臺北市南庄同鄉會",
+      "理事長/會長": "謝理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "535fa30d7e25dd8a",
+    "sourceSequenceNumber": "23",
+    "organizationName": "臺北市客家女性發展協會",
+    "leaderRaw": "陳理事長",
+    "leaderName": "陳理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "23",
+      "單位名稱": "臺北市客家女性發展協會",
+      "理事長/會長": "陳理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "c2356069e9d1e79c",
+    "sourceSequenceNumber": "24",
+    "organizationName": "臺北市客家公共事務協會",
+    "leaderRaw": "范理事長",
+    "leaderName": "范理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "24",
+      "單位名稱": "臺北市客家公共事務協會",
+      "理事長/會長": "范理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "b7a56873cd771f2c",
+    "sourceSequenceNumber": "25",
+    "organizationName": "臺北市客家文化伯公福協會",
+    "leaderRaw": "陳理事長",
+    "leaderName": "陳理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "25",
+      "單位名稱": "臺北市客家文化伯公福協會",
+      "理事長/會長": "陳理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "5f9c4ab08cac7457",
+    "sourceSequenceNumber": "26",
+    "organizationName": "臺北市客家文化協會",
+    "leaderRaw": "蘇理事長",
+    "leaderName": "蘇理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "26",
+      "單位名稱": "臺北市客家文化協會",
+      "理事長/會長": "蘇理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "670671cd97404156",
+    "sourceSequenceNumber": "27",
+    "organizationName": "臺北市客家文化研究推廣協會",
+    "leaderRaw": "黃理事長",
+    "leaderName": "黃理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "27",
+      "單位名稱": "臺北市客家文化研究推廣協會",
+      "理事長/會長": "黃理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "59e19706d51d39f6",
+    "sourceSequenceNumber": "28",
+    "organizationName": "臺北市客家文經發展協會",
+    "leaderRaw": "陳理事長",
+    "leaderName": "陳理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "28",
+      "單位名稱": "臺北市客家文經發展協會",
+      "理事長/會長": "陳理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "35135aaa6cc23891",
+    "sourceSequenceNumber": "29",
+    "organizationName": "臺北市客家自強會",
+    "leaderRaw": "吳理事長",
+    "leaderName": "吳理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "29",
+      "單位名稱": "臺北市客家自強會",
+      "理事長/會長": "吳理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "624b60c58c9d8bfb",
+    "sourceSequenceNumber": "30",
+    "organizationName": "臺北市客家里長聯合會 臺北市大安區新龍生社區發展協會",
+    "leaderRaw": "沈會長",
+    "leaderName": "沈會長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "30",
+      "單位名稱": "臺北市客家里長聯合會 臺北市大安區新龍生社區發展協會",
+      "理事長/會長": "沈會長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "eb1e33e8a81b697b",
+    "sourceSequenceNumber": "31",
+    "organizationName": "臺北市客家長青會",
+    "leaderRaw": "龍理事長",
+    "leaderName": "龍理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "31",
+      "單位名稱": "臺北市客家長青會",
+      "理事長/會長": "龍理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "e29c9c180c6279b0",
+    "sourceSequenceNumber": "32",
+    "organizationName": "臺北市客家愛鄉協會",
+    "leaderRaw": "溫理事長",
+    "leaderName": "溫理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "32",
+      "單位名稱": "臺北市客家愛鄉協會",
+      "理事長/會長": "溫理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "c6f3ac57944a5314",
+    "sourceSequenceNumber": "33",
+    "organizationName": "臺北市客家語教師協會",
+    "leaderRaw": "曾理事長",
+    "leaderName": "曾理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "33",
+      "單位名稱": "臺北市客家語教師協會",
+      "理事長/會長": "曾理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "86e5014965866131",
+    "sourceSequenceNumber": "34",
+    "organizationName": "臺北市客語漢學推廣協會",
+    "leaderRaw": "羅理事長",
+    "leaderName": "羅理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "34",
+      "單位名稱": "臺北市客語漢學推廣協會",
+      "理事長/會長": "羅理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "9f14025af0065b30",
+    "sourceSequenceNumber": "35",
+    "organizationName": "臺北市苗栗縣同鄉會",
+    "leaderRaw": "張理事長",
+    "leaderName": "張理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "35",
+      "單位名稱": "臺北市苗栗縣同鄉會",
+      "理事長/會長": "張理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "76a50887d8f1c2e9",
+    "sourceSequenceNumber": "36",
+    "organizationName": "臺北市飛鳳祥和促進會",
+    "leaderRaw": "劉理事長",
+    "leaderName": "劉理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "36",
+      "單位名稱": "臺北市飛鳳祥和促進會",
+      "理事長/會長": "劉理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "7a61b53701befdae",
+    "sourceSequenceNumber": "37",
+    "organizationName": "臺北市桃園同鄉會",
+    "leaderRaw": "方理事長",
+    "leaderName": "方理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "37",
+      "單位名稱": "臺北市桃園同鄉會",
+      "理事長/會長": "方理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "aea92132c4cbeb26",
+    "sourceSequenceNumber": "38",
+    "organizationName": "臺北市高雄客家同鄉會",
+    "leaderRaw": "曾理事長",
+    "leaderName": "曾理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "38",
+      "單位名稱": "臺北市高雄客家同鄉會",
+      "理事長/會長": "曾理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "0b918943df0962bc",
+    "sourceSequenceNumber": "39",
+    "organizationName": "臺北市彩鳳文化協會",
+    "leaderRaw": "全理事長",
+    "leaderName": "全理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "39",
+      "單位名稱": "臺北市彩鳳文化協會",
+      "理事長/會長": "全理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "d59eced1ded07f84",
+    "sourceSequenceNumber": "40",
+    "organizationName": "臺北市新竹縣同鄉會",
+    "leaderRaw": "黃理事長",
+    "leaderName": "黃理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "40",
+      "單位名稱": "臺北市新竹縣同鄉會",
+      "理事長/會長": "黃理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "3d914f9348c9cc0f",
+    "sourceSequenceNumber": "41",
+    "organizationName": "臺北市龍潭旅北鄉親會",
+    "leaderRaw": "邱理事長",
+    "leaderName": "邱理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "41",
+      "單位名稱": "臺北市龍潭旅北鄉親會",
+      "理事長/會長": "邱理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "73475cb40a568e8d",
+    "sourceSequenceNumber": "42",
+    "organizationName": "臺北客家扶輪社",
+    "leaderRaw": "徐社長",
+    "leaderName": "徐社長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "42",
+      "單位名稱": "臺北客家扶輪社",
+      "理事長/會長": "徐社長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "44cb730c420480a0",
+    "sourceSequenceNumber": "43",
+    "organizationName": "臺灣北社",
+    "leaderRaw": "李社長",
+    "leaderName": "李社長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "43",
+      "單位名稱": "臺灣北社",
+      "理事長/會長": "李社長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "71ee45a3c0db9a98",
+    "sourceSequenceNumber": "44",
+    "organizationName": "臺灣客社",
+    "leaderRaw": "張社長",
+    "leaderName": "張社長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "44",
+      "單位名稱": "臺灣客社",
+      "理事長/會長": "張社長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  },
+  {
+    "id": "811786ad1ae74adf",
+    "sourceSequenceNumber": "45",
+    "organizationName": "臺灣客家聯盟",
+    "leaderRaw": "張理事長",
+    "leaderName": "張理事長",
+    "hasOrganizationName": true,
+    "hasLeaderName": true,
+    "sourceValues": {
+      "編號": "45",
+      "單位名稱": "臺灣客家聯盟",
+      "理事長/會長": "張理事長",
+      "省市縣市鄉鎮市區代碼": "63000",
+      "資料提供": "臺北市政府客家事務委員會",
+      "負責組室": "文教推廣組",
+      "編輯人": "徐瑋駿"
+    }
+  }
+]

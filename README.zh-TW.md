@@ -14,6 +14,22 @@
 
 ## 資料目錄
 
+### 私有文化資產補助案
+
+`private_cultural_heritage_subsidies` 是臺北市私有文化資產補助案件的本機快照。它保留五個原始欄位，只在可明確判讀時轉換民國／西元年度與核定經費；補助項目分類及名錄名稱、行政區完全一致的比對都會標示為衍生資訊，並非官方認定。更新時依序執行 `npm run data:fetch:private-cultural-heritage-subsidies` 與 `npm run data:convert:private-cultural-heritage-subsidies`。
+
+### 旅遊醫學門診醫院名冊
+
+`travel_medicine_clinics` 是臺北市政府衛生局旅遊醫學門診醫院名冊的本機快照，保留官方聯絡、地址、科別與自費 M 痘接種欄位。「來源列示可自費接種」僅表示來源明確標示，並非即時庫存、預約、資格或價格資訊。更新時依序執行 `npm run data:fetch:travel-medicine-clinics` 與 `npm run data:convert:travel-medicine-clinics`。
+
+### 臺北市客家社團
+
+`hakka_organizations` 是 109 年（2020）臺北市客家社團名冊的本機快照。它保留 CSV 中所有實際欄位，僅呈現來源記錄的名冊資訊；較晚的檔案更新日期不代表社團或理事長／會長資訊已更新至現在。更新時依序執行 `npm run data:fetch:hakka-organizations` 與 `npm run data:convert:hakka-organizations`。
+
+### 出院準備銜接長照服務合作醫院
+
+`hospital_discharge_long_term_care_partners` 是臺北市出院準備銜接長照服務合作醫院的本機快照。據點位置欄位是地址文字，因此僅提供外部地圖查詢，不會地理編碼或建立標記；列入名冊不表示服務可立即安排、具有容量、符合資格或適合特定個案。更新時依序執行 `npm run data:fetch:hospital-discharge-long-term-care-partners` 與 `npm run data:convert:hospital-discharge-long-term-care-partners`。
+
 資料目錄依公共服務主題分類：健康與醫療、社福／家庭／照顧、就業／產業／商業、教育／文化／旅遊、城市服務／環境／生活、動物與寵物，以及探索／比較／說明。
 
 目錄中繼資料位於 [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts)。新增資料集時，請審慎指定一個主要分類並提供實用搜尋詞；未分類的資料集會被拒絕，而不會悄悄從目錄中消失。

@@ -1,0 +1,101 @@
+{
+  "totalRecords": 33,
+  "uniqueHospitals": 33,
+  "citiesRepresented": 22,
+  "taipeiDistrictsRepresented": 5,
+  "departmentsRepresented": 13,
+  "listedMpoxSelfPaidVaccination": 8,
+  "recordsWithPhone": 33,
+  "recordsWithAddress": 33,
+  "byDistrict": [
+    {
+      "label": "信義區",
+      "value": 2
+    },
+    {
+      "label": "中山區",
+      "value": 1
+    },
+    {
+      "label": "中正區",
+      "value": 1
+    },
+    {
+      "label": "內湖區",
+      "value": 1
+    },
+    {
+      "label": "文山區",
+      "value": 1
+    }
+  ],
+  "byDepartment": [
+    {
+      "label": "家庭醫學科",
+      "value": 14
+    },
+    {
+      "label": "旅遊醫學門診",
+      "value": 6
+    },
+    {
+      "label": "國際旅遊醫學門診",
+      "value": 2
+    },
+    {
+      "label": "感染科",
+      "value": 2
+    },
+    {
+      "label": "小兒科",
+      "value": 1
+    },
+    {
+      "label": "不分科",
+      "value": 1
+    },
+    {
+      "label": "社區及家庭醫學科",
+      "value": 1
+    },
+    {
+      "label": "家庭醫學科第10診(旅遊醫學特別門診)",
+      "value": 1
+    },
+    {
+      "label": "旅遊醫學科",
+      "value": 1
+    },
+    {
+      "label": "健康管理中心",
+      "value": 1
+    },
+    {
+      "label": "健檢門診",
+      "value": 1
+    },
+    {
+      "label": "國際旅遊與留學預防接種門診",
+      "value": 1
+    },
+    {
+      "label": "職業醫學科",
+      "value": 1
+    }
+  ],
+  "byMpoxStatus": [
+    {
+      "label": "unknown",
+      "value": 25
+    },
+    {
+      "label": "available",
+      "value": 8
+    }
+  ],
+  "contactCompleteness": {
+    "phone": 33,
+    "extension": 9,
+    "address": 33
+  }
+}

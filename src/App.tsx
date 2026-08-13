@@ -99,6 +99,10 @@ import ChildYouthFriendlyWelfareServiceSitesModule from './ChildYouthFriendlyWel
 import DisabilityInstitutionCapacityAndVacanciesModule from './DisabilityInstitutionCapacityAndVacanciesModule';
 import OphthalmologyInstitutionsModule from './OphthalmologyInstitutionsModule';
 import TaipeiCulturalHeritageAssetsModule from './TaipeiCulturalHeritageAssetsModule';
+import PrivateCulturalHeritageSubsidiesModule from './PrivateCulturalHeritageSubsidiesModule';
+import TravelMedicineClinicsModule from './TravelMedicineClinicsModule';
+import HakkaOrganizationsModule from './HakkaOrganizationsModule';
+import HospitalDischargeLongTermCarePartnersModule from './HospitalDischargeLongTermCarePartnersModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -758,7 +762,11 @@ export default function App() {
   tabs.splice(3, 0, ['disabilityInstitutionCapacityAndVacancies', language === 'zh' ? '身心障礙機構服務容量資料' : 'Disability Institution Service Capacity Records']);
   tabs.splice(4, 0, ['ophthalmologyInstitutions', language === 'zh' ? '臺北市眼科醫療機構' : 'Taipei Ophthalmology Institutions']);
   tabs.splice(5, 0, ['taipeiCulturalHeritageAssets', language === 'zh' ? '臺北市文化資產' : 'Taipei Cultural Heritage Assets']);
-  tabs.splice(6, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
+  tabs.splice(6, 0, ['privateCulturalHeritageSubsidies', language === 'zh' ? '私有文化資產補助案' : 'Private Cultural Heritage Subsidies']);
+  tabs.splice(7, 0, ['travelMedicineClinics', language === 'zh' ? '旅遊醫學門診醫院名冊' : 'Travel Medicine Clinics']);
+  tabs.splice(8, 0, ['hakkaOrganizations', language === 'zh' ? '臺北市客家社團' : 'Taipei Hakka Organizations']);
+  tabs.splice(9, 0, ['hospitalDischargeLongTermCarePartners', language === 'zh' ? '出院準備銜接長照服務合作醫院' : 'Hospital Discharge-to-Long-Term Care Partners']);
+  tabs.splice(10, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
   tabs.splice(9, 0, ['internalMedicineInstitutions', language === 'zh' ? '臺北市內科醫療機構' : 'Taipei Internal Medicine Institutions']);
@@ -905,6 +913,10 @@ export default function App() {
       {tab === 'disabilityInstitutionCapacityAndVacancies' && <DisabilityInstitutionCapacityAndVacanciesModule language={language} />}
       {tab === 'ophthalmologyInstitutions' && <OphthalmologyInstitutionsModule language={language} />}
       {tab === 'taipeiCulturalHeritageAssets' && <TaipeiCulturalHeritageAssetsModule language={language} />}
+      {tab === 'privateCulturalHeritageSubsidies' && <PrivateCulturalHeritageSubsidiesModule language={language} />}
+      {tab === 'travelMedicineClinics' && <TravelMedicineClinicsModule language={language} />}
+      {tab === 'hakkaOrganizations' && <HakkaOrganizationsModule language={language} />}
+      {tab === 'hospitalDischargeLongTermCarePartners' && <HospitalDischargeLongTermCarePartnersModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

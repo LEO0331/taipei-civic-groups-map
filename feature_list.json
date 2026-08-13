@@ -55,6 +55,38 @@
       "dependencies": ["maintenance-harness"],
       "status": "done",
       "evidence": "2026-08-11: README.md and README.zh-TW.md now mirror essential onboarding, data, verification, deployment, and public-data limits."
+    },
+    {
+      "id": "private-cultural-heritage-subsidies",
+      "name": "Private cultural heritage subsidies directory",
+      "description": "Present Taipei's private cultural-heritage subsidy records with source-preserving filtering, transparent derived analysis, and clear administrative-record limits.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted 292 official source rows; added the categorized dashboard module, conservative parsing tests, source-preserving CSV export, and data-quality disclosure. Typecheck, 99 tests, build, diff check, and browser QA passed."
+    },
+    {
+      "id": "travel-medicine-clinics",
+      "name": "Travel medicine clinics directory",
+      "description": "Present official travel-medicine outpatient hospital contact records without implying real-time clinical or vaccination availability.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted 33 official source rows, with only O and blank mpox source values observed. Added conservative classification, local directory filters, contact and map actions, source export, and data-quality disclosure."
+    },
+    {
+      "id": "hakka-organizations",
+      "name": "Taipei Hakka organizations registry",
+      "description": "Present the 2020 Hakka organizations registry as historical source records without current-status or personal-profile inferences.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted the Big5-encoded official registry, preserving all seven actual CSV fields and adding source-preserving directory/search, historical-data context, and duplicate-quality checks."
+    },
+    {
+      "id": "hospital-discharge-long-term-care-partners",
+      "name": "Hospital discharge-to-long-term-care partner directory",
+      "description": "Present public partner-hospital contacts for discharge-to-LTC coordination without making capacity, eligibility, or service-availability claims.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted 26 official source rows. Verified that the location field contains addresses, not coordinates; implemented address-only external map lookup, practical contact filters, source-preserving export, and data-quality disclosure."
     }
   ]
 }

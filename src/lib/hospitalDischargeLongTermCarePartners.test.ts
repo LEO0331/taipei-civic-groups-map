@@ -1,0 +1,2 @@
+import assert from 'node:assert/strict'; import test from 'node:test'; import { cleanDischargeLtcValue, fullDischargePhone } from './hospitalDischargeLongTermCarePartners';
+test('preserves contacts as strings while making a readable derived phone', () => { assert.equal(cleanDischargeLtcValue(' (02) 28712121 '), '(02) 28712121'); assert.equal(fullDischargePhone('(02)28712121', '82118', 'zh'), '(02)28712121 分機 82118'); });

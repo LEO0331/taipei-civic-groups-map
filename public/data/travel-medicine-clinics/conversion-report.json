@@ -1,0 +1,74 @@
+{
+  "travelMedicineClinics": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=49ebc8c7-c015-406f-a8f4-051d580cfc8c",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceUpdatedAt": "2026-06-16T17:53:15+08:00",
+    "metadataUpdatedAt": "2026-07-16T09:50:18+08:00",
+    "updateFrequency": "irregular",
+    "headers": [
+      "郵遞區號",
+      "縣市",
+      "醫院名稱",
+      "科別",
+      "電話",
+      "分機",
+      "地址",
+      "M痘疫苗自費接種服務"
+    ],
+    "inputRows": 33,
+    "outputRecords": 33,
+    "issueCount": 26,
+    "issues": {
+      "missingHospitalName": [],
+      "missingCity": [],
+      "missingPostalCode": [],
+      "invalidPostalCode": [],
+      "missingAddress": [],
+      "unresolvedDistrict": [],
+      "cityAddressConflict": [
+        "19"
+      ],
+      "postalAddressConflict": [],
+      "missingTelephone": [],
+      "malformedTelephone": [],
+      "extensionWithoutTelephone": [],
+      "missingDepartment": [],
+      "unknownMpoxStatus": [
+        "2",
+        "3",
+        "5",
+        "6",
+        "7",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "26",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "exactDuplicateRows": [],
+      "hospitalMultipleAddresses": [],
+      "addressConflictingHospitals": [],
+      "hospitalAddressConflictingMpoxStatuses": []
+    },
+    "notes": [
+      "All official fields are preserved in sourceValues.",
+      "Mpox status is source-recorded information at source-update time, not real-time vaccine stock, appointments, eligibility, price, or capacity.",
+      "No coordinates are supplied or inferred; map actions use the complete source address in an external map lookup."
+    ]
+  }
+}

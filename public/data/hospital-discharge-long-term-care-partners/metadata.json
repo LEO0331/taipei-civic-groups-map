@@ -1,0 +1,44 @@
+{
+  "key": "hospital_discharge_long_term_care_partners",
+  "label": {
+    "zh": "出院準備銜接長照服務合作醫院",
+    "en": "Hospital Discharge-to-Long-Term Care Partners"
+  },
+  "sourcePage": "https://data.taipei/dataset/detail?id=05efb8d6-fa6b-494a-af3a-d26a31ccfe88",
+  "sourceAgency": "臺北市政府衛生局",
+  "sourceFileUpdatedAt": "2026-06-30T15:21:37+08:00",
+  "metadataUpdatedAt": "2026-07-13T16:49:13+08:00",
+  "updateFrequency": "irregular",
+  "headers": [
+    "行政區",
+    "單位名稱",
+    "主要連絡人",
+    "連絡人電話",
+    "分機",
+    "手機",
+    "據點位置"
+  ],
+  "inputRows": 26,
+  "outputRecords": 26,
+  "issueCount": 3,
+  "issues": {
+    "exactDuplicateRows": [],
+    "missingDistrict": [],
+    "missingOrganization": [],
+    "missingPhone": [
+      "24"
+    ],
+    "missingMobile": [
+      "21",
+      "26"
+    ],
+    "missingLocation": [],
+    "locationNotAddress": []
+  },
+  "notes": [
+    "All official fields are retained in sourceValues.",
+    "據點位置 values are source addresses; no runtime geocoding or map markers are created.",
+    "Contact-person information remains within expandable source-record detail and is not used for ranking or profiling."
+  ],
+  "recordCount": 26
+}

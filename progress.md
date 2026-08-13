@@ -2,11 +2,19 @@
 
 ## Current State
 
-- Last updated: 2026-08-11
+- Last updated: 2026-08-13
 - Active feature: none
 - Baseline: agent harness installed and validated.
 
 ## Latest Evidence
+
+- 2026-08-13: added `hospital_discharge_long_term_care_partners` from the Taipei Department of Health directory. The 26-row official source contains address text in its location field, not coordinates, so the module has external map lookup only and no geocoding or map markers. It keeps professional contact names in expandable source detail, supports practical district/contact/location filters and source-preserving export, and explicitly avoids availability, capacity, eligibility, fee, quality, or recommendation claims. `npm run typecheck`, `npm test` (103 tests), `npm run build`, and `git diff --check` passed. Browser inspection confirmed directory filters and contact/location rendering.
+
+- 2026-08-13: added `hakka_organizations` from the 109 ROC year (2020) Taipei Hakka Organizations Registry. The official Big5 CSV contains 45 source rows and seven actual fields, all preserved in local records. The module supports registry search, leader-field and exact-name-repeat filters, source-preserving export, and simple completeness/repeat analysis. It contains no address, map, contact, profile, current-status, or demographic inference. A visible historical note separates the registry’s 2020 meaning from its 2025 file update. `npm run typecheck`, `npm test` (102 tests), `npm run build`, and `git diff --check` passed. Browser QA confirmed catalogue discovery and source-field search.
+
+- 2026-08-13: added `travel_medicine_clinics` from the Taipei Department of Health travel-medicine outpatient hospital directory. The generated local snapshot has 33 source records and preserves all eight official fields. The current mpox column contains only `O` and blank values: only `O` is shown as source-listed; blanks are explicitly not specified. The directory has shared practical filters, call/copy/map actions, source-field details, CSV export, a lightweight district view, and stated safeguards against real-time clinical, appointment, stock, eligibility, price, or quality claims. `npm run typecheck`, `npm test` (101 tests), `npm run build`, and `git diff --check` passed. Browser QA confirmed Health catalogue discovery, the eight-record mpox shortcut, and the dedicated mpox view.
+
+- 2026-08-13: added the `private_cultural_heritage_subsidies` directory from the Taipei Cultural Affairs Department's official CSV. The generated local snapshot has 292 cases, 140 distinct source asset names, 288 conservatively parsed amounts, and a visible 2007–2026 parsed-year span. The new module provides shared filters, source-preserving details/export, eight focused views, conservative district and exact name-and-area registry comparison, and explicit limits on what administrative approvals prove. Focused fetch/conversion completed; `npm run typecheck`, `npm test` (99 tests), `npm run build`, and `git diff --check` passed. Browser QA confirmed catalogue discovery, tab navigation, and an asset-name filter narrowing the directory to four matching records.
 
 - 2026-08-11: replaced the accumulated mixed-language README with a concise English canonical guide and added `README.zh-TW.md` as its Traditional Chinese counterpart. Both documents link to each other and cover onboarding, catalogue maintenance, data-refresh caution, verification, deployment, and public-data limits. Verified headings and language links; `npm run typecheck`, `npm test` (96 tests), `npm run build`, and `git diff --check` passed.
 
@@ -29,6 +37,8 @@
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.
 - Freshness metadata is available for 22 of 78 dataset directories. Unknown dates are intentionally visible; extend metadata coverage before treating the overall catalogue as date-complete.
+
+- The source labels its updates as irregular. Its 2026-06-18 source update is exposed through module metadata, but the dashboard remains a generated local snapshot rather than a real-time service.
 
 ## Next Session
 

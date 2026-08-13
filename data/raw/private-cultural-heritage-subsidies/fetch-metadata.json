@@ -1,0 +1,10 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=24205a7e-278a-4e78-9033-47ec5cf74595",
+  "sourceUrl": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=ce3c3a79-5be3-42b5-9f56-4a5ce6936345",
+  "downloadedAt": "2026-08-13T02:34:32.641Z",
+  "fileSize": 35618,
+  "coverageStart": "2007-01-01",
+  "coverageEnd": "2026-06-30",
+  "updateFrequency": "irregular",
+  "sourceAgency": "臺北市政府文化局"
+}

@@ -1,0 +1,67 @@
+{
+  "privateCulturalHeritageSubsidies": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=24205a7e-278a-4e78-9033-47ec5cf74595",
+    "sourceAgency": "臺北市政府文化局",
+    "coverageStart": "2007-01-01",
+    "coverageEnd": "2026-06-30",
+    "updateFrequency": "irregular",
+    "headers": [
+      "年度",
+      "區域",
+      "私有資產名稱",
+      "同意補助項目",
+      "核定補助經費"
+    ],
+    "inputRows": 292,
+    "outputRecords": 292,
+    "exactDuplicateRowsRemoved": [],
+    "possibleHeritageRegistryMatches": 101,
+    "issueCount": 25,
+    "issues": {
+      "missingYear": [],
+      "malformedYear": [],
+      "missingArea": [
+        "112"
+      ],
+      "missingAssetName": [],
+      "missingProject": [],
+      "missingAmount": [],
+      "malformedAmount": [
+        "120",
+        "182",
+        "183",
+        "214"
+      ],
+      "negativeAmount": [],
+      "ambiguousDistrict": [],
+      "unclassifiedProject": [
+        "9",
+        "13",
+        "14",
+        "18",
+        "26",
+        "27",
+        "31",
+        "32",
+        "36",
+        "38",
+        "39",
+        "40",
+        "51",
+        "52",
+        "55",
+        "62",
+        "63",
+        "66",
+        "75",
+        "76"
+      ]
+    },
+    "notes": [
+      "All original CSV fields are retained in sourceValues.",
+      "Approved subsidy amount is an administrative approval record, not actual disbursement, final expenditure, total project cost, or asset value.",
+      "District is derived only from an explicit Taipei district in the source area field.",
+      "Heritage-registry relationships are possible exact-name matches only; no fuzzy matching or field merging is performed."
+    ]
+  }
+}

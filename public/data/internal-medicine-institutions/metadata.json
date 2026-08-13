@@ -1,11 +1,54 @@
 {
-  "datasetTitle": "Taipei Internal Medicine Institutions",
-  "datasetUrl": "https://data.taipei/dataset/detail?id=dbb54bf8-74a8-475d-ae88-a0ec4262c39a",
-  "ingestedAt": "2026-07-28T03:25:25.794Z",
-  "updatedAt": "2026-07-28T03:25:25.791Z",
-  "totalRecords": 225,
-  "uniqueInstitutions": 225,
-  "districtsCovered": 12,
-  "postalCodes": 13,
-  "recordsWithPhone": 221
+  "key": "internal_medicine_institutions",
+  "label": {
+    "zh": "臺北市內科醫療機構",
+    "en": "Taipei Internal Medicine Institutions"
+  },
+  "sourcePage": "https://data.taipei/dataset/detail?id=dbb54bf8-74a8-475d-ae88-a0ec4262c39a",
+  "sourceAgency": "臺北市政府衛生局",
+  "sourceFileUpdatedAt": "2025-06-11T16:40:31+08:00",
+  "metadataUpdatedAt": "2026-07-14T13:02:54+08:00",
+  "updateFrequency": "annual",
+  "headers": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話"
+  ],
+  "inputRows": 225,
+  "outputRecords": 225,
+  "issueCount": 9,
+  "issues": {
+    "missingInstitutionName": [],
+    "missingAddress": [],
+    "missingTelephone": [
+      "137",
+      "138",
+      "159",
+      "210"
+    ],
+    "malformedTelephone": [
+      "166",
+      "223"
+    ],
+    "invalidPostalCode": [
+      "223"
+    ],
+    "unresolvedDistrict": [],
+    "duplicateSequenceNumber": [],
+    "exactDuplicateRows": [],
+    "sameInstitutionMultipleAddresses": [],
+    "sameAddressMultipleInstitutions": [
+      "25",
+      "26"
+    ],
+    "postalAddressConflict": []
+  },
+  "notes": [
+    "All five official source fields are preserved in sourceValues.",
+    "District is derived from an explicit address district or a conservative Taipei postal-code mapping.",
+    "No official coordinates, appointments, capacity, or medical service details are supplied or inferred."
+  ],
+  "recordCount": 225
 }

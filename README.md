@@ -34,6 +34,10 @@ Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatal
 
 `hospital_discharge_long_term_care_partners` is a local snapshot of Taipei hospitals listed for discharge preparation linked with long-term-care services. Its location field is an address, so the directory offers external map lookup only—no geocoding or markers. Listing does not establish immediate services, capacity, eligibility, fees, or suitability. Refresh it with `npm run data:fetch:hospital-discharge-long-term-care-partners` followed by `npm run data:convert:hospital-discharge-long-term-care-partners`.
 
+### Internal medicine institutions
+
+`internal_medicine_institutions` is a local snapshot of Taipei’s internal-medicine institution directory. It retains the five official fields, derives districts only from explicit address text or a conservative Taipei postal-code map, and exposes source/update metadata and quality flags. It is not real-time clinic, physician, appointment, or subspecialty availability information. Refresh it with `npm run data:fetch:internal-medicine-institutions` followed by `npm run data:convert:internal-medicine-institutions`.
+
 ## Quick start
 
 Requirements: Node.js 22 and npm.

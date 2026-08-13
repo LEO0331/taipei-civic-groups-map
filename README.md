@@ -38,6 +38,10 @@ Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatal
 
 `internal_medicine_institutions` is a local snapshot of Taipei’s internal-medicine institution directory. It retains the five official fields, derives districts only from explicit address text or a conservative Taipei postal-code map, and exposes source/update metadata and quality flags. It is not real-time clinic, physician, appointment, or subspecialty availability information. Refresh it with `npm run data:fetch:internal-medicine-institutions` followed by `npm run data:convert:internal-medicine-institutions`.
 
+### Withdrawn illegal-hotel enforcement records
+
+`withdrawn_illegal_hotel_enforcement_records` is a local historical snapshot of withdrawn or revoked administrative enforcement records. It is not a current illegal-hotel list: names, addresses, dates, and source-recorded amounts must not be read as current illegality or continuing liability. Refresh it with `npm run data:fetch:withdrawn-illegal-hotel-enforcement-records` followed by `npm run data:convert:withdrawn-illegal-hotel-enforcement-records`.
+
 ## Quick start
 
 Requirements: Node.js 22 and npm.

@@ -1,0 +1,10 @@
+{
+  "totalRecords": 37,
+  "uniqueSourceNames": 1,
+  "districtsRepresented": 7,
+  "yearsRepresented": 1,
+  "recordsWithAddresses": 37,
+  "recordsWithValidAmounts": 37,
+  "totalSourceRecordedAmount": 3800000,
+  "medianSourceRecordedAmount": 100000
+}

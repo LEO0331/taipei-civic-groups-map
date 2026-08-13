@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 82,
-  "datedDatasetCount": 26,
+  "datasetDirectoryCount": 83,
+  "datedDatasetCount": 27,
   "unknownDateDatasetCount": 56,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
@@ -29,7 +29,8 @@
     "private-senior-residential-long-term-care-institutions",
     "psychiatric-clinics",
     "taipei-cultural-heritage-assets",
-    "travel-medicine-clinics"
+    "travel-medicine-clinics",
+    "withdrawn-illegal-hotel-enforcement-records"
   ],
   "datasetsWithoutSourceDates": [
     "adult-influenza-vaccine-providers",

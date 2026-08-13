@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 82,
-  "datedDatasetCount": 26,
+  "datasetDirectoryCount": 83,
+  "datedDatasetCount": 27,
   "entries": [
     {
       "id": "adult-influenza-vaccine-providers"
@@ -276,6 +276,10 @@
     },
     {
       "id": "water-pipe-installation-contractors"
+    },
+    {
+      "id": "withdrawn-illegal-hotel-enforcement-records",
+      "sourceUpdatedAt": "2026-05-28T10:43:19+08:00"
     }
   ]
 }

@@ -1,0 +1,3 @@
+export type WithdrawnIllegalHotelEnforcementRecord = { id: string; nameRaw: string; displayName: string; listFormatRaw: string; legalBasisRaw: string; districtName: string; dateRaw: string; year: number | null; operationAddress: string; amountRaw: string; amountTwd: number | null; sourceUrl: string; cityName: string; cityCode: string; hasName: boolean; hasLegalBasis: boolean; hasAddress: boolean; hasValidAmount: boolean; sourceValues: Record<string, string>; recordNature: 'withdrawn_or_revoked_enforcement' };
+export const cleanWithdrawnHotelValue = (value?: string) => (value ?? '').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+export const normalizeWithdrawnHotelText = (value?: string) => cleanWithdrawnHotelValue(value).replace(/臺/g, '台').toLocaleLowerCase();

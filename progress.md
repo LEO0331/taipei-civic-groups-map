@@ -8,6 +8,8 @@
 
 ## Latest Evidence
 
+- 2026-08-13: added `withdrawn_illegal_hotel_enforcement_records` from the Taipei Tourism Department's historical administrative dataset. The 37-row local snapshot preserves all eight current CSV fields, conservatively parses ROC dates and clear amounts, and frames every view as withdrawn/revoked enforcement history. It has no property map, current-illegality label, blacklist treatment, or current-liability claim. `npm run typecheck`, `npm test`, `npm run build`, and `git diff --check` passed.
+
 - 2026-08-13: refreshed and strengthened the existing `internal_medicine_institutions` directory instead of adding a duplicate module. The local snapshot has 225 source rows and retains all five official fields. Conversion metadata now records the 2025-06-11 source update and 2026-07-14 metadata update, while quality checks distinguish missing/malformed contacts, invalid postcodes, unresolved districts, exact duplicates, and source conflicts. `npm run typecheck`, `npm test` (103 tests), `npm run build`, and `git diff --check` passed.
 
 - 2026-08-13: added `hospital_discharge_long_term_care_partners` from the Taipei Department of Health directory. The 26-row official source contains address text in its location field, not coordinates, so the module has external map lookup only and no geocoding or map markers. It keeps professional contact names in expandable source detail, supports practical district/contact/location filters and source-preserving export, and explicitly avoids availability, capacity, eligibility, fee, quality, or recommendation claims. `npm run typecheck`, `npm test` (103 tests), `npm run build`, and `git diff --check` passed. Browser inspection confirmed directory filters and contact/location rendering.

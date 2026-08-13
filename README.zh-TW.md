@@ -34,6 +34,10 @@
 
 `internal_medicine_institutions` 是臺北市內科醫療機構名冊的本機快照。它保留五個官方欄位，只從地址明確行政區或保守的臺北郵遞區號對照推得行政區，並提供來源更新日期與資料品質標記；這不是即時門診、醫師、預約或次專科服務資訊。更新時依序執行 `npm run data:fetch:internal-medicine-institutions` 與 `npm run data:convert:internal-medicine-institutions`。
 
+### 撤銷裁罰非法旅館業名單
+
+`withdrawn_illegal_hotel_enforcement_records` 是已撤銷或廢止行政裁罰紀錄的本機歷史快照，不是目前非法旅館名單；名稱、地址、日期與來源金額都不可解讀為目前違法或持續責任。更新時依序執行 `npm run data:fetch:withdrawn-illegal-hotel-enforcement-records` 與 `npm run data:convert:withdrawn-illegal-hotel-enforcement-records`。
+
 資料目錄依公共服務主題分類：健康與醫療、社福／家庭／照顧、就業／產業／商業、教育／文化／旅遊、城市服務／環境／生活、動物與寵物，以及探索／比較／說明。
 
 目錄中繼資料位於 [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts)。新增資料集時，請審慎指定一個主要分類並提供實用搜尋詞；未分類的資料集會被拒絕，而不會悄悄從目錄中消失。

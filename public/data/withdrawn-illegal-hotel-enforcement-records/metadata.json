@@ -1,0 +1,42 @@
+{
+  "key": "withdrawn_illegal_hotel_enforcement_records",
+  "label": {
+    "zh": "撤銷裁罰非法旅館業名單",
+    "en": "Withdrawn Illegal Hotel Enforcement Records"
+  },
+  "sourcePage": "https://data.taipei/dataset/detail?id=0c43f0ef-92eb-4920-82fc-68e858a3afc7",
+  "sourceAgency": "臺北市政府觀光傳播局",
+  "sourceFileUpdatedAt": "2026-05-28T10:43:19+08:00",
+  "metadataUpdatedAt": "2026-05-28T10:50:25+08:00",
+  "updateFrequency": "irregular",
+  "headers": [
+    "名稱",
+    "依據法規",
+    "縣市代碼",
+    "縣市",
+    "地區",
+    "日期",
+    "非法營業地址",
+    "罰鍰/怠金金額"
+  ],
+  "inputRows": 37,
+  "outputRecords": 37,
+  "issueCount": 0,
+  "issues": {
+    "exactDuplicateRows": [],
+    "missingName": [],
+    "missingLegalBasis": [],
+    "missingDistrict": [],
+    "missingDate": [],
+    "unparseableDate": [],
+    "missingAddress": [],
+    "malformedAmount": [],
+    "negativeAmount": []
+  },
+  "notes": [
+    "All current CSV fields are retained in sourceValues.",
+    "The source records concern withdrawn or revoked enforcement; they must not be read as evidence of current illegality or liability.",
+    "Addresses have no official coordinates and are not geocoded."
+  ],
+  "recordCount": 37
+}

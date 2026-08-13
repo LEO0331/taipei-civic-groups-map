@@ -87,6 +87,14 @@
       "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
       "status": "done",
       "evidence": "2026-08-13: fetched and converted 26 official source rows. Verified that the location field contains addresses, not coordinates; implemented address-only external map lookup, practical contact filters, source-preserving export, and data-quality disclosure."
+    },
+    {
+      "id": "withdrawn-illegal-hotel-enforcement-records",
+      "name": "Withdrawn illegal-hotel enforcement history",
+      "description": "Present withdrawn/revoked administrative enforcement records as historical source data without current-illegality or liability claims.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted 37 current official source rows, preserving all eight fields with conservative ROC-date and amount parsing. The module prominently identifies the historical withdrawn/revoked record nature and avoids geocoding or blacklist semantics."
     }
   ]
 }

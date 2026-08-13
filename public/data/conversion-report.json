@@ -353,5 +353,107 @@
       "The source records concern withdrawn or revoked enforcement; they must not be read as evidence of current illegality or liability.",
       "Addresses have no official coordinates and are not geocoded."
     ]
+  },
+  "funeralServiceBusinesses": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=20143c69-a790-4dec-bb5e-1f0ed7e76c1e",
+    "sourceAgency": "臺北市殯葬管理處",
+    "sourceFileUpdatedAt": "2025-06-11T10:33:01+08:00",
+    "metadataUpdatedAt": "2025-06-11T10:33:18+08:00",
+    "updateFrequency": "annual",
+    "headers": [
+      "公司名稱",
+      "負責人",
+      "郵遞區號",
+      "公司地址",
+      "電話"
+    ],
+    "inputRows": 30,
+    "outputRecords": 30,
+    "issueCount": 4,
+    "issues": {
+      "exactDuplicateRows": [],
+      "missingCompany": [],
+      "missingAddress": [],
+      "missingPhone": [],
+      "invalidPostalCode": [],
+      "unresolvedDistrict": [],
+      "sameCompanyMultipleAddresses": [],
+      "sameAddressMultipleCompanies": [
+        "11",
+        "12",
+        "15",
+        "16"
+      ]
+    },
+    "notes": [
+      "All five official source fields are retained in sourceValues.",
+      "Responsible-person data appears only in source detail and is not used as a default search or profile field.",
+      "Addresses have no official coordinates and are not geocoded."
+    ]
+  },
+  "fixedSiteTemporaryChildcare": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=a7462972-0380-4987-99fb-2071e798ce66",
+    "sourceAgency": "臺北市政府社會局",
+    "sourceFileUpdatedAt": "2025-06-13T18:36:01+08:00",
+    "metadataUpdatedAt": "2025-06-13T18:36:50+08:00",
+    "updateFrequency": "annual",
+    "headers": [
+      "序號",
+      "機構類型",
+      "機構名稱",
+      "地址",
+      "電話"
+    ],
+    "inputRows": 23,
+    "outputRecords": 23,
+    "issueCount": 0,
+    "issues": {
+      "exactDuplicateRows": [],
+      "missingInstitution": [],
+      "missingAddress": [],
+      "missingPhone": [],
+      "unresolvedDistrict": [],
+      "suspectedDuplicateNameAddress": []
+    },
+    "notes": [
+      "All official source fields are retained in sourceValues.",
+      "Addresses are source text only; no coordinates are created.",
+      "The directory contains no real-time booking, vacancies, age limits, hours, or fee data."
+    ]
+  },
+  "xrayExaminationMedicalInstitutions": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=298c0e79-89d8-44ab-9228-d11bfe74ed0f",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourceFileUpdatedAt": "2025-06-09T14:14:23+08:00",
+    "metadataUpdatedAt": "2026-07-15T09:33:10+08:00",
+    "updateFrequency": "annual",
+    "headers": [
+      "序號",
+      "機構名稱",
+      "郵遞區號",
+      "地址",
+      "電話"
+    ],
+    "inputRows": 160,
+    "outputRecords": 160,
+    "issueCount": 4,
+    "issues": {
+      "exactDuplicateRows": [],
+      "missingInstitution": [],
+      "missingAddress": [],
+      "missingPhone": [
+        "104",
+        "146",
+        "147",
+        "150"
+      ],
+      "invalidPostalCode": [],
+      "unresolvedDistrict": []
+    },
+    "notes": [
+      "All five official source fields are retained.",
+      "Addresses are source text only; no coordinates are created.",
+      "The directory does not indicate real-time X-ray availability, equipment, appointments, or examination types."
+    ]
   }
 }

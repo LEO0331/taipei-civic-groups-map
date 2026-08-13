@@ -1,0 +1,65 @@
+{
+  "totalRecords": 23,
+  "uniqueInstitutions": 23,
+  "districtsCovered": 12,
+  "institutionTypes": [
+    {
+      "name": "育兒友善園",
+      "count": 13
+    },
+    {
+      "name": "居家托育服務中心",
+      "count": 10
+    }
+  ],
+  "byDistrict": [
+    {
+      "name": "文山區",
+      "count": 3
+    },
+    {
+      "name": "北投區",
+      "count": 3
+    },
+    {
+      "name": "大同區",
+      "count": 2
+    },
+    {
+      "name": "內湖區",
+      "count": 2
+    },
+    {
+      "name": "松山區",
+      "count": 2
+    },
+    {
+      "name": "南港區",
+      "count": 2
+    },
+    {
+      "name": "萬華區",
+      "count": 2
+    },
+    {
+      "name": "士林區",
+      "count": 2
+    },
+    {
+      "name": "大安區",
+      "count": 2
+    },
+    {
+      "name": "中正區",
+      "count": 1
+    },
+    {
+      "name": "信義區",
+      "count": 1
+    },
+    {
+      "name": "中山區",
+      "count": 1
+    }
+  ]
+}

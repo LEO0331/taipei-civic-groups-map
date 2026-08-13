@@ -42,6 +42,14 @@
 
 目錄中繼資料位於 [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts)。新增資料集時，請審慎指定一個主要分類並提供實用搜尋詞；未分類的資料集會被拒絕，而不會悄悄從目錄中消失。
 
+### 臺北市殯葬禮儀服務業
+
+`funeral_service_businesses` 是臺北市殯葬禮儀服務業備查核准清冊的本機快照，保留五個官方來源欄位。負責人欄位僅在展開的來源細節中呈現；地址只提供外部查詢，不進行座標化或地圖標記。列入名冊僅代表來源行政登記，並不表示目前營業、服務項目、費用、品質、資格或推薦。更新時依序執行 `npm run data:fetch:funeral-service-businesses` 與 `npm run data:convert:funeral-service-businesses`。
+
+### 臺北市定點臨托
+
+`fixed_site_temporary_childcare` 是臺北市定點臨托服務名冊的本機快照，保留五個官方來源欄位，提供依來源欄位的地點與聯絡篩選，以及外部地址查詢。本模組不表示即時預約、名額、服務時間、年齡限制、費用、資格、安全或服務品質。更新時依序執行 `npm run data:fetch:fixed-site-temporary-childcare` 與 `npm run data:convert:fixed-site-temporary-childcare`。
+
 ## 快速開始
 
 需求：Node.js 22 與 npm。

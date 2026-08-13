@@ -34,6 +34,14 @@ Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatal
 
 `hospital_discharge_long_term_care_partners` is a local snapshot of Taipei hospitals listed for discharge preparation linked with long-term-care services. Its location field is an address, so the directory offers external map lookup only—no geocoding or markers. Listing does not establish immediate services, capacity, eligibility, fees, or suitability. Refresh it with `npm run data:fetch:hospital-discharge-long-term-care-partners` followed by `npm run data:convert:hospital-discharge-long-term-care-partners`.
 
+### Funeral service businesses
+
+`funeral_service_businesses` is a local snapshot of Taipei's filed-and-approved funeral-service-business registry. It preserves all five official fields, keeps the responsible-person field inside expandable source detail, and offers external address lookup without geocoding or map markers. A listing is an administrative registry record only—not evidence of current operation, services, pricing, quality, eligibility, or a recommendation. Refresh it with `npm run data:fetch:funeral-service-businesses` followed by `npm run data:convert:funeral-service-businesses`.
+
+### Fixed-site temporary childcare
+
+`fixed_site_temporary_childcare` is a local snapshot of Taipei's fixed-site temporary-childcare directory. It preserves the five official fields, offers source-preserving location/contact filters and external address lookup only, and never represents real-time reservations, vacancies, opening hours, age limits, fees, eligibility, safety, or service quality. Refresh it with `npm run data:fetch:fixed-site-temporary-childcare` followed by `npm run data:convert:fixed-site-temporary-childcare`.
+
 ### Internal medicine institutions
 
 `internal_medicine_institutions` is a local snapshot of Taipei’s internal-medicine institution directory. It retains the five official fields, derives districts only from explicit address text or a conservative Taipei postal-code map, and exposes source/update metadata and quality flags. It is not real-time clinic, physician, appointment, or subspecialty availability information. Refresh it with `npm run data:fetch:internal-medicine-institutions` followed by `npm run data:convert:internal-medicine-institutions`.

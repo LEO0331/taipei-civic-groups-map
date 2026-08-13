@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 83,
-  "datedDatasetCount": 27,
+  "datasetDirectoryCount": 86,
+  "datedDatasetCount": 30,
   "unknownDateDatasetCount": 56,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
@@ -10,6 +10,8 @@
     "cosmetic-medicine-supervision-2024",
     "designated-foreigner-health-exam-hospitals",
     "disability-institution-capacity-and-vacancies",
+    "fixed-site-temporary-childcare",
+    "funeral-service-businesses",
     "hakka-organizations",
     "hemodialysis-medical-institutions",
     "hospice-palliative-care-institutions",
@@ -30,7 +32,8 @@
     "psychiatric-clinics",
     "taipei-cultural-heritage-assets",
     "travel-medicine-clinics",
-    "withdrawn-illegal-hotel-enforcement-records"
+    "withdrawn-illegal-hotel-enforcement-records",
+    "xray-examination-medical-institutions"
   ],
   "datasetsWithoutSourceDates": [
     "adult-influenza-vaccine-providers",

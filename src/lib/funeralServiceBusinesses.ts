@@ -1,0 +1,3 @@
+export type FuneralServiceBusinessRecord = { id: string; companyName: string; responsiblePersonRaw: string; postalCode: string; districtName: string; companyAddress: string; phoneRaw: string; phoneNumbers: string[]; hasAddress: boolean; hasPhone: boolean; hasPostalCode: boolean; hasResolvedDistrict: boolean; externalMapQuery: string; sourceValues: Record<string, string> };
+export const cleanFuneralValue = (value?: string) => (value ?? '').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+export const normalizeFuneralText = (value?: string) => cleanFuneralValue(value).replace(/臺/g, '台').toLocaleLowerCase();

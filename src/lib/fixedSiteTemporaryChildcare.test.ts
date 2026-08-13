@@ -1,0 +1,2 @@
+import assert from 'node:assert/strict'; import test from 'node:test'; import { cleanChildcareValue, normalizeChildcareText, splitChildcarePhones } from './fixedSiteTemporaryChildcare';
+test('preserves temporary-childcare phone text while splitting clear separators', () => { assert.equal(cleanChildcareValue(' A\n B '), 'A B'); assert.equal(normalizeChildcareText('臺北'), '台北'); assert.deepEqual(splitChildcarePhones('02-1#2； 03-4'), ['02-1#2', '03-4']); });

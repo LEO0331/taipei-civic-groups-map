@@ -1,0 +1,105 @@
+{
+  "totalRecords": 160,
+  "uniqueInstitutions": 160,
+  "districtsCovered": 12,
+  "byDistrict": [
+    {
+      "name": "大安區",
+      "count": 26
+    },
+    {
+      "name": "內湖區",
+      "count": 22
+    },
+    {
+      "name": "中山區",
+      "count": 20
+    },
+    {
+      "name": "信義區",
+      "count": 19
+    },
+    {
+      "name": "士林區",
+      "count": 17
+    },
+    {
+      "name": "中正區",
+      "count": 16
+    },
+    {
+      "name": "北投區",
+      "count": 14
+    },
+    {
+      "name": "松山區",
+      "count": 9
+    },
+    {
+      "name": "萬華區",
+      "count": 6
+    },
+    {
+      "name": "文山區",
+      "count": 6
+    },
+    {
+      "name": "南港區",
+      "count": 3
+    },
+    {
+      "name": "大同區",
+      "count": 2
+    }
+  ],
+  "byPostalCode": [
+    {
+      "name": "106",
+      "count": 25
+    },
+    {
+      "name": "114",
+      "count": 24
+    },
+    {
+      "name": "104",
+      "count": 20
+    },
+    {
+      "name": "110",
+      "count": 18
+    },
+    {
+      "name": "111",
+      "count": 17
+    },
+    {
+      "name": "100",
+      "count": 16
+    },
+    {
+      "name": "112",
+      "count": 14
+    },
+    {
+      "name": "105",
+      "count": 9
+    },
+    {
+      "name": "108",
+      "count": 6
+    },
+    {
+      "name": "116",
+      "count": 6
+    },
+    {
+      "name": "115",
+      "count": 3
+    },
+    {
+      "name": "103",
+      "count": 2
+    }
+  ]
+}

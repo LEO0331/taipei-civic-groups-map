@@ -1,0 +1,722 @@
+[
+  {
+    "id": "6ad11606ec3b9ec3",
+    "companyName": "武德禮儀有限公司",
+    "responsiblePersonRaw": "簡武德",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "companyAddress": "臺北市士林區中正路425號1樓",
+    "phoneRaw": "228815406",
+    "phoneNumbers": [
+      "228815406"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區中正路425號1樓 武德禮儀有限公司",
+    "sourceValues": {
+      "公司名稱": "武德禮儀有限公司",
+      "負責人": "簡武德",
+      "郵遞區號": "111",
+      "公司地址": "臺北市士林區中正路425號1樓",
+      "電話": "228815406"
+    }
+  },
+  {
+    "id": "860906463008b402",
+    "companyName": "金寶成殯葬禮儀有限公司",
+    "responsiblePersonRaw": "成勃",
+    "postalCode": "111",
+    "districtName": "士林區",
+    "companyAddress": "臺北市士林區延平北路6段218號",
+    "phoneRaw": "225095195",
+    "phoneNumbers": [
+      "225095195"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市士林區延平北路6段218號 金寶成殯葬禮儀有限公司",
+    "sourceValues": {
+      "公司名稱": "金寶成殯葬禮儀有限公司",
+      "負責人": "成勃",
+      "郵遞區號": "111",
+      "公司地址": "臺北市士林區延平北路6段218號",
+      "電話": "225095195"
+    }
+  },
+  {
+    "id": "58b36d6a7da24cc6",
+    "companyName": "懷德葬儀社",
+    "responsiblePersonRaw": "陳姿陵",
+    "postalCode": "103",
+    "districtName": "大同區",
+    "companyAddress": "臺北市大同區延平北路2段135巷13號",
+    "phoneRaw": "225532140",
+    "phoneNumbers": [
+      "225532140"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大同區延平北路2段135巷13號 懷德葬儀社",
+    "sourceValues": {
+      "公司名稱": "懷德葬儀社",
+      "負責人": "陳姿陵",
+      "郵遞區號": "103",
+      "公司地址": "臺北市大同區延平北路2段135巷13號",
+      "電話": "225532140"
+    }
+  },
+  {
+    "id": "2afe170d01668fae",
+    "companyName": "通化號葬儀服務有限公司",
+    "responsiblePersonRaw": "高天輝",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "companyAddress": "臺北市大安區文昌街280巷51號1樓",
+    "phoneRaw": "225010639",
+    "phoneNumbers": [
+      "225010639"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區文昌街280巷51號1樓 通化號葬儀服務有限公司",
+    "sourceValues": {
+      "公司名稱": "通化號葬儀服務有限公司",
+      "負責人": "高天輝",
+      "郵遞區號": "106",
+      "公司地址": "臺北市大安區文昌街280巷51號1樓",
+      "電話": "225010639"
+    }
+  },
+  {
+    "id": "1b537f1bec1c7546",
+    "companyName": "蓮風企業有限公司",
+    "responsiblePersonRaw": "李科達",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "companyAddress": "臺北市大安區辛亥路3段157巷22弄3號1樓",
+    "phoneRaw": "223690066",
+    "phoneNumbers": [
+      "223690066"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區辛亥路3段157巷22弄3號1樓 蓮風企業有限公司",
+    "sourceValues": {
+      "公司名稱": "蓮風企業有限公司",
+      "負責人": "李科達",
+      "郵遞區號": "106",
+      "公司地址": "臺北市大安區辛亥路3段157巷22弄3號1樓",
+      "電話": "223690066"
+    }
+  },
+  {
+    "id": "cc8ae28673bf0efc",
+    "companyName": "關懷殯儀禮儀用品社",
+    "responsiblePersonRaw": "羅王秋月",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "companyAddress": "臺北市大安區臥龍街188巷35號1樓",
+    "phoneRaw": "227326538",
+    "phoneNumbers": [
+      "227326538"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區臥龍街188巷35號1樓 關懷殯儀禮儀用品社",
+    "sourceValues": {
+      "公司名稱": "關懷殯儀禮儀用品社",
+      "負責人": "羅王秋月",
+      "郵遞區號": "106",
+      "公司地址": "臺北市大安區臥龍街188巷35號1樓",
+      "電話": "227326538"
+    }
+  },
+  {
+    "id": "dc399debe2dcb0c7",
+    "companyName": "福山國際有限公司",
+    "responsiblePersonRaw": "林金記",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "companyAddress": "臺北市大安區臥龍街188巷7號",
+    "phoneRaw": "227334535",
+    "phoneNumbers": [
+      "227334535"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區臥龍街188巷7號 福山國際有限公司",
+    "sourceValues": {
+      "公司名稱": "福山國際有限公司",
+      "負責人": "林金記",
+      "郵遞區號": "106",
+      "公司地址": "臺北市大安區臥龍街188巷7號",
+      "電話": "227334535"
+    }
+  },
+  {
+    "id": "c52a0a131825689b",
+    "companyName": "普陞禮儀社",
+    "responsiblePersonRaw": "李秀貞",
+    "postalCode": "106",
+    "districtName": "大安區",
+    "companyAddress": "臺北市大安區基隆路1段35巷9弄1號",
+    "phoneRaw": "227680399",
+    "phoneNumbers": [
+      "227680399"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市大安區基隆路1段35巷9弄1號 普陞禮儀社",
+    "sourceValues": {
+      "公司名稱": "普陞禮儀社",
+      "負責人": "李秀貞",
+      "郵遞區號": "106",
+      "公司地址": "臺北市大安區基隆路1段35巷9弄1號",
+      "電話": "227680399"
+    }
+  },
+  {
+    "id": "a2b05920ca21fca5",
+    "companyName": "上天鮮花禮品行",
+    "responsiblePersonRaw": "楊開祥",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段113巷1弄13號",
+    "phoneRaw": "225053376",
+    "phoneNumbers": [
+      "225053376"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段113巷1弄13號 上天鮮花禮品行",
+    "sourceValues": {
+      "公司名稱": "上天鮮花禮品行",
+      "負責人": "楊開祥",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段113巷1弄13號",
+      "電話": "225053376"
+    }
+  },
+  {
+    "id": "341437f40e383ae0",
+    "companyName": "永潤禮儀有限公司",
+    "responsiblePersonRaw": "羅英明",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段113巷1弄13號1樓",
+    "phoneRaw": "955269999",
+    "phoneNumbers": [
+      "955269999"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段113巷1弄13號1樓 永潤禮儀有限公司",
+    "sourceValues": {
+      "公司名稱": "永潤禮儀有限公司",
+      "負責人": "羅英明",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段113巷1弄13號1樓",
+      "電話": "955269999"
+    }
+  },
+  {
+    "id": "403678bec20f2010",
+    "companyName": "霖園殯葬有限公司",
+    "responsiblePersonRaw": "常楷山",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段113巷1弄13號1樓",
+    "phoneRaw": "226628015",
+    "phoneNumbers": [
+      "226628015"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段113巷1弄13號1樓 霖園殯葬有限公司",
+    "sourceValues": {
+      "公司名稱": "霖園殯葬有限公司",
+      "負責人": "常楷山",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段113巷1弄13號1樓",
+      "電話": "226628015"
+    }
+  },
+  {
+    "id": "e97ac558a1f2058e",
+    "companyName": "茂園有限公司",
+    "responsiblePersonRaw": "趙振華",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段133號2樓",
+    "phoneRaw": "225058445",
+    "phoneNumbers": [
+      "225058445"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段133號2樓 茂園有限公司",
+    "sourceValues": {
+      "公司名稱": "茂園有限公司",
+      "負責人": "趙振華",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段133號2樓",
+      "電話": "225058445"
+    }
+  },
+  {
+    "id": "df763fa45639baf6",
+    "companyName": "億隆生命事業股份有限公司",
+    "responsiblePersonRaw": "江裕隆",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段135巷18號1樓",
+    "phoneRaw": "225121313",
+    "phoneNumbers": [
+      "225121313"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段135巷18號1樓 億隆生命事業股份有限公司",
+    "sourceValues": {
+      "公司名稱": "億隆生命事業股份有限公司",
+      "負責人": "江裕隆",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段135巷18號1樓",
+      "電話": "225121313"
+    }
+  },
+  {
+    "id": "05264b004991460b",
+    "companyName": "宏昌殯儀有限公司",
+    "responsiblePersonRaw": "林俸永",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段135巷20弄3號",
+    "phoneRaw": "225154526",
+    "phoneNumbers": [
+      "225154526"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段135巷20弄3號 宏昌殯儀有限公司",
+    "sourceValues": {
+      "公司名稱": "宏昌殯儀有限公司",
+      "負責人": "林俸永",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段135巷20弄3號",
+      "電話": "225154526"
+    }
+  },
+  {
+    "id": "c0c8aca851bf7729",
+    "companyName": "祐暉國際有限公司",
+    "responsiblePersonRaw": "吳崇銘",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段135巷20弄3號",
+    "phoneRaw": "225024803",
+    "phoneNumbers": [
+      "225024803"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段135巷20弄3號 祐暉國際有限公司",
+    "sourceValues": {
+      "公司名稱": "祐暉國際有限公司",
+      "負責人": "吳崇銘",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段135巷20弄3號",
+      "電話": "225024803"
+    }
+  },
+  {
+    "id": "37f4eed5557aff1b",
+    "companyName": "益鴻企業有限公司",
+    "responsiblePersonRaw": "李建平",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段135巷29弄15號1樓",
+    "phoneRaw": "800222537",
+    "phoneNumbers": [
+      "800222537"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段135巷29弄15號1樓 益鴻企業有限公司",
+    "sourceValues": {
+      "公司名稱": "益鴻企業有限公司",
+      "負責人": "李建平",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段135巷29弄15號1樓",
+      "電話": "800222537"
+    }
+  },
+  {
+    "id": "e8bfa7120ea97343",
+    "companyName": "宏願禮儀禮品社",
+    "responsiblePersonRaw": "吳玉華",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段135巷29弄2號",
+    "phoneRaw": "225011190",
+    "phoneNumbers": [
+      "225011190"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段135巷29弄2號 宏願禮儀禮品社",
+    "sourceValues": {
+      "公司名稱": "宏願禮儀禮品社",
+      "負責人": "吳玉華",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段135巷29弄2號",
+      "電話": "225011190"
+    }
+  },
+  {
+    "id": "09b781deb9e83cd0",
+    "companyName": "慈懷禮儀有限公司",
+    "responsiblePersonRaw": "蔡志宏",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段192號1樓",
+    "phoneRaw": "228383128",
+    "phoneNumbers": [
+      "228383128"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段192號1樓 慈懷禮儀有限公司",
+    "sourceValues": {
+      "公司名稱": "慈懷禮儀有限公司",
+      "負責人": "蔡志宏",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段192號1樓",
+      "電話": "228383128"
+    }
+  },
+  {
+    "id": "28e6d12678dcbeb9",
+    "companyName": "福壽殯儀用品行",
+    "responsiblePersonRaw": "陳巧萍",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路2段202號1樓",
+    "phoneRaw": "225034613",
+    "phoneNumbers": [
+      "225034613"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路2段202號1樓 福壽殯儀用品行",
+    "sourceValues": {
+      "公司名稱": "福壽殯儀用品行",
+      "負責人": "陳巧萍",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路2段202號1樓",
+      "電話": "225034613"
+    }
+  },
+  {
+    "id": "a9c9e4c133c5efd6",
+    "companyName": "玉佛山禮儀有限公司",
+    "responsiblePersonRaw": "高峻弘",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區民權東路二段123號1樓",
+    "phoneRaw": "225010639",
+    "phoneNumbers": [
+      "225010639"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區民權東路二段123號1樓 玉佛山禮儀有限公司",
+    "sourceValues": {
+      "公司名稱": "玉佛山禮儀有限公司",
+      "負責人": "高峻弘",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區民權東路二段123號1樓",
+      "電話": "225010639"
+    }
+  },
+  {
+    "id": "a581394973b42bcb",
+    "companyName": "民笙禮儀社",
+    "responsiblePersonRaw": "張萬來",
+    "postalCode": "104",
+    "districtName": "中山區",
+    "companyAddress": "臺北市中山區龍江路342巷34號2樓",
+    "phoneRaw": "225173918",
+    "phoneNumbers": [
+      "225173918"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中山區龍江路342巷34號2樓 民笙禮儀社",
+    "sourceValues": {
+      "公司名稱": "民笙禮儀社",
+      "負責人": "張萬來",
+      "郵遞區號": "104",
+      "公司地址": "臺北市中山區龍江路342巷34號2樓",
+      "電話": "225173918"
+    }
+  },
+  {
+    "id": "4790d2c70dab1fe9",
+    "companyName": "甫昆企業有限公司",
+    "responsiblePersonRaw": "劉河山",
+    "postalCode": "100",
+    "districtName": "中正區",
+    "companyAddress": "臺北市中正區羅斯福路3段100號之64",
+    "phoneRaw": "223028670",
+    "phoneNumbers": [
+      "223028670"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市中正區羅斯福路3段100號之64 甫昆企業有限公司",
+    "sourceValues": {
+      "公司名稱": "甫昆企業有限公司",
+      "負責人": "劉河山",
+      "郵遞區號": "100",
+      "公司地址": "臺北市中正區羅斯福路3段100號之64",
+      "電話": "223028670"
+    }
+  },
+  {
+    "id": "31cc0b7271ccfc06",
+    "companyName": "世新鮮花禮儀店",
+    "responsiblePersonRaw": "李崇豪",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "companyAddress": "臺北市文山區景華街45號1樓",
+    "phoneRaw": "229305666",
+    "phoneNumbers": [
+      "229305666"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區景華街45號1樓 世新鮮花禮儀店",
+    "sourceValues": {
+      "公司名稱": "世新鮮花禮儀店",
+      "負責人": "李崇豪",
+      "郵遞區號": "116",
+      "公司地址": "臺北市文山區景華街45號1樓",
+      "電話": "229305666"
+    }
+  },
+  {
+    "id": "a01429f08f273475",
+    "companyName": "台灣仁本生命科技股份有限公司",
+    "responsiblePersonRaw": "林宥馨",
+    "postalCode": "116",
+    "districtName": "文山區",
+    "companyAddress": "臺北市文山區萬寧街27號1樓",
+    "phoneRaw": "22399856",
+    "phoneNumbers": [
+      "22399856"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市文山區萬寧街27號1樓 台灣仁本生命科技股份有限公司",
+    "sourceValues": {
+      "公司名稱": "台灣仁本生命科技股份有限公司",
+      "負責人": "林宥馨",
+      "郵遞區號": "116",
+      "公司地址": "臺北市文山區萬寧街27號1樓",
+      "電話": "22399856"
+    }
+  },
+  {
+    "id": "cd87ed70b82841f8",
+    "companyName": "八仙禮儀社",
+    "responsiblePersonRaw": "黃榮三",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "companyAddress": "臺北市北投區中央北路2段201號4樓",
+    "phoneRaw": "228923182",
+    "phoneNumbers": [
+      "228923182"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區中央北路2段201號4樓 八仙禮儀社",
+    "sourceValues": {
+      "公司名稱": "八仙禮儀社",
+      "負責人": "黃榮三",
+      "郵遞區號": "112",
+      "公司地址": "臺北市北投區中央北路2段201號4樓",
+      "電話": "228923182"
+    }
+  },
+  {
+    "id": "d0e40e9c54c081b2",
+    "companyName": "東源禮儀用品行",
+    "responsiblePersonRaw": "陳政宏",
+    "postalCode": "112",
+    "districtName": "北投區",
+    "companyAddress": "臺北市北投區中正街11號1樓",
+    "phoneRaw": "228913563",
+    "phoneNumbers": [
+      "228913563"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市北投區中正街11號1樓 東源禮儀用品行",
+    "sourceValues": {
+      "公司名稱": "東源禮儀用品行",
+      "負責人": "陳政宏",
+      "郵遞區號": "112",
+      "公司地址": "臺北市北投區中正街11號1樓",
+      "電話": "228913563"
+    }
+  },
+  {
+    "id": "88b83e6f00ef9f8b",
+    "companyName": "國統環保工程開發股份有限公司",
+    "responsiblePersonRaw": "陳振豐",
+    "postalCode": "105",
+    "districtName": "松山區",
+    "companyAddress": "臺北市松山區敦化北路170號4樓c室",
+    "phoneRaw": "227185299",
+    "phoneNumbers": [
+      "227185299"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市松山區敦化北路170號4樓c室 國統環保工程開發股份有限公司",
+    "sourceValues": {
+      "公司名稱": "國統環保工程開發股份有限公司",
+      "負責人": "陳振豐",
+      "郵遞區號": "105",
+      "公司地址": "臺北市松山區敦化北路170號4樓c室",
+      "電話": "227185299"
+    }
+  },
+  {
+    "id": "278fc68b1edf24b2",
+    "companyName": "玫瑰園國際股份有限公司",
+    "responsiblePersonRaw": "鍾聲揚",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "companyAddress": "臺北市信義區光復南路495號9樓之5",
+    "phoneRaw": "287802358",
+    "phoneNumbers": [
+      "287802358"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區光復南路495號9樓之5 玫瑰園國際股份有限公司",
+    "sourceValues": {
+      "公司名稱": "玫瑰園國際股份有限公司",
+      "負責人": "鍾聲揚",
+      "郵遞區號": "110",
+      "公司地址": "臺北市信義區光復南路495號9樓之5",
+      "電話": "287802358"
+    }
+  },
+  {
+    "id": "1e039bc84f39d4a6",
+    "companyName": "根登建設股份有限公司",
+    "responsiblePersonRaw": "吳麗雲",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "companyAddress": "臺北市信義區信義路5段109號3樓之1",
+    "phoneRaw": "287898800",
+    "phoneNumbers": [
+      "287898800"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區信義路5段109號3樓之1 根登建設股份有限公司",
+    "sourceValues": {
+      "公司名稱": "根登建設股份有限公司",
+      "負責人": "吳麗雲",
+      "郵遞區號": "110",
+      "公司地址": "臺北市信義區信義路5段109號3樓之1",
+      "電話": "287898800"
+    }
+  },
+  {
+    "id": "b910862ca7ad0bb7",
+    "companyName": "菩提心禮儀有限公司冬瓜分公司",
+    "responsiblePersonRaw": "曹美惠",
+    "postalCode": "110",
+    "districtName": "信義區",
+    "companyAddress": "臺北市信義區基隆路1段420號12樓之1",
+    "phoneRaw": "225011958",
+    "phoneNumbers": [
+      "225011958"
+    ],
+    "hasAddress": true,
+    "hasPhone": true,
+    "hasPostalCode": true,
+    "hasResolvedDistrict": true,
+    "externalMapQuery": "臺北市信義區基隆路1段420號12樓之1 菩提心禮儀有限公司冬瓜分公司",
+    "sourceValues": {
+      "公司名稱": "菩提心禮儀有限公司冬瓜分公司",
+      "負責人": "曹美惠",
+      "郵遞區號": "110",
+      "公司地址": "臺北市信義區基隆路1段420號12樓之1",
+      "電話": "225011958"
+    }
+  }
+]

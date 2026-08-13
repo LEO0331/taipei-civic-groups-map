@@ -1,0 +1,4 @@
+export type FixedSiteTemporaryChildcareRecord = { id: string; sourceSequenceNumber: string; institutionTypeRaw: string; institutionType: string; institutionName: string; address: string; districtName: string; phoneRaw: string; phoneNumbers: string[]; hasAddress: boolean; hasPhone: boolean; hasResolvedDistrict: boolean; externalMapQuery: string; sourceValues: Record<string, string> };
+export const cleanChildcareValue = (value: string | undefined) => (value ?? '').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim();
+export const normalizeChildcareText = (value: string | undefined) => cleanChildcareValue(value).replaceAll('臺', '台').toLocaleLowerCase('zh-Hant');
+export const splitChildcarePhones = (value: string) => cleanChildcareValue(value).split(/[、；;\n]+/).map(cleanChildcareValue).filter(Boolean);

@@ -1,0 +1,14 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=f5323b91-1447-4e0e-829d-565b75b87d06",
+  "sourceAgency": "臺北市政府衛生局",
+  "sourceFileUpdatedAt": "2025-06-11T15:08:38+08:00",
+  "metadataUpdatedAt": "2026-07-14T13:09:06+08:00",
+  "headers": [
+    "序號",
+    "機構名稱",
+    "郵遞區號",
+    "地址",
+    "電話"
+  ],
+  "outputRecords": 146
+}

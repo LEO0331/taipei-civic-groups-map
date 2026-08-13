@@ -1,0 +1,39 @@
+{
+  "funeralServiceBusinesses": {
+    "sourcePage": "https://data.taipei/dataset/detail?id=20143c69-a790-4dec-bb5e-1f0ed7e76c1e",
+    "sourceAgency": "臺北市殯葬管理處",
+    "sourceFileUpdatedAt": "2025-06-11T10:33:01+08:00",
+    "metadataUpdatedAt": "2025-06-11T10:33:18+08:00",
+    "updateFrequency": "annual",
+    "headers": [
+      "公司名稱",
+      "負責人",
+      "郵遞區號",
+      "公司地址",
+      "電話"
+    ],
+    "inputRows": 30,
+    "outputRecords": 30,
+    "issueCount": 4,
+    "issues": {
+      "exactDuplicateRows": [],
+      "missingCompany": [],
+      "missingAddress": [],
+      "missingPhone": [],
+      "invalidPostalCode": [],
+      "unresolvedDistrict": [],
+      "sameCompanyMultipleAddresses": [],
+      "sameAddressMultipleCompanies": [
+        "11",
+        "12",
+        "15",
+        "16"
+      ]
+    },
+    "notes": [
+      "All five official source fields are retained in sourceValues.",
+      "Responsible-person data appears only in source detail and is not used as a default search or profile field.",
+      "Addresses have no official coordinates and are not geocoded."
+    ]
+  }
+}

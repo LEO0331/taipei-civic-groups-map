@@ -104,6 +104,9 @@ import TravelMedicineClinicsModule from './TravelMedicineClinicsModule';
 import HakkaOrganizationsModule from './HakkaOrganizationsModule';
 import HospitalDischargeLongTermCarePartnersModule from './HospitalDischargeLongTermCarePartnersModule';
 import WithdrawnIllegalHotelEnforcementRecordsModule from './WithdrawnIllegalHotelEnforcementRecordsModule';
+import FuneralServiceBusinessesModule from './FuneralServiceBusinessesModule';
+import FixedSiteTemporaryChildcareModule from './FixedSiteTemporaryChildcareModule';
+import XrayExaminationMedicalInstitutionsModule from './XrayExaminationMedicalInstitutionsModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -768,7 +771,10 @@ export default function App() {
   tabs.splice(8, 0, ['hakkaOrganizations', language === 'zh' ? '臺北市客家社團' : 'Taipei Hakka Organizations']);
   tabs.splice(9, 0, ['hospitalDischargeLongTermCarePartners', language === 'zh' ? '出院準備銜接長照服務合作醫院' : 'Hospital Discharge-to-Long-Term Care Partners']);
   tabs.splice(10, 0, ['withdrawnIllegalHotelEnforcementRecords', language === 'zh' ? '撤銷裁罰非法旅館業名單' : 'Withdrawn Illegal Hotel Enforcement Records']);
-  tabs.splice(11, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
+  tabs.splice(11, 0, ['funeralServiceBusinesses', language === 'zh' ? '殯葬禮儀服務業' : 'Funeral Service Businesses']);
+  tabs.splice(12, 0, ['fixedSiteTemporaryChildcare', language === 'zh' ? '定點臨托' : 'Fixed-Site Temporary Childcare']);
+  tabs.splice(13, 0, ['xrayExaminationMedicalInstitutions', language === 'zh' ? 'X光檢查醫療機構' : 'X-ray Examination Medical Institutions']);
+  tabs.splice(14, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
   tabs.splice(9, 0, ['internalMedicineInstitutions', language === 'zh' ? '臺北市內科醫療機構' : 'Taipei Internal Medicine Institutions']);
@@ -920,6 +926,9 @@ export default function App() {
       {tab === 'hakkaOrganizations' && <HakkaOrganizationsModule language={language} />}
       {tab === 'hospitalDischargeLongTermCarePartners' && <HospitalDischargeLongTermCarePartnersModule language={language} />}
       {tab === 'withdrawnIllegalHotelEnforcementRecords' && <WithdrawnIllegalHotelEnforcementRecordsModule language={language} />}
+      {tab === 'funeralServiceBusinesses' && <FuneralServiceBusinessesModule language={language} />}
+      {tab === 'fixedSiteTemporaryChildcare' && <FixedSiteTemporaryChildcareModule language={language} />}
+      {tab === 'xrayExaminationMedicalInstitutions' && <XrayExaminationMedicalInstitutionsModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

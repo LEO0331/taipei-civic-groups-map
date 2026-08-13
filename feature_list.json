@@ -89,6 +89,22 @@
       "evidence": "2026-08-13: fetched and converted 26 official source rows. Verified that the location field contains addresses, not coordinates; implemented address-only external map lookup, practical contact filters, source-preserving export, and data-quality disclosure."
     },
     {
+      "id": "fixed-site-temporary-childcare",
+      "name": "Taipei fixed-site temporary childcare directory",
+      "description": "Present official fixed-site temporary-childcare location records without inferring real-time booking, vacancies, age limits, hours, fees, eligibility, safety, or quality.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted 23 official source rows, preserving all five fields. Added source-preserving location and contact search, export, external map lookup only, confirmation-first messaging, and child/family privacy safeguards."
+    },
+    {
+      "id": "funeral-service-businesses",
+      "name": "Taipei funeral service businesses registry",
+      "description": "Present the official administrative registry without inferring current operation, services, prices, quality, eligibility, or recommendations.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-13: fetched and converted 30 official source rows, preserving all five fields. Added source-preserving search, filtering, export, external map lookup only, and privacy-default handling for the responsible-person field."
+    },
+    {
       "id": "withdrawn-illegal-hotel-enforcement-records",
       "name": "Withdrawn illegal-hotel enforcement history",
       "description": "Present withdrawn/revoked administrative enforcement records as historical source data without current-illegality or liability claims.",

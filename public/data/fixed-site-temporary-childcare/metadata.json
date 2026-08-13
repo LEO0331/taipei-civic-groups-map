@@ -1,0 +1,30 @@
+{
+  "sourcePage": "https://data.taipei/dataset/detail?id=a7462972-0380-4987-99fb-2071e798ce66",
+  "sourceAgency": "臺北市政府社會局",
+  "sourceFileUpdatedAt": "2025-06-13T18:36:01+08:00",
+  "metadataUpdatedAt": "2025-06-13T18:36:50+08:00",
+  "updateFrequency": "annual",
+  "headers": [
+    "序號",
+    "機構類型",
+    "機構名稱",
+    "地址",
+    "電話"
+  ],
+  "inputRows": 23,
+  "outputRecords": 23,
+  "issueCount": 0,
+  "issues": {
+    "exactDuplicateRows": [],
+    "missingInstitution": [],
+    "missingAddress": [],
+    "missingPhone": [],
+    "unresolvedDistrict": [],
+    "suspectedDuplicateNameAddress": []
+  },
+  "notes": [
+    "All official source fields are retained in sourceValues.",
+    "Addresses are source text only; no coordinates are created.",
+    "The directory contains no real-time booking, vacancies, age limits, hours, or fee data."
+  ]
+}

@@ -110,6 +110,7 @@ import XrayExaminationMedicalInstitutionsModule from './XrayExaminationMedicalIn
 import GovernmentEthicsOfficesModule from './GovernmentEthicsOfficesModule';
 import RehabilitationMedicineInstitutionsModule from './RehabilitationMedicineInstitutionsModule';
 import HomeDisabledFamilyPhysicianCareProvidersModule from './HomeDisabledFamilyPhysicianCareProvidersModule';
+import EducationVolunteerRecognitionRecordsModule from './EducationVolunteerRecognitionRecordsModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -780,6 +781,7 @@ export default function App() {
   tabs.splice(14, 0, ['governmentEthicsOffices', language === 'zh' ? '政風機構聯絡資訊' : 'Government Ethics Office Contacts']);
   tabs.splice(15, 0, ['rehabilitationMedicineInstitutions', language === 'zh' ? '復健科醫療機構' : 'Rehabilitation Medicine Institutions']);
   tabs.splice(16, 0, ['homeDisabledFamilyPhysicianCareProviders', language === 'zh' ? '居家失能個案家庭醫師照護' : 'Home-Based Family Physician Care Providers']);
+  tabs.splice(17, 0, ['educationVolunteerRecognitionRecords', language === 'zh' ? '教育局志工表揚名單' : 'Education Bureau Volunteer Recognition Records']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -938,6 +940,7 @@ export default function App() {
       {tab === 'governmentEthicsOffices' && <GovernmentEthicsOfficesModule language={language} />}
       {tab === 'rehabilitationMedicineInstitutions' && <RehabilitationMedicineInstitutionsModule language={language} />}
       {tab === 'homeDisabledFamilyPhysicianCareProviders' && <HomeDisabledFamilyPhysicianCareProvidersModule language={language} />}
+      {tab === 'educationVolunteerRecognitionRecords' && <EducationVolunteerRecognitionRecordsModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

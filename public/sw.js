@@ -1,4 +1,4 @@
-const CACHE = 'taipei-civic-groups-v107';
+const CACHE = 'taipei-civic-groups-v108';
 const BASE = '/taipei-civic-groups-map/';
 const DATA = [
   `${BASE}data/civic-groups.json`,
@@ -265,6 +265,7 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(Promise.all([
     caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key)))),
     self.clients.claim(),
+    self.registration.unregister(),
   ]));
 });
 self.addEventListener('fetch', (event) => {

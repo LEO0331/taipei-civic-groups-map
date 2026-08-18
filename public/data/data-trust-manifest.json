@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 88,
+  "datasetDirectoryCount": 92,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -77,6 +77,9 @@
       "id": "early-intervention-medical-providers"
     },
     {
+      "id": "education-volunteer-recognition-records"
+    },
+    {
       "id": "employment-agency-intermediary-companies"
     },
     {
@@ -119,6 +122,9 @@
     {
       "id": "hemodialysis-medical-institutions",
       "sourceUpdatedAt": "2026-07-28T02:53:31.510Z"
+    },
+    {
+      "id": "home-disabled-family-physician-care-providers"
     },
     {
       "id": "home-nursing-institutions"
@@ -192,6 +198,9 @@
       "id": "optometry-institutions"
     },
     {
+      "id": "orthopedic-facilities"
+    },
+    {
       "id": "out-of-city-funeral-service-businesses"
     },
     {
@@ -242,6 +251,9 @@
     },
     {
       "id": "registered-postpartum-care-institutions"
+    },
+    {
+      "id": "rehabilitation-medicine-institutions"
     },
     {
       "id": "rotavirus-vaccine-subsidy-providers"

@@ -112,6 +112,7 @@ import RehabilitationMedicineInstitutionsModule from './RehabilitationMedicineIn
 import HomeDisabledFamilyPhysicianCareProvidersModule from './HomeDisabledFamilyPhysicianCareProvidersModule';
 import EducationVolunteerRecognitionRecordsModule from './EducationVolunteerRecognitionRecordsModule';
 import OrthopedicFacilitiesModule from './OrthopedicFacilitiesModule';
+import EntFacilitiesModule from './EntFacilitiesModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -784,6 +785,7 @@ export default function App() {
   tabs.splice(16, 0, ['homeDisabledFamilyPhysicianCareProviders', language === 'zh' ? '居家失能個案家庭醫師照護' : 'Home-Based Family Physician Care Providers']);
   tabs.splice(17, 0, ['educationVolunteerRecognitionRecords', language === 'zh' ? '教育局志工表揚名單' : 'Education Bureau Volunteer Recognition Records']);
   tabs.splice(18, 0, ['orthopedicFacilities', language === 'zh' ? '骨科醫療機構' : 'Orthopedic Medical Facilities']);
+  tabs.splice(19, 0, ['entFacilities', language === 'zh' ? '耳鼻喉科醫療機構' : 'ENT Medical Facilities']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -944,6 +946,7 @@ export default function App() {
       {tab === 'homeDisabledFamilyPhysicianCareProviders' && <HomeDisabledFamilyPhysicianCareProvidersModule language={language} />}
       {tab === 'educationVolunteerRecognitionRecords' && <EducationVolunteerRecognitionRecordsModule language={language} />}
       {tab === 'orthopedicFacilities' && <OrthopedicFacilitiesModule language={language} />}
+      {tab === 'entFacilities' && <EntFacilitiesModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

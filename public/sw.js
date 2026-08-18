@@ -1,4 +1,4 @@
-const CACHE = 'taipei-civic-groups-v106';
+const CACHE = 'taipei-civic-groups-v107';
 const BASE = '/taipei-civic-groups-map/';
 const DATA = [
   `${BASE}data/civic-groups.json`,
@@ -251,7 +251,11 @@ async function cacheAppShell() {
   const shell = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
     .map((match) => match[1])
     .filter((url) => url.startsWith(BASE));
-  await cache.addAll([...new Set([...shell, ...DATA])]);
+  // Data files are fetched on demand. Pre-caching the entire, evolving catalogue
+  // can fail an install on one missing file and can pair stale HTML with new chunks.
+  await Promise.all([...new Set(shell)].map(async (url) => {
+    try { await cache.add(url); } catch { /* retain a working shell when one asset is unavailable */ }
+  }));
 }
 
 self.addEventListener('install', (event) => {

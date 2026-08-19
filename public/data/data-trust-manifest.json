@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 92,
+  "datasetDirectoryCount": 93,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -72,6 +72,9 @@
     },
     {
       "id": "domestic-employment-service-agencies"
+    },
+    {
+      "id": "early-intervention-community-services"
     },
     {
       "id": "early-intervention-medical-providers"

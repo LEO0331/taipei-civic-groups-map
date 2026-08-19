@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 93,
+  "datasetDirectoryCount": 94,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 61,
+  "unknownDateDatasetCount": 62,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -67,6 +67,7 @@
     "home-nursing-institutions",
     "hospital-hemodialysis-resources",
     "hotel-hygiene-certification-directory",
+    "influenza-vaccine-providers-under3",
     "kindergarten-basic-evaluation-pass-records",
     "labor-standard-act-violation-records",
     "licensed-waste-cooking-oil-collectors",

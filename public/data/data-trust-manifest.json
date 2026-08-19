@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 93,
+  "datasetDirectoryCount": 94,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -154,6 +154,9 @@
       "id": "influenza-vaccine-providers-children-3plus",
       "sourceName": "臺北市流感疫苗合約醫療院所名冊(3歲以上(含3歲)幼童)",
       "sourceUpdatedAt": "2026-03-17"
+    },
+    {
+      "id": "influenza-vaccine-providers-under3"
     },
     {
       "id": "internal-medicine-institutions",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 95,
+  "datasetDirectoryCount": 96,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -62,6 +62,9 @@
     },
     {
       "id": "diabetes-shared-care-medical-institutions"
+    },
+    {
+      "id": "disability-day-services"
     },
     {
       "id": "disability-institution-capacity-and-vacancies",

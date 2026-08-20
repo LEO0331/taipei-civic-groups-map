@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 95,
+  "datasetDirectoryCount": 96,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 63,
+  "unknownDateDatasetCount": 64,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -50,6 +50,7 @@
     "contracted-senior-health-examination-providers",
     "cultural-arts-foundations",
     "diabetes-shared-care-medical-institutions",
+    "disability-day-services",
     "domestic-employment-agency-evaluations",
     "domestic-employment-service-agencies",
     "early-intervention-community-services",

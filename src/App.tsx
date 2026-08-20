@@ -118,6 +118,7 @@ import EarlyInterventionCommunityServicesModule from './EarlyInterventionCommuni
 import InfluenzaVaccineProvidersUnder3Module from './InfluenzaVaccineProvidersUnder3Module';
 import SeniorServicesModule from './SeniorServicesModule';
 import EntrustedPublicAssetOperationsModule from './EntrustedPublicAssetOperationsModule';
+import DisabilityDayServicesModule from './DisabilityDayServicesModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -796,6 +797,7 @@ export default function App() {
   tabs.splice(22, 0, ['influenzaVaccineProvidersUnder3', language === 'zh' ? '3歲以下幼兒流感疫苗合約院所' : 'Flu Vaccination Clinics – Children Under 3']);
   tabs.splice(23, 0, ['seniorServices', language === 'zh' ? '銀髮服務機構' : 'Senior Services']);
   tabs.splice(24, 0, ['entrustedPublicAssetOperations', language === 'zh' ? '市有財產委託經營' : 'Entrusted Public Asset Operations']);
+  tabs.splice(25, 0, ['disabilityDayServices', language === 'zh' ? '身心障礙日間服務' : 'Disability Day Services']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -962,6 +964,7 @@ export default function App() {
       {tab === 'influenzaVaccineProvidersUnder3' && <InfluenzaVaccineProvidersUnder3Module language={language} />}
       {tab === 'seniorServices' && <SeniorServicesModule language={language} />}
       {tab === 'entrustedPublicAssetOperations' && <EntrustedPublicAssetOperationsModule language={language} />}
+      {tab === 'disabilityDayServices' && <DisabilityDayServicesModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

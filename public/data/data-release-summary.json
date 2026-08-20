@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 94,
+  "datasetDirectoryCount": 95,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 62,
+  "unknownDateDatasetCount": 63,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -57,6 +57,7 @@
     "education-volunteer-recognition-records",
     "employment-agency-intermediary-companies",
     "enterprise-headquarters-distribution",
+    "entrusted-public-asset-operations",
     "family-medicine-institutions",
     "fertility-subsidy-contracted-hospitals",
     "five-cancer-screening-providers",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 94,
+  "datasetDirectoryCount": 95,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -87,6 +87,9 @@
     },
     {
       "id": "enterprise-headquarters-distribution"
+    },
+    {
+      "id": "entrusted-public-asset-operations"
     },
     {
       "id": "family-medicine-institutions"

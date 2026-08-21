@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 96,
+  "datasetDirectoryCount": 97,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -93,6 +93,9 @@
     },
     {
       "id": "entrusted-public-asset-operations"
+    },
+    {
+      "id": "environmental-pesticide-vendors"
     },
     {
       "id": "family-medicine-institutions"

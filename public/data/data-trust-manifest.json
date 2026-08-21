@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 98,
+  "datasetDirectoryCount": 99,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -170,6 +170,9 @@
     {
       "id": "internal-medicine-institutions",
       "sourceUpdatedAt": "2025-06-11T16:40:31+08:00"
+    },
+    {
+      "id": "internet-addiction-services"
     },
     {
       "id": "kindergarten-basic-evaluation-pass-records"

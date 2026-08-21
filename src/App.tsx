@@ -123,6 +123,7 @@ import EnvironmentalPesticideVendorsModule from './EnvironmentalPesticideVendors
 import LaborPensionActViolationsModule from './LaborPensionActViolationsModule';
 import InternetAddictionServicesModule from './InternetAddictionServicesModule';
 import ChildYouthWelfareInstitutionsModule from './ChildYouthWelfareInstitutionsModule';
+import AddictionTreatmentFacilitiesModule from './AddictionTreatmentFacilitiesModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -806,6 +807,7 @@ export default function App() {
   tabs.splice(27, 0, ['laborPensionActViolations', language === 'zh' ? '勞工退休金條例違規' : 'Labor Pension Act Violations']);
   tabs.splice(28, 0, ['internetAddictionServices', language === 'zh' ? '網癮治療服務機構' : 'Internet Addiction Services']);
   tabs.splice(29, 0, ['childYouthWelfareInstitutions', language === 'zh' ? '兒少福利機構' : 'Child & Youth Welfare Services']);
+  tabs.splice(30, 0, ['addictionTreatmentFacilities', language === 'zh' ? '藥癮戒治機構' : 'Addiction Treatment Facilities']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -977,6 +979,7 @@ export default function App() {
       {tab === 'laborPensionActViolations' && <LaborPensionActViolationsModule language={language} />}
       {tab === 'internetAddictionServices' && <InternetAddictionServicesModule language={language} />}
       {tab === 'childYouthWelfareInstitutions' && <ChildYouthWelfareInstitutionsModule language={language} />}
+      {tab === 'addictionTreatmentFacilities' && <AddictionTreatmentFacilitiesModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

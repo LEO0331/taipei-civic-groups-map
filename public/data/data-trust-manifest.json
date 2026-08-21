@@ -1,8 +1,11 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 100,
+  "datasetDirectoryCount": 101,
   "datedDatasetCount": 32,
   "entries": [
+    {
+      "id": "addiction-treatment-facilities"
+    },
     {
       "id": "adult-influenza-vaccine-providers"
     },

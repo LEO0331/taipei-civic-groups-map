@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 100,
+  "datasetDirectoryCount": 101,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 68,
+  "unknownDateDatasetCount": 69,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -38,6 +38,7 @@
     "xray-examination-medical-institutions"
   ],
   "datasetsWithoutSourceDates": [
+    "addiction-treatment-facilities",
     "adult-influenza-vaccine-providers",
     "alternative-service-reserve-statistics",
     "approved-gas-water-heater-installers",

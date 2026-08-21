@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 97,
+  "datasetDirectoryCount": 98,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -173,6 +173,9 @@
     },
     {
       "id": "kindergarten-basic-evaluation-pass-records"
+    },
+    {
+      "id": "labor-pension-act-violations"
     },
     {
       "id": "labor-standard-act-violation-records"

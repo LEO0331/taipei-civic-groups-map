@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 99,
+  "datasetDirectoryCount": 100,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 67,
+  "unknownDateDatasetCount": 68,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -44,6 +44,7 @@
     "beauty-hairdressing-hygiene-certifications",
     "bottled-gas-retailers",
     "child-youth-residential-placement-institutions",
+    "child-youth-welfare-institutions",
     "community-care-service-sites",
     "community-integrated-care-level-c-units",
     "community-public-childcare-homes",

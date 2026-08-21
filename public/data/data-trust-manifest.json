@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 99,
+  "datasetDirectoryCount": 100,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -28,6 +28,9 @@
     },
     {
       "id": "child-youth-residential-placement-institutions"
+    },
+    {
+      "id": "child-youth-welfare-institutions"
     },
     {
       "id": "community-care-service-sites"

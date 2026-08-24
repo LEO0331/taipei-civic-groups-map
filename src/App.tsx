@@ -125,6 +125,7 @@ import InternetAddictionServicesModule from './InternetAddictionServicesModule';
 import ChildYouthWelfareInstitutionsModule from './ChildYouthWelfareInstitutionsModule';
 import AddictionTreatmentFacilitiesModule from './AddictionTreatmentFacilitiesModule';
 import EmergencyAssistanceProvidersModule from './EmergencyAssistanceProvidersModule';
+import NationwideAddictionTreatmentServicesModule from './NationwideAddictionTreatmentServicesModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -810,6 +811,7 @@ export default function App() {
   tabs.splice(29, 0, ['childYouthWelfareInstitutions', language === 'zh' ? '兒少福利機構' : 'Child & Youth Welfare Services']);
   tabs.splice(30, 0, ['addictionTreatmentFacilities', language === 'zh' ? '藥癮戒治機構' : 'Addiction Treatment Facilities']);
   tabs.splice(31, 0, ['emergencyAssistanceProviders', language === 'zh' ? '急難救助提供單位' : 'Emergency Assistance Providers']);
+  tabs.splice(32, 0, ['nationwideAddictionTreatmentServices', language === 'zh' ? '藥癮戒治與替代治療' : 'Addiction Treatment Services']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -983,6 +985,7 @@ export default function App() {
       {tab === 'childYouthWelfareInstitutions' && <ChildYouthWelfareInstitutionsModule language={language} />}
       {tab === 'addictionTreatmentFacilities' && <AddictionTreatmentFacilitiesModule language={language} />}
       {tab === 'emergencyAssistanceProviders' && <EmergencyAssistanceProvidersModule language={language} />}
+      {tab === 'nationwideAddictionTreatmentServices' && <NationwideAddictionTreatmentServicesModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

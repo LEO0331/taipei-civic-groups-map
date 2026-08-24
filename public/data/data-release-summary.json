@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 101,
+  "datasetDirectoryCount": 102,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 69,
+  "unknownDateDatasetCount": 70,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -58,6 +58,7 @@
     "early-intervention-community-services",
     "early-intervention-medical-providers",
     "education-volunteer-recognition-records",
+    "emergency-assistance-providers",
     "employment-agency-intermediary-companies",
     "enterprise-headquarters-distribution",
     "entrusted-public-asset-operations",

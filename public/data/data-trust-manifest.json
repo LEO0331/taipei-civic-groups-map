@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 101,
+  "datasetDirectoryCount": 102,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -90,6 +90,9 @@
     },
     {
       "id": "education-volunteer-recognition-records"
+    },
+    {
+      "id": "emergency-assistance-providers"
     },
     {
       "id": "employment-agency-intermediary-companies"

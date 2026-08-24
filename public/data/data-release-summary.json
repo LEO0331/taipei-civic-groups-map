@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 103,
+  "datasetDirectoryCount": 104,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 71,
+  "unknownDateDatasetCount": 72,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -69,6 +69,7 @@
     "general-chinese-medicine-institutions",
     "general-dental-medical-institutions",
     "general-western-medicine-institutions",
+    "healthcare-welfare-budget",
     "home-disabled-family-physician-care-providers",
     "home-nursing-institutions",
     "hospital-hemodialysis-resources",

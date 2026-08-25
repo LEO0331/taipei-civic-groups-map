@@ -455,5 +455,22 @@
       "Addresses are source text only; no coordinates are created.",
       "The directory does not indicate real-time X-ray availability, equipment, appointments, or examination types."
     ]
+  },
+  "publicPneumococcalVaccineMedicalProviders": {
+    "source": "臺北市75歲以上長者肺炎鏈球菌疫苗特約醫療院所名單",
+    "sourceAgency": "臺北市政府衛生局",
+    "sourcePage": "https://data.taipei/dataset/detail?id=f999b187-bf9c-4df1-8877-4038762d29c5",
+    "inputFile": "public-pneumococcal-vaccine-providers.csv",
+    "fileSize": 26049,
+    "convertedAt": "2026-08-25T08:24:38.688Z",
+    "encoding": "UTF-8-SIG / UTF-8",
+    "inputRows": 288,
+    "outputRecords": 288,
+    "duplicateKeys": [],
+    "notes": [
+      "UTF-8-SIG, Big5, and CP950 supported.",
+      "Phone numbers and district codes are treated as strings.",
+      "No official coordinates supplied; no geocoding or exact markers created."
+    ]
   }
 }

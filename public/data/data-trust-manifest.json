@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 104,
+  "datasetDirectoryCount": 105,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -185,6 +185,9 @@
     },
     {
       "id": "internet-addiction-services"
+    },
+    {
+      "id": "kidney-health-promotion-facilities"
     },
     {
       "id": "kindergarten-basic-evaluation-pass-records"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 105,
+  "datasetDirectoryCount": 106,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -146,6 +146,9 @@
     {
       "id": "hemodialysis-medical-institutions",
       "sourceUpdatedAt": "2026-07-28T02:53:31.510Z"
+    },
+    {
+      "id": "high-myopia-prevention-clinics"
     },
     {
       "id": "home-disabled-family-physician-care-providers"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 106,
+  "datasetDirectoryCount": 107,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -122,6 +122,9 @@
     {
       "id": "funeral-service-businesses",
       "sourceUpdatedAt": "2025-06-11T10:33:01+08:00"
+    },
+    {
+      "id": "gbs-screening-clinics"
     },
     {
       "id": "general-chinese-medicine-institutions"

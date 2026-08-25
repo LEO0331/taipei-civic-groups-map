@@ -2,11 +2,13 @@
 
 ## Current State
 
-- Last updated: 2026-08-13
+- Last updated: 2026-08-25
 - Active feature: none
 - Baseline: agent harness installed and validated.
 
 ## Latest Evidence
+
+- 2026-08-25: refreshed project state after the recent public-service expansion. The dashboard now builds a trust manifest for 107 directories. Recent health, welfare, civic-transparency, environment, labor-compliance, and budget modules use focused fetch/conversion scripts, local static JSON, catalogue classification, and source-boundary notices. The GitHub Pages client is network-first: legacy Service Worker registrations and `taipei-civic-groups-*` caches are removed to prevent stale HTML and hashed-bundle mismatch blank pages. `npm test` (106 tests), `npm run typecheck`, `npm run build`, and `git diff --check` have passed on the current integration series.
 
 - 2026-08-13: completed the `government_ethics_offices` frontend and catalogue registration. The 73-record local directory searches agencies, county/city codes, administrative-area codes, and source telephone numbers, supports calling/copying/exporting, and intentionally has no map because the source provides no address or coordinates. The corrected converter uses the actual official `縣市代碼` column rather than inventing a `機關代碼` field; the page makes no jurisdiction, case-acceptance, staffing, legal, wrongdoing, or integrity-risk claim. `npm run typecheck`, `npm test` (106 tests), `npm run build`, and `git diff --check` passed. Browser QA confirmed catalogue discovery and source contact rendering.
 
@@ -34,7 +36,6 @@
 
 - `node C:\\Users\\150592\\.agents\\skills\\harness-creator\\scripts\\validate-harness.mjs --target .` — passed, 100/100.
 - Previous application verification (2026-08-11): `npm run build` and `npm test` passed (88 tests).
-- Current baseline typecheck (2026-08-11): `npm run typecheck` fails in existing, unrelated modules and conversion scripts. Do not treat it as evidence for a scoped feature until those baseline errors are resolved.
 - 2026-08-11: reviewed the project and updated `doc/臺北公共資料儀表板－設計決策與演進方向.md` with a prioritized customer-facing roadmap. `git diff --check` passed.
 - 2026-08-11: completed freshness, privacy-default, and small-sample safeguards. The generated manifest reports dated and unknown datasets, the active child-influenza dataset shows its 91–180 day source age, and 1–4 voice-reservation records display as `<5`. `npm test` passed (90 tests); `npm run build` passed.
 

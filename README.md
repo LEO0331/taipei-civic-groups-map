@@ -6,7 +6,7 @@ A bilingual Vite + React dashboard for browsing selected Taipei public-record da
 
 ## What it provides
 
-- A searchable, topic-based data catalogue for more than 100 directories.
+- A searchable, topic-based data catalogue for 107 directories.
 - Bilingual Traditional Chinese and English interface text.
 - Dataset-specific filtering, source-field detail, CSV export, and external address lookup where the source supports them.
 - Build-time data-trust evidence: readable source dates, clearly marked unknown dates, and a local-data/privacy reminder.
@@ -53,6 +53,10 @@ Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatal
 ### Withdrawn illegal-hotel enforcement records
 
 `withdrawn_illegal_hotel_enforcement_records` is a local historical snapshot of withdrawn or revoked administrative enforcement records. It is not a current illegal-hotel list: names, addresses, dates, and source-recorded amounts must not be read as current illegality or continuing liability. Refresh it with `npm run data:fetch:withdrawn-illegal-hotel-enforcement-records` followed by `npm run data:convert:withdrawn-illegal-hotel-enforcement-records`.
+
+### Recent public-service directories
+
+Recent additions include program-specific health providers (senior pneumococcal, under-3 influenza, GBS screening, high-myopia prevention, kidney health, addiction treatment, and internet-addiction services), social-welfare directories (emergency assistance, disability day services, child/youth welfare, early intervention, and senior services), civic transparency records (public-asset operations, Labor Pension Act enforcement, and healthcare/welfare budgets), and registered environmental-pesticide vendors. Each remains a local source snapshot with its own focused `data:fetch:<dataset>` and `data:convert:<dataset>` commands. They are directories or historical public records—not real-time availability, eligibility, quality, ranking, enforcement-currentness, or recommendation services.
 
 ## Quick start
 
@@ -125,6 +129,6 @@ Push to `main` to deploy through [`.github/workflows/deploy.yml`](.github/workfl
 
 ## Important limits
 
-This is an exploration tool for public records, not an authoritative real-time service directory. Source dates may be absent or old; unknown dates are intentionally disclosed. Addresses are used only for optional external-map lookup where available. Searches and filters remain in the browser, but opening an external map shares the selected address with that map provider.
+This is an exploration tool for public records, not an authoritative real-time service directory. Source dates may be absent or old; unknown dates are intentionally disclosed. Addresses are used only for optional external-map lookup where available. Searches and filters remain in the browser, but opening an external map shares the selected address with that map provider. The app intentionally uses network-first deployment: legacy Service Worker caches are removed to prevent GitHub Pages from pairing stale HTML with replaced, content-hashed bundles.
 
 Read the product recommendations and ongoing risks in [臺北公共資料儀表板－設計決策與演進方向](doc/臺北公共資料儀表板－設計決策與演進方向.md).

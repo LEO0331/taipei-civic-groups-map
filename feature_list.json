@@ -119,6 +119,14 @@
       "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
       "status": "done",
       "evidence": "2026-08-13: fetched and converted 37 current official source rows, preserving all eight fields with conservative ROC-date and amount parsing. The module prominently identifies the historical withdrawn/revoked record nature and avoids geocoding or blacklist semantics."
+    },
+    {
+      "id": "public-service-directory-expansion-2026-08",
+      "name": "Public-service directory expansion and documentation refresh",
+      "description": "Maintain newly integrated health, welfare, environment, labor-compliance, public-asset, and budget source snapshots with catalogue classification, factual interpretation limits, and current operational documentation.",
+      "dependencies": ["maintenance-directory-data", "maintenance-frontend", "catalogue-navigation"],
+      "status": "done",
+      "evidence": "2026-08-25: recent focused-source integrations are catalogued across health, social welfare, city, and work themes; documentation now records the 107-directory trust-manifest count, network-first deployment behavior, and current verification baseline."
     }
   ]
 }

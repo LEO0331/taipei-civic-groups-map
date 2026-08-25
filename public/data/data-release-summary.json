@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 106,
+  "datasetDirectoryCount": 107,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 74,
+  "unknownDateDatasetCount": 75,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -66,6 +66,7 @@
     "family-medicine-institutions",
     "fertility-subsidy-contracted-hospitals",
     "five-cancer-screening-providers",
+    "gbs-screening-clinics",
     "general-chinese-medicine-institutions",
     "general-dental-medical-institutions",
     "general-western-medicine-institutions",

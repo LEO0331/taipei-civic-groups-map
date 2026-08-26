@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 111,
+  "datasetDirectoryCount": 112,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 79,
+  "unknownDateDatasetCount": 80,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -89,6 +89,7 @@
     "mayor-ceremonial-gift-statistics",
     "medical-laboratories",
     "medical-radiological-institutions",
+    "methadone-cross-region-services",
     "nationwide-addiction-treatment-services",
     "optometry-institutions",
     "orthopedic-facilities",

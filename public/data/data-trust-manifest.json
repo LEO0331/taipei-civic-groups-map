@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 111,
+  "datasetDirectoryCount": 112,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -232,6 +232,9 @@
     },
     {
       "id": "medical-radiological-institutions"
+    },
+    {
+      "id": "methadone-cross-region-services"
     },
     {
       "id": "nationwide-addiction-treatment-services"

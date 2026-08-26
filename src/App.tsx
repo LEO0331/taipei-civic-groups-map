@@ -134,6 +134,7 @@ import MedicalRadiologicalInstitutionsModule from './MedicalRadiologicalInstitut
 import MayorCeremonialGiftStatisticsModule from './MayorCeremonialGiftStatisticsModule';
 import SportsPublicParticipationModule from './SportsPublicParticipationModule';
 import ClinicalPathologyFacilitiesModule from './ClinicalPathologyFacilitiesModule';
+import MethadoneCrossRegionServicesModule from './MethadoneCrossRegionServicesModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -828,6 +829,7 @@ export default function App() {
   tabs.splice(38, 0, ['mayorCeremonialGiftStatistics', language === 'zh' ? '市長喜喪致贈統計' : 'Mayor Ceremonial Gift Statistics']);
   tabs.splice(39, 0, ['sportsPublicParticipation', language === 'zh' ? '體育政策公聽會與論壇參與' : 'Sports Public Hearings & Forums']);
   tabs.splice(40, 0, ['clinicalPathologyFacilities', language === 'zh' ? '臨床病理科醫療機構' : 'Clinical Pathology Facilities']);
+  tabs.splice(41, 0, ['methadoneCrossRegionServices', language === 'zh' ? '美沙冬跨區給藥服務' : 'Methadone Cross-Region Service']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -1010,6 +1012,7 @@ export default function App() {
       {tab === 'mayorCeremonialGiftStatistics' && <MayorCeremonialGiftStatisticsModule language={language} />}
       {tab === 'sportsPublicParticipation' && <SportsPublicParticipationModule language={language} />}
       {tab === 'clinicalPathologyFacilities' && <ClinicalPathologyFacilitiesModule language={language} />}
+      {tab === 'methadoneCrossRegionServices' && <MethadoneCrossRegionServicesModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

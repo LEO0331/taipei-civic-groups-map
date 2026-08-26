@@ -28,6 +28,7 @@ export const datasetCategoryById = Object.fromEntries(
 ) as Record<string, CatalogueCategoryId>;
 
 datasetCategoryById.clinicalPathologyFacilities = 'health';
+datasetCategoryById.methadoneCrossRegionServices = 'health';
 
 export function buildDatasetCatalogue(items: CatalogueItem[], language: CatalogueLanguage, query = '') {
   const normalizedQuery = query.trim().toLocaleLowerCase();

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 110,
+  "datasetDirectoryCount": 111,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -34,6 +34,9 @@
     },
     {
       "id": "child-youth-welfare-institutions"
+    },
+    {
+      "id": "clinical-pathology-facilities"
     },
     {
       "id": "community-care-service-sites"

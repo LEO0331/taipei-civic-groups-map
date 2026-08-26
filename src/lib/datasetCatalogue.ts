@@ -27,6 +27,8 @@ export const datasetCategoryById = Object.fromEntries(
   Object.entries(categoryMembers).flatMap(([category, ids]) => ids.map((id) => [id, category as CatalogueCategoryId])),
 ) as Record<string, CatalogueCategoryId>;
 
+datasetCategoryById.clinicalPathologyFacilities = 'health';
+
 export function buildDatasetCatalogue(items: CatalogueItem[], language: CatalogueLanguage, query = '') {
   const normalizedQuery = query.trim().toLocaleLowerCase();
   const uncategorized = items.filter(([id]) => !datasetCategoryById[id]).map(([id]) => id);

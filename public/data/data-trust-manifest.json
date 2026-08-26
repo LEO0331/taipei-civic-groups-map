@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 113,
+  "datasetDirectoryCount": 114,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -305,6 +305,9 @@
     },
     {
       "id": "rabies-vaccination-veterinary-clinics"
+    },
+    {
+      "id": "radiology-diagnostic-facilities"
     },
     {
       "id": "registered-after-school-care-centres"

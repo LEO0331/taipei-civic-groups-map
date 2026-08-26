@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 113,
+  "datasetDirectoryCount": 114,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 81,
+  "unknownDateDatasetCount": 82,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -101,6 +101,7 @@
     "public-influenza-antiviral-providers",
     "public-pneumococcal-vaccine-providers",
     "rabies-vaccination-veterinary-clinics",
+    "radiology-diagnostic-facilities",
     "registered-after-school-care-centres",
     "registered-postpartum-care-institutions",
     "rehabilitation-medicine-institutions",

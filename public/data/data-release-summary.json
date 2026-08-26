@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 108,
+  "datasetDirectoryCount": 109,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 76,
+  "unknownDateDatasetCount": 77,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -85,6 +85,7 @@
     "licensed-waste-cooking-oil-collectors",
     "lodging-business-penalty-records",
     "major-electricity-users",
+    "mayor-ceremonial-gift-statistics",
     "medical-laboratories",
     "medical-radiological-institutions",
     "nationwide-addiction-treatment-services",

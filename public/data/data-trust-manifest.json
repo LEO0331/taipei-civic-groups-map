@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 112,
+  "datasetDirectoryCount": 113,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -253,6 +253,9 @@
     },
     {
       "id": "optometry-institutions"
+    },
+    {
+      "id": "oral-maxillofacial-surgery-facilities"
     },
     {
       "id": "orthopedic-facilities"

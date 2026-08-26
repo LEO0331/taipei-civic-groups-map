@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 112,
+  "datasetDirectoryCount": 113,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 80,
+  "unknownDateDatasetCount": 81,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -92,6 +92,7 @@
     "methadone-cross-region-services",
     "nationwide-addiction-treatment-services",
     "optometry-institutions",
+    "oral-maxillofacial-surgery-facilities",
     "orthopedic-facilities",
     "out-of-city-funeral-service-businesses",
     "pest-control-businesses",

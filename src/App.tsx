@@ -130,6 +130,7 @@ import HealthcareWelfareBudgetModule from './HealthcareWelfareBudgetModule';
 import KidneyHealthPromotionFacilitiesModule from './KidneyHealthPromotionFacilitiesModule';
 import HighMyopiaPreventionClinicsModule from './HighMyopiaPreventionClinicsModule';
 import GbsScreeningClinicsModule from './GbsScreeningClinicsModule';
+import MedicalRadiologicalInstitutionsModule from './MedicalRadiologicalInstitutionsModule';
 import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
 import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
 import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
@@ -820,6 +821,7 @@ export default function App() {
   tabs.splice(34, 0, ['kidneyHealthPromotionFacilities', language === 'zh' ? '腎臟病健康促進機構' : 'Kidney Health Promotion Facilities']);
   tabs.splice(35, 0, ['highMyopiaPreventionClinics', language === 'zh' ? '學童高度近視防治眼科合約院所' : 'Schoolchildren High-Myopia Prevention Contracted Clinics']);
   tabs.splice(36, 0, ['gbsScreeningClinics', language === 'zh' ? '孕婦 GBS 篩檢特約院所' : 'GBS Screening Clinics']);
+  tabs.splice(37, 0, ['medicalRadiologicalInstitutions', language === 'zh' ? '醫事放射所' : 'Medical Radiological Institutions']);
   tabs.splice(15, 0, ['hospicePalliativeCareInstitutions', language === 'zh' ? '安寧緩和醫療機構' : 'Hospice and Palliative Care Institutions']);
   tabs.splice(7, 0, ['privateSeniorResidentialLongTermCareInstitutions', language === 'zh' ? '私立老人安養暨長期照顧機構' : 'Private Senior Care Institutions']);
   tabs.splice(8, 0, ['hemodialysisMedicalInstitutions', language === 'zh' ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions']);
@@ -998,6 +1000,7 @@ export default function App() {
       {tab === 'kidneyHealthPromotionFacilities' && <KidneyHealthPromotionFacilitiesModule language={language} />}
       {tab === 'highMyopiaPreventionClinics' && <HighMyopiaPreventionClinicsModule language={language} />}
       {tab === 'gbsScreeningClinics' && <GbsScreeningClinicsModule language={language} />}
+      {tab === 'medicalRadiologicalInstitutions' && <MedicalRadiologicalInstitutionsModule language={language} />}
       {tab === 'hospicePalliativeCareInstitutions' && <HospicePalliativeCareInstitutionsModule language={language} />}
       {tab === 'privateSeniorResidentialLongTermCareInstitutions' && <PrivateSeniorResidentialLongTermCareInstitutionsModule language={language} />}
       {tab === 'hemodialysisMedicalInstitutions' && <HemodialysisMedicalInstitutionsModule language={language} />}

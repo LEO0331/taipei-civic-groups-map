@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 107,
+  "datasetDirectoryCount": 108,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -223,6 +223,9 @@
     },
     {
       "id": "medical-laboratories"
+    },
+    {
+      "id": "medical-radiological-institutions"
     },
     {
       "id": "nationwide-addiction-treatment-services"

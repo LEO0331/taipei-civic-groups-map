@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 107,
+  "datasetDirectoryCount": 108,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 75,
+  "unknownDateDatasetCount": 76,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -86,6 +86,7 @@
     "lodging-business-penalty-records",
     "major-electricity-users",
     "medical-laboratories",
+    "medical-radiological-institutions",
     "nationwide-addiction-treatment-services",
     "optometry-institutions",
     "orthopedic-facilities",

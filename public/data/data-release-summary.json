@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 109,
+  "datasetDirectoryCount": 110,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 77,
+  "unknownDateDatasetCount": 78,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -109,6 +109,7 @@
     "senior-service-site-courses",
     "social-welfare-foundations",
     "specific-pet-business-evaluation-results",
+    "sports-public-participation",
     "street-performer-venues",
     "subsidized-senior-residential-placement-institutions",
     "taipei-government-application-services",

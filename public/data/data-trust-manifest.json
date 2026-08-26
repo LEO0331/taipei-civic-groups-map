@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 109,
+  "datasetDirectoryCount": 110,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -329,6 +329,9 @@
     },
     {
       "id": "specific-pet-business-evaluation-results"
+    },
+    {
+      "id": "sports-public-participation"
     },
     {
       "id": "street-performer-venues"

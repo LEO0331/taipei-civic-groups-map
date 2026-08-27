@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 114,
+  "datasetDirectoryCount": 115,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -11,6 +11,9 @@
     },
     {
       "id": "alternative-service-reserve-statistics"
+    },
+    {
+      "id": "anatomical-pathology-institutions"
     },
     {
       "id": "approved-gas-water-heater-installers"

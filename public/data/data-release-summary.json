@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 114,
+  "datasetDirectoryCount": 115,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 82,
+  "unknownDateDatasetCount": 83,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",
@@ -41,6 +41,7 @@
     "addiction-treatment-facilities",
     "adult-influenza-vaccine-providers",
     "alternative-service-reserve-statistics",
+    "anatomical-pathology-institutions",
     "approved-gas-water-heater-installers",
     "beauty-hairdressing-hygiene-certifications",
     "bottled-gas-retailers",

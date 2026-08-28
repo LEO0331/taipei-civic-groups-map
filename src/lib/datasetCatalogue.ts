@@ -32,6 +32,7 @@ datasetCategoryById.methadoneCrossRegionServices = 'health';
 datasetCategoryById.oralMaxillofacialSurgeryFacilities = 'health';
 datasetCategoryById.radiologyDiagnosticFacilities = 'health';
 datasetCategoryById.anatomicalPathologyInstitutions = 'health';
+datasetCategoryById.childPreventiveHealthcareFacilities = 'health';
 
 export function buildDatasetCatalogue(items: CatalogueItem[], language: CatalogueLanguage, query = '') {
   const normalizedQuery = query.trim().toLocaleLowerCase();

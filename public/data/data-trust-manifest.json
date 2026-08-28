@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 115,
+  "datasetDirectoryCount": 116,
   "datedDatasetCount": 32,
   "entries": [
     {
@@ -27,6 +27,9 @@
     },
     {
       "id": "bottled-gas-retailers"
+    },
+    {
+      "id": "child-preventive-healthcare-facilities"
     },
     {
       "id": "child-youth-friendly-welfare-service-sites",

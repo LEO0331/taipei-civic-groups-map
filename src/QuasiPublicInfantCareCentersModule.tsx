@@ -74,7 +74,7 @@ function Overview({ summary, language }: { summary: QuasiPublicInfantCareCenterS
 function CareMap({ summary, language, viewDistrict }: { summary: QuasiPublicInfantCareCenterSummary; language: Language; viewDistrict: (district: string) => void }) {
   const zh = language === 'zh', max = Math.max(...summary.byDistrict.map((district) => district.centerCount), 1);
   return <div className="map-wrap"><div className="notice">{zh ? '準公共化托嬰中心資料未提供經緯度，地圖以行政區彙總呈現，不代表精確托嬰中心位置。詳細位置請查看地址並以地圖連結、托嬰中心或官方資訊確認。' : 'Quasi-public infant care center data does not provide coordinates. The map shows district-level summaries and does not represent exact infant care center locations. Please check the address and verify details through map links, the center, or official information.'}</div>
-    <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}><TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+    <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}><TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {summary.byDistrict.map((district) => {
         const point = TAIPEI_DISTRICT_CENTROIDS[district.district];
         return point && <CircleMarker key={district.district} center={[point.latitude, point.longitude]} radius={10 + 26 * Math.sqrt(district.centerCount / max)} pathOptions={{ fillColor: '#b25d7b', fillOpacity: .76, color: '#fff7e8', weight: 2 }}>

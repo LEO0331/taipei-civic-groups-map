@@ -84,7 +84,7 @@ function HotelMap({ summary, language, viewDistrict }: { summary: RegisteredHote
   const max = Math.max(...summary.byDistrict.map((district) => district.recordCount), 1);
   return <div className="map-wrap"><div className="notice">{zh ? '一般旅館名冊未提供經緯度，地圖以行政區彙總呈現，不代表精確旅館位置。' : 'The general hotel registry does not provide coordinates. The map shows district-level summaries and does not represent exact hotel locations.'}</div>
     <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {summary.byDistrict.map((district) => {
         const point = TAIPEI_DISTRICT_CENTROIDS[district.district];
         return point && <CircleMarker key={district.district} center={[point.latitude, point.longitude]} radius={10 + 26 * Math.sqrt(district.recordCount / max)} pathOptions={{ fillColor: '#80643b', fillOpacity: .72, color: '#fff7e8', weight: 2 }}>

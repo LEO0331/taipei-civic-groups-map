@@ -104,7 +104,7 @@ function LaborUnionMap({ summary, language, viewDistrict }: { summary: Registere
   const max = Math.max(...summary.byDistrict.map((district) => district.count), 1);
   return <div className="map-wrap"><div className="notice">{zh ? '工會名單資料未提供經緯度，地圖以臺北市行政區彙總呈現，不代表精確工會地址位置。部分工會通訊地址位於臺北市以外或為郵政信箱，僅於清單與統計中保留。' : 'Labor union directory data does not provide latitude/longitude. The map shows Taipei district-level summaries and does not represent exact union address locations. Some contact addresses are outside Taipei or postal boxes and are retained only in the directory and statistics.'}</div>
     <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {summary.byDistrict.map((district) => {
         const point = TAIPEI_DISTRICT_CENTROIDS[district.district];
         return point && <CircleMarker key={district.district} center={[point.latitude, point.longitude]} radius={10 + 26 * Math.sqrt(district.count / max)} pathOptions={{ fillColor: '#9b6a47', fillOpacity: .76, color: '#fff7e8', weight: 2 }}>

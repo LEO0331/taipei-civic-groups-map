@@ -100,7 +100,7 @@ function GrantMap({ summary, records, language, viewDistrict }: { summary: Indus
   const max = Math.max(...summary.byDistrict.map((district) => district.approvedSubsidyNtd), 1);
   return <div className="map-wrap"><div className="notice">{zh ? '地圖以登記行政區彙總呈現，不代表公司精確位置。' : 'The map shows summaries by registered district and does not represent exact company locations.'}</div>
     <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {summary.byDistrict.map((district) => {
         const districtRecords = records.filter((record) => record.registeredDistrict === district.district);
         const top = (key: 'industryCategory' | 'grantField') => [...new Map(districtRecords.map((record) => [record[key], districtRecords.filter((item) => item[key] === record[key]).length]))].sort((a, b) => b[1] - a[1])[0]?.[0] ?? '—';

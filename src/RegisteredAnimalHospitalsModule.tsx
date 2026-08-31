@@ -74,7 +74,7 @@ function AnimalHospitalMap({ summary, language, viewDistrict }: { summary: Regis
   const max = Math.max(...summary.byDistrict.map((district) => district.count), 1);
   return <div className="map-wrap"><div className="notice">{zh ? '動物醫院一覽表資料未提供經緯度，地圖以行政區彙總呈現，不代表精確動物醫院位置。' : 'Animal hospital directory data does not provide coordinates. The map shows district-level summaries and does not represent exact animal hospital locations.'}</div>
     <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {summary.byDistrict.map((district) => {
         const point = TAIPEI_DISTRICT_CENTROIDS[district.district];
         return point && <CircleMarker key={district.district} center={[point.latitude, point.longitude]} radius={10 + 26 * Math.sqrt(district.count / max)} pathOptions={{ fillColor: '#6f8f52', fillOpacity: .76, color: '#fff7e8', weight: 2 }}>

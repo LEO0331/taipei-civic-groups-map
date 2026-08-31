@@ -39,7 +39,7 @@ export default function DistrictComparison({ groups, civicSummary, grants, grant
     <div className="notice">{zh ? '此表並列人民團體名冊與產業補助廠商資料，僅供行政區公開資料分布比較，不代表因果關係、區域優劣或政策成效。' : 'This table compares civic group directory records and industry grant recipient records by district for public-data exploration only. It does not imply causation, district quality, or policy effectiveness.'}</div>
     <div className="metric-toggle">{options.map(([id, label]) => <button className={metric === id ? 'active' : ''} onClick={() => setMetric(id)} key={id}>{label}</button>)}</div>
     <div className="map-wrap comparison-map"><MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors &copy; CARTO' url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {rows.map((row) => { const point = TAIPEI_DISTRICT_CENTROIDS[row.district]; return <CircleMarker key={row.district} center={[point.latitude, point.longitude]} radius={9 + 30 * Math.sqrt(value(row) / max)} pathOptions={{ fillColor: metric === 'civic' ? '#d75b3f' : '#3d7480', fillOpacity: .74, color: '#fff', weight: 2 }}>
         <Popup><strong>{row.district}</strong><p>{options.find(([id]) => id === metric)?.[1]}: {metric === 'subsidy' || metric === 'budget' ? money(value(row), language) : value(row).toLocaleString()}</p></Popup>
       </CircleMarker>; })}

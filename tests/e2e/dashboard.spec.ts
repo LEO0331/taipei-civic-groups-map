@@ -11,10 +11,14 @@ async function openCatalogue(page: Page) {
 
 async function selectDataset(page: Page, label: string) {
   await openCatalogue(page);
-  const buttons = page.locator('#dataset-catalogue .catalogue-category button');
+  const catalogue = page.locator('#dataset-catalogue');
+  const mobileSearch = catalogue.locator('.catalogue-popover-search input');
+  if (await mobileSearch.count()) await mobileSearch.fill(label);
+  const buttons = catalogue.locator('.catalogue-category button');
   const index = await buttons.evaluateAll((items, exactLabel) => items.findIndex((item) => item.textContent?.trim() === exactLabel), label);
   expect(index, `catalogue entry: ${label}`).toBeGreaterThanOrEqual(0);
   await buttons.nth(index).click();
+  await expect(catalogue).not.toBeVisible();
   await expect(main(page)).toBeVisible();
   await expect(main(page)).not.toContainText('Unable to load the dashboard');
 }

@@ -4,6 +4,7 @@ const port = process.env.PLAYWRIGHT_PORT ?? '4317';
 
 export default defineConfig({
   testDir: './tests/e2e',
+  outputDir: process.env.PLAYWRIGHT_OUTPUT_DIR ?? 'test-results',
   timeout: 45_000,
   expect: { timeout: 10_000 },
   reporter: 'list',
@@ -14,7 +15,7 @@ export default defineConfig({
   },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
-    { name: 'mobile', use: { ...devices['iPhone 13'] } },
+    { name: 'mobile', use: { ...devices['iPhone 13'], browserName: 'chromium' } },
   ],
   webServer: {
     command: `npm run dev -- --host 127.0.0.1 --port ${port} --strictPort`,

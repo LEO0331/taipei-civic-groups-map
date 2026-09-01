@@ -4,8 +4,9 @@ const catalogueInput = (page: Page) => page.getByPlaceholder('搜尋資料集或
 const main = (page: Page) => page.locator('main');
 
 async function openCatalogue(page: Page) {
-  await catalogueInput(page).click();
-  await expect(page.locator('#dataset-catalogue')).toBeVisible();
+  const catalogue = page.locator('#dataset-catalogue');
+  if (!await catalogue.isVisible()) await catalogueInput(page).click();
+  await expect(catalogue).toBeVisible();
 }
 
 async function selectDataset(page: Page, label: string) {
@@ -23,7 +24,8 @@ test('every catalogue module opens in Chinese mode without runtime errors', asyn
   const size = Number(process.env.E2E_MATRIX_SIZE ?? '9999');
   test.setTimeout(size < 9999 ? 2 * 60 * 1000 : 10 * 60 * 1000);
   const pageErrors: string[] = [];
-  page.on('pageerror', (error) => pageErrors.push(error.message));
+  let activeLabel = 'initial page load';
+  page.on('pageerror', (error) => pageErrors.push(`${activeLabel}: ${error.message}`));
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'zh-Hant');
   await openCatalogue(page);
@@ -34,6 +36,7 @@ test('every catalogue module opens in Chinese mode without runtime errors', asyn
 
   for (const label of matrixLabels) {
     await test.step(label, async () => {
+      activeLabel = label;
       await selectDataset(page, label.trim());
       await page.waitForTimeout(75);
       const search = main(page).locator('input:not([type]):not([type="date"]):not([type="number"])').first();

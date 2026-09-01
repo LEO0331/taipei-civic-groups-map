@@ -13,7 +13,7 @@ async function selectDataset(page: Page, label: string) {
   await openCatalogue(page);
   const catalogue = page.locator('#dataset-catalogue');
   const mobileSearch = catalogue.locator('.catalogue-popover-search input');
-  if (await mobileSearch.count()) await mobileSearch.fill(label);
+  if (await mobileSearch.isVisible()) await mobileSearch.fill(label);
   const buttons = catalogue.locator('.catalogue-category button');
   const index = await buttons.evaluateAll((items, exactLabel) => items.findIndex((item) => item.textContent?.trim() === exactLabel), label);
   expect(index, `catalogue entry: ${label}`).toBeGreaterThanOrEqual(0);

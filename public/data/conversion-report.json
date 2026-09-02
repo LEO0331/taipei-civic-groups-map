@@ -472,5 +472,26 @@
       "Phone numbers and district codes are treated as strings.",
       "No official coordinates supplied; no geocoding or exact markers created."
     ]
+  },
+  "diabetesSharedCareMedicalInstitutions": {
+    "convertedAt": "2026-09-02T09:15:11.022Z",
+    "encoding": "CP950 / Big5-compatible",
+    "headers": [
+      "序號",
+      "行政區域代碼",
+      "醫事機構名稱",
+      "醫事機構電話",
+      "醫事機構地址"
+    ],
+    "outputRecords": 183,
+    "duplicates": [],
+    "missingFields": [],
+    "unknownDistrictCodes": [],
+    "unknownDistricts": [],
+    "notes": [
+      "UTF-8-SIG decoded with Big5 / CP950 fallback.",
+      "District is resolved from the official code before address fallback.",
+      "No official coordinates supplied; no exact markers or geocoding created."
+    ]
   }
 }

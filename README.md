@@ -69,6 +69,12 @@ npm run dev
 
 Open the local URL printed by Vite.
 
+## Search discovery
+
+The deployed site includes a canonical URL, Open Graph metadata, a `DataCatalog` JSON-LD description, [`robots.txt`](public/robots.txt), and [`sitemap.xml`](public/sitemap.xml). These make the single authoritative GitHub Pages URL easier for search engines and answer engines to identify; they do not guarantee ranking or inclusion.
+
+After deployment, a verified site owner should submit `https://leo0331.github.io/taipei-civic-groups-map/sitemap.xml` in Google Search Console and Bing Webmaster Tools. Re-submit after a material catalogue or content change, and use their URL-inspection tools to request recrawling of the homepage when needed.
+
 ## Common commands
 
 ```bash

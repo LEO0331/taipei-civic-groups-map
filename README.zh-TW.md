@@ -83,6 +83,12 @@ npm run data:convert
 
 `npm run data:fetch` 會大量更新遠端來源，可能一次變更許多公共資料檔案，因此不應作為日常驗證。處理單一目錄時，請優先使用 `data:fetch:<dataset>` 及對應的 `data:convert:<dataset>` 指令。
 
+## 搜尋引擎收錄
+
+正式網站已包含 canonical URL、Open Graph 中繼資料、`DataCatalog` JSON-LD 描述、[`robots.txt`](public/robots.txt) 與 [`sitemap.xml`](public/sitemap.xml)。這些項目讓搜尋引擎與答案引擎更容易辨識唯一的 GitHub Pages 正式網址，但不保證排名或一定收錄。
+
+部署後，已驗證網站擁有權的管理者應將 `https://leo0331.github.io/taipei-civic-groups-map/sitemap.xml` 提交至 Google Search Console 與 Bing Webmaster Tools。資料目錄或內容有重大更新時應重新提交；必要時可在各平台的網址檢查工具要求重新檢索首頁。
+
 建置會執行 `scripts/buildDataTrustManifest.ts`，產生 `public/data/data-trust-manifest.json` 與 `public/data/data-release-summary.json`。
 
 ## 新增資料集

@@ -119,6 +119,30 @@ git diff --check
 
 The GitHub Pages workflow repeats conversion, type checking, tests, and build. It retains the trust manifest, release summary, and conversion report as deployment evidence.
 
+## Architecture
+
+```mermaid
+flowchart LR
+  source[Official Taipei open-data sources] --> fetch[Focused fetch scripts\n scripts/fetch*.ts]
+  fetch --> raw[Versioned raw snapshots\n data/raw/]
+  raw --> convert[Source-preserving converters\n scripts/convert*.ts]
+  convert --> static[Static records, summaries, and reports\n public/data/]
+  static --> trust[Trust manifest builder\n source dates and release evidence]
+  trust --> static
+
+  catalogue[Dataset catalogue metadata\n src/lib/datasetCatalogue.ts] --> app[React dashboard modules\n src/]
+  static --> app
+  app --> bundle[Vite production bundle]
+  bundle --> pages[GitHub Pages\n Taipei Public Data Explorer]
+
+  ci[GitHub Actions] --> fetch
+  ci --> convert
+  ci --> checks[Type, unit, accessibility, and Playwright checks]
+  checks --> bundle
+```
+
+All presented records remain local snapshots. The diagram intentionally separates source collection from browser presentation: the dashboard does not call source systems from a visitor’s browser or claim live service availability.
+
 ## Project layout
 
 ```text

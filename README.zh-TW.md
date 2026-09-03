@@ -115,6 +115,30 @@ git diff --check
 
 GitHub Pages 工作流程也會重複執行轉換、型別檢查、測試與建置，並保留可信度清單、版本摘要與轉換報告作為部署證據。
 
+## 架構圖
+
+```mermaid
+flowchart LR
+  source[臺北市官方開放資料來源] --> fetch[聚焦式擷取腳本\n scripts/fetch*.ts]
+  fetch --> raw[版本化原始快照\n data/raw/]
+  raw --> convert[保留來源值的轉換器\n scripts/convert*.ts]
+  convert --> static[靜態紀錄、摘要與報告\n public/data/]
+  static --> trust[可信度清單建置器\n 來源日期與版本證據]
+  trust --> static
+
+  catalogue[資料集目錄中繼資料\n src/lib/datasetCatalogue.ts] --> app[React 儀表板模組\n src/]
+  static --> app
+  app --> bundle[Vite 正式建置]
+  bundle --> pages[GitHub Pages\n 臺北公共資料探索儀表板]
+
+  ci[GitHub Actions] --> fetch
+  ci --> convert
+  ci --> checks[型別、單元、無障礙與 Playwright 檢查]
+  checks --> bundle
+```
+
+所有呈現的紀錄都是本機資料快照。此圖刻意分開來源收集與瀏覽器呈現：訪客的瀏覽器不會直接呼叫來源系統，儀表板也不宣稱即時服務可用性。
+
 ## 專案結構
 
 ```text

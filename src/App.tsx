@@ -516,10 +516,23 @@ function CombinedOverview({ civic, performingArts, vaccinationProviders, hpvProv
   </section>;
 }
 
+function DashboardOnboarding({ language, onBrowse, onDismiss }: { language: Language; onBrowse: () => void; onDismiss: () => void }) {
+  const zh = language === 'zh';
+  const steps = zh
+    ? [['01', '選擇資料集', '依主題瀏覽，或直接搜尋服務與資料名稱。'], ['02', '縮小範圍', '使用行政區、年份與資料集專屬篩選條件。'], ['03', '核對來源', '閱讀資料說明與來源連結，再據此採取下一步。']]
+    : [['01', 'Choose a dataset', 'Browse by topic or search for a service and dataset name.'], ['02', 'Narrow the records', 'Use district, year, and dataset-specific filters.'], ['03', 'Check the source', 'Read the data notes and source links before taking a next step.']];
+  return <aside className="onboarding-flow" aria-label={zh ? '儀表板使用方式' : 'How to use the dashboard'}>
+    <div className="onboarding-flow-heading"><div><p>{zh ? '開始探索' : 'START EXPLORING'}</p><h2>{zh ? '三步找到可核對的公共資料' : 'Find verifiable public data in three steps'}</h2></div><button type="button" onClick={onDismiss} aria-label={zh ? '關閉使用方式' : 'Dismiss guide'}>×</button></div>
+    <ol>{steps.map(([number, title, description], index) => <li key={number}><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div>{index < steps.length - 1 && <i aria-hidden="true">→</i>}</li>)}</ol>
+    <div className="onboarding-flow-footer"><p>{zh ? '資料集是公開資料快照；服務狀態、資格與可用性請向主管機關或服務單位確認。' : 'Datasets are public-data snapshots. Confirm service status, eligibility, and availability with the relevant authority or provider.'}</p><button type="button" onClick={onBrowse}>{zh ? '開啟資料目錄' : 'Browse datasets'}</button></div>
+  </aside>;
+}
+
 export default function App() {
   const [language, setLanguage] = useState<Language>('zh');
   const [tab, setTab] = useState<string>('civic');
   const [catalogueOpen, setCatalogueOpen] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(true);
   const [catalogueQuery, setCatalogueQuery] = useState('');
   const [civicView, setCivicView] = useState<'map' | 'directory' | 'overview'>('map');
   const [groups, setGroups] = useState<CivicGroup[]>([]);
@@ -908,6 +921,7 @@ export default function App() {
     </header>
     <main>
       <DataTrustPanel language={language} activeDataset={{ physicalTherapyClinics: 'physical-therapy-clinics', influenzaVaccineProvidersChildren3Plus: 'influenza-vaccine-providers-children-3plus' }[tab]} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
+      {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => setShowOnboarding(false)} />}
       {loadError && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && (!summary || !performingArtsSummary || !vaccinationProviderSummary || !hpvProviderSummary || !childMedicalSubsidyProviderSummary || !dentureSubsidyProviderSummary || !disabilityEmploymentResourceSummary || !shelteredWorkshopSummary || !employmentAgencySummary || !licensedPawnshopSummary || !licensedArcadeSummary || !licensedSpecialEntertainmentSummary || !recyclingOrganizationSummary || !registeredFactorySummary || !enterpriseHeadquartersSummary || !cemeterySummary || !telepsychologySummary || !publicLiabilitySummary || !businessChangeSummary || !companyChangeSummary || !laborUnionSummary || !infantCareSummary || !infantCareEvaluationSummary || !elderlyWelfareSummary || !biotechCompanySummary || !travelAccommodationSummary || !grantSummary || !procurementSummary || !cramSchoolSummary || !hotelSummary || !laborViolationSummary || !laborViolationManifest || !oshViolationSummary || !genderEqualityViolationSummary || !consumerDisputeSummary || !nangangCompanySummary || !dawannanCompanySummary || !animalHospitalSummary || !animalMedicineSellerSummary || !petBusinessEvaluationSummary || !veterinarianSummary) && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>

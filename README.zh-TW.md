@@ -139,6 +139,30 @@ flowchart LR
 
 所有呈現的紀錄都是本機資料快照。此圖刻意分開來源收集與瀏覽器呈現：訪客的瀏覽器不會直接呼叫來源系統，儀表板也不宣稱即時服務可用性。
 
+### 更新、建置與瀏覽順序
+
+```mermaid
+sequenceDiagram
+  participant CI as GitHub Actions
+  participant Source as 官方資料平臺
+  participant Raw as data/raw 原始快照
+  participant Convert as 轉換腳本
+  participant Static as public/data
+  participant Pages as GitHub Pages
+  participant Visitor as 訪客瀏覽器
+
+  CI->>Source: 執行聚焦式擷取腳本
+  Source-->>CI: 回傳來源檔案與中繼資料
+  CI->>Raw: 儲存保留來源值的快照
+  CI->>Convert: 執行轉換與摘要腳本
+  Convert->>Static: 寫入紀錄、摘要與報告
+  CI->>CI: 建立可信度清單、測試與打包
+  CI->>Pages: 部署靜態網站
+  Visitor->>Pages: 請求儀表板、資源與本機資料
+  Pages-->>Visitor: 提供靜態應用程式與快照
+  Note over Visitor,Static: 篩選在本機執行；瀏覽器不會查詢上游來源。
+```
+
 ## 專案結構
 
 ```text

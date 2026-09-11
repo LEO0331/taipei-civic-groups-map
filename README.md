@@ -143,6 +143,30 @@ flowchart LR
 
 All presented records remain local snapshots. The diagram intentionally separates source collection from browser presentation: the dashboard does not call source systems from a visitor’s browser or claim live service availability.
 
+### Refresh, build, and visit sequence
+
+```mermaid
+sequenceDiagram
+  participant CI as GitHub Actions
+  participant Source as Official data portal
+  participant Raw as data/raw snapshots
+  participant Convert as Conversion scripts
+  participant Static as public/data
+  participant Pages as GitHub Pages
+  participant Visitor as Visitor browser
+
+  CI->>Source: Run focused fetch scripts
+  Source-->>CI: Source files and metadata
+  CI->>Raw: Save source-preserving snapshots
+  CI->>Convert: Run conversion and summary scripts
+  Convert->>Static: Write records, summaries, and reports
+  CI->>CI: Build trust manifest, test, and bundle
+  CI->>Pages: Deploy static site
+  Visitor->>Pages: Request dashboard, assets, and local data
+  Pages-->>Visitor: Serve static application and snapshots
+  Note over Visitor,Static: Filters run locally; the browser does not query upstream sources.
+```
+
 ## Project layout
 
 ```text

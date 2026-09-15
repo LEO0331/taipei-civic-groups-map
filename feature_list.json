@@ -38,7 +38,7 @@
       "description": "Prevent deployments with TypeScript errors, preserve build-time data evidence, and maintain lightweight accessibility and loading contracts.",
       "dependencies": ["maintenance-harness", "trust-safeguards"],
       "status": "done",
-      "evidence": "2026-08-11: TypeScript is clean and enforced in the Pages workflow; deployments upload generated data-release evidence. 93 tests and production build pass."
+      "evidence": "2026-09-15: TypeScript and Pages deployment guards remain clean. The release manifest now exposes reused-snapshot fetch failures to the active dataset UI, and the shared local JSON loader has unit and E2E coverage for HTTP and malformed-response failures. 108 unit tests, 3 accessibility contracts, 8 desktop/mobile E2E tests, production build, and npm audit --omit=dev pass."
     },
     {
       "id": "catalogue-navigation",

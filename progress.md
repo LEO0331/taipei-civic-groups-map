@@ -2,11 +2,13 @@
 
 ## Current State
 
-- Last updated: 2026-08-25
-- Active feature: none
+- Last updated: 2026-09-15
+- Active feature: data refresh transparency and local-data error handling
 - Baseline: agent harness installed and validated.
 
 ## Latest Evidence
+
+- 2026-09-15: completed the delivery-review remediation for fetch-failure transparency and local-data failure handling. The build-time trust manifest now reads matching raw fetch metadata and exposes `reused_snapshot` status, failure time, and fallback counts to the dashboard; the active dataset trust panel discloses when an official refresh failed and the most recently successful snapshot is shown. The education-volunteer module now uses the shared JSON loader and gives the same readable local-snapshot error state for HTTP or malformed JSON responses. Added unit coverage for the loader and a Playwright malformed-response case. The review baseline recorded 116 directories, 108 unit tests, 3 accessibility contracts, 8 desktop/mobile E2E tests, a successful production build, and `npm audit --omit=dev` with zero production vulnerabilities.
 
 - 2026-08-25: refreshed project state after the recent public-service expansion. The dashboard now builds a trust manifest for 107 directories. Recent health, welfare, civic-transparency, environment, labor-compliance, and budget modules use focused fetch/conversion scripts, local static JSON, catalogue classification, and source-boundary notices. The GitHub Pages client is network-first: legacy Service Worker registrations and `taipei-civic-groups-*` caches are removed to prevent stale HTML and hashed-bundle mismatch blank pages. `npm test` (106 tests), `npm run typecheck`, `npm run build`, and `git diff --check` have passed on the current integration series.
 

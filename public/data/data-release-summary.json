@@ -3,6 +3,7 @@
   "datasetDirectoryCount": 116,
   "datedDatasetCount": 32,
   "unknownDateDatasetCount": 84,
+  "fetchFallbackDatasetCount": 0,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
     "child-youth-friendly-welfare-service-sites",

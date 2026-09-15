@@ -2,388 +2,508 @@
   "schemaVersion": 1,
   "datasetDirectoryCount": 116,
   "datedDatasetCount": 32,
+  "fetchFallbackDatasetCount": 0,
   "entries": [
     {
-      "id": "addiction-treatment-facilities"
+      "id": "addiction-treatment-facilities",
+      "fetchStatus": "current"
     },
     {
-      "id": "adult-influenza-vaccine-providers"
+      "id": "adult-influenza-vaccine-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "alternative-service-reserve-statistics"
+      "id": "alternative-service-reserve-statistics",
+      "fetchStatus": "current"
     },
     {
-      "id": "anatomical-pathology-institutions"
+      "id": "anatomical-pathology-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "approved-gas-water-heater-installers"
+      "id": "approved-gas-water-heater-installers",
+      "fetchStatus": "current"
     },
     {
       "id": "arts-cultural-venues",
-      "sourceUpdatedAt": "2026-03-23 14:37:40"
+      "sourceUpdatedAt": "2026-03-23 14:37:40",
+      "fetchStatus": "current"
     },
     {
-      "id": "beauty-hairdressing-hygiene-certifications"
+      "id": "beauty-hairdressing-hygiene-certifications",
+      "fetchStatus": "current"
     },
     {
-      "id": "bottled-gas-retailers"
+      "id": "bottled-gas-retailers",
+      "fetchStatus": "current"
     },
     {
-      "id": "child-preventive-healthcare-facilities"
+      "id": "child-preventive-healthcare-facilities",
+      "fetchStatus": "current"
     },
     {
       "id": "child-youth-friendly-welfare-service-sites",
-      "sourceUpdatedAt": "2026-07-27T07:20:32.115Z"
+      "sourceUpdatedAt": "2026-07-27T07:20:32.115Z",
+      "fetchStatus": "current"
     },
     {
-      "id": "child-youth-residential-placement-institutions"
+      "id": "child-youth-residential-placement-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "child-youth-welfare-institutions"
+      "id": "child-youth-welfare-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "clinical-pathology-facilities"
+      "id": "clinical-pathology-facilities",
+      "fetchStatus": "current"
     },
     {
-      "id": "community-care-service-sites"
+      "id": "community-care-service-sites",
+      "fetchStatus": "current"
     },
     {
       "id": "community-development-associations",
-      "sourceUpdatedAt": "2026-03-31 15:13:03"
+      "sourceUpdatedAt": "2026-03-31 15:13:03",
+      "fetchStatus": "current"
     },
     {
-      "id": "community-integrated-care-level-c-units"
+      "id": "community-integrated-care-level-c-units",
+      "fetchStatus": "current"
     },
     {
-      "id": "community-public-childcare-homes"
+      "id": "community-public-childcare-homes",
+      "fetchStatus": "current"
     },
     {
-      "id": "contracted-senior-health-examination-providers"
+      "id": "contracted-senior-health-examination-providers",
+      "fetchStatus": "current"
     },
     {
       "id": "cosmetic-medicine-supervision-2024",
-      "sourceUpdatedAt": "2026-01-07 16:42:06"
+      "sourceUpdatedAt": "2026-01-07 16:42:06",
+      "fetchStatus": "current"
     },
     {
-      "id": "cultural-arts-foundations"
+      "id": "cultural-arts-foundations",
+      "fetchStatus": "current"
     },
     {
       "id": "dermatology-medical-institutions",
-      "sourceUpdatedAt": "2025-06-11T15:08:38+08:00"
+      "sourceUpdatedAt": "2025-06-11T15:08:38+08:00",
+      "fetchStatus": "current"
     },
     {
       "id": "designated-foreigner-health-exam-hospitals",
-      "sourceUpdatedAt": "2026-07-28T03:36:12.662Z"
+      "sourceUpdatedAt": "2026-07-28T03:36:12.662Z",
+      "fetchStatus": "current"
     },
     {
-      "id": "diabetes-shared-care-medical-institutions"
+      "id": "diabetes-shared-care-medical-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "disability-day-services"
+      "id": "disability-day-services",
+      "fetchStatus": "current"
     },
     {
       "id": "disability-institution-capacity-and-vacancies",
-      "sourceUpdatedAt": "2026-07-27T07:35:03.699Z"
+      "sourceUpdatedAt": "2026-07-27T07:35:03.699Z",
+      "fetchStatus": "current"
     },
     {
-      "id": "domestic-employment-agency-evaluations"
+      "id": "domestic-employment-agency-evaluations",
+      "fetchStatus": "current"
     },
     {
-      "id": "domestic-employment-service-agencies"
+      "id": "domestic-employment-service-agencies",
+      "fetchStatus": "current"
     },
     {
-      "id": "early-intervention-community-services"
+      "id": "early-intervention-community-services",
+      "fetchStatus": "current"
     },
     {
-      "id": "early-intervention-medical-providers"
+      "id": "early-intervention-medical-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "education-volunteer-recognition-records"
+      "id": "education-volunteer-recognition-records",
+      "fetchStatus": "current"
     },
     {
-      "id": "emergency-assistance-providers"
+      "id": "emergency-assistance-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "employment-agency-intermediary-companies"
+      "id": "employment-agency-intermediary-companies",
+      "sourceName": "臺北市仲介公司資料",
+      "fetchStatus": "current"
     },
     {
-      "id": "enterprise-headquarters-distribution"
+      "id": "enterprise-headquarters-distribution",
+      "sourceName": "臺北市企業營運總部分布圖",
+      "fetchStatus": "current"
     },
     {
-      "id": "entrusted-public-asset-operations"
+      "id": "entrusted-public-asset-operations",
+      "fetchStatus": "current"
     },
     {
-      "id": "environmental-pesticide-vendors"
+      "id": "environmental-pesticide-vendors",
+      "fetchStatus": "current"
     },
     {
-      "id": "family-medicine-institutions"
+      "id": "family-medicine-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "fertility-subsidy-contracted-hospitals"
+      "id": "fertility-subsidy-contracted-hospitals",
+      "fetchStatus": "current"
     },
     {
-      "id": "five-cancer-screening-providers"
+      "id": "five-cancer-screening-providers",
+      "fetchStatus": "current"
     },
     {
       "id": "fixed-site-temporary-childcare",
-      "sourceUpdatedAt": "2025-06-13T18:36:01+08:00"
+      "sourceUpdatedAt": "2025-06-13T18:36:01+08:00",
+      "fetchStatus": "current"
     },
     {
       "id": "funeral-service-businesses",
-      "sourceUpdatedAt": "2025-06-11T10:33:01+08:00"
+      "sourceUpdatedAt": "2025-06-11T10:33:01+08:00",
+      "fetchStatus": "current"
     },
     {
-      "id": "gbs-screening-clinics"
+      "id": "gbs-screening-clinics",
+      "fetchStatus": "current"
     },
     {
-      "id": "general-chinese-medicine-institutions"
+      "id": "general-chinese-medicine-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "general-dental-medical-institutions"
+      "id": "general-dental-medical-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "general-western-medicine-institutions"
+      "id": "general-western-medicine-institutions",
+      "fetchStatus": "current"
     },
     {
       "id": "government-ethics-offices",
-      "sourceUpdatedAt": "2026-06-29T08:37:03+08:00"
+      "sourceUpdatedAt": "2026-06-29T08:37:03+08:00",
+      "fetchStatus": "current"
     },
     {
       "id": "hakka-organizations",
-      "sourceUpdatedAt": "2025-06-12T16:16:44+08:00"
+      "sourceUpdatedAt": "2025-06-12T16:16:44+08:00",
+      "fetchStatus": "current"
     },
     {
-      "id": "healthcare-welfare-budget"
+      "id": "healthcare-welfare-budget",
+      "fetchStatus": "current"
     },
     {
       "id": "hemodialysis-medical-institutions",
-      "sourceUpdatedAt": "2026-07-28T02:53:31.510Z"
+      "sourceUpdatedAt": "2026-07-28T02:53:31.510Z",
+      "fetchStatus": "current"
     },
     {
-      "id": "high-myopia-prevention-clinics"
+      "id": "high-myopia-prevention-clinics",
+      "fetchStatus": "current"
     },
     {
-      "id": "home-disabled-family-physician-care-providers"
+      "id": "home-disabled-family-physician-care-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "home-nursing-institutions"
+      "id": "home-nursing-institutions",
+      "fetchStatus": "current"
     },
     {
       "id": "hospice-palliative-care-institutions",
-      "sourceUpdatedAt": "2026-07-28T01:14:09.225Z"
+      "sourceUpdatedAt": "2026-07-28T01:14:09.225Z",
+      "fetchStatus": "current"
     },
     {
       "id": "hospital-discharge-long-term-care-partners",
-      "sourceUpdatedAt": "2026-06-30T15:21:37+08:00"
+      "sourceUpdatedAt": "2026-06-30T15:21:37+08:00",
+      "fetchStatus": "current"
     },
     {
-      "id": "hospital-hemodialysis-resources"
+      "id": "hospital-hemodialysis-resources",
+      "fetchStatus": "current"
     },
     {
-      "id": "hotel-hygiene-certification-directory"
+      "id": "hotel-hygiene-certification-directory",
+      "fetchStatus": "current"
     },
     {
       "id": "indigenous-community-organizations",
-      "sourceUpdatedAt": "2025-05-23 17:27:54"
+      "sourceUpdatedAt": "2025-05-23 17:27:54",
+      "fetchStatus": "current"
     },
     {
       "id": "influenza-vaccine-providers-children-3plus",
       "sourceName": "臺北市流感疫苗合約醫療院所名冊(3歲以上(含3歲)幼童)",
-      "sourceUpdatedAt": "2026-03-17"
+      "sourceUpdatedAt": "2026-03-17",
+      "fetchStatus": "current"
     },
     {
-      "id": "influenza-vaccine-providers-under3"
+      "id": "influenza-vaccine-providers-under3",
+      "fetchStatus": "current"
     },
     {
       "id": "internal-medicine-institutions",
-      "sourceUpdatedAt": "2025-06-11T16:40:31+08:00"
+      "sourceUpdatedAt": "2025-06-11T16:40:31+08:00",
+      "fetchStatus": "current"
     },
     {
-      "id": "internet-addiction-services"
+      "id": "internet-addiction-services",
+      "fetchStatus": "current"
     },
     {
-      "id": "kidney-health-promotion-facilities"
+      "id": "kidney-health-promotion-facilities",
+      "fetchStatus": "current"
     },
     {
-      "id": "kindergarten-basic-evaluation-pass-records"
+      "id": "kindergarten-basic-evaluation-pass-records",
+      "fetchStatus": "current"
     },
     {
-      "id": "labor-pension-act-violations"
+      "id": "labor-pension-act-violations",
+      "fetchStatus": "current"
     },
     {
-      "id": "labor-standard-act-violation-records"
+      "id": "labor-standard-act-violation-records",
+      "sourceName": "臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表",
+      "fetchStatus": "current"
     },
     {
       "id": "licensed-assisted-reproduction-institutions",
-      "sourceUpdatedAt": "2025-11-13 10:13:39"
+      "sourceUpdatedAt": "2025-11-13 10:13:39",
+      "fetchStatus": "current"
     },
     {
       "id": "licensed-natural-gas-pipeline-contractors",
-      "sourceUpdatedAt": "2026-07-03 09:54:19"
+      "sourceUpdatedAt": "2026-07-03 09:54:19",
+      "fetchStatus": "current"
     },
     {
-      "id": "licensed-waste-cooking-oil-collectors"
+      "id": "licensed-waste-cooking-oil-collectors",
+      "fetchStatus": "current"
     },
     {
-      "id": "lodging-business-penalty-records"
+      "id": "lodging-business-penalty-records",
+      "fetchStatus": "current"
     },
     {
-      "id": "major-electricity-users"
+      "id": "major-electricity-users",
+      "fetchStatus": "current"
     },
     {
-      "id": "mayor-ceremonial-gift-statistics"
+      "id": "mayor-ceremonial-gift-statistics",
+      "fetchStatus": "current"
     },
     {
-      "id": "medical-laboratories"
+      "id": "medical-laboratories",
+      "fetchStatus": "current"
     },
     {
-      "id": "medical-radiological-institutions"
+      "id": "medical-radiological-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "methadone-cross-region-services"
+      "id": "methadone-cross-region-services",
+      "fetchStatus": "current"
     },
     {
-      "id": "nationwide-addiction-treatment-services"
+      "id": "nationwide-addiction-treatment-services",
+      "fetchStatus": "current"
     },
     {
       "id": "obstetrics-gynecology-institutions",
-      "sourceUpdatedAt": "2025-06-11 15:10:52"
+      "sourceUpdatedAt": "2025-06-11 15:10:52",
+      "fetchStatus": "current"
     },
     {
       "id": "occupational-therapy-clinics",
-      "sourceUpdatedAt": "2026-07-28T03:32:32.249Z"
+      "sourceUpdatedAt": "2026-07-28T03:32:32.249Z",
+      "fetchStatus": "current"
     },
     {
       "id": "ophthalmology-institutions",
-      "sourceUpdatedAt": "2026-07-27T07:41:10.763Z"
+      "sourceUpdatedAt": "2026-07-27T07:41:10.763Z",
+      "fetchStatus": "current"
     },
     {
-      "id": "optometry-institutions"
+      "id": "optometry-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "oral-maxillofacial-surgery-facilities"
+      "id": "oral-maxillofacial-surgery-facilities",
+      "fetchStatus": "current"
     },
     {
-      "id": "orthopedic-facilities"
+      "id": "orthopedic-facilities",
+      "fetchStatus": "current"
     },
     {
-      "id": "out-of-city-funeral-service-businesses"
+      "id": "out-of-city-funeral-service-businesses",
+      "fetchStatus": "current"
     },
     {
       "id": "pediatric-medical-institutions",
-      "sourceUpdatedAt": "2025-06-11 14:58:56"
+      "sourceUpdatedAt": "2025-06-11 14:58:56",
+      "fetchStatus": "current"
     },
     {
-      "id": "pest-control-businesses"
+      "id": "pest-control-businesses",
+      "fetchStatus": "current"
     },
     {
-      "id": "pet-registration-stations"
+      "id": "pet-registration-stations",
+      "fetchStatus": "current"
     },
     {
       "id": "physical-therapy-clinics",
       "sourceName": "臺北市物理治療所",
-      "sourceUpdatedAt": "2025-06-06"
+      "sourceUpdatedAt": "2025-06-06",
+      "fetchStatus": "current"
     },
     {
       "id": "plastic-surgery-medical-institutions",
-      "sourceUpdatedAt": "2025-06-11 15:13:06"
+      "sourceUpdatedAt": "2025-06-11 15:13:06",
+      "fetchStatus": "current"
     },
     {
       "id": "private-cultural-heritage-subsidies",
-      "sourceUpdatedAt": "2026-06-18T12:56:42+08:00"
+      "sourceUpdatedAt": "2026-06-18T12:56:42+08:00",
+      "fetchStatus": "current"
     },
     {
       "id": "private-senior-residential-long-term-care-institutions",
-      "sourceUpdatedAt": "2026-07-28T02:50:03.581Z"
+      "sourceUpdatedAt": "2026-07-28T02:50:03.581Z",
+      "fetchStatus": "current"
     },
     {
       "id": "psychiatric-clinics",
-      "sourceUpdatedAt": "2026-06-16 10:30:06"
+      "sourceUpdatedAt": "2026-06-16 10:30:06",
+      "fetchStatus": "current"
     },
     {
-      "id": "psychiatric-rehabilitation-and-nursing-institutions"
+      "id": "psychiatric-rehabilitation-and-nursing-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "public-influenza-antiviral-providers"
+      "id": "public-influenza-antiviral-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "public-pneumococcal-vaccine-providers"
+      "id": "public-pneumococcal-vaccine-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "rabies-vaccination-veterinary-clinics"
+      "id": "rabies-vaccination-veterinary-clinics",
+      "fetchStatus": "current"
     },
     {
-      "id": "radiology-diagnostic-facilities"
+      "id": "radiology-diagnostic-facilities",
+      "fetchStatus": "current"
     },
     {
-      "id": "registered-after-school-care-centres"
+      "id": "registered-after-school-care-centres",
+      "fetchStatus": "current"
     },
     {
-      "id": "registered-postpartum-care-institutions"
+      "id": "registered-postpartum-care-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "rehabilitation-medicine-institutions"
+      "id": "rehabilitation-medicine-institutions",
+      "fetchStatus": "current"
     },
     {
-      "id": "rotavirus-vaccine-subsidy-providers"
+      "id": "rotavirus-vaccine-subsidy-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "schoolchild-dental-preventive-care-providers"
+      "id": "schoolchild-dental-preventive-care-providers",
+      "fetchStatus": "current"
     },
     {
-      "id": "senior-care-capacity-and-occupancy"
+      "id": "senior-care-capacity-and-occupancy",
+      "fetchStatus": "current"
     },
     {
-      "id": "senior-care-institution-evaluations"
+      "id": "senior-care-institution-evaluations",
+      "fetchStatus": "current"
     },
     {
-      "id": "senior-group-meal-service-sites"
+      "id": "senior-group-meal-service-sites",
+      "fetchStatus": "current"
     },
     {
-      "id": "senior-service-site-courses"
+      "id": "senior-service-site-courses",
+      "fetchStatus": "current"
     },
     {
-      "id": "social-welfare-foundations"
+      "id": "social-welfare-foundations",
+      "fetchStatus": "current"
     },
     {
-      "id": "specific-pet-business-evaluation-results"
+      "id": "specific-pet-business-evaluation-results",
+      "fetchStatus": "current"
     },
     {
-      "id": "sports-public-participation"
+      "id": "sports-public-participation",
+      "fetchStatus": "current"
     },
     {
-      "id": "street-performer-venues"
+      "id": "street-performer-venues",
+      "fetchStatus": "current"
     },
     {
-      "id": "subsidized-senior-residential-placement-institutions"
+      "id": "subsidized-senior-residential-placement-institutions",
+      "fetchStatus": "current"
     },
     {
       "id": "taipei-cultural-heritage-assets",
-      "sourceUpdatedAt": "2026-07-28T01:07:12.544Z"
+      "sourceUpdatedAt": "2026-07-28T01:07:12.544Z",
+      "fetchStatus": "current"
     },
     {
-      "id": "taipei-government-application-services"
+      "id": "taipei-government-application-services",
+      "fetchStatus": "current"
     },
     {
-      "id": "tb-contact-screening-partner-providers"
+      "id": "tb-contact-screening-partner-providers",
+      "fetchStatus": "current"
     },
     {
       "id": "travel-medicine-clinics",
-      "sourceUpdatedAt": "2026-06-16T17:53:15+08:00"
+      "sourceUpdatedAt": "2026-06-16T17:53:15+08:00",
+      "fetchStatus": "current"
     },
     {
-      "id": "visually-impaired-massage-establishments"
+      "id": "visually-impaired-massage-establishments",
+      "fetchStatus": "current"
     },
     {
-      "id": "water-pipe-installation-contractors"
+      "id": "water-pipe-installation-contractors",
+      "fetchStatus": "current"
     },
     {
       "id": "withdrawn-illegal-hotel-enforcement-records",
-      "sourceUpdatedAt": "2026-05-28T10:43:19+08:00"
+      "sourceUpdatedAt": "2026-05-28T10:43:19+08:00",
+      "fetchStatus": "current"
     },
     {
       "id": "xray-examination-medical-institutions",
-      "sourceUpdatedAt": "2025-06-09T14:14:23+08:00"
+      "sourceUpdatedAt": "2025-06-09T14:14:23+08:00",
+      "fetchStatus": "current"
     }
   ]
 }

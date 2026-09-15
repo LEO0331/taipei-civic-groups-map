@@ -85,3 +85,10 @@ test('a failed local dataset request shows a readable error state', async ({ pag
   await selectDataset(page, '孕婦 GBS 篩檢特約院所');
   await expect(main(page)).toContainText('無法載入本機資料快照。');
 });
+
+test('a malformed education-volunteer response shows the shared readable error state', async ({ page }) => {
+  await page.route('**/data/education-volunteer-recognition-records/records.json', (route) => route.fulfill({ status: 200, body: '<!doctype html>' }));
+  await page.goto('/');
+  await selectDataset(page, '教育局志工表揚名單');
+  await expect(main(page)).toContainText('無法載入本機資料快照。');
+});

@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { freshnessStatus, type FreshnessStatus } from './lib/dataTrust';
 
 type Language = 'zh' | 'en';
-type DatasetEntry = { id: string; sourceUpdatedAt?: string; sourceName?: string };
-type Manifest = { datasetDirectoryCount: number; datedDatasetCount: number; entries: DatasetEntry[] };
+type DatasetEntry = { id: string; sourceUpdatedAt?: string; sourceName?: string; fetchStatus?: 'current' | 'reused_snapshot'; fetchFailedAt?: string };
+type Manifest = { datasetDirectoryCount: number; datedDatasetCount: number; fetchFallbackDatasetCount?: number; entries: DatasetEntry[] };
 
 const statusCopy: Record<FreshnessStatus, [string, string]> = {
   current: ['資料日期在 90 天內', 'Source date within 90 days'],
@@ -32,6 +32,7 @@ export default function DataTrustPanel({ language, activeDataset, appliesSmallSa
     <div className="data-trust-summary" role="status" aria-live="polite">
       <strong>{zh ? '資料使用提醒' : 'Use data carefully'}</strong>
       {active && <span className={`data-trust-status ${activeStatus}`}>{zh ? `${active.sourceName ?? active.id}：${statusCopy[activeStatus][0]}` : `${active.sourceName ?? active.id}: ${statusCopy[activeStatus][1]}`}</span>}
+      {active?.fetchStatus === 'reused_snapshot' && <span className="data-trust-status stale">{zh ? `本次官方刷新失敗，顯示最近成功快照${active.fetchFailedAt ? `（失敗時間：${active.fetchFailedAt}）` : ''}。` : `The official refresh failed; the most recently successful snapshot is displayed${active.fetchFailedAt ? ` (failure recorded: ${active.fetchFailedAt})` : ''}.`}</span>}
       {manifest && <span>{zh ? `${manifest.datedDatasetCount}/${manifest.datasetDirectoryCount} 個資料目錄有可判讀的來源日期；${staleCount} 個超過 180 天，${unknownCount} 個日期未知。` : `${manifest.datedDatasetCount}/${manifest.datasetDirectoryCount} dataset directories have a readable source date; ${staleCount} are over 180 days old and ${unknownCount} have an unknown date.`}</span>}
     </div>
     <details>

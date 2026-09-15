@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 116,
+  "datasetDirectoryCount": 117,
   "datedDatasetCount": 32,
   "fetchFallbackDatasetCount": 0,
   "entries": [
@@ -138,6 +138,10 @@
     {
       "id": "employment-agency-intermediary-companies",
       "sourceName": "臺北市仲介公司資料",
+      "fetchStatus": "current"
+    },
+    {
+      "id": "ent-facilities",
       "fetchStatus": "current"
     },
     {
@@ -423,6 +427,7 @@
     },
     {
       "id": "rehabilitation-medicine-institutions",
+      "sourceName": "臺北市復健科醫療機構",
       "fetchStatus": "current"
     },
     {

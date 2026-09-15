@@ -1,0 +1,17 @@
+{
+  "source": "3歲以下幼兒流感疫苗合約院所",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "行政區",
+    "院所名稱",
+    "地址",
+    "電話",
+    "語音預約"
+  ],
+  "inputRows": 221,
+  "outputRecords": 221,
+  "missingNames": 0,
+  "missingAddresses": 0,
+  "unresolvedDistricts": 0
+}

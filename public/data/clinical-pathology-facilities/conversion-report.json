@@ -1,0 +1,16 @@
+{
+  "source": "臨床病理科醫療機構",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "行政區域代碼",
+    "郵遞區號",
+    "地址"
+  ],
+  "inputRows": 17,
+  "outputRecords": 17,
+  "missingNames": 0,
+  "missingAddresses": 0,
+  "unresolvedDistricts": 0
+}

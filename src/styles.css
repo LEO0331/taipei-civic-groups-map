@@ -40,6 +40,9 @@ h1 { margin: 0; max-width: 720px; font-size: clamp(30px, 8vw, 64px); line-height
 .catalogue-empty { padding-top: 30px; padding-bottom: 34px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 main { min-height: 70vh; }
+.module-panel.generated-module { max-width: 1280px; margin: 0 auto; padding: 42px 16px 70px; }
+.module-panel.generated-module > h1 { color: #173744; }
+.module-panel.generated-module > .eyebrow { color: #a04431; }
 .status { max-width: 1280px; margin: 28px auto; padding: 18px; color: #663025; background: #f1d8ca; }
 .filters { position: sticky; top: 0; z-index: 900; padding: 14px 16px; background: rgba(245,241,232,.97); border-bottom: 1px solid #cbc4b6; backdrop-filter: blur(8px); }
 .infant-filters { position: static; }
@@ -163,6 +166,40 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
 .onboarding-flow-footer p { max-width: 760px; margin: 0; color: #5d6d72; font-size: 12px; line-height: 1.55; }
 .onboarding-flow-footer button { flex: 0 0 auto; border: 1px solid #203744; background: #203744; color: #fff; padding: 10px 14px; font: inherit; font-weight: 700; cursor: pointer; }
 .module-loading { margin: 28px auto; max-width: 1180px; padding: 18px; color: #175b62; font-weight: 700; text-align: center; }
+.rehab-directory { --rehab-ink: #173744; --rehab-teal: #276f73; --rehab-soft: #e8f0ec; --rehab-line: #c9d2cb; padding-top: 42px; }
+.rehab-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .45fr); gap: 18px 42px; align-items: end; margin-bottom: 22px; padding: 0 0 24px; border-bottom: 3px solid var(--rehab-ink); }
+.rehab-hero .eyebrow { grid-column: 1 / -1; margin: 0; color: #a04431; }
+.rehab-hero h1 { max-width: 900px; color: var(--rehab-ink); font-size: clamp(38px, 6vw, 68px); }
+.rehab-hero > p:last-child { max-width: 420px; margin: 0; color: #597077; line-height: 1.7; }
+.rehab-filters { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(190px, .35fr) auto; gap: 12px; align-items: end; margin: 26px 0; padding: 18px; border: 1px solid var(--rehab-line); background: #fffaf0; }
+.rehab-filters label { display: grid; gap: 7px; color: #60747a; font-size: 11px; font-weight: 700; letter-spacing: .07em; }
+.rehab-filters input, .rehab-filters select { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #9eaea9; background: #fffdf7; color: var(--rehab-ink); }
+.rehab-filters button { min-height: 46px; padding: 10px 14px; border: 1px solid var(--rehab-teal); background: transparent; color: var(--rehab-teal); cursor: pointer; }
+.rehab-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 38px; border-top: 2px solid var(--rehab-ink); border-left: 1px solid var(--rehab-line); }
+.rehab-summary article { min-height: 112px; padding: 16px; border-right: 1px solid var(--rehab-line); border-bottom: 1px solid var(--rehab-line); background: var(--rehab-soft); }
+.rehab-summary span { color: #5d7378; font-size: 11px; }
+.rehab-summary strong { display: block; margin-top: 24px; color: var(--rehab-ink); font-size: 34px; }
+.rehab-directory-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+.rehab-directory-heading .eyebrow { margin: 0 0 6px; color: #a04431; }
+.rehab-directory-heading h2 { margin: 0; color: var(--rehab-ink); font-size: clamp(25px, 4vw, 38px); }
+.rehab-directory-heading > span { color: var(--rehab-teal); font-weight: 700; }
+.rehab-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--rehab-line); border-left: 1px solid var(--rehab-line); }
+.rehab-card { display: grid; grid-template-columns: 76px minmax(0, 1fr); min-height: 220px; border-right: 1px solid var(--rehab-line); border-bottom: 1px solid var(--rehab-line); background: #fffaf0; }
+.rehab-card-index { padding: 18px 12px; border-right: 1px solid var(--rehab-line); background: var(--rehab-soft); }
+.rehab-card-index span { display: block; color: #718287; font-size: 10px; line-height: 1.4; }
+.rehab-card-index strong { display: block; margin-top: 10px; color: #d75b3f; font: 700 18px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.rehab-card-body { min-width: 0; padding: 20px; }
+.rehab-card h3 { margin: 0 0 14px; color: var(--rehab-ink); font-size: 19px; line-height: 1.45; }
+.rehab-location { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; }
+.rehab-location span { padding: 4px 8px; background: #dcebe5; color: #255f5f; font-size: 12px; font-weight: 700; }
+.rehab-location code { color: #6a797d; font-size: 11px; }
+.rehab-card address { min-height: 48px; color: #4e666c; font-style: normal; line-height: 1.65; }
+.rehab-actions { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: baseline; margin-top: 18px; padding-top: 14px; border-top: 1px solid #d9d4ca; font-size: 13px; }
+.rehab-actions details { flex: 1 1 100%; }
+.rehab-actions summary { color: var(--rehab-teal); cursor: pointer; font-weight: 700; }
+.rehab-actions .source-fields { margin-top: 12px; padding: 12px; background: #f1eee6; }
+.health-extra { display: grid; grid-template-columns: minmax(110px, .35fr) 1fr; gap: 10px; margin: 10px 0 0; color: #526a70; font-size: 12px; line-height: 1.55; }
+.health-extra strong { color: #244d57; }
 
 @media (max-width: 759px) {
   .catalogue-nav-inner { flex-direction: column; padding: 10px 14px; }
@@ -179,6 +216,14 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
   .onboarding-flow ol { grid-template-columns: 1fr; gap: 8px; }
   .onboarding-flow li i { right: auto; top: auto; bottom: -21px; left: calc(50% - 13px); transform: rotate(90deg); }
   .onboarding-flow-footer { align-items: flex-start; flex-direction: column; }
+  .rehab-directory { padding-top: 28px; }
+  .rehab-hero { grid-template-columns: 1fr; gap: 12px; }
+  .rehab-hero h1 { font-size: clamp(34px, 12vw, 48px); }
+  .rehab-filters { grid-template-columns: 1fr; padding: 14px; }
+  .rehab-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rehab-card-grid { grid-template-columns: 1fr; }
+  .rehab-card { grid-template-columns: 64px minmax(0, 1fr); }
+  .health-extra { grid-template-columns: 1fr; gap: 3px; }
 }
 
 @media (min-width: 760px) {

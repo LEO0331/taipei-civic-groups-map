@@ -1,1 +1,2529 @@
-[{"id":"7aaa98f351cf60eb","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"1","���c�W��":"�h��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�O�_���������h���110��1�ӡB7��"}},{"id":"93e6bb449d075d15","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"2","���c�W��":"��x�x�_���E���ߪ��]�����E���A�ȳB","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�O�_�������ϲп��n��7��"}},{"id":"2c2eebefbadea284","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"3","���c�W��":"�[��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������Ϥ��R���G�q21��"}},{"id":"20763d21e7c736ed","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"4","���c�W��":"�j�F�A�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������ϫn�����G�q"}},{"id":"64f27ce952517299","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"5","���c�W��":"�j�F�_���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_��������ù���ָ��T�q162���@��"}},{"id":"6a2ec1ca973568d5","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"6","���c�W��":"�����]�Ϊk�H�}�����������İ���|���F�p�X�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������ϥøk��8-14��"}},{"id":"1a4f1c546f4064ac","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"7","���c�W��":"�[��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������Ϥ��R���G�q21��"}},{"id":"ac5d29f499565b71","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"8","���c�W��":"��x�x�_���E���ߪ��]�����E���A�ȳB","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�O�_�������ϲп��n��7��"}},{"id":"e8f6db4ac5725466","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"9","���c�W��":"�l�F��|�]�e�U���^�������Ϊk�H�g��^","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������Ϻ֦{��14��"}},{"id":"bf43933f7cb2f980","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"10","���c�W��":"��߻O�W�j����ǰ|���]��|�ൣ��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������Ϥ��s�n��8��"}},{"id":"11bc59359843cf70","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"11","���c�W��":"��ߥx�W�j����ǰ|���]��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������ϱ`�w��1��"}},{"id":"7614d12c4979c2e6","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"12","���c�W��":"�O�_�����p�X��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000060","�a�}":"�O�_���j�P�ϾG�{��145��"}},{"id":"3024d34c3a005208","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"13","���c�W��":"�h��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_���������h���110��"}},{"id":"86e005cb0b979c16","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"14","���c�W��":"�i���_���M��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������ϫH�q���G�q91��2�Ӥ�2"}},{"id":"2fc31b2607d8b708","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"15","���c�W��":"�f�˴_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������Ϯv�j��172��"}},{"id":"ab950c65dbc2d54c","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"16","���c�W��":"�y�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000050","�a�}":"�x�_�������Ϯv�j��172��"}},{"id":"e7753fbb37c7d412","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"17","���c�W��":"�s�ȵ{�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000060","�a�}":"�x�_���j�P�ϥ��v���237- 9��237��7��"}},{"id":"44b0916ac1e4667b","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"18","���c�W��":"�O�_�����p�X��|���]�j�P���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000060","�a�}":"�x�_���j�P�ϩ��N��52��"}},{"id":"16d53e723c76a5ff","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"19","���c�W��":"���s�A�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s���s����268��"}},{"id":"65d332e129f7b0fa","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"20","���c�W��":"�бd�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϴ_���_��402��8��2��"}},{"id":"f962e654edc07481","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"21","���c�W��":"���M�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϪQ����274��2��"}},{"id":"c4e5dc1c21478808","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"22","���c�W��":"�x�W������ѱз|���������]�Ϊk�H����������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�Ϥ��s�_���G�q92��"}},{"id":"59f7bb8e6eadffb6","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"23","���c�W��":"�x�W������ѱз|���������]�Ϊk�H�����ൣ��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�Ϥ��s�_���G�q92��"}},{"id":"72445a5b29c623a4","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"24","���c�W��":"�t�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�Ϫ��K��368��2��"}},{"id":"66fd9dadc74d740d","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"25","���c�W��":"�j���_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϥ_�w��630��25��16��"}},{"id":"261ab3b896b88adb","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"26","���c�W��":"�I���k�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϪQ����158��3��"}},{"id":"1c2260b94379a99e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"27","���c�W��":"���w�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�O�_�����s�ϥ��ͪF��3�q90��2�ӡB90��2�Ӥ�3"}},{"id":"962eac76645864bd","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"28","���c�W��":"�����_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�O�_�����s�ϴ_���_��38��2��"}},{"id":"ad9b7aef0e74787c","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"29","���c�W��":"�ݦt�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s���s����356��79��"}},{"id":"3a17620a2f430807","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"30","���c�W��":"��?�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϥ_�w��595��1��B1"}},{"id":"5c363bc59b491142","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"31","���c�W��":"�w�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϪQ����54��"}},{"id":"30cc915958bc1aa8","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"32","���c�W��":"�бd�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s�ϴ_���_��402��8��2��"}},{"id":"7f2c80f5e9c4b2d9","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"33","���c�W��":"���s�A�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000040","�a�}":"�x�_�����s���s����268��"}},{"id":"2ab22a637a239c7e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"34","���c�W��":"�P�A���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϴ_���_��69��7��"}},{"id":"4b2e3fd946db8576","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"35","���c�W��":"�ͪ@�_���M��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϤT����39��"}},{"id":"2497e2b2602fb0de","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"36","���c�W��":"�y�A�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϥ��_�_��11��65��"}},{"id":"33169b3c148a298d","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"37","���c�W��":"�d���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�O�_���Q�s�ϩ��N��9��4��(1��)��11��2��"}},{"id":"3ac052ac40a2ab41","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"38","���c�W��":"�T�x�`��|�Q�s���|���]�����E���A�ȳB","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϰ��d��131��"}},{"id":"9844337ea5126b69","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"39","���c�W��":"���������]�Ϊk�H�x�_����������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϴ��ƥ_�� 199 ��"}},{"id":"d1772e49de735b73","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"40","���c�W��":"����_�{�w����|�����]�Ϊk�H�O�w��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϤK�w���G�q424��"}},{"id":"47d962e0b879df44","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"41","���c�W��":"�դ���X��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϥ��_�_��66��"}},{"id":"eaac48ae9061b181","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"42","���c�W��":"�����_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϥ��_�_��135��"}},{"id":"0a3d687555f82869","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"43","���c�W��":"�t���_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�O�_���Q�s�ϥ��v�F��3�q140��15��3��"}},{"id":"b9b545bb88a3d4c5","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"44","���c�W��":"�Q��_���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϥ��_�_��206��"}},{"id":"8dc91cdd5a47dd9a","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"45","���c�W��":"�w�w�_�_���M��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000010","�a�}":"�x�_���Q�s�ϥ��_�_��181��"}},{"id":"c71da9ee1a9b7f9a","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"46","���c�W��":"���ѥ������]�Ϊk�H�ѥЪc���체��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϫذ�n���G�q276��"}},{"id":"75a41bb327030b57","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"47","���c�W��":"�y�w�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩM���F���T�q210��"}},{"id":"b8846bc82007248b","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"48","���c�W��":"���۴_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϫH�q���|�q173��2��"}},{"id":"898b2c208794641b","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"49","���c�W��":"�F���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϫH�q���G�q208��"}},{"id":"482adf74aa9be073","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"50","���c�W��":"���L�_���M��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩ����F���|�q218-5��2��"}},{"id":"40697f592c06a5ee","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"51","���c�W��":"�W�V�_���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w��ù���ָ��G�q81��1��4��"}},{"id":"9957ac1b1b2b8de9","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"52","���c�W��":"�Y�@�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϴ_���n���@�q283��"}},{"id":"fa46453851091aec","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"53","���c�W��":"�֬��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�Ϯv�j��12��"}},{"id":"c7544988f83f14eb","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"54","���c�W��":"���d�_���M��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϫH�q���|�q134��1��"}},{"id":"aa9bda374f0eee08","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"55","���c�W��":"�߼�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩ����F���T�q259��3��"}},{"id":"9f8caf5e96c9fd16","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"56","���c�W��":"�p�s��ڶE��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�Ϥ��R���|�q77��3��"}},{"id":"550081d55b10f947","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"57","���c�W��":"�A�s�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϥ|����198��32��"}},{"id":"842258150d34abaa","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"58","���c�W��":"�ø۴_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϴ_���n���G�q236��2��"}},{"id":"82d28589ef7d760a","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"59","���c�W��":"���ʹ_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϫH�q���|�q265��17��"}},{"id":"401036391809011f","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"60","���c�W��":"��߻O�W�j����ǰ|���]��|���夤�ߤ��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϰ򶩸��T�q155��57��1��"}},{"id":"58aff1fb8814f3d0","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"61","���c�W��":"���s�������Ϊk�H���s��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�Ϥ��R���|�q112��11��"}},{"id":"c5f42a318e8938f4","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"62","���c�W��":"��������]�Ϊk�H�����X��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�Ϥ��R���|�q280��"}},{"id":"46720c4f64eabc43","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"63","���c�W��":"���߶E�������]�Ϊk�H���ߺ�X��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩ����F���|�q77��"}},{"id":"8480a8ef45274c3f","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"64","���c�W��":"���������]�Ϊk�H������X��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�Ϥ��R���|�q61��"}},{"id":"2a1d12ebd2a0c0c9","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"65","���c�W��":"�Ҹ��p�X�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩM���F���G�q120��"}},{"id":"3da2febd101e48d9","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"66","���c�W��":"�A���_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩ����F���|�q166��8��"}},{"id":"f84197c35597390f","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"67","���c�W��":"�a�w�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�O�_���j�w�ϴ��ƫn��2�q168��170���a�U1��"}},{"id":"fff614692ee18039","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"68","���c�W��":"�y�w�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϩM���F���T�q210��"}},{"id":"4d5da353bf11520c","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"69","���c�W��":"���ѥ������]�Ϊk�H�ѥЪc���체��E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000030","�a�}":"�x�_���j�w�ϫذ�n���G�q276��"}},{"id":"8a69847d988fe353","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"70","���c�W��":"�Q�f�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�O�_���U�ذϤ��ظ��G�q426-1��"}},{"id":"dc8f0054ec1bd609","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"71","���c�W��":"�ñd�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϮ۪L��47��"}},{"id":"5dddc9e3fdba0c18","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"72","���c�W��":"�թ��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϸU�j��221��"}},{"id":"e8263d7c966790b7","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"73","���c�W��":"��ͶE��","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϦ����G�q250��"}},{"id":"68ea0603d1221bec","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"74","���c�W��":"�P���|�����]�Ϊk�H�Q���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϩ�����169��1��"}},{"id":"05bf66e28802d636","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"75","���c�W��":"��߻O�W�j����ǰ|���]��|�_�@���|","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϤ�����87��"}},{"id":"d286703089488436","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"76","���c�W��":"����������Ϊk�H�����|","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϦ����G�q270��"}},{"id":"daac15e731987548","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"77","���c�W��":"�]�Ϊk�H�x�W�٨p�ߥx�_���ٰ|���]������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϼs�{��200�B243 ��"}},{"id":"898f73a0a332b310","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"78","���c�W��":"�P���|�����]�Ϊk�H�U����|","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϤ��ظ��G�q606��6��"}},{"id":"6578f44b138206f8","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"79","���c�W��":"�ñd�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000071","�a�}":"�x�_���U�ذϮ۪L��47��"}},{"id":"b6bad8b8778385fd","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"80","���c�W��":"�O�_��Ǥj�Ǫ��]��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϧd����252��"}},{"id":"279a8a1a5c35f3e9","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"81","���c�W��":"��d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�Ϥ��Y�n��16��"}},{"id":"7adf691ad77c0ad2","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"82","���c�W��":"�i�|Ż�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϧd����467��2��6��"}},{"id":"889b3a36bf511f71","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"83","���c�W��":"�����_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϥæN��344��"}},{"id":"dd1a89c29f2009fb","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"84","���c�W��":"�����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�O�_���H�q�ϩ����F��5�q71��19��"}},{"id":"2c3e7ad85504c7d3","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"85","���c�W��":"�s���d�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�O�_���H�q�ϩ����F��5�q242��3�ӡN244��3��"}},{"id":"5622a875bab30785","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"86","���c�W��":"���d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϲ��q��364��"}},{"id":"733af5a6dd02f908","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"87","���c�W��":"��O�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϰ򶩸��G�q145��1��"}},{"id":"b1e26cbdf773dea5","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"88","���c�W��":"�H�q�A�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϥ��_�n��439��"}},{"id":"4bc3d48eb8d809a6","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"89","���c�W��":"�����_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000020","�a�}":"�x�_���H�q�ϥæN��227��"}},{"id":"0a71d2a6a39e45b3","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"90","���c�W��":"�s�������]�Ϊk�H�s���d���������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�Ϥ����95��"}},{"id":"5309782aa79a47d2","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"91","���c�W��":"�ߦw�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�Ϥj�F��130��"}},{"id":"5487b2edb2566d3d","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"92","���c�W��":"�æw�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�Ϥ��s�_�����q405��63��"}},{"id":"6e5fd29474938c62","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"93","���c�W��":"�ѥ��~���_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�ϩ��۸��@�q137��"}},{"id":"65a707a743cdf2bf","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"94","���c�W��":"���d�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�ϳq�e��100��"}},{"id":"fae41c67daec6291","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"95","���c�W��":"�h�L�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�Ϥ�L��497��"}},{"id":"8f1959d8340704e9","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"96","���c�W��":"�T�ɫ~���_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�Ϥѥ��F��53��"}},{"id":"81bc9ee53740722f","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"97","���c�W��":"�¶��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000110","�a�}":"�x�_���h�L�Ϥ��s�_�����q699��2��"}},{"id":"78937ca3ed99619c","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"98","���c�W��":"�O�_�a���`��|","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��ϥ۵P���G�q201��"}},{"id":"0a8f4fd634811ccb","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"99","���c�W��":"�O�_����������|�w�e�U�O�_�a���`��|�g��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϫ����225��12��"}},{"id":"d63e8c76be328794","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"100","���c�W��":"���������]�Ϊk�H������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϯ�����45��"}},{"id":"c628d3cce9985c75","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"101","���c�W��":"�����]�Ϊk�H�d���G����|�M�H�v��������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��ϥ߼w��125��"}},{"id":"b50f33591dfc1e23","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"102","���c�W��":"�O�_�����p�X��|���]�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϸs����30��5��"}},{"id":"47bf1aa5fc173869","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"103","���c�W��":"�E�@���_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϥ����_���@�q10��"}},{"id":"6c6d01ddbbd498a7","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"104","���c�W��":"�����p�X�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϥ����n���@�q207��"}},{"id":"570ba2f2d18f31f7","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"105","���c�W��":"�p�����d�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϥѥ����128��"}},{"id":"5ec8fe1c2a0555f3","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"106","���c�W��":"���d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��ϥ۵P���@�q40��"}},{"id":"54626a0e6d97942f","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"107","���c�W��":"���ߴ_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��ϪF�ص�@�q370��1��"}},{"id":"4403d1d463e4fd5c","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"108","���c�W��":"�ѥ��O�d�E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��ϩ��w��365��3��"}},{"id":"b273ded3ccff614e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"109","���c�W��":"�۵P��M�_���E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000120","�a�}":"�x�_���_��Ϥ�L�_��262���@��"}},{"id":"83b0e6399a6996bd","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"110","���c�W��":"�T�x�`��|���]�����E���A�ȳB","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϧ��\\���G�q325��"}},{"id":"9ec4217ab97c679e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"111","���c�W��":"�d�������]�Ϊk�H�d����|","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϧ��\\�����q420��26��"}},{"id":"87d12877d95f9033","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"112","���c�W��":"�������Ĥj�Ǫ��]��|�O�_���|","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϥ�����G�q360��"}},{"id":"bb19629115240b24","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"113","���c�W��":"�w��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϧ��\\���|�q36��2��"}},{"id":"d81a6f9106d802dd","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"114","���c�W��":"���d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϧ��\\�����q81��"}},{"id":"93dda7cf56d5d0ab","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"115","���c�W��":"���\\�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϧ��\\���T�q164��"}},{"id":"78ef76c97dd0725d","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"116","���c�W��":"���ʹ_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������ϱd����T�q54-11��"}},{"id":"78c459fe45278a0c","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"117","���c�W��":"�����_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϥ�w��208��8��1��"}},{"id":"b65a101b8c42d8e2","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"118","���c�W��":"�I�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������ϪF���113��15��"}},{"id":"d2f6a0147ad7da5e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"119","���c�W��":"�A�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϥ�w��141���B143��"}},{"id":"c1f03a12d05bb625","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"120","���c�W��":"���s�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϸ����337��7��"}},{"id":"ce4996acd7cf9cf7","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"121","���c�W��":"�����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϥ�����@�q118��3��"}},{"id":"cd9c46a70f12470e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"122","���c�W��":"�O�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�O�_������Ϥ����1�q358��2��"}},{"id":"caba2bee33ac247a","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"123","���c�W��":"��������]�Ϊk�H�������E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000100","�a�}":"�x�_������Ϸ����337��"}},{"id":"4092863a2bd32005","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"124","���c�W��":"�����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000090","�a�}":"�x�_���n��ϥæN��546�B551��"}},{"id":"f301f18300cde7a7","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"125","���c�W��":"�n��_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000090","�a�}":"�x�_���n��ϫn����@�q172��"}},{"id":"b81a0b5011d2d472","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"126","���c�W��":"�O�_���߸U����|-�e�U�O�_��Ǥj�ǿ�z","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s�Ͽ������T�q111��"}},{"id":"5daf37956dce31cb","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"127","���c�W��":"������|","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s��ù���ָ����q280��"}},{"id":"f32762915477aaf4","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"128","���c�W��":"�ʱd�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s�Ͽ������G�q228��1��"}},{"id":"4a43831efa8b6fcd","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"129","���c�W��":"�K�L�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s�Ϥ�s���T�q229��"}},{"id":"4b054c7c8ab9cd97","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"130","���c�W��":"�����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s�Ͽ������T�q112��9��"}},{"id":"55f0f6a84b458dea","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"131","���c�W��":"��s�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s�Ͽ������T�q207����5��"}},{"id":"ddac45d8193e0935","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"132","���c�W��":"�X�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s�Ͽ������|�q217��"}},{"id":"60259f2492a1d12e","districtName":"","hasAddress":false,"hasValidDistrictCode":false,"externalMapQuery":"undefined undefined","sourceValues":{"�Ǹ�":"134","���c�W��":"�U���O�d�_����E��","�����O�N�X":"63000","��F�ϰ�N�X":"63000082","�a�}":"�x�_����s��ù���ָ����q127��2��"}}]
+[
+  {
+    "id": "356a192b7913b04c",
+    "sourceSequenceNumber": "1",
+    "institutionName": "懷寧復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "臺北市中正區懷寧街110號1樓、7樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市中正區懷寧街110號1樓、7樓 懷寧復健科診所",
+    "sourceValues": {
+      "序號": "1",
+      "機構名稱": "懷寧復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "臺北市中正區懷寧街110號1樓、7樓"
+    }
+  },
+  {
+    "id": "da4b9237bacccdf1",
+    "sourceSequenceNumber": "2",
+    "institutionName": "國軍台北門診中心附設民眾診療服務處",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "臺北市中正區紹興南街7號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市中正區紹興南街7號 國軍台北門診中心附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "2",
+      "機構名稱": "國軍台北門診中心附設民眾診療服務處",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "臺北市中正區紹興南街7號"
+    }
+  },
+  {
+    "id": "77de68daecd823ba",
+    "sourceSequenceNumber": "3",
+    "institutionName": "久瑞復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區仁愛路二段21號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區仁愛路二段21號 久瑞復健科診所",
+    "sourceValues": {
+      "序號": "3",
+      "機構名稱": "久瑞復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區仁愛路二段21號"
+    }
+  },
+  {
+    "id": "1b6453892473a467",
+    "sourceSequenceNumber": "4",
+    "institutionName": "古亭適康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區南昌路二段",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區南昌路二段 古亭適康復健科診所",
+    "sourceValues": {
+      "序號": "4",
+      "機構名稱": "古亭適康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區南昌路二段"
+    }
+  },
+  {
+    "id": "ac3478d69a3c81fa",
+    "sourceSequenceNumber": "5",
+    "institutionName": "古亭復健診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區羅斯福路三段162號一樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區羅斯福路三段162號一樓 古亭復健診所",
+    "sourceValues": {
+      "序號": "5",
+      "機構名稱": "古亭復健診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區羅斯福路三段162號一樓"
+    }
+  },
+  {
+    "id": "c1dfd96eea8cc2b6",
+    "sourceSequenceNumber": "6",
+    "institutionName": "醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區永綏街8-14號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區永綏街8-14號 醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+    "sourceValues": {
+      "序號": "6",
+      "機構名稱": "醫療財團法人徐元智先生醫藥基金會遠東聯合診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區永綏街8-14號"
+    }
+  },
+  {
+    "id": "902ba3cda1883801",
+    "sourceSequenceNumber": "7",
+    "institutionName": "久瑞復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區仁愛路二段21號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區仁愛路二段21號 久瑞復健科診所",
+    "sourceValues": {
+      "序號": "7",
+      "機構名稱": "久瑞復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區仁愛路二段21號"
+    }
+  },
+  {
+    "id": "fe5dbbcea5ce7e29",
+    "sourceSequenceNumber": "8",
+    "institutionName": "國軍台北門診中心附設民眾診療服務處",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "臺北市中正區紹興南街7號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市中正區紹興南街7號 國軍台北門診中心附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "8",
+      "機構名稱": "國軍台北門診中心附設民眾診療服務處",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "臺北市中正區紹興南街7號"
+    }
+  },
+  {
+    "id": "0ade7c2cf97f75d0",
+    "sourceSequenceNumber": "9",
+    "institutionName": "郵政醫院（委託中英醫療社團法人經營）",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區福州街14號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區福州街14號 郵政醫院（委託中英醫療社團法人經營）",
+    "sourceValues": {
+      "序號": "9",
+      "機構名稱": "郵政醫院（委託中英醫療社團法人經營）",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區福州街14號"
+    }
+  },
+  {
+    "id": "b1d5781111d84f7b",
+    "sourceSequenceNumber": "10",
+    "institutionName": "國立臺灣大學醫學院附設醫院兒童醫院",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區中山南路8號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區中山南路8號 國立臺灣大學醫學院附設醫院兒童醫院",
+    "sourceValues": {
+      "序號": "10",
+      "機構名稱": "國立臺灣大學醫學院附設醫院兒童醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區中山南路8號"
+    }
+  },
+  {
+    "id": "17ba0791499db908",
+    "sourceSequenceNumber": "11",
+    "institutionName": "國立台灣大學醫學院附設醫院",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區常德街1號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區常德街1號 國立台灣大學醫學院附設醫院",
+    "sourceValues": {
+      "序號": "11",
+      "機構名稱": "國立台灣大學醫學院附設醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區常德街1號"
+    }
+  },
+  {
+    "id": "7b52009b64fd0a2a",
+    "sourceSequenceNumber": "12",
+    "institutionName": "臺北市立聯合醫院",
+    "cityCode": "63000",
+    "districtCode": "63000060",
+    "districtName": "大同區",
+    "address": "臺北市大同區鄭州路145號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市大同區鄭州路145號 臺北市立聯合醫院",
+    "sourceValues": {
+      "序號": "12",
+      "機構名稱": "臺北市立聯合醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000060",
+      "地址": "臺北市大同區鄭州路145號"
+    }
+  },
+  {
+    "id": "bd307a3ec329e10a",
+    "sourceSequenceNumber": "13",
+    "institutionName": "懷寧復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區懷寧街110號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區懷寧街110號 懷寧復健科診所",
+    "sourceValues": {
+      "序號": "13",
+      "機構名稱": "懷寧復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區懷寧街110號"
+    }
+  },
+  {
+    "id": "fa35e192121eabf3",
+    "sourceSequenceNumber": "14",
+    "institutionName": "虹約復健專科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區信義路二段91號2樓之2",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區信義路二段91號2樓之2 虹約復健專科診所",
+    "sourceValues": {
+      "序號": "14",
+      "機構名稱": "虹約復健專科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區信義路二段91號2樓之2"
+    }
+  },
+  {
+    "id": "f1abd670358e036c",
+    "sourceSequenceNumber": "15",
+    "institutionName": "惠森復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區師大路172號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區師大路172號 惠森復健科診所",
+    "sourceValues": {
+      "序號": "15",
+      "機構名稱": "惠森復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區師大路172號"
+    }
+  },
+  {
+    "id": "1574bddb75c78a6f",
+    "sourceSequenceNumber": "16",
+    "institutionName": "宜康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000050",
+    "districtName": "中正區",
+    "address": "台北市中正區師大路172號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中正區師大路172號 宜康復健科診所",
+    "sourceValues": {
+      "序號": "16",
+      "機構名稱": "宜康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000050",
+      "地址": "台北市中正區師大路172號"
+    }
+  },
+  {
+    "id": "0716d9708d321ffb",
+    "sourceSequenceNumber": "17",
+    "institutionName": "新旅程復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000060",
+    "districtName": "大同區",
+    "address": "台北市大同區民權西路237- 9號237之7號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大同區民權西路237- 9號237之7號 新旅程復健科診所",
+    "sourceValues": {
+      "序號": "17",
+      "機構名稱": "新旅程復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000060",
+      "地址": "台北市大同區民權西路237- 9號237之7號"
+    }
+  },
+  {
+    "id": "9e6a55b6b4563e65",
+    "sourceSequenceNumber": "18",
+    "institutionName": "臺北市立聯合醫院附設大同門診部",
+    "cityCode": "63000",
+    "districtCode": "63000060",
+    "districtName": "大同區",
+    "address": "台北市大同區昌吉街52號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大同區昌吉街52號 臺北市立聯合醫院附設大同門診部",
+    "sourceValues": {
+      "序號": "18",
+      "機構名稱": "臺北市立聯合醫院附設大同門診部",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000060",
+      "地址": "台北市大同區昌吉街52號"
+    }
+  },
+  {
+    "id": "b3f0c7f6bb763af1",
+    "sourceSequenceNumber": "19",
+    "institutionName": "中山適康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區龍江路268號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區龍江路268號 中山適康復健科診所",
+    "sourceValues": {
+      "序號": "19",
+      "機構名稱": "中山適康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區龍江路268號"
+    }
+  },
+  {
+    "id": "91032ad7bbcb6cf7",
+    "sourceSequenceNumber": "20",
+    "institutionName": "耘康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區復興北路402巷8弄2號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區復興北路402巷8弄2號 耘康復健科診所",
+    "sourceValues": {
+      "序號": "20",
+      "機構名稱": "耘康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區復興北路402巷8弄2號"
+    }
+  },
+  {
+    "id": "472b07b9fcf2c245",
+    "sourceSequenceNumber": "21",
+    "institutionName": "睦霖復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區松江路274號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區松江路274號2樓 睦霖復健科診所",
+    "sourceValues": {
+      "序號": "21",
+      "機構名稱": "睦霖復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區松江路274號2樓"
+    }
+  },
+  {
+    "id": "12c6fc06c99a4623",
+    "sourceSequenceNumber": "22",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區中山北路二段92號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區中山北路二段92號 台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+    "sourceValues": {
+      "序號": "22",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區中山北路二段92號"
+    }
+  },
+  {
+    "id": "d435a6cdd786300d",
+    "sourceSequenceNumber": "23",
+    "institutionName": "台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區中山北路二段92號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區中山北路二段92號 台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+    "sourceValues": {
+      "序號": "23",
+      "機構名稱": "台灣基督長老教會馬偕醫療財團法人馬偕兒童醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區中山北路二段92號"
+    }
+  },
+  {
+    "id": "4d134bc072212ace",
+    "sourceSequenceNumber": "24",
+    "institutionName": "宇康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區長春路368號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區長春路368號2樓 宇康復健科診所",
+    "sourceValues": {
+      "序號": "24",
+      "機構名稱": "宇康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區長春路368號2樓"
+    }
+  },
+  {
+    "id": "f6e1126cedebf23e",
+    "sourceSequenceNumber": "25",
+    "institutionName": "大直復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區北安路630巷25弄16號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區北安路630巷25弄16號 大直復健科診所",
+    "sourceValues": {
+      "序號": "25",
+      "機構名稱": "大直復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區北安路630巷25弄16號"
+    }
+  },
+  {
+    "id": "887309d048beef83",
+    "sourceSequenceNumber": "26",
+    "institutionName": "施宏男復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區松江路158號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區松江路158號3樓 施宏男復健科診所",
+    "sourceValues": {
+      "序號": "26",
+      "機構名稱": "施宏男復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區松江路158號3樓"
+    }
+  },
+  {
+    "id": "bc33ea4e26e5e1af",
+    "sourceSequenceNumber": "27",
+    "institutionName": "興安診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "臺北市中山區民生東路3段90號2樓、90號2樓之3",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市中山區民生東路3段90號2樓、90號2樓之3 興安診所",
+    "sourceValues": {
+      "序號": "27",
+      "機構名稱": "興安診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "臺北市中山區民生東路3段90號2樓、90號2樓之3"
+    }
+  },
+  {
+    "id": "0a57cb53ba59c46f",
+    "sourceSequenceNumber": "28",
+    "institutionName": "旭恩復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "臺北市中山區復興北路38號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市中山區復興北路38號2樓 旭恩復健科診所",
+    "sourceValues": {
+      "序號": "28",
+      "機構名稱": "旭恩復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "臺北市中山區復興北路38號2樓"
+    }
+  },
+  {
+    "id": "7719a1c782a1ba91",
+    "sourceSequenceNumber": "29",
+    "institutionName": "禾宇復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區龍江路356巷79號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區龍江路356巷79號 禾宇復健科診所",
+    "sourceValues": {
+      "序號": "29",
+      "機構名稱": "禾宇復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區龍江路356巷79號"
+    }
+  },
+  {
+    "id": "22d200f8670dbdb3",
+    "sourceSequenceNumber": "30",
+    "institutionName": "景?復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區北安路595巷1號B1",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區北安路595巷1號B1 景?復健科診所",
+    "sourceValues": {
+      "序號": "30",
+      "機構名稱": "景?復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區北安路595巷1號B1"
+    }
+  },
+  {
+    "id": "632667547e7cd3e0",
+    "sourceSequenceNumber": "31",
+    "institutionName": "安康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區松江路54號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區松江路54號 安康復健科診所",
+    "sourceValues": {
+      "序號": "31",
+      "機構名稱": "安康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區松江路54號"
+    }
+  },
+  {
+    "id": "cb4e5208b4cd8726",
+    "sourceSequenceNumber": "32",
+    "institutionName": "耘康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區復興北路402巷8弄2號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區復興北路402巷8弄2號 耘康復健科診所",
+    "sourceValues": {
+      "序號": "32",
+      "機構名稱": "耘康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區復興北路402巷8弄2號"
+    }
+  },
+  {
+    "id": "b6692ea5df920cad",
+    "sourceSequenceNumber": "33",
+    "institutionName": "中山適康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000040",
+    "districtName": "中山區",
+    "address": "台北市中山區龍江路268號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市中山區龍江路268號 中山適康復健科診所",
+    "sourceValues": {
+      "序號": "33",
+      "機構名稱": "中山適康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000040",
+      "地址": "台北市中山區龍江路268號"
+    }
+  },
+  {
+    "id": "f1f836cb4ea6efb2",
+    "sourceSequenceNumber": "34",
+    "institutionName": "周適偉診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區復興北路69號7樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區復興北路69號7樓 周適偉診所",
+    "sourceValues": {
+      "序號": "34",
+      "機構名稱": "周適偉診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區復興北路69號7樓"
+    }
+  },
+  {
+    "id": "972a67c48192728a",
+    "sourceSequenceNumber": "35",
+    "institutionName": "生昇復健專科診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區三民路39號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區三民路39號 生昇復健專科診所",
+    "sourceValues": {
+      "序號": "35",
+      "機構名稱": "生昇復健專科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區三民路39號"
+    }
+  },
+  {
+    "id": "fc074d501302eb2b",
+    "sourceSequenceNumber": "36",
+    "institutionName": "悠適復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路11巷65號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區光復北路11巷65號 悠適復健科診所",
+    "sourceValues": {
+      "序號": "36",
+      "機構名稱": "悠適復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區光復北路11巷65號"
+    }
+  },
+  {
+    "id": "cb7a1d775e800fd1",
+    "sourceSequenceNumber": "37",
+    "institutionName": "康健診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "臺北市松山區延吉街9之4號(1樓)及11號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市松山區延吉街9之4號(1樓)及11號2樓 康健診所",
+    "sourceValues": {
+      "序號": "37",
+      "機構名稱": "康健診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "臺北市松山區延吉街9之4號(1樓)及11號2樓"
+    }
+  },
+  {
+    "id": "5b384ce32d8cdef0",
+    "sourceSequenceNumber": "38",
+    "institutionName": "三軍總醫院松山分院附設民眾診療服務處",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區健康路131號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區健康路131號 三軍總醫院松山分院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "38",
+      "機構名稱": "三軍總醫院松山分院附設民眾診療服務處",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區健康路131號"
+    }
+  },
+  {
+    "id": "ca3512f4dfa95a03",
+    "sourceSequenceNumber": "39",
+    "institutionName": "長庚醫療財團法人台北長庚紀念醫院",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區敦化北路 199 號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區敦化北路 199 號 長庚醫療財團法人台北長庚紀念醫院",
+    "sourceValues": {
+      "序號": "39",
+      "機構名稱": "長庚醫療財團法人台北長庚紀念醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區敦化北路 199 號"
+    }
+  },
+  {
+    "id": "af3e133428b9e25c",
+    "sourceSequenceNumber": "40",
+    "institutionName": "基督復臨安息日會醫療財團法人臺安醫院",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區八德路二段424號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區八德路二段424號 基督復臨安息日會醫療財團法人臺安醫院",
+    "sourceValues": {
+      "序號": "40",
+      "機構名稱": "基督復臨安息日會醫療財團法人臺安醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區八德路二段424號"
+    }
+  },
+  {
+    "id": "761f22b2c1593d0b",
+    "sourceSequenceNumber": "41",
+    "institutionName": "博仁綜合醫院",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路66號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區光復北路66號 博仁綜合醫院",
+    "sourceValues": {
+      "序號": "41",
+      "機構名稱": "博仁綜合醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區光復北路66號"
+    }
+  },
+  {
+    "id": "92cfceb39d57d914",
+    "sourceSequenceNumber": "42",
+    "institutionName": "正風復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路135號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區光復北路135號 正風復健科診所",
+    "sourceValues": {
+      "序號": "42",
+      "機構名稱": "正風復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區光復北路135號"
+    }
+  },
+  {
+    "id": "0286dd552c9bea9a",
+    "sourceSequenceNumber": "43",
+    "institutionName": "宇恩復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "臺北市松山區民權東路3段140巷15號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市松山區民權東路3段140巷15號3樓 宇恩復健科診所",
+    "sourceValues": {
+      "序號": "43",
+      "機構名稱": "宇恩復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "臺北市松山區民權東路3段140巷15號3樓"
+    }
+  },
+  {
+    "id": "98fbc42faedc0249",
+    "sourceSequenceNumber": "44",
+    "institutionName": "松原復健診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路206號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區光復北路206號 松原復健診所",
+    "sourceValues": {
+      "序號": "44",
+      "機構名稱": "松原復健診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區光復北路206號"
+    }
+  },
+  {
+    "id": "fb644351560d8296",
+    "sourceSequenceNumber": "45",
+    "institutionName": "安德復復健專科診所",
+    "cityCode": "63000",
+    "districtCode": "63000010",
+    "districtName": "松山區",
+    "address": "台北市松山區光復北路181號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市松山區光復北路181號 安德復復健專科診所",
+    "sourceValues": {
+      "序號": "45",
+      "機構名稱": "安德復復健專科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000010",
+      "地址": "台北市松山區光復北路181號"
+    }
+  },
+  {
+    "id": "fe2ef495a1152561",
+    "sourceSequenceNumber": "46",
+    "institutionName": "尹書田醫療財團法人書田泌尿科眼科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區建國南路二段276號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區建國南路二段276號 尹書田醫療財團法人書田泌尿科眼科診所",
+    "sourceValues": {
+      "序號": "46",
+      "機構名稱": "尹書田醫療財團法人書田泌尿科眼科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區建國南路二段276號"
+    }
+  },
+  {
+    "id": "827bfc458708f0b4",
+    "sourceSequenceNumber": "47",
+    "institutionName": "宜德復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區和平東路三段210號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區和平東路三段210號 宜德復健科診所",
+    "sourceValues": {
+      "序號": "47",
+      "機構名稱": "宜德復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區和平東路三段210號"
+    }
+  },
+  {
+    "id": "64e095fe763fc624",
+    "sourceSequenceNumber": "48",
+    "institutionName": "杏誠復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段173號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區信義路四段173號2樓 杏誠復健科診所",
+    "sourceValues": {
+      "序號": "48",
+      "機構名稱": "杏誠復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區信義路四段173號2樓"
+    }
+  },
+  {
+    "id": "2e01e17467891f7c",
+    "sourceSequenceNumber": "49",
+    "institutionName": "達仁診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路二段208號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區信義路二段208號 達仁診所",
+    "sourceValues": {
+      "序號": "49",
+      "機構名稱": "達仁診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區信義路二段208號"
+    }
+  },
+  {
+    "id": "e1822db470e60d09",
+    "sourceSequenceNumber": "50",
+    "institutionName": "輝馥復健專科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路四段218-5號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區忠孝東路四段218-5號2樓 輝馥復健專科診所",
+    "sourceValues": {
+      "序號": "50",
+      "機構名稱": "輝馥復健專科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區忠孝東路四段218-5號2樓"
+    }
+  },
+  {
+    "id": "b7eb6c689c037217",
+    "sourceSequenceNumber": "51",
+    "institutionName": "超越復健診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區羅斯福路二段81巷1號4樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區羅斯福路二段81巷1號4樓 超越復健診所",
+    "sourceValues": {
+      "序號": "51",
+      "機構名稱": "超越復健診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區羅斯福路二段81巷1號4樓"
+    }
+  },
+  {
+    "id": "a9334987ece78b6f",
+    "sourceSequenceNumber": "52",
+    "institutionName": "欣昇復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區復興南路一段283號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區復興南路一段283號 欣昇復健科診所",
+    "sourceValues": {
+      "序號": "52",
+      "機構名稱": "欣昇復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區復興南路一段283號"
+    }
+  },
+  {
+    "id": "c5b76da3e608d34e",
+    "sourceSequenceNumber": "53",
+    "institutionName": "樂活診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區師大路12號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區師大路12號 樂活診所",
+    "sourceValues": {
+      "序號": "53",
+      "機構名稱": "樂活診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區師大路12號"
+    }
+  },
+  {
+    "id": "80e28a51cbc26fa4",
+    "sourceSequenceNumber": "54",
+    "institutionName": "宏康復健專科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段134號1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區信義路四段134號1樓 宏康復健專科診所",
+    "sourceValues": {
+      "序號": "54",
+      "機構名稱": "宏康復健專科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區信義路四段134號1樓"
+    }
+  },
+  {
+    "id": "8effee409c625e1a",
+    "sourceSequenceNumber": "55",
+    "institutionName": "立澄診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路三段259號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區忠孝東路三段259號3樓 立澄診所",
+    "sourceValues": {
+      "序號": "55",
+      "機構名稱": "立澄診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區忠孝東路三段259號3樓"
+    }
+  },
+  {
+    "id": "54ceb91256e8190e",
+    "sourceSequenceNumber": "56",
+    "institutionName": "聯新國際診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段77號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區仁愛路四段77號3樓 聯新國際診所",
+    "sourceValues": {
+      "序號": "56",
+      "機構名稱": "聯新國際診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區仁愛路四段77號3樓"
+    }
+  },
+  {
+    "id": "9109c85a45b703f8",
+    "sourceSequenceNumber": "57",
+    "institutionName": "適群診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區四維路198巷32號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區四維路198巷32號 適群診所",
+    "sourceValues": {
+      "序號": "57",
+      "機構名稱": "適群診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區四維路198巷32號"
+    }
+  },
+  {
+    "id": "667be543b02294b7",
+    "sourceSequenceNumber": "58",
+    "institutionName": "永誠復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區復興南路二段236號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區復興南路二段236號2樓 永誠復健科診所",
+    "sourceValues": {
+      "序號": "58",
+      "機構名稱": "永誠復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區復興南路二段236號2樓"
+    }
+  },
+  {
+    "id": "5a5b0f9b7d3f8fc8",
+    "sourceSequenceNumber": "59",
+    "institutionName": "仁生復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區信義路四段265巷17號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區信義路四段265巷17號 仁生復健科診所",
+    "sourceValues": {
+      "序號": "59",
+      "機構名稱": "仁生復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區信義路四段265巷17號"
+    }
+  },
+  {
+    "id": "e6c3dd630428fd54",
+    "sourceSequenceNumber": "60",
+    "institutionName": "國立臺灣大學醫學院附設醫院癌醫中心分院",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區基隆路三段155巷57號1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區基隆路三段155巷57號1樓 國立臺灣大學醫學院附設醫院癌醫中心分院",
+    "sourceValues": {
+      "序號": "60",
+      "機構名稱": "國立臺灣大學醫學院附設醫院癌醫中心分院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區基隆路三段155巷57號1樓"
+    }
+  },
+  {
+    "id": "6c1e671f9af5b46d",
+    "sourceSequenceNumber": "61",
+    "institutionName": "中山醫療社團法人中山醫院",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段112巷11號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區仁愛路四段112巷11號 中山醫療社團法人中山醫院",
+    "sourceValues": {
+      "序號": "61",
+      "機構名稱": "中山醫療社團法人中山醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區仁愛路四段112巷11號"
+    }
+  },
+  {
+    "id": "511a418e72591eb7",
+    "sourceSequenceNumber": "62",
+    "institutionName": "國泰醫療財團法人國泰綜合醫院",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段280號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區仁愛路四段280號 國泰醫療財團法人國泰綜合醫院",
+    "sourceValues": {
+      "序號": "62",
+      "機構名稱": "國泰醫療財團法人國泰綜合醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區仁愛路四段280號"
+    }
+  },
+  {
+    "id": "a17554a0d2b15a66",
+    "sourceSequenceNumber": "63",
+    "institutionName": "中心診所醫療財團法人中心綜合醫院",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路四段77號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區忠孝東路四段77號 中心診所醫療財團法人中心綜合醫院",
+    "sourceValues": {
+      "序號": "63",
+      "機構名稱": "中心診所醫療財團法人中心綜合醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區忠孝東路四段77號"
+    }
+  },
+  {
+    "id": "c66c65175fecc310",
+    "sourceSequenceNumber": "64",
+    "institutionName": "宏恩醫療財團法人宏恩綜合醫院",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區仁愛路四段61號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區仁愛路四段61號 宏恩醫療財團法人宏恩綜合醫院",
+    "sourceValues": {
+      "序號": "64",
+      "機構名稱": "宏恩醫療財團法人宏恩綜合醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區仁愛路四段61號"
+    }
+  },
+  {
+    "id": "2a459380709e2fe4",
+    "sourceSequenceNumber": "65",
+    "institutionName": "啟誠聯合診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區和平東路二段120號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區和平東路二段120號 啟誠聯合診所",
+    "sourceValues": {
+      "序號": "65",
+      "機構名稱": "啟誠聯合診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區和平東路二段120號"
+    }
+  },
+  {
+    "id": "59129aacfb6cebbe",
+    "sourceSequenceNumber": "66",
+    "institutionName": "適健復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區忠孝東路四段166號8樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區忠孝東路四段166號8樓 適健復健科診所",
+    "sourceValues": {
+      "序號": "66",
+      "機構名稱": "適健復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區忠孝東路四段166號8樓"
+    }
+  },
+  {
+    "id": "4d89d294cd4ca9f2",
+    "sourceSequenceNumber": "67",
+    "institutionName": "家安復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "臺北市大安區敦化南路2段168及170號地下1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市大安區敦化南路2段168及170號地下1樓 家安復健科診所",
+    "sourceValues": {
+      "序號": "67",
+      "機構名稱": "家安復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "臺北市大安區敦化南路2段168及170號地下1樓"
+    }
+  },
+  {
+    "id": "b4c96d80854dd27e",
+    "sourceSequenceNumber": "68",
+    "institutionName": "宜德復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區和平東路三段210號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區和平東路三段210號 宜德復健科診所",
+    "sourceValues": {
+      "序號": "68",
+      "機構名稱": "宜德復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區和平東路三段210號"
+    }
+  },
+  {
+    "id": "a72b20062ec2c47a",
+    "sourceSequenceNumber": "69",
+    "institutionName": "尹書田醫療財團法人書田泌尿科眼科診所",
+    "cityCode": "63000",
+    "districtCode": "63000030",
+    "districtName": "大安區",
+    "address": "台北市大安區建國南路二段276號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市大安區建國南路二段276號 尹書田醫療財團法人書田泌尿科眼科診所",
+    "sourceValues": {
+      "序號": "69",
+      "機構名稱": "尹書田醫療財團法人書田泌尿科眼科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000030",
+      "地址": "台北市大安區建國南路二段276號"
+    }
+  },
+  {
+    "id": "b7103ca278a75cad",
+    "sourceSequenceNumber": "70",
+    "institutionName": "松柏復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "臺北市萬華區中華路二段426-1號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市萬華區中華路二段426-1號 松柏復健科診所",
+    "sourceValues": {
+      "序號": "70",
+      "機構名稱": "松柏復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "臺北市萬華區中華路二段426-1號"
+    }
+  },
+  {
+    "id": "d02560dd9d7db446",
+    "sourceSequenceNumber": "71",
+    "institutionName": "永康診所",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區桂林路47號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區桂林路47號 永康診所",
+    "sourceValues": {
+      "序號": "71",
+      "機構名稱": "永康診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區桂林路47號"
+    }
+  },
+  {
+    "id": "c097638f92de80ba",
+    "sourceSequenceNumber": "72",
+    "institutionName": "博昌復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區萬大路221號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區萬大路221號 博昌復健科診所",
+    "sourceValues": {
+      "序號": "72",
+      "機構名稱": "博昌復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區萬大路221號"
+    }
+  },
+  {
+    "id": "35e995c107a71cae",
+    "sourceSequenceNumber": "73",
+    "institutionName": "瑞生診所",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路二段250號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區西園路二段250號 瑞生診所",
+    "sourceValues": {
+      "序號": "73",
+      "機構名稱": "瑞生診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區西園路二段250號"
+    }
+  },
+  {
+    "id": "1f1362ea41d1bc65",
+    "sourceSequenceNumber": "74",
+    "institutionName": "同仁院醫療財團法人貴陽診所",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區昆明街169號1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區昆明街169號1樓 同仁院醫療財團法人貴陽診所",
+    "sourceValues": {
+      "序號": "74",
+      "機構名稱": "同仁院醫療財團法人貴陽診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區昆明街169號1樓"
+    }
+  },
+  {
+    "id": "450ddec8dd206c2e",
+    "sourceSequenceNumber": "75",
+    "institutionName": "國立臺灣大學醫學院附設醫院北護分院",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區內江街87號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區內江街87號 國立臺灣大學醫學院附設醫院北護分院",
+    "sourceValues": {
+      "序號": "75",
+      "機構名稱": "國立臺灣大學醫學院附設醫院北護分院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區內江街87號"
+    }
+  },
+  {
+    "id": "d54ad009d179ae34",
+    "sourceSequenceNumber": "76",
+    "institutionName": "西園醫療社團法人西園醫院",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區西園路二段270號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區西園路二段270號 西園醫療社團法人西園醫院",
+    "sourceValues": {
+      "序號": "76",
+      "機構名稱": "西園醫療社團法人西園醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區西園路二段270號"
+    }
+  },
+  {
+    "id": "d321d6f7ccf98b51",
+    "sourceSequenceNumber": "77",
+    "institutionName": "財團法人台灣省私立台北仁濟院附設仁濟醫院",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區廣州街200、243 號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區廣州街200、243 號 財團法人台灣省私立台北仁濟院附設仁濟醫院",
+    "sourceValues": {
+      "序號": "77",
+      "機構名稱": "財團法人台灣省私立台北仁濟院附設仁濟醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區廣州街200、243 號"
+    }
+  },
+  {
+    "id": "eb4ac3033e8ab359",
+    "sourceSequenceNumber": "78",
+    "institutionName": "同仁院醫療財團法人萬華醫院",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區中華路二段606巷6號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區中華路二段606巷6號 同仁院醫療財團法人萬華醫院",
+    "sourceValues": {
+      "序號": "78",
+      "機構名稱": "同仁院醫療財團法人萬華醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區中華路二段606巷6號"
+    }
+  },
+  {
+    "id": "b74f5ee9461495ba",
+    "sourceSequenceNumber": "79",
+    "institutionName": "永康診所",
+    "cityCode": "63000",
+    "districtCode": "63000071",
+    "districtName": "萬華區",
+    "address": "台北市萬華區桂林路47號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市萬華區桂林路47號 永康診所",
+    "sourceValues": {
+      "序號": "79",
+      "機構名稱": "永康診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000071",
+      "地址": "台北市萬華區桂林路47號"
+    }
+  },
+  {
+    "id": "b888b29826bb53dc",
+    "sourceSequenceNumber": "80",
+    "institutionName": "臺北醫學大學附設醫院",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區吳興街252號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區吳興街252號 臺北醫學大學附設醫院",
+    "sourceValues": {
+      "序號": "80",
+      "機構名稱": "臺北醫學大學附設醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區吳興街252號"
+    }
+  },
+  {
+    "id": "1d513c0bcbe33b2e",
+    "sourceSequenceNumber": "81",
+    "institutionName": "日康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區中坡南路16號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區中坡南路16號 日康復健科診所",
+    "sourceValues": {
+      "序號": "81",
+      "機構名稱": "日康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區中坡南路16號"
+    }
+  },
+  {
+    "id": "76546f9a641ede2b",
+    "sourceSequenceNumber": "82",
+    "institutionName": "張育驍診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區吳興街467巷2弄6號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區吳興街467巷2弄6號 張育驍診所",
+    "sourceValues": {
+      "序號": "82",
+      "機構名稱": "張育驍診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區吳興街467巷2弄6號"
+    }
+  },
+  {
+    "id": "7d7116e23efef729",
+    "sourceSequenceNumber": "83",
+    "institutionName": "正興復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區永吉路344號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區永吉路344號 正興復健科診所",
+    "sourceValues": {
+      "序號": "83",
+      "機構名稱": "正興復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區永吉路344號"
+    }
+  },
+  {
+    "id": "be461a0cd1fda052",
+    "sourceSequenceNumber": "84",
+    "institutionName": "興雅診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "臺北市信義區忠孝東路5段71巷19號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市信義區忠孝東路5段71巷19號 興雅診所",
+    "sourceValues": {
+      "序號": "84",
+      "機構名稱": "興雅診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "臺北市信義區忠孝東路5段71巷19號"
+    }
+  },
+  {
+    "id": "1352246e33277e9d",
+    "sourceSequenceNumber": "85",
+    "institutionName": "新詠康診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "臺北市信義區忠孝東路5段242號3樓﹑244號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市信義區忠孝東路5段242號3樓﹑244號3樓 新詠康診所",
+    "sourceValues": {
+      "序號": "85",
+      "機構名稱": "新詠康診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "臺北市信義區忠孝東路5段242號3樓﹑244號3樓"
+    }
+  },
+  {
+    "id": "3c26dffc8a2e8804",
+    "sourceSequenceNumber": "86",
+    "institutionName": "順康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區莊敬路364號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區莊敬路364號 順康復健科診所",
+    "sourceValues": {
+      "序號": "86",
+      "機構名稱": "順康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區莊敬路364號"
+    }
+  },
+  {
+    "id": "e62d7f1eb43d87c2",
+    "sourceSequenceNumber": "87",
+    "institutionName": "原力復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區基隆路二段145號1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區基隆路二段145號1樓 原力復健科診所",
+    "sourceValues": {
+      "序號": "87",
+      "機構名稱": "原力復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區基隆路二段145號1樓"
+    }
+  },
+  {
+    "id": "b37f6ddcefad7e86",
+    "sourceSequenceNumber": "88",
+    "institutionName": "信義適康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區光復南路439號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區光復南路439號 信義適康復健科診所",
+    "sourceValues": {
+      "序號": "88",
+      "機構名稱": "信義適康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區光復南路439號"
+    }
+  },
+  {
+    "id": "16b06bd9b738835e",
+    "sourceSequenceNumber": "89",
+    "institutionName": "杏仁復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000020",
+    "districtName": "信義區",
+    "address": "台北市信義區永吉路227號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市信義區永吉路227號 杏仁復健科診所",
+    "sourceValues": {
+      "序號": "89",
+      "機構名稱": "杏仁復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000020",
+      "地址": "台北市信義區永吉路227號"
+    }
+  },
+  {
+    "id": "2d0c8af807ef45ac",
+    "sourceSequenceNumber": "90",
+    "institutionName": "新光醫療財團法人新光吳火獅紀念醫院",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區文昌路95號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區文昌路95號 新光醫療財團法人新光吳火獅紀念醫院",
+    "sourceValues": {
+      "序號": "90",
+      "機構名稱": "新光醫療財團法人新光吳火獅紀念醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區文昌路95號"
+    }
+  },
+  {
+    "id": "4cd66dfabbd964f8",
+    "sourceSequenceNumber": "91",
+    "institutionName": "立安復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區大東路130號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區大東路130號 立安復健科診所",
+    "sourceValues": {
+      "序號": "91",
+      "機構名稱": "立安復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區大東路130號"
+    }
+  },
+  {
+    "id": "8ee51caaa2c2f4ee",
+    "sourceSequenceNumber": "92",
+    "institutionName": "永安診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區中山北路六段405巷63號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區中山北路六段405巷63號 永安診所",
+    "sourceValues": {
+      "序號": "92",
+      "機構名稱": "永安診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區中山北路六段405巷63號"
+    }
+  },
+  {
+    "id": "08a35293e09f5084",
+    "sourceSequenceNumber": "93",
+    "institutionName": "天母品恆復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區忠誠路一段137號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區忠誠路一段137號 天母品恆復健科診所",
+    "sourceValues": {
+      "序號": "93",
+      "機構名稱": "天母品恆復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區忠誠路一段137號"
+    }
+  },
+  {
+    "id": "215bb47da8fac334",
+    "sourceSequenceNumber": "94",
+    "institutionName": "佑康診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區通河街100號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區通河街100號 佑康診所",
+    "sourceValues": {
+      "序號": "94",
+      "機構名稱": "佑康診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區通河街100號"
+    }
+  },
+  {
+    "id": "8e63fd3e77796b10",
+    "sourceSequenceNumber": "95",
+    "institutionName": "士林復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區文林路497號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區文林路497號 士林復健科診所",
+    "sourceValues": {
+      "序號": "95",
+      "機構名稱": "士林復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區文林路497號"
+    }
+  },
+  {
+    "id": "6fb84aed32facd12",
+    "sourceSequenceNumber": "96",
+    "institutionName": "三玉品恆復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區天母東路53號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區天母東路53號 三玉品恆復健科診所",
+    "sourceValues": {
+      "序號": "96",
+      "機構名稱": "三玉品恆復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區天母東路53號"
+    }
+  },
+  {
+    "id": "812ed4562d321136",
+    "sourceSequenceNumber": "97",
+    "institutionName": "朝陽復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000110",
+    "districtName": "士林區",
+    "address": "台北市士林區中山北路五段699巷2號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市士林區中山北路五段699巷2號 朝陽復健科診所",
+    "sourceValues": {
+      "序號": "97",
+      "機構名稱": "朝陽復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000110",
+      "地址": "台北市士林區中山北路五段699巷2號"
+    }
+  },
+  {
+    "id": "31bd9b9f5f7b338e",
+    "sourceSequenceNumber": "98",
+    "institutionName": "臺北榮民總醫院",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區石牌路二段201號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區石牌路二段201號 臺北榮民總醫院",
+    "sourceValues": {
+      "序號": "98",
+      "機構名稱": "臺北榮民總醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區石牌路二段201號"
+    }
+  },
+  {
+    "id": "9a79be611e0267e1",
+    "sourceSequenceNumber": "99",
+    "institutionName": "臺北市立關渡醫院─委託臺北榮民總醫院經營",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區知行路225巷12號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區知行路225巷12號 臺北市立關渡醫院─委託臺北榮民總醫院經營",
+    "sourceValues": {
+      "序號": "99",
+      "機構名稱": "臺北市立關渡醫院─委託臺北榮民總醫院經營",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區知行路225巷12號"
+    }
+  },
+  {
+    "id": "310b86e0b62b8285",
+    "sourceSequenceNumber": "100",
+    "institutionName": "振興醫療財團法人振興醫院",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區振興街45號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區振興街45號 振興醫療財團法人振興醫院",
+    "sourceValues": {
+      "序號": "100",
+      "機構名稱": "振興醫療財團法人振興醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區振興街45號"
+    }
+  },
+  {
+    "id": "dbc0f004854457f5",
+    "sourceSequenceNumber": "101",
+    "institutionName": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區立德路125號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區立德路125號 醫療財團法人辜公亮基金會和信治癌中心醫院",
+    "sourceValues": {
+      "序號": "101",
+      "機構名稱": "醫療財團法人辜公亮基金會和信治癌中心醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區立德路125號"
+    }
+  },
+  {
+    "id": "c8306ae139ac98f4",
+    "sourceSequenceNumber": "102",
+    "institutionName": "臺北市立聯合醫院附設北投門診部",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區新市街30號5樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區新市街30號5樓 臺北市立聯合醫院附設北投門診部",
+    "sourceValues": {
+      "序號": "102",
+      "機構名稱": "臺北市立聯合醫院附設北投門診部",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區新市街30號5樓"
+    }
+  },
+  {
+    "id": "934385f53d1bd0c1",
+    "sourceSequenceNumber": "103",
+    "institutionName": "余世仁復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區中央北路一段10號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區中央北路一段10號 余世仁復健科診所",
+    "sourceValues": {
+      "序號": "103",
+      "機構名稱": "余世仁復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區中央北路一段10號"
+    }
+  },
+  {
+    "id": "78a8efcbaaa1a9a3",
+    "sourceSequenceNumber": "104",
+    "institutionName": "祐民聯合診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區中央南路一段207號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區中央南路一段207號 祐民聯合診所",
+    "sourceValues": {
+      "序號": "104",
+      "機構名稱": "祐民聯合診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區中央南路一段207號"
+    }
+  },
+  {
+    "id": "e114c448f4ab8554",
+    "sourceSequenceNumber": "105",
+    "institutionName": "如翊健康診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區天母西路128號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區天母西路128號 如翊健康診所",
+    "sourceValues": {
+      "序號": "105",
+      "機構名稱": "如翊健康診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區天母西路128號"
+    }
+  },
+  {
+    "id": "7224f997fc148baa",
+    "sourceSequenceNumber": "106",
+    "institutionName": "旭康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區石牌路一段40號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區石牌路一段40號 旭康復健科診所",
+    "sourceValues": {
+      "序號": "106",
+      "機構名稱": "旭康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區石牌路一段40號"
+    }
+  },
+  {
+    "id": "524e05dc77239f3a",
+    "sourceSequenceNumber": "107",
+    "institutionName": "臻心復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區東華街一段370號1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區東華街一段370號1樓 臻心復健科診所",
+    "sourceValues": {
+      "序號": "107",
+      "機構名稱": "臻心復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區東華街一段370號1樓"
+    }
+  },
+  {
+    "id": "17503a6b2326f09f",
+    "sourceSequenceNumber": "108",
+    "institutionName": "天母力康診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區明德路365號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區明德路365號3樓 天母力康診所",
+    "sourceValues": {
+      "序號": "108",
+      "機構名稱": "天母力康診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區明德路365號3樓"
+    }
+  },
+  {
+    "id": "a1422e6a168630cd",
+    "sourceSequenceNumber": "109",
+    "institutionName": "石牌實和復健診所",
+    "cityCode": "63000",
+    "districtCode": "63000120",
+    "districtName": "北投區",
+    "address": "台北市北投區文林北路262號一樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市北投區文林北路262號一樓 石牌實和復健診所",
+    "sourceValues": {
+      "序號": "109",
+      "機構名稱": "石牌實和復健診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000120",
+      "地址": "台北市北投區文林北路262號一樓"
+    }
+  },
+  {
+    "id": "5e796e48332af414",
+    "sourceSequenceNumber": "110",
+    "institutionName": "三軍總醫院附設民眾診療服務處",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路二段325號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區成功路二段325號 三軍總醫院附設民眾診療服務處",
+    "sourceValues": {
+      "序號": "110",
+      "機構名稱": "三軍總醫院附設民眾診療服務處",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區成功路二段325號"
+    }
+  },
+  {
+    "id": "6216f8a75fd5bb3d",
+    "sourceSequenceNumber": "111",
+    "institutionName": "康寧醫療財團法人康寧醫院",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路五段420巷26號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區成功路五段420巷26號 康寧醫療財團法人康寧醫院",
+    "sourceValues": {
+      "序號": "111",
+      "機構名稱": "康寧醫療財團法人康寧醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區成功路五段420巷26號"
+    }
+  },
+  {
+    "id": "601ca99d55f00a2e",
+    "sourceSequenceNumber": "112",
+    "institutionName": "中國醫藥大學附設醫院臺北分院",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區內湖路二段360號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區內湖路二段360號 中國醫藥大學附設醫院臺北分院",
+    "sourceValues": {
+      "序號": "112",
+      "機構名稱": "中國醫藥大學附設醫院臺北分院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區內湖路二段360號"
+    }
+  },
+  {
+    "id": "e993215bfdaa515f",
+    "sourceSequenceNumber": "113",
+    "institutionName": "德文復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路四段36號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區成功路四段36號2樓 德文復健科診所",
+    "sourceValues": {
+      "序號": "113",
+      "機構名稱": "德文復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區成功路四段36號2樓"
+    }
+  },
+  {
+    "id": "ecb7937db58ec9de",
+    "sourceSequenceNumber": "114",
+    "institutionName": "弘康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路五段81號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區成功路五段81號 弘康復健科診所",
+    "sourceValues": {
+      "序號": "114",
+      "機構名稱": "弘康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區成功路五段81號"
+    }
+  },
+  {
+    "id": "efa6e44dfa014524",
+    "sourceSequenceNumber": "115",
+    "institutionName": "成功復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區成功路三段164號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區成功路三段164號 成功復健科診所",
+    "sourceValues": {
+      "序號": "115",
+      "機構名稱": "成功復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區成功路三段164號"
+    }
+  },
+  {
+    "id": "683e725c03a87baa",
+    "sourceSequenceNumber": "116",
+    "institutionName": "祐生復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區康寧路三段54-11號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區康寧路三段54-11號 祐生復健科診所",
+    "sourceValues": {
+      "序號": "116",
+      "機構名稱": "祐生復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區康寧路三段54-11號"
+    }
+  },
+  {
+    "id": "d0e2dbb0bac1917d",
+    "sourceSequenceNumber": "117",
+    "institutionName": "紫陽復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區文德路208巷8號1樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區文德路208巷8號1樓 紫陽復健科診所",
+    "sourceValues": {
+      "序號": "117",
+      "機構名稱": "紫陽復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區文德路208巷8號1樓"
+    }
+  },
+  {
+    "id": "12f0de3dc76e067d",
+    "sourceSequenceNumber": "118",
+    "institutionName": "富康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區東湖路113巷15號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區東湖路113巷15號 富康復健科診所",
+    "sourceValues": {
+      "序號": "118",
+      "機構名稱": "富康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區東湖路113巷15號"
+    }
+  },
+  {
+    "id": "a2e33d344f272e10",
+    "sourceSequenceNumber": "119",
+    "institutionName": "適康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區文德路141號、143號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區文德路141號、143號 適康復健科診所",
+    "sourceValues": {
+      "序號": "119",
+      "機構名稱": "適康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區文德路141號、143號"
+    }
+  },
+  {
+    "id": "775bc5c30e27f0e5",
+    "sourceSequenceNumber": "120",
+    "institutionName": "恆新復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區瑞光路337號7樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區瑞光路337號7樓 恆新復健科診所",
+    "sourceValues": {
+      "序號": "120",
+      "機構名稱": "恆新復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區瑞光路337號7樓"
+    }
+  },
+  {
+    "id": "8bd7954c40c1e59a",
+    "sourceSequenceNumber": "121",
+    "institutionName": "紫陽診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區內湖路一段118號3樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區內湖路一段118號3樓 紫陽診所",
+    "sourceValues": {
+      "序號": "121",
+      "機構名稱": "紫陽診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區內湖路一段118號3樓"
+    }
+  },
+  {
+    "id": "05a8ea5382b9fd88",
+    "sourceSequenceNumber": "122",
+    "institutionName": "力康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "臺北市內湖區內湖路1段358號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "臺北市內湖區內湖路1段358號2樓 力康復健科診所",
+    "sourceValues": {
+      "序號": "122",
+      "機構名稱": "力康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "臺北市內湖區內湖路1段358號2樓"
+    }
+  },
+  {
+    "id": "40bd001563085fc3",
+    "sourceSequenceNumber": "123",
+    "institutionName": "國泰醫療財團法人內湖國泰診所",
+    "cityCode": "63000",
+    "districtCode": "63000100",
+    "districtName": "內湖區",
+    "address": "台北市內湖區瑞光路337號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市內湖區瑞光路337號 國泰醫療財團法人內湖國泰診所",
+    "sourceValues": {
+      "序號": "123",
+      "機構名稱": "國泰醫療財團法人內湖國泰診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000100",
+      "地址": "台北市內湖區瑞光路337號"
+    }
+  },
+  {
+    "id": "f38cfe2e2facbcc7",
+    "sourceSequenceNumber": "124",
+    "institutionName": "興盛診所",
+    "cityCode": "63000",
+    "districtCode": "63000090",
+    "districtName": "南港區",
+    "address": "台北市南港區永吉路546、551號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市南港區永吉路546、551號 興盛診所",
+    "sourceValues": {
+      "序號": "124",
+      "機構名稱": "興盛診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000090",
+      "地址": "台北市南港區永吉路546、551號"
+    }
+  },
+  {
+    "id": "0ca9277f91e40054",
+    "sourceSequenceNumber": "125",
+    "institutionName": "南港復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000090",
+    "districtName": "南港區",
+    "address": "台北市南港區南港路一段172號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市南港區南港路一段172號 南港復健科診所",
+    "sourceValues": {
+      "序號": "125",
+      "機構名稱": "南港復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000090",
+      "地址": "台北市南港區南港路一段172號"
+    }
+  },
+  {
+    "id": "114d4eefde1dae39",
+    "sourceSequenceNumber": "126",
+    "institutionName": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路三段111號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區興隆路三段111號 臺北市立萬芳醫院-委託臺北醫學大學辦理",
+    "sourceValues": {
+      "序號": "126",
+      "機構名稱": "臺北市立萬芳醫院-委託臺北醫學大學辦理",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區興隆路三段111號"
+    }
+  },
+  {
+    "id": "008451a05e1e7aa3",
+    "sourceSequenceNumber": "127",
+    "institutionName": "景美醫院",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區羅斯福路六段280號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區羅斯福路六段280號 景美醫院",
+    "sourceValues": {
+      "序號": "127",
+      "機構名稱": "景美醫院",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區羅斯福路六段280號"
+    }
+  },
+  {
+    "id": "b4182bff4b3cf75f",
+    "sourceSequenceNumber": "128",
+    "institutionName": "晉康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路二段228之1號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區興隆路二段228之1號 晉康復健科診所",
+    "sourceValues": {
+      "序號": "128",
+      "機構名稱": "晉康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區興隆路二段228之1號"
+    }
+  },
+  {
+    "id": "8b7471f4ae0bf59f",
+    "sourceSequenceNumber": "129",
+    "institutionName": "春林復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區木新路三段229號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區木新路三段229號 春林復健科診所",
+    "sourceValues": {
+      "序號": "129",
+      "機構名稱": "春林復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區木新路三段229號"
+    }
+  },
+  {
+    "id": "2a7541babb57434e",
+    "sourceSequenceNumber": "130",
+    "institutionName": "興隆診所",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路三段112巷9號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區興隆路三段112巷9號 興隆診所",
+    "sourceValues": {
+      "序號": "130",
+      "機構名稱": "興隆診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區興隆路三段112巷9號"
+    }
+  },
+  {
+    "id": "e794a80eb109162d",
+    "sourceSequenceNumber": "131",
+    "institutionName": "文山復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路三段207號之5號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區興隆路三段207號之5號 文山復健科診所",
+    "sourceValues": {
+      "序號": "131",
+      "機構名稱": "文山復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區興隆路三段207號之5號"
+    }
+  },
+  {
+    "id": "91dfde1d6e005e42",
+    "sourceSequenceNumber": "132",
+    "institutionName": "合康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區興隆路四段217號",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區興隆路四段217號 合康復健科診所",
+    "sourceValues": {
+      "序號": "132",
+      "機構名稱": "合康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區興隆路四段217號"
+    }
+  },
+  {
+    "id": "95e815d1541bf6f3",
+    "sourceSequenceNumber": "134",
+    "institutionName": "萬隆力康復健科診所",
+    "cityCode": "63000",
+    "districtCode": "63000082",
+    "districtName": "文山區",
+    "address": "台北市文山區羅斯福路五段127號2樓",
+    "hasAddress": true,
+    "hasValidDistrictCode": true,
+    "externalMapQuery": "台北市文山區羅斯福路五段127號2樓 萬隆力康復健科診所",
+    "sourceValues": {
+      "序號": "134",
+      "機構名稱": "萬隆力康復健科診所",
+      "縣市別代碼": "63000",
+      "行政區域代碼": "63000082",
+      "地址": "台北市文山區羅斯福路五段127號2樓"
+    }
+  }
+]

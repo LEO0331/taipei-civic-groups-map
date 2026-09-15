@@ -6,7 +6,7 @@ A bilingual Vite + React dashboard for browsing selected Taipei public-record da
 
 ## What it provides
 
-- A searchable, topic-based data catalogue for 107 directories.
+- A searchable, topic-based catalogue with 116 visible modules backed by 117 static dataset directories.
 - Bilingual Traditional Chinese and English interface text.
 - Dataset-specific filtering, source-field detail, CSV export, and external address lookup where the source supports them.
 - Build-time data-trust evidence: readable source dates, clearly marked unknown dates, and a local-data/privacy reminder.

@@ -86,6 +86,38 @@ test('the homepage does not wait for an unrelated dataset request', async ({ pag
   await expect(main(page).getByText('資料載入中…', { exact: true })).not.toBeVisible();
 });
 
+test('rehabilitation directory renders decoded records and usable controls', async ({ page }) => {
+  await page.goto('/');
+  await selectDataset(page, '復健科醫療機構');
+  await expect(main(page).getByRole('heading', { name: '臺北市復健科醫療機構' })).toBeVisible();
+  await expect(main(page).getByRole('heading', { name: '懷寧復健科診所' }).first()).toBeVisible();
+  await expect(main(page).getByText('臺北市中正區懷寧街110號1樓、7樓', { exact: true }).first()).toBeVisible();
+  await main(page).getByPlaceholder('搜尋機構、行政區、代碼或地址').fill('懷寧');
+  await expect(main(page).getByRole('heading', { name: '懷寧復健科診所' }).first()).toBeVisible();
+  await expect(main(page).getByText('133', { exact: true })).not.toBeVisible();
+  await main(page).getByText('來源細節', { exact: true }).first().click();
+  await expect(main(page).getByText('機構名稱', { exact: true }).first()).toBeVisible();
+});
+
+test('simple healthcare directories share a readable paginated template', async ({ page }) => {
+  const directories = ['耳鼻喉科醫療機構', '3歲以下幼兒流感疫苗合約院所', '藥癮戒治機構', '腎臟病健康促進機構', '孕婦 GBS 篩檢特約院所', '臨床病理科醫療機構', '口腔顎面外科醫療機構', '解剖病理科醫療機構'];
+  await page.goto('/');
+  for (const label of directories) {
+    await test.step(label, async () => {
+      await selectDataset(page, label);
+      const directory = main(page).locator('.health-directory');
+      await expect(directory).toBeVisible();
+      await expect(directory.locator('.rehab-filters')).toBeVisible();
+      await expect(directory.locator('.rehab-summary')).toBeVisible();
+      await expect(directory.locator('.rehab-card').first()).toBeVisible();
+      expect(await directory.locator('.rehab-card').count()).toBeLessThanOrEqual(18);
+      await expect(directory).not.toContainText('�');
+    });
+  }
+  await selectDataset(page, '3歲以下幼兒流感疫苗合約院所');
+  await expect(main(page).locator('.rehab-card .rehab-location span').filter({ hasText: '松山區' }).first()).toBeVisible();
+});
+
 test('a failed local dataset request shows a readable error state', async ({ page }) => {
   await page.route('**/data/gbs-screening-clinics/records.json', (route) => route.fulfill({ status: 500, body: '' }));
   await page.goto('/');

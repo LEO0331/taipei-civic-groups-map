@@ -1,0 +1,25 @@
+{
+  "source": "臺北市復健科醫療機構",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "縣市別代碼",
+    "行政區域代碼",
+    "地址"
+  ],
+  "inputRows": 133,
+  "outputRecords": 133,
+  "duplicateRows": [],
+  "missingNames": [],
+  "missingAddresses": [],
+  "unknownDistrictCodes": [
+    "63000071",
+    "63000082"
+  ],
+  "notes": [
+    "All official source fields are preserved as strings.",
+    "District names use official administrative-area codes first, with an explicit Taipei district in the source address as a conservative fallback.",
+    "No official coordinates are supplied; no exact map markers or automatic geocoding are created."
+  ]
+}

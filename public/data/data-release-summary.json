@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 116,
+  "datasetDirectoryCount": 117,
   "datedDatasetCount": 32,
-  "unknownDateDatasetCount": 84,
+  "unknownDateDatasetCount": 85,
   "fetchFallbackDatasetCount": 0,
   "datasetsWithSourceDates": [
     "arts-cultural-venues",
@@ -64,6 +64,7 @@
     "education-volunteer-recognition-records",
     "emergency-assistance-providers",
     "employment-agency-intermediary-companies",
+    "ent-facilities",
     "enterprise-headquarters-distribution",
     "entrusted-public-asset-operations",
     "environmental-pesticide-vendors",

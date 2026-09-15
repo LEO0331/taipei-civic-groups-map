@@ -2,6 +2,7 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import DataTrustPanel from './DataTrustPanel';
 import { buildDatasetCatalogue } from './lib/datasetCatalogue';
+import { loadLocalJson } from './lib/loadLocalJson';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
@@ -637,6 +638,19 @@ export default function App() {
   const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
 
   useEffect(() => {
+    let active = true;
+    Promise.all([
+      loadLocalJson<CivicGroup[]>('data/civic-groups.json'),
+      loadLocalJson<CivicGroupSummary>('data/civic-group-summary.json'),
+    ]).then(([groupData, summaryData]) => {
+      if (!active) return;
+      setGroups(groupData);
+      setSummary(summaryData);
+    }).catch(() => { if (active) setLoadError(true); });
+    return () => { active = false; };
+  }, []);
+
+  useEffect(() => {
     const loadJson = async (path: string) => {
       const response = await fetch(`${import.meta.env.BASE_URL}${path}`);
       if (!response.ok) throw new Error(`${path}: ${response.status}`);
@@ -926,7 +940,7 @@ export default function App() {
       <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
       {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => setShowOnboarding(false)} />}
       {loadError && <p className="status" role="alert">{t.loadError}</p>}
-      {!loadError && (!summary || !performingArtsSummary || !vaccinationProviderSummary || !hpvProviderSummary || !childMedicalSubsidyProviderSummary || !dentureSubsidyProviderSummary || !disabilityEmploymentResourceSummary || !shelteredWorkshopSummary || !employmentAgencySummary || !licensedPawnshopSummary || !licensedArcadeSummary || !licensedSpecialEntertainmentSummary || !recyclingOrganizationSummary || !registeredFactorySummary || !enterpriseHeadquartersSummary || !cemeterySummary || !telepsychologySummary || !publicLiabilitySummary || !businessChangeSummary || !companyChangeSummary || !laborUnionSummary || !infantCareSummary || !infantCareEvaluationSummary || !elderlyWelfareSummary || !biotechCompanySummary || !travelAccommodationSummary || !grantSummary || !procurementSummary || !cramSchoolSummary || !hotelSummary || !laborViolationSummary || !laborViolationManifest || !oshViolationSummary || !genderEqualityViolationSummary || !consumerDisputeSummary || !nangangCompanySummary || !dawannanCompanySummary || !animalHospitalSummary || !animalMedicineSellerSummary || !petBusinessEvaluationSummary || !veterinarianSummary) && <p className="status" role="status">{t.loading}</p>}
+      {!loadError && tab === 'civic' && !summary && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
         <div className="subtabs">{civicViews.map(([id, label]) => <button className={civicView === id ? 'active' : ''} onClick={() => setCivicView(id)} key={id}>{label}</button>)}</div>
         {civicView === 'map' && activeSummary && <CivicMap summary={activeSummary} language={language} openDistrict={openDistrict} />}

@@ -79,6 +79,13 @@ test('representative interaction profiles work', async ({ page }) => {
   await expect(main(page).locator('table')).toBeVisible();
 });
 
+test('the homepage does not wait for an unrelated dataset request', async ({ page }) => {
+  await page.route('**/data/performing-arts-group-summary.json', () => new Promise(() => {}));
+  await page.goto('/');
+  await expect(main(page).getByRole('heading', { name: '人民團體' })).toBeVisible();
+  await expect(main(page).getByText('資料載入中…', { exact: true })).not.toBeVisible();
+});
+
 test('a failed local dataset request shows a readable error state', async ({ page }) => {
   await page.route('**/data/gbs-screening-clinics/records.json', (route) => route.fulfill({ status: 500, body: '' }));
   await page.goto('/');

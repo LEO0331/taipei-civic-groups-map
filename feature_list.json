@@ -38,7 +38,7 @@
       "description": "Prevent deployments with TypeScript errors, preserve build-time data evidence, and maintain lightweight accessibility and loading contracts.",
       "dependencies": ["maintenance-harness", "trust-safeguards"],
       "status": "done",
-      "evidence": "2026-09-15: TypeScript and Pages deployment guards remain clean. The release manifest now exposes reused-snapshot fetch failures to the active dataset UI, and the shared local JSON loader has unit and E2E coverage for HTTP and malformed-response failures. 108 unit tests, 3 accessibility contracts, 8 desktop/mobile E2E tests, production build, and npm audit --omit=dev pass."
+      "evidence": "2026-09-15: TypeScript and Pages deployment guards remain clean. The release manifest exposes reused-snapshot fetch failures to the active dataset UI; the shared local JSON loader covers HTTP and malformed-response failures; and the civic homepage loads independently of stalled unrelated datasets. 108 unit tests, 3 accessibility contracts, 10 desktop/mobile E2E tests, production build, and npm audit --omit=dev pass."
     },
     {
       "id": "catalogue-navigation",

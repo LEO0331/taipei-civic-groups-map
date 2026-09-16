@@ -167,9 +167,9 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
 .onboarding-flow-footer button { flex: 0 0 auto; border: 1px solid #203744; background: #203744; color: #fff; padding: 10px 14px; font: inherit; font-weight: 700; cursor: pointer; }
 .module-loading { margin: 28px auto; max-width: 1180px; padding: 18px; color: #175b62; font-weight: 700; text-align: center; }
 .rehab-directory { --rehab-ink: #173744; --rehab-teal: #276f73; --rehab-soft: #e8f0ec; --rehab-line: #c9d2cb; padding-top: 42px; }
-.rehab-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .45fr); gap: 18px 42px; align-items: end; margin-bottom: 22px; padding: 0 0 24px; border-bottom: 3px solid var(--rehab-ink); }
+.rehab-hero { position: static; z-index: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .45fr); gap: 18px 42px; align-items: end; max-width: none; margin-bottom: 22px; padding: 0 0 24px; border-bottom: 3px solid var(--rehab-ink); background: transparent; color: var(--rehab-ink); }
 .rehab-hero .eyebrow { grid-column: 1 / -1; margin: 0; color: #a04431; }
-.rehab-hero h1 { max-width: 900px; color: var(--rehab-ink); font-size: clamp(38px, 6vw, 68px); }
+.rehab-hero h1 { max-width: 900px; color: var(--rehab-ink); font-size: clamp(29px, 6vw, 50px); letter-spacing: -.04em; }
 .rehab-hero > p:last-child { max-width: 420px; margin: 0; color: #597077; line-height: 1.7; }
 .rehab-filters { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(190px, .35fr) auto; gap: 12px; align-items: end; margin: 26px 0; padding: 18px; border: 1px solid var(--rehab-line); background: #fffaf0; }
 .rehab-filters label { display: grid; gap: 7px; color: #60747a; font-size: 11px; font-weight: 700; letter-spacing: .07em; }

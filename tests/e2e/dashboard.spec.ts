@@ -107,6 +107,8 @@ test('simple healthcare directories share a readable paginated template', async 
       await selectDataset(page, label);
       const directory = main(page).locator('.health-directory');
       await expect(directory).toBeVisible();
+      const heroStyles = await directory.locator('.rehab-hero').evaluate((element) => { const styles = getComputedStyle(element); return { backgroundColor: styles.backgroundColor, position: styles.position }; });
+      expect(heroStyles).toEqual({ backgroundColor: 'rgba(0, 0, 0, 0)', position: 'static' });
       await expect(directory.locator('.rehab-filters')).toBeVisible();
       await expect(directory.locator('.rehab-summary')).toBeVisible();
       await expect(directory.locator('.rehab-card').first()).toBeVisible();

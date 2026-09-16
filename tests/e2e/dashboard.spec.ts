@@ -120,6 +120,23 @@ test('simple healthcare directories share a readable paginated template', async 
   await expect(main(page).locator('.rehab-card .rehab-location span').filter({ hasText: '松山區' }).first()).toBeVisible();
 });
 
+test('listed healthcare pages never inherit the site masthead background', async ({ page }) => {
+  const pages = ['旅遊醫學門診醫院名冊', 'X光檢查醫療機構', '復健科醫療機構', '耳鼻喉科醫療機構', '3歲以下幼兒流感疫苗合約院所', '藥癮戒治機構', '腎臟病健康促進機構', '孕婦 GBS 篩檢特約院所', '臨床病理科醫療機構', '口腔顎面外科醫療機構', '解剖病理科醫療機構'];
+  await page.goto('/');
+  for (const label of pages) {
+    await test.step(label, async () => {
+      await selectDataset(page, label);
+      const nestedHeaders = main(page).locator('header');
+      for (let index = 0; index < await nestedHeaders.count(); index += 1) {
+        const styles = await nestedHeaders.nth(index).evaluate((element) => { const computed = getComputedStyle(element); return { backgroundColor: computed.backgroundColor, position: computed.position }; });
+        expect(styles.backgroundColor).not.toBe('rgb(32, 55, 68)');
+        expect(styles.position).not.toBe('relative');
+      }
+      await expect(main(page).locator('h1, h2').first()).toBeVisible();
+    });
+  }
+});
+
 test('a failed local dataset request shows a readable error state', async ({ page }) => {
   await page.route('**/data/gbs-screening-clinics/records.json', (route) => route.fulfill({ status: 500, body: '' }));
   await page.goto('/');

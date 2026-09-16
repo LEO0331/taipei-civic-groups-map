@@ -22,7 +22,7 @@
       "description": "Improve scoped React UI behavior, language consistency, accessibility, and presentation without changing unsupported factual claims.",
       "dependencies": ["maintenance-harness"],
       "status": "ready",
-      "evidence": "2026-09-15: repaired rehabilitation and standardized eight related healthcare directories on a shared responsive template. Fixed CP950 clinical-pathology records, generated the missing ENT dataset, and replaced under-3 district codes with labels. Typecheck, 108 unit tests, 3 accessibility contracts, production build, and 14 desktop/mobile E2E tests pass across 116 visible modules and 117 static dataset directories."
+      "evidence": "2026-09-15: repaired rehabilitation and standardized eight related healthcare directories on a shared responsive template. Scoped masthead CSS to the app header so eleven audited healthcare pages cannot inherit the dark header. Fixed CP950 clinical-pathology records, generated the missing ENT dataset, and replaced under-3 district codes with labels. Typecheck, 108 unit tests, 3 accessibility contracts, production build, and 16 desktop/mobile E2E tests pass across 116 visible modules and 117 static dataset directories."
     },
     {
       "id": "trust-safeguards",

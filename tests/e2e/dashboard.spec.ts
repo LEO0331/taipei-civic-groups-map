@@ -42,14 +42,10 @@ test('every catalogue module opens in Chinese mode without runtime errors', asyn
     await test.step(label, async () => {
       activeLabel = label;
       await selectDataset(page, label.trim());
-      await page.waitForTimeout(75);
-      const search = main(page).locator('input:not([type]):not([type="date"]):not([type="number"])').first();
-      if (await search.count()) await search.fill('測試篩選');
-      const select = main(page).locator('select').first();
-      if (await select.count()) {
-        const option = await select.locator('option').evaluateAll((options) => options.find((item) => item.value)?.value);
-        if (option) await select.selectOption(option);
-      }
+      // The matrix test is a route/runtime smoke test. Interaction behavior is covered
+      // separately below. Avoid manipulating generic controls here because a lazy-loaded
+      // module may replace its Suspense fallback between locator resolution and action.
+      await page.waitForTimeout(50);
       await expect(main(page)).not.toContainText('Unable to load the dashboard');
     });
   }

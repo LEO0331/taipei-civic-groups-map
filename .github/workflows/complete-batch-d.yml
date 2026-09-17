@@ -25,7 +25,7 @@ jobs:
           node-version: 22
           cache: npm
       - name: Apply Batch D changes
-        run: node .github/patches/complete-batch-d.mjs
+        run: node .github/patches/complete-batch-d-v2.mjs
       - name: Install dependencies
         run: npm ci
       - name: Verify typecheck and unit tests

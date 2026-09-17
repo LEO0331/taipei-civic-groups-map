@@ -150,3 +150,22 @@ test('a malformed education-volunteer response shows the shared readable error s
   await selectDataset(page, '教育局志工表揚名單');
   await expect(main(page)).toContainText('無法載入本機資料快照。');
 });
+
+test('self-loading healthcare directories distinguish request failures from zero records', async ({ page }) => {
+  await page.route('**/data/physical-therapy-clinics/records.json', (route) => route.fulfill({ status: 500, body: '' }));
+  await page.goto('/');
+  await selectDataset(page, '臺北市物理治療所');
+  await expect(main(page)).toContainText('無法載入本機資料快照。');
+
+  await page.unroute('**/data/physical-therapy-clinics/records.json');
+  await page.route('**/data/influenza-vaccine-providers-children-3plus/records.json', (route) => route.fulfill({ status: 500, body: '' }));
+  await selectDataset(page, '3歲以上幼童流感疫苗特約院所');
+  await expect(main(page)).toContainText('無法載入本機資料快照。');
+});
+
+test('adult influenza directory exposes a loading state while records are pending', async ({ page }) => {
+  await page.route('**/data/adult-influenza-vaccine-providers/records.json', () => new Promise(() => {}));
+  await page.goto('/');
+  await selectDataset(page, '流感疫苗合約醫療院所（成人）');
+  await expect(main(page)).toContainText('正在載入成人流感疫苗院所資料…');
+});

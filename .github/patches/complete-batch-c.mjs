@@ -1,11 +1,8 @@
 import { execFileSync } from 'node:child_process';
 import { readFile, writeFile } from 'node:fs/promises';
 
-const repoCommit = 'd60b77b1d13008a413b58fad225320702ac26bbf';
-
-function fromCommit(path) {
-  return execFileSync('git', ['show', `${repoCommit}:${path}`], { encoding: 'utf8' });
-}
+const approvedCCommit = 'd60b77b1d13008a413b58fad225320702ac26bbf';
+const gitShow = (ref, path) => execFileSync('git', ['show', `${ref}:${path}`], { encoding: 'utf8' });
 
 async function replaceRequired(path, before, after, label) {
   const source = await readFile(path, 'utf8');
@@ -13,8 +10,19 @@ async function replaceRequired(path, before, after, label) {
   await writeFile(path, source.replace(before, after));
 }
 
-// Preserve the approved Batch C adult-influenza redesign after synchronising with main.
-let adult = fromCommit('src/AdultInfluenzaVaccineProvidersModule.tsx');
+// Start non-redesigned modules from current main so older Batch A/B variants on this
+// long-lived branch cannot reintroduce stale loading or navigation behavior.
+for (const path of [
+  'src/InfluenzaVaccineProvidersChildren3PlusModule.tsx',
+  'src/PhysicalTherapyClinicsModule.tsx',
+  'src/HealthcareInstitutionDirectory.tsx',
+  'src/DataTrustPanel.tsx',
+]) {
+  await writeFile(path, gitShow('origin/main', path));
+}
+
+// Preserve the already-approved Batch C adult influenza redesign.
+let adult = gitShow(approvedCCommit, 'src/AdultInfluenzaVaccineProvidersModule.tsx');
 adult = adult.replace(
   "import { useEffect, useMemo, useState } from 'react';",
   "import { useEffect, useMemo, useState } from 'react';\nimport { UI_FAMILIES } from './lib/uiFamilies';",
@@ -29,15 +37,9 @@ adult = adult.replace(
 );
 await writeFile('src/AdultInfluenzaVaccineProvidersModule.tsx', adult);
 
-// Make the healthcare style families explicit rather than relying on one-off class names.
-await writeFile('src/lib/uiFamilies.ts', `/**
- * Stable visual-family identifiers for dataset modules.
- *
- * A family is an interaction/layout contract, not a requirement that every dataset
- * look identical. Simple healthcare lists use the compact directory contract;
- * richer provider explorers use the tabbed provider contract; location-heavy
- * therapy directories may keep their purpose-built presentation.
- */
+// Explicit style-family vocabulary. A family is an interaction/layout contract,
+// not a rule that every dataset must have identical presentation.
+await writeFile('src/lib/uiFamilies.ts', `/** Stable visual-family identifiers for dataset modules. */
 export const UI_FAMILIES = {
   healthcareStandard: 'healthcare-standard',
   healthcareRichDirectory: 'healthcare-rich-directory',
@@ -54,49 +56,44 @@ await replaceRequired(
   'src/InfluenzaVaccineProvidersChildren3PlusModule.tsx',
   "import { safeSmallCount } from './lib/dataTrust';",
   "import { safeSmallCount } from './lib/dataTrust';\nimport { UI_FAMILIES } from './lib/uiFamilies';",
-  'children influenza UI family import',
+  'children influenza UI-family import',
 );
 await replaceRequired(
   'src/InfluenzaVaccineProvidersChildren3PlusModule.tsx',
   'return <section className="workspace influenza-provider-module"><div className="ivp-hero">',
   'return <section className="workspace influenza-provider-module" data-ui-family={UI_FAMILIES.healthcareRichDirectory}><div className="ivp-hero">',
-  'children influenza main UI family marker',
+  'children influenza UI-family marker',
 );
 
-await replaceRequired(
-  'src/PhysicalTherapyClinicsModule.tsx',
+let therapy = await readFile('src/PhysicalTherapyClinicsModule.tsx', 'utf8');
+therapy = therapy.replace(
   "import { useEffect, useMemo, useState } from 'react';",
   "import { useEffect, useMemo, useState } from 'react';\nimport { UI_FAMILIES } from './lib/uiFamilies';",
-  'physical therapy UI family import',
 );
-await replaceRequired(
-  'src/PhysicalTherapyClinicsModule.tsx',
-  'return <section className="workspace physical-therapy-module">',
-  'return <section className="workspace physical-therapy-module" data-ui-family={UI_FAMILIES.locationDirectory}>',
-  'physical therapy main UI family marker',
+therapy = therapy.replaceAll(
+  'className="workspace physical-therapy-module"',
+  'className="workspace physical-therapy-module" data-ui-family={UI_FAMILIES.locationDirectory}',
 );
+await writeFile('src/PhysicalTherapyClinicsModule.tsx', therapy);
 
 await replaceRequired(
   'src/HealthcareInstitutionDirectory.tsx',
   "import { loadLocalJson } from './lib/loadLocalJson';",
   "import { loadLocalJson } from './lib/loadLocalJson';\nimport { UI_FAMILIES } from './lib/uiFamilies';",
-  'shared healthcare UI family import',
+  'shared healthcare UI-family import',
 );
 await replaceRequired(
   'src/HealthcareInstitutionDirectory.tsx',
   'return <section className="workspace rehab-directory health-directory">',
   'return <section className="workspace rehab-directory health-directory" data-ui-family={UI_FAMILIES.healthcareStandard}>',
-  'shared healthcare UI family marker',
+  'shared healthcare UI-family marker',
 );
 
-// Do not expose implementation slugs in the public data-trust banner.
+// Public-facing data trust text should use a human-readable name, not a slug.
 let trust = await readFile('src/DataTrustPanel.tsx', 'utf8');
-if (!trust.includes('function readableDatasetName')) {
-  const anchor = `const statusCopy: Record<FreshnessStatus, [string, string]> = {\n  current: ['資料日期在 90 天內', 'Source date within 90 days'],\n  aging: ['資料日期為 91–180 天前', 'Source date is 91–180 days old'],\n  stale: ['資料日期超過 180 天', 'Source date is over 180 days old'],\n  unknown: ['無法從現有詮釋資料確認日期', 'No source date in the available metadata'],\n};`;
-  if (!trust.includes(anchor)) throw new Error('Missing DataTrust statusCopy anchor');
-  const helpers = `${anchor}\n\nconst fallbackDatasetNames: Record<string, [string, string]> = {\n  'adult-influenza-vaccine-providers': ['成人流感疫苗合約醫療院所', 'Adult influenza vaccine providers'],\n};\n\nfunction humanizeDatasetId(id: string) {\n  return id.split('-').filter(Boolean).map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');\n}\n\nfunction readableDatasetName(entry: DatasetEntry, zh: boolean) {\n  if (entry.sourceName) return entry.sourceName;\n  const fallback = fallbackDatasetNames[entry.id];\n  if (fallback) return fallback[zh ? 0 : 1];\n  return humanizeDatasetId(entry.id);\n}`;
-  trust = trust.replace(anchor, helpers);
-}
+const anchor = `const statusCopy: Record<FreshnessStatus, [string, string]> = {\n  current: ['資料日期在 90 天內', 'Source date within 90 days'],\n  aging: ['資料日期為 91–180 天前', 'Source date is 91–180 days old'],\n  stale: ['資料日期超過 180 天', 'Source date is over 180 days old'],\n  unknown: ['無法從現有詮釋資料確認日期', 'No source date in the available metadata'],\n};`;
+if (!trust.includes(anchor)) throw new Error('Missing DataTrust statusCopy anchor');
+trust = trust.replace(anchor, `${anchor}\n\nconst fallbackDatasetNames: Record<string, [string, string]> = {\n  'adult-influenza-vaccine-providers': ['成人流感疫苗合約醫療院所', 'Adult influenza vaccine providers'],\n};\n\nfunction humanizeDatasetId(id: string) {\n  return id.split('-').filter(Boolean).map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');\n}\n\nfunction readableDatasetName(entry: DatasetEntry, zh: boolean) {\n  if (entry.sourceName) return entry.sourceName;\n  const fallback = fallbackDatasetNames[entry.id];\n  if (fallback) return fallback[zh ? 0 : 1];\n  return humanizeDatasetId(entry.id);\n}`);
 trust = trust.replaceAll('${active.sourceName ?? active.id}', '${readableDatasetName(active, zh)}');
 await writeFile('src/DataTrustPanel.tsx', trust);
 

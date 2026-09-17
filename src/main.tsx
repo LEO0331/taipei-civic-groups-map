@@ -4,10 +4,8 @@ import 'leaflet/dist/leaflet.css';
 import './styles.css';
 import App from './App';
 import AppErrorBoundary from './AppErrorBoundary';
-import { installUiStateBridge } from './uiStateBridge';
 
 createRoot(document.getElementById('root')!).render(<StrictMode><AppErrorBoundary><App /></AppErrorBoundary></StrictMode>);
-installUiStateBridge();
 
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   // This site deploys content-hashed bundles frequently. An offline app shell can

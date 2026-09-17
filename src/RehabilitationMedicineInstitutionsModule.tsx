@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import SourceFields from './SourceFields';
 import { loadLocalJson } from './lib/loadLocalJson';
+import { UI_FAMILIES } from './lib/uiFamilies';
 
 type RecordItem = {
   id: string;
@@ -50,7 +51,7 @@ export default function RehabilitationMedicineInstitutionsModule({ language }: {
   const visibleRecords = filtered.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
   const updateFilter = (action: () => void) => { action(); setPage(1); };
 
-  return <section className="workspace rehab-directory">
+  return <section className="workspace rehab-directory" data-ui-family={UI_FAMILIES.healthcareStandard}>
     <header className="rehab-hero">
       <p className="eyebrow">{text('醫療資源名冊', 'HEALTHCARE RESOURCE DIRECTORY')}</p>
       <h1>{text('臺北市復健科醫療機構', 'Taipei Rehabilitation Medicine Institutions')}</h1>

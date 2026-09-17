@@ -12,6 +12,19 @@ const statusCopy: Record<FreshnessStatus, [string, string]> = {
   unknown: ['無法從現有詮釋資料確認日期', 'No source date in the available metadata'],
 };
 
+const fallbackDatasetNames: Record<string, [string, string]> = {
+  'adult-influenza-vaccine-providers': ['成人流感疫苗合約醫療院所', 'Adult influenza vaccine providers'],
+  'physical-therapy-clinics': ['臺北市物理治療所', 'Taipei physical therapy clinics'],
+  'influenza-vaccine-providers-children-3plus': ['3歲以上幼童流感疫苗特約院所', 'Influenza vaccine providers for children age 3+'],
+};
+
+function readableDatasetName(entry: DatasetEntry, zh: boolean) {
+  if (entry.sourceName?.trim()) return entry.sourceName;
+  const fallback = fallbackDatasetNames[entry.id];
+  if (fallback) return fallback[zh ? 0 : 1];
+  return entry.id.split('-').filter(Boolean).join(' ');
+}
+
 export default function DataTrustPanel({ language, activeDataset, appliesSmallSampleGuard = false }: { language: Language; activeDataset?: string; appliesSmallSampleGuard?: boolean }) {
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const zh = language === 'zh';
@@ -31,7 +44,7 @@ export default function DataTrustPanel({ language, activeDataset, appliesSmallSa
   return <aside className="data-trust" aria-label={zh ? '資料信任與使用提醒' : 'Data trust and use reminders'}>
     <div className="data-trust-summary" role="status" aria-live="polite">
       <strong>{zh ? '資料使用提醒' : 'Use data carefully'}</strong>
-      {active && <span className={`data-trust-status ${activeStatus}`}>{zh ? `${active.sourceName ?? active.id}：${statusCopy[activeStatus][0]}` : `${active.sourceName ?? active.id}: ${statusCopy[activeStatus][1]}`}</span>}
+      {active && <span className={`data-trust-status ${activeStatus}`}>{zh ? `${readableDatasetName(active, true)}：${statusCopy[activeStatus][0]}` : `${readableDatasetName(active, false)}: ${statusCopy[activeStatus][1]}`}</span>}
       {active?.fetchStatus === 'reused_snapshot' && <span className="data-trust-status stale">{zh ? `本次官方刷新失敗，顯示最近成功快照${active.fetchFailedAt ? `（失敗時間：${active.fetchFailedAt}）` : ''}。` : `The official refresh failed; the most recently successful snapshot is displayed${active.fetchFailedAt ? ` (failure recorded: ${active.fetchFailedAt})` : ''}.`}</span>}
       {manifest && <span>{zh ? `${manifest.datedDatasetCount}/${manifest.datasetDirectoryCount} 個資料目錄有可判讀的來源日期；${staleCount} 個超過 180 天，${unknownCount} 個日期未知。` : `${manifest.datedDatasetCount}/${manifest.datasetDirectoryCount} dataset directories have a readable source date; ${staleCount} are over 180 days old and ${unknownCount} have an unknown date.`}</span>}
     </div>

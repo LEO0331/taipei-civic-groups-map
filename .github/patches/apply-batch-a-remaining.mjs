@@ -43,8 +43,11 @@ await writeFile(appPath, app);
 
 const e2ePath = 'tests/e2e/dashboard.spec.ts';
 let e2e = await readFile(e2ePath, 'utf8');
+const adultLoadingBefore = `test('adult influenza directory exposes a loading state while records are pending', async ({ page }) => {\n  await page.route('**/data/adult-influenza-vaccine-providers/records.json', () => new Promise(() => {}));\n  await page.goto('/');\n  await selectDataset(page, '流感疫苗合約醫療院所（成人）');\n  await expect(main(page)).toContainText('正在載入成人流感疫苗院所資料…');\n});`;
+const adultLoadingAfter = `test('adult influenza directory exposes a loading state while records are pending', async ({ page }) => {\n  await page.route('**/data/adult-influenza-vaccine-providers/records.json', () => new Promise(() => {}));\n  await page.goto('/?dataset=adultInfluenzaVaccineProviders');\n  await expect(main(page)).toContainText('正在載入成人流感疫苗院所資料…');\n});`;
+if (!e2e.includes(adultLoadingBefore)) throw new Error('adult influenza loading test not found');
+e2e = e2e.replace(adultLoadingBefore, adultLoadingAfter);
+
 const extra = `\n\ntest('dataset selection is URL-addressable and browser history restores the previous dataset', async ({ page }) => {\n  await page.goto('/?dataset=physicalTherapyClinics');\n  await expect(main(page).getByRole('heading', { name: '臺北市物理治療所' })).toBeVisible();\n\n  await selectDataset(page, '孕婦 GBS 篩檢特約院所');\n  await expect(page).toHaveURL(/dataset=gbsScreeningClinics/);\n  await expect(main(page).getByRole('heading', { name: /孕婦 GBS 篩檢特約院所/ })).toBeVisible();\n\n  await page.goBack();\n  await expect(page).toHaveURL(/dataset=physicalTherapyClinics/);\n  await expect(main(page).getByRole('heading', { name: '臺北市物理治療所' })).toBeVisible();\n\n  await page.goto('/?dataset=does-not-exist');\n  await expect(main(page).getByRole('heading', { name: '人民團體' })).toBeVisible();\n  await expect(page).not.toHaveURL(/dataset=/);\n});\n\ntest('unrelated background dataset failures do not surface as a global error', async ({ page }) => {\n  await page.route('**/data/senior-group-meal-service-sites/records.json', (route) => route.fulfill({ status: 500, body: '' }));\n  await page.goto('/?dataset=gbsScreeningClinics');\n  await expect(main(page).getByRole('heading', { name: /孕婦 GBS 篩檢特約院所/ })).toBeVisible();\n  await page.waitForTimeout(150);\n  await expect(main(page).locator('.status[role=\"alert\"]')).toHaveCount(0);\n});\n\ntest('civic load failures still surface on the civic page', async ({ page }) => {\n  await page.route('**/data/civic-groups.json', (route) => route.fulfill({ status: 500, body: '' }));\n  await page.goto('/');\n  await expect(main(page).locator('.status[role=\"alert\"]')).toBeVisible();\n});\n`;
-if (!e2e.includes('dataset selection is URL-addressable')) {
-  e2e = `${e2e.trimEnd()}${extra}`;
-  await writeFile(e2ePath, e2e);
-}
+if (!e2e.includes('dataset selection is URL-addressable')) e2e = `${e2e.trimEnd()}${extra}`;
+await writeFile(e2ePath, e2e);

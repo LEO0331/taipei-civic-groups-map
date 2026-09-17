@@ -1,4 +1,12 @@
 import { useMemo, useState } from 'react';
+import {
+  detectLocationDimension,
+  formatLocationValue,
+  locationLabel,
+  locationPluralLabel,
+  locationValue,
+  type DirectoryLocationDimension,
+} from './lib/generatedDirectoryLocation';
 
 type RecordValue = string | number | boolean | null | undefined | Record<string, unknown> | unknown[];
 type DatasetRecord = Record<string, RecordValue>;
@@ -48,10 +56,6 @@ function formatValue(value: RecordValue): string {
   return String(value);
 }
 
-function districtOf(record: DatasetRecord) {
-  return String(record.districtName ?? record.districtNameFromAddress ?? record.district ?? '');
-}
-
 function isMapQueryColumn(key: string) {
   return key === 'googleMapsQuery' || key === 'externalMapQuery';
 }
@@ -66,7 +70,7 @@ function BarChart({ title, data }: { title: string; data: Array<{ label: string;
 }
 
 export default function GeneratedDatasetDirectoryModule({
-  title, subtitle, records, language, columns, notice,
+  title, subtitle, records, language, columns, notice, locationDimension,
 }: {
   title: string;
   subtitle: string;
@@ -74,62 +78,88 @@ export default function GeneratedDatasetDirectoryModule({
   language: 'zh' | 'en';
   columns: Array<[string, string]>;
   notice: string;
+  locationDimension?: DirectoryLocationDimension | null;
 }) {
   const [view, setView] = useState<View>('overview');
   const [search, setSearch] = useState('');
-  const [district, setDistrict] = useState('');
+  const [location, setLocation] = useState('');
   const [hasPhone, setHasPhone] = useState('');
   const zh = language === 'zh';
   const displayTitle = zh ? zhTitles[title] ?? title : title;
   const displaySubtitle = subtitle;
   const displayNotice = notice;
   const displayColumns = useMemo(() => columns, [columns]);
-  const districts = useMemo(() => [...new Set(records.map(districtOf).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-Hant')), [records]);
+  const resolvedLocationDimension = useMemo(
+    () => locationDimension === undefined ? detectLocationDimension(records) : locationDimension,
+    [locationDimension, records],
+  );
+  const locationName = resolvedLocationDimension ? locationLabel(resolvedLocationDimension, language) : '';
+  const locationPluralName = resolvedLocationDimension ? locationPluralLabel(resolvedLocationDimension, language) : '';
+  const locations = useMemo(() => {
+    if (!resolvedLocationDimension) return [];
+    const values = [...new Set(records.map((record) => locationValue(record, resolvedLocationDimension)).filter(Boolean))];
+    return values.map((value) => ({ value, label: formatLocationValue(value, resolvedLocationDimension, language) }))
+      .sort((a, b) => a.label.localeCompare(b.label, zh ? 'zh-Hant' : 'en'));
+  }, [language, records, resolvedLocationDimension, zh]);
+  const hasLocationDimension = Boolean(resolvedLocationDimension && locations.length);
   const filteredRecords = useMemo(() => {
     const normalizedSearch = search.trim().toLocaleLowerCase();
     return records.filter((record) => (!normalizedSearch || displayColumns.some(([key]) => formatValue(record[key]).toLocaleLowerCase().includes(normalizedSearch)))
-      && (!district || districtOf(record) === district)
+      && (!location || (resolvedLocationDimension && locationValue(record, resolvedLocationDimension) === location))
       && (!hasPhone || (hasPhone === 'yes' ? Boolean(record.hasPhone ?? record.phone) : !Boolean(record.hasPhone ?? record.phone))));
-  }, [displayColumns, records, search, district, hasPhone]);
+  }, [displayColumns, records, search, location, hasPhone, resolvedLocationDimension]);
   const summary = useMemo(() => {
-    const byDistrict = new Map<string, number>();
-    filteredRecords.forEach((record) => {
-      const value = districtOf(record);
-      if (value) byDistrict.set(value, (byDistrict.get(value) ?? 0) + 1);
-    });
+    const byLocation = new Map<string, number>();
+    if (resolvedLocationDimension) {
+      filteredRecords.forEach((record) => {
+        const value = locationValue(record, resolvedLocationDimension);
+        if (value) byLocation.set(value, (byLocation.get(value) ?? 0) + 1);
+      });
+    }
     const nameColumn = displayColumns.find(([key]) => /name$/i.test(key))?.[0];
     const phoneRecords = filteredRecords.filter((record) => Boolean(record.hasPhone ?? record.phone));
     return {
       total: filteredRecords.length,
-      districtCount: byDistrict.size,
+      locationCount: byLocation.size,
       uniqueNames: nameColumn ? new Set(filteredRecords.map((record) => formatValue(record[nameColumn])).filter((value) => value !== '-')).size : 0,
       phoneRecords: phoneRecords.length,
       withoutPhone: filteredRecords.length - phoneRecords.length,
-      byDistrict: [...byDistrict].map(([label, value]) => ({ label, value })).sort((a, b) => b.value - a.value || a.label.localeCompare(b.label, 'zh-Hant')),
+      byLocation: [...byLocation].map(([rawLabel, value]) => ({
+        label: resolvedLocationDimension ? formatLocationValue(rawLabel, resolvedLocationDimension, language) : rawLabel,
+        value,
+      })).sort((a, b) => b.value - a.value || a.label.localeCompare(b.label, zh ? 'zh-Hant' : 'en')),
     };
-  }, [displayColumns, filteredRecords]);
-  const hasPhoneField = records.some((record) => 'hasPhone' in record || 'phone' in record);
+  }, [displayColumns, filteredRecords, language, resolvedLocationDimension, zh]);
+  const hasPhoneField = records.some((record) => 'hasPhone' in record || 'phone' in record || 'phoneRaw' in record || 'fullPhone' in record);
   const tabs: Array<[View, string]> = [
-    ['overview', zh ? '總覽' : 'Overview'], ['districts', zh ? '行政區分布' : 'District Distribution'],
+    ['overview', zh ? '總覽' : 'Overview'],
+    ...(hasLocationDimension ? [['districts', zh ? `${locationName}分布` : `${locationName} Distribution`] as [View, string]] : []),
     ['directory', zh ? '資料名冊' : 'Directory'], ['quality', zh ? '資料品質' : 'Data Quality'], ['notes', zh ? '資料說明' : 'Data Notes'],
   ];
+  const locationChartTitle = zh ? `各${locationName}資料筆數` : `Records by ${locationName.toLocaleLowerCase()}`;
 
   return <section className="workspace">
     <div className="section-heading"><p>{zh ? '公開資料名冊' : 'PUBLIC RECORD DIRECTORY'}</p><h2>{displayTitle}</h2><span>{displaySubtitle}</span></div>
     <div className="subtabs">{tabs.map(([id, label]) => <button key={id} className={view === id ? 'active' : ''} onClick={() => setView(id)}>{label}</button>)}</div>
-    <aside className="filters"><label className="search"><span aria-hidden="true">⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={zh ? '搜尋目前名冊欄位' : 'Search displayed fields'} /></label>
-      {(districts.length > 0 || hasPhoneField) && <div className="filter-grid">
-        {districts.length > 0 && <label>{zh ? '行政區' : 'District'}<select value={district} onChange={(event) => setDistrict(event.target.value)}><option value="">{zh ? '全部' : 'All'}</option>{districts.map((value) => <option key={value} value={value}>{value}</option>)}</select></label>}
+    <aside className="filters"><label className="search"><span aria-hidden="true">⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={zh ? '搜尋名冊資料' : 'Search directory records'} /></label>
+      {(hasLocationDimension || hasPhoneField) && <div className="filter-grid">
+        {hasLocationDimension && <label>{locationName}<select value={location} onChange={(event) => setLocation(event.target.value)}><option value="">{zh ? '全部' : 'All'}</option>{locations.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</select></label>}
         {hasPhoneField && <label>{zh ? '有電話' : 'Has phone'}<select value={hasPhone} onChange={(event) => setHasPhone(event.target.value)}><option value="">{zh ? '全部' : 'All'}</option><option value="yes">{zh ? '有' : 'Yes'}</option><option value="no">{zh ? '無' : 'No'}</option></select></label>}
       </div>}
-      {(search || district || hasPhone) && <button className="text-button" onClick={() => { setSearch(''); setDistrict(''); setHasPhone(''); }}>{zh ? '清除篩選' : 'Clear filters'}</button>}</aside>
+      {(search || location || hasPhone) && <button className="text-button" onClick={() => { setSearch(''); setLocation(''); setHasPhone(''); }}>{zh ? '清除篩選' : 'Clear filters'}</button>}</aside>
     <div className="section-heading inline"><p>{zh ? '篩選後紀錄' : 'Filtered records'}</p><strong>{summary.total.toLocaleString()} <span>{zh ? '筆' : 'records'}</span></strong></div>
     {view === 'overview' && <><div className="notice subtle">{displayNotice}</div><div className="summary-grid">
-      {[[zh ? '資料筆數' : 'Total records', summary.total], [zh ? '涵蓋行政區' : 'Districts covered', summary.districtCount], [zh ? '不重複名稱' : 'Unique names', summary.uniqueNames], [zh ? '有電話紀錄' : 'Records with phone', summary.phoneRecords], [zh ? '資料最多行政區' : 'Top district', summary.byDistrict[0]?.label ?? '-']].map(([label, value]) => <article key={String(label)}><span>{label}</span><strong>{typeof value === 'number' ? value.toLocaleString() : value}</strong></article>)}</div>
-      <div className="chart-grid"><BarChart title={zh ? '各行政區資料筆數' : 'Records by district'} data={summary.byDistrict} />{hasPhoneField && <BarChart title={zh ? '電話欄位完整度' : 'Records with and without phone'} data={[{ label: zh ? '有電話' : 'With phone', value: summary.phoneRecords }, { label: zh ? '無電話' : 'Without phone', value: summary.withoutPhone }]} />}</div></>}
-    {view === 'districts' && <><div className="notice">{zh ? '本頁依資料中的行政區欄位彙整；不會將地址自動轉換為精確地圖標記。' : 'This page summarizes the district field only; it does not turn addresses into exact map markers.'}</div><BarChart title={zh ? '各行政區資料筆數' : 'Records by district'} data={summary.byDistrict} /></>}
+      {[
+        [zh ? '資料筆數' : 'Total records', summary.total],
+        ...(hasLocationDimension ? [[zh ? `涵蓋${locationName}` : `${locationPluralName} covered`, summary.locationCount]] : []),
+        [zh ? '不重複名稱' : 'Unique names', summary.uniqueNames],
+        [zh ? '有電話紀錄' : 'Records with phone', summary.phoneRecords],
+        ...(hasLocationDimension ? [[zh ? `資料最多${locationName}` : `Top ${locationName.toLocaleLowerCase()}`, summary.byLocation[0]?.label ?? '-']] : []),
+      ].map(([label, value]) => <article key={String(label)}><span>{label}</span><strong>{typeof value === 'number' ? value.toLocaleString() : value}</strong></article>)}</div>
+      <div className="chart-grid">{hasLocationDimension && <BarChart title={locationChartTitle} data={summary.byLocation} />}{hasPhoneField && <BarChart title={zh ? '電話欄位完整度' : 'Records with and without phone'} data={[{ label: zh ? '有電話' : 'With phone', value: summary.phoneRecords }, { label: zh ? '無電話' : 'Without phone', value: summary.withoutPhone }]} />}</div></>}
+    {view === 'districts' && hasLocationDimension && <><div className="notice">{zh ? `本頁依資料中的${locationName}欄位彙整；不會將地址自動轉換為精確地圖標記。` : `This page summarizes the ${locationName.toLocaleLowerCase()} field only; it does not turn addresses into exact map markers.`}</div><BarChart title={locationChartTitle} data={summary.byLocation} /></>}
     {view === 'directory' && <div className="comparison-scroll procurement-table"><table><thead><tr>{displayColumns.map(([, label]) => <th key={label}>{label}</th>)}</tr></thead><tbody>{filteredRecords.map((record, index) => <tr key={String(record.id ?? index)}>{displayColumns.map(([key]) => <td key={key}>{isMapQueryColumn(key) && record[key] ? <a target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(String(record[key]))}`}>{zh ? '地圖查詢' : 'Map lookup'}</a> : isExternalUrlColumn(key) && record[key] ? <a target="_blank" rel="noopener noreferrer" href={String(record[key])}>{zh ? '官方外部連結' : 'Official external link'}</a> : formatValue(record[key])}</td>)}</tr>)}</tbody></table>{!filteredRecords.length && <p className="empty">{zh ? '沒有符合篩選條件的紀錄。' : 'No records match these filters.'}</p>}</div>}
-    {view === 'quality' && <div className="notes-grid"><article><h3>{zh ? '篩選後完整度' : 'Filtered completeness'}</h3><p>{zh ? `目前共有 ${summary.total.toLocaleString()} 筆紀錄、${summary.districtCount.toLocaleString()} 個行政區；${summary.phoneRecords.toLocaleString()} 筆有電話資料。` : `${summary.total.toLocaleString()} records across ${summary.districtCount.toLocaleString()} districts; ${summary.phoneRecords.toLocaleString()} records include a phone number.`}</p></article><article><h3>{zh ? '處理方式' : 'Processing'}</h3><p>{zh ? '名冊、卡片與圖表共用相同篩選結果；資料列維持來源轉換後的欄位值。' : 'The directory, cards, and charts share the same filtered result set; displayed values come from the converted source fields.'}</p></article></div>}
-    {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料使用說明' : 'Data notes'}</h3><p>{displayNotice}</p></article><article><h3>{zh ? '位置資訊限制' : 'Location limitation'}</h3><p>{zh ? '若資料未提供已確認的官方座標，本模組僅提供行政區彙整與外部地圖查詢。' : 'When no confirmed official coordinates are supplied, this module provides district summaries and external map lookup only.'}</p></article></div>}
+    {view === 'quality' && <div className="notes-grid"><article><h3>{zh ? '篩選後完整度' : 'Filtered completeness'}</h3><p>{hasLocationDimension ? (zh ? `目前共有 ${summary.total.toLocaleString()} 筆紀錄、${summary.locationCount.toLocaleString()} 個${locationName}；${summary.phoneRecords.toLocaleString()} 筆有電話資料。` : `${summary.total.toLocaleString()} records across ${summary.locationCount.toLocaleString()} ${locationPluralName.toLocaleLowerCase()}; ${summary.phoneRecords.toLocaleString()} records include a phone number.`) : (zh ? `目前共有 ${summary.total.toLocaleString()} 筆紀錄；${summary.phoneRecords.toLocaleString()} 筆有電話資料。此資料未提供可直接彙整的位置欄位。` : `${summary.total.toLocaleString()} records; ${summary.phoneRecords.toLocaleString()} records include a phone number. This dataset has no directly aggregatable location field.`)}</p></article><article><h3>{zh ? '處理方式' : 'Processing'}</h3><p>{zh ? '名冊、卡片與圖表共用相同篩選結果；資料列維持來源轉換後的欄位值。' : 'The directory, cards, and charts share the same filtered result set; displayed values come from the converted source fields.'}</p></article></div>}
+    {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料使用說明' : 'Data notes'}</h3><p>{displayNotice}</p></article><article><h3>{zh ? '位置資訊限制' : 'Location limitation'}</h3><p>{hasLocationDimension ? (zh ? `若資料未提供已確認的官方座標，本模組僅提供${locationName}彙整與外部地圖查詢。` : `When no confirmed official coordinates are supplied, this module provides ${locationName.toLocaleLowerCase()} summaries and external map lookup only.`) : (zh ? '此資料未提供可直接彙整的行政區或縣市欄位，因此不顯示位置分布圖；外部地圖查詢僅在來源具備可用查詢值時提供。' : 'This dataset has no directly aggregatable district or city/county field, so no location-distribution view is shown. External map lookup is available only when the source provides a usable lookup value.')}</p></article></div>}
   </section>;
 }

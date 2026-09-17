@@ -7,145 +7,7 @@ import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
 } from './lib/civicGroups';
-import RegisteredLaborUnionsModule from './RegisteredLaborUnionsModule';
-import QuasiPublicInfantCareCentersModule from './QuasiPublicInfantCareCentersModule';
-import InfantCareCenterEvaluationResultsModule from './InfantCareCenterEvaluationResultsModule';
-import TaipeiTravelAccommodationsZhModule from './TaipeiTravelAccommodationsZhModule';
-import PerformingArtsGroupsModule from './PerformingArtsGroupsModule';
-import ContractedVaccinationMedicalProvidersModule from './ContractedVaccinationMedicalProvidersModule';
-import ChildMedicalSubsidyContractedProvidersModule from './ChildMedicalSubsidyContractedProvidersModule';
-import DentureSubsidyMedicalProvidersModule from './DentureSubsidyMedicalProvidersModule';
-import DisabilityEmploymentResourceMapModule from './DisabilityEmploymentResourceMapModule';
-import ShelteredWorkshopDirectoryModule from './ShelteredWorkshopDirectoryModule';
-import EmploymentAgencyIntermediaryCompaniesModule from './EmploymentAgencyIntermediaryCompaniesModule';
-import LicensedPawnshopDirectoryModule from './LicensedPawnshopDirectoryModule';
-import LicensedElectronicGameArcadeOperatorsModule from './LicensedElectronicGameArcadeOperatorsModule';
-import LicensedSpecialEntertainmentBusinessOperatorsModule from './LicensedSpecialEntertainmentBusinessOperatorsModule';
-import RegisteredRecyclingBusinessOrganizationsModule from './RegisteredRecyclingBusinessOrganizationsModule';
-import RegisteredFactoryDistributionModule from './RegisteredFactoryDistributionModule';
-import CemeteryPublicFacilitiesModule from './CemeteryPublicFacilitiesModule';
-import TelepsychologyCounselingInstitutionsModule from './TelepsychologyCounselingInstitutionsModule';
-import BusinessPremisesPublicLiabilityInsuranceModule from './BusinessPremisesPublicLiabilityInsuranceModule';
-import BusinessRegistrationChangesModule from './BusinessRegistrationChangesModule';
-import CompanyRegistrationChangesModule from './CompanyRegistrationChangesModule';
-import ElderlyWelfareInstitutionsModule from './ElderlyWelfareInstitutionsModule';
-import SeniorGroupMealServiceSitesModule from './SeniorGroupMealServiceSitesModule';
-import BiotechCompanyDirectoryModule from './BiotechCompanyDirectoryModule';
-import IndustryModule from './IndustryModule';
-import MetroProcurementModule from './MetroProcurementModule';
-import RegisteredCramSchoolsModule from './RegisteredCramSchoolsModule';
-import RegisteredHotelsModule from './RegisteredHotelsModule';
-import LaborStandardActViolationsModule from './LaborStandardActViolationsModule';
-import OccupationalSafetyHealthViolationsModule from './OccupationalSafetyHealthViolationsModule';
-import GenderEqualityWorkActViolationsModule from './GenderEqualityWorkActViolationsModule';
-import ConsumerDisputeAbsentBusinessOperatorsModule from './ConsumerDisputeAbsentBusinessOperatorsModule';
-import NangangSoftwareParkCompaniesModule from './NangangSoftwareParkCompaniesModule';
-import DawannanIndustrialAreaCompaniesModule from './DawannanIndustrialAreaCompaniesModule';
-import EnterpriseHeadquartersDistributionModule from './EnterpriseHeadquartersDistributionModule';
-import RegisteredAnimalHospitalsModule from './RegisteredAnimalHospitalsModule';
-import LicensedAnimalMedicineSellersModule from './LicensedAnimalMedicineSellersModule';
-import SpecificPetBusinessEvaluationResultsModule from './SpecificPetBusinessEvaluationResultsModule';
-import VeterinarianProfessionalRegistryModule from './VeterinarianProfessionalRegistryModule';
 import DistrictComparison from './DistrictComparison';
-import PubliclyFundedHpvVaccinationProvidersModule from './PubliclyFundedHpvVaccinationProvidersModule';
-import PublicPneumococcalVaccineProvidersModule from './PublicPneumococcalVaccineProvidersModule';
-import MajorElectricityUsersModule from './MajorElectricityUsersModule';
-import EarlyInterventionMedicalProvidersModule from './EarlyInterventionMedicalProvidersModule';
-import GeneralDentalMedicalInstitutionsModule from './GeneralDentalMedicalInstitutionsModule';
-import PediatricMedicalInstitutionsModule from './PediatricMedicalInstitutionsModule';
-import DiabetesSharedCareMedicalInstitutionsModule from './DiabetesSharedCareMedicalInstitutionsModule';
-import GeneratedDatasetDirectoryModule from './GeneratedDatasetDirectoryModule';
-import ApprovedGasWaterHeaterInstallersModule from './ApprovedGasWaterHeaterInstallersModule';
-import VisuallyImpairedMassageEstablishmentsModule from './VisuallyImpairedMassageEstablishmentsModule';
-import CulturalArtsFoundationsModule from './CulturalArtsFoundationsModule';
-import PsychiatricRehabilitationAndNursingInstitutionsModule from './PsychiatricRehabilitationAndNursingInstitutionsModule';
-import TaipeiGovernmentApplicationServicesModule from './TaipeiGovernmentApplicationServicesModule';
-import SeniorServiceSiteCoursesModule from './SeniorServiceSiteCoursesModule';
-import RabiesVaccinationVeterinaryClinicsModule from './RabiesVaccinationVeterinaryClinicsModule';
-import FiveCancerScreeningProvidersModule from './FiveCancerScreeningProvidersModule';
-import FertilitySubsidyContractedHospitalsModule from './FertilitySubsidyContractedHospitalsModule';
-import SeniorCareInstitutionEvaluationsModule from './SeniorCareInstitutionEvaluationsModule';
-import WaterPipeInstallationContractorsModule from './WaterPipeInstallationContractorsModule';
-import PestControlBusinessesModule from './PestControlBusinessesModule';
-import AdultInfluenzaVaccineProvidersModule from './AdultInfluenzaVaccineProvidersModule';
-import LicensedWasteCookingOilCollectorsModule from './LicensedWasteCookingOilCollectorsModule';
-import HomeNursingInstitutionsModule from './HomeNursingInstitutionsModule';
-import OptometryInstitutionsModule from './OptometryInstitutionsModule';
-import GeneralChineseMedicineInstitutionsModule from './GeneralChineseMedicineInstitutionsModule';
-import AlternativeServiceReserveStatisticsModule from './AlternativeServiceReserveStatisticsModule';
-import MedicalLaboratoriesModule from './MedicalLaboratoriesModule';
-import CommunityCareServiceSitesModule from './CommunityCareServiceSitesModule';
-import SeniorCareCapacityAndOccupancyModule from './SeniorCareCapacityAndOccupancyModule';
-import DomesticEmploymentAgencyEvaluationsModule from './DomesticEmploymentAgencyEvaluationsModule';
-import LodgingBusinessPenaltyRecordsModule from './LodgingBusinessPenaltyRecordsModule';
-import CommunityPublicChildcareHomesModule from './CommunityPublicChildcareHomesModule';
-import TbContactScreeningPartnerProvidersModule from './TbContactScreeningPartnerProvidersModule';
-import BeautyHairdressingHygieneCertificationsModule from './BeautyHairdressingHygieneCertificationsModule';
-import PublicInfluenzaAntiviralProvidersModule from './PublicInfluenzaAntiviralProvidersModule';
-import CommunityIntegratedCareLevelCUnitsModule from './CommunityIntegratedCareLevelCUnitsModule';
-import RegisteredAfterSchoolCareCentresModule from './RegisteredAfterSchoolCareCentresModule';
-import SubsidizedSeniorResidentialPlacementInstitutionsModule from './SubsidizedSeniorResidentialPlacementInstitutionsModule';
-import FamilyMedicineInstitutionsModule from './FamilyMedicineInstitutionsModule';
-import CosmeticMedicineSupervision2024Module from './CosmeticMedicineSupervision2024Module';
-import PlasticSurgeryMedicalInstitutionsModule from './PlasticSurgeryMedicalInstitutionsModule';
-import IndigenousCommunityOrganizationsModule from './IndigenousCommunityOrganizationsModule';
-import LicensedNaturalGasPipelineContractorsModule from './LicensedNaturalGasPipelineContractorsModule';
-import CommunityDevelopmentAssociationsModule from './CommunityDevelopmentAssociationsModule';
-import ObstetricsGynecologyInstitutionsModule from './ObstetricsGynecologyInstitutionsModule';
-import ArtsCulturalVenuesModule from './ArtsCulturalVenuesModule';
-import PsychiatricClinicsModule from './PsychiatricClinicsModule';
-import LicensedAssistedReproductionInstitutionsModule from './LicensedAssistedReproductionInstitutionsModule';
-import ChildYouthResidentialPlacementInstitutionsModule from './ChildYouthResidentialPlacementInstitutionsModule';
-import ChildYouthFriendlyWelfareServiceSitesModule from './ChildYouthFriendlyWelfareServiceSitesModule';
-import DisabilityInstitutionCapacityAndVacanciesModule from './DisabilityInstitutionCapacityAndVacanciesModule';
-import OphthalmologyInstitutionsModule from './OphthalmologyInstitutionsModule';
-import TaipeiCulturalHeritageAssetsModule from './TaipeiCulturalHeritageAssetsModule';
-import PrivateCulturalHeritageSubsidiesModule from './PrivateCulturalHeritageSubsidiesModule';
-import TravelMedicineClinicsModule from './TravelMedicineClinicsModule';
-import HakkaOrganizationsModule from './HakkaOrganizationsModule';
-import HospitalDischargeLongTermCarePartnersModule from './HospitalDischargeLongTermCarePartnersModule';
-import WithdrawnIllegalHotelEnforcementRecordsModule from './WithdrawnIllegalHotelEnforcementRecordsModule';
-import FuneralServiceBusinessesModule from './FuneralServiceBusinessesModule';
-import FixedSiteTemporaryChildcareModule from './FixedSiteTemporaryChildcareModule';
-import XrayExaminationMedicalInstitutionsModule from './XrayExaminationMedicalInstitutionsModule';
-import GovernmentEthicsOfficesModule from './GovernmentEthicsOfficesModule';
-import RehabilitationMedicineInstitutionsModule from './RehabilitationMedicineInstitutionsModule';
-import HomeDisabledFamilyPhysicianCareProvidersModule from './HomeDisabledFamilyPhysicianCareProvidersModule';
-import EducationVolunteerRecognitionRecordsModule from './EducationVolunteerRecognitionRecordsModule';
-import OrthopedicFacilitiesModule from './OrthopedicFacilitiesModule';
-import EntFacilitiesModule from './EntFacilitiesModule';
-import HearingCentersModule from './HearingCentersModule';
-import EarlyInterventionCommunityServicesModule from './EarlyInterventionCommunityServicesModule';
-import InfluenzaVaccineProvidersUnder3Module from './InfluenzaVaccineProvidersUnder3Module';
-import SeniorServicesModule from './SeniorServicesModule';
-import EntrustedPublicAssetOperationsModule from './EntrustedPublicAssetOperationsModule';
-import DisabilityDayServicesModule from './DisabilityDayServicesModule';
-import EnvironmentalPesticideVendorsModule from './EnvironmentalPesticideVendorsModule';
-import LaborPensionActViolationsModule from './LaborPensionActViolationsModule';
-import InternetAddictionServicesModule from './InternetAddictionServicesModule';
-import ChildYouthWelfareInstitutionsModule from './ChildYouthWelfareInstitutionsModule';
-import AddictionTreatmentFacilitiesModule from './AddictionTreatmentFacilitiesModule';
-import EmergencyAssistanceProvidersModule from './EmergencyAssistanceProvidersModule';
-import NationwideAddictionTreatmentServicesModule from './NationwideAddictionTreatmentServicesModule';
-import HealthcareWelfareBudgetModule from './HealthcareWelfareBudgetModule';
-import KidneyHealthPromotionFacilitiesModule from './KidneyHealthPromotionFacilitiesModule';
-import HighMyopiaPreventionClinicsModule from './HighMyopiaPreventionClinicsModule';
-import GbsScreeningClinicsModule from './GbsScreeningClinicsModule';
-import MedicalRadiologicalInstitutionsModule from './MedicalRadiologicalInstitutionsModule';
-import MayorCeremonialGiftStatisticsModule from './MayorCeremonialGiftStatisticsModule';
-import SportsPublicParticipationModule from './SportsPublicParticipationModule';
-import ClinicalPathologyFacilitiesModule from './ClinicalPathologyFacilitiesModule';
-import MethadoneCrossRegionServicesModule from './MethadoneCrossRegionServicesModule';
-import OralMaxillofacialSurgeryFacilitiesModule from './OralMaxillofacialSurgeryFacilitiesModule';
-import RadiologyDiagnosticFacilitiesModule from './RadiologyDiagnosticFacilitiesModule';
-import AnatomicalPathologyInstitutionsModule from './AnatomicalPathologyInstitutionsModule';
-import ChildPreventiveHealthcareFacilitiesModule from './ChildPreventiveHealthcareFacilitiesModule';
-import HospicePalliativeCareInstitutionsModule from './HospicePalliativeCareInstitutionsModule';
-import PrivateSeniorResidentialLongTermCareInstitutionsModule from './PrivateSeniorResidentialLongTermCareInstitutionsModule';
-import HemodialysisMedicalInstitutionsModule from './HemodialysisMedicalInstitutionsModule';
-import InternalMedicineInstitutionsModule from './InternalMedicineInstitutionsModule';
-import OccupationalTherapyClinicsModule from './OccupationalTherapyClinicsModule';
-import DesignatedForeignerHealthExamHospitalsModule from './DesignatedForeignerHealthExamHospitalsModule';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -155,12 +17,209 @@ import type {
   BiotechCompanyDirectoryRecord, BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceRecord, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeRecord, BusinessRegistrationChangeSummary, CemeteryPublicFacilityRecord, CemeteryPublicFacilitySummary, ChildMedicalSubsidyContractedProviderRecord, ChildMedicalSubsidyContractedProviderSummary, CompanyRegistrationChangeRecord, CompanyRegistrationChangeSummary, ConsumerDisputeAbsentBusinessOperatorRecord, ConsumerDisputeAbsentBusinessOperatorSummary, ContractedVaccinationMedicalProviderRecord, ContractedVaccinationMedicalProviderSummary, DentureSubsidyMedicalProviderRecord, DentureSubsidyMedicalProviderSummary, DisabilityEmploymentResourceRecord, DisabilityEmploymentResourceSummary, ElderlyWelfareInstitutionRecord, ElderlyWelfareInstitutionSummary, EmploymentAgencyIntermediaryCompanyRecord, EmploymentAgencyIntermediaryCompanySummary, InfantCareCenterEvaluationInstitutionRecord, InfantCareCenterEvaluationSummary, InfantCareCenterEvaluationYearRecord, LicensedAnimalMedicineSellerRecord, LicensedAnimalMedicineSellerSummary, LicensedElectronicGameArcadeOperatorRecord, LicensedElectronicGameArcadeOperatorSummary, LicensedPawnshopDirectoryRecord, LicensedPawnshopDirectorySummary, LicensedSpecialEntertainmentBusinessOperatorRecord, LicensedSpecialEntertainmentBusinessOperatorSummary, PubliclyFundedHpvVaccinationProviderRecord, PubliclyFundedHpvVaccinationProviderSummary, RegisteredFactoryRecord, RegisteredFactorySummary, RegisteredRecyclingBusinessOrganizationRecord, RegisteredRecyclingBusinessOrganizationSummary, ShelteredWorkshopDirectoryRecord, ShelteredWorkshopDirectorySummary, TelepsychologyCounselingInstitutionRecord, TelepsychologyCounselingInstitutionSummary,
 } from './types';
 
+const RegisteredLaborUnionsModule = lazy(() => import('./RegisteredLaborUnionsModule'));
+const QuasiPublicInfantCareCentersModule = lazy(() => import('./QuasiPublicInfantCareCentersModule'));
+const InfantCareCenterEvaluationResultsModule = lazy(() => import('./InfantCareCenterEvaluationResultsModule'));
+const TaipeiTravelAccommodationsZhModule = lazy(() => import('./TaipeiTravelAccommodationsZhModule'));
+const PerformingArtsGroupsModule = lazy(() => import('./PerformingArtsGroupsModule'));
+const ContractedVaccinationMedicalProvidersModule = lazy(() => import('./ContractedVaccinationMedicalProvidersModule'));
+const ChildMedicalSubsidyContractedProvidersModule = lazy(() => import('./ChildMedicalSubsidyContractedProvidersModule'));
+const DentureSubsidyMedicalProvidersModule = lazy(() => import('./DentureSubsidyMedicalProvidersModule'));
+const DisabilityEmploymentResourceMapModule = lazy(() => import('./DisabilityEmploymentResourceMapModule'));
+const ShelteredWorkshopDirectoryModule = lazy(() => import('./ShelteredWorkshopDirectoryModule'));
+const EmploymentAgencyIntermediaryCompaniesModule = lazy(() => import('./EmploymentAgencyIntermediaryCompaniesModule'));
+const LicensedPawnshopDirectoryModule = lazy(() => import('./LicensedPawnshopDirectoryModule'));
+const LicensedElectronicGameArcadeOperatorsModule = lazy(() => import('./LicensedElectronicGameArcadeOperatorsModule'));
+const LicensedSpecialEntertainmentBusinessOperatorsModule = lazy(() => import('./LicensedSpecialEntertainmentBusinessOperatorsModule'));
+const RegisteredRecyclingBusinessOrganizationsModule = lazy(() => import('./RegisteredRecyclingBusinessOrganizationsModule'));
+const RegisteredFactoryDistributionModule = lazy(() => import('./RegisteredFactoryDistributionModule'));
+const CemeteryPublicFacilitiesModule = lazy(() => import('./CemeteryPublicFacilitiesModule'));
+const TelepsychologyCounselingInstitutionsModule = lazy(() => import('./TelepsychologyCounselingInstitutionsModule'));
+const BusinessPremisesPublicLiabilityInsuranceModule = lazy(() => import('./BusinessPremisesPublicLiabilityInsuranceModule'));
+const BusinessRegistrationChangesModule = lazy(() => import('./BusinessRegistrationChangesModule'));
+const CompanyRegistrationChangesModule = lazy(() => import('./CompanyRegistrationChangesModule'));
+const ElderlyWelfareInstitutionsModule = lazy(() => import('./ElderlyWelfareInstitutionsModule'));
+const SeniorGroupMealServiceSitesModule = lazy(() => import('./SeniorGroupMealServiceSitesModule'));
+const BiotechCompanyDirectoryModule = lazy(() => import('./BiotechCompanyDirectoryModule'));
+const IndustryModule = lazy(() => import('./IndustryModule'));
+const MetroProcurementModule = lazy(() => import('./MetroProcurementModule'));
+const RegisteredCramSchoolsModule = lazy(() => import('./RegisteredCramSchoolsModule'));
+const RegisteredHotelsModule = lazy(() => import('./RegisteredHotelsModule'));
+const LaborStandardActViolationsModule = lazy(() => import('./LaborStandardActViolationsModule'));
+const OccupationalSafetyHealthViolationsModule = lazy(() => import('./OccupationalSafetyHealthViolationsModule'));
+const GenderEqualityWorkActViolationsModule = lazy(() => import('./GenderEqualityWorkActViolationsModule'));
+const ConsumerDisputeAbsentBusinessOperatorsModule = lazy(() => import('./ConsumerDisputeAbsentBusinessOperatorsModule'));
+const NangangSoftwareParkCompaniesModule = lazy(() => import('./NangangSoftwareParkCompaniesModule'));
+const DawannanIndustrialAreaCompaniesModule = lazy(() => import('./DawannanIndustrialAreaCompaniesModule'));
+const EnterpriseHeadquartersDistributionModule = lazy(() => import('./EnterpriseHeadquartersDistributionModule'));
+const RegisteredAnimalHospitalsModule = lazy(() => import('./RegisteredAnimalHospitalsModule'));
+const LicensedAnimalMedicineSellersModule = lazy(() => import('./LicensedAnimalMedicineSellersModule'));
+const SpecificPetBusinessEvaluationResultsModule = lazy(() => import('./SpecificPetBusinessEvaluationResultsModule'));
+const VeterinarianProfessionalRegistryModule = lazy(() => import('./VeterinarianProfessionalRegistryModule'));
+const PubliclyFundedHpvVaccinationProvidersModule = lazy(() => import('./PubliclyFundedHpvVaccinationProvidersModule'));
+const PublicPneumococcalVaccineProvidersModule = lazy(() => import('./PublicPneumococcalVaccineProvidersModule'));
+const MajorElectricityUsersModule = lazy(() => import('./MajorElectricityUsersModule'));
+const EarlyInterventionMedicalProvidersModule = lazy(() => import('./EarlyInterventionMedicalProvidersModule'));
+const GeneralDentalMedicalInstitutionsModule = lazy(() => import('./GeneralDentalMedicalInstitutionsModule'));
+const PediatricMedicalInstitutionsModule = lazy(() => import('./PediatricMedicalInstitutionsModule'));
+const DiabetesSharedCareMedicalInstitutionsModule = lazy(() => import('./DiabetesSharedCareMedicalInstitutionsModule'));
+const GeneratedDatasetDirectoryModule = lazy(() => import('./GeneratedDatasetDirectoryModule'));
+const ApprovedGasWaterHeaterInstallersModule = lazy(() => import('./ApprovedGasWaterHeaterInstallersModule'));
+const VisuallyImpairedMassageEstablishmentsModule = lazy(() => import('./VisuallyImpairedMassageEstablishmentsModule'));
+const CulturalArtsFoundationsModule = lazy(() => import('./CulturalArtsFoundationsModule'));
+const PsychiatricRehabilitationAndNursingInstitutionsModule = lazy(() => import('./PsychiatricRehabilitationAndNursingInstitutionsModule'));
+const TaipeiGovernmentApplicationServicesModule = lazy(() => import('./TaipeiGovernmentApplicationServicesModule'));
+const SeniorServiceSiteCoursesModule = lazy(() => import('./SeniorServiceSiteCoursesModule'));
+const RabiesVaccinationVeterinaryClinicsModule = lazy(() => import('./RabiesVaccinationVeterinaryClinicsModule'));
+const FiveCancerScreeningProvidersModule = lazy(() => import('./FiveCancerScreeningProvidersModule'));
+const FertilitySubsidyContractedHospitalsModule = lazy(() => import('./FertilitySubsidyContractedHospitalsModule'));
+const SeniorCareInstitutionEvaluationsModule = lazy(() => import('./SeniorCareInstitutionEvaluationsModule'));
+const WaterPipeInstallationContractorsModule = lazy(() => import('./WaterPipeInstallationContractorsModule'));
+const PestControlBusinessesModule = lazy(() => import('./PestControlBusinessesModule'));
+const AdultInfluenzaVaccineProvidersModule = lazy(() => import('./AdultInfluenzaVaccineProvidersModule'));
+const LicensedWasteCookingOilCollectorsModule = lazy(() => import('./LicensedWasteCookingOilCollectorsModule'));
+const HomeNursingInstitutionsModule = lazy(() => import('./HomeNursingInstitutionsModule'));
+const OptometryInstitutionsModule = lazy(() => import('./OptometryInstitutionsModule'));
+const GeneralChineseMedicineInstitutionsModule = lazy(() => import('./GeneralChineseMedicineInstitutionsModule'));
+const AlternativeServiceReserveStatisticsModule = lazy(() => import('./AlternativeServiceReserveStatisticsModule'));
+const MedicalLaboratoriesModule = lazy(() => import('./MedicalLaboratoriesModule'));
+const CommunityCareServiceSitesModule = lazy(() => import('./CommunityCareServiceSitesModule'));
+const SeniorCareCapacityAndOccupancyModule = lazy(() => import('./SeniorCareCapacityAndOccupancyModule'));
+const DomesticEmploymentAgencyEvaluationsModule = lazy(() => import('./DomesticEmploymentAgencyEvaluationsModule'));
+const LodgingBusinessPenaltyRecordsModule = lazy(() => import('./LodgingBusinessPenaltyRecordsModule'));
+const CommunityPublicChildcareHomesModule = lazy(() => import('./CommunityPublicChildcareHomesModule'));
+const TbContactScreeningPartnerProvidersModule = lazy(() => import('./TbContactScreeningPartnerProvidersModule'));
+const BeautyHairdressingHygieneCertificationsModule = lazy(() => import('./BeautyHairdressingHygieneCertificationsModule'));
+const PublicInfluenzaAntiviralProvidersModule = lazy(() => import('./PublicInfluenzaAntiviralProvidersModule'));
+const CommunityIntegratedCareLevelCUnitsModule = lazy(() => import('./CommunityIntegratedCareLevelCUnitsModule'));
+const RegisteredAfterSchoolCareCentresModule = lazy(() => import('./RegisteredAfterSchoolCareCentresModule'));
+const SubsidizedSeniorResidentialPlacementInstitutionsModule = lazy(() => import('./SubsidizedSeniorResidentialPlacementInstitutionsModule'));
+const FamilyMedicineInstitutionsModule = lazy(() => import('./FamilyMedicineInstitutionsModule'));
+const CosmeticMedicineSupervision2024Module = lazy(() => import('./CosmeticMedicineSupervision2024Module'));
+const PlasticSurgeryMedicalInstitutionsModule = lazy(() => import('./PlasticSurgeryMedicalInstitutionsModule'));
+const IndigenousCommunityOrganizationsModule = lazy(() => import('./IndigenousCommunityOrganizationsModule'));
+const LicensedNaturalGasPipelineContractorsModule = lazy(() => import('./LicensedNaturalGasPipelineContractorsModule'));
+const CommunityDevelopmentAssociationsModule = lazy(() => import('./CommunityDevelopmentAssociationsModule'));
+const ObstetricsGynecologyInstitutionsModule = lazy(() => import('./ObstetricsGynecologyInstitutionsModule'));
+const ArtsCulturalVenuesModule = lazy(() => import('./ArtsCulturalVenuesModule'));
+const PsychiatricClinicsModule = lazy(() => import('./PsychiatricClinicsModule'));
+const LicensedAssistedReproductionInstitutionsModule = lazy(() => import('./LicensedAssistedReproductionInstitutionsModule'));
+const ChildYouthResidentialPlacementInstitutionsModule = lazy(() => import('./ChildYouthResidentialPlacementInstitutionsModule'));
+const ChildYouthFriendlyWelfareServiceSitesModule = lazy(() => import('./ChildYouthFriendlyWelfareServiceSitesModule'));
+const DisabilityInstitutionCapacityAndVacanciesModule = lazy(() => import('./DisabilityInstitutionCapacityAndVacanciesModule'));
+const OphthalmologyInstitutionsModule = lazy(() => import('./OphthalmologyInstitutionsModule'));
+const TaipeiCulturalHeritageAssetsModule = lazy(() => import('./TaipeiCulturalHeritageAssetsModule'));
+const PrivateCulturalHeritageSubsidiesModule = lazy(() => import('./PrivateCulturalHeritageSubsidiesModule'));
+const TravelMedicineClinicsModule = lazy(() => import('./TravelMedicineClinicsModule'));
+const HakkaOrganizationsModule = lazy(() => import('./HakkaOrganizationsModule'));
+const HospitalDischargeLongTermCarePartnersModule = lazy(() => import('./HospitalDischargeLongTermCarePartnersModule'));
+const WithdrawnIllegalHotelEnforcementRecordsModule = lazy(() => import('./WithdrawnIllegalHotelEnforcementRecordsModule'));
+const FuneralServiceBusinessesModule = lazy(() => import('./FuneralServiceBusinessesModule'));
+const FixedSiteTemporaryChildcareModule = lazy(() => import('./FixedSiteTemporaryChildcareModule'));
+const XrayExaminationMedicalInstitutionsModule = lazy(() => import('./XrayExaminationMedicalInstitutionsModule'));
+const GovernmentEthicsOfficesModule = lazy(() => import('./GovernmentEthicsOfficesModule'));
+const RehabilitationMedicineInstitutionsModule = lazy(() => import('./RehabilitationMedicineInstitutionsModule'));
+const HomeDisabledFamilyPhysicianCareProvidersModule = lazy(() => import('./HomeDisabledFamilyPhysicianCareProvidersModule'));
+const EducationVolunteerRecognitionRecordsModule = lazy(() => import('./EducationVolunteerRecognitionRecordsModule'));
+const OrthopedicFacilitiesModule = lazy(() => import('./OrthopedicFacilitiesModule'));
+const EntFacilitiesModule = lazy(() => import('./EntFacilitiesModule'));
+const HearingCentersModule = lazy(() => import('./HearingCentersModule'));
+const EarlyInterventionCommunityServicesModule = lazy(() => import('./EarlyInterventionCommunityServicesModule'));
+const InfluenzaVaccineProvidersUnder3Module = lazy(() => import('./InfluenzaVaccineProvidersUnder3Module'));
+const SeniorServicesModule = lazy(() => import('./SeniorServicesModule'));
+const EntrustedPublicAssetOperationsModule = lazy(() => import('./EntrustedPublicAssetOperationsModule'));
+const DisabilityDayServicesModule = lazy(() => import('./DisabilityDayServicesModule'));
+const EnvironmentalPesticideVendorsModule = lazy(() => import('./EnvironmentalPesticideVendorsModule'));
+const LaborPensionActViolationsModule = lazy(() => import('./LaborPensionActViolationsModule'));
+const InternetAddictionServicesModule = lazy(() => import('./InternetAddictionServicesModule'));
+const ChildYouthWelfareInstitutionsModule = lazy(() => import('./ChildYouthWelfareInstitutionsModule'));
+const AddictionTreatmentFacilitiesModule = lazy(() => import('./AddictionTreatmentFacilitiesModule'));
+const EmergencyAssistanceProvidersModule = lazy(() => import('./EmergencyAssistanceProvidersModule'));
+const NationwideAddictionTreatmentServicesModule = lazy(() => import('./NationwideAddictionTreatmentServicesModule'));
+const HealthcareWelfareBudgetModule = lazy(() => import('./HealthcareWelfareBudgetModule'));
+const KidneyHealthPromotionFacilitiesModule = lazy(() => import('./KidneyHealthPromotionFacilitiesModule'));
+const HighMyopiaPreventionClinicsModule = lazy(() => import('./HighMyopiaPreventionClinicsModule'));
+const GbsScreeningClinicsModule = lazy(() => import('./GbsScreeningClinicsModule'));
+const MedicalRadiologicalInstitutionsModule = lazy(() => import('./MedicalRadiologicalInstitutionsModule'));
+const MayorCeremonialGiftStatisticsModule = lazy(() => import('./MayorCeremonialGiftStatisticsModule'));
+const SportsPublicParticipationModule = lazy(() => import('./SportsPublicParticipationModule'));
+const ClinicalPathologyFacilitiesModule = lazy(() => import('./ClinicalPathologyFacilitiesModule'));
+const MethadoneCrossRegionServicesModule = lazy(() => import('./MethadoneCrossRegionServicesModule'));
+const OralMaxillofacialSurgeryFacilitiesModule = lazy(() => import('./OralMaxillofacialSurgeryFacilitiesModule'));
+const RadiologyDiagnosticFacilitiesModule = lazy(() => import('./RadiologyDiagnosticFacilitiesModule'));
+const AnatomicalPathologyInstitutionsModule = lazy(() => import('./AnatomicalPathologyInstitutionsModule'));
+const ChildPreventiveHealthcareFacilitiesModule = lazy(() => import('./ChildPreventiveHealthcareFacilitiesModule'));
+const HospicePalliativeCareInstitutionsModule = lazy(() => import('./HospicePalliativeCareInstitutionsModule'));
+const PrivateSeniorResidentialLongTermCareInstitutionsModule = lazy(() => import('./PrivateSeniorResidentialLongTermCareInstitutionsModule'));
+const HemodialysisMedicalInstitutionsModule = lazy(() => import('./HemodialysisMedicalInstitutionsModule'));
+const InternalMedicineInstitutionsModule = lazy(() => import('./InternalMedicineInstitutionsModule'));
+const OccupationalTherapyClinicsModule = lazy(() => import('./OccupationalTherapyClinicsModule'));
+const DesignatedForeignerHealthExamHospitalsModule = lazy(() => import('./DesignatedForeignerHealthExamHospitalsModule'));
 const InfluenzaVaccineProvidersChildren3PlusModule = lazy(() => import('./InfluenzaVaccineProvidersChildren3PlusModule'));
 const PhysicalTherapyClinicsModule = lazy(() => import('./PhysicalTherapyClinicsModule'));
 
 function DirectoryModuleLoading({ language }: { language: Language }) {
   return <p className="module-loading" role="status">{language === 'zh' ? '正在載入資料目錄…' : 'Loading directory…'}</p>;
 }
+const LEGACY_DATA_TABS = new Set([
+  "performingArts",
+  "vaccinationProviders",
+  "hpvProviders",
+  "childMedicalSubsidyProviders",
+  "dentureSubsidyProviders",
+  "disabilityEmploymentResources",
+  "shelteredWorkshops",
+  "employmentAgencies",
+  "licensedPawnshops",
+  "licensedArcades",
+  "licensedSpecialEntertainment",
+  "recyclingOrganizations",
+  "registeredFactories",
+  "enterpriseHeadquarters",
+  "cemeteryPublicFacilities",
+  "telepsychology",
+  "publicLiabilityInsurance",
+  "businessChanges",
+  "companyChanges",
+  "laborUnions",
+  "infantCare",
+  "infantCareEvaluations",
+  "elderlyWelfare",
+  "biotechCompanies",
+  "travelAccommodations",
+  "grants",
+  "procurement",
+  "cramSchools",
+  "hotels",
+  "laborViolations",
+  "oshViolations",
+  "genderEqualityViolations",
+  "consumerDisputeAbsence",
+  "nangangCompanies",
+  "dawannanCompanies",
+  "animalHospitals",
+  "animalMedicineSellers",
+  "petBusinessEvaluations",
+  "veterinarians",
+  "comparison",
+  "overview",
+  "notes"
+]);
+const GENERATED_DIRECTORY_DATA_TABS = new Set([
+  "postpartumCareInstitutions",
+  "outCityFuneralBusinesses",
+  "hotelHygieneDirectory",
+  "kindergartenEvaluationPass",
+  "domesticEmploymentServiceAgencies",
+  "hospitalHemodialysisResources",
+  "streetPerformerVenues",
+  "schoolchildDentalPreventiveCareProviders",
+  "generalWesternMedicineInstitutions",
+  "socialWelfareFoundations",
+  "rotavirusVaccineSubsidyProviders",
+  "petRegistrationStations",
+  "bottledGasRetailers"
+]);
 
 const copy = {
   zh: {
@@ -676,6 +735,7 @@ export default function App() {
   }>({});
   const [filters, setFilters] = useState(emptyFilters);
   const [loadError, setLoadError] = useState(false);
+  const loadedDataGroups = useRef(new Set<string>());
   const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
 
   useEffect(() => {
@@ -692,6 +752,8 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (!LEGACY_DATA_TABS.has(tab) || loadedDataGroups.current.has('legacy-directory-data')) return;
+    loadedDataGroups.current.add('legacy-directory-data');
     const loadJson = async (path: string) => {
       const response = await fetch(`${import.meta.env.BASE_URL}${path}`);
       if (!response.ok) throw new Error(`${path}: ${response.status}`);
@@ -820,10 +882,12 @@ export default function App() {
       setAnimalMedicineSellerRecords(animalMedicineData); setAnimalMedicineSellerSummary(animalMedicineSummaryData);
       setPetBusinessEvaluationRecords(petBusinessEvaluationData); setPetBusinessEvaluationSummary(petBusinessEvaluationSummaryData);
       setVeterinarianRecords(veterinarianData); setVeterinarianSummary(veterinarianSummaryData);
-    }).catch(() => { /* Keep background failures isolated from the civic load state. */ });
-  }, []);
+    }).catch(() => { loadedDataGroups.current.delete('legacy-directory-data'); });
+  }, [tab]);
 
   useEffect(() => {
+    if (tab !== 'seniorGroupMealServiceSites' || loadedDataGroups.current.has('senior-meals')) return;
+    loadedDataGroups.current.add('senior-meals');
     const loadJson = async (path: string) => {
       const response = await fetch(`${import.meta.env.BASE_URL}${path}`);
       if (!response.ok) throw new Error(`${path}: ${response.status}`);
@@ -831,15 +895,27 @@ export default function App() {
     };
     Promise.all([loadJson('data/senior-group-meal-service-sites/records.json'), loadJson('data/senior-group-meal-service-sites/summary.json')])
       .then(([records, siteSummary]) => { setSeniorGroupMealServiceSiteRecords(records); setSeniorGroupMealServiceSiteSummary(siteSummary); })
-      .catch(() => { /* Keep background failures isolated from the civic load state. */ });
-  }, []);
+      .catch(() => { loadedDataGroups.current.delete('senior-meals'); });
+  }, [tab]);
 
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/public-pneumococcal-vaccine-providers/records.json'), loadJson('data/public-pneumococcal-vaccine-providers/summary.json')]).then(([records, providerSummary]) => { setPublicPneumococcalVaccineProviderRecords(records); setPublicPneumococcalVaccineProviderSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/major-electricity-users/records.json'), loadJson('data/major-electricity-users/summary.json')]).then(([records, electricitySummary]) => { setMajorElectricityUserRecords(records); setMajorElectricityUserSummary(electricitySummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/early-intervention-medical-providers/records.json'), loadJson('data/early-intervention-medical-providers/summary.json')]).then(([records, providerSummary]) => { setEarlyInterventionMedicalProviderRecords(records); setEarlyInterventionMedicalProviderSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/general-dental-medical-institutions/records.json'), loadJson('data/general-dental-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setGeneralDentalMedicalInstitutionRecords(records); setGeneralDentalMedicalInstitutionSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/diabetes-shared-care-medical-institutions/records.json'), loadJson('data/diabetes-shared-care-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setDiabetesSharedCareMedicalInstitutionRecords(records); setDiabetesSharedCareMedicalInstitutionSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
-  useEffect(() => { const j=(p:string)=>fetch(`${import.meta.env.BASE_URL}${p}`).then(r=>{if(!r.ok)throw Error(p);return r.json()}); Promise.all([j('data/registered-postpartum-care-institutions/records.json'),j('data/out-of-city-funeral-service-businesses/records.json'),j('data/hotel-hygiene-certification-directory/records.json'),j('data/kindergarten-basic-evaluation-pass-records/records.json'),j('data/domestic-employment-service-agencies/records.json'),j('data/hospital-hemodialysis-resources/records.json'),j('data/street-performer-venues/records.json'),j('data/schoolchild-dental-preventive-care-providers/records.json'),j('data/general-western-medicine-institutions/records.json'),j('data/social-welfare-foundations/records.json'),j('data/rotavirus-vaccine-subsidy-providers/records.json'),j('data/pet-registration-stations/records.json'),j('data/bottled-gas-retailers/records.json')]).then(([a,b,c,d,e,f,g,h,i,k,l,m,n])=>{setPostpartumRecords(a);setOutCityFuneralRecords(b);setHotelHygieneRecords(c);setKindergartenRecords(d);setDomesticEmploymentServiceAgencyRecords(e);setHospitalHemodialysisResourceRecords(f);setStreetPerformerVenueRecords(g);setSchoolchildDentalPreventiveCareProviderRecords(h);setGeneralWesternMedicineInstitutionRecords(i);setSocialWelfareFoundationRecords(k);setRotavirusVaccineSubsidyProviderRecords(l);setPetRegistrationStationRecords(m);setBottledGasRetailerRecords(n)}).catch(()=>setLoadError(true)); }, []);
+  useEffect(() => {
+    if (tab !== 'publicPneumococcalVaccineProviders' || loadedDataGroups.current.has('pneumococcal')) return;
+    loadedDataGroups.current.add('pneumococcal'); const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/public-pneumococcal-vaccine-providers/records.json'), loadJson('data/public-pneumococcal-vaccine-providers/summary.json')]).then(([records, providerSummary]) => { setPublicPneumococcalVaccineProviderRecords(records); setPublicPneumococcalVaccineProviderSummary(providerSummary); }).catch(() => { loadedDataGroups.current.delete('pneumococcal'); }); }, [tab]);
+  useEffect(() => {
+    if (tab !== 'majorElectricityUsers' || loadedDataGroups.current.has('major-electricity')) return;
+    loadedDataGroups.current.add('major-electricity'); const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/major-electricity-users/records.json'), loadJson('data/major-electricity-users/summary.json')]).then(([records, electricitySummary]) => { setMajorElectricityUserRecords(records); setMajorElectricityUserSummary(electricitySummary); }).catch(() => { loadedDataGroups.current.delete('major-electricity'); }); }, [tab]);
+  useEffect(() => {
+    if (tab !== 'earlyInterventionMedicalProviders' || loadedDataGroups.current.has('early-intervention')) return;
+    loadedDataGroups.current.add('early-intervention'); const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/early-intervention-medical-providers/records.json'), loadJson('data/early-intervention-medical-providers/summary.json')]).then(([records, providerSummary]) => { setEarlyInterventionMedicalProviderRecords(records); setEarlyInterventionMedicalProviderSummary(providerSummary); }).catch(() => { loadedDataGroups.current.delete('early-intervention'); }); }, [tab]);
+  useEffect(() => {
+    if (tab !== 'generalDentalMedicalInstitutions' || loadedDataGroups.current.has('general-dental')) return;
+    loadedDataGroups.current.add('general-dental'); const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/general-dental-medical-institutions/records.json'), loadJson('data/general-dental-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setGeneralDentalMedicalInstitutionRecords(records); setGeneralDentalMedicalInstitutionSummary(providerSummary); }).catch(() => { loadedDataGroups.current.delete('general-dental'); }); }, [tab]);
+  useEffect(() => {
+    if (tab !== 'diabetesSharedCareMedicalInstitutions' || loadedDataGroups.current.has('diabetes-shared-care')) return;
+    loadedDataGroups.current.add('diabetes-shared-care'); const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/diabetes-shared-care-medical-institutions/records.json'), loadJson('data/diabetes-shared-care-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setDiabetesSharedCareMedicalInstitutionRecords(records); setDiabetesSharedCareMedicalInstitutionSummary(providerSummary); }).catch(() => { loadedDataGroups.current.delete('diabetes-shared-care'); }); }, [tab]);
+  useEffect(() => {
+    if (!GENERATED_DIRECTORY_DATA_TABS.has(tab) || loadedDataGroups.current.has('generated-directory-data')) return;
+    loadedDataGroups.current.add('generated-directory-data'); const j=(p:string)=>fetch(`${import.meta.env.BASE_URL}${p}`).then(r=>{if(!r.ok)throw Error(p);return r.json()}); Promise.all([j('data/registered-postpartum-care-institutions/records.json'),j('data/out-of-city-funeral-service-businesses/records.json'),j('data/hotel-hygiene-certification-directory/records.json'),j('data/kindergarten-basic-evaluation-pass-records/records.json'),j('data/domestic-employment-service-agencies/records.json'),j('data/hospital-hemodialysis-resources/records.json'),j('data/street-performer-venues/records.json'),j('data/schoolchild-dental-preventive-care-providers/records.json'),j('data/general-western-medicine-institutions/records.json'),j('data/social-welfare-foundations/records.json'),j('data/rotavirus-vaccine-subsidy-providers/records.json'),j('data/pet-registration-stations/records.json'),j('data/bottled-gas-retailers/records.json')]).then(([a,b,c,d,e,f,g,h,i,k,l,m,n])=>{setPostpartumRecords(a);setOutCityFuneralRecords(b);setHotelHygieneRecords(c);setKindergartenRecords(d);setDomesticEmploymentServiceAgencyRecords(e);setHospitalHemodialysisResourceRecords(f);setStreetPerformerVenueRecords(g);setSchoolchildDentalPreventiveCareProviderRecords(h);setGeneralWesternMedicineInstitutionRecords(i);setSocialWelfareFoundationRecords(k);setRotavirusVaccineSubsidyProviderRecords(l);setPetRegistrationStationRecords(m);setBottledGasRetailerRecords(n)}).catch(() => { loadedDataGroups.current.delete('generated-directory-data'); }); }, [tab]);
 
   useEffect(() => {
     document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
@@ -1008,6 +1084,7 @@ export default function App() {
       <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
       {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
       <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />
+      <Suspense fallback={<DirectoryModuleLoading language={language} />}>
       {loadError && tab === 'civic' && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && tab === 'civic' && !summary && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
@@ -1271,6 +1348,7 @@ export default function App() {
           <article><h3>{language === 'zh' ? '老人福利機構名冊' : 'Elderly welfare institutions'}</h3><p>{language === 'zh' ? '資料未提供經緯度，因此以行政區彙總與清單呈現，並透過地址提供外部地圖查詢連結。床位欄位為來源名冊中的核定床位分類，不是即時空床、收住資格、收費標準、補助資格、照護品質、推薦排名、醫療建議或長照建議。' : 'The data provides no coordinates, so this site presents district summaries and a directory, with external map lookup links based on addresses. Bed-count fields are approved bed categories from the source directory; they are not real-time vacancies, admission eligibility, fees, subsidy eligibility, care quality, recommendation ranking, medical advice, or long-term care advice.'}</p></article>
           <article><h3>{t.source}</h3><p><a href="https://data.taipei/dataset/detail?id=72417af0-7dec-4fad-b762-5f2baafcf084" target="_blank" rel="noreferrer">臺北市人民團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f56e77c6-cc69-480c-8ba4-057fc7e1d8d6" target="_blank" rel="noreferrer">臺北市演藝團體名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=ec201f0a-2efa-4426-9439-a8daea7b33c7" target="_blank" rel="noreferrer">臺北市各項預防接種合約醫療院所 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=96f143fe-4c95-4d88-9985-77f28e2d2c3d" target="_blank" rel="noreferrer">臺北市公費HPV疫苗特約醫療院所 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3cc250f5-9f5a-4670-ac7b-f13ecd316032" target="_blank" rel="noreferrer">臺北市兒童醫療補助特約院所名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=76b8b514-e793-4cca-8dcf-065d5af4b760" target="_blank" rel="noreferrer">臺北市假牙補助醫療院所名單 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=c5aafda8-ef14-4f66-a6b7-d5da995a14b5" target="_blank" rel="noreferrer">臺北市身障就業資源地圖 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=fb88e4fd-c287-4fbb-91ab-0ed1fbeaf28c" target="_blank" rel="noreferrer">臺北市庇護工場名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=49a8e600-313d-48ba-b35f-5ff093d4cff1" target="_blank" rel="noreferrer">臺北市回收業機構名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=024da777-25b0-4bee-b1b9-2f8ceb8bd68a" target="_blank" rel="noreferrer">臺北市政府警察局當舖業資料清冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=20774fbb-5671-4850-b307-af6b5976077d" target="_blank" rel="noreferrer">臺北市合法電子遊戲場業者清冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=dd0548f2-0372-4e4f-8c74-9a4121f27d35" target="_blank" rel="noreferrer">臺北市合法八大行業業者清冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=428a78d5-867a-4e55-9630-040a89c8cd94" target="_blank" rel="noreferrer">臺北市可執行通訊心理諮商之心理機構 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=5880bb98-ab6a-476c-ae55-37564b0d0fc9" target="_blank" rel="noreferrer">臺北市營業場所投保公共意外險清冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=5fdefcca-e0a6-41bc-a520-7c8f067caad3" target="_blank" rel="noreferrer">臺北市核准商業設立、變更及歇業登記等異動資料清冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=0a1f284d-e985-4c39-b0b5-53389fbfa6e9" target="_blank" rel="noreferrer">臺北市核准公司設立變更解散清冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48" target="_blank" rel="noreferrer">臺北市各工會名單及聯絡方式 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e78bffa-3fa3-46d5-a632-df99447de695" target="_blank" rel="noreferrer">臺北市產業補助廠商資料 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=a05ee8ee-d7f1-4024-86c1-e2f97f2120bf" target="_blank" rel="noreferrer">臺北市生技廠商企業名錄 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">臺北捷運公司採購案件預定招標時程資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15" target="_blank" rel="noreferrer">臺北市立案補習班資訊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651" target="_blank" rel="noreferrer">臺北市一般旅館名冊 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=58093ba6-4c98-4148-b27a-50ad97d7afca" target="_blank" rel="noreferrer">臺北市臺北旅遊網住宿資料(中文) ↗</a><br /><a href="https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5" target="_blank" rel="noreferrer">臺北市勞基法違規公布紀錄 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=3e2ad23f-21fa-4084-a4de-4fd7f5293550" target="_blank" rel="noreferrer">臺北市職安法違規公布紀錄 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=12f3421a-94f4-4a5e-8642-143dee2fa551" target="_blank" rel="noreferrer">臺北市性別平等工作法違規公布紀錄 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=c15e49fd-f511-46c8-8613-0ad91f370bfd" target="_blank" rel="noreferrer">臺北市消費爭議無故不到場協商之被申訴企業經營者列表 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94" target="_blank" rel="noreferrer">臺北市動物醫院一覽表 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=aeaaa517-089c-42a7-ad5b-60fef89c3545" target="_blank" rel="noreferrer">臺北市準公共化托嬰中心 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=e7b45593-9d44-469c-97fa-f1a52c69ebaa" target="_blank" rel="noreferrer">臺北市托嬰中心評鑑結果 ↗</a><br /><a href="https://data.taipei/dataset/detail?id=d455b149-1a2f-4d5a-a9a8-315eb71f51f6" target="_blank" rel="noreferrer">臺北市老人福利機構名冊 ↗</a></p></article></div>
       </section>}
+      </Suspense>
     </main>
     <footer>{t.footer}</footer>
   </div>;

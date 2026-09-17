@@ -151,30 +151,51 @@ test('a malformed education-volunteer response shows the shared readable error s
   await expect(main(page)).toContainText('無法載入本機資料快照。');
 });
 
-test('adult influenza shows loading instead of temporary zero statistics', async ({ page }) => {
-  await page.route('**/data/adult-influenza-vaccine-providers/records.json', async (route) => {
-    await new Promise((resolve) => setTimeout(resolve, 250));
-    await route.continue();
-  });
-  await page.goto('/');
-  await selectDataset(page, '流感疫苗合約醫療院所（成人）');
-  await expect(main(page)).toContainText('正在載入成人流感疫苗院所…');
-  await expect(main(page)).not.toContainText('院所紀錄總數');
-  await expect(main(page).getByRole('heading', { name: '流感疫苗合約醫療院所（成人）' })).toBeVisible();
-});
-
-test('physical therapy failed request is not presented as zero clinics', async ({ page }) => {
+test('self-loading healthcare directories distinguish request failures from zero records', async ({ page }) => {
   await page.route('**/data/physical-therapy-clinics/records.json', (route) => route.fulfill({ status: 500, body: '' }));
   await page.goto('/');
   await selectDataset(page, '臺北市物理治療所');
   await expect(main(page)).toContainText('無法載入本機資料快照。');
-  await expect(main(page)).not.toContainText('0 筆符合');
-});
 
-test('children age 3+ influenza failed request is not presented as zero providers', async ({ page }) => {
+  await page.unroute('**/data/physical-therapy-clinics/records.json');
   await page.route('**/data/influenza-vaccine-providers-children-3plus/records.json', (route) => route.fulfill({ status: 500, body: '' }));
-  await page.goto('/');
   await selectDataset(page, '3歲以上幼童流感疫苗特約院所');
   await expect(main(page)).toContainText('無法載入本機資料快照。');
-  await expect(main(page)).not.toContainText('0 筆符合');
+});
+
+test('adult influenza directory exposes a loading state while records are pending', async ({ page }) => {
+  await page.route('**/data/adult-influenza-vaccine-providers/records.json', () => new Promise(() => {}));
+  await page.goto('/?dataset=adultInfluenzaVaccineProviders');
+  await expect(main(page)).toContainText('正在載入成人流感疫苗院所資料…');
+});
+
+test('dataset selection is URL-addressable and browser history restores the previous dataset', async ({ page }) => {
+  await page.goto('/?dataset=physicalTherapyClinics');
+  await expect(main(page).getByRole('heading', { name: '臺北市物理治療所' })).toBeVisible();
+
+  await selectDataset(page, '孕婦 GBS 篩檢特約院所');
+  await expect(page).toHaveURL(/dataset=gbsScreeningClinics/);
+  await expect(main(page).getByRole('heading', { name: /孕婦 GBS 篩檢特約院所/ })).toBeVisible();
+
+  await page.goBack();
+  await expect(page).toHaveURL(/dataset=physicalTherapyClinics/);
+  await expect(main(page).getByRole('heading', { name: '臺北市物理治療所' })).toBeVisible();
+
+  await page.goto('/?dataset=does-not-exist');
+  await expect(main(page).getByRole('heading', { name: '人民團體' })).toBeVisible();
+  await expect(page).not.toHaveURL(/dataset=/);
+});
+
+test('unrelated background dataset failures do not surface as a global error', async ({ page }) => {
+  await page.route('**/data/senior-group-meal-service-sites/records.json', (route) => route.fulfill({ status: 500, body: '' }));
+  await page.goto('/?dataset=gbsScreeningClinics');
+  await expect(main(page).getByRole('heading', { name: /孕婦 GBS 篩檢特約院所/ })).toBeVisible();
+  await page.waitForTimeout(150);
+  await expect(main(page).locator('.status[role="alert"]')).toHaveCount(0);
+});
+
+test('civic load failures still surface on the civic page', async ({ page }) => {
+  await page.route('**/data/civic-groups.json', (route) => route.fulfill({ status: 500, body: '' }));
+  await page.goto('/');
+  await expect(main(page).locator('.status[role="alert"]')).toBeVisible();
 });

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import DataTrustPanel from './DataTrustPanel';
 import { buildDatasetCatalogue } from './lib/datasetCatalogue';
 import { loadLocalJson } from './lib/loadLocalJson';
@@ -529,12 +529,53 @@ function DashboardOnboarding({ language, onBrowse, onDismiss }: { language: Lang
   </aside>;
 }
 
+const ONBOARDING_DISMISSED_KEY = 'taipei-public-data:onboarding-dismissed';
+const LANGUAGE_PREFERENCE_KEY = 'taipei-public-data:language';
+
+function readUrlLanguage(): Language | null {
+  const value = new URLSearchParams(window.location.search).get('lang');
+  return value === 'zh' || value === 'en' ? value : null;
+}
+
+function readStoredLanguage(): Language {
+  try { return localStorage.getItem(LANGUAGE_PREFERENCE_KEY) === 'en' ? 'en' : 'zh'; } catch { return 'zh'; }
+}
+
+function getInitialLanguage(): Language { return readUrlLanguage() ?? readStoredLanguage(); }
+
+function hasDismissedOnboarding() {
+  try { return localStorage.getItem(ONBOARDING_DISMISSED_KEY) === '1'; } catch { return false; }
+}
+
 export default function App() {
-  const [language, setLanguage] = useState<Language>('zh');
-  const [tab, setTab] = useState<string>('civic');
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
+  const [tab, setTab] = useState<string>(() => new URLSearchParams(window.location.search).get('dataset') || 'civic');
   const [catalogueOpen, setCatalogueOpen] = useState(false);
-  const [showOnboarding, setShowOnboarding] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(() => !hasDismissedOnboarding());
   const [catalogueQuery, setCatalogueQuery] = useState('');
+  const datasetContentRef = useRef<HTMLDivElement>(null);
+  const scrollToDatasetContent = (behavior: ScrollBehavior = 'smooth') => {
+    const align = (nextBehavior: ScrollBehavior) => {
+      const node = datasetContentRef.current;
+      if (!node) return;
+      const top = Math.max(0, node.getBoundingClientRect().top + window.scrollY - 16);
+      window.scrollTo({ top, behavior: nextBehavior });
+    };
+    requestAnimationFrame(() => requestAnimationFrame(() => align(behavior)));
+    window.setTimeout(() => align('auto'), 250);
+    window.setTimeout(() => align('auto'), 750);
+  };
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      setTab(params.get('dataset') || 'civic');
+      const urlLanguage = readUrlLanguage();
+      if (urlLanguage) setLanguage(urlLanguage);
+      scrollToDatasetContent('auto');
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
   const [civicView, setCivicView] = useState<'map' | 'directory' | 'overview'>('map');
   const [groups, setGroups] = useState<CivicGroup[]>([]);
   const [summary, setSummary] = useState<CivicGroupSummary | null>(null);
@@ -779,7 +820,7 @@ export default function App() {
       setAnimalMedicineSellerRecords(animalMedicineData); setAnimalMedicineSellerSummary(animalMedicineSummaryData);
       setPetBusinessEvaluationRecords(petBusinessEvaluationData); setPetBusinessEvaluationSummary(petBusinessEvaluationSummaryData);
       setVeterinarianRecords(veterinarianData); setVeterinarianSummary(veterinarianSummaryData);
-    }).catch(() => setLoadError(true));
+    }).catch(() => { /* Keep background failures isolated from the civic load state. */ });
   }, []);
 
   useEffect(() => {
@@ -790,20 +831,25 @@ export default function App() {
     };
     Promise.all([loadJson('data/senior-group-meal-service-sites/records.json'), loadJson('data/senior-group-meal-service-sites/summary.json')])
       .then(([records, siteSummary]) => { setSeniorGroupMealServiceSiteRecords(records); setSeniorGroupMealServiceSiteSummary(siteSummary); })
-      .catch(() => setLoadError(true));
+      .catch(() => { /* Keep background failures isolated from the civic load state. */ });
   }, []);
 
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/public-pneumococcal-vaccine-providers/records.json'), loadJson('data/public-pneumococcal-vaccine-providers/summary.json')]).then(([records, providerSummary]) => { setPublicPneumococcalVaccineProviderRecords(records); setPublicPneumococcalVaccineProviderSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/major-electricity-users/records.json'), loadJson('data/major-electricity-users/summary.json')]).then(([records, electricitySummary]) => { setMajorElectricityUserRecords(records); setMajorElectricityUserSummary(electricitySummary); }).catch(() => setLoadError(true)); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/early-intervention-medical-providers/records.json'), loadJson('data/early-intervention-medical-providers/summary.json')]).then(([records, providerSummary]) => { setEarlyInterventionMedicalProviderRecords(records); setEarlyInterventionMedicalProviderSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/general-dental-medical-institutions/records.json'), loadJson('data/general-dental-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setGeneralDentalMedicalInstitutionRecords(records); setGeneralDentalMedicalInstitutionSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
-  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/diabetes-shared-care-medical-institutions/records.json'), loadJson('data/diabetes-shared-care-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setDiabetesSharedCareMedicalInstitutionRecords(records); setDiabetesSharedCareMedicalInstitutionSummary(providerSummary); }).catch(() => setLoadError(true)); }, []);
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/public-pneumococcal-vaccine-providers/records.json'), loadJson('data/public-pneumococcal-vaccine-providers/summary.json')]).then(([records, providerSummary]) => { setPublicPneumococcalVaccineProviderRecords(records); setPublicPneumococcalVaccineProviderSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/major-electricity-users/records.json'), loadJson('data/major-electricity-users/summary.json')]).then(([records, electricitySummary]) => { setMajorElectricityUserRecords(records); setMajorElectricityUserSummary(electricitySummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/early-intervention-medical-providers/records.json'), loadJson('data/early-intervention-medical-providers/summary.json')]).then(([records, providerSummary]) => { setEarlyInterventionMedicalProviderRecords(records); setEarlyInterventionMedicalProviderSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/general-dental-medical-institutions/records.json'), loadJson('data/general-dental-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setGeneralDentalMedicalInstitutionRecords(records); setGeneralDentalMedicalInstitutionSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
+  useEffect(() => { const loadJson = async (path: string) => { const response = await fetch(`${import.meta.env.BASE_URL}${path}`); if (!response.ok) throw new Error(`${path}: ${response.status}`); return response.json(); }; Promise.all([loadJson('data/diabetes-shared-care-medical-institutions/records.json'), loadJson('data/diabetes-shared-care-medical-institutions/summary.json')]).then(([records, providerSummary]) => { setDiabetesSharedCareMedicalInstitutionRecords(records); setDiabetesSharedCareMedicalInstitutionSummary(providerSummary); }).catch(() => { /* Keep background failures isolated from the civic load state. */ }); }, []);
   useEffect(() => { const j=(p:string)=>fetch(`${import.meta.env.BASE_URL}${p}`).then(r=>{if(!r.ok)throw Error(p);return r.json()}); Promise.all([j('data/registered-postpartum-care-institutions/records.json'),j('data/out-of-city-funeral-service-businesses/records.json'),j('data/hotel-hygiene-certification-directory/records.json'),j('data/kindergarten-basic-evaluation-pass-records/records.json'),j('data/domestic-employment-service-agencies/records.json'),j('data/hospital-hemodialysis-resources/records.json'),j('data/street-performer-venues/records.json'),j('data/schoolchild-dental-preventive-care-providers/records.json'),j('data/general-western-medicine-institutions/records.json'),j('data/social-welfare-foundations/records.json'),j('data/rotavirus-vaccine-subsidy-providers/records.json'),j('data/pet-registration-stations/records.json'),j('data/bottled-gas-retailers/records.json')]).then(([a,b,c,d,e,f,g,h,i,k,l,m,n])=>{setPostpartumRecords(a);setOutCityFuneralRecords(b);setHotelHygieneRecords(c);setKindergartenRecords(d);setDomesticEmploymentServiceAgencyRecords(e);setHospitalHemodialysisResourceRecords(f);setStreetPerformerVenueRecords(g);setSchoolchildDentalPreventiveCareProviderRecords(h);setGeneralWesternMedicineInstitutionRecords(i);setSocialWelfareFoundationRecords(k);setRotavirusVaccineSubsidyProviderRecords(l);setPetRegistrationStationRecords(m);setBottledGasRetailerRecords(n)}).catch(()=>setLoadError(true)); }, []);
 
   useEffect(() => {
     document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
     document.title = t.title;
-  }, [language, t.title]);
+    try { localStorage.setItem(LANGUAGE_PREFERENCE_KEY, language); } catch { /* Preference persistence is optional. */ }
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', language);
+    const historyState = window.history.state && typeof window.history.state === 'object' ? window.history.state : {};
+    window.history.replaceState({ ...historyState, dataset: tab, language }, '', url);
+  }, [language, t.title, tab]);
 
   const filtered = useMemo(() => filterCivicGroups(groups, filters, language), [groups, filters, language]);
   const hasFilters = Object.values(filters).some(Boolean);
@@ -910,12 +956,34 @@ export default function App() {
   tabs.splice(36, 0, ['licensedAssistedReproductionInstitutions', language === 'zh' ? '特約人工生殖機構名單' : 'Licensed Assisted Reproduction Institutions']);
   tabs.splice(37, 0, ['childYouthResidentialPlacementInstitutions', language === 'zh' ? '兒童及少年安置機構' : 'Child and Youth Residential Placement Institutions']);
   const displayedTabs = language === 'zh' ? tabs.map(([id, label]) => [id, zhTabLabels[id] ?? label] as [string, string]) : tabs;
+  useEffect(() => {
+    if (displayedTabs.some(([id]) => id === tab)) return;
+    setTab('civic');
+    const url = new URL(window.location.href);
+    url.searchParams.delete('dataset');
+    window.history.replaceState({ dataset: 'civic' }, '', url);
+  }, [tab, language]);
   const catalogue = useMemo(() => buildDatasetCatalogue(displayedTabs, language, catalogueQuery), [displayedTabs, language, catalogueQuery]);
   const activeDatasetLabel = displayedTabs.find(([id]) => id === tab)?.[1];
   const activeDatasetDirectory = ({
     civic: 'civic-groups', performingArts: 'performing-arts-groups', vaccinationProviders: 'contracted-vaccination-medical-providers', hpvProviders: 'publicly-funded-hpv-vaccination-providers', childMedicalSubsidyProviders: 'child-medical-subsidy-contracted-providers', dentureSubsidyProviders: 'denture-subsidy-medical-providers', disabilityEmploymentResources: 'disability-employment-resource-map', shelteredWorkshops: 'sheltered-workshop-directory', employmentAgencies: 'employment-agency-intermediary-companies', licensedPawnshops: 'licensed-pawnshop-directory', licensedArcades: 'licensed-electronic-game-arcade-operators', licensedSpecialEntertainment: 'licensed-special-entertainment-business-operators', recyclingOrganizations: 'registered-recycling-business-organizations', registeredFactories: 'registered-factory-distribution', enterpriseHeadquarters: 'enterprise-headquarters-distribution', laborUnions: 'registered-labor-unions', infantCare: 'quasi-public-infant-care-centers', infantCareEvaluations: 'infant-care-center-evaluation-results', elderlyWelfare: 'elderly-welfare-institutions', biotechCompanies: 'biotech-company-directory', travelAccommodations: 'taipei-travel-accommodations-zh', publicLiabilityInsurance: 'business-premises-public-liability-insurance', businessChanges: 'business-registration-change-records', companyChanges: 'company-registration-change-records', laborViolations: 'labor-standard-act-violation-records', oshViolations: 'occupational-safety-health-violation-records', genderEqualityViolations: 'gender-equality-work-act-violation-records', consumerDisputeAbsence: 'consumer-dispute-absent-business-operators', nangangCompanies: 'nangang-software-park-companies', dawannanCompanies: 'dawannan-industrial-area-company-directory', animalHospitals: 'registered-animal-hospitals', animalMedicineSellers: 'licensed-animal-medicine-sellers', petBusinessEvaluations: 'specific-pet-business-evaluation-results', veterinarians: 'veterinarian-professional-registry', telepsychology: 'telepsychology-counseling-institutions', publicPneumococcalVaccineProviders: 'public-pneumococcal-vaccine-providers', majorElectricityUsers: 'major-electricity-users', earlyInterventionMedicalProviders: 'early-intervention-medical-providers', generalDentalMedicalInstitutions: 'general-dental-medical-institutions', diabetesSharedCareMedicalInstitutions: 'diabetes-shared-care-medical-institutions', educationVolunteerRecognitionRecords: 'education-volunteer-recognition-records',
   } as Record<string, string>)[tab] ?? tab.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
-  const selectDataset = (id: string) => { setTab(id); setCatalogueOpen(false); setCatalogueQuery(''); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+  const selectDataset = (id: string) => {
+    setTab(id);
+    setCatalogueOpen(false);
+    setCatalogueQuery('');
+    const url = new URL(window.location.href);
+    const currentDataset = url.searchParams.get('dataset') || 'civic';
+    if (currentDataset !== id) {
+      if (id === 'civic') url.searchParams.delete('dataset');
+      else url.searchParams.set('dataset', id);
+      window.history.pushState({ dataset: id, language }, '', url);
+    }
+    scrollToDatasetContent();
+  };
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('dataset')) scrollToDatasetContent('auto');
+  }, []);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -938,8 +1006,9 @@ export default function App() {
     </header>
     <main>
       <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
-      {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => setShowOnboarding(false)} />}
-      {loadError && <p className="status" role="alert">{t.loadError}</p>}
+      {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
+      <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />
+      {loadError && tab === 'civic' && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && tab === 'civic' && !summary && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
         <div className="subtabs">{civicViews.map(([id, label]) => <button className={civicView === id ? 'active' : ''} onClick={() => setCivicView(id)} key={id}>{label}</button>)}</div>

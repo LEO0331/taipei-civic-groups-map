@@ -21,6 +21,19 @@ jobs:
           cache: npm
       - name: Apply Batch B changes
         run: node .github/patches/apply-batch-b.mjs
+      - name: Stabilize dataset content scrolling
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = 'src/App.tsx';
+          let source = fs.readFileSync(path, 'utf8');
+          const before = `  const scrollToDatasetContent = (behavior: ScrollBehavior = 'smooth') => {\n    requestAnimationFrame(() => requestAnimationFrame(() => datasetContentRef.current?.scrollIntoView({ behavior, block: 'start' })));\n  };`;
+          const after = `  const scrollToDatasetContent = (behavior: ScrollBehavior = 'smooth') => {\n    const align = (nextBehavior: ScrollBehavior) => {\n      const node = datasetContentRef.current;\n      if (!node) return;\n      const top = Math.max(0, node.getBoundingClientRect().top + window.scrollY - 16);\n      window.scrollTo({ top, behavior: nextBehavior });\n    };\n    requestAnimationFrame(() => requestAnimationFrame(() => align(behavior)));\n    window.setTimeout(() => align('auto'), 250);\n    window.setTimeout(() => align('auto'), 750);\n  };`;
+          if (!source.includes(before)) throw new Error('Expected Batch B scroll helper was not generated');
+          source = source.replace(before, after);
+          fs.writeFileSync(path, source);
+          NODE
       - name: Install dependencies
         run: npm ci
       - name: Verify typecheck, unit tests, and production build

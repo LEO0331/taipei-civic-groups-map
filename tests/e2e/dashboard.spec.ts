@@ -150,3 +150,31 @@ test('a malformed education-volunteer response shows the shared readable error s
   await selectDataset(page, '教育局志工表揚名單');
   await expect(main(page)).toContainText('無法載入本機資料快照。');
 });
+
+test('adult influenza shows loading instead of temporary zero statistics', async ({ page }) => {
+  await page.route('**/data/adult-influenza-vaccine-providers/records.json', async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 250));
+    await route.continue();
+  });
+  await page.goto('/');
+  await selectDataset(page, '流感疫苗合約醫療院所（成人）');
+  await expect(main(page)).toContainText('正在載入成人流感疫苗院所…');
+  await expect(main(page)).not.toContainText('院所紀錄總數');
+  await expect(main(page).getByRole('heading', { name: '流感疫苗合約醫療院所（成人）' })).toBeVisible();
+});
+
+test('physical therapy failed request is not presented as zero clinics', async ({ page }) => {
+  await page.route('**/data/physical-therapy-clinics/records.json', (route) => route.fulfill({ status: 500, body: '' }));
+  await page.goto('/');
+  await selectDataset(page, '臺北市物理治療所');
+  await expect(main(page)).toContainText('無法載入本機資料快照。');
+  await expect(main(page)).not.toContainText('0 筆符合');
+});
+
+test('children age 3+ influenza failed request is not presented as zero providers', async ({ page }) => {
+  await page.route('**/data/influenza-vaccine-providers-children-3plus/records.json', (route) => route.fulfill({ status: 500, body: '' }));
+  await page.goto('/');
+  await selectDataset(page, '3歲以上幼童流感疫苗特約院所');
+  await expect(main(page)).toContainText('無法載入本機資料快照。');
+  await expect(main(page)).not.toContainText('0 筆符合');
+});

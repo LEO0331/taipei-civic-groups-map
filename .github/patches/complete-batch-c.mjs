@@ -15,6 +15,7 @@ async function replaceRequired(path, before, after, label) {
 // older Batch A/B behavior while being merged forward.
 for (const path of [
   'src/App.tsx',
+  'src/main.tsx',
   'src/InfluenzaVaccineProvidersChildren3PlusModule.tsx',
   'src/PhysicalTherapyClinicsModule.tsx',
   'src/HealthcareInstitutionDirectory.tsx',
@@ -24,6 +25,16 @@ for (const path of [
   'tests/e2e/navigation-state.spec.ts',
 ]) {
   await writeFile(path, gitShow('origin/main', path));
+}
+
+// A legacy bridge on this branch predates the current App-owned navigation state.
+// It rewrites ?dataset= using translated button labels, overriding the stable IDs
+// from Batch A/B and breaking shareable URLs, language changes, and history.
+// Remove it and restore main.tsx above so Batch C does not alter navigation state.
+try {
+  execFileSync('git', ['rm', '-f', 'src/uiStateBridge.ts']);
+} catch {
+  // The file may already be absent on a later retry.
 }
 
 // Preserve the already-approved Batch C adult influenza redesign, while retaining
@@ -180,6 +191,7 @@ test('data trust uses a readable dataset name instead of an implementation slug'
 // uncommitted branch regressions after the verification run succeeds.
 execFileSync('git', ['add',
   'src/App.tsx',
+  'src/main.tsx',
   'src/RehabilitationMedicineInstitutionsModule.tsx',
   'tests/e2e/dashboard.spec.ts',
   'tests/e2e/navigation-state.spec.ts',

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import DataTrustPanel from './DataTrustPanel';
 import { buildDatasetCatalogue } from './lib/datasetCatalogue';
 import { loadLocalJson } from './lib/loadLocalJson';
@@ -529,14 +529,50 @@ function DashboardOnboarding({ language, onBrowse, onDismiss }: { language: Lang
   </aside>;
 }
 
+const ONBOARDING_DISMISSED_KEY = 'taipei-public-data:onboarding-dismissed';
+const LANGUAGE_PREFERENCE_KEY = 'taipei-public-data:language';
+
+function readUrlLanguage(): Language | null {
+  const value = new URLSearchParams(window.location.search).get('lang');
+  return value === 'zh' || value === 'en' ? value : null;
+}
+
+function readStoredLanguage(): Language {
+  try { return localStorage.getItem(LANGUAGE_PREFERENCE_KEY) === 'en' ? 'en' : 'zh'; } catch { return 'zh'; }
+}
+
+function getInitialLanguage(): Language { return readUrlLanguage() ?? readStoredLanguage(); }
+
+function hasDismissedOnboarding() {
+  try { return localStorage.getItem(ONBOARDING_DISMISSED_KEY) === '1'; } catch { return false; }
+}
+
 export default function App() {
-  const [language, setLanguage] = useState<Language>('zh');
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [tab, setTab] = useState<string>(() => new URLSearchParams(window.location.search).get('dataset') || 'civic');
   const [catalogueOpen, setCatalogueOpen] = useState(false);
-  const [showOnboarding, setShowOnboarding] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(() => !hasDismissedOnboarding());
   const [catalogueQuery, setCatalogueQuery] = useState('');
+  const datasetContentRef = useRef<HTMLDivElement>(null);
+  const scrollToDatasetContent = (behavior: ScrollBehavior = 'smooth') => {
+    const align = (nextBehavior: ScrollBehavior) => {
+      const node = datasetContentRef.current;
+      if (!node) return;
+      const top = Math.max(0, node.getBoundingClientRect().top + window.scrollY - 16);
+      window.scrollTo({ top, behavior: nextBehavior });
+    };
+    requestAnimationFrame(() => requestAnimationFrame(() => align(behavior)));
+    window.setTimeout(() => align('auto'), 250);
+    window.setTimeout(() => align('auto'), 750);
+  };
   useEffect(() => {
-    const handlePopState = () => setTab(new URLSearchParams(window.location.search).get('dataset') || 'civic');
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      setTab(params.get('dataset') || 'civic');
+      const urlLanguage = readUrlLanguage();
+      if (urlLanguage) setLanguage(urlLanguage);
+      scrollToDatasetContent('auto');
+    };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
@@ -808,7 +844,12 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
     document.title = t.title;
-  }, [language, t.title]);
+    try { localStorage.setItem(LANGUAGE_PREFERENCE_KEY, language); } catch { /* Preference persistence is optional. */ }
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', language);
+    const historyState = window.history.state && typeof window.history.state === 'object' ? window.history.state : {};
+    window.history.replaceState({ ...historyState, dataset: tab, language }, '', url);
+  }, [language, t.title, tab]);
 
   const filtered = useMemo(() => filterCivicGroups(groups, filters, language), [groups, filters, language]);
   const hasFilters = Object.values(filters).some(Boolean);
@@ -936,10 +977,13 @@ export default function App() {
     if (currentDataset !== id) {
       if (id === 'civic') url.searchParams.delete('dataset');
       else url.searchParams.set('dataset', id);
-      window.history.pushState({ dataset: id }, '', url);
+      window.history.pushState({ dataset: id, language }, '', url);
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToDatasetContent();
   };
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('dataset')) scrollToDatasetContent('auto');
+  }, []);
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -962,7 +1006,8 @@ export default function App() {
     </header>
     <main>
       <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
-      {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => setShowOnboarding(false)} />}
+      {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
+      <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />
       {loadError && tab === 'civic' && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && tab === 'civic' && !summary && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>

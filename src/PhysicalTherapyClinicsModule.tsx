@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { UI_FAMILIES } from './lib/uiFamilies';
 
 type Language = 'zh' | 'en';
 type Clinic = {
@@ -75,9 +76,9 @@ export default function PhysicalTherapyClinicsModule({ language }: { language: L
   const exportCsv = () => { const headers = ['ID', 'Clinic', 'District', 'Postal code', 'Address', 'Telephone']; const lines = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.postalCode, record.address, record.phoneRaw])].map((line) => line.map((value) => csvEscape(value)).join(',')); const blob = new Blob([`\uFEFF${lines.join('\n')}`], { type: 'text/csv;charset=utf-8' }); const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'taipei-physical-therapy-clinics-filtered.csv'; anchor.click(); URL.revokeObjectURL(url); };
   const tabs: Array<[View, string, string]> = [['find', zh ? '找物理治療' : 'Find Physical Therapy', '01'], ['directory', zh ? '診所名錄' : 'Clinic Directory', '02'], ['districts', zh ? '行政區分布' : 'District Distribution', '03'], ['contact', zh ? '聯絡資訊' : 'Contact Information', '04'], ['quality', zh ? '資料品質' : 'Data Quality', '05'], ['notes', zh ? '資料說明' : 'Data Notes', '06']];
   const reset = () => { setSearch(''); setDistrict(''); setPostalCode(''); setPhoneFilter(''); setAddressFilter(''); };
-  if (loading) return <section className="workspace physical-therapy-module"><p className="module-loading" role="status">{zh ? '正在載入物理治療所資料…' : 'Loading physical therapy clinic data…'}</p></section>;
-  if (loadError) return <section className="workspace physical-therapy-module"><p className="notice error" role="alert">{zh ? '無法載入本機資料快照。請稍後再試或查閱原始資料來源。' : 'The local data snapshot could not be loaded. Please try again later or consult the source dataset.'}</p></section>;
-  return <section className="workspace physical-therapy-module">
+  if (loading) return <section className="workspace physical-therapy-module" data-ui-family={UI_FAMILIES.locationDirectory}><p className="module-loading" role="status">{zh ? '正在載入物理治療所資料…' : 'Loading physical therapy clinic data…'}</p></section>;
+  if (loadError) return <section className="workspace physical-therapy-module" data-ui-family={UI_FAMILIES.locationDirectory}><p className="notice error" role="alert">{zh ? '無法載入本機資料快照。請稍後再試或查閱原始資料來源。' : 'The local data snapshot could not be loaded. Please try again later or consult the source dataset.'}</p></section>;
+  return <section className="workspace physical-therapy-module" data-ui-family={UI_FAMILIES.locationDirectory}>
     <div className="pt-hero"><div><p className="eyebrow">PUBLIC HEALTHCARE DIRECTORY / 01</p><h2>{zh ? '臺北市物理治療所' : 'Taipei Physical Therapy Clinics'}</h2><p className="pt-lede">{zh ? '用來源紀錄找到物理治療所，按名稱、行政區、郵遞區號、地址或電話查找。' : 'Find source-recorded physical therapy clinics by name, district, postal code, address, or telephone.'}</p></div><div className="pt-source"><span>{zh ? '來源資料集' : 'SOURCE DATASET'}</span><strong>臺北市物理治療所</strong><a href={metadata.sourceUrl} target="_blank" rel="noreferrer">{zh ? '查看臺北市資料大平臺 ↗' : 'View Taipei Open Data ↗'}</a></div></div>
     <div className="pt-notice"><span>i</span><p>{zh ? '本目錄反映來源更新時間的物理治療所紀錄，不代表目前營業、即時預約、治療項目、費用、保險給付、品質或推薦。' : 'This directory reflects physical therapy clinic records at the source update time and does not establish current operation, immediate appointment availability, or availability of specific treatments.'}</p></div>
     <nav className="pt-tabs" aria-label={zh ? '物理治療所模組導覽' : 'Physical therapy clinic views'}>{tabs.map(([id, label, number]) => <button key={id} className={view === id ? 'active' : ''} onClick={() => setView(id)}><span>{number}</span>{label}</button>)}</nav>

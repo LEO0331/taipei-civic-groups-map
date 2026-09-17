@@ -10,22 +10,32 @@ async function replaceRequired(path, before, after, label) {
   await writeFile(path, source.replace(before, after));
 }
 
-// Start non-redesigned modules from current main so older Batch A/B variants on this
-// long-lived branch cannot reintroduce stale loading or navigation behavior.
+// Batch C is visual/UI consistency work. Start unrelated navigation/state files and
+// non-redesigned modules from current main so this long-lived branch cannot revive
+// older Batch A/B behavior while being merged forward.
 for (const path of [
+  'src/App.tsx',
   'src/InfluenzaVaccineProvidersChildren3PlusModule.tsx',
   'src/PhysicalTherapyClinicsModule.tsx',
   'src/HealthcareInstitutionDirectory.tsx',
+  'src/RehabilitationMedicineInstitutionsModule.tsx',
   'src/DataTrustPanel.tsx',
+  'tests/e2e/dashboard.spec.ts',
+  'tests/e2e/navigation-state.spec.ts',
 ]) {
   await writeFile(path, gitShow('origin/main', path));
 }
 
-// Preserve the already-approved Batch C adult influenza redesign.
+// Preserve the already-approved Batch C adult influenza redesign, while retaining
+// the loading copy expected by current main's regression suite.
 let adult = gitShow(approvedCCommit, 'src/AdultInfluenzaVaccineProvidersModule.tsx');
 adult = adult.replace(
   "import { useEffect, useMemo, useState } from 'react';",
   "import { useEffect, useMemo, useState } from 'react';\nimport { UI_FAMILIES } from './lib/uiFamilies';",
+);
+adult = adult.replace(
+  "t('正在載入成人流感疫苗院所…', 'Loading adult influenza vaccine providers…')",
+  "t('正在載入成人流感疫苗院所資料…', 'Loading adult influenza vaccine provider data…')",
 );
 adult = adult.replaceAll(
   'className="workspace influenza-provider-module"',
@@ -89,6 +99,19 @@ await replaceRequired(
   'shared healthcare UI-family marker',
 );
 
+await replaceRequired(
+  'src/RehabilitationMedicineInstitutionsModule.tsx',
+  "import { loadLocalJson } from './lib/loadLocalJson';",
+  "import { loadLocalJson } from './lib/loadLocalJson';\nimport { UI_FAMILIES } from './lib/uiFamilies';",
+  'rehabilitation UI-family import',
+);
+await replaceRequired(
+  'src/RehabilitationMedicineInstitutionsModule.tsx',
+  'return <section className="workspace rehab-directory">',
+  'return <section className="workspace rehab-directory" data-ui-family={UI_FAMILIES.healthcareStandard}>',
+  'rehabilitation UI-family marker',
+);
+
 // Public-facing data trust text should use a human-readable name, not a slug.
 let trust = await readFile('src/DataTrustPanel.tsx', 'utf8');
 const anchor = `const statusCopy: Record<FreshnessStatus, [string, string]> = {\n  current: ['資料日期在 90 天內', 'Source date within 90 days'],\n  aging: ['資料日期為 91–180 天前', 'Source date is 91–180 days old'],\n  stale: ['資料日期超過 180 天', 'Source date is over 180 days old'],\n  unknown: ['無法從現有詮釋資料確認日期', 'No source date in the available metadata'],\n};`;
@@ -127,7 +150,7 @@ test('adult and children influenza use the same rich healthcare provider family'
   await expect(child.locator('.ivp-search')).toBeVisible();
 });
 
-test('shared simple healthcare directories declare the compact healthcare family', async ({ page }) => {
+test('simple healthcare directories declare the compact healthcare family', async ({ page }) => {
   await page.goto('/?dataset=rehabilitationMedicineInstitutions&lang=zh');
   const directory = page.locator('[data-ui-family="healthcare-standard"]');
   await expect(directory).toBeVisible();
@@ -151,3 +174,13 @@ test('data trust uses a readable dataset name instead of an implementation slug'
   await expect(status).not.toContainText('adult-influenza-vaccine-providers');
 });
 `);
+
+// The completion workflow only stages Batch C files explicitly. Stage the files we
+// intentionally restored from main or tagged here so they cannot be left behind as
+// uncommitted branch regressions after the verification run succeeds.
+execFileSync('git', ['add',
+  'src/App.tsx',
+  'src/RehabilitationMedicineInstitutionsModule.tsx',
+  'tests/e2e/dashboard.spec.ts',
+  'tests/e2e/navigation-state.spec.ts',
+]);

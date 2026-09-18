@@ -5,6 +5,7 @@ import AccessibleTabs, { AccessibleTabPanel } from './AccessibleTabs';
 import LegacyTabAccessibility from './LegacyTabAccessibility';
 import { buildDatasetCatalogue } from './lib/datasetCatalogue';
 import { loadLocalJson } from './lib/loadLocalJson';
+import { buildHistoryState, buildNavigationUrl, readNavigationState } from './lib/navigationState';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
@@ -593,24 +594,21 @@ function DashboardOnboarding({ language, onBrowse, onDismiss }: { language: Lang
 const ONBOARDING_DISMISSED_KEY = 'taipei-public-data:onboarding-dismissed';
 const LANGUAGE_PREFERENCE_KEY = 'taipei-public-data:language';
 
-function readUrlLanguage(): Language | null {
-  const value = new URLSearchParams(window.location.search).get('lang');
-  return value === 'zh' || value === 'en' ? value : null;
-}
-
 function readStoredLanguage(): Language {
   try { return localStorage.getItem(LANGUAGE_PREFERENCE_KEY) === 'en' ? 'en' : 'zh'; } catch { return 'zh'; }
 }
 
-function getInitialLanguage(): Language { return readUrlLanguage() ?? readStoredLanguage(); }
+function getInitialNavigation() {
+  return readNavigationState(window.location.href, readStoredLanguage());
+}
 
 function hasDismissedOnboarding() {
   try { return localStorage.getItem(ONBOARDING_DISMISSED_KEY) === '1'; } catch { return false; }
 }
 
 export default function App() {
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
-  const [tab, setTab] = useState<string>(() => new URLSearchParams(window.location.search).get('dataset') || 'civic');
+  const [language, setLanguage] = useState<Language>(() => getInitialNavigation().language);
+  const [tab, setTab] = useState<string>(() => getInitialNavigation().dataset);
   const [catalogueOpen, setCatalogueOpen] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(() => !hasDismissedOnboarding());
   const [catalogueQuery, setCatalogueQuery] = useState('');
@@ -628,10 +626,9 @@ export default function App() {
   };
   useEffect(() => {
     const handlePopState = () => {
-      const params = new URLSearchParams(window.location.search);
-      setTab(params.get('dataset') || 'civic');
-      const urlLanguage = readUrlLanguage();
-      if (urlLanguage) setLanguage(urlLanguage);
+      const next = readNavigationState(window.location.href, readStoredLanguage());
+      setTab(next.dataset);
+      setLanguage(next.language);
       scrollToDatasetContent('auto');
     };
     window.addEventListener('popstate', handlePopState);
@@ -923,10 +920,9 @@ export default function App() {
     document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
     document.title = t.title;
     try { localStorage.setItem(LANGUAGE_PREFERENCE_KEY, language); } catch { /* Preference persistence is optional. */ }
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', language);
-    const historyState = window.history.state && typeof window.history.state === 'object' ? window.history.state : {};
-    window.history.replaceState({ ...historyState, dataset: tab, language }, '', url);
+    const state = { dataset: tab, language };
+    const url = buildNavigationUrl(window.location.href, state);
+    window.history.replaceState(buildHistoryState(window.history.state, state), '', url);
   }, [language, t.title, tab]);
 
   const filtered = useMemo(() => filterCivicGroups(groups, filters, language), [groups, filters, language]);
@@ -1036,10 +1032,10 @@ export default function App() {
   const displayedTabs = language === 'zh' ? tabs.map(([id, label]) => [id, zhTabLabels[id] ?? label] as [string, string]) : tabs;
   useEffect(() => {
     if (displayedTabs.some(([id]) => id === tab)) return;
-    setTab('civic');
-    const url = new URL(window.location.href);
-    url.searchParams.delete('dataset');
-    window.history.replaceState({ dataset: 'civic' }, '', url);
+    const state = { dataset: 'civic', language };
+    setTab(state.dataset);
+    const url = buildNavigationUrl(window.location.href, state);
+    window.history.replaceState(buildHistoryState(window.history.state, state), '', url);
   }, [tab, language]);
   const catalogue = useMemo(() => buildDatasetCatalogue(displayedTabs, language, catalogueQuery), [displayedTabs, language, catalogueQuery]);
   const activeDatasetLabel = displayedTabs.find(([id]) => id === tab)?.[1];
@@ -1047,15 +1043,14 @@ export default function App() {
     civic: 'civic-groups', performingArts: 'performing-arts-groups', vaccinationProviders: 'contracted-vaccination-medical-providers', hpvProviders: 'publicly-funded-hpv-vaccination-providers', childMedicalSubsidyProviders: 'child-medical-subsidy-contracted-providers', dentureSubsidyProviders: 'denture-subsidy-medical-providers', disabilityEmploymentResources: 'disability-employment-resource-map', shelteredWorkshops: 'sheltered-workshop-directory', employmentAgencies: 'employment-agency-intermediary-companies', licensedPawnshops: 'licensed-pawnshop-directory', licensedArcades: 'licensed-electronic-game-arcade-operators', licensedSpecialEntertainment: 'licensed-special-entertainment-business-operators', recyclingOrganizations: 'registered-recycling-business-organizations', registeredFactories: 'registered-factory-distribution', enterpriseHeadquarters: 'enterprise-headquarters-distribution', laborUnions: 'registered-labor-unions', infantCare: 'quasi-public-infant-care-centers', infantCareEvaluations: 'infant-care-center-evaluation-results', elderlyWelfare: 'elderly-welfare-institutions', biotechCompanies: 'biotech-company-directory', travelAccommodations: 'taipei-travel-accommodations-zh', publicLiabilityInsurance: 'business-premises-public-liability-insurance', businessChanges: 'business-registration-change-records', companyChanges: 'company-registration-change-records', laborViolations: 'labor-standard-act-violation-records', oshViolations: 'occupational-safety-health-violation-records', genderEqualityViolations: 'gender-equality-work-act-violation-records', consumerDisputeAbsence: 'consumer-dispute-absent-business-operators', nangangCompanies: 'nangang-software-park-companies', dawannanCompanies: 'dawannan-industrial-area-company-directory', animalHospitals: 'registered-animal-hospitals', animalMedicineSellers: 'licensed-animal-medicine-sellers', petBusinessEvaluations: 'specific-pet-business-evaluation-results', veterinarians: 'veterinarian-professional-registry', telepsychology: 'telepsychology-counseling-institutions', publicPneumococcalVaccineProviders: 'public-pneumococcal-vaccine-providers', majorElectricityUsers: 'major-electricity-users', earlyInterventionMedicalProviders: 'early-intervention-medical-providers', generalDentalMedicalInstitutions: 'general-dental-medical-institutions', diabetesSharedCareMedicalInstitutions: 'diabetes-shared-care-medical-institutions', educationVolunteerRecognitionRecords: 'education-volunteer-recognition-records',
   } as Record<string, string>)[tab] ?? tab.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
   const selectDataset = (id: string) => {
+    const current = readNavigationState(window.location.href, language);
+    const state = { dataset: id, language };
     setTab(id);
     setCatalogueOpen(false);
     setCatalogueQuery('');
-    const url = new URL(window.location.href);
-    const currentDataset = url.searchParams.get('dataset') || 'civic';
-    if (currentDataset !== id) {
-      if (id === 'civic') url.searchParams.delete('dataset');
-      else url.searchParams.set('dataset', id);
-      window.history.pushState({ dataset: id, language }, '', url);
+    if (current.dataset !== id) {
+      const url = buildNavigationUrl(window.location.href, state);
+      window.history.pushState(buildHistoryState(window.history.state, state), '', url);
     }
     scrollToDatasetContent();
   };

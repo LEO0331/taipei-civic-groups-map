@@ -60,3 +60,24 @@ test('dataset pages expose a stable active UI family and shared family frame con
   assert.match(families, /recordsAnalysis/);
   assert.match(families, /statisticsAnalysis/);
 });
+
+
+test('Registry Business A modules use the shared registry shell and accessible tabs', async () => {
+  const modules = [
+    '../EmploymentAgencyIntermediaryCompaniesModule.tsx',
+    '../LicensedElectronicGameArcadeOperatorsModule.tsx',
+    '../LicensedSpecialEntertainmentBusinessOperatorsModule.tsx',
+    '../RegisteredFactoryDistributionModule.tsx',
+    '../EnterpriseHeadquartersDistributionModule.tsx',
+    '../BiotechCompanyDirectoryModule.tsx',
+    '../NangangSoftwareParkCompaniesModule.tsx',
+    '../DawannanIndustrialAreaCompaniesModule.tsx',
+  ];
+
+  for (const modulePath of modules) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs">\{(?:views|tabs)\.map/, modulePath);
+  }
+});

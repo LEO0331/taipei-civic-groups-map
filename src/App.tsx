@@ -1079,7 +1079,7 @@ export default function App() {
       </nav>
     </header>
     <main>
-      <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
+      <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} activeDatasetLabel={activeDatasetLabel} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
       {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
       <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />
       <Suspense fallback={<DirectoryModuleLoading language={language} />}>

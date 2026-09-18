@@ -48,6 +48,6 @@ test('physical therapy remains an intentional location-directory family', async 
 test('data trust uses a readable dataset name instead of an implementation slug', async ({ page }) => {
   await page.goto('/?dataset=adultInfluenzaVaccineProviders&lang=zh');
   const summary = page.locator('.data-trust-primary');
-  await expect(summary).toContainText('流感疫苗合約醫療院所（成人）');
+  await expect(summary).toContainText('成人流感疫苗合約醫療院所');
   await expect(summary).not.toContainText('adult-influenza-vaccine-providers');
 });

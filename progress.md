@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: post-demo Registry Social A shell normalization (PR #15).
+- Active feature: post-demo Registry Social B shell normalization (PR #16).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 04 / Registry Social B on PR #16. Seven registry-directory routes (`elderlyWelfare`, `disabilityInstitutionCapacityAndVacancies`, `privateSeniorResidentialLongTermCareInstitutions`, `seniorServiceSiteCourses`, `visuallyImpairedMassageEstablishments`, `socialWelfareFoundations`, `communityPublicChildcareHomes`) now use the shared registry family shell. Dedicated multi-view pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; private senior care and social-welfare foundations opt into the generated-directory family wrapper. `communityPublicChildcareHomes` remains a single combined view and its three non-functional faux tabs were removed rather than turned into misleading tabs. Existing filters, pagination, exports, capacity semantics, maps/external lookups, charts, tables, notices, and domain/data behavior are preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 99 passed, 1 expected skip, 0 failed.
 
 - 2026-09-18: implemented post-demo Batch 03 / Registry Social A on PR #15. Eight registry-directory social-service/public-directory routes (`emergencyAssistanceProviders`, `childYouthWelfareInstitutions`, `disabilityDayServices`, `seniorServices`, `hakkaOrganizations`, `earlyInterventionCommunityServices`, `homeDisabledFamilyPhysicianCareProviders`, `shelteredWorkshops`) now use the shared registry family frame and heading. Existing multi-view routes (`hakkaOrganizations`, `shelteredWorkshops`) migrated to `AccessibleTabs`; the six single-view directories intentionally remain single-view rather than gaining artificial tabs. Existing search/filter behavior, fetch paths, contact/map actions, summaries, tables, pagination, CSV export, charts, notices, and data interpretation are preserved. Source-contract and Playwright coverage were added. Frontend CI passed typecheck, unit tests, production build, and Playwright with 97 passed, 1 expected skip, 0 failed.
 

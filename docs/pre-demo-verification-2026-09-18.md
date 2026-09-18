@@ -106,6 +106,7 @@ Known non-blocking engineering items:
 2. GitHub Actions emits runtime/deprecation notices for older action internals, including Node 20-targeting action metadata being executed on newer GitHub-hosted runners.
 3. Source-date coverage is incomplete: 85 of 117 Data Trust directories currently have no readable source date.
 4. Full legacy-shell migration to the six UI families is intentionally post-demo work.
+5. Playwright currently provides structural, interaction, keyboard, failure-state, and representative mobile-overflow regression coverage; there is not yet a full screenshot/pixel-diff visual-regression baseline for all six UI families.
 
 ## Final manual demo spot-check
 

@@ -227,6 +227,52 @@ test('Registry Culture and Pets dashboards use the shared registry frame and nat
   }
 });
 
+
+test('Registry City Services dashboards use the shared registry frame', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['entrustedPublicAssetOperations', '市有財產委託經營'],
+    ['environmentalPesticideVendors', '環境用藥販賣業者'],
+    ['recyclingOrganizations', '回收業機構名冊'],
+    ['governmentEthicsOffices', '臺北市政府所屬政風機構聯絡資訊'],
+    ['funeralServiceBusinesses', '臺北市殯葬禮儀服務業'],
+    ['hotelHygieneDirectory', '旅館衛生認證紀錄'],
+    ['outCityFuneralBusinesses', '外縣市殯葬服務業者'],
+    ['bottledGasRetailers', '桶裝瓦斯零售商名冊'],
+    ['licensedWasteCookingOilCollectors', '廢食用油回收清除機構'],
+    ['taipeiGovernmentApplicationServices', '台北服務通申辦服務'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'registry-directory');
+  }
+
+  for (const dataset of [
+    'recyclingOrganizations',
+    'funeralServiceBusinesses',
+    'hotelHygieneDirectory',
+    'outCityFuneralBusinesses',
+    'bottledGasRetailers',
+    'licensedWasteCookingOilCollectors',
+    'taipeiGovernmentApplicationServices',
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+  }
+
+  for (const dataset of [
+    'entrustedPublicAssetOperations',
+    'environmentalPesticideVendors',
+    'governmentEthicsOffices',
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+  }
+});
+
 test('labor violations use the records-analysis family', async ({ page }) => {
   await page.goto('/?dataset=laborViolations&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');

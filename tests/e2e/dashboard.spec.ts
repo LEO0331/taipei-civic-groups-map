@@ -2,6 +2,7 @@ import { expect, test, type Page } from '@playwright/test';
 
 const catalogueInput = (page: Page) => page.getByPlaceholder('搜尋資料集或服務').first();
 const main = (page: Page) => page.locator('main');
+const uiFamily = /^(healthcare-standard|healthcare-rich-directory|location-directory|registry-directory|records-analysis|statistics-analysis)$/;
 
 async function openCatalogue(page: Page) {
   const catalogue = page.locator('#dataset-catalogue');
@@ -46,6 +47,7 @@ test('every catalogue module opens in Chinese mode without runtime errors', asyn
       // separately below. Avoid manipulating generic controls here because a lazy-loaded
       // module may replace its Suspense fallback between locator resolution and action.
       await page.waitForTimeout(50);
+      await expect(main(page)).toHaveAttribute('data-active-ui-family', uiFamily);
       await expect(main(page)).not.toContainText('Unable to load the dashboard');
     });
   }

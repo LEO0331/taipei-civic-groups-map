@@ -1255,7 +1255,7 @@ export default function App() {
         notice={language === 'zh' ? '本資料為臺北市桶裝瓦斯零售商公開資料，僅供查詢參考。來源列示價格不代表即時價格、最終交易價格、供應狀態、配送範圍、服務時間、費用或官方推薦；實際交易資訊請向零售商確認。' : 'This public directory is for lookup only. Source-listed prices do not represent real-time or final transaction prices, supply status, delivery coverage, service hours, fees, or official recommendation. Confirm current transaction information with the retailer.'}
       />}
       {tab === 'socialWelfareFoundations' && <GeneratedDatasetDirectoryModule
-        language={language} title={language === 'zh' ? '社會福利基金會名冊' : 'Social Welfare Foundation Directory'}
+        language={language} uiFamily={uiFamilyForDataset(tab)} eyebrow="SOCIAL WELFARE / FOUNDATION DIRECTORY" title={language === 'zh' ? '社會福利基金會名冊' : 'Social Welfare Foundation Directory'}
         subtitle={language === 'zh' ? '行政區與類別為公開來源欄位；不建立精確地圖標記。' : 'Districts and categories are source fields; no exact map markers.'}
         records={socialWelfareFoundationRecords}
         columns={[["sourceSequenceNumber", language === 'zh' ? '序號' : 'ID'], ["foundationName", language === 'zh' ? '名稱' : 'Foundation name'], ["foundationCategory", language === 'zh' ? '類別' : 'Category'], ["districtName", language === 'zh' ? '行政區' : 'District'], ["address", language === 'zh' ? '地址' : 'Address'], ["phone", language === 'zh' ? '電話' : 'Phone'], ["organizationCode", language === 'zh' ? '代碼編號' : 'Organization code'], ["registrationNumber", language === 'zh' ? '立案字號' : 'Registration number'], ["establishedDateRaw", language === 'zh' ? '成立日期' : 'Established date'], ["googleMapsQuery", language === 'zh' ? '地圖查詢' : 'Map lookup']]}

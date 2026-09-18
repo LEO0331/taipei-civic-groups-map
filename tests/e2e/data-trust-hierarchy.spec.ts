@@ -18,6 +18,15 @@ test('current datasets keep the data trust notice compact and neutral by default
   await expect(details).toHaveAttribute('open', '');
   await expect(details).toContainText('個資料目錄有可判讀的來源日期');
   await expect(details).toContainText('搜尋與篩選只在此瀏覽器中處理');
+
+  const summaryBox = await trust.locator('.data-trust-summary').boundingBox();
+  const primaryBox = await primary.boundingBox();
+  const detailsBox = await details.boundingBox();
+  expect(summaryBox).not.toBeNull();
+  expect(primaryBox).not.toBeNull();
+  expect(detailsBox).not.toBeNull();
+  expect(detailsBox!.width).toBeGreaterThan(summaryBox!.width * 0.9);
+  expect(detailsBox!.y).toBeGreaterThanOrEqual(primaryBox!.y + primaryBox!.height);
 });
 
 test('stale datasets remain visibly elevated instead of being visually muted', async ({ page }) => {

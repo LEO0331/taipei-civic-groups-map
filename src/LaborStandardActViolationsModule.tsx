@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import { filterLaborStandardActViolationRecords } from './lib/laborStandardActViolations';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import type {
   LaborPenaltyAmountBucket, LaborStandardActViolationFilters, LaborStandardActViolationManifest,
   LaborStandardActViolationRecord, LaborStandardActViolationSummary, LaborViolationTopicTag, Language,
@@ -169,9 +172,8 @@ export default function LaborStandardActViolationsModule({ summary, manifest, la
     ['directory', zh ? '紀錄清單' : 'Record Directory'], ['notes', zh ? '資料說明' : 'Data Notes'],
   ] as const;
   return <><Filters filters={filters} setFilters={setFilters} summary={summary} language={language} />
-    <section className="workspace"><div className="section-heading"><p>06 / LABOR & COMPLIANCE PUBLIC RECORDS</p><h2>{zh ? '勞基法違規公布紀錄' : 'Labor Standards Act Violation Records'}</h2>
-      <span>{zh ? '整理臺北市政府勞動局公開公布之違反勞動基準法事業單位及事業主資料，依公告日期、處分日期、違反條款、違反內容與罰鍰金額進行查詢與統計。' : 'Explore Taipei Department of Labor public records of businesses and employers published for Labor Standards Act violations by announcement date, disposition date, violated provision, violation content, and penalty amount.'}</span></div>
-      <div className="subtabs">{views.map(([id, title]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{title}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.recordsAnalysis}><DatasetFamilyHeading eyebrow="06 / LABOR & COMPLIANCE PUBLIC RECORDS" title={zh ? '勞基法違規公布紀錄' : 'Labor Standards Act Violation Records'} description={zh ? '整理臺北市政府勞動局公開公布之違反勞動基準法事業單位及事業主資料，依公告日期、處分日期、違反條款、違反內容與罰鍰金額進行查詢與統計。' : 'Explore Taipei Department of Labor public records of businesses and employers published for Labor Standards Act violations by announcement date, disposition date, violated provision, violation content, and penalty amount.'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '勞基法違規資料檢視' : 'Labor violation data views'} idPrefix="labor-violations" />
       <div className="notice subtle">{zh ? '勞基法違規公布紀錄為主管機關公開公布之行政紀錄，僅供資料查詢、統計整理與公共資料探索使用，不代表目前營運狀態、即時違規狀態、雇主整體評價、求職建議、法律意見或裁判結果。資料內容、處分狀態與最新資訊請以臺北市政府勞動局公告、主管機關資料及正式文件為準。' : 'Labor Standards Act violation publication records are administrative records published by the competent authority for lookup, statistical organization, and public-data exploration only. They do not represent current operating status, real-time violation status, overall employer evaluation, job-seeking advice, legal advice, or court outcome. Record content, disposition status, and latest information should be verified with Taipei City Government Department of Labor announcements, competent authorities, and official documents.'}</div>
       {view === 'overview' && <Overview summary={summary} language={language} />}
       {view === 'trends' && <div className="chart-grid"><BarChart title={zh ? '各公告年份紀錄數' : 'Records by announcement year'} data={summary.byAnnouncementYear.map((item) => ({ label: String(item.year), value: item.recordCount }))} /><BarChart title={zh ? '各公告月份紀錄數' : 'Records by announcement month'} data={summary.byAnnouncementMonth.map((item) => ({ label: item.month, value: item.recordCount }))} /><BarChart title={zh ? '各公告年份罰鍰金額合計' : 'Penalty amount by announcement year'} money data={summary.byAnnouncementYear.map((item) => ({ label: String(item.year), value: item.totalPenaltyAmountNtd }))} /></div>}
@@ -183,5 +185,5 @@ export default function LaborStandardActViolationsModule({ summary, manifest, la
         <article><h3>{zh ? '解讀限制' : 'Interpretation limits'}</h3><p>{zh ? '本資料為主管機關公開公布之行政紀錄，僅供資料查詢與統計整理，不代表目前營運狀態、即時違規狀態、雇主整體評價、求職建議、法律意見或裁判結果。負責人姓名為來源資料欄位，本網站僅於來源明細中呈現，不作個人排名或評價。' : 'This data is an administrative publication record from the competent authority for lookup and statistical organization only. It does not represent current operating status, real-time violation status, overall employer evaluation, job-seeking advice, legal advice, or court outcome. Responsible person names are shown only in source details and are not ranked or evaluated.'}</p></article>
         <article><h3>{zh ? '地圖' : 'Map'}</h3><p>{zh ? '此資料集未提供地址或經緯度，因此不製作地圖點位。' : 'This dataset does not provide addresses or coordinates, so no map points are created.'}</p></article>
         <article><h3>{zh ? '資料來源' : 'Source'}</h3><p><a href="https://data.taipei/dataset/detail?id=23630879-4926-4877-a48a-a0ae6cc2f7d5" target="_blank" rel="noreferrer">{zh ? '臺北市政府勞動局違反勞動基準法事業單位及事業主公布總表' : 'Taipei Labor Standards Act Violation Publication Records'} ↗</a></p></article></div>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

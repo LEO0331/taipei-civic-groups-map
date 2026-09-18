@@ -220,7 +220,7 @@ test('Registry Culture and Pets dashboards use the shared registry frame and nat
   ] as const) {
     await page.goto(`/?dataset=${dataset}&lang=zh`);
     const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
-    await expect(family.getByRole('heading', { name: heading })).toBeVisible();
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
     await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
     await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
     await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'registry-directory');

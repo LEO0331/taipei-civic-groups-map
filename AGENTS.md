@@ -4,10 +4,10 @@ This is a Vite + React + TypeScript public-data directory. Keep data presentatio
 
 ## Startup Workflow
 
-1. Read `README.md`, this file, `feature_list.json`, and `progress.md`.
+1. Read `README.md`, this file, `feature_list.json`, `progress.md`, and the latest release/verification note under `docs/` (currently `docs/pre-demo-verification-2026-09-18.md`).
 2. Inspect `git status --short` and preserve unrelated user changes.
 3. Select one active feature or maintenance task; update its state only when there is evidence.
-4. Run the focused checks first, then the full verification set before claiming completion.
+4. Run focused checks first, then the full verification set before claiming completion. For UI/navigation/release work, include Playwright.
 
 The repository must remain clean and restartable: the next agent should be able to read the state files, inspect the working tree, and run the documented checks without guessing the prior session's intent.
 
@@ -30,12 +30,18 @@ npm run build
 git diff --check
 ```
 
-On POSIX shells, `./init.sh` runs the first three checks. On Windows PowerShell, run the commands above directly.
+For UI, navigation, accessibility, or release-facing changes also run:
+
+```bash
+npm run test:e2e
+```
+
+On POSIX shells, `./init.sh` runs typecheck, unit tests, and build. On Windows PowerShell, run the commands above directly. The GitHub Pages release workflow additionally performs a fresh data fetch/conversion and desktop/mobile Playwright before deployment.
 
 ## Definition of Done
 
-A task is complete only when the requested behavior is implemented, relevant verification has passed, evidence and remaining risks are recorded in `progress.md`, and `feature_list.json` reflects the current status.
+A task is complete only when the requested behavior is implemented, relevant verification has passed, evidence and remaining risks are recorded in `progress.md`, and `feature_list.json` reflects the current status. Release-level verification should also be recorded under `docs/`.
 
 ## End of Session
 
-Update `progress.md`, `feature_list.json`, and (for incomplete or handoff work) `session-handoff.md` with files changed, verification evidence, risks, and the next concrete action.
+Update `progress.md`, `feature_list.json`, and (for incomplete or handoff work) `session-handoff.md` with files changed, verification evidence, risks, and the next concrete action. The current pre-demo release baseline is documented in `docs/pre-demo-verification-2026-09-18.md`.

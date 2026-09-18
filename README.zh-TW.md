@@ -6,11 +6,17 @@
 
 ## 提供的功能
 
-- 以主題分類與搜尋方式瀏覽 116 個可見模組，並由 117 個靜態資料目錄提供資料。
+- 以主題分類與搜尋方式瀏覽 156 個已分類的路由／檢視；Data Trust 追蹤其中 117 個靜態資料目錄。
 - 支援繁體中文與英文介面。
 - 依資料集提供篩選、來源欄位明細、CSV 匯出，以及來源允許時的外部地址查詢。
-- 在建置時產生資料可信度資訊：可讀取的來源日期、明確標示的未知日期，以及本機資料與隱私提醒。
-- 可部署至 GitHub Pages 的靜態網站。
+- 在建置時產生 Data Trust 資訊：可讀取的來源日期、明確標示的未知日期、沿用快照警示，以及精簡的本機資料與隱私提醒。
+- 支援可分享的資料集／語言 URL、持久化 onboarding 狀態、鍵盤可操作的 tabs、路由層級 lazy loading，以及 GitHub Pages 靜態部署。
+
+## 目前版本狀態
+
+A–H 修正與 polish 系列已於 **2026-09-18** 完成 pre-demo verification，驗證 commit 為 `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`。對應的 GitHub Pages workflow 已成功完成最新資料擷取／轉換、typecheck、unit tests、production build，以及桌面與手機 Playwright；結果為 **91 passed / 1 個預期 skip / 0 failed**。
+
+該次部署的 release evidence 顯示：Data Trust 追蹤 **117** 個靜態資料目錄，其中 **32** 個有可讀取來源日期、**85** 個日期未知，且 **0** 個沿用舊快照 fallback。完整紀錄請參閱 [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md)。
 
 ## 資料目錄
 
@@ -40,7 +46,7 @@
 
 資料目錄依公共服務主題分類：健康與醫療、社福／家庭／照顧、就業／產業／商業、教育／文化／旅遊、城市服務／環境／生活、動物與寵物，以及探索／比較／說明。
 
-目錄中繼資料位於 [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts)。新增資料集時，請審慎指定一個主要分類並提供實用搜尋詞；未分類的資料集會被拒絕，而不會悄悄從目錄中消失。
+目錄中繼資料位於 [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts)。所有目錄路由／檢視也會透過 [`src/lib/datasetUiFamily.ts`](src/lib/datasetUiFamily.ts) 對應到六個 UI family 之一：`healthcare-standard`、`healthcare-rich-directory`、`location-directory`、`registry-directory`、`records-analysis`、`statistics-analysis`。新增資料集時，除了主要分類與搜尋詞，也應明確確認其 UI family 或適用的分類預設。
 
 ### 臺北市殯葬禮儀服務業
 
@@ -68,9 +74,10 @@ npm run dev
 ## 常用指令
 
 ```bash
-# 型別檢查、測試與正式建置
+# 型別檢查、unit tests、瀏覽器流程與正式建置
 npm run typecheck
 npm test
+npm run test:e2e
 npm run build
 
 # 僅執行介面無障礙契約測試
@@ -104,16 +111,17 @@ npm run data:convert
 
 ## 驗證
 
-建立 pull request 或部署前，請執行：
+建立 pull request 前，先執行與變更相關的 focused checks，再執行：
 
 ```bash
 npm run typecheck
 npm test
+npm run test:e2e
 npm run build
 git diff --check
 ```
 
-GitHub Pages 工作流程也會重複執行轉換、型別檢查、測試與建置，並保留可信度清單、版本摘要與轉換報告作為部署證據。
+GitHub Pages 工作流程會重新擷取／轉換資料，執行 typecheck、unit tests、桌面／手機 Playwright、production build，接著上傳 release evidence 並部署。可信度清單、版本摘要與轉換報告會保留為部署證據。
 
 ## 架構圖
 
@@ -166,11 +174,12 @@ sequenceDiagram
 ## 專案結構
 
 ```text
-src/                 React 模組、目錄中繼資料與共用工具
+src/                 React 模組、目錄／UI family 中繼資料與共用工具
 scripts/             來源擷取、轉換與建置期報告
 public/data/         產生的本機靜態資料集
-.github/workflows/   GitHub Pages 部署工作流程
-doc/                 產品與設計決策文件
+.github/workflows/   Frontend CI 與 GitHub Pages 部署工作流程
+doc/                 長篇產品與設計決策文件
+docs/                release、verification 與操作紀錄
 ```
 
 ## 部署
@@ -179,6 +188,6 @@ doc/                 產品與設計決策文件
 
 ## 重要限制
 
-本網站是公共紀錄的探索工具，不是即時且具權威性的服務名錄。來源日期可能缺漏或已過期，未知日期會刻意揭露。若有地址資料，僅用於可選擇的外部地圖查詢；搜尋與篩選都留在瀏覽器內，但開啟外部地圖時，選取的地址會提供給該地圖服務商。
+本網站是公共紀錄的探索工具，不是即時且具權威性的服務名錄。來源日期可能缺漏或已過期，未知日期會刻意揭露。若有地址資料，僅用於可選擇的外部地圖查詢；搜尋與篩選都留在瀏覽器內，但開啟外部地圖時，選取的地址會提供給該地圖服務商。正式版目前的主要 JavaScript chunk 約為 549.5 kB minified / 161.4 kB gzip，因此 Vite 仍會顯示 >500 kB 的提示；資料集模組本身已採路由層級 lazy loading。
 
 產品建議與持續風險請參閱[《臺北公共資料儀表板－設計決策與演進方向》](doc/臺北公共資料儀表板－設計決策與演進方向.md)。

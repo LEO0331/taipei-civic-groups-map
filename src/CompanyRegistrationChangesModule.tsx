@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS } from './lib/civicGroups';
 import {
@@ -94,8 +97,8 @@ export default function CompanyRegistrationChangesModule({ records, summary, bus
     }, () => setNearbyError(zh ? '無法取得目前位置。' : 'Could not get current location.'));
   };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['map', zh ? '地圖' : 'Map'], ['types', zh ? '異動類型' : 'Change Types'], ['districts', zh ? '行政區分布' : 'District Distribution'], ['trends', zh ? '時間趨勢' : 'Time Trends'], ['directory', zh ? '清冊' : 'Directory'], ['compare', zh ? '公司與商業異動比較' : 'Company vs Business Changes'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
-  return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} /><section className="workspace"><div className="section-heading"><p>07 / COMPANY REGISTRATION CHANGE RECORDS</p><h2>{zh ? '公司設立、變更及解散登記異動資料' : 'Company Registration Change Records'}</h2><span>{zh ? '查詢臺北市核准公司設立、變更及解散登記異動資料，包含統一編號、公司名稱、公司地址、核准日期、核准變更日期、核准解散日期與來源座標。' : 'Explore Taipei approved company establishment, modification, and dissolution registration change records, including unified business number, company name, company address, approval date, modification approval date, dissolution approval date, and source coordinates.'}</span></div>
-    <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+  return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} /><DatasetFamilyFrame family={UI_FAMILIES.recordsAnalysis}><DatasetFamilyHeading eyebrow="07 / COMPANY REGISTRATION CHANGE RECORDS" title={zh ? '公司設立、變更及解散登記異動資料' : 'Company Registration Change Records'} description={zh ? '查詢臺北市核准公司設立、變更及解散登記異動資料，包含統一編號、公司名稱、公司地址、核准日期、核准變更日期、核准解散日期與來源座標。' : 'Explore Taipei approved company establishment, modification, and dissolution registration change records, including unified business number, company name, company address, approval date, modification approval date, dissolution approval date, and source coordinates.'} />
+    <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '公司登記異動資料檢視' : 'Company registration change data views'} idPrefix="company-registration-changes" />
     <div className="section-heading inline"><div><p>{zh ? '篩選結果' : 'Filtered records'}</p></div><strong>{filtered.length.toLocaleString()} <span>{zh ? '筆' : 'records'}</span></strong></div>
     <button className="text-button" onClick={findNearby}>{zh ? '找附近公司異動紀錄' : 'Find nearby company change records'}</button>
     <div className="notice subtle">{zh ? '附近功能僅依公開資料座標計算距離，不代表公司目前營業、目前解散、信用狀態、商業風險、投資價值或法規遵循狀態。' : 'The nearby feature only calculates distance from public-data coordinates. It does not mean the company is currently operating, currently dissolved, creditworthy, risky, investable, or legally compliant.'}</div>
@@ -109,5 +112,5 @@ export default function CompanyRegistrationChangesModule({ records, summary, bus
     {view === 'directory' && <Directory records={filtered} language={language} />}
     {view === 'compare' && <><div className="notice subtle">{zh ? '公司異動資料與商業異動資料性質不同。公司登記與商業登記是不同登記類型；公司設立、變更、解散不等同於商業設立、變更、歇業，不應合併解讀為同一種營業狀態。' : 'Company change records and business change records have different meanings. Company registration and business registration are different registration types. Company establishment, modification, and dissolution are not the same as business establishment, modification, and closure, and should not be merged as the same operating status.'}</div>{businessSummary && <div className="chart-grid"><BarChart title={zh ? '公司異動與商業異動比較' : 'Company Changes vs Business Changes'} data={[{ label: zh ? '公司異動' : 'Company changes', value: activeSummary.totalRecords }, { label: zh ? '商業異動' : 'Business changes', value: businessSummary.totalRecords }]} /><BarChart title={zh ? '有效座標比較' : 'Valid coordinate comparison'} data={[{ label: zh ? '公司異動' : 'Company changes', value: activeSummary.recordsWithValidCoordinates }, { label: zh ? '商業異動' : 'Business changes', value: businessSummary.recordsWithValidCoordinates }]} /></div>}</>}
     {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料來源與限制' : 'Source and limits'}</h3><p>{notice(zh)}</p></article><article><h3>{zh ? '處理方式' : 'Processing'}</h3><p>{zh ? '來源分為設立、變更與解散等CSV資源。本網站依來源檔案判斷異動類型，依來源座標顯示點位，並依地址解析行政區與道路名稱。' : 'Source resources are separated into establishment, modification, and dissolution CSV files. This site determines the change type from the source resource, displays source-coordinate points, and parses addresses into district and road name.'}</p></article></div>}
-  </section></>;
+  </DatasetFamilyFrame></>;
 }

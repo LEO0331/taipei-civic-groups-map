@@ -133,6 +133,43 @@ test('Registry Social A dashboards use the shared registry frame', async ({ page
   }
 });
 
+
+test('Registry Social B dashboards use the shared registry frame', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['elderlyWelfare', '老人福利機構名冊'],
+    ['disabilityInstitutionCapacityAndVacancies', '身心障礙福利機構床位與服務容量'],
+    ['privateSeniorResidentialLongTermCareInstitutions', '私立老人安養暨長期照顧機構'],
+    ['seniorServiceSiteCourses', '銀髮族據點課程資訊'],
+    ['visuallyImpairedMassageEstablishments', '視障按摩院所名冊'],
+    ['socialWelfareFoundations', '社會福利基金會名冊'],
+    ['communityPublicChildcareHomes', '社區公共托育家園'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.getByRole('heading', { name: heading })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'registry-directory');
+  }
+
+  for (const dataset of [
+    'elderlyWelfare',
+    'disabilityInstitutionCapacityAndVacancies',
+    'privateSeniorResidentialLongTermCareInstitutions',
+    'seniorServiceSiteCourses',
+    'visuallyImpairedMassageEstablishments',
+    'socialWelfareFoundations',
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+  }
+
+  await page.goto('/?dataset=communityPublicChildcareHomes&lang=zh');
+  const childcare = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+  await expect(childcare.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+  await expect(childcare.getByRole('table')).toBeVisible();
+});
+
 test('labor violations use the records-analysis family', async ({ page }) => {
   await page.goto('/?dataset=laborViolations&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');

@@ -190,6 +190,37 @@
       ],
       "status": "done",
       "evidence": "2026-09-18: main commit 9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5 deployed successfully in workflow run 35298325891. Playwright: 91 passed, 1 expected skip, 0 failed. Data Trust: 117 directories, 32 dated, 85 unknown-date, 0 reused-snapshot fallbacks. Full record: docs/pre-demo-verification-2026-09-18.md."
+    },
+    {
+      "id": "post-demo-ui-family-normalization",
+      "name": "Post-demo legacy UI-family normalization",
+      "description": "Incrementally migrate remaining legacy shells onto the six UI-family primitives while preserving dataset-specific parsing, calculations, filters, charts, and tables.",
+      "dependencies": [
+        "maintenance-frontend",
+        "pre-demo-verification-2026-09-18"
+      ],
+      "status": "ready",
+      "evidence": "Batch H classified all 156 catalogue routes/views and migrated representative registry, records-analysis, and statistics-analysis modules. Full inventory: docs/ui-family-classification.md."
+    },
+    {
+      "id": "post-demo-visual-regression",
+      "name": "Post-demo visual regression baselines",
+      "description": "Add deterministic screenshot/pixel-diff coverage for representative states in all six UI families on desktop and mobile.",
+      "dependencies": [
+        "pre-demo-verification-2026-09-18"
+      ],
+      "status": "ready",
+      "evidence": "Current Playwright covers workflows, accessibility, failure states, family contracts, and representative mobile overflow, but not a complete visual-diff baseline."
+    },
+    {
+      "id": "post-demo-performance-ci-maintenance",
+      "name": "Post-demo bundle and CI maintenance",
+      "description": "Reduce the remaining main-bundle advisory and refresh GitHub Actions/runtime metadata without changing public-data semantics.",
+      "dependencies": [
+        "pre-demo-verification-2026-09-18"
+      ],
+      "status": "ready",
+      "evidence": "Pre-demo production main chunk is about 549.5 kB minified / 161.4 kB gzip; GitHub Actions also emits runtime/deprecation notices for older action internals."
     }
   ]
 }

@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: post-demo Records Compliance shell normalization (PR #20).
+- Active feature: post-demo Records General shell normalization (PR #21).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 09 / Records General on PR #21. Eight `records-analysis` routes (`publicLiabilityInsurance`, `businessChanges`, `companyChanges`, `procurement`, `educationVolunteerRecognitionRecords`, `consumerDisputeAbsence`, `withdrawnIllegalHotelEnforcementRecords`, `lodgingBusinessPenaltyRecords`) now use the shared records-analysis family shell. Six genuine multi-view pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; education-volunteer recognition and lodging-penalty records remain genuine single-view pages without artificial tabs. Existing filters, geolocation/nearby behavior, maps, trends, comparisons, summaries, pagination, CSV exports, source notices, penalty/amount semantics, tables, and domain/data interpretation are preserved. The first E2E run exceeded the 45-second limit because the new regression revisited routes in separate loops; it was consolidated to one pass per route without reducing assertions. Frontend CI then passed typecheck, unit tests, production build, and Playwright with 109 passed, 1 expected skip, 0 failed.
 
 - 2026-09-18: implemented post-demo Batch 08 / Records Compliance on PR #20. Three `records-analysis` routes (`laborPensionActViolations`, `oshViolations`, `genderEqualityViolations`) now follow the Labor Standards Act reference shell. OSH and gender-equality pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; the Labor Pension page is a genuine single-view records page and uses the shared frame/heading without artificial tabs. Existing filters, summaries, timelines, article/category/fine analysis, comparisons, record tables, default inclusion/exclusion rules, notices, and domain/data interpretation are preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 107 passed, 1 expected skip, 0 failed.
 

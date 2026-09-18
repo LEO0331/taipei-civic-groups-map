@@ -266,3 +266,32 @@ test('Records Compliance modules use the shared records-analysis shell and only 
   assert.doesNotMatch(pension, /<AccessibleTabs /);
   assert.doesNotMatch(pension, /<div className="subtabs"/);
 });
+
+
+test('Records General modules use the shared records-analysis shell and keep single-view pages tab-free', async () => {
+  for (const modulePath of [
+    '../BusinessPremisesPublicLiabilityInsuranceModule.tsx',
+    '../BusinessRegistrationChangesModule.tsx',
+    '../CompanyRegistrationChangesModule.tsx',
+    '../MetroProcurementModule.tsx',
+    '../ConsumerDisputeAbsentBusinessOperatorsModule.tsx',
+    '../WithdrawnIllegalHotelEnforcementRecordsModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.recordsAnalysis\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  for (const modulePath of [
+    '../EducationVolunteerRecognitionRecordsModule.tsx',
+    '../LodgingBusinessPenaltyRecordsModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.recordsAnalysis\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.doesNotMatch(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+});

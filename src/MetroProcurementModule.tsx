@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { buildMetroProcurementSummary, filterMetroProcurement } from './lib/metroProcurement';
 import type {
   Language, MetroProcurementFilters, MetroProcurementScheduleRecord, MetroProcurementScheduleSummary,
@@ -187,9 +190,8 @@ export default function MetroProcurementModule({ records, summary, language }: {
     ['notes', zh ? '資料說明' : 'Data Notes'],
   ] as const;
   return <><ProcurementFilters filters={filters} setFilters={setFilters} records={records} language={language} />
-    <section className="workspace"><div className="section-heading"><p>03 / METRO PROCUREMENT</p><h2>{zh ? '捷運採購時程' : 'Metro Procurement Schedule'}</h2>
-      <span>{zh ? '探索臺北捷運公司採購案件預定招標時程，依月份、標的分類、招標方式與案件關鍵字整理。' : 'Explore Taipei Metro planned procurement tender schedules by month, subject category, tender method, and case keywords.'}</span></div>
-      <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.recordsAnalysis}><DatasetFamilyHeading eyebrow="03 / METRO PROCUREMENT" title={zh ? '捷運採購時程' : 'Metro Procurement Schedule'} description={zh ? '探索臺北捷運公司採購案件預定招標時程，依月份、標的分類、招標方式與案件關鍵字整理。' : 'Explore Taipei Metro planned procurement tender schedules by month, subject category, tender method, and case keywords.'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '捷運採購資料檢視' : 'Metro procurement data views'} idPrefix="metro-procurement" />
       <div className="notice">{zh ? '臺北捷運公司採購案件預定招標時程資訊僅為預定排程，實際公告時間、招標文件、資格條件與最新狀態仍應以政府電子採購網及主管機關正式公告為準。' : 'Taipei Metro procurement schedule data is a planned schedule only. Actual announcement timing, tender documents, eligibility requirements, and latest status should be verified through the Government e-Procurement System and official authority notices.'}</div>
       {activeSummary.recordsWithNumericBudgetAmount > 0 && <div className="notice subtle">{zh ? '僅部分資料列含可解析之數字預算金額；其餘資料列保留原始欄位內容。' : 'Only some records contain parseable numeric budget amounts; other records preserve the raw source field content.'}</div>}
       {view === 'overview' && <Overview summary={activeSummary} records={filtered} language={language} />}
@@ -199,5 +201,5 @@ export default function MetroProcurementModule({ records, summary, language }: {
       {view === 'notes' && <div className="notes-grid procurement-notes"><article><h3>{zh ? '無地圖資料' : 'No map data'}</h3><p>{zh ? '捷運採購時程資料未提供地理座標或行政區欄位，因此不顯示為地圖點位。請使用時程總覽與案件清單查詢。' : 'Metro procurement schedule data does not provide coordinates or district fields, so it is not displayed as map points. Please use the schedule overview and case directory.'}</p></article>
         <article><h3>{zh ? '來源欄位說明' : 'Source schema note'}</h3><p>{zh ? '資料來源欄位名稱可能與實際內容不完全一致；例如樣本資料中的「預算金額」欄位包含公開招標、公開取得報價單或企劃書等文字。系統會保留原始欄位，並在可判斷時另行衍生招標方式。' : 'Source column names may not always match the observed content. For example, the sample file’s “budget amount” column contains text such as open tender and public quotation/proposal. The system preserves the raw source field and derives tender method where possible.'}</p></article>
         <article><h3>{zh ? '資料來源' : 'Source'}</h3><p><a href="https://data.taipei/dataset/detail?id=f4fd7f03-9bf6-41de-a003-02c437596570" target="_blank" rel="noreferrer">{zh ? '臺北捷運公司採購案件預定招標時程資訊' : 'Taipei Metro Planned Procurement Tender Schedule'} ↗</a></p></article></div>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

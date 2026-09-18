@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS } from './lib/civicGroups';
 import {
@@ -91,8 +94,8 @@ export default function BusinessRegistrationChangesModule({ records, summary, la
     }, () => setNearbyError(zh ? '無法取得目前位置。' : 'Could not get current location.'));
   };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['map', zh ? '地圖' : 'Map'], ['types', zh ? '異動類型' : 'Types'], ['districts', zh ? '行政區' : 'Districts'], ['trends', zh ? '月份趨勢' : 'Trends'], ['directory', zh ? '清冊' : 'Directory'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
-  return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} /><section className="workspace"><div className="section-heading"><p>06 / BUSINESS REGISTRATION CHANGE RECORDS</p><h2>{zh ? '商業設立、變更及歇業登記異動資料' : 'Business Registration Change Records'}</h2><span>{zh ? '查詢臺北市商業設立、變更及歇業登記異動公開資料，包含統一編號、商業名稱、地址、異動日期與來源座標。' : 'Explore Taipei business establishment, modification, and closure registration change records, including business number, name, address, event date, and source coordinates.'}</span></div>
-    <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+  return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} /><DatasetFamilyFrame family={UI_FAMILIES.recordsAnalysis}><DatasetFamilyHeading eyebrow="06 / BUSINESS REGISTRATION CHANGE RECORDS" title={zh ? '商業設立、變更及歇業登記異動資料' : 'Business Registration Change Records'} description={zh ? '查詢臺北市商業設立、變更及歇業登記異動公開資料，包含統一編號、商業名稱、地址、異動日期與來源座標。' : 'Explore Taipei business establishment, modification, and closure registration change records, including business number, name, address, event date, and source coordinates.'} />
+    <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '商業登記異動資料檢視' : 'Business registration change data views'} idPrefix="business-registration-changes" />
     <div className="section-heading inline"><div><p>{zh ? '篩選結果' : 'Filtered records'}</p></div><strong>{filtered.length.toLocaleString()} <span>{zh ? '筆' : 'records'}</span></strong></div>
     <button className="text-button" onClick={findNearby}>{zh ? '使用目前位置找附近異動紀錄' : 'Find nearby change records'}</button>
     <div className="notice subtle">{zh ? '附近功能僅依公開資料座標計算距離，不代表商業目前營業、信用、法規遵循、投資價值或推薦。' : 'The nearby feature only calculates distance from public-data coordinates. It does not mean the business is currently operating, creditworthy, legally compliant, investable, or recommended.'}</div>
@@ -105,5 +108,5 @@ export default function BusinessRegistrationChangesModule({ records, summary, la
     {view === 'trends' && <><div className="notice subtle">{zh ? '月份趨勢僅依來源異動日期整理，不代表商業景氣、投資判斷或未來趨勢。' : 'Monthly trends only organize source event dates. They are not business-cycle, investment, or future-trend analysis.'}</div><div className="chart-grid"><BarChart title={zh ? '月份異動總數' : 'Monthly change records'} data={activeSummary.byMonth.map((item) => ({ label: item.monthKey, value: item.totalCount }))} /><BarChart title={zh ? '月份設立數' : 'Monthly establishments'} data={activeSummary.byMonth.map((item) => ({ label: item.monthKey, value: item.establishmentCount }))} /><BarChart title={zh ? '月份變更數' : 'Monthly modifications'} data={activeSummary.byMonth.map((item) => ({ label: item.monthKey, value: item.modificationCount }))} /><BarChart title={zh ? '月份歇業數' : 'Monthly closures'} data={activeSummary.byMonth.map((item) => ({ label: item.monthKey, value: item.closureCount }))} /></div></>}
     {view === 'directory' && <Directory records={filtered} language={language} />}
     {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料來源與限制' : 'Source and limits'}</h3><p>{notice(zh)}</p></article><article><h3>{zh ? '處理方式' : 'Processing'}</h3><p>{zh ? '轉換保留統一編號文字、商業名稱、商業地址、設立／變更／歇業日期與來源經緯度；地址只解析臺北市行政區與道路名稱；有效座標直接以來源座標呈現，未做地理編碼。' : 'Conversion preserves business numbers as text, business names, addresses, establishment/modification/closure dates, and source longitude/latitude. Addresses are parsed only for Taipei district and road names. Valid coordinates are displayed from source data without geocoding.'}</p></article></div>}
-  </section></>;
+  </DatasetFamilyFrame></>;
 }

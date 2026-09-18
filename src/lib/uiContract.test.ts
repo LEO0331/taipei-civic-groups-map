@@ -295,3 +295,28 @@ test('Records General modules use the shared records-analysis shell and keep sin
     assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
   }
 });
+
+
+test('Statistics Evaluations modules use the shared statistics-analysis shell and keep the single-view page tab-free', async () => {
+  for (const modulePath of [
+    '../CosmeticMedicineSupervision2024Module.tsx',
+    '../SeniorCareInstitutionEvaluationsModule.tsx',
+    '../InfantCareCenterEvaluationResultsModule.tsx',
+    '../SpecificPetBusinessEvaluationResultsModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.statisticsAnalysis\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  const domestic = await readSource('../DomesticEmploymentAgencyEvaluationsModule.tsx');
+  assert.match(domestic, /<DatasetFamilyFrame family=\{UI_FAMILIES\.statisticsAnalysis\}>/);
+  assert.match(domestic, /<DatasetFamilyHeading/);
+  assert.doesNotMatch(domestic, /<AccessibleTabs /);
+  assert.doesNotMatch(domestic, /<div className="subtabs"/);
+
+  const app = await readSource('../App.tsx');
+  assert.match(app, /tab === 'kindergartenEvaluationPass'[\s\S]*uiFamily=\{uiFamilyForDataset\(tab\)\}/);
+});

@@ -333,6 +333,31 @@ test('Records General dashboards use the shared records-analysis frame', async (
   }
 });
 
+
+test('Statistics Evaluations dashboards use the shared statistics-analysis frame', async ({ page }) => {
+  for (const [dataset, heading, hasTabs] of [
+    ['cosmeticMedicineSupervision2024', '美容醫學業務醫療機構 113 年督考統計', true],
+    ['seniorCareInstitutionEvaluations', '老人安養暨長期照顧機構評鑑', true],
+    ['infantCareEvaluations', '托嬰中心評鑑結果', true],
+    ['domesticEmploymentAgencyEvaluations', '私立就業服務機構評鑑成績', false],
+    ['kindergartenEvaluationPass', '公私立幼兒園基礎評鑑通過名單', true],
+    ['petBusinessEvaluations', '特定寵物業評鑑成果', true],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="statistics-analysis"]');
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'statistics-analysis');
+
+    if (hasTabs) {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+      await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+    } else {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+      await expect(family.getByRole('table')).toBeVisible();
+    }
+  }
+});
+
 test('alternative-service analysis uses the statistics-analysis family', async ({ page }) => {
   await page.goto('/?dataset=alternativeServiceReserveStatistics&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="statistics-analysis"]');

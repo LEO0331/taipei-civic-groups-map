@@ -34,7 +34,7 @@ test('unknown-date datasets use caution hierarchy and keep the readable localize
 
   const trust = page.locator('.data-trust');
   await expect(trust).toHaveAttribute('data-attention', 'caution');
-  await expect(trust.locator('.data-trust-primary')).toContainText('流感疫苗合約醫療院所（成人）');
+  await expect(trust.locator('.data-trust-primary')).toContainText('成人流感疫苗合約醫療院所');
   await expect(trust.locator('.data-trust-status.unknown')).toContainText('日期未知');
   await expect(trust.locator('.data-trust-primary')).not.toContainText('adult-influenza-vaccine-providers');
 });

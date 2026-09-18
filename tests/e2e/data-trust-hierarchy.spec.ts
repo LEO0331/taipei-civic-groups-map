@@ -46,3 +46,29 @@ test('data trust dataset names follow the selected interface language', async ({
   await expect(primary).toContainText('Taipei Physical Therapy Clinics');
   await expect(primary).not.toContainText('臺北市物理治療所');
 });
+
+
+test('failed official refreshes remain prominent even when the reusable snapshot has no source date', async ({ page }) => {
+  await page.route('**/data/data-trust-manifest.json', (route) => route.fulfill({
+    status: 200,
+    contentType: 'application/json',
+    body: JSON.stringify({
+      datasetDirectoryCount: 1,
+      datedDatasetCount: 0,
+      fetchFallbackDatasetCount: 1,
+      entries: [{
+        id: 'adult-influenza-vaccine-providers',
+        fetchStatus: 'reused_snapshot',
+        fetchFailedAt: '2026-09-18T00:00:00Z',
+      }],
+    }),
+  }));
+
+  await page.goto('/?dataset=adultInfluenzaVaccineProviders&lang=zh');
+
+  const trust = page.locator('.data-trust');
+  await expect(trust).toHaveAttribute('data-attention', 'warning');
+  await expect(trust.locator('.data-trust-status.refresh-failed')).toContainText('官方刷新失敗');
+  await trust.locator('.data-trust-details summary').click();
+  await expect(trust.locator('.data-trust-refresh-warning')).toContainText('顯示最近成功快照');
+});

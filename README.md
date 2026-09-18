@@ -16,7 +16,7 @@ A bilingual Vite + React dashboard for browsing selected Taipei public-record da
 
 The merged A–H remediation/polish series was pre-demo verified on **2026-09-18** at commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`. The matching GitHub Pages workflow completed successfully with fresh data fetch/conversion, typecheck, unit tests, production build, and **91 passed / 1 expected skip / 0 failed** Playwright tests across desktop and mobile.
 
-Release evidence from that deployment reports **117** Data Trust directories, **32** with a readable source date, **85** with an unknown source date, and **0** reused-snapshot fallbacks. See [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md) for the complete verification record.
+Release evidence from that deployment reports **117** Data Trust directories, **32** with a readable source date, **85** with an unknown source date, and **0** reused-snapshot fallbacks. See [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md) for the complete verification record and [UI family classification](docs/ui-family-classification.md) for the post-demo migration inventory.
 
 ## Data catalogue
 

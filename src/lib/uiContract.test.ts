@@ -13,12 +13,15 @@ test('the application keeps the primary directory controls labelled, searchable,
   assert.match(source, /DirectoryModuleLoading/);
 });
 
-test('the data-trust disclosure remains semantic and announces fetched status', async () => {
+test('the data-trust disclosure stays semantic while keeping detail secondary', async () => {
   const source = await readSource('../DataTrustPanel.tsx');
-  assert.match(source, /<aside className="data-trust" aria-label=/);
-  assert.match(source, /<details>/);
-  assert.match(source, /<summary>/);
-  assert.match(source, /role="status" aria-live="polite"/);
+  const app = await readSource('../App.tsx');
+  assert.match(source, /<aside className="data-trust" data-attention=\{attention\} aria-label=/);
+  assert.match(source, /className="data-trust-primary" role="status" aria-live="polite"/);
+  assert.match(source, /<details className="data-trust-details">/);
+  assert.match(source, /<summary>\{zh \? '詳細資訊' : 'Details'\}<\/summary>/);
+  assert.match(source, /attentionLevel/);
+  assert.match(app, /activeDatasetLabel=\{activeDatasetLabel\}/);
 });
 
 test('the shared stylesheet retains a visible keyboard focus treatment', async () => {

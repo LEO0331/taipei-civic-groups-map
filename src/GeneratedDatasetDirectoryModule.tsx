@@ -1,5 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import AccessibleTabs, { AccessibleTabPanel } from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import type { UiFamily } from './lib/uiFamilies';
 import {
   detectLocationDimension,
   formatLocationValue,
@@ -12,6 +14,12 @@ import {
 type RecordValue = string | number | boolean | null | undefined | Record<string, unknown> | unknown[];
 type DatasetRecord = Record<string, RecordValue>;
 type View = 'overview' | 'districts' | 'directory' | 'quality' | 'notes';
+
+function GeneratedDirectoryFrame({ uiFamily, children }: { uiFamily?: UiFamily; children: ReactNode }) {
+  return uiFamily
+    ? <DatasetFamilyFrame family={uiFamily}>{children}</DatasetFamilyFrame>
+    : <section className="workspace">{children}</section>;
+}
 
 const zhTitles: Record<string, string> = {
   'Taipei Ophthalmology Institutions': '臺北市眼科醫療機構',
@@ -71,7 +79,7 @@ function BarChart({ title, data }: { title: string; data: Array<{ label: string;
 }
 
 export default function GeneratedDatasetDirectoryModule({
-  title, subtitle, records, language, columns, notice, locationDimension,
+  title, subtitle, records, language, columns, notice, locationDimension, uiFamily, eyebrow,
 }: {
   title: string;
   subtitle: string;
@@ -80,6 +88,8 @@ export default function GeneratedDatasetDirectoryModule({
   columns: Array<[string, string]>;
   notice: string;
   locationDimension?: DirectoryLocationDimension | null;
+  uiFamily?: UiFamily;
+  eyebrow?: string;
 }) {
   const [view, setView] = useState<View>('overview');
   const [search, setSearch] = useState('');
@@ -139,8 +149,10 @@ export default function GeneratedDatasetDirectoryModule({
   ];
   const locationChartTitle = zh ? `各${locationName}資料筆數` : `Records by ${locationName.toLocaleLowerCase()}`;
 
-  return <section className="workspace">
-    <div className="section-heading"><p>{zh ? '公開資料名冊' : 'PUBLIC RECORD DIRECTORY'}</p><h2>{displayTitle}</h2><span>{displaySubtitle}</span></div>
+  return <GeneratedDirectoryFrame uiFamily={uiFamily}>
+    {uiFamily
+      ? <DatasetFamilyHeading eyebrow={eyebrow ?? (zh ? '公開資料名冊' : 'PUBLIC RECORD DIRECTORY')} title={displayTitle} description={displaySubtitle} />
+      : <div className="section-heading"><p>{zh ? '公開資料名冊' : 'PUBLIC RECORD DIRECTORY'}</p><h2>{displayTitle}</h2><span>{displaySubtitle}</span></div>}
     <AccessibleTabs tabs={tabs} value={view} onChange={setView} ariaLabel={zh ? '名冊資料檢視' : 'Directory data views'} idPrefix="generated-directory" controlsPanel />
     <aside className="filters"><label className="search"><span aria-hidden="true">⌕</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={zh ? '搜尋名冊資料' : 'Search directory records'} /></label>
       {(hasLocationDimension || hasPhoneField) && <div className="filter-grid">
@@ -164,5 +176,5 @@ export default function GeneratedDatasetDirectoryModule({
     {view === 'quality' && <div className="notes-grid"><article><h3>{zh ? '篩選後完整度' : 'Filtered completeness'}</h3><p>{hasLocationDimension ? (zh ? `目前共有 ${summary.total.toLocaleString()} 筆紀錄、${summary.locationCount.toLocaleString()} 個${locationName}；${summary.phoneRecords.toLocaleString()} 筆有電話資料。` : `${summary.total.toLocaleString()} records across ${summary.locationCount.toLocaleString()} ${locationPluralName.toLocaleLowerCase()}; ${summary.phoneRecords.toLocaleString()} records include a phone number.`) : (zh ? `目前共有 ${summary.total.toLocaleString()} 筆紀錄；${summary.phoneRecords.toLocaleString()} 筆有電話資料。此資料未提供可直接彙整的位置欄位。` : `${summary.total.toLocaleString()} records; ${summary.phoneRecords.toLocaleString()} records include a phone number. This dataset has no directly aggregatable location field.`)}</p></article><article><h3>{zh ? '處理方式' : 'Processing'}</h3><p>{zh ? '名冊、卡片與圖表共用相同篩選結果；資料列維持來源轉換後的欄位值。' : 'The directory, cards, and charts share the same filtered result set; displayed values come from the converted source fields.'}</p></article></div>}
     {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料使用說明' : 'Data notes'}</h3><p>{displayNotice}</p></article><article><h3>{zh ? '位置資訊限制' : 'Location limitation'}</h3><p>{hasLocationDimension ? (zh ? `若資料未提供已確認的官方座標，本模組僅提供${locationName}彙整與外部地圖查詢。` : `When no confirmed official coordinates are supplied, this module provides ${locationName.toLocaleLowerCase()} summaries and external map lookup only.`) : (zh ? '此資料未提供可直接彙整的行政區或縣市欄位，因此不顯示位置分布圖；外部地圖查詢僅在來源具備可用查詢值時提供。' : 'This dataset has no directly aggregatable district or city/county field, so no location-distribution view is shown. External map lookup is available only when the source provides a usable lookup value.')}</p></article></div>}
     </AccessibleTabPanel>
-  </section>;
+  </GeneratedDirectoryFrame>;
 }

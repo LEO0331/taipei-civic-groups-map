@@ -170,6 +170,41 @@ test('Registry Social B dashboards use the shared registry frame', async ({ page
   await expect(childcare.getByRole('table')).toBeVisible();
 });
 
+
+test('Registry Social C dashboards use the shared registry frame', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['registeredAfterSchoolCareCentres', '立案課照中心'],
+    ['subsidizedSeniorResidentialPlacementInstitutions', '老人收容安置補助機構'],
+    ['indigenousCommunityOrganizations', '臺北市原住民團體名單'],
+    ['communityDevelopmentAssociations', '社區發展協會'],
+    ['childYouthResidentialPlacementInstitutions', '兒童及少年安置機構'],
+    ['infantCare', '準公共化托嬰中心'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.getByRole('heading', { name: heading })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'registry-directory');
+  }
+
+  for (const dataset of [
+    'registeredAfterSchoolCareCentres',
+    'subsidizedSeniorResidentialPlacementInstitutions',
+    'indigenousCommunityOrganizations',
+    'communityDevelopmentAssociations',
+    'infantCare',
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+  }
+
+  await page.goto('/?dataset=childYouthResidentialPlacementInstitutions&lang=zh');
+  const placement = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+  await expect(placement.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+  await expect(placement.getByRole('table')).toBeVisible();
+});
+
 test('labor violations use the records-analysis family', async ({ page }) => {
   await page.goto('/?dataset=laborViolations&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');

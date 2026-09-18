@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: post-demo Registry Social B shell normalization (PR #16).
+- Active feature: post-demo Registry Social C shell normalization (PR #17).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 05 / Registry Social C on PR #17. Six registry-directory routes (`registeredAfterSchoolCareCentres`, `subsidizedSeniorResidentialPlacementInstitutions`, `indigenousCommunityOrganizations`, `communityDevelopmentAssociations`, `childYouthResidentialPlacementInstitutions`, `infantCare`) now use the shared registry family shell. Five genuine multi-view pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; `childYouthResidentialPlacementInstitutions` remains a single combined page and its seven non-functional faux tabs were removed rather than converted into misleading navigation. Existing filtering, pagination, exports, capacity/evaluation semantics, maps/external lookups, charts, tables, notices, and domain/data interpretation are preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 101 passed, 1 expected skip, 0 failed.
 
 - 2026-09-18: implemented post-demo Batch 04 / Registry Social B on PR #16. Seven registry-directory routes (`elderlyWelfare`, `disabilityInstitutionCapacityAndVacancies`, `privateSeniorResidentialLongTermCareInstitutions`, `seniorServiceSiteCourses`, `visuallyImpairedMassageEstablishments`, `socialWelfareFoundations`, `communityPublicChildcareHomes`) now use the shared registry family shell. Dedicated multi-view pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; private senior care and social-welfare foundations opt into the generated-directory family wrapper. `communityPublicChildcareHomes` remains a single combined view and its three non-functional faux tabs were removed rather than turned into misleading tabs. Existing filters, pagination, exports, capacity semantics, maps/external lookups, charts, tables, notices, and domain/data behavior are preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 99 passed, 1 expected skip, 0 failed.
 

@@ -205,6 +205,28 @@ test('Registry Social C dashboards use the shared registry frame', async ({ page
   await expect(placement.getByRole('table')).toBeVisible();
 });
 
+
+test('Registry Culture and Pets dashboards use the shared registry frame and native tabs', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['cramSchools', '立案補習班'],
+    ['taipeiCulturalHeritageAssets', '臺北市文化資產'],
+    ['privateCulturalHeritageSubsidies', '私有文化資產補助案'],
+    ['culturalArtsFoundations', '文化藝術財團法人一覽表'],
+    ['animalHospitals', '動物醫院一覽表'],
+    ['animalMedicineSellers', '動物用藥品販賣業者名冊'],
+    ['veterinarians', '獸醫師資訊'],
+    ['rabiesVaccinationVeterinaryClinics', '狂犬病疫苗預防注射獸醫診療機構'],
+    ['petRegistrationStations', '寵物登記站名冊'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.getByRole('heading', { name: heading })).toBeVisible();
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'registry-directory');
+  }
+});
+
 test('labor violations use the records-analysis family', async ({ page }) => {
   await page.goto('/?dataset=laborViolations&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');

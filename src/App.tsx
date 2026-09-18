@@ -1,6 +1,8 @@
 // @ts-nocheck
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import DataTrustPanel from './DataTrustPanel';
+import AccessibleTabs, { AccessibleTabPanel } from './AccessibleTabs';
+import LegacyTabAccessibility from './LegacyTabAccessibility';
 import { buildDatasetCatalogue } from './lib/datasetCatalogue';
 import { loadLocalJson } from './lib/loadLocalJson';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
@@ -1063,6 +1065,7 @@ export default function App() {
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
+    <LegacyTabAccessibility language={language} />
     <header>
       <div className="masthead"><div className="brand-mark">北</div><div><p>TAIPEI · OPEN DIRECTORY</p><h1>{t.title}</h1><span>{t.subtitle}</span></div>
         <button className="language" onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')} aria-label="Switch language">{language === 'zh' ? 'EN' : '中文'}</button></div>
@@ -1088,10 +1091,11 @@ export default function App() {
       {loadError && tab === 'civic' && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && tab === 'civic' && !summary && <p className="status" role="status">{t.loading}</p>}
       {tab === 'civic' && summary && <><FilterPanel filters={filters} setFilters={setFilters} language={language} decades={decades} /><section className="workspace civic-header"><div className="section-heading"><p>01 / CIVIC GROUPS</p><h2>{t.civicGroups}</h2></div>
-        <div className="subtabs">{civicViews.map(([id, label]) => <button className={civicView === id ? 'active' : ''} onClick={() => setCivicView(id)} key={id}>{label}</button>)}</div>
+        <AccessibleTabs tabs={civicViews} value={civicView} onChange={setCivicView} ariaLabel={language === 'zh' ? '人民團體資料檢視' : 'Civic group data views'} idPrefix="civic-views" controlsPanel />
+        <AccessibleTabPanel idPrefix="civic-views" value={civicView}>
         {civicView === 'map' && activeSummary && <CivicMap summary={activeSummary} language={language} openDistrict={openDistrict} />}
         {civicView === 'directory' && <><div className="section-heading inline"><div /><strong>{filtered.length.toLocaleString()} <span>{t.found}</span></strong></div><div className="notice subtle">{t.categoryNotice}</div><GroupDirectory groups={filtered} language={language} /></>}
-        {civicView === 'overview' && activeSummary && <Overview summary={activeSummary} groups={hasFilters ? filtered : groups} language={language} />}</section></>}
+        {civicView === 'overview' && activeSummary && <Overview summary={activeSummary} groups={hasFilters ? filtered : groups} language={language} />}</AccessibleTabPanel></section></>}
       {tab === 'performingArts' && performingArtsSummary && <PerformingArtsGroupsModule records={performingArtsRecords} summary={performingArtsSummary} civicSummary={summary ?? undefined} language={language} />}
       {tab === 'vaccinationProviders' && vaccinationProviderSummary && <ContractedVaccinationMedicalProvidersModule records={vaccinationProviderRecords} summary={vaccinationProviderSummary} language={language} />}
       {tab === 'hpvProviders' && hpvProviderSummary && <PubliclyFundedHpvVaccinationProvidersModule records={hpvProviderRecords} summary={hpvProviderSummary} related={{ vaccinationProviders: vaccinationProviderSummary?.totalRecords, telepsychology: telepsychologySummary?.totalRecords, elderlyWelfare: elderlyWelfareSummary?.totalRecords }} language={language} />}

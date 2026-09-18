@@ -105,3 +105,32 @@ test('Registry Business B modules use the shared registry shell and accessible t
   assert.match(generated, /<DatasetFamilyHeading /);
   assert.match(app, /tab === 'domesticEmploymentServiceAgencies'[\s\S]*uiFamily=\{uiFamilyForDataset\(tab\)\}/);
 });
+
+
+test('Registry Social A modules use the shared registry shell without inventing single-view tabs', async () => {
+  const singleViewModules = [
+    '../EmergencyAssistanceProvidersModule.tsx',
+    '../ChildYouthWelfareInstitutionsModule.tsx',
+    '../DisabilityDayServicesModule.tsx',
+    '../SeniorServicesModule.tsx',
+    '../EarlyInterventionCommunityServicesModule.tsx',
+    '../HomeDisabledFamilyPhysicianCareProvidersModule.tsx',
+  ];
+  for (const modulePath of singleViewModules) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.doesNotMatch(source, /<AccessibleTabs /, modulePath);
+  }
+
+  for (const modulePath of [
+    '../HakkaOrganizationsModule.tsx',
+    '../ShelteredWorkshopDirectoryModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+});

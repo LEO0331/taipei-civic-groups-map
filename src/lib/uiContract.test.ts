@@ -26,3 +26,21 @@ test('the shared stylesheet retains a visible keyboard focus treatment', async (
   assert.match(source, /:focus-visible/);
   assert.match(source, /--focus-ring/);
 });
+
+
+test('tab navigation uses a shared accessible contract with a legacy migration bridge', async () => {
+  const tabs = await readSource('../AccessibleTabs.tsx');
+  const bridge = await readSource('../LegacyTabAccessibility.tsx');
+  const app = await readSource('../App.tsx');
+  assert.match(tabs, /role="tablist"/);
+  assert.match(tabs, /role="tab"/);
+  assert.match(tabs, /aria-selected=\{selected\}/);
+  assert.match(tabs, /aria-controls=/);
+  assert.match(tabs, /ArrowRight/);
+  assert.match(tabs, /ArrowLeft/);
+  assert.match(tabs, /Home/);
+  assert.match(tabs, /End/);
+  assert.match(bridge, /\.subtabs/);
+  assert.match(bridge, /data-legacy-tablist/);
+  assert.match(app, /<LegacyTabAccessibility language=\{language\} \/>/);
+});

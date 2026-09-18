@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: post-demo Registry City Services shell normalization (PR #19).
+- Active feature: post-demo Records Compliance shell normalization (PR #20).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 08 / Records Compliance on PR #20. Three `records-analysis` routes (`laborPensionActViolations`, `oshViolations`, `genderEqualityViolations`) now follow the Labor Standards Act reference shell. OSH and gender-equality pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; the Labor Pension page is a genuine single-view records page and uses the shared frame/heading without artificial tabs. Existing filters, summaries, timelines, article/category/fine analysis, comparisons, record tables, default inclusion/exclusion rules, notices, and domain/data interpretation are preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 107 passed, 1 expected skip, 0 failed.
 
 - 2026-09-18: implemented post-demo Batch 07 / Registry City Services on PR #19. Ten registry-directory routes (`entrustedPublicAssetOperations`, `environmentalPesticideVendors`, `recyclingOrganizations`, `governmentEthicsOffices`, `funeralServiceBusinesses`, `hotelHygieneDirectory`, `outCityFuneralBusinesses`, `bottledGasRetailers`, `licensedWasteCookingOilCollectors`, `taipeiGovernmentApplicationServices`) now use the shared registry family shell. Four dedicated multi-view modules use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; three single-view directories use the shared frame without artificial tabs; three generated directories opt into the existing family wrapper. `licensedWasteCookingOilCollectors` previously exposed two non-functional faux tabs for permit records and data quality; those controls were removed, leaving only the four actual rendered views. Existing filters, pagination, CSV exports, district/city summaries, contact actions, comparisons, source notices, tables, charts, and domain/data interpretation are otherwise preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 105 passed, 1 expected skip, 0 failed.
 

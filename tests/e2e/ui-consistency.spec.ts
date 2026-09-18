@@ -281,6 +281,32 @@ test('labor violations use the records-analysis family', async ({ page }) => {
   await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'records-analysis');
 });
 
+
+test('Records Compliance dashboards use the shared records-analysis frame', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['laborPensionActViolations', '勞工退休金條例違規'],
+    ['oshViolations', '職業安全衛生法違規公布紀錄'],
+    ['genderEqualityViolations', '性別平等工作法違規公布紀錄'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'records-analysis');
+  }
+
+  for (const dataset of ['oshViolations', 'genderEqualityViolations'] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+  }
+
+  await page.goto('/?dataset=laborPensionActViolations&lang=zh');
+  const pension = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');
+  await expect(pension.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+  await expect(pension.getByRole('table')).toBeVisible();
+});
+
 test('alternative-service analysis uses the statistics-analysis family', async ({ page }) => {
   await page.goto('/?dataset=alternativeServiceReserveStatistics&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="statistics-analysis"]');

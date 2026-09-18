@@ -2,6 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
 import { buildRegisteredLaborUnionSummary, filterRegisteredLaborUnions } from './lib/registeredLaborUnions';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import type {
   LaborUnionAddressLocationCategory, LaborUnionPhoneType, Language, RegisteredLaborUnion,
   RegisteredLaborUnionFilters, RegisteredLaborUnionSummary, RegisteredLaborUnionType,
@@ -150,9 +153,8 @@ export default function RegisteredLaborUnionsModule({ records, summary, language
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setView('directory'); };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['types', zh ? '工會屬性' : 'Union Types'], ['districts', zh ? '行政區分布' : 'District Distribution'], ['address', zh ? '地址與聯絡方式' : 'Address & Contact'], ['directory', zh ? '工會清單' : 'Labor Union Directory'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
   return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} />
-    <section className="workspace"><div className="section-heading"><p>02 / LABOR UNIONS</p><h2>{zh ? '各工會名單及聯絡方式' : 'Registered Labor Unions'}</h2>
-      <span>{zh ? '整理臺北市公開資料中的工會名單，依工會屬性、行政區、通訊地址與電話欄位提供查詢與統計。' : 'Explore Taipei public-data labor union directory records by union type, district, contact address, and phone fields.'}</span></div>
-      <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow="02 / LABOR UNIONS" title={zh ? '各工會名單及聯絡方式' : 'Registered Labor Unions'} description={zh ? '整理臺北市公開資料中的工會名單，依工會屬性、行政區、通訊地址與電話欄位提供查詢與統計。' : 'Explore Taipei public-data labor union directory records by union type, district, contact address, and phone fields.'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '工會資料檢視' : 'Labor union data views'} idPrefix="labor-unions" />
       <div className="notice subtle">{zh ? '本資料為工會名單與聯絡方式公開資料，僅供資料查詢、行政區分布與公共資料探索使用，不代表法律狀態、會員資格、推薦程度、勞資建議或官方背書。' : 'This labor union directory is public data for lookup, district distribution, and public-data exploration only. It does not represent legal status, membership eligibility, recommendation, labor-relations advice, or official endorsement.'}</div>
       {view === 'overview' && <Overview summary={activeSummary} language={language} />}
       {view === 'types' && <div className="chart-grid"><BarChart title={zh ? '各工會屬性筆數' : 'Labor unions by type'} data={activeSummary.byUnionType.map((item) => ({ label: unionTypeLabels[language][item.unionType], value: item.count }))} /></div>}
@@ -167,5 +169,5 @@ export default function RegisteredLaborUnionsModule({ records, summary, language
       {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料內容' : 'Data contents'}</h3><p>{zh ? '來源欄位包含項次、工會屬性、工會名稱、理事長、郵遞區號、通訊地址與聯絡電話。本網站保留原始通訊資料，並將臺北市地址彙總至行政區層級。' : 'Source fields include sequence number, union type, union name, chairperson, postal code, contact address, and phone. This site preserves contact fields and summarizes Taipei addresses at district level.'}</p></article>
         <article><h3>{zh ? '地圖限制' : 'Map limits'}</h3><p>{zh ? '資料未提供經緯度；本網站不進行地理編碼，僅以臺北市行政區中心點呈現彙總。臺北市以外、郵政信箱或未解析地址只保留於清單與統計。' : 'The data provides no coordinates; this site does not geocode. Taipei records are mapped only as district-centroid summaries. Outside-Taipei, postal-box, and unparsed addresses remain in the directory and statistics only.'}</p></article>
         <article><h3>{zh ? '資料來源' : 'Source'}</h3><p><a href="https://data.taipei/dataset/detail?id=bea69229-8349-4208-8a68-988718f4ea48" target="_blank" rel="noreferrer">{zh ? '臺北市各工會名單及聯絡方式' : 'Taipei Registered Labor Unions'} ↗</a></p></article></div>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

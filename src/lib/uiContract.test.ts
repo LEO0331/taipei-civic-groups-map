@@ -47,3 +47,16 @@ test('tab navigation uses a shared accessible contract with a legacy migration b
   assert.match(bridge, /data-legacy-tablist/);
   assert.match(app, /<LegacyTabAccessibility language=\{language\} \/>/);
 });
+
+
+test('dataset pages expose a stable active UI family and shared family frame contract', async () => {
+  const app = await readSource('../App.tsx');
+  const frame = await readSource('../DatasetFamilyFrame.tsx');
+  const families = await readSource('./datasetUiFamily.ts');
+  assert.match(app, /data-active-ui-family=\{uiFamilyForDataset\(tab\)\}/);
+  assert.match(frame, /data-ui-family=\{family\}/);
+  assert.match(frame, /dataset-family-heading/);
+  assert.match(families, /healthcareRichDirectory/);
+  assert.match(families, /recordsAnalysis/);
+  assert.match(families, /statisticsAnalysis/);
+});

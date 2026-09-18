@@ -4,6 +4,7 @@ import DataTrustPanel from './DataTrustPanel';
 import AccessibleTabs, { AccessibleTabPanel } from './AccessibleTabs';
 import LegacyTabAccessibility from './LegacyTabAccessibility';
 import { buildDatasetCatalogue } from './lib/datasetCatalogue';
+import { uiFamilyForDataset } from './lib/datasetUiFamily';
 import { loadLocalJson } from './lib/loadLocalJson';
 import { buildHistoryState, buildNavigationUrl, readNavigationState } from './lib/navigationState';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
@@ -1078,7 +1079,7 @@ export default function App() {
         </div>}
       </nav>
     </header>
-    <main>
+    <main data-active-ui-family={uiFamilyForDataset(tab)} data-active-dataset={tab}>
       <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} activeDatasetLabel={activeDatasetLabel} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
       {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
       <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />

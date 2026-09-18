@@ -61,7 +61,7 @@ test('representative interaction profiles work', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('lang', 'zh-Hant');
 
   await selectDataset(page, '人民團體');
-  await page.getByRole('button', { name: '名冊', exact: true }).click();
+  await page.getByRole('tab', { name: '名冊', exact: true }).click();
   await main(page).getByRole('textbox').first().fill('協會');
 
   await selectDataset(page, '孕婦 GBS 篩檢特約院所');

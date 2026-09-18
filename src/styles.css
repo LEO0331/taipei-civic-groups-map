@@ -154,7 +154,9 @@ footer { padding: 24px 18px 40px; background: #203744; color: #bdc8ca; font-size
 .data-trust[data-attention="caution"] .data-trust-summary { border-color: #d8c58e; background: #fffaf0; }
 .data-trust[data-attention="warning"] .data-trust-summary { border-left: 4px solid #b34831; border-color: #d7aaa0; background: #fff8f5; }
 .data-trust-details { flex: 0 0 auto; }
+.data-trust-details[open] { flex: 1 0 100%; }
 .data-trust-details > summary { cursor: pointer; color: #35636b; font-weight: 700; white-space: nowrap; }
+.data-trust-details[open] > summary { width: max-content; margin-left: auto; }
 .data-trust-detail-body { margin-top: 9px; padding: 10px 12px 4px; border-top: 1px solid #ddd9cf; color: #4a5e66; }
 .data-trust-detail-body p { max-width: 920px; margin: 0 0 8px; }
 .data-trust-detail-body p > strong { color: #203744; }

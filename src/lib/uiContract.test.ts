@@ -210,3 +210,39 @@ test('Registry Culture and Pets modules use the shared registry shell and access
   const app = await readSource('../App.tsx');
   assert.match(app, /tab === 'petRegistrationStations'[\s\S]*uiFamily=\{uiFamilyForDataset\(tab\)\}/);
 });
+
+
+test('Registry City Services modules use the shared registry shell and only real tabs', async () => {
+  for (const modulePath of [
+    '../RegisteredRecyclingBusinessOrganizationsModule.tsx',
+    '../FuneralServiceBusinessesModule.tsx',
+    '../LicensedWasteCookingOilCollectorsModule.tsx',
+    '../TaipeiGovernmentApplicationServicesModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  for (const modulePath of [
+    '../EntrustedPublicAssetOperationsModule.tsx',
+    '../EnvironmentalPesticideVendorsModule.tsx',
+    '../GovernmentEthicsOfficesModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.doesNotMatch(source, /<AccessibleTabs /, modulePath);
+  }
+
+  const wasteOil = await readSource('../LicensedWasteCookingOilCollectorsModule.tsx');
+  assert.doesNotMatch(wasteOil, /\['permits'/);
+  assert.doesNotMatch(wasteOil, /\['quality'/);
+
+  const app = await readSource('../App.tsx');
+  for (const dataset of ['bottledGasRetailers', 'outCityFuneralBusinesses', 'hotelHygieneDirectory']) {
+    assert.match(app, new RegExp(`tab === '${dataset}'[\\s\\S]*?uiFamily=\\{uiFamilyForDataset\\(tab\\)\\}`));
+  }
+});

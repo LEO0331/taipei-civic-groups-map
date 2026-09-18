@@ -309,43 +309,27 @@ test('Records Compliance dashboards use the shared records-analysis frame', asyn
 
 
 test('Records General dashboards use the shared records-analysis frame', async ({ page }) => {
-  for (const [dataset, heading] of [
-    ['publicLiabilityInsurance', '營業場所投保公共意外險清冊'],
-    ['businessChanges', '商業設立、變更及歇業登記異動資料'],
-    ['companyChanges', '公司設立、變更及解散登記異動資料'],
-    ['procurement', '捷運採購時程'],
-    ['educationVolunteerRecognitionRecords', '教育局志工表揚名單'],
-    ['consumerDisputeAbsence', '消費爭議無故不到場協商之被申訴企業經營者'],
-    ['withdrawnIllegalHotelEnforcementRecords', '撤銷裁罰非法旅館業名單'],
-    ['lodgingBusinessPenaltyRecords', '旅宿業裁罰紀錄表'],
+  for (const [dataset, heading, hasTabs] of [
+    ['publicLiabilityInsurance', '營業場所投保公共意外險清冊', true],
+    ['businessChanges', '商業設立、變更及歇業登記異動資料', true],
+    ['companyChanges', '公司設立、變更及解散登記異動資料', true],
+    ['procurement', '捷運採購時程', true],
+    ['educationVolunteerRecognitionRecords', '教育局志工表揚名單', false],
+    ['consumerDisputeAbsence', '消費爭議無故不到場協商之被申訴企業經營者', true],
+    ['withdrawnIllegalHotelEnforcementRecords', '撤銷裁罰非法旅館業名單', true],
+    ['lodgingBusinessPenaltyRecords', '旅宿業裁罰紀錄表', false],
   ] as const) {
     await page.goto(`/?dataset=${dataset}&lang=zh`);
     const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');
     await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
     await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'records-analysis');
-  }
 
-  for (const dataset of [
-    'publicLiabilityInsurance',
-    'businessChanges',
-    'companyChanges',
-    'procurement',
-    'consumerDisputeAbsence',
-    'withdrawnIllegalHotelEnforcementRecords',
-  ] as const) {
-    await page.goto(`/?dataset=${dataset}&lang=zh`);
-    const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');
-    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
-    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
-  }
-
-  for (const dataset of [
-    'educationVolunteerRecognitionRecords',
-    'lodgingBusinessPenaltyRecords',
-  ] as const) {
-    await page.goto(`/?dataset=${dataset}&lang=zh`);
-    const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');
-    await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+    if (hasTabs) {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+      await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+    } else {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+    }
   }
 });
 

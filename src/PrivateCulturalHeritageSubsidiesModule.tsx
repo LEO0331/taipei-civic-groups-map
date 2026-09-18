@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import {
   formatTwd,
   type PrivateCulturalHeritageSubsidyRecord,
@@ -136,15 +139,11 @@ export default function PrivateCulturalHeritageSubsidiesModule({ language }: { l
 
   if (loadError) return <section className="module-panel"><h2>{text('私有文化資產補助案', 'Private Cultural Heritage Subsidies')}</h2><p>{text('本機資料檔目前無法載入。請先執行資料轉換指令。', 'The local dataset could not be loaded. Run the data conversion command first.')}</p></section>;
 
-  return <section className="module-panel generated-module">
-    <p className="eyebrow">{text('公開資料名冊', 'PUBLIC DATA RECORDS')}</p>
-    <h1>{text('私有文化資產補助案', 'Private Cultural Heritage Subsidies')}</h1>
-    <p className="module-intro">{text('依臺北市政府文化局公開資料，瀏覽私有文化資產之同意補助案件、補助項目與核定補助經費。', 'Browse approved subsidy cases, project descriptions and approved subsidy amounts for private cultural heritage assets from Taipei City’s open data.')}</p>
+  return <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}>
+    <DatasetFamilyHeading eyebrow={text('公開資料名冊', 'PUBLIC DATA RECORDS')} title={text('私有文化資產補助案', 'Private Cultural Heritage Subsidies')} description={text('依臺北市政府文化局公開資料，瀏覽私有文化資產之同意補助案件、補助項目與核定補助經費。', 'Browse approved subsidy cases, project descriptions and approved subsidy amounts for private cultural heritage assets from Taipei City’s open data.')} />
     <p className="muted">{text('文化資產脈絡：可搭配「臺北市文化資產」名錄檢視。標示為可能名錄對應者，僅代表名稱與行政區完全一致的保守比對，並非官方關聯。', 'Cultural-heritage context: use alongside the Taipei Cultural Heritage Assets registry. A possible registry match is only a conservative exact name-and-area comparison, not an official relationship.')}</p>
 
-    <div className="subtabs" role="tablist" aria-label={text('資料檢視', 'Data views')}>
-      {(Object.keys(viewLabels) as View[]).map((item) => <button key={item} type="button" className={view === item ? 'active' : ''} onClick={() => setView(item)} role="tab" aria-selected={view === item}>{viewLabels[item][language]}</button>)}
-    </div>
+    <AccessibleTabs tabs={(Object.keys(viewLabels) as View[]).map((item) => [item, viewLabels[item][language]] as const)} value={view} onChange={setView} ariaLabel={text('私有文化資產補助案資料檢視', 'Private cultural heritage subsidy data views')} idPrefix="private-cultural-heritage-subsidies" />
 
     <div className="filters filter-grid">
       <label>{text('搜尋資產、項目或區域', 'Search asset, project or area')}<input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={text('輸入關鍵字', 'Enter keywords')} /></label>
@@ -184,7 +183,7 @@ export default function PrivateCulturalHeritageSubsidiesModule({ language }: { l
     {view === 'quality' && <div className="notes-grid"><article><h2>{text('轉換檢查', 'Conversion checks')}</h2><p>{text('資料轉換會保留所有原始列，並另外標記未能保守判讀的年度、金額、空白欄位與完全重複列。', 'Conversion preserves all raw rows and separately flags years or amounts that cannot be conservatively parsed, blank fields and exact duplicate rows.')}</p><p>{text(`目前轉換報告的問題計數：${String((report as { privateCulturalHeritageSubsidies?: { issueCount?: number } } | null)?.privateCulturalHeritageSubsidies?.issueCount ?? '—')}。`, `Current conversion-report issue count: ${String((report as { privateCulturalHeritageSubsidies?: { issueCount?: number } } | null)?.privateCulturalHeritageSubsidies?.issueCount ?? '—')}.`)}</p></article><article><h2>{text('重要限制', 'Important limitations')}</h2><p>{text('未做地理編碼、模糊名稱合併或跨來源金額補值。空值／未能判讀值不會被當成零。', 'No geocoding, fuzzy name merging, or cross-source amount filling is performed. Blank or unparsed values are never treated as zero.')}</p></article></div>}
 
     {view === 'notes' && <div className="notes-grid"><article><h2>{text('來源與更新', 'Source and updates')}</h2><p><a href="https://data.taipei/dataset/detail?id=24205a7e-278a-4e78-9033-47ec5cf74595" target="_blank" rel="noreferrer">{text('臺北市私有文化資產補助案（臺北市資料大平臺）', 'Taipei Private Cultural Heritage Subsidies (Taipei Open Data Platform)')}</a></p><p>{text('資料集涵蓋 2007-01-01 至 2026-06-30，資料平臺標示為不定期更新；本儀表板使用建置時下載的本機靜態快照。', 'The dataset coverage is 2007-01-01 to 2026-06-30 and the platform marks updates as irregular; this dashboard uses a locally generated static snapshot.')}</p></article><article><h2>{text('使用提醒', 'Use notes')}</h2><p>{text('資料提供的是行政補助紀錄，並不表示目前仍可申請、已付款、工程完成、資產狀況、使用資格或官方排名。請回到原始資料與主管機關確認個案。', 'This is an administrative subsidy record, not evidence of current availability, payment, completion, asset condition, eligibility or an official ranking. Confirm individual cases with the source and responsible agency.')}</p></article></div>}
-  </section>;
+  </DatasetFamilyFrame>;
 }
 
 function BarTable({ title, rows, topAmount, language, note }: { title: string; rows: Array<{ name: string; cases: number; amount: number; median: number | null }>; topAmount: number; language: Language; note?: string }) {

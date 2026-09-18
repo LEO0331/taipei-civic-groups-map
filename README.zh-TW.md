@@ -16,7 +16,7 @@
 
 A–H 修正與 polish 系列已於 **2026-09-18** 完成 pre-demo verification，驗證 commit 為 `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`。對應的 GitHub Pages workflow 已成功完成最新資料擷取／轉換、typecheck、unit tests、production build，以及桌面與手機 Playwright；結果為 **91 passed / 1 個預期 skip / 0 failed**。
 
-該次部署的 release evidence 顯示：Data Trust 追蹤 **117** 個靜態資料目錄，其中 **32** 個有可讀取來源日期、**85** 個日期未知，且 **0** 個沿用舊快照 fallback。完整紀錄請參閱 [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md)。
+該次部署的 release evidence 顯示：Data Trust 追蹤 **117** 個靜態資料目錄，其中 **32** 個有可讀取來源日期、**85** 個日期未知，且 **0** 個沿用舊快照 fallback。完整紀錄請參閱 [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md)，post-demo legacy migration 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
 
 ## 資料目錄
 

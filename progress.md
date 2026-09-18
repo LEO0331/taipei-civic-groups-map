@@ -57,6 +57,7 @@
 - Catalogue search currently matches dataset labels and topic keywords. Review real search terms after release to tune synonyms; do not silently assign future datasets to a catch-all category.
 
 - Route-level lazy loading is now broadly applied. The current main production chunk is about 549.5 kB minified / 161.4 kB gzip, so Vite still emits its >500 kB advisory. Further main-bundle reduction is post-demo work.
+- Browser regression coverage is strong for workflows, accessibility, failure states, family contracts, and representative mobile overflow, but the repository does not yet maintain a full screenshot/pixel-diff visual baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.

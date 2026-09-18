@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import GeneratedDatasetDirectoryModule from './GeneratedDatasetDirectoryModule';
+import { UI_FAMILIES } from './lib/uiFamilies';
 
 export default function TaipeiCulturalHeritageAssetsModule({ language }: { language: 'zh' | 'en' }) {
   const [records, setRecords] = useState<any[]>([]);
@@ -11,6 +12,7 @@ export default function TaipeiCulturalHeritageAssetsModule({ language }: { langu
   }, []);
 
   return <GeneratedDatasetDirectoryModule language={language} records={records}
+    uiFamily={UI_FAMILIES.registryDirectory} eyebrow="CULTURAL HERITAGE / OFFICIAL REGISTRY"
     title={zh ? '臺北市文化資產' : 'Taipei Cultural Heritage Assets'}
     subtitle={zh ? '臺北市文化資產官方名冊；依名稱、類別、型態、主管機關與地理區域查詢。' : 'Official Taipei cultural-heritage registry, searchable by name, category, type, authority, and geographic area.'}
     columns={[['caseName', zh ? '資產名稱' : 'Asset name'], ['assetCategoryRaw', zh ? '文化資產類別' : 'Heritage category'], ['assetTypeRaw', zh ? '文化資產型態' : 'Heritage type'], ['geographicAreaRaw', zh ? '地理區域' : 'Geographic area'], ['districtName', zh ? '行政區（地址解析）' : 'District (derived)'], ['responsibleAuthority', zh ? '主管機關' : 'Responsible authority'], ['authorityCode', zh ? '主管機關代碼' : 'Authority code'], ['cityCode', zh ? '縣市代碼' : 'City code']]}

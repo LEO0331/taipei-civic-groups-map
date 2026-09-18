@@ -1283,7 +1283,8 @@ export default function App() {
         notice={language === 'zh' ? '開放時段、表演類型及申請方式不代表即時開放、申請、核准、許可、預約、費用、安全保證或官方推薦；請向主管機關或場地營運者確認。' : 'Opening hours, performance types, and application methods do not confirm real-time availability, approval, permission, reservations, fees, safety, or recommendation. Confirm with the managing authority or venue operator.'}
       />}
       {tab === 'domesticEmploymentServiceAgencies' && <GeneratedDatasetDirectoryModule
-        language={language} title={language === 'zh' ? '仲介本國人國內工作私立就業服務機構名冊' : 'Domestic Employment Service Agency Directory'}
+        language={language} uiFamily={uiFamilyForDataset(tab)} eyebrow="LABOR / DOMESTIC EMPLOYMENT SERVICES"
+        title={language === 'zh' ? '仲介本國人國內工作私立就業服務機構名冊' : 'Domestic Employment Service Agency Directory'}
         subtitle={language === 'zh' ? '本資料僅限臺北市許可仲介本國人在國內工作之私立就業服務機構及分支機構。' : 'A distinct directory of Taipei-licensed agencies that place Taiwanese nationals in domestic employment.'}
         records={domesticEmploymentServiceAgencyRecords}
         columns={[["sourceSequenceNumber", language === 'zh' ? '編號' : 'ID'], ["licenseNumber", language === 'zh' ? '許可證字號' : 'Licence number'], ["agencyName", language === 'zh' ? '機構名稱' : 'Agency name'], ["districtNameFromAddress", language === 'zh' ? '行政區' : 'District'], ["address", language === 'zh' ? '機構地址' : 'Address'], ["phone", language === 'zh' ? '機構電話' : 'Phone'], ["responsiblePerson", language === 'zh' ? '負責人姓名' : 'Responsible person'], ["licenseExpiryRaw", language === 'zh' ? '許可證有效期限' : 'Licence expiry'], ["capitalAmountRaw", language === 'zh' ? '資本額' : 'Capital'], ["professionalPersonnelRaw", language === 'zh' ? '專業人員' : 'Licensed professionals'], ["googleMapsQuery", language === 'zh' ? '地圖查詢' : 'Map lookup']]}

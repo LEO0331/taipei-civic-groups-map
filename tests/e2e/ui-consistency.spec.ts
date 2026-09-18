@@ -88,6 +88,25 @@ test('Registry Business A dashboards use the shared registry frame and native ta
   }
 });
 
+
+test('Registry Business B dashboards use the shared registry frame and native tabs', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['waterPipeInstallationContractors', '自來水管承裝商業者'],
+    ['approvedGasWaterHeaterInstallers', '核准燃氣熱水器承裝業及技術士'],
+    ['domesticEmploymentServiceAgencies', '仲介本國人國內工作私立就業服務機構名冊'],
+    ['pestControlBusinesses', '病媒防治業者名錄'],
+    ['beautyHairdressingHygieneCertifications', '美容美髮業衛生優良自主管理分級認證'],
+    ['licensedNaturalGasPipelineContractors', '臺北市天然氣導管承裝商'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="registry-directory"]');
+    await expect(family.getByRole('heading', { name: heading })).toBeVisible();
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'registry-directory');
+  }
+});
+
 test('labor violations use the records-analysis family', async ({ page }) => {
   await page.goto('/?dataset=laborViolations&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="records-analysis"]');

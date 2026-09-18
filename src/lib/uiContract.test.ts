@@ -81,3 +81,27 @@ test('Registry Business A modules use the shared registry shell and accessible t
     assert.doesNotMatch(source, /<div className="subtabs">\{(?:views|tabs)\.map/, modulePath);
   }
 });
+
+
+test('Registry Business B modules use the shared registry shell and accessible tabs', async () => {
+  const modules = [
+    '../WaterPipeInstallationContractorsModule.tsx',
+    '../ApprovedGasWaterHeaterInstallersModule.tsx',
+    '../PestControlBusinessesModule.tsx',
+    '../BeautyHairdressingHygieneCertificationsModule.tsx',
+    '../LicensedNaturalGasPipelineContractorsModule.tsx',
+  ];
+
+  for (const modulePath of modules) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs">/, modulePath);
+  }
+
+  const generated = await readSource('../GeneratedDatasetDirectoryModule.tsx');
+  const app = await readSource('../App.tsx');
+  assert.match(generated, /GeneratedDirectoryFrame uiFamily=\{uiFamily\}/);
+  assert.match(generated, /<DatasetFamilyHeading /);
+  assert.match(app, /tab === 'domesticEmploymentServiceAgencies'[\s\S]*uiFamily=\{uiFamilyForDataset\(tab\)\}/);
+});

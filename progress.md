@@ -2,11 +2,18 @@
 
 ## Current State
 
-- Last updated: 2026-09-15
-- Active feature: none
-- Baseline: agent harness installed and validated.
+- Last updated: 2026-09-18
+- Active feature: none; pre-demo feature freeze.
+- Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
+- Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: completed the pre-demo verification pass after merging A–H. The exact `main` commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5` passed the GitHub Pages release workflow: bulk data fetch/conversion, typecheck, unit tests, desktop/mobile Playwright, production build, release-evidence upload, and deployment. Playwright result: 91 passed, 1 expected desktop-only skip, 0 failed. Release Data Trust evidence: 117 static dataset directories, 32 with readable source dates, 85 with unknown dates, and 0 reused-snapshot fallbacks. The 156 catalogue routes/views resolve to six UI families. No correctness, navigation, accessibility, data-refresh, build, or deployment blocker was found; broad feature work is frozen until after the demo. See `docs/pre-demo-verification-2026-09-18.md`.
+
+- 2026-09-18: completed polish batches E–H. E standardized tab accessibility with shared semantics and keyboard navigation; F centralized URL/history navigation and added real-user Back/Forward, language, onboarding, and deep-link tests; G reduced normal Data Trust visual dominance while preserving stronger stale/fallback warnings; H classified all catalogue routes/views into six UI families and migrated representative registry, records-analysis, and statistics-analysis legacy shells to shared family primitives.
+
+- 2026-09-18: completed the pre-polish generated-directory geography correction. Generated directories now select a real geographic dimension instead of assuming district fields: district data uses 行政區分布, city/county data uses 縣市分布, Taiwan administrative codes are rendered as readable names, and datasets without a usable geographic field omit the misleading distribution tab. The hospice, out-of-city funeral, no-location, and district-based cases are covered by E2E tests.
 
 - 2026-09-15: audited the healthcare pages highlighted in the navigation screenshot and standardized eight simple directories on a reusable civic-health template: ENT, under-3 influenza vaccination, addiction treatment, kidney health promotion, GBS screening, clinical pathology, oral/maxillofacial surgery, and anatomical pathology. The shared template provides a constrained workspace, labelled search/district filters, consistent four-metric summaries, 18-record pagination, indexed responsive cards, contact/map actions, source details, and readable load errors. Scoped the global masthead selector from `header` to `.app > header`, preventing nested dataset headings from inheriting the dark site masthead; healthcare headings also retain a transparent-background defensive style and the same title scale as working dashboard section headings. Fixed corrupted CP950 clinical-pathology data, generated the previously missing 188-record ENT dataset, and converted under-3 administrative codes to human-readable district names. Travel Medicine and X-ray retain their specialized workflows while receiving the common generated-module workspace constraint. The trust manifest now reports 117 static dataset directories; 108 unit tests, 3 accessibility contracts, production build, and 16 desktop/mobile E2E tests pass across 116 visible catalogue modules.
 
@@ -49,16 +56,18 @@
 
 - Catalogue search currently matches dataset labels and topic keywords. Review real search terms after release to tune synonyms; do not silently assign future datasets to a catch-all category.
 
-- The initial two lazy-loaded modules reduce the entry bundle by roughly 36 kB before compression, but the remaining entry bundle is still about 1.9 MB minified. Expand module splitting only after measuring real navigation and caching behavior.
+- Route-level lazy loading is now broadly applied. The current main production chunk is about 549.5 kB minified / 161.4 kB gzip, so Vite still emits its >500 kB advisory. Further main-bundle reduction is post-demo work.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.
-- Freshness metadata is available for 22 of 78 dataset directories. Unknown dates are intentionally visible; extend metadata coverage before treating the overall catalogue as date-complete.
+- Pre-demo release evidence tracks 117 dataset directories: 32 have readable source dates and 85 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
 
 - The source labels its updates as irregular. Its 2026-06-18 source update is exposed through module metadata, but the dashboard remains a generated local snapshot rather than a real-time service.
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, and this file.
-2. Inspect the working tree before editing.
-3. Mark exactly one maintenance item `in-progress`, then record fresh verification evidence when finished.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/pre-demo-verification-2026-09-18.md`.
+2. Preserve the pre-demo feature freeze unless a narrow demo-blocking bug is found.
+3. Inspect the working tree before editing.
+4. For post-demo work, prioritize remaining legacy-shell normalization in this order: registry-directory, records-analysis, statistics-analysis, location-directory, then healthcare exceptions; keep domain/data logic unchanged where possible.
+5. Record fresh verification evidence for any change.

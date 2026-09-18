@@ -4,7 +4,7 @@ This is a Vite + React + TypeScript public-data directory. Keep data presentatio
 
 ## Startup Workflow
 
-1. Read `README.md`, this file, `feature_list.json`, and `progress.md`.
+1. Read `README.md`, this file, `feature_list.json`, `progress.md`, and the latest release/verification note under `docs/` (currently `docs/pre-demo-verification-2026-09-18.md`).
 2. Inspect `git status --short` and preserve unrelated user changes.
 3. Select one active feature or maintenance task; update its state only when there is evidence.
 4. Run focused checks first, then the full verification set before claiming completion. For UI/navigation/release work, include Playwright.

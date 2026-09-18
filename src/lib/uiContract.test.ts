@@ -246,3 +246,23 @@ test('Registry City Services modules use the shared registry shell and only real
     assert.match(app, new RegExp(`tab === '${dataset}'[\\s\\S]*?uiFamily=\\{uiFamilyForDataset\\(tab\\)\\}`));
   }
 });
+
+
+test('Records Compliance modules use the shared records-analysis shell and only real tabs', async () => {
+  for (const modulePath of [
+    '../OccupationalSafetyHealthViolationsModule.tsx',
+    '../GenderEqualityWorkActViolationsModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.recordsAnalysis\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  const pension = await readSource('../LaborPensionActViolationsModule.tsx');
+  assert.match(pension, /<DatasetFamilyFrame family=\{UI_FAMILIES\.recordsAnalysis\}>/);
+  assert.match(pension, /<DatasetFamilyHeading/);
+  assert.doesNotMatch(pension, /<AccessibleTabs /);
+  assert.doesNotMatch(pension, /<div className="subtabs"/);
+});

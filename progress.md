@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: none; pre-demo feature freeze.
+- Active feature: post-demo Registry Business A shell normalization (PR #13).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 01 / Registry Business A on PR #13. Eight registry-directory business and industry dashboards (`employmentAgencies`, `licensedArcades`, `licensedSpecialEntertainment`, `registeredFactories`, `enterpriseHeadquarters`, `biotechCompanies`, `nangangCompanies`, `dawannanCompanies`) now use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and shared `AccessibleTabs` while preserving existing filters, parsing, calculations, maps, charts, tables, notices, and data behavior. Added source-contract coverage plus Playwright coverage for the shared registry frame and selected-tab semantics. Frontend CI passed `npm run typecheck`, `npm test`, `npm run build`, and the full desktop/mobile `npm run test:e2e` suite.
 
 - 2026-09-18: completed the pre-demo verification pass after merging A–H. The exact `main` commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5` passed the GitHub Pages release workflow: bulk data fetch/conversion, typecheck, unit tests, desktop/mobile Playwright, production build, release-evidence upload, and deployment. Playwright result: 91 passed, 1 expected desktop-only skip, 0 failed. Release Data Trust evidence: 117 static dataset directories, 32 with readable source dates, 85 with unknown dates, and 0 reused-snapshot fallbacks. The 156 catalogue routes/views resolve to six UI families. No correctness, navigation, accessibility, data-refresh, build, or deployment blocker was found; broad feature work is frozen until after the demo. See `docs/pre-demo-verification-2026-09-18.md`.
 

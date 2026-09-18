@@ -26,7 +26,7 @@
         "maintenance-harness"
       ],
       "status": "ready",
-      "evidence": "2026-09-18: A–H remediation/polish merged and pre-demo verified. 156 catalogue routes/views resolve to six UI families; URL navigation, tab accessibility, lazy loading, Data Trust hierarchy, geography correctness, and representative family normalization are covered by desktop/mobile E2E. Release workflow: 91 passed, 1 expected skip, 0 failed."
+      "evidence": "2026-09-18: A–H remediation/polish merged and pre-demo verified. 156 catalogue routes/views resolve to six UI families; URL navigation, tab accessibility, lazy loading, Data Trust hierarchy, geography correctness, and representative family normalization are covered by desktop/mobile E2E. Release workflow: 91 passed, 1 expected skip, 0 failed. Post-demo Batch 01 / Registry Business A is implemented in PR #13: eight business/industry registry dashboards now use the shared registry frame, heading, and AccessibleTabs without domain/data changes; Frontend CI passed typecheck, unit tests, production build, and the full desktop/mobile Playwright suite."
     },
     {
       "id": "trust-safeguards",

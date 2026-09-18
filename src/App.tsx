@@ -1224,7 +1224,7 @@ export default function App() {
       {tab === 'visuallyImpairedMassageEstablishments' && <VisuallyImpairedMassageEstablishmentsModule language={language} />}
       {tab === 'approvedGasWaterHeaterInstallers' && <ApprovedGasWaterHeaterInstallersModule language={language} />}
       {tab === 'petRegistrationStations' && <GeneratedDatasetDirectoryModule
-        language={language}
+        language={language} uiFamily={uiFamilyForDataset(tab)} eyebrow="ANIMAL CARE / PET REGISTRATION"
         title={language === 'zh' ? '寵物登記站名冊' : 'Pet Registration Station Directory'}
         subtitle={language === 'zh' ? '可依行政區、電話與關鍵字搜尋的公開名冊；地圖查詢連至外部服務。' : 'A public directory searchable by district, phone, and keyword; map lookup opens an external service.'}
         records={petRegistrationStationRecords}

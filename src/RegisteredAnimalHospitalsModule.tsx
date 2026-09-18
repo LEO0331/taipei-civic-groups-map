@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
 import { buildRegisteredAnimalHospitalSummary, filterRegisteredAnimalHospitals } from './lib/registeredAnimalHospitals';
@@ -110,9 +113,8 @@ export default function RegisteredAnimalHospitalsModule({ records, summary, lang
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setView('directory'); };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['map', zh ? '行政區分布' : 'District Distribution'], ['roads', zh ? '道路分布' : 'Road Distribution'], ['directory', zh ? '動物醫院清單' : 'Animal Hospital Directory'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
   return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} />
-    <section className="workspace"><div className="section-heading"><p>08 / ANIMAL CARE REGISTRY</p><h2>{zh ? '動物醫院一覽表' : 'Registered Animal Hospitals'}</h2>
-      <span>{zh ? '整理臺北市公開資料中的動物醫院名冊，依行政區、地址、電話與來源欄位提供查詢與統計。' : 'Explore Taipei public-data animal hospital directory records by district, address, phone, and source fields.'}</span></div>
-      <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow="08 / ANIMAL CARE REGISTRY" title={zh ? '動物醫院一覽表' : 'Registered Animal Hospitals'} description={zh ? '整理臺北市公開資料中的動物醫院名冊，依行政區、地址、電話與來源欄位提供查詢與統計。' : 'Explore Taipei public-data animal hospital directory records by district, address, phone, and source fields.'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '動物醫院資料檢視' : 'Animal hospital data views'} idPrefix="animal-hospitals" />
       <div className="notice subtle">{zh ? '動物醫院一覽表資料為臺北市公開資料中的動物醫院名冊，僅供資料查詢、行政區分布與公共資料探索使用，不代表醫療品質、即時營業狀態、急診服務、看診項目、收費、醫師排班、推薦程度或官方背書。' : 'Animal hospital directory data is a Taipei public-data directory of animal hospitals for lookup, district distribution, and public-data exploration only. It does not represent medical quality, real-time operating status, emergency service, available treatments, pricing, veterinarian schedules, recommendation, or official endorsement.'}</div>
       {view === 'overview' && <Overview summary={activeSummary} language={language} />}
       {view === 'map' && <AnimalHospitalMap summary={activeSummary} language={language} viewDistrict={openDistrict} />}
@@ -121,5 +123,5 @@ export default function RegisteredAnimalHospitalsModule({ records, summary, lang
       {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料內容' : 'Data contents'}</h3><p>{zh ? '動物醫院一覽表資料提供臺北市動物醫院公開名冊，欄位包含縣市、動物醫院名稱、地址、電話與負責人。本網站將地址解析為行政區與道路名稱，並以行政區彙總與清單方式呈現。資料未提供經緯度，因此預設不顯示精確點位。' : 'Animal hospital directory data provides Taipei public directory records for animal hospitals, including city, animal hospital name, address, phone, and responsible person. This site parses addresses into district and road name, and presents the data as district-level summaries and directory records. The data does not provide coordinates, so exact map points are not shown by default.'}</p></article>
         <article><h3>{zh ? '解讀限制' : 'Interpretation limits'}</h3><p>{zh ? '本資料為公開名冊，僅供資料查詢與統計整理，不代表醫療品質、即時營業狀態、急診服務、看診項目、收費、醫師排班、推薦程度、醫療建議或官方背書。負責人姓名為來源資料欄位，本網站僅於明細中呈現，不作個人排名或評價。' : 'This data is a public directory for lookup and statistical organization only. It does not represent medical quality, real-time operating status, emergency service, available treatments, pricing, veterinarian schedules, recommendation, medical advice, or official endorsement. Responsible person name is a source-data field and is shown only in record details; this site does not rank or evaluate individuals.'}</p></article>
         <article><h3>{zh ? '資料來源' : 'Source'}</h3><p><a href="https://data.taipei/dataset/detail?id=01bcb5ee-7c18-41fa-86d4-4e75daee1f94" target="_blank" rel="noreferrer">{zh ? '臺北市動物醫院一覽表' : 'Taipei Animal Hospital Directory'} ↗</a></p></article></div>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

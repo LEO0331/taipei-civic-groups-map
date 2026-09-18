@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
 import { buildRegisteredCramSchoolSummary, filterRegisteredCramSchools } from './lib/registeredCramSchools';
@@ -128,9 +131,8 @@ export default function RegisteredCramSchoolsModule({ records, summary, language
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setView('directory'); };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['map', zh ? '行政區分布' : 'District Distribution'], ['timeline', zh ? '立案時間' : 'Registration Timeline'], ['directory', zh ? '補習班清單' : 'Cram School Directory'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
   return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} />
-    <section className="workspace"><div className="section-heading"><p>04 / REGISTERED CRAM SCHOOLS</p><h2>{zh ? '立案補習班' : 'Registered Cram Schools'}</h2>
-      <span>{zh ? '探索臺北市立案補習班公開登記資料，依行政區、立案日期、教室數與面積整理。' : 'Explore Taipei registered cram-school public records by district, filing date, classroom count, and area.'}</span></div>
-      <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow="04 / REGISTERED CRAM SCHOOLS" title={zh ? '立案補習班' : 'Registered Cram Schools'} description={zh ? '探索臺北市立案補習班公開登記資料，依行政區、立案日期、教室數與面積整理。' : 'Explore Taipei registered cram-school public records by district, filing date, classroom count, and area.'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '立案補習班資料檢視' : 'Registered cram school data views'} idPrefix="registered-cram-schools" />
       <div className="notice subtle">{zh ? '立案補習班資料為公開資料中的登記清冊，僅供資料查詢與探索使用，不代表教學品質、招生狀態、課程內容、收費標準、即時營業狀態或推薦程度。' : 'Registered cram-school data is a public registry directory for lookup and exploration only. It does not represent teaching quality, enrollment status, course content, pricing, real-time business status, or recommendation.'}</div>
       {view === 'overview' && <Overview summary={activeSummary} language={language} />}
       {view === 'map' && <CramSchoolMap summary={activeSummary} language={language} viewDistrict={openDistrict} />}
@@ -139,5 +141,5 @@ export default function RegisteredCramSchoolsModule({ records, summary, language
       {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料內容' : 'Data contents'}</h3><p>{zh ? '立案補習班資料提供臺北市立案補習班公開登記資料，包含補習班名稱、地址、電話、立案日期、立案文號、教室數、教室面積與班舍總面積等欄位。資料未提供經緯度，因此本網站以行政區彙總與清單方式呈現，並透過地址提供地圖查詢連結。' : 'Registered cram-school data provides Taipei public registry records for registered cram schools, including name, address, phone, registration date, registration document number, classroom count, classroom area, and total premises area. The data does not provide coordinates, so this site presents district-level summaries and directory records, with map lookup links based on addresses.'}</p></article>
         <article><h3>{zh ? '解讀限制' : 'Interpretation limits'}</h3><p>{zh ? '本資料僅為立案登記清冊，不代表補習班教學品質、招生狀態、課程內容、收費標準、即時營業狀態或推薦程度。' : 'This data is only a registration directory. It does not represent teaching quality, enrollment status, course content, pricing, real-time business status, or recommendation.'}</p></article>
         <article><h3>{zh ? '資料來源' : 'Source'}</h3><p><a href="https://data.taipei/dataset/detail?id=b124a967-fc88-4c45-bea8-41b4ef158a15" target="_blank" rel="noreferrer">{zh ? '臺北市立案補習班資訊' : 'Taipei Registered Cram School Information'} ↗</a></p></article></div>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: post-demo Registry Social C shell normalization (PR #17).
+- Active feature: post-demo Registry Culture and Pets shell normalization (PR #18).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 06 / Registry Culture and Pets on PR #18. Nine registry-directory routes (`cramSchools`, `taipeiCulturalHeritageAssets`, `privateCulturalHeritageSubsidies`, `culturalArtsFoundations`, `animalHospitals`, `animalMedicineSellers`, `veterinarians`, `rabiesVaccinationVeterinaryClinics`, `petRegistrationStations`) now use the shared registry family shell. Seven dedicated multi-view modules use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; the cultural-heritage and pet-registration generated directories opt into the existing generated-directory family wrapper. Existing filters, cross-dataset comparisons, map/district summaries, pagination, CSV exports, cultural-heritage matching semantics, veterinary disclaimers, charts, tables, notices, and domain/data interpretation are preserved. The first E2E run exposed only a strict Playwright partial-heading match on `立案補習班`; the regression was corrected to require an exact heading match. Frontend CI then passed typecheck, unit tests, production build, and Playwright with 103 passed, 1 expected skip, 0 failed.
 
 - 2026-09-18: implemented post-demo Batch 05 / Registry Social C on PR #17. Six registry-directory routes (`registeredAfterSchoolCareCentres`, `subsidizedSeniorResidentialPlacementInstitutions`, `indigenousCommunityOrganizations`, `communityDevelopmentAssociations`, `childYouthResidentialPlacementInstitutions`, `infantCare`) now use the shared registry family shell. Five genuine multi-view pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; `childYouthResidentialPlacementInstitutions` remains a single combined page and its seven non-functional faux tabs were removed rather than converted into misleading navigation. Existing filtering, pagination, exports, capacity/evaluation semantics, maps/external lookups, charts, tables, notices, and domain/data interpretation are preserved. Frontend CI passed typecheck, unit tests, production build, and Playwright with 101 passed, 1 expected skip, 0 failed.
 

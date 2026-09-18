@@ -13,6 +13,8 @@ This document records the pre-demo verification baseline for the merged A–H re
 
 The deployment workflow fetched current source data, converted it, ran type checking, unit tests and Playwright, built the Vite production bundle, uploaded release evidence, and deployed the exact verified commit to GitHub Pages.
 
+This is the verified application/data baseline immediately before the documentation refresh. Merging documentation-only changes to `main` will trigger another GitHub Pages workflow because deployment runs on every `main` push; confirm that follow-up run before the demo, since its release-time bulk data fetch may produce newer source snapshots even though application code is unchanged.
+
 ## Verification results
 
 | Check | Result |

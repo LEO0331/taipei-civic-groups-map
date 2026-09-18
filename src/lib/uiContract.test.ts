@@ -134,3 +134,31 @@ test('Registry Social A modules use the shared registry shell without inventing 
     assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
   }
 });
+
+
+test('Registry Social B modules use the shared registry shell and remove legacy or faux tabs', async () => {
+  for (const modulePath of [
+    '../ElderlyWelfareInstitutionsModule.tsx',
+    '../DisabilityInstitutionCapacityAndVacanciesModule.tsx',
+    '../SeniorServiceSiteCoursesModule.tsx',
+    '../VisuallyImpairedMassageEstablishmentsModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  const privateSenior = await readSource('../PrivateSeniorResidentialLongTermCareInstitutionsModule.tsx');
+  assert.match(privateSenior, /uiFamily=\{UI_FAMILIES\.registryDirectory\}/);
+
+  const childcare = await readSource('../CommunityPublicChildcareHomesModule.tsx');
+  assert.match(childcare, /<DatasetFamilyFrame family=\{UI_FAMILIES\.registryDirectory\}>/);
+  assert.match(childcare, /<DatasetFamilyHeading/);
+  assert.doesNotMatch(childcare, /<div className="subtabs"/);
+  assert.doesNotMatch(childcare, /<AccessibleTabs /);
+
+  const app = await readSource('../App.tsx');
+  assert.match(app, /tab === 'socialWelfareFoundations'[\s\S]*uiFamily=\{uiFamilyForDataset\(tab\)\}/);
+});

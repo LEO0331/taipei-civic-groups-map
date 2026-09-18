@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
 import { buildIndustryGrantSummary, filterIndustryGrants } from './lib/industryGrants';
@@ -137,13 +140,12 @@ export default function IndustryModule({ records, summary, language }: { records
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setView('directory'); };
   const views = [['overview', zh ? '補助總覽' : 'Grant Overview'], ['map', zh ? '行政區分布' : 'District Distribution'], ['categories', zh ? '產業類別' : 'Industry Categories'], ['directory', zh ? '廠商名冊' : 'Company Directory']] as const;
   return <><GrantFilters filters={filters} setFilters={setFilters} records={records} language={language} />
-    <section className="workspace"><div className="section-heading"><p>02 / INDUSTRY GRANTS</p><h2>{zh ? '產業補助廠商' : 'Industry Grant Recipients'}</h2>
-      <span>{zh ? '探索臺北市產業發展獎勵補助計畫之獲補助廠商、產業類別、補助金額與行政區分布' : 'Explore Taipei industry development grant recipient companies, industry categories, subsidy amounts, and district distribution'}</span></div>
-      <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.statisticsAnalysis}><DatasetFamilyHeading eyebrow="02 / INDUSTRY GRANTS" title={zh ? '產業補助廠商' : 'Industry Grant Recipients'} description={zh ? '探索臺北市產業發展獎勵補助計畫之獲補助廠商、產業類別、補助金額與行政區分布' : 'Explore Taipei industry development grant recipient companies, industry categories, subsidy amounts, and district distribution'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '產業補助統計資料檢視' : 'Industry grant statistics data views'} idPrefix="industry-grants" />
       <div className="notice subtle">{zh ? '產業補助資料僅供公開資料探索，不代表投資建議、企業評價、政策成效判斷或官方背書。' : 'Industry grant data is for public-data exploration only. It is not investment advice, company evaluation, policy-effectiveness assessment, or official endorsement.'}</div>
       {view === 'overview' && <GrantOverview summary={activeSummary} records={filtered} language={language} />}
       {view === 'map' && <GrantMap summary={activeSummary} records={filtered} language={language} viewDistrict={openDistrict} />}
       {view === 'categories' && <div className="chart-grid"><BarChart language={language} currency title={zh ? '各產業類別核定補助款' : 'Approved subsidy by industry category'} data={activeSummary.byIndustryCategory.map((item) => ({ label: item.industryCategory, value: item.approvedSubsidyNtd }))} /><BarChart language={language} title={zh ? '各產業類別補助紀錄數' : 'Records by industry category'} data={activeSummary.byIndustryCategory.map((item) => ({ label: item.industryCategory, value: item.recordCount }))} /></div>}
       {view === 'directory' && <><div className="section-heading inline"><div /><strong>{filtered.length.toLocaleString()} <span>{zh ? '筆符合紀錄' : 'matching records'}</span></strong></div><CompanyDirectory records={filtered} language={language} /></>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

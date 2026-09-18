@@ -11,8 +11,10 @@ async function openCatalogue(page: Page) {
 
 async function selectDataset(page: Page, label: string) {
   const popover = await openCatalogue(page);
-  const search = popover.locator('.catalogue-popover-search input');
-  await search.fill(label);
+  const headerSearch = page.locator('.catalogue-search input');
+  const popoverSearch = popover.locator('.catalogue-popover-search input');
+  if (await headerSearch.isVisible()) await headerSearch.fill(label);
+  else await popoverSearch.fill(label);
   const button = popover.locator('.catalogue-category button').filter({ hasText: label }).first();
   await expect(button).toBeVisible();
   await button.click();

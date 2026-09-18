@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
 import {
@@ -88,8 +91,8 @@ export default function ElderlyWelfareInstitutionsModule({ records, summary, lan
   const activeSummary = useMemo(() => Object.values(filters).some(Boolean) ? buildElderlyWelfareInstitutionSummary(filtered) : summary, [filtered, filters, summary]);
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setView('directory'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['districts', zh ? '行政區分布' : 'District Distribution'], ['attributes', zh ? '機構屬性' : 'Institution Attributes'], ['care', zh ? '收容對象' : 'Care Recipient Categories'], ['beds', zh ? '床位統計' : 'Bed Counts'], ['directory', zh ? '機構清單' : 'Institution Directory'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
-  return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} /><section className="workspace"><div className="section-heading"><p>06 / SOCIAL WELFARE & CARE SERVICE PUBLIC RECORDS</p><h2>{zh ? '老人福利機構名冊' : 'Elderly Welfare Institutions'}</h2><span>{zh ? '查詢臺北市老人福利機構名冊，包含屬性、機構名稱、區域別、地址、電話、收容對象與核定床位數等公開資料。' : 'Look up Taipei elderly welfare institution directory records, including institution attribute, institution name, district, address, phone, care recipient category, and approved bed counts.'}</span></div>
-    <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+  return <><Filters filters={filters} setFilters={setFilters} records={records} language={language} /><DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow="06 / SOCIAL WELFARE & CARE SERVICE PUBLIC RECORDS" title={zh ? '老人福利機構名冊' : 'Elderly Welfare Institutions'} description={zh ? '查詢臺北市老人福利機構名冊，包含屬性、機構名稱、區域別、地址、電話、收容對象與核定床位數等公開資料。' : 'Look up Taipei elderly welfare institution directory records, including institution attribute, institution name, district, address, phone, care recipient category, and approved bed counts.'} />
+    <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '老人福利機構資料檢視' : 'Elderly welfare institution data views'} idPrefix="elderly-welfare" />
     <div className="section-heading inline"><div><p>{zh ? '篩選結果' : 'Filtered records'}</p></div><strong>{filtered.length.toLocaleString()} <span>{zh ? '筆' : 'records'}</span></strong></div>
     {view === 'overview' && <Overview summary={activeSummary} language={language} />}
     {view === 'districts' && <DistrictMap summary={activeSummary} language={language} openDistrict={openDistrict} />}
@@ -98,5 +101,5 @@ export default function ElderlyWelfareInstitutionsModule({ records, summary, lan
     {view === 'beds' && <><div className="notice subtle">{zh ? '此圖僅整理老人福利機構名冊公開資料中的床位數，不代表即時空床、收住資格、收費標準、補助資格、照護品質、推薦排名、醫療建議或長照建議。' : 'This chart only organizes bed-count fields from elderly welfare institution public data. It does not represent real-time vacancies, admission eligibility, fees, subsidy eligibility, care quality, recommendation ranking, medical advice, or long-term care advice.'}</div><div className="chart-grid"><BarChart title={zh ? '床位類型分布' : 'Bed type distribution'} data={[{ label: zh ? '長照' : 'Long-term care', value: activeSummary.totalLongTermCareBeds }, { label: zh ? '養護' : 'Nursing care', value: activeSummary.totalNursingCareBeds }, { label: zh ? '失智' : 'Dementia care', value: activeSummary.totalDementiaCareBeds }, { label: zh ? '安養' : 'Residential care', value: activeSummary.totalResidentialCareBeds }]} /><BarChart title={zh ? '核定床位數最多機構' : 'Top institutions by approved beds'} data={activeSummary.topInstitutionsByApprovedBeds.slice(0, 20).map((item) => ({ label: item.institutionName, value: item.approvedTotalBedCount ?? 0 }))} /></div></>}
     {view === 'directory' && <Directory records={filtered} language={language} />}
     {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料來源與限制' : 'Source and limits'}</h3><p>{disclaimer(zh)}</p></article><article><h3>{zh ? '處理方式' : 'Processing'}</h3><p>{zh ? '資料未提供官方經緯度，因此地圖以行政區彙總呈現；清單提供地址外部地圖查詢，不建立精確內部點位。老人福利機構與準公共化托嬰中心、通訊心理諮商機構、預防接種合約院所資料性質不同，不應直接合併比較服務容量或品質。' : 'The data has no official coordinates, so the map shows district summaries only. The directory provides external address map lookup and does not create exact internal points. Elderly welfare institutions, quasi-public infant care centers, telepsychology institutions, and contracted vaccination providers have different meanings and should not be directly merged for service capacity or quality comparison.'}</p></article></div>}
-  </section></>;
+  </DatasetFamilyFrame></>;
 }

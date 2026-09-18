@@ -6,17 +6,23 @@ A bilingual Vite + React dashboard for browsing selected Taipei public-record da
 
 ## What it provides
 
-- A searchable, topic-based catalogue with 116 visible modules backed by 117 static dataset directories.
+- A searchable, topic-based catalogue with 156 classified routes/views; Data Trust tracks 117 static dataset directories.
 - Bilingual Traditional Chinese and English interface text.
 - Dataset-specific filtering, source-field detail, CSV export, and external address lookup where the source supports them.
-- Build-time data-trust evidence: readable source dates, clearly marked unknown dates, and a local-data/privacy reminder.
-- Static deployment to GitHub Pages.
+- Build-time Data Trust evidence: readable source dates, clearly marked unknown dates, explicit reused-snapshot warnings, and a compact local-data/privacy reminder.
+- URL-shareable dataset/language navigation, persistent onboarding preference, accessible keyboard tabs, route-level lazy module loading, and static deployment to GitHub Pages.
+
+## Current release status
+
+The merged A–H remediation/polish series was pre-demo verified on **2026-09-18** at commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`. The matching GitHub Pages workflow completed successfully with fresh data fetch/conversion, typecheck, unit tests, production build, and **91 passed / 1 expected skip / 0 failed** Playwright tests across desktop and mobile.
+
+Release evidence from that deployment reports **117** Data Trust directories, **32** with a readable source date, **85** with an unknown source date, and **0** reused-snapshot fallbacks. See [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md) for the complete verification record.
 
 ## Data catalogue
 
 Directories are grouped by public-service topic: health and medical care; social welfare, family and care; work, industry and business; education, culture and travel; city services and environment; animals and pets; and exploration and comparison.
 
-Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts). When adding a dataset, give it one deliberate category and useful search terms; an uncategorized dataset is rejected rather than silently hidden from the catalogue.
+Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts). Every catalogue route/view also resolves through [`src/lib/datasetUiFamily.ts`](src/lib/datasetUiFamily.ts) to one of six UI families: `healthcare-standard`, `healthcare-rich-directory`, `location-directory`, `registry-directory`, `records-analysis`, or `statistics-analysis`. When adding a dataset, give it one deliberate catalogue category, useful search terms, and a deliberate UI-family assignment or category-based family default.
 
 ### Private cultural heritage subsidies
 
@@ -78,9 +84,10 @@ After deployment, a verified site owner should submit `https://leo0331.github.io
 ## Common commands
 
 ```bash
-# Check types, tests, and a production bundle
+# Check types, unit tests, browser workflows, and a production bundle
 npm run typecheck
 npm test
+npm run test:e2e
 npm run build
 
 # Run only the interface accessibility contracts
@@ -108,16 +115,17 @@ Avoid inferring current availability, eligibility, quality, safety, compliance, 
 
 ## Verification
 
-Before opening a pull request or deploying, run:
+Before opening a pull request, run the focused checks for the change and then:
 
 ```bash
 npm run typecheck
 npm test
+npm run test:e2e
 npm run build
 git diff --check
 ```
 
-The GitHub Pages workflow repeats conversion, type checking, tests, and build. It retains the trust manifest, release summary, and conversion report as deployment evidence.
+The GitHub Pages workflow performs a fresh bulk fetch/conversion, typecheck, unit tests, desktop/mobile Playwright, production build, release-evidence upload, and Pages deployment. It retains the trust manifest, release summary, and conversion report as deployment evidence.
 
 ## Architecture
 
@@ -170,11 +178,12 @@ sequenceDiagram
 ## Project layout
 
 ```text
-src/                 React modules, catalogue metadata, and shared utilities
+src/                 React modules, catalogue/UI-family metadata, and shared utilities
 scripts/             source fetchers, converters, and build-time reports
 public/data/         generated local static datasets
-.github/workflows/   GitHub Pages deployment workflow
-doc/                 product and design-decision documentation
+.github/workflows/   frontend CI and GitHub Pages deployment workflows
+doc/                 long-form product and design-decision documentation
+docs/                release, verification, and operational notes
 ```
 
 ## Deployment
@@ -183,6 +192,6 @@ Push to `main` to deploy through [`.github/workflows/deploy.yml`](.github/workfl
 
 ## Important limits
 
-This is an exploration tool for public records, not an authoritative real-time service directory. Source dates may be absent or old; unknown dates are intentionally disclosed. Addresses are used only for optional external-map lookup where available. Searches and filters remain in the browser, but opening an external map shares the selected address with that map provider. The app intentionally uses network-first deployment: legacy Service Worker caches are removed to prevent GitHub Pages from pairing stale HTML with replaced, content-hashed bundles.
+This is an exploration tool for public records, not an authoritative real-time service directory. Source dates may be absent or old; unknown dates are intentionally disclosed. Addresses are used only for optional external-map lookup where available. Searches and filters remain in the browser, but opening an external map shares the selected address with that map provider. The app intentionally uses network-first deployment: legacy Service Worker caches are removed to prevent GitHub Pages from pairing stale HTML with replaced, content-hashed bundles. The main production JavaScript chunk is currently about 549.5 kB minified / 161.4 kB gzip, so Vite still emits its >500 kB advisory even though dataset modules are lazy-loaded into route-level chunks.
 
 Read the product recommendations and ongoing risks in [臺北公共資料儀表板－設計決策與演進方向](doc/臺北公共資料儀表板－設計決策與演進方向.md).

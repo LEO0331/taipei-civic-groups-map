@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-18
-- Active feature: post-demo Registry Business A shell normalization (PR #13).
+- Active feature: post-demo Registry Business B shell normalization (PR #14).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-18: implemented post-demo Batch 02 / Registry Business B on PR #14. Six registry-directory routes (`waterPipeInstallationContractors`, `approvedGasWaterHeaterInstallers`, `domesticEmploymentServiceAgencies`, `pestControlBusinesses`, `beautyHairdressingHygieneCertifications`, `licensedNaturalGasPipelineContractors`) now use the shared registry shell. Five dedicated modules use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; `GeneratedDatasetDirectoryModule` gained an opt-in family wrapper so the domestic-employment directory can normalize without changing unrelated generated-directory routes. Existing filters, pagination reset behavior, parsing, calculations, maps, charts, tables, notices, and data logic are unchanged. Source-contract and Playwright coverage were added, and Frontend CI passed typecheck, unit tests, production build, and the full desktop/mobile E2E suite.
 
 - 2026-09-18: implemented post-demo Batch 01 / Registry Business A on PR #13. Eight registry-directory business and industry dashboards (`employmentAgencies`, `licensedArcades`, `licensedSpecialEntertainment`, `registeredFactories`, `enterpriseHeadquarters`, `biotechCompanies`, `nangangCompanies`, `dawannanCompanies`) now use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and shared `AccessibleTabs` while preserving existing filters, parsing, calculations, maps, charts, tables, notices, and data behavior. Added source-contract coverage plus Playwright coverage for the shared registry frame and selected-tab semantics. Frontend CI passed `npm run typecheck`, `npm test`, `npm run build`, and the full desktop/mobile `npm run test:e2e` suite.
 

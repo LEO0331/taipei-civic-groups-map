@@ -19,14 +19,27 @@ test('current datasets keep the data trust notice compact and neutral by default
   await expect(details).toContainText('個資料目錄有可判讀的來源日期');
   await expect(details).toContainText('搜尋與篩選只在此瀏覽器中處理');
 
-  const summaryBox = await trust.locator('.data-trust-summary').boundingBox();
-  const primaryBox = await primary.boundingBox();
-  const detailsBox = await details.boundingBox();
-  expect(summaryBox).not.toBeNull();
-  expect(primaryBox).not.toBeNull();
-  expect(detailsBox).not.toBeNull();
-  expect(detailsBox!.width).toBeGreaterThan(summaryBox!.width * 0.9);
-  expect(detailsBox!.y).toBeGreaterThanOrEqual(primaryBox!.y + primaryBox!.height);
+  const layout = await trust.locator('.data-trust-summary').evaluate((summary) => {
+    const primaryElement = summary.querySelector<HTMLElement>('.data-trust-primary');
+    const detailsElement = summary.querySelector<HTMLElement>('.data-trust-details');
+    if (!primaryElement || !detailsElement) throw new Error('Data Trust layout elements are missing');
+
+    const summaryRect = summary.getBoundingClientRect();
+    const primaryRect = primaryElement.getBoundingClientRect();
+    const detailsRect = detailsElement.getBoundingClientRect();
+
+    return {
+      flexWrap: getComputedStyle(summary).flexWrap,
+      summaryWidth: summaryRect.width,
+      primaryBottom: primaryRect.bottom,
+      detailsTop: detailsRect.top,
+      detailsWidth: detailsRect.width,
+    };
+  });
+
+  expect(layout.flexWrap).toBe('wrap');
+  expect(layout.detailsWidth).toBeGreaterThan(layout.summaryWidth * 0.9);
+  expect(layout.detailsTop).toBeGreaterThanOrEqual(layout.primaryBottom - 1);
 });
 
 test('stale datasets remain visibly elevated instead of being visually muted', async ({ page }) => {

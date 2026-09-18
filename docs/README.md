@@ -3,6 +3,7 @@
 ## Current release baseline
 
 - [Pre-demo verification — 2026-09-18](pre-demo-verification-2026-09-18.md) — exact production commit, release workflow evidence, desktop/mobile verification, Data Trust counts, known non-blockers, and final demo spot-check.
+- [UI family classification and post-demo migration inventory](ui-family-classification.md) — all 156 catalogue routes/views grouped into the six UI families, with Batch H direct migrations marked and the post-demo migration contract.
 - [Product/design decisions and evolution](../doc/臺北公共資料儀表板－設計決策與演進方向.md) — long-form design rationale, data-governance boundaries, historical review context, and the current September baseline.
 - [Project progress](../progress.md) — chronological implementation evidence and current freeze/post-demo priorities.
 - [Session handoff](../session-handoff.md) — restartable current state for the next maintenance session.

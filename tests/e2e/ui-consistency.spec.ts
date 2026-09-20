@@ -68,6 +68,24 @@ test('Location Social dashboards use the shared location-directory frame', async
   }
 });
 
+
+test('Location Cultural City dashboards use the shared location-directory frame', async ({ page }) => {
+  for (const [dataset, heading] of [
+    ['travelAccommodations', '臺北旅遊網住宿資料'],
+    ['streetPerformerVenues', '街頭藝人展演場地資訊'],
+    ['artsCulturalVenues', '臺北市藝文館所'],
+    ['cemeteryPublicFacilities', '各區公墓資訊'],
+    ['hotels', '一般旅館名冊'],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="location-directory"]');
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'location-directory');
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+  }
+});
+
 test('data trust uses a readable dataset name instead of an implementation slug', async ({ page }) => {
   await page.goto('/?dataset=adultInfluenzaVaccineProviders&lang=zh');
   const summary = page.locator('.data-trust-primary');

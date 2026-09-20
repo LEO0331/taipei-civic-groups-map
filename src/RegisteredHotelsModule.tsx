@@ -1,3 +1,6 @@
+import AccessibleTabs from './AccessibleTabs';
+import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { useEffect, useMemo, useState } from 'react';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
@@ -122,9 +125,8 @@ export default function RegisteredHotelsModule({ records, summary, language }: {
   const openDistrict = (district: string) => { setFilters({ ...emptyFilters, district }); setView('directory'); };
   const views = [['overview', zh ? '總覽' : 'Overview'], ['map', zh ? '行政區分布' : 'District Distribution'], ['directory', zh ? '旅館名冊' : 'Hotel Directory'], ['notes', zh ? '資料說明' : 'Data Notes']] as const;
   return <><Filters filters={filters} setFilters={setFilters} language={language} />
-    <section className="workspace"><div className="section-heading"><p>05 / REGISTERED HOTELS</p><h2>{zh ? '一般旅館名冊' : 'Registered Hotels'}</h2>
-      <span>{zh ? '探索臺北市合法一般旅館公開登記清冊，依行政區、營業地址、登錄定價欄位與房間數整理。' : 'Explore Taipei legal general hotel registry records by district, business address, listed room-rate range, and room count.'}</span></div>
-      <div className="subtabs">{views.map(([id, label]) => <button className={view === id ? 'active' : ''} onClick={() => setView(id)} key={id}>{label}</button>)}</div>
+    <DatasetFamilyFrame family={UI_FAMILIES.locationDirectory}><DatasetFamilyHeading eyebrow="05 / REGISTERED HOTELS" title={zh ? '一般旅館名冊' : 'Registered Hotels'} description={zh ? '探索臺北市合法一般旅館公開登記清冊，依行政區、營業地址、登錄定價欄位與房間數整理。' : 'Explore Taipei legal general hotel registry records by district, business address, listed room-rate range, and room count.'} />
+      <AccessibleTabs tabs={views} value={view} onChange={setView} ariaLabel={zh ? '一般旅館名冊資料檢視' : 'Registered hotel data views'} idPrefix="registered-hotels" />
       <div className="notice subtle">{zh ? '一般旅館名冊資料為公開資料中的旅館登記清冊，僅供資料查詢與探索使用，不代表住宿品質、即時營業狀態、即時房價、訂房可用性、推薦程度或旅宿安全評分。實際營業狀態、房價、房型、訂房資訊與最新登記情形請以觀傳局、主管機關、旅館公告或訂房平台資訊為準。' : 'Registered hotel data is a public registry directory for lookup and exploration only. It does not represent lodging quality, real-time operating status, real-time room prices, booking availability, recommendation, or lodging safety score. Actual operating status, room rates, room types, booking information, and latest registration status should be verified with the Department of Information and Tourism, official authorities, hotel notices, or booking platforms.'}</div>
       {view === 'overview' && <Overview summary={activeSummary} language={language} />}
       {view === 'map' && <HotelMap summary={activeSummary} language={language} viewDistrict={openDistrict} />}
@@ -132,5 +134,5 @@ export default function RegisteredHotelsModule({ records, summary, language }: {
       {view === 'notes' && <div className="notes-grid"><article><h3>{zh ? '資料內容' : 'Data contents'}</h3><p>{zh ? '臺北市一般旅館名冊包含縣市代碼、專用標識編號、旅館名稱、電話或手機號碼、營業地址、客房最低定價、客房最高定價與房間數。' : 'The Taipei general hotel registry includes city code, registration ID, hotel name, phone, business address, listed minimum room rate, listed maximum room rate, and room count.'}</p></article>
         <article><h3>{zh ? '解讀限制' : 'Interpretation limits'}</h3><p>{zh ? '客房最低定價與客房最高定價是公開登記資料中的登錄定價欄位，不是即時房價、訂房價格、推薦排序或旅宿品質指標。' : 'Listed minimum and maximum room-rate fields are public registry fields. They are not real-time prices, booking prices, recommendation rankings, or lodging quality indicators.'}</p></article>
         <article><h3>{zh ? '資料來源' : 'Source'}</h3><p><a href="https://data.taipei/dataset/detail?id=4d7d0b46-2e90-4ee7-b000-c0f2f3a37651" target="_blank" rel="noreferrer">{zh ? '臺北市一般旅館名冊' : 'Taipei General Hotel Registry'} ↗</a></p></article></div>}
-    </section></>;
+    </DatasetFamilyFrame></>;
 }

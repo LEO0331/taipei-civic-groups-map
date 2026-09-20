@@ -1276,7 +1276,7 @@ export default function App() {
         notice={language === 'zh' ? '本資料不代表即時透析名額、床位、預約、收治資格、服務時間、費用、醫療品質、緊急收治能力、診斷、治療或醫療建議；請向醫療機構或臺北市政府衛生局確認。' : 'This dataset does not represent real-time capacity, beds, appointments, eligibility, service hours, fees, quality, emergency capability, diagnosis, treatment, or medical advice. Confirm with the institution or Taipei City Department of Health.'}
       />}
       {tab === 'streetPerformerVenues' && <GeneratedDatasetDirectoryModule
-        language={language} title={language === 'zh' ? '街頭藝人展演場地資訊' : 'Street Performer Venues'}
+        language={language} uiFamily={uiFamilyForDataset(tab)} eyebrow="CULTURE / STREET PERFORMANCE / VENUES" title={language === 'zh' ? '街頭藝人展演場地資訊' : 'Street Performer Venues'}
         subtitle={language === 'zh' ? '主管機關、表演類型及申請方式均為來源文字；場地名稱不會自動轉為地圖標記。' : 'Authority, performance types, and application methods are source text; venue names are not converted into map markers.'}
         records={streetPerformerVenueRecords}
         columns={[["sourceSequenceNumber", language === 'zh' ? '項次' : 'ID'], ["venueName", language === 'zh' ? '展演地' : 'Venue'], ["managingAuthority", language === 'zh' ? '主管機關' : 'Managing authority'], ["openingHoursRaw", language === 'zh' ? '開放時段' : 'Opening hours'], ["allowedPerformanceTypes", language === 'zh' ? '開放表演類型' : 'Performance types'], ["applicationMethod", language === 'zh' ? '申請方式' : 'Application method'], ["fullPhone", language === 'zh' ? '聯絡電話' : 'Phone'], ["externalMapQuery", language === 'zh' ? '地圖查詢' : 'Map lookup']]}

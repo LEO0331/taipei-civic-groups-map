@@ -367,3 +367,21 @@ test('Location Social modules use the shared location-directory shell and remove
   assert.doesNotMatch(communityCare, /<AccessibleTabs /);
   assert.doesNotMatch(communityCare, /<div className="subtabs"/);
 });
+
+
+test('Location Cultural City modules use the shared location-directory shell', async () => {
+  for (const modulePath of [
+    '../TaipeiTravelAccommodationsZhModule.tsx',
+    '../CemeteryPublicFacilitiesModule.tsx',
+    '../RegisteredHotelsModule.tsx',
+    '../ArtsCulturalVenuesModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame[^>]*family=\{UI_FAMILIES\.locationDirectory\}/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+  const app = await readSource('../App.tsx');
+  assert.match(app, /tab === 'streetPerformerVenues'[\s\S]*?uiFamily=\{uiFamilyForDataset\(tab\)\}[\s\S]*?eyebrow="CULTURE \/ STREET PERFORMANCE \/ VENUES"/);
+});

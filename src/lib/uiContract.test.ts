@@ -351,3 +351,19 @@ test('Statistics Analysis modules use the shared statistics-analysis shell and k
   assert.match(reference, /<DatasetFamilyFrame family=\{UI_FAMILIES\.statisticsAnalysis\}>/);
   assert.match(reference, /<AccessibleTabs /);
 });
+
+
+test('Location Social modules use the shared location-directory shell and remove legacy or faux tabs', async () => {
+  for (const modulePath of ['../FixedSiteTemporaryChildcareModule.tsx','../DisabilityEmploymentResourceMapModule.tsx','../SeniorGroupMealServiceSitesModule.tsx','../ChildYouthFriendlyWelfareServiceSitesModule.tsx','../CommunityIntegratedCareLevelCUnitsModule.tsx']) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame[^>]*family=\{UI_FAMILIES\.locationDirectory\}/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+  const communityCare = await readSource('../CommunityCareServiceSitesModule.tsx');
+  assert.match(communityCare, /<DatasetFamilyFrame[^>]*family=\{UI_FAMILIES\.locationDirectory\}/);
+  assert.match(communityCare, /<DatasetFamilyHeading/);
+  assert.doesNotMatch(communityCare, /<AccessibleTabs /);
+  assert.doesNotMatch(communityCare, /<div className="subtabs"/);
+});

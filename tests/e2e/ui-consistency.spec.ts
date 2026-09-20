@@ -45,6 +45,29 @@ test('physical therapy remains an intentional location-directory family', async 
   await expect(therapy.locator('.ivp-hero')).toHaveCount(0);
 });
 
+test('Location Social dashboards use the shared location-directory frame', async ({ page }) => {
+  for (const [dataset, heading, hasTabs] of [
+    ['fixedSiteTemporaryChildcare', '臺北市定點臨托', true],
+    ['disabilityEmploymentResources', '身障就業資源地圖', true],
+    ['seniorGroupMealServiceSites', '老人共餐單位一覽表', true],
+    ['childYouthFriendlyWelfareServiceSites', '兒少友善福利服務據點', true],
+    ['communityCareServiceSites', '社區照顧關懷據點', false],
+    ['communityIntegratedCareLevelCUnits', '社區整體照顧服務體系 C 級單位', true],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="location-directory"]');
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'location-directory');
+    if (hasTabs) {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+      await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+    } else {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+      await expect(family.getByRole('table')).toBeVisible();
+    }
+  }
+});
+
 test('data trust uses a readable dataset name instead of an implementation slug', async ({ page }) => {
   await page.goto('/?dataset=adultInfluenzaVaccineProviders&lang=zh');
   const summary = page.locator('.data-trust-primary');

@@ -358,6 +358,31 @@ test('Statistics Evaluations dashboards use the shared statistics-analysis frame
   }
 });
 
+
+test('Statistics Analysis dashboards use the shared statistics-analysis frame', async ({ page }) => {
+  for (const [dataset, heading, hasTabs] of [
+    ['seniorCareCapacityAndOccupancy', '老人照顧容量與實際進住統計', false],
+    ['grants', '產業補助廠商', true],
+    ['majorElectricityUsers', '臺北市用電大戶資料', true],
+    ['sportsPublicParticipation', '體育政策公聽會與論壇參與', false],
+    ['mayorCeremonialGiftStatistics', '市長喜喪致贈統計', false],
+    ['healthcareWelfareBudget', '醫療保健福利業務預算', false],
+  ] as const) {
+    await page.goto(`/?dataset=${dataset}&lang=zh`);
+    const family = page.locator('.dataset-family-frame[data-ui-family="statistics-analysis"]');
+    await expect(family.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'statistics-analysis');
+
+    if (hasTabs) {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+      await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+    } else {
+      await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+      await expect(family.getByRole('table')).toBeVisible();
+    }
+  }
+});
+
 test('alternative-service analysis uses the statistics-analysis family', async ({ page }) => {
   await page.goto('/?dataset=alternativeServiceReserveStatistics&lang=zh');
   const family = page.locator('.dataset-family-frame[data-ui-family="statistics-analysis"]');

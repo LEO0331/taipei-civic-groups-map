@@ -320,3 +320,34 @@ test('Statistics Evaluations modules use the shared statistics-analysis shell an
   const app = await readSource('../App.tsx');
   assert.match(app, /tab === 'kindergartenEvaluationPass'[\s\S]*uiFamily=\{uiFamilyForDataset\(tab\)\}/);
 });
+
+
+test('Statistics Analysis modules use the shared statistics-analysis shell and keep true single-view pages tab-free', async () => {
+  for (const modulePath of [
+    '../IndustryModule.tsx',
+    '../MajorElectricityUsersModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.statisticsAnalysis\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  for (const modulePath of [
+    '../SeniorCareCapacityAndOccupancyModule.tsx',
+    '../SportsPublicParticipationModule.tsx',
+    '../MayorCeremonialGiftStatisticsModule.tsx',
+    '../HealthcareWelfareBudgetModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame family=\{UI_FAMILIES\.statisticsAnalysis\}>/, modulePath);
+    assert.match(source, /<DatasetFamilyHeading/, modulePath);
+    assert.doesNotMatch(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  const reference = await readSource('../AlternativeServiceReserveStatisticsModule.tsx');
+  assert.match(reference, /<DatasetFamilyFrame family=\{UI_FAMILIES\.statisticsAnalysis\}>/);
+  assert.match(reference, /<AccessibleTabs /);
+});

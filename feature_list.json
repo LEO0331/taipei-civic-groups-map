@@ -229,8 +229,8 @@
       "dependencies": [
         "post-demo-main-bundle-reduction"
       ],
-      "status": "ready",
-      "evidence": "Keep mcr.microsoft.com/playwright:v1.62.1-noble and all typecheck, unit, build, desktop/mobile Playwright, and visual-regression gates while addressing action runtime warnings separately from bundle work."
+      "status": "done",
+      "evidence": "2026-09-21: Frontend CI and Pages workflows pin first-party actions to current explicit releases: checkout v7.0.1, setup-node v7.0.0, upload-artifact v7.0.1, upload-pages-artifact v5.0.0, and deploy-pages v5.0.1. The Playwright renderer remains pinned to mcr.microsoft.com/playwright:v1.62.1-noble and project Node remains 22. Pages permissions explicitly include actions: read. All existing npm ci, typecheck, unit, build, desktop/mobile Playwright, visual-regression, data-release evidence, and deployment gates are preserved. Branch Frontend CI is required to pass before merge."
     },
     {
       "id": "post-demo-source-date-metadata-a",

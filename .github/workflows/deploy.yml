@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -20,8 +21,8 @@ jobs:
     container:
       image: mcr.microsoft.com/playwright:v1.62.1-noble
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
         with:
           node-version: 22
           cache: npm
@@ -35,7 +36,7 @@ jobs:
       - run: npm run test:e2e
       - name: Upload Playwright failure artifacts
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: playwright-failures
           path: test-results/
@@ -43,7 +44,7 @@ jobs:
           retention-days: 7
       - run: npm run build
       - name: Upload data release evidence
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: data-release-evidence
           path: |
@@ -51,7 +52,7 @@ jobs:
             public/data/data-release-summary.json
             public/data/conversion-report.json
           if-no-files-found: error
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: dist
 
@@ -64,4 +65,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5.0.1

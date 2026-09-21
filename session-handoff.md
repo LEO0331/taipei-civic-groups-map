@@ -2,9 +2,9 @@
 
 ## Current Objective
 
-- Goal: Stabilize and close the visual regression baseline after Batch 16.
-- Status: PR #28's correction passed in Frontend CI run `35549490465`. Batch 16 adds twelve committed Linux Chromium screenshots spanning the six UI families in desktop and mobile, but its initial Frontend CI run `35554254088` failed in the unrestricted full Playwright step. The two-worker CI correction is pending one fresh run.
-- Scope: the baseline is test/documentation-only; no dataset parsing, calculations, filters, charts, tables, source data, conversion behavior, or production CSS changes.
+- Goal: Complete Batch 18 main bundle reduction on `postdemo/18-main-bundle-reduction`.
+- Status: Batch 18 is complete. The entry chunk fell from 556.42 kB / 163.76 kB gzip to 396.04 kB / 114.93 kB gzip by deferring the shared Leaflet runtime behind lazy civic-map and district-comparison boundaries. Typecheck, 139 unit tests, production build, focused map loading, and full Playwright (143 passed, 1 expected skip) pass.
+- Scope: application import boundaries, regression coverage, and documentation only; no dataset parsing, calculations, filters, charts, tables, source data, conversion behavior, visual thresholds, or production CSS changes.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
 
@@ -38,14 +38,14 @@
 
 ## Known Non-blocking Items
 
-- Main production JavaScript chunk is approximately 549.5 kB minified / 161.4 kB gzip; Vite still emits the >500 kB advisory.
+- The main production JavaScript chunk is now 396.04 kB minified / 114.93 kB gzip; Vite's >500 kB advisory is resolved.
 - Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
 - GitHub Actions emits deprecation/runtime notices for older action internals.
-- Screenshot baselines are intentionally representative rather than exhaustive. Review every intentionally changed image in `tests/e2e/visual-regression.spec.ts-snapshots/`; regenerate only in the Linux Playwright image recorded in the visual-baseline note. Do not start bundle maintenance until the Batch 16 CI correction is green.
+- Screenshot baselines are intentionally representative rather than exhaustive. Batch 18 does not update screenshots or visual thresholds.
 
 ## Next Session Startup
 
-1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
-2. Run the focused visual suite in the documented Linux Chromium environment before changing any snapshot.
-3. Inspect all twelve images before accepting an update; do not mask headings, family chrome, tabs, filters, substantive cards/tables, warnings, or layout.
-4. Move next to `post-demo-performance-ci-maintenance` without altering public-data semantics.
+1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/post-demo-main-bundle-reduction-2026-09-21.md`.
+2. Confirm Batch 18's full local and Frontend CI results before closing it.
+3. Start Batch 19 `post-demo-ci-runtime-maintenance` separately; preserve the pinned Playwright Noble renderer and every verification gate.
+4. Preserve all dataset/domain behavior.

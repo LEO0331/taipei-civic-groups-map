@@ -11,6 +11,13 @@ test('dataset modules are route-level lazy imports', async () => {
   assert.match(app, /loadedDataGroups/);
 });
 
+test('entry navigation defers mapping runtime until a map surface opens', async () => {
+  const app = await readFile('src/App.tsx', 'utf8');
+  assert.doesNotMatch(app, /from ['"]react-leaflet['"]/);
+  assert.match(app, /const CivicMap = lazy\(\(\) => import\('\.\/CivicMap'\)\)/);
+  assert.match(app, /const DistrictComparison = lazy\(\(\) => import\('\.\/DistrictComparison'\)\)/);
+});
+
 test('physical-therapy component styles do not override generic global utility classes', async () => {
   const css = await readFile('src/styles.css', 'utf8');
   const forbidden = [

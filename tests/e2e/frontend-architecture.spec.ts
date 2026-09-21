@@ -21,6 +21,14 @@ test('physical-therapy styles stay isolated from the civic directory', async ({ 
   expect(textTransform).toBe('none');
 });
 
+test('deferred civic map runtime loads when the map view opens', async ({ page }) => {
+  await page.goto('/?dataset=civic&lang=zh');
+  const main = page.locator('main');
+  await expect(main.getByRole('heading', { name: '人民團體', exact: true })).toBeVisible();
+  await main.getByRole('tab', { name: '地圖', exact: true }).click();
+  await expect(main.locator('.leaflet-container')).toBeVisible();
+});
+
 test('representative UI families do not overflow the mobile viewport', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'mobile', 'mobile layout regression check');
   const cases = [

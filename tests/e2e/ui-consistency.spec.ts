@@ -62,17 +62,17 @@ test('Healthcare exception multi-view routes use the healthcare-standard family 
   }
 });
 
-test('Healthcare generated and single-view exceptions use the healthcare-standard family shell', async ({ page }) => {
-  for (const [dataset, hasTabs] of [
-    ['hospicePalliativeCareInstitutions', true],
-    ['rotavirusVaccineSubsidyProviders', true],
-    ['medicalRadiologicalInstitutions', false],
-    ['licensedAssistedReproductionInstitutions', false],
-    ['methadoneCrossRegionServices', false],
-  ] as const) {
+for (const [dataset, hasTabs] of [
+  ['hospicePalliativeCareInstitutions', true],
+  ['rotavirusVaccineSubsidyProviders', true],
+  ['medicalRadiologicalInstitutions', false],
+  ['licensedAssistedReproductionInstitutions', false],
+  ['methadoneCrossRegionServices', false],
+] as const) {
+  test(`Healthcare generated or single-view exception ${dataset} uses the healthcare-standard family shell`, async ({ page }) => {
     await expectHealthcareStandardRoute(page, dataset, hasTabs);
-  }
-});
+  });
+}
 
 
 test('physical therapy remains an intentional location-directory family', async ({ page }) => {

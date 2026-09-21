@@ -1,3 +1,4 @@
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { useEffect, useState } from 'react';
 import GeneratedDatasetDirectoryModule from './GeneratedDatasetDirectoryModule';
 
@@ -10,7 +11,7 @@ export default function HemodialysisMedicalInstitutionsModule({ language }: { la
       .then((response) => response.json()).then(setRecords).catch(() => setRecords([]));
   }, []);
 
-  return <GeneratedDatasetDirectoryModule language={language} records={records}
+  return <GeneratedDatasetDirectoryModule language={language} uiFamily={UI_FAMILIES.healthcareStandard} records={records}
     title={zh ? '臺北市血液透析醫療機構' : 'Taipei Hemodialysis Medical Institutions'}
     subtitle={zh ? '血液透析醫療機構公開名冊；依名稱、行政區、郵遞區號與來源聯絡資訊查詢。' : 'Source-recorded hemodialysis institution directory, searchable by name, district, postal code, and source contact information.'}
     columns={[['sourceSequenceNumber', zh ? '序號' : 'ID'], ['institutionName', zh ? '機構名稱' : 'Institution'], ['districtName', zh ? '行政區（地址解析）' : 'District (derived)'], ['postalCode', zh ? '郵遞區號' : 'Postal code'], ['address', zh ? '地址' : 'Address'], ['phoneRaw', zh ? '電話' : 'Telephone'], ['externalMapQuery', zh ? '地圖查詢' : 'Map lookup']]}

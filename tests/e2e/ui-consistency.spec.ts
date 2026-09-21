@@ -36,6 +36,45 @@ test('simple healthcare directories declare the compact healthcare family', asyn
   await expect(directory.locator('.rehab-filters')).toBeVisible();
 });
 
+async function expectHealthcareStandardRoute(page: Page, dataset: string, hasTabs: boolean) {
+  await page.goto(`/?dataset=${dataset}&lang=zh`);
+  const family = page.locator('.dataset-family-frame[data-ui-family="healthcare-standard"]');
+  await expect(family).toBeVisible();
+  await expect(page.locator('main')).toHaveAttribute('data-active-ui-family', 'healthcare-standard');
+  await expect(family.getByRole('heading').first()).toBeVisible();
+  if (hasTabs) {
+    await expect(family.locator('[data-accessible-tabs="true"]')).toBeVisible();
+    await expect(family.getByRole('tab', { selected: true })).toHaveCount(1);
+  } else {
+    await expect(family.locator('[data-accessible-tabs="true"]')).toHaveCount(0);
+  }
+}
+
+test('Healthcare exception multi-view routes use the healthcare-standard family shell', async ({ page }) => {
+  for (const [dataset, hasTabs] of [
+    ['vaccinationProviders', true],
+    ['travelMedicineClinics', true],
+    ['pediatricMedicalInstitutions', true],
+    ['homeNursingInstitutions', true],
+    ['psychiatricClinics', true],
+  ] as const) {
+    await expectHealthcareStandardRoute(page, dataset, hasTabs);
+  }
+});
+
+test('Healthcare generated and single-view exceptions use the healthcare-standard family shell', async ({ page }) => {
+  for (const [dataset, hasTabs] of [
+    ['hospicePalliativeCareInstitutions', true],
+    ['rotavirusVaccineSubsidyProviders', true],
+    ['medicalRadiologicalInstitutions', false],
+    ['licensedAssistedReproductionInstitutions', false],
+    ['methadoneCrossRegionServices', false],
+  ] as const) {
+    await expectHealthcareStandardRoute(page, dataset, hasTabs);
+  }
+});
+
+
 test('physical therapy remains an intentional location-directory family', async ({ page }) => {
   await page.goto('/?dataset=physicalTherapyClinics&lang=zh');
   const therapy = page.locator('[data-ui-family="location-directory"]');

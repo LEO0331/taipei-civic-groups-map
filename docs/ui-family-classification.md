@@ -19,7 +19,7 @@ This inventory records the UI-family classification introduced in Batch H. It is
 | `records-analysis` | 12 |
 | `statistics-analysis` | 16 |
 
-Post-demo migration priority: `registry-directory` → `records-analysis` → `statistics-analysis` → `location-directory` → healthcare exceptions.
+Post-demo migration status: Batches 01–13 cover `registry-directory`, `records-analysis`, `statistics-analysis`, and `location-directory`; Batch 14 closes the remaining healthcare-exception shells while retaining established compact and rich healthcare patterns.
 
 
 ## `healthcare-rich-directory` — 2
@@ -265,3 +265,15 @@ When moving an unstarred legacy module onto its family primitives:
 6. run focused tests, then typecheck, unit tests, Playwright, production build, and diff check.
 
 The pre-demo release intentionally stops after representative migrations so the demo baseline remains low-risk. Continue this inventory incrementally after the demo.
+
+## Post-demo Batch 14 — healthcare exception closure
+
+Batch 14 applies the acceptance contract to the remaining healthcare-standard exceptions without changing source/data semantics:
+
+- **25 legacy multi-view healthcare modules** move their outer workspace into `DatasetFamilyFrame` with `UI_FAMILIES.healthcareStandard` and replace manual `.subtabs` button lists with shared `AccessibleTabs`. Existing view IDs and page-reset behavior are preserved.
+- **12 bespoke single-view healthcare modules** keep their existing content and controls but move their outer workspace/module panel into the healthcare-standard family frame; no artificial tabs are added.
+- **10 generated healthcare directories** opt into the existing `GeneratedDatasetDirectoryModule` family wrapper, including five dedicated wrapper modules and five App-level generated routes.
+- The existing compact `HealthcareInstitutionDirectory` users, the rehabilitation-medicine reference implementation, and both `healthcare-rich-directory` influenza modules remain on their established healthcare-specific patterns.
+- The App-level `LegacyTabAccessibility` runtime bridge is no longer mounted after the remaining manual healthcare tab lists are migrated.
+
+Batch 14 adds source-contract coverage across every migrated healthcare exception pattern and a focused Playwright matrix across representative multi-view, generated-directory, and single-view routes. Full automated CI evidence is recorded only after the single audited branch push completes.

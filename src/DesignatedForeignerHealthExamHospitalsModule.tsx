@@ -1,3 +1,4 @@
+import { UI_FAMILIES } from './lib/uiFamilies';
 import { useEffect, useState } from 'react';
 import GeneratedDatasetDirectoryModule from './GeneratedDatasetDirectoryModule';
 
@@ -10,7 +11,7 @@ export default function DesignatedForeignerHealthExamHospitalsModule({ language 
       .then((response) => response.json()).then(setRecords).catch(() => setRecords([]));
   }, []);
 
-  return <GeneratedDatasetDirectoryModule language={language} records={records}
+  return <GeneratedDatasetDirectoryModule language={language} uiFamily={UI_FAMILIES.healthcareStandard} records={records}
     title={zh ? '外國人健檢指定醫院' : 'Designated Foreigner Health Examination Hospitals'}
     subtitle={zh ? '外國人健檢指定醫院與效期公開名冊；依名稱、行政區與來源登錄效期查詢。' : 'Source-recorded directory of designated foreigner health-examination hospitals and validity periods.'}
     columns={[['sourceSequenceNumber', zh ? '序號' : 'ID'], ['hospitalName', zh ? '醫院名稱' : 'Hospital'], ['districtName', zh ? '行政區（地址解析）' : 'District (derived)'], ['cityCode', zh ? '縣市代碼' : 'City code'], ['designationValidityRaw', zh ? '指定效期' : 'Designation validity'], ['designationValidityStatus', zh ? '計算狀態' : 'Calculated status'], ['daysUntilExpiry', zh ? '距到期天數' : 'Days until expiry'], ['address', zh ? '地址' : 'Address'], ['externalMapQuery', zh ? '地圖查詢' : 'Map lookup']]}

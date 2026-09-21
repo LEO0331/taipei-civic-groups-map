@@ -2,8 +2,8 @@
 
 ## Current Objective
 
-- Goal: Maintain the accepted visual regression baseline after Batch 16.
-- Status: Batches 01–16 are complete. PR #28 is merged and GitHub Actions run `35549734795` passed build and deployment. Batch 16 adds twelve committed Linux Chromium screenshots spanning the six UI families in desktop and mobile.
+- Goal: Stabilize and close the visual regression baseline after Batch 16.
+- Status: PR #28's correction passed in Frontend CI run `35549490465`. Batch 16 adds twelve committed Linux Chromium screenshots spanning the six UI families in desktop and mobile, but its initial Frontend CI run `35554254088` failed in the unrestricted full Playwright step. The two-worker CI correction is pending one fresh run.
 - Scope: the baseline is test/documentation-only; no dataset parsing, calculations, filters, charts, tables, source data, conversion behavior, or production CSS changes.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
@@ -41,7 +41,7 @@
 - Main production JavaScript chunk is approximately 549.5 kB minified / 161.4 kB gzip; Vite still emits the >500 kB advisory.
 - Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
 - GitHub Actions emits deprecation/runtime notices for older action internals.
-- Screenshot baselines are intentionally representative rather than exhaustive. Review every intentionally changed image in `tests/e2e/visual-regression.spec.ts-snapshots/`; regenerate only in the Linux Playwright image recorded in the visual-baseline note.
+- Screenshot baselines are intentionally representative rather than exhaustive. Review every intentionally changed image in `tests/e2e/visual-regression.spec.ts-snapshots/`; regenerate only in the Linux Playwright image recorded in the visual-baseline note. Do not start bundle maintenance until the Batch 16 CI correction is green.
 
 ## Next Session Startup
 

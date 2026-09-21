@@ -14,9 +14,9 @@
 
 ## 目前版本狀態
 
-A–H 修正與 polish 系列已於 **2026-09-18** 完成 pre-demo verification，驗證 commit 為 `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`。對應的 GitHub Pages workflow 已成功完成最新資料擷取／轉換、typecheck、unit tests、production build，以及桌面與手機 Playwright；結果為 **91 passed / 1 個預期 skip / 0 failed**。
+Post-demo Batch 01–21 已完成。目前應用程式基準為 **2026-09-21** commit `05c87568af360e3fdcd30a07f4c1bbdb4e7bf934`（PR #36），已包含 UI family 正規化、可重現 visual baseline、主 bundle 縮減、CI runtime 維護、來源日期 metadata batch A，以及資料目錄搜尋詞調整。Frontend CI run `35578367111` 已通過 typecheck、**141 個 unit tests**、production build，以及完整桌面／手機 Playwright，結果為 **153 passed / 1 個預期 skip / 0 failed**。
 
-該次部署的 release evidence 顯示：Data Trust 追蹤 **117** 個靜態資料目錄，其中 **32** 個有可讀取來源日期、**85** 個日期未知，且 **0** 個沿用舊快照 fallback。完整紀錄請參閱 [Pre-demo verification — 2026-09-18](docs/pre-demo-verification-2026-09-18.md)，post-demo legacy migration 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
+目前 checked-in Data Trust evidence 追蹤 **117** 個靜態資料目錄，其中 **43** 個有可讀取來源日期、**74** 個日期未知，且 **0** 個沿用舊快照 fallback。正式版主要 entry 為 **396.04 kB minified / 114.93 kB gzip**，已低於 Vite 的 500 kB 提示門檻。完整紀錄請參閱 [Post-demo verification — 2026-09-21](docs/post-demo-verification-2026-09-21.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
 
 ## 資料目錄
 
@@ -188,6 +188,6 @@ docs/                release、verification 與操作紀錄
 
 ## 重要限制
 
-本網站是公共紀錄的探索工具，不是即時且具權威性的服務名錄。來源日期可能缺漏或已過期，未知日期會刻意揭露。若有地址資料，僅用於可選擇的外部地圖查詢；搜尋與篩選都留在瀏覽器內，但開啟外部地圖時，選取的地址會提供給該地圖服務商。正式版目前的主要 JavaScript chunk 約為 549.5 kB minified / 161.4 kB gzip，因此 Vite 仍會顯示 >500 kB 的提示；資料集模組本身已採路由層級 lazy loading。Playwright 已涵蓋桌面／手機流程與代表性版面限制，但六個 UI family 的完整 screenshot / pixel-diff visual regression baseline 仍屬 demo 後工作。
+本網站是公共紀錄的探索工具，不是即時且具權威性的服務名錄。來源日期可能缺漏或已過期；目前 **117** 個追蹤目錄中仍有 **74** 個來源日期未知，這些未知狀態會刻意揭露。若有地址資料，僅用於可選擇的外部地圖查詢；搜尋與篩選都留在瀏覽器內，但開啟外部地圖時，選取的地址會提供給該地圖服務商。正式版主要 entry 目前為 **396.04 kB minified / 114.93 kB gzip**；共用地圖 runtime 已延後載入為 **154.20 kB / 45.05 kB gzip** 的 on-demand chunk，因此 Vite 不再顯示 >500 kB entry 提示。Playwright 已涵蓋桌面／手機流程，並包含六個 UI family 共 **12 張 Linux Chromium visual baseline**；這些 screenshot 是代表性 family guard，而不是每個 route／tab 的完整截圖覆蓋。
 
 產品建議與持續風險請參閱[《臺北公共資料儀表板－設計決策與演進方向》](doc/臺北公共資料儀表板－設計決策與演進方向.md)。

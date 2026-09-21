@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: post-demo bundle and CI maintenance (`post-demo-performance-ci-maintenance`) — ready for the next branch.
+- Active feature: Batch 18 main bundle reduction (`post-demo-main-bundle-reduction`) on `postdemo/18-main-bundle-reduction`.
 - Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–16 are complete; all six UI families have normalized regression coverage and a deterministic desktop/mobile visual baseline.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: completed Batch 18 main bundle reduction. Source-map analysis found the Leaflet and React Leaflet runtime retained in the entry because `App.tsx` directly implemented `CivicMap` and statically imported `DistrictComparison`. Both map surfaces now use lazy imports, allowing Rollup to move the shared mapping runtime behind existing map boundaries. The production entry fell from **556.42 kB minified / 163.76 kB gzip** to **396.04 kB / 114.93 kB gzip**, a 28.8% minified and 29.8% gzip reduction; the shared map runtime is now a **154.20 kB / 45.05 kB gzip** on-demand chunk. Vite no longer emits the `>500 kB` advisory. Typecheck, 139 unit tests, production build, focused map loading, and full Playwright (**143 passed, 1 expected skip**) pass. No public data or domain/UI behavior changed.
 
 - 2026-09-21: Batch 16 / visual regression baseline is closed. Twelve Linux Chromium screenshots cover desktop and mobile for hospice (`healthcare-standard`), adult influenza (`healthcare-rich-directory`), physical therapy’s stable non-map find state (`location-directory`), labor unions (`registry-directory`), Labor Standards Act violations (`records-analysis`), and alternative-service reserve statistics (`statistics-analysis`). PR #30 pinned Frontend CI to `mcr.microsoft.com/playwright:v1.62.1-noble`, matching the renderer used to generate the committed baselines while retaining the strict `maxDiffPixelRatio: 0.0005`. Commit `b95d497` passed Frontend CI run `35559017353`: `npm ci`, typecheck, unit tests, production build, and the full Playwright suite all succeeded. The post-demo UI-family normalization and visual-regression phases are complete.
 
@@ -90,7 +92,7 @@
 
 - Catalogue search currently matches dataset labels and topic keywords. Review real search terms after release to tune synonyms; do not silently assign future datasets to a catch-all category.
 
-- Route-level lazy loading is now broadly applied. The current main production chunk is about 549.5 kB minified / 161.4 kB gzip, so Vite still emits its >500 kB advisory. Further main-bundle reduction is post-demo work.
+- Route-level lazy loading now also defers the shared mapping runtime. The current main production chunk is 396.04 kB minified / 114.93 kB gzip, below Vite's warning threshold.
 - Browser regression coverage includes workflows, accessibility, failure states, family contracts, representative mobile overflow, and a twelve-image Linux Chromium screenshot/pixel-diff baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
@@ -103,5 +105,5 @@
 
 1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
 2. Keep the committed Linux Chromium screenshots aligned with Playwright `v1.62.1` and the pinned Noble CI renderer; inspect every intentional baseline change before updating snapshots.
-3. Start the next independent item, `post-demo-performance-ci-maintenance`, without changing public-data semantics.
+3. After Batch 18 merges, start the separate `post-demo-ci-runtime-maintenance` item without changing visual thresholds, screenshots, or public-data semantics.
 4. Preserve all dataset/domain behavior.

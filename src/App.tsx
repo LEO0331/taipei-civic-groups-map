@@ -6,11 +6,9 @@ import { buildDatasetCatalogue } from './lib/datasetCatalogue';
 import { uiFamilyForDataset } from './lib/datasetUiFamily';
 import { loadLocalJson } from './lib/loadLocalJson';
 import { buildHistoryState, buildNavigationUrl, readNavigationState } from './lib/navigationState';
-import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import {
   buildCivicGroupSummary, CATEGORIES, DISTRICTS, filterCivicGroups, formatFoundedDate, getCategoryLabel,
 } from './lib/civicGroups';
-import DistrictComparison from './DistrictComparison';
 import type {
   CivicGroup, CivicGroupFilters, CivicGroupSummary, IndustryGrantRecipient, IndustryGrantSummary, Language,
   MetroProcurementScheduleRecord, MetroProcurementScheduleSummary, RegisteredCramSchool, RegisteredCramSchoolSummary,
@@ -20,6 +18,8 @@ import type {
   BiotechCompanyDirectoryRecord, BiotechCompanyDirectorySummary, BusinessPremisesPublicLiabilityInsuranceRecord, BusinessPremisesPublicLiabilityInsuranceSummary, BusinessRegistrationChangeRecord, BusinessRegistrationChangeSummary, CemeteryPublicFacilityRecord, CemeteryPublicFacilitySummary, ChildMedicalSubsidyContractedProviderRecord, ChildMedicalSubsidyContractedProviderSummary, CompanyRegistrationChangeRecord, CompanyRegistrationChangeSummary, ConsumerDisputeAbsentBusinessOperatorRecord, ConsumerDisputeAbsentBusinessOperatorSummary, ContractedVaccinationMedicalProviderRecord, ContractedVaccinationMedicalProviderSummary, DentureSubsidyMedicalProviderRecord, DentureSubsidyMedicalProviderSummary, DisabilityEmploymentResourceRecord, DisabilityEmploymentResourceSummary, ElderlyWelfareInstitutionRecord, ElderlyWelfareInstitutionSummary, EmploymentAgencyIntermediaryCompanyRecord, EmploymentAgencyIntermediaryCompanySummary, InfantCareCenterEvaluationInstitutionRecord, InfantCareCenterEvaluationSummary, InfantCareCenterEvaluationYearRecord, LicensedAnimalMedicineSellerRecord, LicensedAnimalMedicineSellerSummary, LicensedElectronicGameArcadeOperatorRecord, LicensedElectronicGameArcadeOperatorSummary, LicensedPawnshopDirectoryRecord, LicensedPawnshopDirectorySummary, LicensedSpecialEntertainmentBusinessOperatorRecord, LicensedSpecialEntertainmentBusinessOperatorSummary, PubliclyFundedHpvVaccinationProviderRecord, PubliclyFundedHpvVaccinationProviderSummary, RegisteredFactoryRecord, RegisteredFactorySummary, RegisteredRecyclingBusinessOrganizationRecord, RegisteredRecyclingBusinessOrganizationSummary, ShelteredWorkshopDirectoryRecord, ShelteredWorkshopDirectorySummary, TelepsychologyCounselingInstitutionRecord, TelepsychologyCounselingInstitutionSummary,
 } from './types';
 
+const CivicMap = lazy(() => import('./CivicMap'));
+const DistrictComparison = lazy(() => import('./DistrictComparison'));
 const RegisteredLaborUnionsModule = lazy(() => import('./RegisteredLaborUnionsModule'));
 const QuasiPublicInfantCareCentersModule = lazy(() => import('./QuasiPublicInfantCareCentersModule'));
 const InfantCareCenterEvaluationResultsModule = lazy(() => import('./InfantCareCenterEvaluationResultsModule'));
@@ -379,26 +379,6 @@ function GroupDirectory({ groups, language }: { groups: CivicGroup[]; language: 
     </article>)}
     {!groups.length && <p className="empty">{t.noResults}</p>}
     {limit < groups.length && <button className="load-more" onClick={() => setLimit(limit + 60)}>{t.more} · {groups.length - limit}</button>}
-  </div>;
-}
-
-function CivicMap({ summary, language, openDistrict }: {
-  summary: CivicGroupSummary; language: Language; openDistrict: (district: string) => void;
-}) {
-  const t = language === 'zh' ? { ...copy.zh, ...zhUiCopy } : copy.en;
-  return <div className="map-wrap">
-    <div className="notice">{t.mapNotice}</div>
-    <MapContainer center={[25.072, 121.54]} zoom={11} scrollWheelZoom={false}>
-      <TileLayer attribution='&copy; OpenStreetMap contributors' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {summary.districtSummaries.filter((district) => district.count).map((district) =>
-        <CircleMarker key={district.district} center={[district.latitude, district.longitude]}
-          radius={Math.max(10, Math.sqrt(district.count) * 1.15)}
-          pathOptions={{ fillColor: '#d75b3f', fillOpacity: .72, color: '#fff7e8', weight: 2 }}>
-          <Popup><div className="map-popup"><strong>{district.district}</strong>
-            <p>{t.count}: {district.count.toLocaleString()}</p><p>{t.top}: {district.topCategories.map((item) => getCategoryLabel(item.category, language)).join('、')}</p>
-            <button onClick={() => openDistrict(district.district)}>{t.view}</button></div></Popup>
-        </CircleMarker>)}
-    </MapContainer>
   </div>;
 }
 

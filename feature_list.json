@@ -213,14 +213,54 @@
       "evidence": "2026-09-21: deterministic Linux Chromium Playwright baselines cover six canonical representative datasets in both desktop and mobile projects (12 snapshots). The suite waits for family readiness and fonts, disables animations/carets, retains maxDiffPixelRatio 0.0005, and captures no maps or masks. PR #30 pinned Frontend CI to mcr.microsoft.com/playwright:v1.62.1-noble so the runner matches the baseline renderer; commit b95d497 passed Frontend CI run 35559017353 with the full E2E suite green."
     },
     {
-      "id": "post-demo-performance-ci-maintenance",
-      "name": "Post-demo bundle and CI maintenance",
-      "description": "Reduce the remaining main-bundle advisory and refresh GitHub Actions/runtime metadata without changing public-data semantics.",
+      "id": "post-demo-main-bundle-reduction",
+      "name": "Post-demo main bundle reduction",
+      "description": "Remove the Vite main-chunk advisory through measured lazy boundaries without changing UI or dataset behavior.",
       "dependencies": [
-        "pre-demo-verification-2026-09-18"
+        "post-demo-visual-regression"
+      ],
+      "status": "done",
+      "evidence": "2026-09-21: source-map analysis found Leaflet/react-leaflet retained in the entry through the civic map and DistrictComparison. Both map surfaces are now lazy; the production entry measures 396.04 kB minified / 114.93 kB gzip, down from 556.42 kB / 163.76 kB gzip, with no >500 kB advisory. Typecheck, 139 unit tests, production build, focused map loading, and full Playwright (143 passed, 1 expected skip) pass."
+    },
+    {
+      "id": "post-demo-ci-runtime-maintenance",
+      "name": "Post-demo CI runtime maintenance",
+      "description": "Modernize GitHub Actions/runtime dependencies and remove redundant setup while preserving every verification gate and the pinned Playwright renderer.",
+      "dependencies": [
+        "post-demo-main-bundle-reduction"
       ],
       "status": "ready",
-      "evidence": "Pre-demo production main chunk is about 549.5 kB minified / 161.4 kB gzip; GitHub Actions also emits runtime/deprecation notices for older action internals."
+      "evidence": "Keep mcr.microsoft.com/playwright:v1.62.1-noble and all typecheck, unit, build, desktop/mobile Playwright, and visual-regression gates while addressing action runtime warnings separately from bundle work."
+    },
+    {
+      "id": "post-demo-source-date-metadata-a",
+      "name": "Post-demo source-date metadata batch A",
+      "description": "Reduce unknown source dates for a bounded 10–15 dataset topic/source family only when authoritative update evidence exists.",
+      "dependencies": [
+        "post-demo-ci-runtime-maintenance"
+      ],
+      "status": "ready",
+      "evidence": "The verified baseline has 85 datasets with unknown source dates. Unknown must remain unknown when no authoritative date is available."
+    },
+    {
+      "id": "post-demo-catalogue-search-tuning",
+      "name": "Post-demo catalogue search tuning",
+      "description": "Improve conservative catalogue discovery keywords and synonyms without redesigning navigation or introducing misleading categories.",
+      "dependencies": [
+        "post-demo-source-date-metadata-a"
+      ],
+      "status": "ready",
+      "evidence": "Audit practical vaccine, childcare, labor, welfare, funeral, cultural-venue, and related searches with unit and desktop/mobile E2E coverage."
+    },
+    {
+      "id": "post-demo-verification",
+      "name": "Post-demo verification and freeze",
+      "description": "Run final consolidation verification after Batches 17–21, record exact release evidence, and freeze feature changes for the demo.",
+      "dependencies": [
+        "post-demo-catalogue-search-tuning"
+      ],
+      "status": "ready",
+      "evidence": "Final verification should record bundle size, visual baseline status, CI/runtime state, Data Trust date counts, deployment, and remaining known limitations without adding feature work."
     }
   ]
 }

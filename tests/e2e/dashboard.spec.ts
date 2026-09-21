@@ -85,7 +85,7 @@ test('catalogue task synonyms find focused services on desktop and mobile', asyn
     { query: 'union', expected: '工會' },
     { query: 'labor standards', expected: '勞基法違規紀錄' },
     { query: 'mortuary', expected: '殯葬禮儀服務業' },
-    { query: 'cultural venue', expected: '臺北市藝文館所' },
+    { query: 'cultural venue', expected: '臺北市藝文場館' },
   ] as const;
 
   for (const entry of cases) {

@@ -2,10 +2,10 @@
 
 ## Current Objective
 
-- Goal: Complete post-demo Batch 14 / Healthcare Exceptions on `postdemo/14-healthcare-exceptions` without changing dataset/domain semantics.
-- Status: Batches 01–13 are merged to `main`. Batch 14 implementation, regression coverage, and documentation are assembled and pre-push audited; Frontend CI is intentionally pending the single audited branch push.
-- Pre-demo verified commit remains `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
-- Release record: `docs/pre-demo-verification-2026-09-18.md`
+- Goal: Complete the final cross-family regression on `postdemo/15-final-cross-family-regression`, using the pre-demo manual spot-check as the acceptance matrix.
+- Status: Batches 01–14 are merged to `main`. Batch 14 Frontend CI run `35547913283` completed successfully. The final regression implementation and documentation are assembled pre-push; its own Frontend CI is intentionally pending the single audited push.
+- Scope: tests/documentation only; no dataset parsing, calculations, filters, charts, tables, source data, or conversion behavior changes.
+- Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
 
 | Check | Result | Notes |
@@ -41,13 +41,12 @@
 - Main production JavaScript chunk is approximately 549.5 kB minified / 161.4 kB gzip; Vite still emits the >500 kB advisory.
 - Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
 - GitHub Actions emits deprecation/runtime notices for older action internals.
-- Batch 14 automated CI evidence is pending the single audited branch push; do not record a CI pass until the workflow actually completes.
+- Batch 14 Frontend CI passed. Final cross-family regression CI evidence is pending the single audited branch push; do not record the UI-family normalization series as complete until that workflow passes.
 
 ## Next Session Startup
 
 1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/pre-demo-verification-2026-09-18.md`.
-2. Check `git status --short` for unrelated user changes.
-3. Verify the Batch 14 PR/Frontend CI result before declaring the shell-normalization series fully automated-verified.
-4. After Batch 14, prioritize post-demo visual-regression baselines, then bundle/CI maintenance.
-5. Keep dataset parsing, calculations, filters, charts, and tables unchanged unless the task specifically requires domain-logic changes.
-6. Run focused tests first, then typecheck, unit tests, Playwright for UI-facing changes, production build, and `git diff --check`.
+2. Verify the final cross-family regression PR/Frontend CI result.
+3. If it passes, mark `post-demo-ui-family-normalization` complete and keep `post-demo-visual-regression` as the next planned item.
+4. If it fails, inspect the exact family/workflow assertion first; do not broaden into domain/data changes without evidence.
+5. Keep dataset parsing, calculations, filters, charts, tables, and source semantics unchanged.

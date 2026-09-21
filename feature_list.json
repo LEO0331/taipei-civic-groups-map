@@ -200,7 +200,7 @@
         "pre-demo-verification-2026-09-18"
       ],
       "status": "in_progress",
-      "evidence": "2026-09-21: Batches 01–14 are merged. Batch 14 Frontend CI run 35547913283 passed typecheck, unit tests, production build, and full Playwright. The final cross-family regression is assembled on `postdemo/15-final-cross-family-regression`, automating the eight manual pre-demo spot-checks across all six UI families, including hospice geography, rich-healthcare/Data Trust visibility, physical-therapy keyboard tabs, civic browse/search, and cross-family history/language persistence. The change is test/documentation-only; final-regression Frontend CI is pending the single audited branch push."
+      "evidence": "2026-09-21: Batches 01–14 are merged and Batch 14 CI passed. Final cross-family CI run 35548774168 produced 127 passed, 1 expected skip, and 2 failures, both caused by the same Playwright fixture using obsolete catalogue text `工會名單`. The active Chinese catalogue label is `工會` because `zhUiCopy` overrides the older copy. The narrow fix changes only the test selector; application/data semantics are unchanged. Completion remains pending the corrected full Frontend CI run."
     },
     {
       "id": "post-demo-visual-regression",

@@ -134,7 +134,7 @@ test('final cross-family navigation keeps history and language state stable', as
   await expect(main(page)).toHaveAttribute('data-active-dataset', 'physicalTherapyClinics');
   await expect(main(page)).toHaveAttribute('data-active-ui-family', 'location-directory');
 
-  await selectDataset(page, '工會名單');
+  await selectDataset(page, '工會');
   await expect(main(page)).toHaveAttribute('data-active-dataset', 'laborUnions');
   await expect(main(page)).toHaveAttribute('data-active-ui-family', 'registry-directory');
 

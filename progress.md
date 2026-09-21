@@ -9,7 +9,7 @@
 
 ## Latest Evidence
 
-- 2026-09-21: Batch 22 consolidates the post-demo release baseline at `main@05c87568` (PR #36). Frontend CI run `35578367111` passed typecheck, **141 unit tests**, production build, and **153 passed / 1 expected skip / 0 failed** Playwright tests across desktop/mobile; the twelve canonical visual-regression snapshots passed inside that suite. The production entry is **396.04 kB minified / 114.93 kB gzip** with the shared map runtime deferred to **154.20 kB / 45.05 kB gzip**. Checked-in Data Trust evidence remains **117 directories / 43 dated / 74 unknown-date / 0 reused-snapshot fallbacks**. Batch 22 is documentation/state only and freezes new feature scope unless verification finds a concrete regression. Final branch Frontend CI is required before merge.
+- 2026-09-21: Batch 22 consolidates the post-demo release baseline at `main@05c87568` (PR #36). Frontend CI run `35578367111` passed typecheck, **141 unit tests**, production build, and **153 passed / 1 expected skip / 0 failed** Playwright tests across desktop/mobile; the twelve canonical visual-regression snapshots passed inside that suite. The production entry is **399.63 kB minified / 116.04 kB gzip** with the shared map runtime deferred to **154.20 kB / 45.05 kB gzip**. GitHub Pages run `35579373983` repeated fresh source fetch/conversion plus the full verification path and deployed the exact `05c87568` baseline successfully; release artifact `10630175736` confirms **117 directories / 43 dated / 74 unknown-date / 0 reused-snapshot fallbacks**. Batch 22 is documentation/state only and freezes new feature scope unless verification finds a concrete regression. Final branch Frontend CI is required before merge.
 
 - 2026-09-21: implemented Batch 21 / catalogue search tuning. The catalogue now keeps broad topic vocabulary separate from dataset-specific task synonyms, so broad queries still browse a theme while concrete terms resolve to relevant datasets. Added conservative bilingual aliases for vaccination/preventive shots, childcare/daycare, labor unions and compliance, welfare/assistance, funeral/cemetery services, and arts/cultural venues; search also normalizes `臺`/`台`. Unit coverage verifies broad-vs-specific matching, and desktop/mobile Playwright exercises `預防針`, `daycare`, `union`, `labor standards`, `mortuary`, and `cultural venue`, including a negative assertion that `預防針` does not surface family medicine. No dataset labels, categories, navigation structure, public data, or domain semantics changed. Merge is conditional on final-head Frontend CI passing.
 
@@ -100,7 +100,7 @@
 
 - Catalogue search now supports conservative task synonyms plus broad topic vocabulary. Future aliases should remain dataset-specific where possible; do not silently assign new datasets to a catch-all category.
 
-- Route-level lazy loading now also defers the shared mapping runtime. The current main production chunk is 396.04 kB minified / 114.93 kB gzip, below Vite's warning threshold.
+- Route-level lazy loading now also defers the shared mapping runtime. The current production entry is 399.63 kB minified / 116.04 kB gzip, below Vite's warning threshold.
 - Browser regression coverage includes workflows, accessibility, failure states, family contracts, representative mobile overflow, and a twelve-image Linux Chromium screenshot/pixel-diff baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.

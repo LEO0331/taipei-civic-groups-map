@@ -199,8 +199,8 @@
         "maintenance-frontend",
         "pre-demo-verification-2026-09-18"
       ],
-      "status": "in_progress",
-      "evidence": "2026-09-21: Batches 01–14 and PR #28's final cross-family correction are merged. PR #28 corrected only the obsolete catalogue fixture from `工會名單` to the actual rendered `工會`; corrected Frontend CI run 35549490465 passed. Batch 16's visual CI must pass before this phase is closed."
+      "status": "done",
+      "evidence": "2026-09-21: Batches 01–14 normalized the remaining legacy shells across registry, records, statistics, location, and healthcare exceptions; PR #28's corrected final cross-family regression passed Frontend CI run 35549490465. Batch 16 then added the six-family desktop/mobile visual guard, and PR #30 pinned GitHub Actions to the same Playwright v1.62.1 Noble renderer used for baseline generation. Commit b95d497 passed Frontend CI run 35559017353, including typecheck, unit tests, production build, and full Playwright."
     },
     {
       "id": "post-demo-visual-regression",
@@ -209,8 +209,8 @@
       "dependencies": [
         "pre-demo-verification-2026-09-18"
       ],
-      "status": "in_progress",
-      "evidence": "2026-09-21: deterministic Linux Chromium Playwright baselines cover six canonical representative datasets in both existing projects (12 snapshots). `tests/e2e/visual-regression.spec.ts` waits for family readiness and fonts, disables animations/carets, uses a 0.0005 max diff pixel ratio, and captures no maps or masks. Local Linux verification passed, but the initial pushed full E2E run failed; CI concurrency is being stabilized before closeout."
+      "status": "done",
+      "evidence": "2026-09-21: deterministic Linux Chromium Playwright baselines cover six canonical representative datasets in both desktop and mobile projects (12 snapshots). The suite waits for family readiness and fonts, disables animations/carets, retains maxDiffPixelRatio 0.0005, and captures no maps or masks. PR #30 pinned Frontend CI to mcr.microsoft.com/playwright:v1.62.1-noble so the runner matches the baseline renderer; commit b95d497 passed Frontend CI run 35559017353 with the full E2E suite green."
     },
     {
       "id": "post-demo-performance-ci-maintenance",

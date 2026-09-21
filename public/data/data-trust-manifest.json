@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "datasetDirectoryCount": 117,
-  "datedDatasetCount": 32,
+  "datedDatasetCount": 43,
   "fetchFallbackDatasetCount": 0,
   "entries": [
     {
@@ -18,7 +18,9 @@
     },
     {
       "id": "anatomical-pathology-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市解剖病理科醫療機構",
+      "sourceUpdatedAt": "2025-06-05T14:19:39+08:00"
     },
     {
       "id": "approved-gas-water-heater-installers",
@@ -142,7 +144,9 @@
     },
     {
       "id": "ent-facilities",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市耳鼻喉科醫療機構",
+      "sourceUpdatedAt": "2025-06-11T15:09:45+08:00"
     },
     {
       "id": "enterprise-headquarters-distribution",
@@ -159,7 +163,9 @@
     },
     {
       "id": "family-medicine-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市家庭醫學科醫療機構",
+      "sourceUpdatedAt": "2025-06-11T15:00:41+08:00"
     },
     {
       "id": "fertility-subsidy-contracted-hospitals",
@@ -185,15 +191,21 @@
     },
     {
       "id": "general-chinese-medicine-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市中醫一般科醫療機構",
+      "sourceUpdatedAt": "2025-06-11T15:14:07+08:00"
     },
     {
       "id": "general-dental-medical-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市牙醫一般科醫療機構",
+      "sourceUpdatedAt": "2025-06-11T15:15:51+08:00"
     },
     {
       "id": "general-western-medicine-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市西醫一般科醫療機構",
+      "sourceUpdatedAt": "2025-06-11T15:17:04+08:00"
     },
     {
       "id": "government-ethics-offices",
@@ -216,7 +228,9 @@
     },
     {
       "id": "high-myopia-prevention-clinics",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市學童高度近視防治眼科合約院所",
+      "sourceUpdatedAt": "2026-06-17T14:22:02+08:00"
     },
     {
       "id": "home-disabled-family-physician-care-providers",
@@ -270,7 +284,9 @@
     },
     {
       "id": "kidney-health-promotion-facilities",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市腎臟病健康促進機構名單",
+      "sourceUpdatedAt": "2025-06-04T10:35:15+08:00"
     },
     {
       "id": "kindergarten-basic-evaluation-pass-records",
@@ -317,7 +333,9 @@
     },
     {
       "id": "medical-radiological-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市醫事放射所",
+      "sourceUpdatedAt": "2025-06-04T16:34:52+08:00"
     },
     {
       "id": "methadone-cross-region-services",
@@ -352,7 +370,9 @@
     },
     {
       "id": "orthopedic-facilities",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市骨科醫療機構",
+      "sourceUpdatedAt": "2025-06-06T16:57:49+08:00"
     },
     {
       "id": "out-of-city-funeral-service-businesses",
@@ -428,7 +448,8 @@
     {
       "id": "rehabilitation-medicine-institutions",
       "sourceName": "臺北市復健科醫療機構",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceUpdatedAt": "2025-06-09T16:39:07+08:00"
     },
     {
       "id": "rotavirus-vaccine-subsidy-providers",

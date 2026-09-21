@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: Batch 19 CI runtime maintenance (`post-demo-ci-runtime-maintenance`) on `postdemo/19-ci-runtime-maintenance`.
+- Active feature: Batch 20 source-date metadata A (`post-demo-source-date-metadata-a`) on `postdemo/20-source-date-metadata-a`.
 - Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–16 are complete; all six UI families have normalized regression coverage and a deterministic desktop/mobile visual baseline.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: implemented Batch 20 / source-date metadata A for 11 Taipei Department of Health directories with explicit official Taipei Data Platform file-update timestamps: anatomical pathology, ENT, family medicine, general Chinese medicine, general dental, general Western medicine, high-myopia prevention clinics, kidney-health promotion facilities, medical radiological institutions, orthopedics, and rehabilitation medicine. Dates use the resource file `更新時間`, not the later metadata-page edit timestamp. Rehabilitation conversion now reproduces the same metadata so regeneration does not lose the date. The checked-in Data Trust evidence moves from **32 dated / 85 unknown** to **43 dated / 74 unknown**, with 117 directories and zero fallback changes. No public records, filters, calculations, UI behavior, or source interpretation changed.
 
 - 2026-09-21: implemented Batch 19 CI runtime maintenance. Frontend CI and Pages now pin first-party actions to explicit current releases (`checkout` v7.0.1, `setup-node` v7.0.0, `upload-artifact` v7.0.1, `upload-pages-artifact` v5.0.0, `deploy-pages` v5.0.1), eliminating the known Node 20-targeting action set from the previous successful deploy log. The Playwright image stays pinned to `mcr.microsoft.com/playwright:v1.62.1-noble`, project Node stays at 22, npm caching remains explicit, and Pages now declares `actions: read`. No application, public-data, conversion, visual threshold, or verification gate changed. Merge is conditional on the final branch Frontend CI passing; the resulting `main` Pages run validates the deployment action chain.
 

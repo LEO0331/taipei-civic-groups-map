@@ -62,7 +62,11 @@ await Promise.all([
   writeFile(join(outputDirectory, 'records.json'), JSON.stringify(records, null, 2)),
   writeFile(join(outputDirectory, 'metadata.json'), JSON.stringify({
     source: '臺北市復健科醫療機構',
+    sourcePage: 'https://data.taipei/dataset/detail?id=190b1d08-4541-4f19-9990-2ef92f915c9f',
     sourceUrl: 'https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=9ad373d9-4d52-49d9-9854-f568d80c775a',
+    sourceAgency: '臺北市政府衛生局',
+    sourceFileUpdatedAt: '2025-06-09T16:39:07+08:00',
+    updateFrequency: 'annual',
     encoding,
     recordCount: records.length,
   }, null, 2)),

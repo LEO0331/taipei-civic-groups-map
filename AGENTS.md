@@ -4,7 +4,7 @@ This is a Vite + React + TypeScript public-data directory. Keep data presentatio
 
 ## Startup Workflow
 
-1. Read `README.md`, this file, `feature_list.json`, `progress.md`, and the latest release/verification note under `docs/` (currently `docs/pre-demo-verification-2026-09-18.md`).
+1. Read `README.md`, this file, `feature_list.json`, `progress.md`, and the latest release/verification note under `docs/` (currently `docs/post-demo-verification-2026-09-21.md`).
 2. Inspect `git status --short` and preserve unrelated user changes.
 3. Select one active feature or maintenance task; update its state only when there is evidence.
 4. Run focused checks first, then the full verification set before claiming completion. For UI/navigation/release work, include Playwright.
@@ -44,4 +44,4 @@ A task is complete only when the requested behavior is implemented, relevant ver
 
 ## End of Session
 
-Update `progress.md`, `feature_list.json`, and (for incomplete or handoff work) `session-handoff.md` with files changed, verification evidence, risks, and the next concrete action. The current pre-demo release baseline is documented in `docs/pre-demo-verification-2026-09-18.md`.
+Update `progress.md`, `feature_list.json`, and (for incomplete or handoff work) `session-handoff.md` with files changed, verification evidence, risks, and the next concrete action. The current post-demo release baseline is documented in `docs/post-demo-verification-2026-09-21.md`.

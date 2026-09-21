@@ -259,8 +259,8 @@
       "dependencies": [
         "post-demo-catalogue-search-tuning"
       ],
-      "status": "ready",
-      "evidence": "Final verification should record bundle size, visual baseline status, CI/runtime state, Data Trust date counts, deployment, and remaining known limitations without adding feature work."
+      "status": "done",
+      "evidence": "2026-09-21: post-demo Batches 17–21 are consolidated against application baseline main@05c87568 (PR #36). Frontend CI run 35578367111 passed typecheck, 141 unit tests, production build, and full desktop/mobile Playwright with 153 passed, 1 expected skip, 0 failed; the 12 canonical visual baselines passed inside that suite. GitHub Pages run 35579373983 then repeated fresh source fetch/conversion plus the full verification path and deployed the exact application baseline successfully; release artifact 10630175736 confirms 117 directories, 43 dated, 74 unknown-date, and 0 reused-snapshot fallbacks. The production entry is 399.63 kB minified / 116.04 kB gzip with the shared map runtime deferred to 154.20 kB / 45.05 kB gzip. CI uses Node 22 with Playwright v1.62.1 Noble and explicit current first-party action versions. Batch 22 adds no application/data feature behavior; final branch Frontend CI is required before merge."
     }
   ]
 }

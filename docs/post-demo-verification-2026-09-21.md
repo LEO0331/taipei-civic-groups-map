@@ -54,7 +54,7 @@ Batch 18 moved the shared Leaflet/React Leaflet runtime behind lazy map boundari
 
 | Asset | Minified | Gzip |
 | --- | ---: | ---: |
-| Main production entry | **396.04 kB** | **114.93 kB** |
+| Main production entry | **399.63 kB** | **116.04 kB** |
 | Deferred shared map runtime | **154.20 kB** | **45.05 kB** |
 
 The main entry fell from 556.42 kB / 163.76 kB gzip and no longer triggers Vite's >500 kB chunk advisory.
@@ -86,9 +86,7 @@ Checked-in release evidence at the application baseline reports:
 
 Batch 20 added 11 authoritative Taipei Department of Health file-update timestamps. Remaining unknown dates remain unknown unless authoritative source evidence is available.
 
-The most recent fully completed Pages release before the Batch 21 deployment is run `35576712951` for `main@932e73bd`; it successfully completed fetch/conversion, typecheck, unit tests, Playwright, build, release-evidence upload, and Pages deployment. Its `data-release-evidence` artifact is ID `10628414948`.
-
-The exact Batch 21 application commit `05c87568` is being validated by Pages run `35579373983`; Batch 22 must not merge until that release completes successfully.
+The exact application baseline `main@05c87568` was deployed successfully by GitHub Pages run `35579373983`. That run completed fresh source fetch/conversion, typecheck, **141 unit tests**, **153 passed / 1 expected skip / 0 failed** Playwright tests, production build, release-evidence upload, and Pages deployment. Its `data-release-evidence` artifact is ID `10630175736` (SHA-256 `b293e03c45939cab5f3cf2998fd22ec39b6328c2a0c5557c722b75f382a346f5`) and independently confirms **117 directories / 43 dated / 74 unknown-date / 0 reused-snapshot fallbacks**.
 
 ## Catalogue search state
 

@@ -249,8 +249,8 @@
       "dependencies": [
         "post-demo-source-date-metadata-a"
       ],
-      "status": "ready",
-      "evidence": "Audit practical vaccine, childcare, labor, welfare, funeral, cultural-venue, and related searches with unit and desktop/mobile E2E coverage."
+      "status": "done",
+      "evidence": "2026-09-21: catalogue search now separates broad category vocabulary from dataset-specific task synonyms. Added bilingual/conservative search terms for vaccine/preventive shots, childcare/daycare, labor unions and compliance, welfare/assistance, funeral/cemetery services, and arts/cultural venues. Search normalization treats 臺/台 equivalently. Unit coverage verifies focused synonym matches and broad category browsing; desktop/mobile Playwright covers 預防針, daycare, union, labor standards, mortuary, and cultural venue, including a negative check that vaccine search does not surface unrelated family medicine. No dataset labels, categories, navigation structure, source data, or domain semantics changed. Final branch Frontend CI is required before merge."
     },
     {
       "id": "post-demo-verification",

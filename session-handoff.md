@@ -2,9 +2,9 @@
 
 ## Current Objective
 
-- Goal: Complete the narrow Final cross-family CI correction on `postdemo/15-final-cross-family-regression-fix`.
-- Status: Batches 01–14 and PR #27 are merged to `main`. Final cross-family CI run `35548774168` had 127 passed, 1 expected skip, and 2 identical failures caused by an obsolete catalogue test label (`工會名單` vs actual rendered `工會`). The correction is test/documentation-only and is pending a fresh single CI run.
-- Scope: tests/documentation only; no dataset parsing, calculations, filters, charts, tables, source data, or conversion behavior changes.
+- Goal: Stabilize and close the visual regression baseline after Batch 16.
+- Status: PR #28's correction passed in Frontend CI run `35549490465`. Batch 16 adds twelve committed Linux Chromium screenshots spanning the six UI families in desktop and mobile, but its initial Frontend CI run `35554254088` failed in the unrestricted full Playwright step. The two-worker CI correction is pending one fresh run.
+- Scope: the baseline is test/documentation-only; no dataset parsing, calculations, filters, charts, tables, source data, conversion behavior, or production CSS changes.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
 
@@ -41,12 +41,11 @@
 - Main production JavaScript chunk is approximately 549.5 kB minified / 161.4 kB gzip; Vite still emits the >500 kB advisory.
 - Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
 - GitHub Actions emits deprecation/runtime notices for older action internals.
-- Batch 14 Frontend CI passed. Final cross-family run `35548774168` failed only on the duplicated desktop/mobile catalogue-label fixture mismatch; the narrow selector correction is pending verification. Do not mark the UI-family normalization series complete until the corrected workflow passes.
+- Screenshot baselines are intentionally representative rather than exhaustive. Review every intentionally changed image in `tests/e2e/visual-regression.spec.ts-snapshots/`; regenerate only in the Linux Playwright image recorded in the visual-baseline note. Do not start bundle maintenance until the Batch 16 CI correction is green.
 
 ## Next Session Startup
 
-1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/post-demo-final-cross-family-regression-2026-09-21.md`.
-2. Verify the CI-correction PR/Frontend CI result.
-3. If it passes, mark `post-demo-ui-family-normalization` complete and record the exact pass count/run.
-4. If it fails, inspect only the reported regression first; do not alter application/domain logic without evidence.
-5. Keep deterministic screenshot/pixel-diff visual regression as the next separate task.
+1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
+2. Run the focused visual suite in the documented Linux Chromium environment before changing any snapshot.
+3. Inspect all twelve images before accepting an update; do not mask headings, family chrome, tabs, filters, substantive cards/tables, warnings, or layout.
+4. Move next to `post-demo-performance-ci-maintenance` without altering public-data semantics.

@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: final cross-family regression CI correction (`postdemo/15-final-cross-family-regression-fix`).
+- Active feature: post-demo visual regression baseline (`postdemo/16-visual-regression-baseline`).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: Batch 16 / visual regression baseline has twelve Linux Chromium screenshots: desktop and mobile for hospice (`healthcare-standard`), adult influenza (`healthcare-rich-directory`), physical therapy’s stable non-map find state (`location-directory`), labor unions (`registry-directory`), Labor Standards Act violations (`records-analysis`), and alternative-service reserve statistics (`statistics-analysis`). Local Linux verification passed (12 focused screenshots and 141 full E2E passes with one expected skip), but the initial pushed Frontend CI run 35554254088 failed during Playwright under its unrestricted worker count. CI now caps Playwright to two workers, matching the successful Linux validation. Do not mark Batch 16 or the UI-family normalization phase done until that corrected CI run passes.
 
 - 2026-09-21: the first Final cross-family Frontend CI run `35548774168` finished with **127 passed, 1 expected skip, 2 failed**. Both failures were the same test-fixture mismatch in desktop and mobile: the navigation regression searched the catalogue for `工會名單`, but the current Chinese UI merges `zhUiCopy` over the older copy and therefore renders the compact catalogue label `工會`. The underlying `laborUnions` route/family assertions already passed elsewhere in the same run. The narrow correction changes only that Playwright catalogue label to the actual rendered `工會`; no application, dataset, conversion, filter, calculation, chart, table, or source-semantic code changes. A fresh single CI run is required before marking the final gate complete.
 
@@ -89,7 +91,7 @@
 - Catalogue search currently matches dataset labels and topic keywords. Review real search terms after release to tune synonyms; do not silently assign future datasets to a catch-all category.
 
 - Route-level lazy loading is now broadly applied. The current main production chunk is about 549.5 kB minified / 161.4 kB gzip, so Vite still emits its >500 kB advisory. Further main-bundle reduction is post-demo work.
-- Browser regression coverage is strong for workflows, accessibility, failure states, family contracts, and representative mobile overflow, but the repository does not yet maintain a full screenshot/pixel-diff visual baseline for all six UI families.
+- Browser regression coverage includes workflows, accessibility, failure states, family contracts, representative mobile overflow, and a twelve-image Linux Chromium screenshot/pixel-diff baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.
@@ -99,8 +101,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-final-cross-family-regression-2026-09-21.md`.
-2. Verify the CI-correction PR/Frontend CI result; the expected gate is typecheck, unit tests, build, and full desktop/mobile Playwright.
-3. If it passes, mark `post-demo-ui-family-normalization` complete and record the exact run result.
-4. Keep `post-demo-visual-regression` as the next planned task; do not combine screenshot-baseline work into this narrow CI correction.
-5. Preserve all dataset/domain behavior.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
+2. Keep the committed Linux Chromium screenshots aligned with the current Playwright version and GitHub Actions renderer; inspect each intentionally changed image before updating it.
+3. Start the next independent item, `post-demo-performance-ci-maintenance`, without changing public-data semantics.
+4. Preserve all dataset/domain behavior.

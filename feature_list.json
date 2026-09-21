@@ -200,7 +200,7 @@
         "pre-demo-verification-2026-09-18"
       ],
       "status": "in_progress",
-      "evidence": "2026-09-21: Batches 01–14 are merged and Batch 14 CI passed. Final cross-family CI run 35548774168 produced 127 passed, 1 expected skip, and 2 failures, both caused by the same Playwright fixture using obsolete catalogue text `工會名單`. The active Chinese catalogue label is `工會` because `zhUiCopy` overrides the older copy. The narrow fix changes only the test selector; application/data semantics are unchanged. Completion remains pending the corrected full Frontend CI run."
+      "evidence": "2026-09-21: Batches 01–14 and PR #28's final cross-family correction are merged. PR #28 corrected only the obsolete catalogue fixture from `工會名單` to the actual rendered `工會`; corrected Frontend CI run 35549490465 passed. Batch 16's visual CI must pass before this phase is closed."
     },
     {
       "id": "post-demo-visual-regression",
@@ -209,8 +209,8 @@
       "dependencies": [
         "pre-demo-verification-2026-09-18"
       ],
-      "status": "ready",
-      "evidence": "The final structural/workflow cross-family regression is being added after Batch 14. Deterministic screenshot/pixel-diff baselines remain a separate next task; current Playwright still does not commit image baselines for all six UI families."
+      "status": "in_progress",
+      "evidence": "2026-09-21: deterministic Linux Chromium Playwright baselines cover six canonical representative datasets in both existing projects (12 snapshots). `tests/e2e/visual-regression.spec.ts` waits for family readiness and fonts, disables animations/carets, uses a 0.0005 max diff pixel ratio, and captures no maps or masks. Local Linux verification passed, but the initial pushed full E2E run failed; CI concurrency is being stabilized before closeout."
     },
     {
       "id": "post-demo-performance-ci-maintenance",

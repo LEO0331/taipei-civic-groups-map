@@ -27,7 +27,7 @@ The test disables animations, transitions, smooth scrolling, and caret rendering
 
 ## Baseline environment and verification
 
-Snapshots were generated and visually inspected in the official `mcr.microsoft.com/playwright:v1.62.1-noble` Linux image with `CI=1`, matching GitHub Actions' Chromium selection. The focused commands were:
+Snapshots were generated and visually inspected in the official `mcr.microsoft.com/playwright:v1.62.1-noble` Linux image with `CI=1`. Frontend CI is now pinned to the same image so screenshot generation and GitHub Actions comparison use the same browser/OS/font renderer. The focused commands were:
 
 ```bash
 CI=1 npx playwright test tests/e2e/visual-regression.spec.ts --update-snapshots
@@ -35,6 +35,12 @@ CI=1 npx playwright test tests/e2e/visual-regression.spec.ts
 ```
 
 The clean second comparison passed: **12 passed**. No snapshot captures loading/error states, the catalogue/onboarding overlay, or third-party map imagery. All images show the intended Traditional Chinese representative content, including family headings, tabs, filters, summaries, and substantive cards or charts.
+
+## Closeout evidence
+
+PR #30 (`postdemo/16-visual-regression-ci-stabilization`) pinned Frontend CI to `mcr.microsoft.com/playwright:v1.62.1-noble` after failure artifacts showed the remaining runner-only differences were text/glyph rasterization rather than layout drift. The screenshot threshold remained `maxDiffPixelRatio: 0.0005`; no baseline image or application code was changed for the CI fix.
+
+Commit `b95d497` passed Frontend CI run `35559017353`. `npm ci`, typecheck, unit tests, production build, and the full Playwright suite all completed successfully. Batch 16 and the post-demo UI-family normalization phase are therefore closed.
 
 ## Limitations
 

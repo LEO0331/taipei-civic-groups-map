@@ -31,9 +31,8 @@ test('the shared stylesheet retains a visible keyboard focus treatment', async (
 });
 
 
-test('tab navigation uses a shared accessible contract with a legacy migration bridge', async () => {
+test('tab navigation uses the shared accessible contract without the runtime legacy bridge', async () => {
   const tabs = await readSource('../AccessibleTabs.tsx');
-  const bridge = await readSource('../LegacyTabAccessibility.tsx');
   const app = await readSource('../App.tsx');
   assert.match(tabs, /role="tablist"/);
   assert.match(tabs, /role="tab"/);
@@ -43,9 +42,7 @@ test('tab navigation uses a shared accessible contract with a legacy migration b
   assert.match(tabs, /ArrowLeft/);
   assert.match(tabs, /Home/);
   assert.match(tabs, /End/);
-  assert.match(bridge, /\.subtabs/);
-  assert.match(bridge, /data-legacy-tablist/);
-  assert.match(app, /<LegacyTabAccessibility language=\{language\} \/>/);
+  assert.doesNotMatch(app, /LegacyTabAccessibility/);
 });
 
 
@@ -385,3 +382,85 @@ test('Location Cultural City modules use the shared location-directory shell', a
   const app = await readSource('../App.tsx');
   assert.match(app, /tab === 'streetPerformerVenues'[\s\S]*?uiFamily=\{uiFamilyForDataset\(tab\)\}[\s\S]*?eyebrow="CULTURE \/ STREET PERFORMANCE \/ VENUES"/);
 });
+
+test('Healthcare exception modules use the shared healthcare-standard shell contract', async () => {
+  const tabbedModules = [
+    '../ContractedVaccinationMedicalProvidersModule.tsx',
+    '../PubliclyFundedHpvVaccinationProvidersModule.tsx',
+    '../ChildMedicalSubsidyContractedProvidersModule.tsx',
+    '../DentureSubsidyMedicalProvidersModule.tsx',
+    '../TelepsychologyCounselingInstitutionsModule.tsx',
+    '../PublicPneumococcalVaccineProvidersModule.tsx',
+    '../OphthalmologyInstitutionsModule.tsx',
+    '../TravelMedicineClinicsModule.tsx',
+    '../HospitalDischargeLongTermCarePartnersModule.tsx',
+    '../EarlyInterventionMedicalProvidersModule.tsx',
+    '../GeneralDentalMedicalInstitutionsModule.tsx',
+    '../PediatricMedicalInstitutionsModule.tsx',
+    '../DiabetesSharedCareMedicalInstitutionsModule.tsx',
+    '../FertilitySubsidyContractedHospitalsModule.tsx',
+    '../FiveCancerScreeningProvidersModule.tsx',
+    '../HomeNursingInstitutionsModule.tsx',
+    '../OptometryInstitutionsModule.tsx',
+    '../GeneralChineseMedicineInstitutionsModule.tsx',
+    '../MedicalLaboratoriesModule.tsx',
+    '../PublicInfluenzaAntiviralProvidersModule.tsx',
+    '../FamilyMedicineInstitutionsModule.tsx',
+    '../PlasticSurgeryMedicalInstitutionsModule.tsx',
+    '../ObstetricsGynecologyInstitutionsModule.tsx',
+    '../PsychiatricClinicsModule.tsx',
+    '../PsychiatricRehabilitationAndNursingInstitutionsModule.tsx',
+  ];
+
+  for (const modulePath of tabbedModules) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame[^>]*family=\{UI_FAMILIES\.healthcareStandard\}/, modulePath);
+    assert.match(source, /<AccessibleTabs /, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  const singleViewModules = [
+    '../MedicalRadiologicalInstitutionsModule.tsx',
+    '../HighMyopiaPreventionClinicsModule.tsx',
+    '../NationwideAddictionTreatmentServicesModule.tsx',
+    '../InternetAddictionServicesModule.tsx',
+    '../HearingCentersModule.tsx',
+    '../OrthopedicFacilitiesModule.tsx',
+    '../XrayExaminationMedicalInstitutionsModule.tsx',
+    '../TbContactScreeningPartnerProvidersModule.tsx',
+    '../LicensedAssistedReproductionInstitutionsModule.tsx',
+    '../MethadoneCrossRegionServicesModule.tsx',
+    '../RadiologyDiagnosticFacilitiesModule.tsx',
+    '../ChildPreventiveHealthcareFacilitiesModule.tsx',
+  ];
+
+  for (const modulePath of singleViewModules) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<DatasetFamilyFrame[^>]*family=\{UI_FAMILIES\.healthcareStandard\}/, modulePath);
+    assert.doesNotMatch(source, /<div className="subtabs"/, modulePath);
+  }
+
+  for (const modulePath of [
+    '../HospicePalliativeCareInstitutionsModule.tsx',
+    '../HemodialysisMedicalInstitutionsModule.tsx',
+    '../InternalMedicineInstitutionsModule.tsx',
+    '../OccupationalTherapyClinicsModule.tsx',
+    '../DesignatedForeignerHealthExamHospitalsModule.tsx',
+  ]) {
+    const source = await readSource(modulePath);
+    assert.match(source, /<GeneratedDatasetDirectoryModule[\s\S]*?uiFamily=\{UI_FAMILIES\.healthcareStandard\}/, modulePath);
+  }
+
+  const app = await readSource('../App.tsx');
+  for (const dataset of [
+    'generalWesternMedicineInstitutions',
+    'rotavirusVaccineSubsidyProviders',
+    'schoolchildDentalPreventiveCareProviders',
+    'hospitalHemodialysisResources',
+    'postpartumCareInstitutions',
+  ]) {
+    assert.match(app, new RegExp(`tab === '${dataset}'[\\s\\S]*?uiFamily=\\{uiFamilyForDataset\\(tab\\)\\}`), dataset);
+  }
+  assert.doesNotMatch(app, /LegacyTabAccessibility/);
+});
+

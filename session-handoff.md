@@ -2,11 +2,10 @@
 
 ## Current Objective
 
-- Goal: Hold the repository at the verified pre-demo baseline unless a narrowly scoped demo-blocking bug is found.
-- Status: A–H remediation/polish is merged to `main`; pre-demo verification passed and the verified production commit is deployed.
-- Verified commit: `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`
+- Goal: Complete post-demo Batch 14 / Healthcare Exceptions on `postdemo/14-healthcare-exceptions` without changing dataset/domain semantics.
+- Status: Batches 01–13 are merged to `main`. Batch 14 implementation, regression coverage, and documentation are assembled and pre-push audited; Frontend CI is intentionally pending the single audited branch push.
+- Pre-demo verified commit remains `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`
-
 ## Verification Evidence
 
 | Check | Result | Notes |
@@ -35,20 +34,20 @@
   - `registry-directory`
   - `records-analysis`
   - `statistics-analysis`
-- Representative legacy modules have been migrated to shared family primitives; remaining family migration is post-demo work.
+- Post-demo Batches 01–14 cover the planned legacy-shell migration sequence across registry, records, statistics, location, and healthcare exceptions. Batch 14 converts the remaining manual healthcare tab lists to shared `AccessibleTabs`, moves bespoke healthcare shells into the healthcare-standard family frame, and opts generated healthcare directories into the shared generated-directory family wrapper.
 
 ## Known Non-blocking Items
 
 - Main production JavaScript chunk is approximately 549.5 kB minified / 161.4 kB gzip; Vite still emits the >500 kB advisory.
 - Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
 - GitHub Actions emits deprecation/runtime notices for older action internals.
-- Full legacy-shell migration is intentionally deferred until after the demo.
+- Batch 14 automated CI evidence is pending the single audited branch push; do not record a CI pass until the workflow actually completes.
 
 ## Next Session Startup
 
 1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/pre-demo-verification-2026-09-18.md`.
 2. Check `git status --short` for unrelated user changes.
-3. During the pre-demo freeze, only fix reproducible demo-blocking issues.
-4. After the demo, migrate remaining legacy shells in this order: registry-directory → records-analysis → statistics-analysis → location-directory → healthcare exceptions.
+3. Verify the Batch 14 PR/Frontend CI result before declaring the shell-normalization series fully automated-verified.
+4. After Batch 14, prioritize post-demo visual-regression baselines, then bundle/CI maintenance.
 5. Keep dataset parsing, calculations, filters, charts, and tables unchanged unless the task specifically requires domain-logic changes.
 6. Run focused tests first, then typecheck, unit tests, Playwright for UI-facing changes, production build, and `git diff --check`.

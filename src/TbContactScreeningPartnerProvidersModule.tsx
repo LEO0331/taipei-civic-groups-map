@@ -1,3 +1,5 @@
+import { UI_FAMILIES } from './lib/uiFamilies';
+import { DatasetFamilyFrame } from './DatasetFamilyFrame';
 import { useEffect, useMemo, useState } from 'react';
 
 type ProviderRecord = {
@@ -64,7 +66,7 @@ export default function TbContactScreeningPartnerProvidersModule({ language }: {
     URL.revokeObjectURL(url);
   };
 
-  return <section className="workspace">
+  return <DatasetFamilyFrame family={UI_FAMILIES.healthcareStandard} className="workspace">
     <div className="section-heading">
       <p>HEALTHCARE / INFECTIOUS DISEASE CONTROL</p>
       <h2>{text('結核病接觸者篩檢合作醫療院所', 'TB Contact Screening Partner Providers')}</h2>
@@ -86,5 +88,5 @@ export default function TbContactScreeningPartnerProvidersModule({ language }: {
     <button onClick={downloadCsv}>{text('下載篩選結果 CSV', 'Download filtered CSV')}</button>
     <div className="comparison-scroll procurement-table"><table><thead><tr>{[text('編號', 'ID'), text('縣市', 'City'), text('醫療機構名稱', 'Medical institution'), text('醫師姓名', 'Physician'), text('專科別', 'Specialty'), text('門診時間（來源紀錄）', 'Source-recorded clinic information')].map((label) => <th key={label}>{label}</th>)}</tr></thead><tbody>{pageRows.map((record) => <tr key={record.id}><td>{record.sourceSequenceNumber || fallback}</td><td>{record.cityName || fallback}</td><th>{record.institutionName || fallback}</th><td>{record.physicianName || fallback}</td><td>{record.specialtyRaw || fallback}</td><td><details><summary>{record.clinicHoursRaw.slice(0, 45) || fallback}</summary><pre>{record.clinicHoursRaw}</pre></details></td></tr>)}</tbody></table></div>
     <div className="pagination"><button disabled={page <= 1} onClick={() => setPage(page - 1)}>{text('上一頁', 'Previous')}</button><span>{page} / {pageCount}</span><button disabled={page >= pageCount} onClick={() => setPage(page + 1)}>{text('下一頁', 'Next')}</button></div>
-  </section>;
+  </DatasetFamilyFrame>;
 }

@@ -2,12 +2,14 @@
 
 ## Current State
 
-- Last updated: 2026-09-20
-- Active feature: post-demo Location Cultural & City shell normalization (`postdemo/13-location-cultural-city`).
+- Last updated: 2026-09-21
+- Active feature: post-demo Healthcare Exceptions shell normalization (`postdemo/14-healthcare-exceptions`).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: implemented post-demo Batch 14 / Healthcare Exceptions for the `healthcare-standard` family. The 47 remaining exception routes are normalized without changing dataset/domain semantics: 25 legacy multi-view modules now use `DatasetFamilyFrame` plus shared `AccessibleTabs`; 12 bespoke single-view workspace/module-panel routes use the healthcare-standard family frame without artificial tabs; and 10 generated healthcare directories opt into the existing generated-directory family wrapper. The nine already-standard healthcare routes (shared `HealthcareInstitutionDirectory` users plus the rehabilitation reference) remain on their established compact healthcare pattern, while the two influenza rich directories remain unchanged in `healthcare-rich-directory`. The application no longer mounts the runtime `LegacyTabAccessibility` bridge. Before pushing, all transformed sources were audited together for balanced family frames, removal of manual `<div className="subtabs">` markup on the 25 multi-view targets, preserved view IDs and page-reset behavior, family opt-ins on generated routes, unchanged data paths/domain calculations, and documentation/test coverage in the same commit. Frontend CI is intentionally left to the single audited branch push rather than used as an iterative implementation check.
 
 - 2026-09-20: implemented post-demo Batch 13 / Location Cultural & City on `postdemo/13-location-cultural-city`. Five `location-directory` routes (`travelAccommodations`, `streetPerformerVenues`, `artsCulturalVenues`, `cemeteryPublicFacilities`, `hotels`) now use the shared location family shell. Four dedicated multi-view pages use `DatasetFamilyFrame`, `DatasetFamilyHeading`, and `AccessibleTabs`; the street-performer generated directory opts into the existing generated-directory family wrapper. Existing filters, district summaries, map behavior, coordinate validation, room-count/rate fields, cross-dataset matching, external links, source notices, tables, and domain/data interpretation are preserved. Before pushing, the complete implementation, regression coverage, and documentation were structurally audited together: family wrappers/tabs are balanced, legacy subtabs are removed, view-condition sets and `data/...` references are unchanged, the App change is limited to the street-performer family opt-in, and no new trailing-whitespace or merge-conflict-marker issues are introduced. Frontend CI is intentionally left to the single audited push rather than used as an iterative implementation check.
 
@@ -94,7 +96,7 @@
 ## Next Session
 
 1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/pre-demo-verification-2026-09-18.md`.
-2. Preserve the pre-demo feature freeze unless a narrow demo-blocking bug is found.
-3. Inspect the working tree before editing.
-4. For post-demo work, prioritize remaining legacy-shell normalization in this order: registry-directory, records-analysis, statistics-analysis, location-directory, then healthcare exceptions; keep domain/data logic unchanged where possible.
-5. Record fresh verification evidence for any change.
+2. Verify the Batch 14 branch/PR CI result before making any follow-up claim about full automated verification.
+3. Inspect the working tree before editing and preserve unrelated changes.
+4. With the six-family shell-normalization sequence now covered through Batch 14, prioritize the remaining post-demo items: visual-regression baselines, then bundle/CI maintenance.
+5. Keep dataset parsing, calculations, filters, charts, and tables unchanged unless a separate correctness task requires it, and record fresh verification evidence for every change.

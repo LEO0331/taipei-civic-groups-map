@@ -200,7 +200,7 @@
         "pre-demo-verification-2026-09-18"
       ],
       "status": "ready",
-      "evidence": "Batch H classified all 156 catalogue routes/views and migrated representative registry, records-analysis, and statistics-analysis modules. Full inventory: docs/ui-family-classification.md. Batches 01–13 now cover registry-directory, records-analysis, statistics-analysis, and the first two location-directory waves; Batch 13 is pre-push audited with CI pending."
+      "evidence": "2026-09-21: Batches 01–14 now cover the remaining registry-directory, records-analysis, statistics-analysis, location-directory, and healthcare-exception shell migrations. Batch 14 normalizes 47 healthcare-standard exception routes (25 legacy multi-view, 12 bespoke single-view, 10 generated directories), removes the App-level legacy tab bridge, and preserves the nine already-standard compact healthcare routes plus both healthcare-rich influenza directories. Source-contract/E2E coverage and documentation are included in the single pre-push audited commit; Frontend CI is pending that branch push."
     },
     {
       "id": "post-demo-visual-regression",

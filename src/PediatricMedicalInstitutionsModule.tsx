@@ -1,3 +1,6 @@
+import { UI_FAMILIES } from './lib/uiFamilies';
+import { DatasetFamilyFrame } from './DatasetFamilyFrame';
+import AccessibleTabs from './AccessibleTabs';
 import SourceFields from './SourceFields';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -188,13 +191,13 @@ export default function PediatricMedicalInstitutionsModule({ language }: { langu
   const visible = (column: string) => !hidden.includes(column);
   const columns = [['id', 'ID'], ['name', t.name], ['district', t.district], ['postal', t.postal], ['address', t.address], ['phone', t.phone], ['map', t.map], ['status', t.dataStatus]];
 
-  if (failed) return <section className="workspace"><div className="notice" role="alert">{t.loadError}</div></section>;
+  if (failed) return <DatasetFamilyFrame family={UI_FAMILIES.healthcareStandard} className="workspace"><div className="notice" role="alert">{t.loadError}</div></DatasetFamilyFrame>;
   const topDistrict = byDistrict[0]?.label ?? empty;
 
-  return <section className="workspace">
+  return <DatasetFamilyFrame family={UI_FAMILIES.healthcareStandard} className="workspace">
     <div className="section-heading"><p>{t.category}</p><h2>{t.title}</h2><span>{t.subtitle}</span></div>
     <div className="notice subtle">{t.notice}</div>
-    <div className="subtabs">{[['find', t.find], ['directory', t.directory], ['districts', t.distribution], ['contact', t.contact], ['coverage', t.coverage], ['quality', t.quality], ['notes', t.notes]].map(([id, label]) => <button type="button" key={id} className={view === id ? 'active' : ''} onClick={() => { setView(id); setPage(1); }}>{label}</button>)}</div>
+    <AccessibleTabs tabs={[['find', t.find], ['directory', t.directory], ['districts', t.distribution], ['contact', t.contact], ['coverage', t.coverage], ['quality', t.quality], ['notes', t.notes]] as const} value={view} onChange={(id) => { setView(id); setPage(1); }} ariaLabel={language === 'zh' ? '兒科醫療資料檢視' : 'Pediatric healthcare data views'} idPrefix="pediatric-medical-institutions" />
     <aside className="filters" aria-label={t.find}>
       <label className="search"><input value={keyword} onChange={(event) => resetPage(() => setKeyword(event.target.value))} placeholder={t.search} aria-label={t.search} /></label>
       <div className="filter-grid">
@@ -212,5 +215,5 @@ export default function PediatricMedicalInstitutionsModule({ language }: { langu
     {view === 'directory' && <><div className="section-heading inline"><strong>{sorted.length.toLocaleString()} {t.results}</strong><button type="button" onClick={exportCsv}>{t.export}</button><label>{t.sorting}<select value={sort} onChange={(event) => { setSort(event.target.value); setPage(1); }}><option value="name">{t.sortName}</option><option value="district">{t.sortDistrict}</option><option value="postal">{t.sortPostal}</option><option value="id">{t.sortId}</option></select></label><details><summary>{t.fields}</summary>{columns.map(([key, label]) => <label key={key}><input type="checkbox" checked={visible(key)} onChange={() => setHiddenColumn(key)} /> {label}</label>)}</details></div><div className="comparison-scroll procurement-table"><table><thead><tr>{visible('id') && <th>ID</th>}{visible('name') && <th>{t.name}</th>}{visible('district') && <th>{t.district}</th>}{visible('postal') && <th>{t.postal}</th>}{visible('address') && <th>{t.address}</th>}{visible('phone') && <th>{t.phone}</th>}{visible('map') && <th>{t.map}</th>}{visible('status') && <th>{t.dataStatus}</th>}</tr></thead><tbody>{rows.map((record) => <tr key={record.id}>{visible('id') && <td>{record.sourceSequenceNumber || empty}</td>}{visible('name') && <th>{record.institutionName || empty}</th>}{visible('district') && <td>{record.districtName || empty}</td>}{visible('postal') && <td>{record.postalCode || empty}</td>}{visible('address') && <td>{record.address || empty} {copyButton(record.address)}</td>}{visible('phone') && <td>{record.phoneRaw ? <><a href={`tel:${record.phoneRaw.replace(/[^+\d]/g, '')}`}>{record.phoneRaw}</a> {copyButton(record.phoneRaw)}</> : empty}</td>}{visible('map') && <td>{record.externalMapQuery ? <a target="_blank" rel="noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(record.externalMapQuery)}`}>{t.map}</a> : empty}</td>}{visible('status') && <td>{record.hasAddress && record.hasPhone && record.hasResolvedDistrict ? t.yes : t.no}<details><summary>{t.sourceDetails}</summary><SourceFields fields={record.sourceValues} /></details></td>}</tr>)}</tbody></table></div>{!rows.length && <p className="empty">{t.noResults}</p>}<div className="pagination"><button type="button" disabled={currentPage <= 1} onClick={() => setPage(currentPage - 1)}>{t.previous}</button><span>{currentPage} / {pages}</span><button type="button" disabled={currentPage >= pages} onClick={() => setPage(currentPage + 1)}>{t.next}</button></div></>}
     {view === 'quality' && <div className="notes-grid"><article><h3>{t.dataQuality}</h3><p>{t.qualityText}</p><pre>{report ? JSON.stringify(report, null, 2) : empty}</pre></article></div>}
     {view === 'notes' && <div className="notes-grid"><article><h3>{t.dataNotes}</h3><p>{t.notesText}</p><p>{t.sourceUpdate}: {displayDate(summary?.sourceFileUpdatedAt, language)}<br />{t.metadataUpdate}: {displayDate(summary?.metadataUpdatedAt, language)}<br />{t.ingestedAt}: {displayDate(summary?.ingestedAt, language)}</p>{summary?.sourceUrl && <p><a href={summary.sourceUrl} target="_blank" rel="noreferrer">{summary.sourceUrl}</a></p>}</article></div>}
-  </section>;
+  </DatasetFamilyFrame>;
 }

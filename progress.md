@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: post-demo Healthcare Exceptions shell normalization (`postdemo/14-healthcare-exceptions`).
+- Active feature: final cross-family regression (`postdemo/15-final-cross-family-regression`).
 - Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: Batch 14 / Healthcare Exceptions Frontend CI run `35547913283` completed successfully: checkout/setup, `npm ci`, typecheck, unit tests, production build, Chromium install, and full Playwright all passed. PR #26 is merged to `main`. The final post-demo cross-family regression is now assembled from the eight manual pre-demo spot-checks. New Playwright coverage exercises all six UI families using the same representative routes recorded before the demo: adult influenza (`healthcare-rich-directory`), hospice (`healthcare-standard`), physical therapy (`location-directory`), labor unions (`registry-directory`), Labor Standards Act violations (`records-analysis`), and alternative-service statistics (`statistics-analysis`). The regression also automates the civic catalogue/view/search spot-check plus cross-family Back/Forward, language persistence, and reload behavior. Existing dedicated assertions are folded into the gate: hospice city/county labels stay readable, the rich healthcare warning/Data Trust label remains visible, and physical-therapy tabs retain Home/End keyboard behavior. The vaccination-provider accessibility regression was renamed from obsolete legacy-tab wording and now explicitly checks the shared `AccessibleTabs` marker and healthcare-specific accessible label. No application/data/conversion behavior is changed. Implementation and documentation are assembled before the single branch push; final-regression Frontend CI is intentionally pending that push rather than used as an iterative probe.
 
 - 2026-09-21: implemented post-demo Batch 14 / Healthcare Exceptions for the `healthcare-standard` family. The 47 remaining exception routes are normalized without changing dataset/domain semantics: 25 legacy multi-view modules now use `DatasetFamilyFrame` plus shared `AccessibleTabs`; 12 bespoke single-view workspace/module-panel routes use the healthcare-standard family frame without artificial tabs; and 10 generated healthcare directories opt into the existing generated-directory family wrapper. The nine already-standard healthcare routes (shared `HealthcareInstitutionDirectory` users plus the rehabilitation reference) remain on their established compact healthcare pattern, while the two influenza rich directories remain unchanged in `healthcare-rich-directory`. The application no longer mounts the runtime `LegacyTabAccessibility` bridge. Before pushing, all transformed sources were audited together for balanced family frames, removal of manual `<div className="subtabs">` markup on the 25 multi-view targets, preserved view IDs and page-reset behavior, family opt-ins on generated routes, unchanged data paths/domain calculations, and documentation/test coverage in the same commit. Frontend CI is intentionally left to the single audited branch push rather than used as an iterative implementation check.
 
@@ -96,7 +98,7 @@
 ## Next Session
 
 1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/pre-demo-verification-2026-09-18.md`.
-2. Verify the Batch 14 branch/PR CI result before making any follow-up claim about full automated verification.
-3. Inspect the working tree before editing and preserve unrelated changes.
-4. With the six-family shell-normalization sequence now covered through Batch 14, prioritize the remaining post-demo items: visual-regression baselines, then bundle/CI maintenance.
-5. Keep dataset parsing, calculations, filters, charts, and tables unchanged unless a separate correctness task requires it, and record fresh verification evidence for every change.
+2. Verify the final cross-family regression PR/Frontend CI result before marking UI-family normalization complete.
+3. Preserve the six-family/domain-data contracts; treat any regression failure as a narrow test or shell issue unless evidence shows a real product defect.
+4. After this final regression gate passes, the next planned post-demo item is deterministic screenshot/pixel-diff visual regression for representative states in all six UI families.
+5. Bundle reduction and GitHub Actions/runtime maintenance remain subsequent work.

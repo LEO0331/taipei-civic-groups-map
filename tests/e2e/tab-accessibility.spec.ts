@@ -35,11 +35,12 @@ test('generated directories expose the same keyboard tab contract', async ({ pag
   await expect(page.getByRole('tabpanel')).toContainText('臺北市');
 });
 
-test('legacy subtabs receive consistent roles, roving focus, and arrow-key activation', async ({ page }) => {
+test('healthcare-standard tabs use the shared roving keyboard contract', async ({ page }) => {
   await page.goto('/?dataset=vaccinationProviders&lang=zh');
   await expect(page.getByRole('heading', { name: '各項預防接種合約醫療院所' })).toBeVisible();
 
-  const tablist = page.getByRole('tablist', { name: '資料檢視' });
+  const tablist = page.getByRole('tablist', { name: '預防接種院所資料檢視' });
+  await expect(tablist).toHaveAttribute('data-accessible-tabs', 'true');
   const overview = tablist.getByRole('tab', { name: '總覽' });
   const distribution = tablist.getByRole('tab', { name: '行政區分布' });
 

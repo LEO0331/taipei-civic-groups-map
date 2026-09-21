@@ -199,8 +199,8 @@
         "maintenance-frontend",
         "pre-demo-verification-2026-09-18"
       ],
-      "status": "ready",
-      "evidence": "2026-09-21: Batches 01–14 now cover the remaining registry-directory, records-analysis, statistics-analysis, location-directory, and healthcare-exception shell migrations. Batch 14 normalizes 47 healthcare-standard exception routes (25 legacy multi-view, 12 bespoke single-view, 10 generated directories), removes the App-level legacy tab bridge, and preserves the nine already-standard compact healthcare routes plus both healthcare-rich influenza directories. Source-contract/E2E coverage and documentation are included in the single pre-push audited commit; Frontend CI is pending that branch push."
+      "status": "in_progress",
+      "evidence": "2026-09-21: Batches 01–14 are merged. Batch 14 Frontend CI run 35547913283 passed typecheck, unit tests, production build, and full Playwright. The final cross-family regression is assembled on `postdemo/15-final-cross-family-regression`, automating the eight manual pre-demo spot-checks across all six UI families, including hospice geography, rich-healthcare/Data Trust visibility, physical-therapy keyboard tabs, civic browse/search, and cross-family history/language persistence. The change is test/documentation-only; final-regression Frontend CI is pending the single audited branch push."
     },
     {
       "id": "post-demo-visual-regression",
@@ -210,7 +210,7 @@
         "pre-demo-verification-2026-09-18"
       ],
       "status": "ready",
-      "evidence": "Current Playwright covers workflows, accessibility, failure states, family contracts, and representative mobile overflow, but not a complete visual-diff baseline."
+      "evidence": "The final structural/workflow cross-family regression is being added after Batch 14. Deterministic screenshot/pixel-diff baselines remain a separate next task; current Playwright still does not commit image baselines for all six UI families."
     },
     {
       "id": "post-demo-performance-ci-maintenance",

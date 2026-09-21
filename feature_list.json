@@ -239,8 +239,8 @@
       "dependencies": [
         "post-demo-ci-runtime-maintenance"
       ],
-      "status": "ready",
-      "evidence": "The verified baseline has 85 datasets with unknown source dates. Unknown must remain unknown when no authoritative date is available."
+      "status": "done",
+      "evidence": "2026-09-21: Batch A adds verified Taipei Data Platform file-update timestamps for 11 Taipei Department of Health directories: anatomical pathology, ENT, family medicine, general Chinese medicine, general dental, general Western medicine, high-myopia prevention clinics, kidney-health promotion facilities, medical radiological institutions, orthopedics, and rehabilitation medicine. The dates come from each official dataset's file 更新時間; metadata-page edit times are not substituted. Rehabilitation conversion now reproduces its metadata. Data Trust improves from 32 to 43 dated directories and from 85 to 74 unknown-date directories, with the 117-directory total unchanged."
     },
     {
       "id": "post-demo-catalogue-search-tuning",

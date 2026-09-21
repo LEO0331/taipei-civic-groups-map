@@ -77,6 +77,36 @@ test('representative interaction profiles work', async ({ page }) => {
   await expect(main(page).locator('table')).toBeVisible();
 });
 
+test('catalogue task synonyms find focused services on desktop and mobile', async ({ page }) => {
+  await page.goto('/?lang=zh');
+  const cases = [
+    { query: '預防針', expected: '3歲以上幼童流感疫苗特約院所', excluded: '家庭醫學科醫療機構' },
+    { query: 'daycare', expected: '社區公共托育家園' },
+    { query: 'union', expected: '工會' },
+    { query: 'labor standards', expected: '勞基法違規紀錄' },
+    { query: 'mortuary', expected: '殯葬禮儀服務業' },
+    { query: 'cultural venue', expected: '臺北市藝文館所' },
+  ] as const;
+
+  for (const entry of cases) {
+    await test.step(entry.query, async () => {
+      const catalogue = page.locator('#dataset-catalogue');
+      const headerSearch = page.locator('.catalogue-search input');
+      if (await headerSearch.isVisible()) {
+        await headerSearch.fill(entry.query);
+      } else {
+        if (!await catalogue.isVisible()) await page.locator('.catalogue-trigger').click();
+        await catalogue.locator('.catalogue-popover-search input').fill(entry.query);
+      }
+      await expect(catalogue).toBeVisible();
+      await expect(catalogue.getByRole('button', { name: entry.expected, exact: true })).toBeVisible();
+      if ('excluded' in entry) {
+        await expect(catalogue.getByRole('button', { name: entry.excluded, exact: true })).toHaveCount(0);
+      }
+    });
+  }
+});
+
 test('the homepage does not wait for an unrelated dataset request', async ({ page }) => {
   await page.route('**/data/performing-arts-group-summary.json', () => new Promise(() => {}));
   await page.goto('/');

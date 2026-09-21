@@ -9,7 +9,7 @@ const items: Array<readonly [string, string]> = [
   ['laborUnions', '工會'],
   ['laborViolations', '勞基法違規公布紀錄'],
   ['funeralServiceBusinesses', '殯葬禮儀服務業'],
-  ['artsCulturalVenues', '臺北市藝文館所'],
+  ['artsCulturalVenues', '臺北市藝文場館'],
   ['animalHospitals', '動物醫院'],
 ];
 

@@ -3,13 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: post-demo visual regression baseline (`postdemo/16-visual-regression-baseline`).
-- Baseline: A–H remediation/polish merged to `main`; pre-demo verification passed and GitHub Pages deployed commit `9031db0c3b75eeae7d0bb756b0bd9aee78bf3cb5`.
+- Active feature: post-demo bundle and CI maintenance (`post-demo-performance-ci-maintenance`) — ready for the next branch.
+- Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–16 are complete; all six UI families have normalized regression coverage and a deterministic desktop/mobile visual baseline.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
 
-- 2026-09-21: Batch 16 / visual regression baseline has twelve Linux Chromium screenshots: desktop and mobile for hospice (`healthcare-standard`), adult influenza (`healthcare-rich-directory`), physical therapy’s stable non-map find state (`location-directory`), labor unions (`registry-directory`), Labor Standards Act violations (`records-analysis`), and alternative-service reserve statistics (`statistics-analysis`). Local Linux verification passed (12 focused screenshots and 141 full E2E passes with one expected skip), but the initial pushed Frontend CI run 35554254088 failed during Playwright under its unrestricted worker count. CI now caps Playwright to two workers, matching the successful Linux validation. Do not mark Batch 16 or the UI-family normalization phase done until that corrected CI run passes.
+- 2026-09-21: Batch 16 / visual regression baseline is closed. Twelve Linux Chromium screenshots cover desktop and mobile for hospice (`healthcare-standard`), adult influenza (`healthcare-rich-directory`), physical therapy’s stable non-map find state (`location-directory`), labor unions (`registry-directory`), Labor Standards Act violations (`records-analysis`), and alternative-service reserve statistics (`statistics-analysis`). PR #30 pinned Frontend CI to `mcr.microsoft.com/playwright:v1.62.1-noble`, matching the renderer used to generate the committed baselines while retaining the strict `maxDiffPixelRatio: 0.0005`. Commit `b95d497` passed Frontend CI run `35559017353`: `npm ci`, typecheck, unit tests, production build, and the full Playwright suite all succeeded. The post-demo UI-family normalization and visual-regression phases are complete.
 
 - 2026-09-21: the first Final cross-family Frontend CI run `35548774168` finished with **127 passed, 1 expected skip, 2 failed**. Both failures were the same test-fixture mismatch in desktop and mobile: the navigation regression searched the catalogue for `工會名單`, but the current Chinese UI merges `zhUiCopy` over the older copy and therefore renders the compact catalogue label `工會`. The underlying `laborUnions` route/family assertions already passed elsewhere in the same run. The narrow correction changes only that Playwright catalogue label to the actual rendered `工會`; no application, dataset, conversion, filter, calculation, chart, table, or source-semantic code changes. A fresh single CI run is required before marking the final gate complete.
 
@@ -102,6 +102,6 @@
 ## Next Session
 
 1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
-2. Keep the committed Linux Chromium screenshots aligned with the current Playwright version and GitHub Actions renderer; inspect each intentionally changed image before updating it.
+2. Keep the committed Linux Chromium screenshots aligned with Playwright `v1.62.1` and the pinned Noble CI renderer; inspect every intentional baseline change before updating snapshots.
 3. Start the next independent item, `post-demo-performance-ci-maintenance`, without changing public-data semantics.
 4. Preserve all dataset/domain behavior.

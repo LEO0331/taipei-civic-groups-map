@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: Batch 20 source-date metadata A (`post-demo-source-date-metadata-a`) on `postdemo/20-source-date-metadata-a`.
+- Active feature: Batch 21 catalogue search tuning (`post-demo-catalogue-search-tuning`) on `postdemo/21-catalogue-search-tuning`.
 - Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–16 are complete; all six UI families have normalized regression coverage and a deterministic desktop/mobile visual baseline.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: implemented Batch 21 / catalogue search tuning. The catalogue now keeps broad topic vocabulary separate from dataset-specific task synonyms, so broad queries still browse a theme while concrete terms resolve to relevant datasets. Added conservative bilingual aliases for vaccination/preventive shots, childcare/daycare, labor unions and compliance, welfare/assistance, funeral/cemetery services, and arts/cultural venues; search also normalizes `臺`/`台`. Unit coverage verifies broad-vs-specific matching, and desktop/mobile Playwright exercises `預防針`, `daycare`, `union`, `labor standards`, `mortuary`, and `cultural venue`, including a negative assertion that `預防針` does not surface family medicine. No dataset labels, categories, navigation structure, public data, or domain semantics changed. Merge is conditional on final-head Frontend CI passing.
 
 - 2026-09-21: implemented Batch 20 / source-date metadata A for 11 Taipei Department of Health directories with explicit official Taipei Data Platform file-update timestamps: anatomical pathology, ENT, family medicine, general Chinese medicine, general dental, general Western medicine, high-myopia prevention clinics, kidney-health promotion facilities, medical radiological institutions, orthopedics, and rehabilitation medicine. Dates use the resource file `更新時間`, not the later metadata-page edit timestamp. Rehabilitation conversion now reproduces the same metadata so regeneration does not lose the date. The checked-in Data Trust evidence moves from **32 dated / 85 unknown** to **43 dated / 74 unknown**, with 117 directories and zero fallback changes. No public records, filters, calculations, UI behavior, or source interpretation changed.
 
@@ -94,14 +96,14 @@
 
 ## Risks / Notes
 
-- Catalogue search currently matches dataset labels and topic keywords. Review real search terms after release to tune synonyms; do not silently assign future datasets to a catch-all category.
+- Catalogue search now supports conservative task synonyms plus broad topic vocabulary. Future aliases should remain dataset-specific where possible; do not silently assign new datasets to a catch-all category.
 
 - Route-level lazy loading now also defers the shared mapping runtime. The current main production chunk is 396.04 kB minified / 114.93 kB gzip, below Vite's warning threshold.
 - Browser regression coverage includes workflows, accessibility, failure states, family contracts, representative mobile overflow, and a twelve-image Linux Chromium screenshot/pixel-diff baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.
-- Pre-demo release evidence tracks 117 dataset directories: 32 have readable source dates and 85 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
+- Current Data Trust evidence tracks 117 dataset directories: 43 have readable source dates and 74 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
 
 - The source labels its updates as irregular. Its 2026-06-18 source update is exposed through module metadata, but the dashboard remains a generated local snapshot rather than a real-time service.
 
@@ -109,5 +111,5 @@
 
 1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
 2. Keep the committed Linux Chromium screenshots aligned with Playwright `v1.62.1` and the pinned Noble CI renderer; inspect every intentional baseline change before updating snapshots.
-3. After Batch 18 merges, start the separate `post-demo-ci-runtime-maintenance` item without changing visual thresholds, screenshots, or public-data semantics.
+3. After Batch 21 merges, start `post-demo-verification`; add no new feature scope unless verification finds a concrete regression.
 4. Preserve all dataset/domain behavior.

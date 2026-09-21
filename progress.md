@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: Batch 21 catalogue search tuning (`post-demo-catalogue-search-tuning`) on `postdemo/21-catalogue-search-tuning`.
-- Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–16 are complete; all six UI families have normalized regression coverage and a deterministic desktop/mobile visual baseline.
-- Release record: `docs/pre-demo-verification-2026-09-18.md`.
+- Active feature: Batch 22 post-demo verification and freeze (`post-demo-verification`) on `postdemo/22-post-demo-verification`.
+- Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–21 are complete; all six UI families are normalized, visual baselines are deterministic, the main entry is below the Vite advisory threshold, CI runtime pins are current, Data Trust source-date coverage is improved, and catalogue search includes conservative task synonyms.
+- Release record: `docs/post-demo-verification-2026-09-21.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: Batch 22 consolidates the post-demo release baseline at `main@05c87568` (PR #36). Frontend CI run `35578367111` passed typecheck, **141 unit tests**, production build, and **153 passed / 1 expected skip / 0 failed** Playwright tests across desktop/mobile; the twelve canonical visual-regression snapshots passed inside that suite. The production entry is **396.04 kB minified / 114.93 kB gzip** with the shared map runtime deferred to **154.20 kB / 45.05 kB gzip**. Checked-in Data Trust evidence remains **117 directories / 43 dated / 74 unknown-date / 0 reused-snapshot fallbacks**. Batch 22 is documentation/state only and freezes new feature scope unless verification finds a concrete regression. Final branch Frontend CI is required before merge.
 
 - 2026-09-21: implemented Batch 21 / catalogue search tuning. The catalogue now keeps broad topic vocabulary separate from dataset-specific task synonyms, so broad queries still browse a theme while concrete terms resolve to relevant datasets. Added conservative bilingual aliases for vaccination/preventive shots, childcare/daycare, labor unions and compliance, welfare/assistance, funeral/cemetery services, and arts/cultural venues; search also normalizes `臺`/`台`. Unit coverage verifies broad-vs-specific matching, and desktop/mobile Playwright exercises `預防針`, `daycare`, `union`, `labor standards`, `mortuary`, and `cultural venue`, including a negative assertion that `預防針` does not surface family medicine. No dataset labels, categories, navigation structure, public data, or domain semantics changed. Merge is conditional on final-head Frontend CI passing.
 
@@ -109,7 +111,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-visual-regression-baseline-2026-09-21.md`.
-2. Keep the committed Linux Chromium screenshots aligned with Playwright `v1.62.1` and the pinned Noble CI renderer; inspect every intentional baseline change before updating snapshots.
-3. After Batch 21 merges, start `post-demo-verification`; add no new feature scope unless verification finds a concrete regression.
-4. Preserve all dataset/domain behavior.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-verification-2026-09-21.md`.
+2. Treat `main` as feature-frozen unless a concrete bug, source refresh, or explicitly requested maintenance task justifies a new branch.
+3. Keep the committed Linux Chromium screenshots aligned with Playwright `v1.62.1` and the pinned Noble CI renderer; inspect every intentional baseline change before updating snapshots.
+4. Keep unknown source dates unknown unless authoritative evidence exists, and preserve all dataset/domain behavior.

@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-21
-- Active feature: Batch 18 main bundle reduction (`post-demo-main-bundle-reduction`) on `postdemo/18-main-bundle-reduction`.
+- Active feature: Batch 19 CI runtime maintenance (`post-demo-ci-runtime-maintenance`) on `postdemo/19-ci-runtime-maintenance`.
 - Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–16 are complete; all six UI families have normalized regression coverage and a deterministic desktop/mobile visual baseline.
 - Release record: `docs/pre-demo-verification-2026-09-18.md`.
 
 ## Latest Evidence
+
+- 2026-09-21: implemented Batch 19 CI runtime maintenance. Frontend CI and Pages now pin first-party actions to explicit current releases (`checkout` v7.0.1, `setup-node` v7.0.0, `upload-artifact` v7.0.1, `upload-pages-artifact` v5.0.0, `deploy-pages` v5.0.1), eliminating the known Node 20-targeting action set from the previous successful deploy log. The Playwright image stays pinned to `mcr.microsoft.com/playwright:v1.62.1-noble`, project Node stays at 22, npm caching remains explicit, and Pages now declares `actions: read`. No application, public-data, conversion, visual threshold, or verification gate changed. Merge is conditional on the final branch Frontend CI passing; the resulting `main` Pages run validates the deployment action chain.
 
 - 2026-09-21: completed Batch 18 main bundle reduction. Source-map analysis found the Leaflet and React Leaflet runtime retained in the entry because `App.tsx` directly implemented `CivicMap` and statically imported `DistrictComparison`. Both map surfaces now use lazy imports, allowing Rollup to move the shared mapping runtime behind existing map boundaries. The production entry fell from **556.42 kB minified / 163.76 kB gzip** to **396.04 kB / 114.93 kB gzip**, a 28.8% minified and 29.8% gzip reduction; the shared map runtime is now a **154.20 kB / 45.05 kB gzip** on-demand chunk. Vite no longer emits the `>500 kB` advisory. Typecheck, 139 unit tests, production build, focused map loading, and full Playwright (**143 passed, 1 expected skip**) pass. No public data or domain/UI behavior changed.
 

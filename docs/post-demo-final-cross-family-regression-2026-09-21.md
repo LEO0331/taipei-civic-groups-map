@@ -27,6 +27,14 @@ This is a **structural/workflow regression**, not the separate screenshot/pixel-
 
 Batch 14 removed the App-level legacy tab bridge and migrated the remaining healthcare tab lists to shared `AccessibleTabs`. The existing vaccination-provider keyboard regression still used the old “legacy subtabs” wording. This final pass updates that regression to assert the healthcare-specific accessible tablist label and the `data-accessible-tabs="true"` marker directly.
 
+## First CI result and narrow correction
+
+Frontend CI run `35548774168` completed with **127 passed, 1 expected skip, and 2 failed**. The two failures were the same navigation assertion executed once in desktop and once in mobile.
+
+The regression searched the catalogue for `工會名單`. That string comes from the older Chinese copy object, but the application builds the active Chinese UI copy as `{ ...copy.zh, ...zhUiCopy }`; `zhUiCopy.laborUnions` is `工會`, so the actual catalogue button/search label is `工會`. The route itself, its `registry-directory` family assignment, and its heading contract were already passing elsewhere in the same CI run.
+
+The correction therefore changes only the Playwright navigation fixture from `工會名單` to the actual rendered catalogue label `工會`. It does not change application behavior or weaken the cross-family acceptance matrix.
+
 ## Scope guard
 
 No application behavior, dataset parsing, source URLs, conversion scripts, calculations, filters, charts, tables, or public-data semantics are changed by this batch. The new gate is intentionally limited to test coverage and state documentation.

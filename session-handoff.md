@@ -2,8 +2,8 @@
 
 ## Current Objective
 
-- Goal: Complete the final cross-family regression on `postdemo/15-final-cross-family-regression`, using the pre-demo manual spot-check as the acceptance matrix.
-- Status: Batches 01–14 are merged to `main`. Batch 14 Frontend CI run `35547913283` completed successfully. The final regression implementation and documentation are assembled pre-push; its own Frontend CI is intentionally pending the single audited push.
+- Goal: Complete the narrow Final cross-family CI correction on `postdemo/15-final-cross-family-regression-fix`.
+- Status: Batches 01–14 and PR #27 are merged to `main`. Final cross-family CI run `35548774168` had 127 passed, 1 expected skip, and 2 identical failures caused by an obsolete catalogue test label (`工會名單` vs actual rendered `工會`). The correction is test/documentation-only and is pending a fresh single CI run.
 - Scope: tests/documentation only; no dataset parsing, calculations, filters, charts, tables, source data, or conversion behavior changes.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
@@ -41,12 +41,12 @@
 - Main production JavaScript chunk is approximately 549.5 kB minified / 161.4 kB gzip; Vite still emits the >500 kB advisory.
 - Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
 - GitHub Actions emits deprecation/runtime notices for older action internals.
-- Batch 14 Frontend CI passed. Final cross-family regression CI evidence is pending the single audited branch push; do not record the UI-family normalization series as complete until that workflow passes.
+- Batch 14 Frontend CI passed. Final cross-family run `35548774168` failed only on the duplicated desktop/mobile catalogue-label fixture mismatch; the narrow selector correction is pending verification. Do not mark the UI-family normalization series complete until the corrected workflow passes.
 
 ## Next Session Startup
 
-1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/pre-demo-verification-2026-09-18.md`.
-2. Verify the final cross-family regression PR/Frontend CI result.
-3. If it passes, mark `post-demo-ui-family-normalization` complete and keep `post-demo-visual-regression` as the next planned item.
-4. If it fails, inspect the exact family/workflow assertion first; do not broaden into domain/data changes without evidence.
-5. Keep dataset parsing, calculations, filters, charts, tables, and source semantics unchanged.
+1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/post-demo-final-cross-family-regression-2026-09-21.md`.
+2. Verify the CI-correction PR/Frontend CI result.
+3. If it passes, mark `post-demo-ui-family-normalization` complete and record the exact pass count/run.
+4. If it fails, inspect only the reported regression first; do not alter application/domain logic without evidence.
+5. Keep deterministic screenshot/pixel-diff visual regression as the next separate task.

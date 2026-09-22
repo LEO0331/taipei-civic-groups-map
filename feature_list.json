@@ -311,6 +311,16 @@
       ],
       "status": "done",
       "evidence": "2026-09-22: Batch 27 updates type-only dependencies (`@types/leaflet` 1.9.22, `@types/react` 19.3.0, `@types/react-dom` 19.3.0), aligns `@types/node` to the Node 22 runtime line at 22.20.4 (with `undici-types` 6.21.0), and changes the `@playwright/test` declaration from `^1.62.1` to exact `1.62.1` so lockfile regeneration cannot drift from the pinned `mcr.microsoft.com/playwright:v1.62.1-noble` screenshot renderer. A dependency-contract unit test enforces Playwright image/package alignment and Node 22 runtime/type alignment. React 19.3, Vite 8, plugin-react 6, TypeScript 7, newer tsx, and Playwright renderer migration are documented as deferred. No application source, data, lazy boundaries, visual thresholds, or domain semantics changed. Final PR-head CI is required before merge."
+    },
+    {
+      "id": "post-demo-cycle-2-verification",
+      "name": "Post-demo Cycle 2 verification and freeze",
+      "description": "Consolidate Batches 23–27 against an exact deployed main baseline, record release/data/performance/dependency evidence, and freeze Cycle 2 without changing application behavior.",
+      "dependencies": [
+        "post-demo-dependency-maintenance"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22: Cycle 2 is consolidated against main@99f47579 (PR #42). Frontend CI run 35679197317 passed npm ci, typecheck, 154 unit tests, production build, the 450/130 kB performance gate, and full desktop/mobile Playwright with 153 passed, 1 expected skip, 0 failed. GitHub Pages run 35679835524 (#229) then repeated fresh source fetch/conversion plus the full release path and deployed the exact baseline successfully. Release artifact 10674612688 (SHA-256 8f9a945d65d6e2ccbc3269fca9616d7708d54098ca36c0979d263d228e54a803) confirms 117 directories, 53 dated, 64 unknown-date, and 0 reused-snapshot fallbacks. The entry remains 399.63 kB raw / 115.86 kB independently measured gzip within the 450/130 kB budget; Vite reports 116.04 kB gzip. Freshness triage is 20 recent / 10 review / 23 priority_review and the top-10 authoritative source check approved 0 refreshes. Node 22, @types/node 22.20.4, exact @playwright/test 1.62.1, and the v1.62.1-noble renderer are aligned. Batch 28 changes documentation/state only; final branch Frontend CI is required before merge."
     }
   ]
 }

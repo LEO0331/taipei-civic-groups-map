@@ -14,7 +14,6 @@ export type TrustEntry = {
 
 export type FreshnessEntry = {
   id: string;
-  sourceName?: string;
   sourceUpdatedAt: string;
   ageDays: number;
   band: FreshnessBand;
@@ -78,7 +77,6 @@ export function buildFreshnessAudit(
       const ageDays = Math.max(0, Math.floor((asOf.valueOf() - updated.valueOf()) / DAY_MS));
       return {
         id: entry.id,
-        sourceName: entry.sourceName,
         sourceUpdatedAt: entry.sourceUpdatedAt,
         ageDays,
         band: classifyAge(ageDays),

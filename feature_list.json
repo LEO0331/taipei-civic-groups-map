@@ -27,7 +27,19 @@
         "maintenance-directory-data"
       ],
       "status": "done",
-      "evidence": "2026-09-22 Batch 29: Pages captures checked-in raw CSV header signatures before fetch, validates fetched CSVs before conversion, emits source-schema-report.json, and includes focused unit coverage. At the branch point the guard covers 203 CSV files across 144 raw-data directories. Final PR-head Frontend CI is required before merge."
+      "evidence": "2026-09-22 Batch 29 merged in PR #46. Frontend CI run 35692153833 passed the full verification path, and Pages run 35692801074 successfully captured the pre-fetch schema baseline, fetched sources, passed schema comparison before conversion, completed all release gates, and deployed main@15258465. Release evidence artifact 10679214406 has SHA-256 2f714482751f3357c51349bb72d5b5c601e1cf0f9fba1d34b1f9ec814ca9979a."
+    },
+    {
+      "id": "release-data-change-summary",
+      "name": "Release data-change summary",
+      "description": "Record which raw public-data sources changed during a release using content hashes, byte sizes, countable source rows, file additions/removals, and explicit authoritative source timestamps.",
+      "dependencies": [
+        "maintenance-harness",
+        "maintenance-directory-data",
+        "source-schema-drift-guard"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22 Batch 30: Pages captures a pre-fetch raw content baseline and writes public/data/data-change-summary.json after fetch/schema validation. The baseline covers 204 source files across 144 raw-data directories (203 CSV + 1 JSON), excludes fetch-execution metadata churn, and retains the summary in release evidence. Focused unit coverage verifies CSV logical-row counting, conservative source timestamps, content changes, unchanged data, and rolling file replacement. Final PR-head Frontend CI is required before merge."
     },
     {
       "id": "maintenance-frontend",

@@ -2,12 +2,14 @@
 
 ## Current State
 
-- Last updated: 2026-09-21
-- Active feature: Batch 22 post-demo verification and freeze (`post-demo-verification`) on `postdemo/22-post-demo-verification`.
-- Baseline: pre-demo A–H remediation/polish plus post-demo Batches 01–21 are complete; all six UI families are normalized, visual baselines are deterministic, the main entry is below the Vite advisory threshold, CI runtime pins are current, Data Trust source-date coverage is improved, and catalogue search includes conservative task synonyms.
+- Last updated: 2026-09-22
+- Active feature: Batch 23 source-date metadata B (`post-demo-source-date-metadata-b`) on `postdemo/23-source-date-metadata-b`.
+- Baseline: post-demo Cycle 1 is frozen at Batch 22; Cycle 2 begins with bounded Data Trust provenance maintenance and preserves all application/data semantics.
 - Release record: `docs/post-demo-verification-2026-09-21.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 23 / source-date metadata B for 10 Taipei Department of Health directories using explicit Taipei Data Platform resource `更新時間`: diabetes shared care, hospital hemodialysis resources, senior pneumococcal vaccine providers, registered postpartum-care institutions, schoolchild dental preventive care, senior health examinations, child preventive healthcare, early-intervention medical providers, rotavirus vaccine subsidy providers, and hotel hygiene certification. The two combined multi-resource datasets use the **oldest included resource timestamp** as `sourceFileUpdatedAt` to avoid overstating snapshot freshness, while individual resource dates remain recorded in metadata. Checked-in Data Trust evidence improves from **43 dated / 74 unknown** to **53 dated / 64 unknown**, with **117 directories / 0 reused-snapshot fallbacks** unchanged. No dataset records, UI behavior, calculations, categories, or source interpretation changed. Final branch Frontend CI is required before merge.
 
 - 2026-09-21: Batch 22 consolidates the post-demo release baseline at `main@05c87568` (PR #36). Frontend CI run `35578367111` passed typecheck, **141 unit tests**, production build, and **153 passed / 1 expected skip / 0 failed** Playwright tests across desktop/mobile; the twelve canonical visual-regression snapshots passed inside that suite. The production entry is **399.63 kB minified / 116.04 kB gzip** with the shared map runtime deferred to **154.20 kB / 45.05 kB gzip**. GitHub Pages run `35579373983` repeated fresh source fetch/conversion plus the full verification path and deployed the exact `05c87568` baseline successfully; release artifact `10630175736` confirms **117 directories / 43 dated / 74 unknown-date / 0 reused-snapshot fallbacks**. Batch 22 is documentation/state only and freezes new feature scope unless verification finds a concrete regression. Final branch Frontend CI is required before merge.
 
@@ -105,13 +107,13 @@
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.
-- Current Data Trust evidence tracks 117 dataset directories: 43 have readable source dates and 74 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
+- Current Data Trust evidence tracks 117 dataset directories: 53 have readable source dates and 64 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
 
 - The source labels its updates as irregular. Its 2026-06-18 source update is exposed through module metadata, but the dashboard remains a generated local snapshot rather than a real-time service.
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-verification-2026-09-21.md`.
-2. Treat `main` as feature-frozen unless a concrete bug, source refresh, or explicitly requested maintenance task justifies a new branch.
-3. Keep the committed Linux Chromium screenshots aligned with Playwright `v1.62.1` and the pinned Noble CI renderer; inspect every intentional baseline change before updating snapshots.
-4. Keep unknown source dates unknown unless authoritative evidence exists, and preserve all dataset/domain behavior.
+1. Read `AGENTS.md`, `feature_list.json`, this file, `docs/post-demo-verification-2026-09-21.md`, and `docs/source-date-metadata-b-2026-09-22.md`.
+2. After Batch 23 merges, start `postdemo/24-ci-trigger-dedup`; preserve every verification gate while avoiding duplicate push/PR runs for the same PR head.
+3. Keep unknown source dates unknown unless authoritative evidence exists; for multi-resource snapshots, continue using the oldest included resource date unless a more specific freshness contract is documented.
+4. Preserve all dataset/domain behavior and the pinned visual-regression renderer.

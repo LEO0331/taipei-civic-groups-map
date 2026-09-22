@@ -14,9 +14,9 @@
 
 ## 目前版本狀態
 
-Post-demo Batch 01–21 已完成。目前應用程式基準為 **2026-09-21** commit `05c87568af360e3fdcd30a07f4c1bbdb4e7bf934`（PR #36），已包含 UI family 正規化、可重現 visual baseline、主 bundle 縮減、CI runtime 維護、來源日期 metadata batch A，以及資料目錄搜尋詞調整。Frontend CI run `35578367111` 已通過 typecheck、**141 個 unit tests**、production build，以及完整桌面／手機 Playwright，結果為 **153 passed / 1 個預期 skip / 0 failed**。GitHub Pages run `35579373983` 隨後重新執行最新來源擷取／轉換與完整驗證流程，並成功部署相同的 `05c87568` 應用程式基準。
+Post-demo Batch 01–21 已完成。目前應用程式基準為 **2026-09-21** commit `05c87568af360e3fdcd30a07f4c1bbdb4e7bf934`（PR #36），已包含 UI family 正規化、可重現 visual baseline、主 bundle 縮減、CI runtime 維護、來源日期 metadata batches A–B，以及資料目錄搜尋詞調整。Frontend CI run `35578367111` 已通過 typecheck、**141 個 unit tests**、production build，以及完整桌面／手機 Playwright，結果為 **153 passed / 1 個預期 skip / 0 failed**。GitHub Pages run `35579373983` 隨後重新執行最新來源擷取／轉換與完整驗證流程，並成功部署相同的 `05c87568` 應用程式基準。
 
-目前 checked-in Data Trust evidence 追蹤 **117** 個靜態資料目錄，其中 **43** 個有可讀取來源日期、**74** 個日期未知，且 **0** 個沿用舊快照 fallback。正式版主要 entry 為 **399.63 kB minified / 116.04 kB gzip**，已低於 Vite 的 500 kB 提示門檻。完整紀錄請參閱 [Post-demo verification — 2026-09-21](docs/post-demo-verification-2026-09-21.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
+目前 checked-in Data Trust evidence 追蹤 **117** 個靜態資料目錄，其中 **53** 個有可讀取來源日期、**64** 個日期未知，且 **0** 個沿用舊快照 fallback。正式版主要 entry 為 **399.63 kB minified / 116.04 kB gzip**，已低於 Vite 的 500 kB 提示門檻。完整紀錄請參閱 [Post-demo verification — 2026-09-21](docs/post-demo-verification-2026-09-21.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
 
 ## 資料目錄
 

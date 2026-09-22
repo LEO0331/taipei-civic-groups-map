@@ -261,6 +261,16 @@
       ],
       "status": "done",
       "evidence": "2026-09-21: post-demo Batches 17–21 are consolidated against application baseline main@05c87568 (PR #36). Frontend CI run 35578367111 passed typecheck, 141 unit tests, production build, and full desktop/mobile Playwright with 153 passed, 1 expected skip, 0 failed; the 12 canonical visual baselines passed inside that suite. GitHub Pages run 35579373983 then repeated fresh source fetch/conversion plus the full verification path and deployed the exact application baseline successfully; release artifact 10630175736 confirms 117 directories, 43 dated, 74 unknown-date, and 0 reused-snapshot fallbacks. The production entry is 399.63 kB minified / 116.04 kB gzip with the shared map runtime deferred to 154.20 kB / 45.05 kB gzip. CI uses Node 22 with Playwright v1.62.1 Noble and explicit current first-party action versions. Batch 22 adds no application/data feature behavior; final branch Frontend CI is required before merge."
+    },
+    {
+      "id": "post-demo-source-date-metadata-b",
+      "name": "Post-demo source-date metadata batch B",
+      "description": "Continue reducing unknown source dates for a bounded Taipei Department of Health family using authoritative resource update timestamps only.",
+      "dependencies": [
+        "post-demo-verification"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22: Batch B adds verified Taipei Data Platform file-update timestamps for 10 Department of Health directories: diabetes shared care, hospital hemodialysis resources, senior pneumococcal vaccine providers, registered postpartum-care institutions, schoolchild dental preventive care, senior health examinations, child preventive healthcare, early-intervention medical providers, rotavirus vaccine subsidy providers, and hotel hygiene certification. For the two multi-resource datasets, Data Trust uses the oldest included resource timestamp to avoid overstating freshness. Data Trust improves from 43 to 53 dated directories and from 74 to 64 unknown-date directories; total remains 117 and fallback remains 0. No dataset records, UI behavior, calculations, or source interpretation changed. Final branch Frontend CI is required before merge."
     }
   ]
 }

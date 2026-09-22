@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "datasetDirectoryCount": 117,
-  "datedDatasetCount": 43,
+  "datedDatasetCount": 53,
   "fetchFallbackDatasetCount": 0,
   "entries": [
     {
@@ -41,7 +41,9 @@
     },
     {
       "id": "child-preventive-healthcare-facilities",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市兒童預防保健服務醫療院所",
+      "sourceUpdatedAt": "2026-03-24T16:54:12+08:00"
     },
     {
       "id": "child-youth-friendly-welfare-service-sites",
@@ -79,7 +81,9 @@
     },
     {
       "id": "contracted-senior-health-examination-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市老人健康檢查特約醫事機構",
+      "sourceUpdatedAt": "2026-06-12T11:59:26+08:00"
     },
     {
       "id": "cosmetic-medicine-supervision-2024",
@@ -102,7 +106,9 @@
     },
     {
       "id": "diabetes-shared-care-medical-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市糖尿病共照網醫事機構名單",
+      "sourceUpdatedAt": "2026-09-03T17:56:42+08:00"
     },
     {
       "id": "disability-day-services",
@@ -127,7 +133,9 @@
     },
     {
       "id": "early-intervention-medical-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市早期療育合約醫院及早療診所一覽表",
+      "sourceUpdatedAt": "2024-07-05T17:21:17+08:00"
     },
     {
       "id": "education-volunteer-recognition-records",
@@ -252,11 +260,15 @@
     },
     {
       "id": "hospital-hemodialysis-resources",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市公私立醫院血液透析資源",
+      "sourceUpdatedAt": "2026-03-16T16:03:23+08:00"
     },
     {
       "id": "hotel-hygiene-certification-directory",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市營業場所衛生優良自主管理分級認證業者名冊〖旅館業〗",
+      "sourceUpdatedAt": "2026-03-19T12:03:40+08:00"
     },
     {
       "id": "indigenous-community-organizations",
@@ -427,7 +439,9 @@
     },
     {
       "id": "public-pneumococcal-vaccine-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市75歲以上長者肺炎鏈球菌疫苗特約醫療院所名單",
+      "sourceUpdatedAt": "2026-01-07T11:46:42+08:00"
     },
     {
       "id": "rabies-vaccination-veterinary-clinics",
@@ -443,7 +457,9 @@
     },
     {
       "id": "registered-postpartum-care-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市政府衛生局已立案之產後護理機構一覽表",
+      "sourceUpdatedAt": "2025-03-19T16:17:56+08:00"
     },
     {
       "id": "rehabilitation-medicine-institutions",
@@ -453,11 +469,15 @@
     },
     {
       "id": "rotavirus-vaccine-subsidy-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市輪狀病毒疫苗補助特約院所名單",
+      "sourceUpdatedAt": "2026-01-07T11:53:36+08:00"
     },
     {
       "id": "schoolchild-dental-preventive-care-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市學童塗氟及窩溝封填合約醫院",
+      "sourceUpdatedAt": "2026-03-24T15:09:14+08:00"
     },
     {
       "id": "senior-care-capacity-and-occupancy",

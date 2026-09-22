@@ -2,9 +2,9 @@
 
 ## Current Objective
 
-- Goal: Complete Batch 18 main bundle reduction on `postdemo/18-main-bundle-reduction`.
-- Status: Batch 18 is complete. The entry chunk fell from 556.42 kB / 163.76 kB gzip to 396.04 kB / 114.93 kB gzip by deferring the shared Leaflet runtime behind lazy civic-map and district-comparison boundaries. Typecheck, 139 unit tests, production build, focused map loading, and full Playwright (143 passed, 1 expected skip) pass.
-- Scope: application import boundaries, regression coverage, and documentation only; no dataset parsing, calculations, filters, charts, tables, source data, conversion behavior, visual thresholds, or production CSS changes.
+- Goal: Preserve the Cycle 2 demo freeze.
+- Status: Application baseline `main@99f47579` passed Frontend CI run `35679197317` (154 unit tests; 153 Playwright passes and 1 expected skip) and Pages run `35679835524`. Final freeze commit `main@bcbf7e8` passed and deployed in Pages run `35681488171`.
+- Scope: no new feature work before the demo. Limit changes to demonstrated blockers only.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
 
@@ -38,14 +38,12 @@
 
 ## Known Non-blocking Items
 
-- The main production JavaScript chunk is now 396.04 kB minified / 114.93 kB gzip; Vite's >500 kB advisory is resolved.
-- Source-date metadata remains incomplete: 85 of 117 Data Trust directories have no readable source date.
-- GitHub Actions emits deprecation/runtime notices for older action internals.
-- Screenshot baselines are intentionally representative rather than exhaustive. Batch 18 does not update screenshots or visual thresholds.
+- The production entry is 399.63 kB raw / 115.86 kB independently measured gzip, protected by the 450 / 130 kB budget; the deferred map runtime is observation-only at 154.20 / 45.05 kB.
+- Source-date metadata remains incomplete: 64 of 117 directories have no readable source date.
+- Screenshot baselines are intentionally representative rather than exhaustive: 12 Linux Chromium images protect the six UI families across desktop and mobile.
 
 ## Next Session Startup
 
-1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/post-demo-main-bundle-reduction-2026-09-21.md`.
-2. Confirm Batch 18's full local and Frontend CI results before closing it.
-3. Start Batch 19 `post-demo-ci-runtime-maintenance` separately; preserve the pinned Playwright Noble renderer and every verification gate.
-4. Preserve all dataset/domain behavior.
+1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/demo-briefing-2026-09-22.md`.
+2. Treat `main@bcbf7e8` as the demo freeze; do not start maintenance work unless it addresses a concrete blocker.
+3. Preserve the 450 / 130 kB entry budget, Node 22/runtime contracts, 12 visual baselines, Data Trust conservatism, and all verification gates.

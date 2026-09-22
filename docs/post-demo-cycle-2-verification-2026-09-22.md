@@ -12,7 +12,7 @@ This document consolidates post-demo Cycle 2 (Batches 23–27) and records the m
 - Pages release result: successful
 - Production URL: https://leo0331.github.io/taipei-civic-groups-map/
 
-Batch 28 is documentation/state-only. It does not change application code, dataset records, fetch/conversion logic, filters, calculations, categories, lazy-loading boundaries, visual thresholds, or public-data interpretation.
+Batch 28 is documentation/state-only. It does not change application code, dataset records, fetch/conversion logic, filters, calculations, categories, lazy-loading boundaries, visual thresholds, or public-data interpretation. Its merged freeze commit is `bcbf7e81629f5011026260f2ebc80e3201bf51d4`; GitHub Pages run `35681488171` completed successfully and deployed that exact final documentation state.
 
 ## Cycle 2 scope
 
@@ -171,4 +171,6 @@ Post-demo Cycle 2 is complete after Batch 28:
 - Batch 27 — dependency maintenance
 - Batch 28 — Cycle 2 verification/freeze
 
-After Batch 28 merges, treat `main` as a stable maintenance baseline. New work should begin only for a concrete bug, a source refresh justified by authoritative evidence, an explicitly approved feature, or a separately scoped runtime/toolchain migration. Preserve Data Trust conservatism, the performance budget, and the pinned visual renderer by default.
+`main@bcbf7e8` is the stable demo freeze. New work should begin only for a concrete bug, a source refresh justified by authoritative evidence, an explicitly approved feature, or a separately scoped runtime/toolchain migration. Preserve Data Trust conservatism, the performance budget, and the pinned visual renderer by default.
+
+For the short presentation-day checklist and the current public-data caveats, see [Demo briefing — 2026-09-22](demo-briefing-2026-09-22.md).

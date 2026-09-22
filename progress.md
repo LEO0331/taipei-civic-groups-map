@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Batch 23 source-date metadata B (`post-demo-source-date-metadata-b`) on `postdemo/23-source-date-metadata-b`.
+- Active feature: Batch 24 CI trigger deduplication (`post-demo-ci-trigger-dedup`) on `postdemo/24-ci-trigger-dedup`.
 - Baseline: post-demo Cycle 1 is frozen at Batch 22; Cycle 2 begins with bounded Data Trust provenance maintenance and preserves all application/data semantics.
 - Release record: `docs/post-demo-verification-2026-09-21.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 24 / CI trigger deduplication. Batch 23 final SHA `f44d67f` demonstrated the waste directly: Frontend CI push run `35672234669` and pull-request run `35672288880` both completed the same full suite successfully. Frontend CI now runs automatically on `pull_request` only and retains `workflow_dispatch` for intentional pre-PR/manual verification. The verify job itself is unchanged: pinned Playwright `v1.62.1-noble`, Node 22, `npm ci`, typecheck, unit tests, production build, full desktop/mobile Playwright including visual regression, and failure-artifact upload. `main` remains covered by the separate Pages workflow, which performs fresh fetch/conversion plus the full release verification and deployment path. No application, data, visual threshold, or verification gate changed.
 
 - 2026-09-22: implemented Batch 23 / source-date metadata B for 10 Taipei Department of Health directories using explicit Taipei Data Platform resource `更新時間`: diabetes shared care, hospital hemodialysis resources, senior pneumococcal vaccine providers, registered postpartum-care institutions, schoolchild dental preventive care, senior health examinations, child preventive healthcare, early-intervention medical providers, rotavirus vaccine subsidy providers, and hotel hygiene certification. The two combined multi-resource datasets use the **oldest included resource timestamp** as `sourceFileUpdatedAt` to avoid overstating snapshot freshness, while individual resource dates remain recorded in metadata. Checked-in Data Trust evidence improves from **43 dated / 74 unknown** to **53 dated / 64 unknown**, with **117 directories / 0 reused-snapshot fallbacks** unchanged. No dataset records, UI behavior, calculations, categories, or source interpretation changed. Final branch Frontend CI is required before merge.
 
@@ -113,7 +115,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, `docs/post-demo-verification-2026-09-21.md`, and `docs/source-date-metadata-b-2026-09-22.md`.
-2. After Batch 23 merges, start `postdemo/24-ci-trigger-dedup`; preserve every verification gate while avoiding duplicate push/PR runs for the same PR head.
-3. Keep unknown source dates unknown unless authoritative evidence exists; for multi-resource snapshots, continue using the oldest included resource date unless a more specific freshness contract is documented.
-4. Preserve all dataset/domain behavior and the pinned visual-regression renderer.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/ci-trigger-dedup-2026-09-22.md`.
+2. After Batch 24 merges, start `postdemo/25-performance-budget`; protect the current bundle improvement with a regression budget before attempting any further optimization.
+3. Use `workflow_dispatch` only when a deliberate pre-PR full Frontend CI run is needed; normal feature branches should rely on one automatic PR run.
+4. Preserve all dataset/domain behavior, verification gates, and the pinned visual-regression renderer.

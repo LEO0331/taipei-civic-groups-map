@@ -271,6 +271,16 @@
       ],
       "status": "done",
       "evidence": "2026-09-22: Batch B adds verified Taipei Data Platform file-update timestamps for 10 Department of Health directories: diabetes shared care, hospital hemodialysis resources, senior pneumococcal vaccine providers, registered postpartum-care institutions, schoolchild dental preventive care, senior health examinations, child preventive healthcare, early-intervention medical providers, rotavirus vaccine subsidy providers, and hotel hygiene certification. For the two multi-resource datasets, Data Trust uses the oldest included resource timestamp to avoid overstating freshness. Data Trust improves from 43 to 53 dated directories and from 74 to 64 unknown-date directories; total remains 117 and fallback remains 0. No dataset records, UI behavior, calculations, or source interpretation changed. Final branch Frontend CI is required before merge."
+    },
+    {
+      "id": "post-demo-ci-trigger-dedup",
+      "name": "Post-demo CI trigger deduplication",
+      "description": "Avoid duplicate full Frontend CI runs for the same pull-request head while preserving every verification gate and manual pre-PR verification.",
+      "dependencies": [
+        "post-demo-source-date-metadata-b"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22: Frontend CI now triggers automatically on pull_request only, with workflow_dispatch retained for intentional pre-PR/manual runs. The verify job is unchanged: Playwright v1.62.1 Noble, Node 22, npm ci, typecheck, unit tests, production build, full desktop/mobile Playwright including visual regression, and failure artifacts. Batch 23 final SHA f44d67f previously ran the same full suite twice (push run 35672234669 and pull_request run 35672288880); Batch 24 removes the automatic feature-branch push trigger. Main remains protected by the separate Pages workflow, which runs fresh fetch/conversion plus the full release verification/deploy path."
     }
   ]
 }

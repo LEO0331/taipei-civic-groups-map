@@ -54,6 +54,18 @@
       "evidence": "2026-09-22 Batch 31 adds 10 authoritative Taipei Data Platform resource timestamps after Batch 30 live-fetch evidence confirmed all 10 corresponding raw snapshots were unchanged. Data Trust improves from 53 dated / 64 unknown to 63 dated / 54 unknown with 0 fallbacks. Freshness triage becomes 23 recent / 13 review / 27 priority_review. No source records or UI/domain behavior change. Final PR-head Frontend CI is required before merge."
     },
     {
+      "id": "data-freshness-audit-b",
+      "name": "Data freshness audit B",
+      "description": "Authoritatively compare the next bounded tranche of priority-review snapshots with their matching downloadable resources before approving any focused refresh.",
+      "dependencies": [
+        "source-date-metadata-c",
+        "release-data-change-summary",
+        "source-schema-drift-guard"
+      ],
+      "status": "in_progress",
+      "evidence": "2026-09-22 Batch 32 reviewed ten previously unchecked June 11, 2025 Taipei Department of Health medical-institution resources. Each live official CSV update time matches the local source date, so 0 focused refreshes are approved. Data Trust remains 117 / 63 dated / 54 unknown / 0 fallback; freshness triage remains 23 recent / 13 review / 27 priority_review. Local typecheck, 165 unit tests, build, performance budget, JSON validation, and diff check passed. PR CI, merge, and Pages release are pending."
+    },
+    {
       "id": "maintenance-frontend",
       "name": "Directory frontend maintenance",
       "description": "Improve scoped React UI behavior, language consistency, accessibility, and presentation without changing unsupported factual claims.",

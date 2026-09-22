@@ -3,11 +3,17 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Post-demo Cycle 3 / Batch 32 — data freshness audit B on `postdemo/32-data-freshness-audit-b`.
-- Baseline: Batch 31 / PR #48 is merged at `main@4f0a2c0`; Data Trust tracks 117 directories (63 dated / 54 unknown / 0 fallback) and the 2026-09-22 audit is 23 recent / 13 review / 27 priority_review.
-- Release record: `docs/data-freshness-audit-b-2026-09-22.md` (Batch 32 audit); `docs/post-demo-cycle-2-verification-2026-09-22.md` (previous release baseline).
+- Active feature: Post-demo Cycle 3 / Batch 33 — verification/freeze on `postdemo/33-cycle-3-verification`.
+- Baseline: Batches 29–32 are merged; PR #50's fixture correction is in `main@b70c2b2`. Checked-in Data Trust is 117 directories (63 dated / 54 unknown / 0 fallback) and the 2026-09-22 audit is 23 recent / 13 review / 27 priority_review.
+- Release record: `docs/post-demo-cycle-3-verification-2026-09-22.md` (freeze candidate); `docs/post-demo-cycle-2-verification-2026-09-22.md` (previous completed release baseline).
 
 ## Latest Evidence
+
+- 2026-09-22: Batch 33 is consolidating Cycle 3 without application, data, runtime, visual, or performance-threshold changes. The current Pages workflow retains schema capture → release-data capture → fetch → schema check → data-change comparison → conversion, followed by the full release verification and deployment path. `main@b70c2b2` is the implementation baseline; its corrected Pages run `35700502040` was in progress at branch creation. The Cycle 3 freeze remains conditional on exact PR-head CI and merged Pages success, which the user will review after implementation.
+
+- 2026-09-22: Batch 33 local verification passed in the pinned Noble image: `npm ci`, typecheck, **165 unit tests**, production build, and the blocking entry budget (**399.63 kB raw / 115.86 kB gzip**, limits 450 / 130 kB). The deterministic `2026-09-22` freshness audit reproduced **63 dated / 54 unknown** and **23 recent / 13 review / 27 priority_review** with no content change. The branch contains only documentation/state; raw source files, metadata, generated Data Trust/audit evidence, screenshots, dependencies, and workflow files are unchanged. Full Playwright and Pages release evidence remain for the user's CI review.
+
+- 2026-09-22: Batch 32 audit PR #49 merged at `main@977ff9f`; PR #50 corrected the stale unknown-date E2E fixture and merged at `main@b70c2b2`. The earlier Batch 31/32 Pages runs failed on that fixture, not on schema or source content. Do not treat those failed runs as a verified Cycle 3 release.
 
 - 2026-09-22: Batch 32 selected ten previously unchecked, same-age priority-review datasets in the Taipei Department of Health medical-institution family. Each matching official downloadable CSV **更新時間** is 2025-06-11 and exactly matches its local `sourceFileUpdatedAt` (see `docs/data-freshness-audit-b-2026-09-22.md` for precise times, source-page links, and resource IDs). **No newer authoritative resource was found; no fetch or conversion was approved.** Raw records, metadata, schema/release reports, and deterministic Data Trust/audit JSON remain untouched. The 117 / 63 / 54 / 0 and 23 / 13 / 27 counts do not change. Local typecheck, 165 unit tests, build, performance budget, JSON validation, and diff check passed; PR CI and release gates remain pending.
 

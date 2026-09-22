@@ -51,7 +51,7 @@
         "release-data-change-summary"
       ],
       "status": "done",
-      "evidence": "2026-09-22 Batch 31 adds 10 authoritative Taipei Data Platform resource timestamps after Batch 30 live-fetch evidence confirmed all 10 corresponding raw snapshots were unchanged. Data Trust improves from 53 dated / 64 unknown to 63 dated / 54 unknown with 0 fallbacks. Freshness triage becomes 23 recent / 13 review / 27 priority_review. No source records or UI/domain behavior change. Final PR-head Frontend CI is required before merge."
+      "evidence": "2026-09-22 Batch 31 merged in PR #48 at main@4f0a2c0. Ten authoritative Taipei Data Platform resource timestamps improved Data Trust from 53 dated / 64 unknown to 63 dated / 54 unknown with 0 fallbacks; freshness triage became 23 recent / 13 review / 27 priority_review. No source records or UI/domain behavior changed. Its first full CI/Pages verification was affected by the stale unknown-date E2E fixture subsequently corrected in PR #50; the final Cycle 3 release gate remains pending."
     },
     {
       "id": "data-freshness-audit-b",
@@ -63,7 +63,20 @@
         "source-schema-drift-guard"
       ],
       "status": "in_progress",
-      "evidence": "2026-09-22 Batch 32 reviewed ten previously unchecked June 11, 2025 Taipei Department of Health medical-institution resources. Each live official CSV update time matches the local source date, so 0 focused refreshes are approved. Data Trust remains 117 / 63 dated / 54 unknown / 0 fallback; freshness triage remains 23 recent / 13 review / 27 priority_review. Local typecheck, 165 unit tests, build, performance budget, JSON validation, diff check, and focused desktop/mobile E2E fixture correction passed. Corrected full PR CI, merge, and Pages release are pending."
+      "evidence": "2026-09-22 Batch 32 audited ten previously unchecked June 11, 2025 Taipei medical-institution CSV resources; all ten authoritative update times matched local source dates, so no focused refresh was approved. PR #49 merged at main@977ff9f; the stale unknown-date E2E fixture exposed by Batch 31 was corrected and focused desktop/mobile verified in PR #50, merged at main@b70c2b2. Data Trust remains 117 / 63 dated / 54 unknown / 0 fallback; triage remains 23 recent / 13 review / 27 priority_review. Earlier Pages runs failed on that fixture; the corrected full release gate was in progress at Batch 33 branch creation."
+    },
+    {
+      "id": "post-demo-cycle-3-verification",
+      "name": "Post-demo Cycle 3 verification and freeze",
+      "description": "Consolidate Batches 29–32 against the exact merged baseline, verify schema/data-change/freshness and runtime contracts, and record a freeze without new product scope.",
+      "dependencies": [
+        "source-schema-drift-guard",
+        "release-data-change-summary",
+        "source-date-metadata-c",
+        "data-freshness-audit-b"
+      ],
+      "status": "in_progress",
+      "evidence": "2026-09-22 Batch 33 verification note is assembled on postdemo/33-cycle-3-verification from main@b70c2b2. Checked-in Data Trust is 117 / 63 dated / 54 unknown / 0 fallback; audit triage is 23 recent / 13 review / 27 priority_review. Local npm ci, typecheck, 165 unit tests, build, 399.63 / 115.86 kB entry budget, deterministic audit, and diff/JSON checks passed. PR-head CI and exact merged Pages release must pass before the Cycle 3 freeze can be marked done."
     },
     {
       "id": "maintenance-frontend",

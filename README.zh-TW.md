@@ -16,7 +16,7 @@
 
 Post-demo Batch 01–21 已完成。目前應用程式基準為 **2026-09-21** commit `05c87568af360e3fdcd30a07f4c1bbdb4e7bf934`（PR #36），已包含 UI family 正規化、可重現 visual baseline、主 bundle 縮減、CI runtime 維護、來源日期 metadata batches A–B，以及資料目錄搜尋詞調整。Frontend CI run `35578367111` 已通過 typecheck、**141 個 unit tests**、production build，以及完整桌面／手機 Playwright，結果為 **153 passed / 1 個預期 skip / 0 failed**。GitHub Pages run `35579373983` 隨後重新執行最新來源擷取／轉換與完整驗證流程，並成功部署相同的 `05c87568` 應用程式基準。
 
-目前 checked-in Data Trust evidence 追蹤 **117** 個靜態資料目錄，其中 **53** 個有可讀取來源日期、**64** 個日期未知，且 **0** 個沿用舊快照 fallback。正式版主要 entry 為 **399.63 kB minified / 116.04 kB gzip**，已低於 Vite 的 500 kB 提示門檻。完整紀錄請參閱 [Post-demo verification — 2026-09-21](docs/post-demo-verification-2026-09-21.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
+目前 checked-in Data Trust evidence 追蹤 **117** 個靜態資料目錄，其中 **53** 個有可讀取來源日期、**64** 個日期未知，且 **0** 個沿用舊快照 fallback。正式版主要 entry 為 **399.63 kB minified / 116.04 kB gzip**；CI 與 Pages 會強制檢查 **450 kB raw / 130 kB gzip** 的 entry budget，讓回歸在接近 Vite 500 kB 提示門檻前就失敗。完整紀錄請參閱 [Post-demo verification — 2026-09-21](docs/post-demo-verification-2026-09-21.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
 
 ## 資料目錄
 
@@ -188,6 +188,6 @@ docs/                release、verification 與操作紀錄
 
 ## 重要限制
 
-本網站是公共紀錄的探索工具，不是即時且具權威性的服務名錄。來源日期可能缺漏或已過期；目前 **117** 個追蹤目錄中仍有 **74** 個來源日期未知，這些未知狀態會刻意揭露。若有地址資料，僅用於可選擇的外部地圖查詢；搜尋與篩選都留在瀏覽器內，但開啟外部地圖時，選取的地址會提供給該地圖服務商。正式版主要 entry 目前為 **399.63 kB minified / 116.04 kB gzip**；共用地圖 runtime 已延後載入為 **154.20 kB / 45.05 kB gzip** 的 on-demand chunk，因此 Vite 不再顯示 >500 kB entry 提示。Playwright 已涵蓋桌面／手機流程，並包含六個 UI family 共 **12 張 Linux Chromium visual baseline**；這些 screenshot 是代表性 family guard，而不是每個 route／tab 的完整截圖覆蓋。
+本網站是公共紀錄的探索工具，不是即時且具權威性的服務名錄。來源日期可能缺漏或已過期；目前 **117** 個追蹤目錄中仍有 **64** 個來源日期未知，這些未知狀態會刻意揭露。若有地址資料，僅用於可選擇的外部地圖查詢；搜尋與篩選都留在瀏覽器內，但開啟外部地圖時，選取的地址會提供給該地圖服務商。正式版主要 entry 目前為 **399.63 kB minified / 116.04 kB gzip**，並由 **450 kB raw / 130 kB gzip** 的 CI／release budget 保護；共用地圖 runtime 已延後載入為 **154.20 kB / 45.05 kB gzip** 的 on-demand chunk，本批次先維持觀測而不設 blocking budget。Playwright 已涵蓋桌面／手機流程，並包含六個 UI family 共 **12 張 Linux Chromium visual baseline**；這些 screenshot 是代表性 family guard，而不是每個 route／tab 的完整截圖覆蓋。
 
 產品建議與持續風險請參閱[《臺北公共資料儀表板－設計決策與演進方向》](doc/臺北公共資料儀表板－設計決策與演進方向.md)。

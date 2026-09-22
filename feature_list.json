@@ -291,6 +291,16 @@
       ],
       "status": "done",
       "evidence": "2026-09-22: Batch 25 adds `npm run performance:budget`, which resolves the hashed production module entry from `dist/index.html`, measures raw and level-9 gzip bytes, and fails above 450.00 kB raw or 130.00 kB gzip. The current release baseline from Pages run 35673257839 is 399.63 kB raw / 116.04 kB gzip; the deferred shared map runtime remains 154.20 / 45.05 kB and is observation-only. Frontend CI and Pages run the budget immediately after production build. Unit coverage verifies entry discovery, pass/fail boundaries, and Vite-style decimal-kB reporting. No application code, data, lazy boundaries, visual thresholds, or domain semantics changed. Final PR-head CI must pass before merge."
+    },
+    {
+      "id": "post-demo-data-freshness-audit",
+      "name": "Post-demo data freshness audit",
+      "description": "Triage dated snapshots by age, verify the oldest candidates against authoritative upstream resource timestamps, and approve refreshes only when the upstream file is demonstrably newer.",
+      "dependencies": [
+        "post-demo-performance-budget"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22: Batch 26 adds deterministic `npm run data:audit:freshness -- --as-of=YYYY-MM-DD` and checked-in `public/data/data-freshness-audit.json`. Of 53 dated directories, the 2026-09-22 audit classifies 20 as recent (≤180 days), 10 as review (181–365 days), and 23 as priority_review (>365 days); 64 directories remain unknown-date. The top 10 oldest dated snapshots were checked against official Taipei Data Platform downloadable-resource timestamps. None has a newer official file timestamp, so Batch 26 approves 0 data refreshes. Newer metadata-page edit dates or collection-period end dates are explicitly not treated as file freshness. No dataset records, fetch outputs, UI behavior, calculations, categories, or source semantics changed."
     }
   ]
 }

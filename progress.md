@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Demo freeze — no active feature work.
-- Baseline: post-demo Cycle 2 is complete through Batch 28; `main@99f47579` is the verified application/maintenance baseline, and `main@bcbf7e8` is the final deployed documentation/freeze commit.
+- Active feature: Post-demo Cycle 3 / Batch 29 — source schema drift guard.
+- Baseline: Batch 29 branches from current `main@5be33d45`; `99f47579` remains the verified application-code baseline recorded by Cycle 2, while later main commits are documentation/state changes.
 - Release record: `docs/post-demo-cycle-2-verification-2026-09-22.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 29 / source schema drift guard. The Pages release now captures the checked-in `data/raw/**/*.csv` header contract before remote fetch, checks freshly fetched CSVs before conversion, and blocks added/removed/renamed/reordered header shapes. Stable paths use exact file-level contracts; rolling filenames may reuse an already reviewed header signature within the same raw-data directory. The current boundary covers **203 CSV files across 144 raw-data directories** without imposing one universal schema. Successful releases retain `public/data/source-schema-report.json`; schema failures emit the same report and upload it when available. Five focused unit tests cover quoted/BOM headers, multi-resource baselines, rolling filenames, renamed/reordered fields, and unreviewed datasets. No dataset records, source dates, converters, UI behavior, visual baselines, runtime versions, or performance budgets are changed. Final PR-head Frontend CI is required before merge.
 
 - 2026-09-22: Cycle 2 is frozen for the afternoon demo. The verified application baseline is `main@99f47579` (PR #42): Frontend CI run `35679197317` passed `npm ci`, typecheck, **154 unit tests**, production build, the **450 / 130 kB** performance budget, and full desktop/mobile Playwright with **153 passed / 1 expected skip / 0 failed**. GitHub Pages run `35679835524` (#229) deployed that application baseline; final documentation/freeze commit `main@bcbf7e8` then passed the same Pages release path and deployed successfully in run `35681488171` (#230). Release evidence remains **117 directories / 53 dated / 64 unknown-date / 0 fallback**. The production entry remains **399.63 kB raw / 115.86 kB independently measured gzip** within budget; Vite reports **116.04 kB gzip**, and the deferred map runtime remains **154.20 / 45.05 kB**. Freshness triage remains **20 recent / 10 review / 23 priority_review**, with **0 of the top 10** authoritative source checks showing a newer downloadable file. Node 22, `@types/node@22.20.4`, exact `@playwright/test@1.62.1`, and both `v1.62.1-noble` workflow images are aligned. No new feature work should start before the demo.
 

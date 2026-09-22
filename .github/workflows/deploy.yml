@@ -27,9 +27,19 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run data:schema:capture
       - run: npm run data:fetch
         env:
           NODE_OPTIONS: --dns-result-order=ipv4first
+      - run: npm run data:schema:check
+      - name: Upload source schema drift evidence
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: source-schema-drift
+          path: public/data/source-schema-report.json
+          if-no-files-found: ignore
+          retention-days: 7
       - run: npm run data:convert
       - run: npm run typecheck
       - run: npm test
@@ -52,6 +62,7 @@ jobs:
             public/data/data-trust-manifest.json
             public/data/data-release-summary.json
             public/data/conversion-report.json
+            public/data/source-schema-report.json
           if-no-files-found: error
       - uses: actions/upload-pages-artifact@v5.0.0
         with:

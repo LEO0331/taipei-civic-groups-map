@@ -20,7 +20,7 @@ The interface uses six purposeful presentation families—healthcare standard, r
 
 This dashboard presents generated local snapshots of public records. A listed organization, institution, address, phone number, or historical administrative record does **not** establish current availability, eligibility, appointment capacity, prices, quality, safety, legal status, compliance, suitability, or a recommendation.
 
-Data Trust currently tracks 117 static directories: 53 have a readable source date, 64 remain unknown, and no current release uses a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. Opening an external map lookup shares the selected address with that map provider.
+Checked-in Data Trust evidence now tracks 117 static directories: 63 have a readable source date, 54 remain unknown, and none is marked as a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. The final Cycle 3 release verification is still pending; see the [Cycle 3 verification note](docs/post-demo-cycle-3-verification-2026-09-22.md). Opening an external map lookup shares the selected address with that map provider.
 
 ## Current demo baseline
 

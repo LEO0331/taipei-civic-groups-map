@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Batch 27 dependency maintenance (`post-demo-dependency-maintenance`) on `postdemo/27-dependency-maintenance`.
-- Baseline: post-demo Cycle 1 is frozen at Batch 22; Cycle 2 begins with bounded Data Trust provenance maintenance and preserves all application/data semantics.
-- Release record: `docs/post-demo-verification-2026-09-21.md`.
+- Active feature: Batch 28 Cycle 2 verification/freeze (`post-demo-cycle-2-verification`) on `postdemo/28-cycle-2-verification`.
+- Baseline: post-demo Cycle 2 is complete through Batch 28; `main@99f47579` is the verified application/maintenance baseline and Batch 28 changes documentation/state only.
+- Release record: `docs/post-demo-cycle-2-verification-2026-09-22.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 28 / Cycle 2 verification and freeze against exact deployed baseline `main@99f47579` (PR #42). Final PR-head Frontend CI run `35679197317` passed `npm ci`, typecheck, **154 unit tests**, production build, the **450 / 130 kB** performance budget, and full desktop/mobile Playwright with **153 passed / 1 expected skip / 0 failed**. GitHub Pages run `35679835524` (#229) independently repeated fresh fetch/conversion plus the full release path and deployed successfully. Its release artifact `10674612688` (SHA-256 `8f9a945d65d6e2ccbc3269fca9616d7708d54098ca36c0979d263d228e54a803`) confirms **117 directories / 53 dated / 64 unknown-date / 0 fallback**. The production entry remains **399.63 kB raw / 115.86 kB independently measured gzip** within budget; Vite reports **116.04 kB gzip**, and the deferred map runtime remains **154.20 / 45.05 kB**. Freshness triage remains **20 recent / 10 review / 23 priority_review**, with **0 of the top 10** authoritative source checks showing a newer downloadable file. Node 22, `@types/node@22.20.4`, exact `@playwright/test@1.62.1`, and both `v1.62.1-noble` workflow images are aligned. Batch 28 adds no application/data behavior. Final branch Frontend CI is required before merge.
 
 - 2026-09-22: implemented Batch 27 / dependency maintenance as a low-risk tooling pass. Type-only packages move to `@types/leaflet@1.9.22`, `@types/react@19.3.0`, and `@types/react-dom@19.3.0`; Node types are realigned from the Node 24 line to **`@types/node@22.20.4`** to match the actual Node 22 CI/release runtime, with `undici-types@6.21.0`. The Playwright declaration is changed from `^1.62.1` to exact **`1.62.1`**, matching both pinned `v1.62.1-noble` workflow images. New dependency-contract tests enforce Playwright package/image alignment, Node runtime/type alignment, and reviewed type lock versions. React 19.3, Vite 8, plugin-react 6, TypeScript 7, newer tsx, and any Playwright renderer migration are explicitly deferred to separate evidence-backed migrations. No application source, data, lazy boundaries, visual thresholds, or domain semantics changed. Final PR-head Frontend CI is required before merge.
 
@@ -110,7 +112,7 @@
 
 - Catalogue search now supports conservative task synonyms plus broad topic vocabulary. Future aliases should remain dataset-specific where possible; do not silently assign new datasets to a catch-all category.
 
-- Route-level lazy loading defers the shared mapping runtime. The current production entry is 399.63 kB raw / 116.04 kB gzip and is protected by a 450.00 / 130.00 kB blocking budget; the 154.20 / 45.05 kB map runtime remains observation-only.
+- Route-level lazy loading defers the shared mapping runtime. The current production entry is 399.63 kB raw / 116.04 kB Vite gzip (115.86 kB by the independent budget measurement) and is protected by a 450.00 / 130.00 kB blocking budget; the 154.20 / 45.05 kB map runtime remains observation-only.
 - Browser regression coverage includes workflows, accessibility, failure states, family contracts, representative mobile overflow, and a twelve-image Linux Chromium screenshot/pixel-diff baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
@@ -121,7 +123,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/dependency-maintenance-2026-09-22.md`.
-2. After Batch 27 merges, start `postdemo/28-cycle-2-verification` as a consolidation/freeze branch; add no new feature scope unless verification exposes a concrete regression.
-3. Keep `@playwright/test@1.62.1` aligned with both Noble workflow images unless performing a separately reviewed renderer migration.
-4. Preserve the 450 / 130 kB entry budget, Node 22 runtime contract, all dataset/domain behavior, and existing verification gates.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/post-demo-cycle-2-verification-2026-09-22.md`.
+2. Treat `main` as the stable Cycle 2 maintenance baseline. Start a new branch only for a concrete bug, an authoritative source refresh, an explicitly approved feature, or a separately scoped runtime/toolchain migration.
+3. Keep `@playwright/test@1.62.1` aligned with both Noble workflow images unless performing a separately reviewed renderer migration with intentional visual-baseline review.
+4. Preserve the 450 / 130 kB entry budget, Node 22 runtime contract, conservative Data Trust semantics, and all existing verification gates.

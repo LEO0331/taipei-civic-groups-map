@@ -2,22 +2,21 @@
 
 ## Current Objective
 
-- Goal: Preserve the Cycle 2 demo freeze.
-- Status: Application baseline `main@99f47579` passed Frontend CI run `35679197317` (154 unit tests; 153 Playwright passes and 1 expected skip) and Pages run `35679835524`. Final freeze commit `main@bcbf7e8` passed and deployed in Pages run `35681488171`.
-- Scope: no new feature work before the demo. Limit changes to demonstrated blockers only.
+- Goal: Complete Batch 32's bounded authoritative freshness audit on `postdemo/32-data-freshness-audit-b`.
+- Status: PR #48 / Batch 31 is merged at `main@4f0a2c0`. Ten previously unchecked June 11 medical-institution CSV resource timestamps match their local source dates; no focused refresh is approved. Local typecheck, 165 unit tests, build, and entry budget pass. PR CI, merge, and Pages release remain pending.
+- Scope: audit document and state only. No raw source, converted record, metadata, Data Trust, freshness-audit JSON, UI, screenshot, runtime, or budget changes.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence
 
 | Check | Result | Notes |
 | --- | --- | --- |
-| Data fetch | Passed | `npm run data:fetch` in Pages workflow |
-| Data conversion | Passed | `npm run data:convert` in Pages workflow |
-| Typecheck | Passed | exact verified main commit |
-| Unit tests | Passed | exact verified main commit |
-| Playwright | Passed | 91 passed, 1 expected desktop-only skip, 0 failed across desktop/mobile |
-| Production build | Passed | Vite build succeeded |
-| Data release evidence | Passed | 117 directories; 32 dated; 85 unknown-date; 0 reused-snapshot fallbacks |
-| GitHub Pages deployment | Passed | workflow run `35298325891` |
+| Focused source fetch | Not run | No newer authoritative resource found |
+| Source schema/release comparison | Not run | No fetch occurred; existing contracts untouched |
+| Typecheck / unit / build / entry budget | Passed locally | 165 unit tests; entry 399.63 / 115.86 kB |
+| Playwright / visual regression | Pending | Existing PR CI runs the unchanged full suite |
+| Data Trust evidence | Unchanged | 117 directories; 63 dated; 54 unknown-date; 0 fallbacks |
+| Freshness triage | Unchanged | 23 recent; 13 review; 27 priority_review |
+| GitHub Pages deployment | Pending | Verify after exact PR-head merge |
 | Production URL | Deployed | https://leo0331.github.io/taipei-civic-groups-map/ |
 
 ## Current Architecture / UX Baseline
@@ -39,11 +38,11 @@
 ## Known Non-blocking Items
 
 - The production entry is 399.63 kB raw / 115.86 kB independently measured gzip, protected by the 450 / 130 kB budget; the deferred map runtime is observation-only at 154.20 / 45.05 kB.
-- Source-date metadata remains incomplete: 64 of 117 directories have no readable source date.
+- Source-date metadata remains incomplete: 54 of 117 directories have no readable source date.
 - Screenshot baselines are intentionally representative rather than exhaustive: 12 Linux Chromium images protect the six UI families across desktop and mobile.
 
 ## Next Session Startup
 
-1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/demo-briefing-2026-09-22.md`.
-2. Treat `main@bcbf7e8` as the demo freeze; do not start maintenance work unless it addresses a concrete blocker.
-3. Preserve the 450 / 130 kB entry budget, Node 22/runtime contracts, 12 visual baselines, Data Trust conservatism, and all verification gates.
+1. Read `AGENTS.md`, `feature_list.json`, `progress.md`, and `docs/data-freshness-audit-b-2026-09-22.md`.
+2. Verify the exact Batch 32 PR-head Frontend CI result before merge; then inspect the merged Pages release and record the main SHA, run IDs, and release artifact.
+3. Do not start Batch 33 or fetch any dataset without a newer authoritative downloadable-resource timestamp. Preserve the 450 / 130 kB entry budget, Node 22/runtime contracts, 12 visual baselines, and Data Trust conservatism.

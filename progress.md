@@ -3,11 +3,15 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Post-demo Cycle 3 / Batch 31 — source-date metadata C.
-- Baseline: Batch 30 is merged and deployed at `main@da663ad1`; `99f47579` remains the Cycle 2 verified application-code baseline, while Cycle 3 adds bounded release/data-governance controls.
-- Release record: `docs/post-demo-cycle-2-verification-2026-09-22.md`.
+- Active feature: Post-demo Cycle 3 / Batch 32 — data freshness audit B on `postdemo/32-data-freshness-audit-b`.
+- Baseline: Batch 31 / PR #48 is merged at `main@4f0a2c0`; Data Trust tracks 117 directories (63 dated / 54 unknown / 0 fallback) and the 2026-09-22 audit is 23 recent / 13 review / 27 priority_review.
+- Release record: `docs/data-freshness-audit-b-2026-09-22.md` (Batch 32 audit); `docs/post-demo-cycle-2-verification-2026-09-22.md` (previous release baseline).
 
 ## Latest Evidence
+
+- 2026-09-22: Batch 32 selected ten previously unchecked, same-age priority-review datasets in the Taipei Department of Health medical-institution family. Each matching official downloadable CSV **更新時間** is 2025-06-11 and exactly matches its local `sourceFileUpdatedAt` (see `docs/data-freshness-audit-b-2026-09-22.md` for precise times, source-page links, and resource IDs). **No newer authoritative resource was found; no fetch or conversion was approved.** Raw records, metadata, schema/release reports, and deterministic Data Trust/audit JSON remain untouched. The 117 / 63 / 54 / 0 and 23 / 13 / 27 counts do not change. Local typecheck, 165 unit tests, build, performance budget, JSON validation, and diff check passed; PR CI and release gates remain pending.
+
+- 2026-09-22: PR #48 / Batch 31 is merged at `main@4f0a2c0`. This is the clean starting point for Batch 32; the previous progress entry below records its pre-merge state.
 
 - 2026-09-22: implemented Batch 31 / source-date metadata C. Ten previously unknown-date directories now use authoritative Taipei Data Platform downloadable-resource timestamps, after Batch 30 Pages run `35694991663` independently confirmed all ten freshly fetched raw sources were byte-identical to the committed snapshots. Data Trust moves from **53 dated / 64 unknown** to **63 dated / 54 unknown**, with **117 directories / 0 reused-snapshot fallbacks** unchanged. The 2026-09-22 deterministic freshness triage becomes **23 recent / 13 review / 27 priority_review**. Matching raw provenance metadata carries the same explicit `sourceFileUpdatedAt` values for release evidence; no downloaded/fetched time is invented. No source records, converters, filters, calculations, categories, UI behavior, visual baselines, runtime versions, or performance budgets change. Final PR-head Frontend CI is required before merge.
 

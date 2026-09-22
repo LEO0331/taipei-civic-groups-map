@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import {
   buildFreshnessAudit,
@@ -39,4 +40,14 @@ test('builds a deterministic top-priority review queue ordered by age', () => {
 
 test('requires an explicit valid audit date', () => {
   assert.throws(() => buildFreshnessAudit([], 0, '2026/09/22'), /Expected --as-of/);
+});
+
+
+test('checked-in 2026-09-22 audit is reproducible from the trust manifest', async () => {
+  const manifest = JSON.parse(await readFile('public/data/data-trust-manifest.json', 'utf8'));
+  const checkedIn = JSON.parse(await readFile('public/data/data-freshness-audit.json', 'utf8'));
+  assert.deepEqual(
+    buildFreshnessAudit(manifest.entries, manifest.datasetDirectoryCount, '2026-09-22'),
+    checkedIn,
+  );
 });

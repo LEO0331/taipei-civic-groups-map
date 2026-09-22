@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Batch 24 CI trigger deduplication (`post-demo-ci-trigger-dedup`) on `postdemo/24-ci-trigger-dedup`.
+- Active feature: Batch 25 performance budget (`post-demo-performance-budget`) on `postdemo/25-performance-budget`.
 - Baseline: post-demo Cycle 1 is frozen at Batch 22; Cycle 2 begins with bounded Data Trust provenance maintenance and preserves all application/data semantics.
 - Release record: `docs/post-demo-verification-2026-09-21.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 25 / production entry performance budget. Pages run `35673257839` confirms the current entry at **399.63 kB raw / 116.04 kB gzip** and the deferred shared map runtime at **154.20 / 45.05 kB**. New `npm run performance:budget` discovers the hashed entry from `dist/index.html` and fails above **450.00 kB raw / 130.00 kB gzip**. The check runs after production build in both PR Frontend CI and the `main` Pages release. Unit coverage verifies entry discovery, the current baseline, raw/gzip failure boundaries, and decimal-kB formatting. The map chunk remains observation-only because it is already deferred and no user-performance evidence justifies an arbitrary blocking ceiling. No application code, data, lazy boundary, visual threshold, or domain semantics changed. Final PR-head Frontend CI is required before merge.
 
 - 2026-09-22: implemented Batch 24 / CI trigger deduplication. Batch 23 final SHA `f44d67f` demonstrated the waste directly: Frontend CI push run `35672234669` and pull-request run `35672288880` both completed the same full suite successfully. Frontend CI now runs automatically on `pull_request` only and retains `workflow_dispatch` for intentional pre-PR/manual verification. The verify job itself is unchanged: pinned Playwright `v1.62.1-noble`, Node 22, `npm ci`, typecheck, unit tests, production build, full desktop/mobile Playwright including visual regression, and failure-artifact upload. `main` remains covered by the separate Pages workflow, which performs fresh fetch/conversion plus the full release verification and deployment path. No application, data, visual threshold, or verification gate changed.
 
@@ -104,7 +106,7 @@
 
 - Catalogue search now supports conservative task synonyms plus broad topic vocabulary. Future aliases should remain dataset-specific where possible; do not silently assign new datasets to a catch-all category.
 
-- Route-level lazy loading now also defers the shared mapping runtime. The current production entry is 399.63 kB minified / 116.04 kB gzip, below Vite's warning threshold.
+- Route-level lazy loading defers the shared mapping runtime. The current production entry is 399.63 kB raw / 116.04 kB gzip and is protected by a 450.00 / 130.00 kB blocking budget; the 154.20 / 45.05 kB map runtime remains observation-only.
 - Browser regression coverage includes workflows, accessibility, failure states, family contracts, representative mobile overflow, and a twelve-image Linux Chromium screenshot/pixel-diff baseline for all six UI families.
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
@@ -115,7 +117,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/ci-trigger-dedup-2026-09-22.md`.
-2. After Batch 24 merges, start `postdemo/25-performance-budget`; protect the current bundle improvement with a regression budget before attempting any further optimization.
-3. Use `workflow_dispatch` only when a deliberate pre-PR full Frontend CI run is needed; normal feature branches should rely on one automatic PR run.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/performance-budget-2026-09-22.md`.
+2. After Batch 25 merges, start `postdemo/26-data-freshness-audit`; identify stale snapshots from authoritative source dates before refreshing any data.
+3. Keep the 450 / 130 kB entry budget unchanged unless a measured, justified feature change requires a documented revision.
 4. Preserve all dataset/domain behavior, verification gates, and the pinned visual-regression renderer.

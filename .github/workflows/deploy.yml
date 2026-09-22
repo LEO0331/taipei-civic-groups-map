@@ -43,6 +43,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
       - run: npm run build
+      - run: npm run performance:budget
       - name: Upload data release evidence
         uses: actions/upload-artifact@v7.0.1
         with:

@@ -27,6 +27,7 @@ Run these commands before completion:
 npm run typecheck
 npm test
 npm run build
+npm run performance:budget
 git diff --check
 ```
 
@@ -36,7 +37,7 @@ For UI, navigation, accessibility, or release-facing changes also run:
 npm run test:e2e
 ```
 
-On POSIX shells, `./init.sh` runs typecheck, unit tests, and build. On Windows PowerShell, run the commands above directly. Frontend CI runs automatically on pull requests; use its manual `workflow_dispatch` only when a pre-PR branch verification is intentionally needed. The GitHub Pages release workflow additionally performs a fresh data fetch/conversion and desktop/mobile Playwright before deployment.
+On POSIX shells, `./init.sh` runs typecheck, unit tests, and build; run `npm run performance:budget` after the build when validating the production bundle. On Windows PowerShell, run the commands above directly. Frontend CI runs automatically on pull requests; use its manual `workflow_dispatch` only when a pre-PR branch verification is intentionally needed. The GitHub Pages release workflow additionally performs a fresh data fetch/conversion and desktop/mobile Playwright before deployment.
 
 ## Definition of Done
 

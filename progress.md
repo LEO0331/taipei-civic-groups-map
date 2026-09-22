@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Batch 26 data freshness audit (`post-demo-data-freshness-audit`) on `postdemo/26-data-freshness-audit`.
+- Active feature: Batch 27 dependency maintenance (`post-demo-dependency-maintenance`) on `postdemo/27-dependency-maintenance`.
 - Baseline: post-demo Cycle 1 is frozen at Batch 22; Cycle 2 begins with bounded Data Trust provenance maintenance and preserves all application/data semantics.
 - Release record: `docs/post-demo-verification-2026-09-21.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 27 / dependency maintenance as a low-risk tooling pass. Type-only packages move to `@types/leaflet@1.9.22`, `@types/react@19.3.0`, and `@types/react-dom@19.3.0`; Node types are realigned from the Node 24 line to **`@types/node@22.20.4`** to match the actual Node 22 CI/release runtime, with `undici-types@6.21.0`. The Playwright declaration is changed from `^1.62.1` to exact **`1.62.1`**, matching both pinned `v1.62.1-noble` workflow images. New dependency-contract tests enforce Playwright package/image alignment, Node runtime/type alignment, and reviewed type lock versions. React 19.3, Vite 8, plugin-react 6, TypeScript 7, newer tsx, and any Playwright renderer migration are explicitly deferred to separate evidence-backed migrations. No application source, data, lazy boundaries, visual thresholds, or domain semantics changed. Final PR-head Frontend CI is required before merge.
 
 - 2026-09-22: implemented Batch 26 / data freshness audit. New `npm run data:audit:freshness -- --as-of=YYYY-MM-DD` produces a deterministic age-triage report from Data Trust without claiming that age alone proves stale/current status. At `2026-09-22`, the **53 dated** directories split into **20 recent (≤180 days) / 10 review (181–365) / 23 priority_review (>365)**; **64** directories remain unknown-date. The top 10 oldest dated snapshots were checked directly against authoritative Taipei Data Platform downloadable-resource timestamps and **0 have a newer official file timestamp**, so this batch approves **no data refresh**. Newer metadata-edit timestamps and later collection-period end dates are not substituted for file freshness. The audit report is checked in and unit-tested for reproducibility. No dataset records, fetch output, UI behavior, calculations, categories, or source semantics changed.
 
@@ -119,7 +121,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/data-freshness-audit-2026-09-22.md`.
-2. Batch 26 approved no refreshes among the top-10 age-priority datasets. Do not refresh them unless a future authoritative resource timestamp becomes newer.
-3. Start `postdemo/27-dependency-maintenance` as a separate tooling-only branch; treat any Playwright upgrade as a renderer migration requiring visual-baseline review.
-4. Preserve the 450 / 130 kB entry budget, all dataset/domain behavior, verification gates, and the pinned visual-regression renderer unless intentionally migrated.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/dependency-maintenance-2026-09-22.md`.
+2. After Batch 27 merges, start `postdemo/28-cycle-2-verification` as a consolidation/freeze branch; add no new feature scope unless verification exposes a concrete regression.
+3. Keep `@playwright/test@1.62.1` aligned with both Noble workflow images unless performing a separately reviewed renderer migration.
+4. Preserve the 450 / 130 kB entry budget, Node 22 runtime contract, all dataset/domain behavior, and existing verification gates.

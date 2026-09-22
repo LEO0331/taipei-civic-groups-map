@@ -301,6 +301,16 @@
       ],
       "status": "done",
       "evidence": "2026-09-22: Batch 26 adds deterministic `npm run data:audit:freshness -- --as-of=YYYY-MM-DD` and checked-in `public/data/data-freshness-audit.json`. Of 53 dated directories, the 2026-09-22 audit classifies 20 as recent (≤180 days), 10 as review (181–365 days), and 23 as priority_review (>365 days); 64 directories remain unknown-date. The top 10 oldest dated snapshots were checked against official Taipei Data Platform downloadable-resource timestamps. None has a newer official file timestamp, so Batch 26 approves 0 data refreshes. Newer metadata-page edit dates or collection-period end dates are explicitly not treated as file freshness. No dataset records, fetch outputs, UI behavior, calculations, categories, or source semantics changed."
+    },
+    {
+      "id": "post-demo-dependency-maintenance",
+      "name": "Post-demo dependency maintenance",
+      "description": "Apply low-risk dependency maintenance while preserving the pinned visual renderer and deferring major runtime/toolchain migrations.",
+      "dependencies": [
+        "post-demo-data-freshness-audit"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22: Batch 27 updates type-only dependencies (`@types/leaflet` 1.9.22, `@types/react` 19.3.0, `@types/react-dom` 19.3.0), aligns `@types/node` to the Node 22 runtime line at 22.20.4 (with `undici-types` 6.21.0), and changes the `@playwright/test` declaration from `^1.62.1` to exact `1.62.1` so lockfile regeneration cannot drift from the pinned `mcr.microsoft.com/playwright:v1.62.1-noble` screenshot renderer. A dependency-contract unit test enforces Playwright image/package alignment and Node 22 runtime/type alignment. React 19.3, Vite 8, plugin-react 6, TypeScript 7, newer tsx, and Playwright renderer migration are documented as deferred. No application source, data, lazy boundaries, visual thresholds, or domain semantics changed. Final PR-head CI is required before merge."
     }
   ]
 }

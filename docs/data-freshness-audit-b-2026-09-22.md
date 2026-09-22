@@ -38,4 +38,6 @@ Data Trust is unchanged at **117 directories / 63 dated / 54 unknown-date / 0 re
 - `npm test` — 165 passed, including deterministic freshness-audit and Batch 29/30 contract tests.
 - `npm run build` and `npm run performance:budget` — passed; entry **399.63 kB raw / 115.86 kB gzip**, within **450 / 130 kB**.
 - `feature_list.json` parsed, checked-in Data Trust/audit counts were checked, and `git diff --check` passed.
-- No local E2E was rerun because this branch changes no UI/runtime behavior. The PR's normal Frontend CI must still run the full desktop/mobile Playwright and twelve visual comparisons before merge.
+- The audit itself changes no UI/runtime behavior, so the full local E2E suite was not rerun; the PR's normal Frontend CI must still run full desktop/mobile Playwright and twelve visual comparisons before merge.
+
+The first PR run exposed one stale Playwright fixture: Batch 31 had given adult influenza a source date, so it was no longer an unknown-date example. The Data Trust hierarchy test now uses the still-unknown alternative-service statistics directory and its actual localized catalogue label. The focused desktop/mobile test passed **2/2** without changing Data Trust behavior or thresholds; full PR CI remains the release gate.

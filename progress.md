@@ -3,13 +3,17 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Post-demo Cycle 3 / Batch 30 — release data-change summary.
-- Baseline: Batch 29 is merged and deployed at `main@15258465`; `99f47579` remains the Cycle 2 verified application-code baseline, while Cycle 3 adds bounded release/data-governance controls.
+- Active feature: Post-demo Cycle 3 / Batch 31 — source-date metadata C.
+- Baseline: Batch 30 is merged and deployed at `main@da663ad1`; `99f47579` remains the Cycle 2 verified application-code baseline, while Cycle 3 adds bounded release/data-governance controls.
 - Release record: `docs/post-demo-cycle-2-verification-2026-09-22.md`.
 
 ## Latest Evidence
 
-- 2026-09-22: implemented Batch 30 / release data-change summary. Pages now captures a pre-fetch content baseline for **204 raw source files across 144 raw-data directories** (**203 CSV + 1 JSON**), then after fetch and Batch 29 schema validation writes `public/data/data-change-summary.json`. The report records changed/added/removed source files by SHA-256, byte size, countable logical source rows, and explicitly named authoritative source timestamp fields; `downloadedAt`, `fetchedAt`, and metadata-page timestamps are intentionally ignored. Multi-resource effective timestamps use the oldest included authoritative resource timestamp. Content changes are observational and do not themselves block release; Batch 29 remains the structural gate. Five focused unit tests cover quoted-newline CSV row counting, conservative timestamp extraction, file content deltas, unchanged data, and rolling-file replacement. No public records, converters, UI behavior, visual baselines, runtime versions, or performance budgets are changed. Final PR-head Frontend CI is required before merge.
+- 2026-09-22: implemented Batch 31 / source-date metadata C. Ten previously unknown-date directories now use authoritative Taipei Data Platform downloadable-resource timestamps, after Batch 30 Pages run `35694991663` independently confirmed all ten freshly fetched raw sources were byte-identical to the committed snapshots. Data Trust moves from **53 dated / 64 unknown** to **63 dated / 54 unknown**, with **117 directories / 0 reused-snapshot fallbacks** unchanged. The 2026-09-22 deterministic freshness triage becomes **23 recent / 13 review / 27 priority_review**. Matching raw provenance metadata carries the same explicit `sourceFileUpdatedAt` values for release evidence; no downloaded/fetched time is invented. No source records, converters, filters, calculations, categories, UI behavior, visual baselines, runtime versions, or performance budgets change. Final PR-head Frontend CI is required before merge.
+
+- 2026-09-22: Batch 30 is closed. PR #47 merged at `main@da663ad1`; Frontend CI run `35694279668` passed, and Pages run `35694991663` successfully executed the release content baseline/comparison and deployed. The live scanner measured **145 raw-data directories**, with **12 content-changed / 133 unchanged** and **0 source-timestamp changes**. Release evidence artifact `10680600788` has SHA-256 `7a15cb469be07062504f07af2dfd89f4b95e89d89071fba728f75e904884c82e`.
+
+- 2026-09-22: implemented Batch 30 / release data-change summary. Pages captures a pre-fetch content baseline and writes `public/data/data-change-summary.json` after fetch/schema validation. The live scanner confirmed **204 raw source files across 145 raw-data directories** (**203 CSV + 1 JSON**), with **12 content-changed / 133 unchanged** directories in Pages run `35694991663`. The report records changed/added/removed source files by SHA-256, byte size, countable logical source rows, and explicitly named authoritative source timestamp fields; `downloadedAt`, `fetchedAt`, and metadata-page timestamps are intentionally ignored. Content changes are observational and do not themselves block release; Batch 29 remains the structural gate. PR #47 and Frontend CI run `35694279668` verified the branch, and Pages run `35694991663` deployed it successfully.
 
 - 2026-09-22: Batch 29 is closed. PR #46 merged at `main@15258465`; Frontend CI run `35692153833` passed, and Pages run `35692801074` successfully executed the new pre-fetch/post-fetch schema guard before conversion and deployed. Release evidence artifact `10679214406` has SHA-256 `2f714482751f3357c51349bb72d5b5c601e1cf0f9fba1d34b1f9ec814ca9979a`.
 
@@ -123,7 +127,7 @@
 
 - `npm run data:fetch` is a bulk remote-data refresh and should not be used as a routine check.
 - Record a focused fetch/conversion command here when a dataset is intentionally refreshed.
-- Current Data Trust evidence tracks 117 dataset directories: 53 have readable source dates and 64 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
+- Current Data Trust evidence tracks 117 dataset directories: 63 have readable source dates and 54 have unknown dates. Unknown dates are intentionally visible; metadata coverage remains incomplete.
 
 - The source labels its updates as irregular. Its 2026-06-18 source update is exposed through module metadata, but the dashboard remains a generated local snapshot rather than a real-time service.
 

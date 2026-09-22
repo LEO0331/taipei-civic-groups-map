@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "datasetDirectoryCount": 117,
-  "datedDatasetCount": 53,
+  "datedDatasetCount": 63,
   "fetchFallbackDatasetCount": 0,
   "entries": [
     {
@@ -10,7 +10,9 @@
     },
     {
       "id": "adult-influenza-vaccine-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市流感疫苗合約醫療院所(成人)",
+      "sourceUpdatedAt": "2026-03-17T08:53:58+08:00"
     },
     {
       "id": "alternative-service-reserve-statistics",
@@ -177,11 +179,15 @@
     },
     {
       "id": "fertility-subsidy-contracted-hospitals",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市生育補助合約醫院",
+      "sourceUpdatedAt": "2026-01-13T12:20:51+08:00"
     },
     {
       "id": "five-cancer-screening-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市五癌篩檢醫療院所",
+      "sourceUpdatedAt": "2026-06-24T14:24:52+08:00"
     },
     {
       "id": "fixed-site-temporary-childcare",
@@ -242,11 +248,15 @@
     },
     {
       "id": "home-disabled-family-physician-care-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市「居家失能個案家庭醫師照護服務」特約單位清冊",
+      "sourceUpdatedAt": "2025-06-12T16:41:59+08:00"
     },
     {
       "id": "home-nursing-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市居家護理所",
+      "sourceUpdatedAt": "2026-03-17T09:47:31+08:00"
     },
     {
       "id": "hospice-palliative-care-institutions",
@@ -292,7 +302,9 @@
     },
     {
       "id": "internet-addiction-services",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市網癮治療服務機構",
+      "sourceUpdatedAt": "2026-06-12T12:52:25+08:00"
     },
     {
       "id": "kidney-health-promotion-facilities",
@@ -341,7 +353,9 @@
     },
     {
       "id": "medical-laboratories",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市醫事檢驗所",
+      "sourceUpdatedAt": "2025-06-06T16:30:18+08:00"
     },
     {
       "id": "medical-radiological-institutions",
@@ -351,11 +365,15 @@
     },
     {
       "id": "methadone-cross-region-services",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "美沙冬跨區給藥服務機構清單（11406）",
+      "sourceUpdatedAt": "2024-12-17T15:35:13+08:00"
     },
     {
       "id": "nationwide-addiction-treatment-services",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "各縣市指定藥癮戒治機構及替代治療機構及非鴉片類藥癮治療補助機構",
+      "sourceUpdatedAt": "2025-06-20T11:19:54+08:00"
     },
     {
       "id": "obstetrics-gynecology-institutions",
@@ -431,7 +449,9 @@
     },
     {
       "id": "psychiatric-rehabilitation-and-nursing-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市精神復健暨精神護理機構",
+      "sourceUpdatedAt": "2026-09-14T09:23:58+08:00"
     },
     {
       "id": "public-influenza-antiviral-providers",

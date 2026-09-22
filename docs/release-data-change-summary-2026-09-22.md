@@ -19,7 +19,7 @@ Pages now performs the relevant data steps in this order:
 5. \`npm run data:release:changes\`
 6. \`npm run data:convert\`
 
-At the Batch 30 branch point, the raw baseline contains **204 source files across 144 raw-data directories**: **203 CSV files and one JSON source file**. \`fetch-metadata.json\` is not treated as source content.
+At the Batch 30 branch point, the raw baseline contains **204 source files across 145 raw-data directories**: **203 CSV files and one JSON source file**. \`fetch-metadata.json\` is not treated as source content.
 
 ## What is compared
 

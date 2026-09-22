@@ -1,0 +1,18 @@
+{
+  "source": "臺北市學童塗氟及窩溝封填合約醫院",
+  "sourcePage": "https://data.taipei/dataset/detail?id=fb607e44-ddbb-4f75-a8c3-c0baa6201eb6",
+  "sourceAgency": "臺北市政府衛生局",
+  "sourceFileUpdatedAt": "2026-03-24T15:09:14+08:00",
+  "updateFrequency": "annual",
+  "sourceResources": [
+    {
+      "name": "115年臺北市學童窩溝封填合約醫療院所名單",
+      "sourceFileUpdatedAt": "2026-03-24T15:18:04+08:00"
+    },
+    {
+      "name": "115年臺北市學童到校塗氟合約醫療院所名單",
+      "sourceFileUpdatedAt": "2026-03-24T15:09:14+08:00"
+    }
+  ],
+  "freshnessRule": "sourceFileUpdatedAt is the oldest included resource timestamp."
+}

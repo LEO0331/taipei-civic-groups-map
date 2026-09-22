@@ -63,7 +63,7 @@
         "source-schema-drift-guard"
       ],
       "status": "in_progress",
-      "evidence": "2026-09-22 Batch 32 reviewed ten previously unchecked June 11, 2025 Taipei Department of Health medical-institution resources. Each live official CSV update time matches the local source date, so 0 focused refreshes are approved. Data Trust remains 117 / 63 dated / 54 unknown / 0 fallback; freshness triage remains 23 recent / 13 review / 27 priority_review. Local typecheck, 165 unit tests, build, performance budget, JSON validation, and diff check passed. PR CI, merge, and Pages release are pending."
+      "evidence": "2026-09-22 Batch 32 reviewed ten previously unchecked June 11, 2025 Taipei Department of Health medical-institution resources. Each live official CSV update time matches the local source date, so 0 focused refreshes are approved. Data Trust remains 117 / 63 dated / 54 unknown / 0 fallback; freshness triage remains 23 recent / 13 review / 27 priority_review. Local typecheck, 165 unit tests, build, performance budget, JSON validation, diff check, and focused desktop/mobile E2E fixture correction passed. Corrected full PR CI, merge, and Pages release are pending."
     },
     {
       "id": "maintenance-frontend",

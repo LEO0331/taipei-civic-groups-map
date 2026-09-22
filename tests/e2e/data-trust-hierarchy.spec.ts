@@ -52,13 +52,13 @@ test('stale datasets remain visibly elevated instead of being visually muted', a
 });
 
 test('unknown-date datasets use caution hierarchy and keep the readable localized name', async ({ page }) => {
-  await page.goto('/?dataset=adultInfluenzaVaccineProviders&lang=zh');
+  await page.goto('/?dataset=alternativeServiceReserveStatistics&lang=zh');
 
   const trust = page.locator('.data-trust');
   await expect(trust).toHaveAttribute('data-attention', 'caution');
-  await expect(trust.locator('.data-trust-primary')).toContainText('成人流感疫苗合約醫療院所');
+  await expect(trust.locator('.data-trust-primary')).toContainText('替代役備役役男統計');
   await expect(trust.locator('.data-trust-status.unknown')).toContainText('日期未知');
-  await expect(trust.locator('.data-trust-primary')).not.toContainText('adult-influenza-vaccine-providers');
+  await expect(trust.locator('.data-trust-primary')).not.toContainText('alternative-service-reserve-statistics');
 });
 
 test('data trust dataset names follow the selected interface language', async ({ page }) => {

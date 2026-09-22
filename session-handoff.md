@@ -3,7 +3,7 @@
 ## Current Objective
 
 - Goal: Complete Batch 32's bounded authoritative freshness audit on `postdemo/32-data-freshness-audit-b`.
-- Status: PR #48 / Batch 31 is merged at `main@4f0a2c0`. Ten previously unchecked June 11 medical-institution CSV resource timestamps match their local source dates; no focused refresh is approved. Local typecheck, 165 unit tests, build, and entry budget pass. PR CI, merge, and Pages release remain pending.
+- Status: PR #48 / Batch 31 is merged at `main@4f0a2c0`. Ten previously unchecked June 11 medical-institution CSV resource timestamps match their local source dates; no focused refresh is approved. Local typecheck, 165 unit tests, build, and entry budget pass. First PR CI exposed a stale unknown-date E2E fixture, now corrected and focused desktop/mobile verified 2/2. Corrected full PR CI, merge, and Pages release remain pending.
 - Scope: audit document and state only. No raw source, converted record, metadata, Data Trust, freshness-audit JSON, UI, screenshot, runtime, or budget changes.
 - Pre-demo verified baseline remains documented in `docs/pre-demo-verification-2026-09-18.md`.
 ## Verification Evidence

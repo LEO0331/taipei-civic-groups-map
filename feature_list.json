@@ -281,6 +281,16 @@
       ],
       "status": "done",
       "evidence": "2026-09-22: Frontend CI now triggers automatically on pull_request only, with workflow_dispatch retained for intentional pre-PR/manual runs. The verify job is unchanged: Playwright v1.62.1 Noble, Node 22, npm ci, typecheck, unit tests, production build, full desktop/mobile Playwright including visual regression, and failure artifacts. Batch 23 final SHA f44d67f previously ran the same full suite twice (push run 35672234669 and pull_request run 35672288880); Batch 24 removes the automatic feature-branch push trigger. Main remains protected by the separate Pages workflow, which runs fresh fetch/conversion plus the full release verification/deploy path."
+    },
+    {
+      "id": "post-demo-performance-budget",
+      "name": "Post-demo production entry performance budget",
+      "description": "Protect the measured post-Batch-18 entry-size improvement with a build-time regression budget before attempting any further optimization.",
+      "dependencies": [
+        "post-demo-ci-trigger-dedup"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22: Batch 25 adds `npm run performance:budget`, which resolves the hashed production module entry from `dist/index.html`, measures raw and level-9 gzip bytes, and fails above 450.00 kB raw or 130.00 kB gzip. The current release baseline from Pages run 35673257839 is 399.63 kB raw / 116.04 kB gzip; the deferred shared map runtime remains 154.20 / 45.05 kB and is observation-only. Frontend CI and Pages run the budget immediately after production build. Unit coverage verifies entry discovery, pass/fail boundaries, and Vite-style decimal-kB reporting. No application code, data, lazy boundaries, visual thresholds, or domain semantics changed. Final PR-head CI must pass before merge."
     }
   ]
 }

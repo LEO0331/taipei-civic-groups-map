@@ -19,6 +19,17 @@
       "evidence": "No active dataset refresh is requested."
     },
     {
+      "id": "source-schema-drift-guard",
+      "name": "Source schema drift guard",
+      "description": "Block release conversion when freshly fetched CSV header shapes diverge from the reviewed committed raw-data baseline.",
+      "dependencies": [
+        "maintenance-harness",
+        "maintenance-directory-data"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22 Batch 29: Pages captures checked-in raw CSV header signatures before fetch, validates fetched CSVs before conversion, emits source-schema-report.json, and includes focused unit coverage. At the branch point the guard covers 203 CSV files across 144 raw-data directories. Final PR-head Frontend CI is required before merge."
+    },
+    {
       "id": "maintenance-frontend",
       "name": "Directory frontend maintenance",
       "description": "Improve scoped React UI behavior, language consistency, accessibility, and presentation without changing unsupported factual claims.",

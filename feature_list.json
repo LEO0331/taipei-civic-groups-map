@@ -39,7 +39,19 @@
         "source-schema-drift-guard"
       ],
       "status": "done",
-      "evidence": "2026-09-22 Batch 30: Pages captures a pre-fetch raw content baseline and writes public/data/data-change-summary.json after fetch/schema validation. The baseline covers 204 source files across 144 raw-data directories (203 CSV + 1 JSON), excludes fetch-execution metadata churn, and retains the summary in release evidence. Focused unit coverage verifies CSV logical-row counting, conservative source timestamps, content changes, unchanged data, and rolling file replacement. Final PR-head Frontend CI is required before merge."
+      "evidence": "2026-09-22 Batch 30 merged in PR #47. Frontend CI run 35694279668 passed the full verification path. Pages run 35694991663 deployed main@da663ad1 after successfully running the pre-fetch baseline, live fetch, Batch 29 schema guard, Batch 30 data-change summary, conversion, typecheck, tests, full Playwright/visual regression, build, and performance budget. The live scanner reported 145 raw-data directories, 12 content-changed and 133 unchanged; release evidence artifact 10680600788 has SHA-256 7a15cb469be07062504f07af2dfd89f4b95e89d89071fba728f75e904884c82e."
+    },
+    {
+      "id": "source-date-metadata-c",
+      "name": "Source-date metadata C",
+      "description": "Resolve a bounded tranche of unknown source dates only where the authoritative Taipei downloadable-resource timestamp can be tied to the committed raw snapshot.",
+      "dependencies": [
+        "maintenance-harness",
+        "maintenance-directory-data",
+        "release-data-change-summary"
+      ],
+      "status": "done",
+      "evidence": "2026-09-22 Batch 31 adds 10 authoritative Taipei Data Platform resource timestamps after Batch 30 live-fetch evidence confirmed all 10 corresponding raw snapshots were unchanged. Data Trust improves from 53 dated / 64 unknown to 63 dated / 54 unknown with 0 fallbacks. Freshness triage becomes 23 recent / 13 review / 27 priority_review. No source records or UI/domain behavior change. Final PR-head Frontend CI is required before merge."
     },
     {
       "id": "maintenance-frontend",

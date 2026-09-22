@@ -14,9 +14,9 @@
 
 ## 目前版本狀態
 
-Post-demo Batch 01–21 已完成。目前應用程式基準為 **2026-09-21** commit `05c87568af360e3fdcd30a07f4c1bbdb4e7bf934`（PR #36），已包含 UI family 正規化、可重現 visual baseline、主 bundle 縮減、CI runtime 維護、來源日期 metadata batches A–B，以及資料目錄搜尋詞調整。Frontend CI run `35578367111` 已通過 typecheck、**141 個 unit tests**、production build，以及完整桌面／手機 Playwright，結果為 **153 passed / 1 個預期 skip / 0 failed**。GitHub Pages run `35579373983` 隨後重新執行最新來源擷取／轉換與完整驗證流程，並成功部署相同的 `05c87568` 應用程式基準。
+Post-demo Cycle 1 與 Cycle 2 已完成至 Batch 28。目前 maintenance baseline 為 **2026-09-22** commit `99f47579c5523d688900a7bb72b5c165238e168a`（PR #42）；Cycle 2 已完成來源日期 metadata 擴充、CI trigger 去重、production entry performance budget、可重現的 freshness audit，以及低風險 dependency/runtime contract 維護。Frontend CI run `35679197317` 已通過 typecheck、**154 個 unit tests**、production build、**450 kB raw / 130 kB gzip** performance gate，以及完整桌面／手機 Playwright，結果為 **153 passed / 1 個預期 skip / 0 failed**。GitHub Pages run `35679835524` 隨後重新執行最新來源擷取／轉換與完整 release 流程，並成功部署相同的 `99f47579` baseline。
 
-目前 checked-in Data Trust evidence 追蹤 **117** 個靜態資料目錄，其中 **53** 個有可讀取來源日期、**64** 個日期未知，且 **0** 個沿用舊快照 fallback。正式版主要 entry 為 **399.63 kB minified / 116.04 kB gzip**；CI 與 Pages 會強制檢查 **450 kB raw / 130 kB gzip** 的 entry budget，讓回歸在接近 Vite 500 kB 提示門檻前就失敗。完整紀錄請參閱 [Post-demo verification — 2026-09-21](docs/post-demo-verification-2026-09-21.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
+Release evidence 追蹤 **117** 個靜態資料目錄，其中 **53** 個有可讀取來源日期、**64** 個日期未知，且 **0** 個沿用舊快照 fallback。2026-09-22 freshness audit 將 53 個有日期的目錄分為 **20 recent / 10 review / 23 priority review**；其中最舊的 10 個已對照臺北資料大平臺 authoritative resource timestamp，沒有任何一個出現更新的 downloadable file，因此本輪未核准資料 refresh。正式版主要 entry 維持 **399.63 kB minified / 116.04 kB Vite gzip**（獨立 budget measurement 為 **115.86 kB gzip**），Node 維持 **22**，Playwright 則精確固定為 **1.62.1**／`v1.62.1-noble`。完整紀錄請參閱 [Post-demo Cycle 2 verification — 2026-09-22](docs/post-demo-cycle-2-verification-2026-09-22.md)，六個 UI family 清單請參閱 [UI family classification](docs/ui-family-classification.md)。
 
 ## 資料目錄
 

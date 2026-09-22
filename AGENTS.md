@@ -18,6 +18,7 @@ The repository must remain clean and restartable: the next agent should be able 
 - `npm run data:fetch` refreshes many public source files. Do not run it for routine verification; use a focused fetch or conversion command only when the task requires data refresh.
 - For freshness triage, run `npm run data:audit:freshness -- --as-of=YYYY-MM-DD`. Age bands are review priorities only; confirm the authoritative upstream resource timestamp before refreshing any dataset.
 - Keep raw source values and public-data caveats intact. Never replace missing values with invented data.
+- Dependency maintenance is conservative: keep `@playwright/test` exactly aligned with the pinned Playwright container image, keep `@types/node` on the Node 22 runtime line, and treat major React/Vite/TypeScript/Playwright upgrades as separate migrations rather than routine bumps.
 - Do not overwrite or revert unrelated changes.
 
 ## Verification

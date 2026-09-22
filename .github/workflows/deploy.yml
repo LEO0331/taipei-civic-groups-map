@@ -28,10 +28,12 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run data:schema:capture
+      - run: npm run data:release:capture
       - run: npm run data:fetch
         env:
           NODE_OPTIONS: --dns-result-order=ipv4first
       - run: npm run data:schema:check
+      - run: npm run data:release:changes
       - name: Upload source schema drift evidence
         if: failure()
         uses: actions/upload-artifact@v7.0.1
@@ -63,6 +65,7 @@ jobs:
             public/data/data-release-summary.json
             public/data/conversion-report.json
             public/data/source-schema-report.json
+            public/data/data-change-summary.json
           if-no-files-found: error
       - uses: actions/upload-pages-artifact@v5.0.0
         with:

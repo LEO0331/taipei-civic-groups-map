@@ -3,11 +3,13 @@
 ## Current State
 
 - Last updated: 2026-09-22
-- Active feature: Batch 25 performance budget (`post-demo-performance-budget`) on `postdemo/25-performance-budget`.
+- Active feature: Batch 26 data freshness audit (`post-demo-data-freshness-audit`) on `postdemo/26-data-freshness-audit`.
 - Baseline: post-demo Cycle 1 is frozen at Batch 22; Cycle 2 begins with bounded Data Trust provenance maintenance and preserves all application/data semantics.
 - Release record: `docs/post-demo-verification-2026-09-21.md`.
 
 ## Latest Evidence
+
+- 2026-09-22: implemented Batch 26 / data freshness audit. New `npm run data:audit:freshness -- --as-of=YYYY-MM-DD` produces a deterministic age-triage report from Data Trust without claiming that age alone proves stale/current status. At `2026-09-22`, the **53 dated** directories split into **20 recent (≤180 days) / 10 review (181–365) / 23 priority_review (>365)**; **64** directories remain unknown-date. The top 10 oldest dated snapshots were checked directly against authoritative Taipei Data Platform downloadable-resource timestamps and **0 have a newer official file timestamp**, so this batch approves **no data refresh**. Newer metadata-edit timestamps and later collection-period end dates are not substituted for file freshness. The audit report is checked in and unit-tested for reproducibility. No dataset records, fetch output, UI behavior, calculations, categories, or source semantics changed.
 
 - 2026-09-22: implemented Batch 25 / production entry performance budget. Pages run `35673257839` confirms the current entry at **399.63 kB raw / 116.04 kB gzip** and the deferred shared map runtime at **154.20 / 45.05 kB**. New `npm run performance:budget` discovers the hashed entry from `dist/index.html` and fails above **450.00 kB raw / 130.00 kB gzip**. The check runs after production build in both PR Frontend CI and the `main` Pages release. Unit coverage verifies entry discovery, the current baseline, raw/gzip failure boundaries, and decimal-kB formatting. The map chunk remains observation-only because it is already deferred and no user-performance evidence justifies an arbitrary blocking ceiling. No application code, data, lazy boundary, visual threshold, or domain semantics changed. Final PR-head Frontend CI is required before merge.
 
@@ -117,7 +119,7 @@
 
 ## Next Session
 
-1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/performance-budget-2026-09-22.md`.
-2. After Batch 25 merges, start `postdemo/26-data-freshness-audit`; identify stale snapshots from authoritative source dates before refreshing any data.
-3. Keep the 450 / 130 kB entry budget unchanged unless a measured, justified feature change requires a documented revision.
-4. Preserve all dataset/domain behavior, verification gates, and the pinned visual-regression renderer.
+1. Read `AGENTS.md`, `feature_list.json`, this file, and `docs/data-freshness-audit-2026-09-22.md`.
+2. Batch 26 approved no refreshes among the top-10 age-priority datasets. Do not refresh them unless a future authoritative resource timestamp becomes newer.
+3. Start `postdemo/27-dependency-maintenance` as a separate tooling-only branch; treat any Playwright upgrade as a renderer migration requiring visual-baseline review.
+4. Preserve the 450 / 130 kB entry budget, all dataset/domain behavior, verification gates, and the pinned visual-regression renderer unless intentionally migrated.

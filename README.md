@@ -1,70 +1,34 @@
 # Taipei Public Data Explorer
 
-[English](README.md) · [繁體中文](README.zh-TW.md)
+[繁體中文](README.zh-TW.md) · [Open the dashboard](https://leo0331.github.io/taipei-civic-groups-map/)
 
-A bilingual Vite + React dashboard for browsing selected Taipei public-record datasets. It helps people find source-recorded directories, inspect their scope and freshness, and compare descriptive summaries without implying that public records are rankings, recommendations, or real-time service information.
+[![Frontend CI](https://github.com/LEO0331/taipei-civic-groups-map/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/LEO0331/taipei-civic-groups-map/actions/workflows/frontend-ci.yml)
+[![GitHub Pages](https://github.com/LEO0331/taipei-civic-groups-map/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/LEO0331/taipei-civic-groups-map/actions/workflows/deploy.yml)
 
-## What it provides
+A bilingual guide to selected Taipei public records. Browse source-recorded directories, administrative records, and descriptive summaries without treating them as rankings, recommendations, or real-time service information.
 
-- A searchable, topic-based catalogue with 156 classified routes/views; Data Trust tracks 117 static dataset directories.
-- Bilingual Traditional Chinese and English interface text.
-- Dataset-specific filtering, source-field detail, CSV export, and external address lookup where the source supports them.
-- Build-time Data Trust evidence: readable source dates, clearly marked unknown dates, explicit reused-snapshot warnings, and a compact local-data/privacy reminder.
-- URL-shareable dataset/language navigation, persistent onboarding preference, accessible keyboard tabs, route-level lazy module loading, and static deployment to GitHub Pages.
+## Explore public records with context
 
-## Current release status
+- Search a catalogue of 156 routes/views across health, care, work, culture, city services, animals, and comparison topics.
+- Filter each directory using its source-recorded fields, inspect source details, export filtered CSV data, and open an external address lookup where the source provides one.
+- Share a dataset and language through the URL; language, Back/Forward navigation, and keyboard tabs work across desktop and mobile.
+- See a consistent Data Trust panel that explains the local snapshot, its available source date, and any refresh fallback.
 
-Post-demo Cycle 1 and Cycle 2 are complete through Batch 28. The verified application-maintenance baseline is **2026-09-22** commit `99f47579c5523d688900a7bb72b5c165238e168a` (PR #42), after source-date metadata expansion, CI trigger deduplication, a production-entry performance budget, deterministic freshness auditing, and low-risk dependency/runtime-contract maintenance. Frontend CI run `35679197317` passed typecheck, **154 unit tests**, production build, the **450 kB raw / 130 kB gzip** performance gate, and the full desktop/mobile Playwright suite with **153 passed / 1 expected skip / 0 failed**. The final documentation/freeze commit for today’s demo is `bcbf7e81629f5011026260f2ebc80e3201bf51d4`; GitHub Pages run `35681488171` repeated the release path and deployed it successfully.
+The interface uses six purposeful presentation families—healthcare standard, rich healthcare directory, location directory, registry directory, records analysis, and statistics analysis—so similar public-data tasks remain familiar without erasing dataset-specific context.
 
-Release evidence covers **117** static dataset directories: **53** have a readable source date, **64** have an unknown date, and **0** use a reused-snapshot fallback. The 2026-09-22 freshness audit classifies the 53 dated directories as **20 recent / 10 review / 23 priority review**; the ten oldest were checked against authoritative Taipei resource timestamps and none had a newer downloadable file, so no refresh was approved. The production entry remains **399.63 kB minified / 116.04 kB Vite gzip** (**115.86 kB** by the independent budget measurement), with Node **22** and Playwright pinned exactly to **1.62.1** / `v1.62.1-noble`. See the [Demo briefing — 2026-09-22](docs/demo-briefing-2026-09-22.md) for the presentation-day smoke check, [Post-demo Cycle 2 verification — 2026-09-22](docs/post-demo-cycle-2-verification-2026-09-22.md) for the consolidated maintenance record, and [UI family classification](docs/ui-family-classification.md) for the six-family inventory.
+## What the data can and cannot say
 
-## Data catalogue
+This dashboard presents generated local snapshots of public records. A listed organization, institution, address, phone number, or historical administrative record does **not** establish current availability, eligibility, appointment capacity, prices, quality, safety, legal status, compliance, suitability, or a recommendation.
 
-Directories are grouped by public-service topic: health and medical care; social welfare, family and care; work, industry and business; education, culture and travel; city services and environment; animals and pets; and exploration and comparison.
+Data Trust currently tracks 117 static directories: 53 have a readable source date, 64 remain unknown, and no current release uses a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. Opening an external map lookup shares the selected address with that map provider.
 
-Catalogue metadata lives in [`src/lib/datasetCatalogue.ts`](src/lib/datasetCatalogue.ts). Every catalogue route/view also resolves through [`src/lib/datasetUiFamily.ts`](src/lib/datasetUiFamily.ts) to one of six UI families: `healthcare-standard`, `healthcare-rich-directory`, `location-directory`, `registry-directory`, `records-analysis`, or `statistics-analysis`. When adding a dataset, give it one deliberate catalogue category, useful search terms, and a deliberate UI-family assignment or category-based family default.
+## Current demo baseline
 
-### Private cultural heritage subsidies
+The verified application-maintenance baseline is commit [`99f47579`](https://github.com/LEO0331/taipei-civic-groups-map/commit/99f47579c5523d688900a7bb72b5c165238e168a). It passed Frontend CI with 154 unit tests, 153 desktop/mobile Playwright passes and one expected skip, the 12 Linux Chromium visual baselines, and the 450 kB raw / 130 kB gzip entry budget.
 
-`private_cultural_heritage_subsidies` is a local snapshot of Taipei’s private cultural-heritage subsidy records. It preserves the five source columns, adds conservative ROC/Gregorian year and amount parsing, and labels project-text categories and exact name-and-area registry comparisons as derived—not official—information. Refresh it with `npm run data:fetch:private-cultural-heritage-subsidies` followed by `npm run data:convert:private-cultural-heritage-subsidies`.
+The final documentation/freeze commit for the current demo is [`bcbf7e8`](https://github.com/LEO0331/taipei-civic-groups-map/commit/bcbf7e81629f5011026260f2ebc80e3201bf51d4), deployed successfully by GitHub Pages run [`35681488171`](https://github.com/LEO0331/taipei-civic-groups-map/actions/runs/35681488171). Start with the [demo briefing](docs/demo-briefing-2026-09-22.md) for a short smoke check and presentation caveats.
 
-### Travel medicine clinics
-
-`travel_medicine_clinics` is a local snapshot of the Taipei Department of Health travel-medicine outpatient hospital directory. It preserves the official contact, address, department, and self-paid mpox-service fields. “Listed as available” means only that the source explicitly marks the record; it is not real-time stock, appointment, eligibility, or price information. Refresh it with `npm run data:fetch:travel-medicine-clinics` followed by `npm run data:convert:travel-medicine-clinics`.
-
-### Taipei Hakka organizations
-
-`hakka_organizations` is a local snapshot of the 109 ROC year (2020) Taipei Hakka Organizations Registry. It preserves every actual CSV column while presenting only its source-recorded registry fields. A later file update does not make organization or leader information current. Refresh it with `npm run data:fetch:hakka-organizations` followed by `npm run data:convert:hakka-organizations`.
-
-### Hospital discharge-to-LTC partners
-
-`hospital_discharge_long_term_care_partners` is a local snapshot of Taipei hospitals listed for discharge preparation linked with long-term-care services. Its location field is an address, so the directory offers external map lookup only—no geocoding or markers. Listing does not establish immediate services, capacity, eligibility, fees, or suitability. Refresh it with `npm run data:fetch:hospital-discharge-long-term-care-partners` followed by `npm run data:convert:hospital-discharge-long-term-care-partners`.
-
-### Funeral service businesses
-
-`funeral_service_businesses` is a local snapshot of Taipei's filed-and-approved funeral-service-business registry. It preserves all five official fields, keeps the responsible-person field inside expandable source detail, and offers external address lookup without geocoding or map markers. A listing is an administrative registry record only—not evidence of current operation, services, pricing, quality, eligibility, or a recommendation. Refresh it with `npm run data:fetch:funeral-service-businesses` followed by `npm run data:convert:funeral-service-businesses`.
-
-### Fixed-site temporary childcare
-
-`fixed_site_temporary_childcare` is a local snapshot of Taipei's fixed-site temporary-childcare directory. It preserves the five official fields, offers source-preserving location/contact filters and external address lookup only, and never represents real-time reservations, vacancies, opening hours, age limits, fees, eligibility, safety, or service quality. Refresh it with `npm run data:fetch:fixed-site-temporary-childcare` followed by `npm run data:convert:fixed-site-temporary-childcare`.
-
-### Government ethics office contacts
-
-`government_ethics_offices` is a local snapshot of Taipei City Government ethics-office contacts. It preserves the official agency, area-code, and telephone fields, and provides no map because the source has no address or coordinates. It does not establish case jurisdiction, case acceptance, real-time phone staffing, legal advice, or wrongdoing by an agency or person. Refresh it with `npm run data:fetch:government-ethics-offices` followed by `npm run data:convert:government-ethics-offices`.
-
-### Internal medicine institutions
-
-`internal_medicine_institutions` is a local snapshot of Taipei’s internal-medicine institution directory. It retains the five official fields, derives districts only from explicit address text or a conservative Taipei postal-code map, and exposes source/update metadata and quality flags. It is not real-time clinic, physician, appointment, or subspecialty availability information. Refresh it with `npm run data:fetch:internal-medicine-institutions` followed by `npm run data:convert:internal-medicine-institutions`.
-
-### Withdrawn illegal-hotel enforcement records
-
-`withdrawn_illegal_hotel_enforcement_records` is a local historical snapshot of withdrawn or revoked administrative enforcement records. It is not a current illegal-hotel list: names, addresses, dates, and source-recorded amounts must not be read as current illegality or continuing liability. Refresh it with `npm run data:fetch:withdrawn-illegal-hotel-enforcement-records` followed by `npm run data:convert:withdrawn-illegal-hotel-enforcement-records`.
-
-### Recent public-service directories
-
-Recent additions include program-specific health providers (senior pneumococcal, under-3 influenza, GBS screening, high-myopia prevention, kidney health, addiction treatment, and internet-addiction services), social-welfare directories (emergency assistance, disability day services, child/youth welfare, early intervention, and senior services), civic transparency records (public-asset operations, Labor Pension Act enforcement, and healthcare/welfare budgets), and registered environmental-pesticide vendors. Each remains a local source snapshot with its own focused `data:fetch:<dataset>` and `data:convert:<dataset>` commands. They are directories or historical public records—not real-time availability, eligibility, quality, ranking, enforcement-currentness, or recommendation services.
-
-## Quick start
+## For contributors
 
 Requirements: Node.js 22 and npm.
 
@@ -73,101 +37,25 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite.
-
-## Search discovery
-
-The deployed site includes a canonical URL, Open Graph metadata, a `DataCatalog` JSON-LD description, [`robots.txt`](public/robots.txt), and [`sitemap.xml`](public/sitemap.xml). These make the single authoritative GitHub Pages URL easier for search engines and answer engines to identify; they do not guarantee ranking or inclusion.
-
-After deployment, a verified site owner should submit `https://leo0331.github.io/taipei-civic-groups-map/sitemap.xml` in Google Search Console and Bing Webmaster Tools. Re-submit after a material catalogue or content change, and use their URL-inspection tools to request recrawling of the homepage when needed.
-
-## Common commands
-
-```bash
-# Check types, unit tests, browser workflows, and a production bundle
-npm run typecheck
-npm test
-npm run test:e2e
-npm run build
-
-# Run only the interface accessibility contracts
-npm run test:accessibility
-
-# Refresh all remote sources, then convert them
-npm run data:fetch
-npm run data:convert
-```
-
-`npm run data:fetch` is a bulk remote refresh. Do not run it as routine local verification: it can change many public-data files at once. Prefer a focused `data:fetch:<dataset>` and matching `data:convert:<dataset>` command when working on one directory.
-
-The build runs `scripts/buildDataTrustManifest.ts`, which writes `public/data/data-trust-manifest.json` and `public/data/data-release-summary.json`.
-
-## Adding a dataset
-
-1. Add a focused fetch/conversion script and source metadata.
-2. Create the directory module using the existing source-preserving patterns.
-3. Register its visible label and module in the application.
-4. Assign it exactly one category in `datasetCatalogue.ts` and add user-facing search keywords if the official name is hard to discover.
-5. Add or update conversion and UI tests.
-6. Run the verification suite below.
-
-Avoid inferring current availability, eligibility, quality, safety, compliance, prices, or recommendations unless the public source directly establishes that claim.
-
-## Verification
-
-Before opening a pull request, run the focused checks for the change and then:
+Before a pull request, run:
 
 ```bash
 npm run typecheck
 npm test
-npm run test:e2e
 npm run build
+npm run performance:budget
+npm run test:e2e
 git diff --check
 ```
 
-The GitHub Pages workflow performs a fresh bulk fetch/conversion, typecheck, unit tests, desktop/mobile Playwright, production build, release-evidence upload, and Pages deployment. It retains the trust manifest, release summary, and conversion report as deployment evidence.
+Do not run `npm run data:fetch` as routine verification: it refreshes many public source snapshots. When a specific dataset needs work, use its focused `data:fetch:<dataset>` and `data:convert:<dataset>` commands, retain source values, and leave missing source dates unknown unless authoritative evidence exists.
 
-## Architecture
+New datasets need one catalogue category, conservative search terms, a deliberate UI-family assignment, and focused source/UI coverage. Reuse the existing source-preserving patterns before adding dependencies or abstractions.
 
-```mermaid
-flowchart LR
-  source[Official Taipei open-data sources] --> fetch[Focused fetch scripts\n scripts/fetch*.ts]
-  fetch --> raw[Versioned raw snapshots\n data/raw/]
-  raw --> convert[Source-preserving converters\n scripts/convert*.ts]
-  convert --> static[Static records, summaries, and reports\n public/data/]
-  static --> trust[Trust manifest builder\n source dates and release evidence]
-  trust --> static
+## Further reading
 
-  catalogue[Dataset catalogue metadata\n src/lib/datasetCatalogue.ts] --> app[React dashboard modules\n src/]
-  static --> app
-  app --> bundle[Vite production bundle]
-  bundle --> pages[GitHub Pages\n Taipei Public Data Explorer]
-
-  ci[GitHub Actions] --> fetch
-  ci --> convert
-  ci --> checks[Type, unit, accessibility, and Playwright checks]
-  checks --> bundle
-```
-
-All presented records remain local snapshots. The diagram intentionally separates source collection from browser presentation: the dashboard does not call source systems from a visitor’s browser or claim live service availability.
-
-## Project layout
-
-```text
-src/                 React modules, catalogue/UI-family metadata, and shared utilities
-scripts/             source fetchers, converters, and build-time reports
-public/data/         generated local static datasets
-.github/workflows/   frontend CI and GitHub Pages deployment workflows
-doc/                 long-form product and design-decision documentation
-docs/                release, verification, and operational notes
-```
-
-## Deployment
-
-Push to `main` to deploy through [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The production site is served from GitHub Pages at <https://leo0331.github.io/taipei-civic-groups-map/>.
-
-## Important limits
-
-This is an exploration tool for public records, not an authoritative real-time service directory. Source dates may be absent or old; **64 of 117** tracked directories still have an unknown source date and those unknowns are intentionally disclosed. Addresses are used only for optional external-map lookup where available. Searches and filters remain in the browser, but opening an external map shares the selected address with that map provider. The app intentionally uses network-first deployment: legacy Service Worker caches are removed to prevent GitHub Pages from pairing stale HTML with replaced, content-hashed bundles. The main production entry is currently **399.63 kB minified / 116.04 kB gzip** and is guarded by a **450 kB raw / 130 kB gzip** CI/release budget; the shared map runtime is deferred to a **154.20 kB / 45.05 kB gzip** on-demand chunk and remains observation-only in this budget. Playwright covers desktop/mobile workflows and includes **12 committed Linux Chromium visual baselines** across the six UI families, but those screenshots are representative-family guards rather than per-route/per-tab coverage.
-
-Read the product recommendations and ongoing risks in [臺北公共資料儀表板－設計決策與演進方向](doc/臺北公共資料儀表板－設計決策與演進方向.md).
+- [Demo briefing — 2026-09-22](docs/demo-briefing-2026-09-22.md)
+- [Post-demo Cycle 2 verification](docs/post-demo-cycle-2-verification-2026-09-22.md)
+- [UI family classification](docs/ui-family-classification.md)
+- [Data freshness audit](docs/data-freshness-audit-2026-09-22.md)
+- [Product and design direction](doc/臺北公共資料儀表板－設計決策與演進方向.md)

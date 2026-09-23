@@ -3,11 +3,14 @@
 ## Current State
 
 - Last updated: 2026-09-23
-- Active feature: Batch 37 — semantic data-quality anomaly guard on `postdemo/37-data-quality-anomaly-guard`.
-- Baseline: `main@93c6ef4707e181177325efd156c2f65ba20ccdf6`, with Batch 38 merged/deployed and Batch 39 merged/deployed.
-- Scope: release-safety tooling only. No source refresh, converter/domain change, product/UX work, dependency migration, visual-baseline change, or performance-budget change.
+- Active feature: Batch 35 — Source-date Metadata D on `postdemo/35-source-date-metadata-d`.
+- Baseline: `main@552e3ad64202aced40d7bb6ec041312ff1a225a2`, with Batch 37 merged and Pages run `35805442007` green.
+- Scope: authoritative source-date provenance/evidence only. No source-record refresh, converter/domain change, product/UX work, dependency migration, visual-baseline change, or performance-budget change.
+- Checked-in Data Trust after Batch 35 implementation: 117 directories / 68 dated / 49 unknown / 0 fallback; deterministic 2026-09-22 triage: 24 recent / 14 review / 30 priority_review.
 
 ## Latest Evidence
+
+- 2026-09-23: Batch 35 / Source-date Metadata D adds exact Taipei Data Platform downloadable-resource `更新時間` for five previously unknown-date Department of Health datasets: beauty/hairdressing hygiene certifications (2026-03-06 10:03:31 +08:00), optometry institutions (2025-06-11 08:13:52 +08:00), public influenza antiviral providers (2024-12-05 14:40:55 +08:00), GBS screening clinics (2025-06-09 14:05:33 +08:00), and TB/IGRA screening partners (2026-06-16 10:57:45 +08:00). Batch 37 merged Pages run `35805442007` freshly fetched all five and release evidence artifact `10727078128` confirms all five raw-data directories were unchanged from the committed snapshots; no data refresh is performed. Matching public metadata and raw fetch-provenance files carry the same `sourceFileUpdatedAt`. Data Trust moves 63→68 dated and 54→49 unknown, with 117 total / 0 fallback unchanged; deterministic triage moves 23/13/27 → 24/14/30. Exact PR-head CI and merged Pages validation remain pending.
 
 - 2026-09-23: Batch 37 implementation adds a semantic/data-quality anomaly gate between Batch 30 release data-change comparison and conversion. It reuses the exact pre-fetch release baseline rather than creating a second capture format. Hard blockers are limited to: a previously countable dataset disappearing; a previously countable stable source file becoming unreadable for row counting; loss of all countable files in a previously countable dataset; and a previously populated dataset becoming empty. Severe row-count changes are warning-only at <=50% or >=200% of baseline and only for baselines with at least 20 rows. The report is written to `public/data/data-quality-anomaly-report.json`; blocker failures retain a dedicated artifact and successful Pages releases include the report in release evidence. PR #54 implementation head `6eacd662` passed Frontend CI run `35804423617`: **173/173 unit tests**, production build, **399.63 / 115.86 kB** entry budget, desktop **76/76**, and mobile **77/77**. Final evidence-only head must repeat CI; merged Pages validation remains pending.
 

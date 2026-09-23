@@ -381,6 +381,18 @@
       ],
       "status": "done",
       "evidence": "2026-09-22: Cycle 2 is consolidated against application baseline main@99f47579 (PR #42), then frozen in merged documentation commit main@bcbf7e8. Frontend CI run 35679197317 passed npm ci, typecheck, 154 unit tests, production build, the 450/130 kB performance gate, and full desktop/mobile Playwright with 153 passed, 1 expected skip, 0 failed. GitHub Pages run 35679835524 (#229) deployed the exact application baseline; final Pages run 35681488171 then repeated the release path and deployed the freeze commit successfully. Release evidence confirms 117 directories, 53 dated, 64 unknown-date, and 0 reused-snapshot fallbacks. The entry remains 399.63 kB raw / 115.86 kB independently measured gzip within the 450/130 kB budget; Vite reports 116.04 kB gzip. Freshness triage is 20 recent / 10 review / 23 priority_review and the top-10 authoritative source check approved 0 refreshes. Node 22, @types/node 22.20.4, exact @playwright/test 1.62.1, and the v1.62.1-noble renderer are aligned."
+    },
+    {
+      "id": "post-demo-ci-pages-runtime-optimization",
+      "name": "Post-demo CI / Pages runtime optimization",
+      "description": "Reduce developer and release wall-clock latency by parallelizing independent verification while preserving the authoritative Pages data-release boundary and all existing test, visual, runtime, and performance contracts.",
+      "dependencies": [
+        "post-demo-ci-trigger-dedup",
+        "post-demo-performance-budget",
+        "post-demo-cycle-3-verification"
+      ],
+      "status": "in_progress",
+      "evidence": "2026-09-23 Batch 38 Stage 1 split Frontend CI into parallel quality, desktop E2E, and mobile E2E jobs while retaining Node 22, exact Playwright 1.62.1, the pinned Noble container, full desktop/mobile coverage, 12 visual baselines, maxDiffPixelRatio 0.0005, and the 450/130 kB entry budget. PR #52 run 35800538287 passed: quality succeeded, desktop ran 76 tests in 3.7m, mobile ran 77 tests in 5.1m, and total workflow wall-clock was 5m50s versus the measured 9m26s median baseline (~38% lower). Stage 2 changes Pages to preserve schema capture → release capture → fetch → schema check → data-change comparison → conversion in one release-prepare job, snapshot that exact converted workspace once, then fan out release-build, desktop E2E, and mobile E2E from the same snapshot. Final PR-head CI and the first merged Pages run remain required before marking done."
     }
   ]
 }

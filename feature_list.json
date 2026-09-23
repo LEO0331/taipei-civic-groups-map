@@ -413,8 +413,18 @@
         "release-data-change-summary",
         "post-demo-ci-pages-runtime-optimization"
       ],
+      "status": "done",
+      "evidence": "2026-09-23 Batch 37 is merged at main@552e3ad6. Final PR-head Frontend CI run 35804989294 passed the optimized quality/desktop/mobile gates, and merged Pages run 35805442007 passed the live fetch → schema → data-change → semantic anomaly → conversion boundary plus Batch 38 fan-out/deploy. The anomaly report covered 145 comparable raw-data directories with 0 blockers and 0 warnings. Release evidence artifact 10727078128 has SHA-256 c16b21c5ae353f16f89a20da0a43a200266efc55eb88f7331519d87ae8f1bde2."
+    },
+    {
+      "id": "post-demo-source-date-metadata-d",
+      "name": "Post-demo source-date metadata batch D",
+      "description": "Reduce a bounded tranche of unknown Data Trust dates using exact authoritative Taipei downloadable-resource update timestamps only.",
+      "dependencies": [
+        "post-demo-data-quality-anomaly-guard"
+      ],
       "status": "in_progress",
-      "evidence": "2026-09-23 Batch 37 adds `npm run data:quality:check`, reusing the exact Batch 30 pre-fetch release baseline. Hard blockers are limited to disappearance of previously countable datasets, newly unreadable stable source row counts, loss of all countable source files, and previously populated datasets becoming empty. Row-count collapse to <=50% or spike to >=200% is warning-only and only applies from a >=20-row baseline. Pages runs the guard after schema/data-change checks and before conversion; successful release evidence includes `data-quality-anomaly-report.json`, while blocker failures upload a dedicated artifact. PR #54 implementation head `6eacd662` passed Frontend CI run `35804423617`: 173/173 unit tests, production build and 450/130 kB budget, desktop 76/76, mobile 77/77. Final evidence-only head and merged Pages validation remain required before marking done."
+      "evidence": "2026-09-23 Batch 35 adds authoritative resource timestamps for five previously unknown-date Department of Health datasets: beauty/hairdressing hygiene certifications, optometry institutions, public influenza antiviral providers, GBS screening clinics, and TB/IGRA screening partners. Batch 37 Pages run 35805442007 freshly fetched all five and release evidence confirms their raw directories were unchanged from the committed snapshots, so no source refresh is required. Checked-in Data Trust moves from 63 dated / 54 unknown to 68 dated / 49 unknown (117 total / 0 fallback); deterministic 2026-09-22 triage becomes 24 recent / 14 review / 30 priority_review. Exact PR-head CI and merged Pages validation remain required before marking done."
     }
   ]
 }

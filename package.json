@@ -289,6 +289,7 @@
     "performance:budget": "tsx scripts/checkPerformanceBudget.ts",
     "data:audit:freshness": "tsx scripts/buildDataFreshnessAudit.ts",
     "data:monitor:upstream": "tsx scripts/upstreamResourceMonitor.ts",
+    "data:provenance:review": "tsx scripts/provenanceReviewRegistry.ts",
     "data:schema:capture": "tsx scripts/sourceSchemaGuard.ts --capture",
     "data:schema:check": "tsx scripts/sourceSchemaGuard.ts --check",
     "data:release:capture": "tsx scripts/buildDataChangeSummary.ts --capture",

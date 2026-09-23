@@ -3,12 +3,16 @@
 ## Current State
 
 - Last updated: 2026-09-23
-- Active feature: Batch 35 — Source-date Metadata D on `postdemo/35-source-date-metadata-d`.
-- Baseline: `main@552e3ad64202aced40d7bb6ec041312ff1a225a2`, with Batch 37 merged and Pages run `35805442007` green.
-- Scope: authoritative source-date provenance/evidence only. No source-record refresh, converter/domain change, product/UX work, dependency migration, visual-baseline change, or performance-budget change.
-- Checked-in Data Trust after Batch 35 implementation: 117 directories / 68 dated / 49 unknown / 0 fallback; deterministic 2026-09-22 triage: 24 recent / 14 review / 30 priority_review.
+- Active feature: Batch 36 — Data Freshness Audit C on `postdemo/36-data-freshness-audit-c`.
+- Baseline: `main@6a48dedf9f4ad256d6cb374703641f5af2c1bcc5`, with Batch 35 merged and Pages run `35807633618` green.
+- Scope: authoritative freshness evidence only. No source refresh, metadata rewrite, converter/domain change, product/UX work, dependency migration, visual-baseline change, or performance-budget change.
+- Current Data Trust remains 117 directories / 68 dated / 49 unknown / 0 fallback; deterministic 2026-09-22 triage remains 24 recent / 14 review / 30 priority_review.
 
 ## Latest Evidence
+
+- 2026-09-23: Batch 36 / Data Freshness Audit C closes the three priority-review sources explicitly deferred by Batch 32. Live Taipei Data Platform file `更新時間` remains identical to local source dates for `funeral-service-businesses` (2025-06-11 10:33:01 +08:00), `hakka-organizations` (2025-06-12 16:16:44 +08:00), and `fixed-site-temporary-childcare` (2025-06-13 18:36:01 +08:00). The Hakka metadata page is newer, but its downloadable CSV is not; metadata-edit time is not substituted for file freshness. Result: **0/3 newer authoritative files; 0 refreshes approved**. No source records, metadata, manifests, converters, or UI are changed. Exact PR-head CI and merged Pages validation remain pending.
+
+- 2026-09-23: Batch 35 is closed on `main@6a48dedf`. Corrected PR-head Frontend CI run `35807182113` passed quality, desktop, and mobile. Merged Pages run `35807633618` passed schema validation, release data-change comparison, Batch 37 anomaly guard with **0 blockers / 0 warnings across 145 comparable raw-data directories**, conversion, build/budget, desktop/mobile E2E, and deployment. Data Trust is **117 / 68 dated / 49 unknown / 0 fallback**.
 
 - 2026-09-23: Batch 35 / Source-date Metadata D adds exact Taipei Data Platform downloadable-resource `更新時間` for five previously unknown-date Department of Health datasets: beauty/hairdressing hygiene certifications (2026-03-06 10:03:31 +08:00), optometry institutions (2025-06-11 08:13:52 +08:00), public influenza antiviral providers (2024-12-05 14:40:55 +08:00), GBS screening clinics (2025-06-09 14:05:33 +08:00), and TB/IGRA screening partners (2026-06-16 10:57:45 +08:00). Batch 37 merged Pages run `35805442007` freshly fetched all five and release evidence artifact `10727078128` confirms all five raw-data directories were unchanged from the committed snapshots; no data refresh is performed. Matching public metadata and raw fetch-provenance files carry the same `sourceFileUpdatedAt`. Data Trust moves 63→68 dated and 54→49 unknown, with 117 total / 0 fallback unchanged; deterministic triage moves 23/13/27 → 24/14/30. Exact PR-head CI and merged Pages validation remain pending.
 

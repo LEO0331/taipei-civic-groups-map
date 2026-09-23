@@ -10,7 +10,7 @@
 
 | Check | Result | Notes |
 | --- | --- | --- |
-| Batch 39 audit | Implemented, CI pending | Exact lock/runtime inventory recorded; only tsx 4.22.4 → 4.23.15 applied |
+| Batch 39 audit | Passed | PR #53 run 35802278329 green: npm ci/quality passed; desktop 76/76; mobile 77/77; only tsx 4.22.4 → 4.23.15 applied |
 | Deferred migrations | Bounded | React 19.3; TypeScript 5.9 then 7; Playwright 1.63 renderer; Vite/plugin-react major; Node 24 |
 | Batch 38 Stage 1 | Passed | PR #52 run 35800538287: 5m50s total; quality green; desktop 76 passed in 3.7m; mobile 77 passed in 5.1m |
 | Batch 38 Pages fan-out | Pending merged release | One release-prepare snapshot feeds release-build plus desktop/mobile E2E; deploy waits for all gates |
@@ -48,7 +48,7 @@
 
 ## Next Session Startup
 
-1. Inspect the exact Batch 39 PR-head Frontend CI and merge only the green head.
-2. Keep Batch 39 limited to the tsx maintenance update plus the checked-in dependency/toolchain audit.
-3. Do not fold React, TypeScript, Playwright renderer, Vite/plugin-react major, or Node-major changes into this branch.
-4. After Batch 39 is green, the next dependency migration should be selected as one bounded subsystem from `docs/batch-39-dependency-toolchain-audit-2026-09-23.md`.
+1. Merge PR #53 only after the final documentation head repeats the optimized Frontend CI successfully.
+2. Batch 39 is otherwise complete; do not add more dependency changes to this branch.
+3. Select future dependency work as one bounded migration from `docs/batch-39-dependency-toolchain-audit-2026-09-23.md`.
+4. Keep Playwright package/container alignment and Node runtime/type alignment intact.

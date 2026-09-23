@@ -172,16 +172,44 @@ The goal is not to force all unknown dates to zero. Zero fabricated dates is mor
 
 ## M4 — monthly provenance queue
 
-After M3 is merged, create `chore/provenance-review-schedule`.
+Implemented by `chore/provenance-review-schedule`.
 
-Run approximately once per month and select only 5–10 unresolved/never-reviewed datasets for investigation. Queue generation can be automatic; assigning an authoritative date remains evidence-driven.
+Command:
 
-Preferred review order:
+```bash
+npm run data:provenance:queue -- --as-of=YYYY-MM-DD --limit=10
+```
 
-1. exact source page + exact resource already known;
-2. multiple-resource pages requiring resource matching;
-3. API/system sources without normal file timestamps;
-4. genuinely ambiguous sources, which may remain unknown.
+Default report:
+
+```text
+.tmp/provenance-review-queue.json
+```
+
+Scheduled workflow:
+
+```text
+.github/workflows/provenance-review.yml
+```
+
+Cadence:
+
+- first day of each month at 09:15 Asia/Taipei;
+- GitHub cron: `15 1 1 * *`;
+- manual `workflow_dispatch` is also supported;
+- repository permission remains read-only;
+- report artifacts are retained for 30 days.
+
+The workflow validates the M3 registry first, generates at most 10 review candidates, writes a GitHub Actions summary, and uploads both the registry validation report and queue report. It does not assign dates, run production data fetches, commit/push, or deploy.
+
+Queue order:
+
+1. never-reviewed datasets with an exact source page and resource ID;
+2. never-reviewed datasets with a source page that still needs resource matching;
+3. never-reviewed or periodically rechecked API/system/unsupported source mechanisms;
+4. explicit or aged unresolved manual follow-up.
+
+`verified` and `no_authoritative_timestamp` entries are excluded from routine monthly requeue. Other reviewed unresolved states are eligible for recheck after 180 days. Queue generation is triage only; assigning an authoritative date remains evidence-driven.
 
 ## Focused refresh path
 

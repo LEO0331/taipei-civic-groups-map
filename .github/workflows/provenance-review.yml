@@ -1,0 +1,84 @@
+name: Provenance Review Queue
+
+on:
+  schedule:
+    # 09:15 Asia/Taipei (UTC+8) on the first day of each month.
+    - cron: '15 1 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: provenance-review-queue
+  cancel-in-progress: true
+
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate provenance review registry
+        run: npm run data:provenance:review
+      - name: Build monthly provenance review queue
+        shell: bash
+        run: |
+          AS_OF="$(TZ=Asia/Taipei date +%F)"
+          npm run data:provenance:queue -- --as-of="$AS_OF" --limit=10
+      - name: Write queue summary
+        if: always()
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFile, readFile } from 'node:fs/promises';
+
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+          if (!summaryPath) throw new Error('GITHUB_STEP_SUMMARY is unavailable.');
+
+          let queue;
+          try {
+            queue = JSON.parse(await readFile('.tmp/provenance-review-queue.json', 'utf8'));
+          } catch {
+            await appendFile(summaryPath, [
+              '# Provenance review queue',
+              '',
+              'No queue report was produced. Inspect the registry validation or queue-generation step.',
+              '',
+            ].join('\n'));
+            process.exit(0);
+          }
+
+          const lines = [
+            '# Provenance review queue',
+            '',
+            `As of: ${queue.asOfDate}`,
+            `Selected: ${queue.selectedCount} / ${queue.eligibleCount} eligible (limit ${queue.limit})`,
+            '',
+            'Queue generation is triage only. It does not assign source dates or mutate repository data.',
+            '',
+            '| Dataset | Current state | Priority |',
+            '| --- | --- | --- |',
+            ...(queue.entries ?? []).map((entry) =>
+              `| ${entry.datasetId} | ${entry.status} | ${entry.priority} |`
+            ),
+            '',
+          ];
+
+          await appendFile(summaryPath, lines.join('\n'));
+          NODE
+      - name: Upload provenance review evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: provenance-review-queue
+          path: |
+            .tmp/provenance-review-report.json
+            .tmp/provenance-review-queue.json
+          if-no-files-found: warn
+          retention-days: 30

@@ -401,8 +401,8 @@
       "dependencies": [
         "post-demo-ci-pages-runtime-optimization"
       ],
-      "status": "in_progress",
-      "evidence": "2026-09-23 Batch 39 audited the exact lockfile/runtime baseline. Leaflet 1.9.4, React Leaflet 5.0.0, @types/leaflet 1.9.22, @types/react 19.3.0, @types/react-dom 19.3.0, @types/node 22.20.4, Vite 6.4.3 within the v6 line, and plugin-react 4.7.0 within the v4 line require no same-line maintenance. Batch 39 updates only dev-tool tsx from locked 4.22.4 to 4.23.15, preserving esbuild ~0.28.0 and Node 22 compatibility. React 19.3, TypeScript 5.9/7, Playwright 1.63, Vite/plugin-react majors, and Node 24 are explicitly separated into bounded migrations. Exact PR-head Frontend CI remains required before completion."
+      "status": "done",
+      "evidence": "2026-09-23 Batch 39 audited the exact lockfile/runtime baseline and applied one bounded maintenance update: dev-only tsx 4.22.4 → 4.23.15, preserving Node >=18 and esbuild ~0.28.0. PR #53 implementation-head Frontend CI run 35802278329 passed npm ci, typecheck, unit tests, production build (399.63 kB raw / 116.04 kB Vite gzip), the 450/130 kB budget, desktop Playwright 76/76, and mobile Playwright 77/77. React 19.3, TypeScript 5.9 then 7, Playwright 1.63 renderer, Vite/plugin-react majors, and Node 24 remain separate bounded migrations. No product/data/UX/visual-threshold/release-boundary change."
     }
   ]
 }

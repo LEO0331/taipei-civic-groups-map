@@ -393,6 +393,16 @@
       ],
       "status": "in_progress",
       "evidence": "2026-09-23 Batch 38 Stage 1 split Frontend CI into parallel quality, desktop E2E, and mobile E2E jobs while retaining Node 22, exact Playwright 1.62.1, the pinned Noble container, full desktop/mobile coverage, 12 visual baselines, maxDiffPixelRatio 0.0005, and the 450/130 kB entry budget. PR #52 run 35800538287 passed: quality succeeded, desktop ran 76 tests in 3.7m, mobile ran 77 tests in 5.1m, and total workflow wall-clock was 5m50s versus the measured 9m26s median baseline (~38% lower). Stage 2 changes Pages to preserve schema capture → release capture → fetch → schema check → data-change comparison → conversion in one release-prepare job, snapshot that exact converted workspace once, then fan out release-build, desktop E2E, and mobile E2E from the same snapshot. Final PR-head CI and the first merged Pages run remain required before marking done."
+    },
+    {
+      "id": "post-demo-dependency-toolchain-audit",
+      "name": "Post-demo dependency / toolchain audit",
+      "description": "Inventory runtime, production dependencies, test stack, and build tooling; apply only low-risk maintenance; and isolate larger migrations into bounded follow-up work.",
+      "dependencies": [
+        "post-demo-ci-pages-runtime-optimization"
+      ],
+      "status": "done",
+      "evidence": "2026-09-23 Batch 39 audited the exact lockfile/runtime baseline and applied one bounded maintenance update: dev-only tsx 4.22.4 → 4.23.15, preserving Node >=18 and esbuild ~0.28.0. PR #53 implementation-head Frontend CI run 35802278329 passed npm ci, typecheck, unit tests, production build (399.63 kB raw / 116.04 kB Vite gzip), the 450/130 kB budget, desktop Playwright 76/76, and mobile Playwright 77/77. React 19.3, TypeScript 5.9 then 7, Playwright 1.63 renderer, Vite/plugin-react majors, and Node 24 remain separate bounded migrations. No product/data/UX/visual-threshold/release-boundary change."
     }
   ]
 }

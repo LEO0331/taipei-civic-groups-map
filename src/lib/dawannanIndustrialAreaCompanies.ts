@@ -1,4 +1,4 @@
-import { DISTRICTS, normalizeText } from './civicGroups';
+import { DISTRICTS } from './civicGroups';
 import { convertTwd97ToWgs84 } from './nangangSoftwareParkCompanies';
 import type { CoordinateConversionStatus, DawannanIndustrialAreaCompanyFilters, DawannanIndustrialAreaCompanyRecord, DawannanIndustrialAreaCompanySummary } from '../types';
 

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import AccessibleTabs from './AccessibleTabs';
 import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';

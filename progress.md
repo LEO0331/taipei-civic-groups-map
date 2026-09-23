@@ -3,12 +3,14 @@
 ## Current State
 
 - Last updated: 2026-09-23
-- Active feature: Batch 36 — Data Freshness Audit C on `postdemo/36-data-freshness-audit-c`.
-- Baseline: `main@6a48dedf9f4ad256d6cb374703641f5af2c1bcc5`, with Batch 35 merged and Pages run `35807633618` green.
-- Scope: authoritative freshness evidence only. No source refresh, metadata rewrite, converter/domain change, product/UX work, dependency migration, visual-baseline change, or performance-budget change.
+- Active feature: bounded anti-slop cleanup on `cleanup/strict-unused-code`.
+- Baseline: `main@bc30981`, after Batch 36 merged.
+- Scope: remove the final application `@ts-nocheck` suppression and code proven unused by strict TypeScript diagnostics. No UI redesign, dataset change, dependency change, or broad component rewrite.
 - Current Data Trust remains 117 directories / 68 dated / 49 unknown / 0 fallback; deterministic 2026-09-22 triage remains 24 recent / 14 review / 30 priority_review.
 
 ## Latest Evidence
+
+- 2026-09-23: anti-slop cleanup is complete and intentionally bounded to type-safety and dead-code findings. The final two application `@ts-nocheck` suppressions are removed from `App.tsx` and the employment-agency module; the missing `App.tsx` domain types are now imported explicitly. Strict `noUnusedLocals` / `noUnusedParameters` diagnostics identified and removed one unused localization table, three unused imports/declarations, one unused tuple binding, two permanently inactive filter states/predicates that had no UI controls, and an unused conversion-report request/state path. A regression test now prevents source files from disabling TypeScript checking. Verification passed in the pinned Playwright 1.62.1 Noble container: strict unused diagnostics, normal typecheck, 175 unit tests, production build, performance budget (**399.56 kB raw / 115.82 kB gzip**), and full Playwright (**153 passed / 1 expected skip / 0 failed**) including desktop/mobile visual regression.
 
 - 2026-09-23: Batch 36 / Data Freshness Audit C closes the three priority-review sources explicitly deferred by Batch 32. Live Taipei Data Platform file `更新時間` remains identical to local source dates for `funeral-service-businesses` (2025-06-11 10:33:01 +08:00), `hakka-organizations` (2025-06-12 16:16:44 +08:00), and `fixed-site-temporary-childcare` (2025-06-13 18:36:01 +08:00). The Hakka metadata page is newer, but its downloadable CSV is not; metadata-edit time is not substituted for file freshness. Result: **0/3 newer authoritative files; 0 refreshes approved**. No source records, metadata, manifests, converters, or UI are changed. Exact PR-head CI and merged Pages validation remain pending.
 

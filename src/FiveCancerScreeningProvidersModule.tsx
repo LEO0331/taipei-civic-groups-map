@@ -38,7 +38,7 @@ export default function FiveCancerScreeningProvidersModule({ language }: { langu
     return services.every(([id, flag]) => !flags[id] || (flags[id] === 'yes' ? record[flag] === true : flags[id] === 'no' ? record[flag] === false : record[flag] === null));
   }), [records, search, district, phone, minimum, flags]);
   const byDistrict = useMemo(() => grouped(filtered, 'districtName'), [filtered]);
-  const byService = useMemo(() => services.map(([id, flag, , zhLabel, enLabel]) => ({ label: zh ? zhLabel : enLabel, value: filtered.filter(record => record[flag] === true).length })), [filtered, zh]);
+  const byService = useMemo(() => services.map(([, flag, , zhLabel, enLabel]) => ({ label: zh ? zhLabel : enLabel, value: filtered.filter(record => record[flag] === true).length })), [filtered, zh]);
   const combinations = useMemo(() => grouped(filtered.map(record => ({ ...record, combination: record.screeningTypes.join('、') || (zh ? '未確認服務' : 'No confirmed services') })) as (Provider & { combination: string })[], 'combination' as keyof Provider), [filtered, zh]);
   const summary = useMemo(() => ({ total: filtered.length, districts: byDistrict.length, phones: filtered.filter(record => Boolean(record.phone)).length, multi: filtered.filter(record => record.screeningTypeCount > 1).length, types: Object.fromEntries(services.map(([id, flag]) => [id, filtered.filter(record => record[flag] === true).length])) as Record<string, number> }), [filtered, byDistrict]);
   const sorted = useMemo(() => [...filtered].sort((a, b) => sort === 'district' ? a.districtName.localeCompare(b.districtName, 'zh-Hant') : sort === 'types' ? b.screeningTypeCount - a.screeningTypeCount : a.institutionName.localeCompare(b.institutionName, 'zh-Hant')), [filtered, sort]);

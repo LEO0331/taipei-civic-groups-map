@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import test from 'node:test';
 
 test('dataset modules are route-level lazy imports', async () => {
@@ -16,6 +16,17 @@ test('entry navigation defers mapping runtime until a map surface opens', async 
   assert.doesNotMatch(app, /from ['"]react-leaflet['"]/);
   assert.match(app, /const CivicMap = lazy\(\(\) => import\('\.\/CivicMap'\)\)/);
   assert.match(app, /const DistrictComparison = lazy\(\(\) => import\('\.\/DistrictComparison'\)\)/);
+});
+
+test('application source stays under TypeScript checking', async () => {
+  const entries = await readdir('src', { recursive: true });
+  const sourceFiles = entries.filter((entry) => /\.tsx?$/.test(entry));
+  const suppression = ['@ts', 'nocheck'].join('-');
+
+  for (const sourceFile of sourceFiles) {
+    const source = await readFile(`src/${sourceFile}`, 'utf8');
+    assert.doesNotMatch(source, new RegExp(suppression), `${sourceFile} disables TypeScript checking`);
+  }
 });
 
 test('physical-therapy component styles do not override generic global utility classes', async () => {

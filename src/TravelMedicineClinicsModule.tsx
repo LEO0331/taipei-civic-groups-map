@@ -32,7 +32,6 @@ export default function TravelMedicineClinicsModule({ language }: { language: La
   const ordered = [...filtered].sort((a, b) => sort === 'city' ? a.cityName.localeCompare(b.cityName, 'zh-Hant') || a.hospitalName.localeCompare(b.hospitalName, 'zh-Hant') : sort === 'mpox' ? a.mpoxSelfPaidVaccination.localeCompare(b.mpoxSelfPaidVaccination) || a.hospitalName.localeCompare(b.hospitalName, 'zh-Hant') : a.hospitalName.localeCompare(b.hospitalName, 'zh-Hant'));
   const pageSize = 12; const pageCount = Math.max(1, Math.ceil(ordered.length / pageSize)); const pageRows = ordered.slice((page - 1) * pageSize, page * pageSize);
   const byDistrict = group(filtered.filter((record) => record.districtName), (record) => record.districtName ?? '').sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'zh-Hant'));
-  const byDepartment = group(filtered, (record) => record.department).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'zh-Hant'));
   const byMpox = (Object.keys(mpoxLabels) as MpoxVaccinationStatus[]).map((status) => ({ name: mpoxLabels[status][language], count: filtered.filter((record) => record.mpoxSelfPaidVaccination === status).length }));
   const listedMpox = filtered.filter((record) => record.mpoxSelfPaidVaccination === 'available').length;
   const copy = async (value: string) => { try { await navigator.clipboard.writeText(value); } catch { /* clipboard permission may be unavailable */ } };

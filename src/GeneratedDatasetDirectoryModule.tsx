@@ -45,19 +45,6 @@ const zhTitles: Record<string, string> = {
   'Kindergarten Basic Evaluation Pass Records': '公私立幼兒園基礎評鑑通過名單',
 };
 
-const zhFieldLabels: Record<string, string> = {
-  id: 'ID', sourceId: '編號', sourceSequenceNumber: '序號', stationName: '寵物登記機構名稱', retailerName: '零售商名稱',
-  institutionName: '機構名稱', institutionCategory: '機構類別', districtName: '行政區', districtNameFromAddress: '行政區',
-  address: '地址', phone: '電話', googleMapsQuery: '地圖查詢', externalMapQuery: '地圖查詢', price16KgRaw: '16 公斤來源列價',
-  price20KgRaw: '20 公斤來源列價', coordinateSystem: '座標系統', foundationName: '基金會名稱', foundationCategory: '類別',
-  organizationCode: '統一編號', registrationNumber: '登記字號', establishedDateRaw: '設立日期', serviceType: '服務類型',
-  venueName: '場地名稱', managingAuthority: '管理機關', openingHoursRaw: '開放時間', allowedPerformanceTypes: '可表演類型',
-  applicationMethod: '申請方式', fullPhone: '電話', licenseNumber: '許可證號', agencyName: '機構名稱', responsiblePerson: '負責人',
-  licenseExpiryRaw: '許可證期限', capitalAmountRaw: '資本額', professionalPersonnelRaw: '專業人員', totalBedCount: '床位數',
-  companyName: '公司名稱', sourceCityOrCounty: '縣市', companyAddress: '登記地址', sourceValues: '來源欄位',
-  kindergartenName: '幼兒園', establishmentType: '設立別', evaluationAcademicYearRaw: '評鑑學年度', cityCode: '縣市代碼', postalCode: '郵遞區號',
-};
-
 function formatValue(value: RecordValue): string {
   if (value == null || value === '') return '-';
   if (Array.isArray(value)) return value.map((item) => formatValue(item as RecordValue)).filter((item) => item !== '-').join('、') || '-';

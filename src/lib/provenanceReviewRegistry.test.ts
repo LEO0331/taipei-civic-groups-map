@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import {
   buildProvenanceReviewReport,
@@ -117,4 +118,24 @@ test('blocks stale non-verified registry state after a dataset gains a source da
 
   assert.equal(report.status, 'blocked');
   assert.equal(report.issues.some((issue) => issue.kind === 'dated_dataset_not_verified'), true);
+});
+
+
+test('current repository registry covers every unknown-date Data Trust dataset', async () => {
+  const [currentRegistry, currentReleaseSummary, currentTrustManifest] = await Promise.all([
+    readFile('data/provenance-review.json', 'utf8').then((value) => JSON.parse(value) as ProvenanceReviewRegistry),
+    readFile('public/data/data-release-summary.json', 'utf8').then((value) => JSON.parse(value) as ReleaseSummary),
+    readFile('public/data/data-trust-manifest.json', 'utf8').then((value) => JSON.parse(value) as TrustManifest),
+  ]);
+
+  const report = buildProvenanceReviewReport(
+    currentReleaseSummary,
+    currentTrustManifest,
+    currentRegistry,
+  );
+
+  assert.equal(report.status, 'passed');
+  assert.equal(report.trackedUnknownDatasetCount, currentReleaseSummary.unknownDateDatasetCount);
+  assert.equal(report.untrackedUnknownDatasetCount, 0);
+  assert.deepEqual(report.issues, []);
 });

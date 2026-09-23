@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "note": "Track review state for Data Trust datasets without an authoritative source-file date. Unknown is a valid outcome; never infer a date from metadata-page edits, collection periods, fetch time, filenames, or commit history."
+  },
+  "entries": [
+    {
+      "datasetId": "addiction-treatment-facilities",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "alternative-service-reserve-statistics",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "approved-gas-water-heater-installers",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "bottled-gas-retailers",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "child-youth-residential-placement-institutions",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "child-youth-welfare-institutions",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "clinical-pathology-facilities",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "community-care-service-sites",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "community-integrated-care-level-c-units",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "community-public-childcare-homes",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "cultural-arts-foundations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "disability-day-services",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "domestic-employment-agency-evaluations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "domestic-employment-service-agencies",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "early-intervention-community-services",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "education-volunteer-recognition-records",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "emergency-assistance-providers",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "employment-agency-intermediary-companies",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "enterprise-headquarters-distribution",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "entrusted-public-asset-operations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "environmental-pesticide-vendors",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "healthcare-welfare-budget",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "influenza-vaccine-providers-under3",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "kindergarten-basic-evaluation-pass-records",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "labor-pension-act-violations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "labor-standard-act-violation-records",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "licensed-waste-cooking-oil-collectors",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "lodging-business-penalty-records",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "major-electricity-users",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "mayor-ceremonial-gift-statistics",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "oral-maxillofacial-surgery-facilities",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "out-of-city-funeral-service-businesses",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "pest-control-businesses",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "pet-registration-stations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "rabies-vaccination-veterinary-clinics",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "radiology-diagnostic-facilities",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "registered-after-school-care-centres",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "senior-care-capacity-and-occupancy",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "senior-care-institution-evaluations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "senior-group-meal-service-sites",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "senior-service-site-courses",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "social-welfare-foundations",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "specific-pet-business-evaluation-results",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "sports-public-participation",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "street-performer-venues",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "subsidized-senior-residential-placement-institutions",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "taipei-government-application-services",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "visually-impaired-massage-establishments",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    },
+    {
+      "datasetId": "water-pipe-installation-contractors",
+      "status": "not_reviewed",
+      "lastReviewedAt": null
+    }
+  ]
+}

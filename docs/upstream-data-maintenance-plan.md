@@ -91,26 +91,34 @@ Source pages shared by multiple datasets are fetched once per run, and matching 
 
 ## M2 — weekly schedule
 
-After M1 is merged and validated once, create `chore/upstream-monitor-schedule`.
+Implemented by `chore/upstream-monitor-schedule` in:
 
-Target schedule:
+```text
+.github/workflows/upstream-monitor.yml
+```
+
+Schedule:
 
 - Monday 09:00 Asia/Taipei
 - GitHub cron: `0 1 * * 1`
-- also support `workflow_dispatch`
+- manual `workflow_dispatch`
+- 15-minute job timeout
+- read-only repository permission
 
-Expected workflow:
+Workflow:
 
 ```text
 checkout
   -> Node 22
   -> npm ci
   -> npm run data:monitor:upstream
-  -> upload report artifact
   -> write Actions summary
+  -> upload .tmp/upstream-monitor-report.json
 ```
 
-No automatic repository mutation or deployment.
+Reports are retained as GitHub Actions artifacts for 30 days. The job summary surfaces counts plus only the strongest attention candidates (`newer_resource`, `resource_changed`, and `error`); `unknown_date` and `unresolved` remain visible in counts without turning the weekly check into notification noise.
+
+M2 does not run `data:fetch`, write repository contents, commit/push, or deploy. A successful workflow only means the evidence-gathering job completed; it does not imply that upstream data was automatically accepted.
 
 If a later iteration is justified, a changed resource may be fetched into the temporary Actions workspace and checked with the existing schema/data-change/anomaly guards, but it still must not auto-commit or auto-merge.
 

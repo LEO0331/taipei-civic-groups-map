@@ -391,8 +391,8 @@
         "post-demo-performance-budget",
         "post-demo-cycle-3-verification"
       ],
-      "status": "in_progress",
-      "evidence": "2026-09-23 Batch 38 Stage 1 split Frontend CI into parallel quality, desktop E2E, and mobile E2E jobs while retaining Node 22, exact Playwright 1.62.1, the pinned Noble container, full desktop/mobile coverage, 12 visual baselines, maxDiffPixelRatio 0.0005, and the 450/130 kB entry budget. PR #52 run 35800538287 passed: quality succeeded, desktop ran 76 tests in 3.7m, mobile ran 77 tests in 5.1m, and total workflow wall-clock was 5m50s versus the measured 9m26s median baseline (~38% lower). Stage 2 changes Pages to preserve schema capture → release capture → fetch → schema check → data-change comparison → conversion in one release-prepare job, snapshot that exact converted workspace once, then fan out release-build, desktop E2E, and mobile E2E from the same snapshot. Final PR-head CI and the first merged Pages run remain required before marking done."
+      "status": "done",
+      "evidence": "2026-09-23 Batch 38 is merged at main@cb191332. Stage 1 PR #52 run 35800538287 reduced Frontend CI wall-clock from the measured ~9m26s median to 5m50s while preserving quality plus full desktop/mobile E2E. Final PR-head run 35801220101 passed the optimized split. Merged Pages run 35801721501 then passed the serialized source-data boundary, one exact post-conversion workspace snapshot, parallel release-build/desktop/mobile verification, and deployment. Node 22, exact Playwright 1.62.1 Noble, 12 visual baselines, maxDiffPixelRatio 0.0005, the 450/130 kB budget, Batch 29 schema guard, and Batch 30 release evidence remain intact."
     },
     {
       "id": "post-demo-dependency-toolchain-audit",
@@ -403,6 +403,18 @@
       ],
       "status": "done",
       "evidence": "2026-09-23 Batch 39 audited the exact lockfile/runtime baseline and applied one bounded maintenance update: dev-only tsx 4.22.4 → 4.23.15, preserving Node >=18 and esbuild ~0.28.0. PR #53 implementation-head Frontend CI run 35802278329 passed npm ci, typecheck, unit tests, production build (399.63 kB raw / 116.04 kB Vite gzip), the 450/130 kB budget, desktop Playwright 76/76, and mobile Playwright 77/77. React 19.3, TypeScript 5.9 then 7, Playwright 1.63 renderer, Vite/plugin-react majors, and Node 24 remain separate bounded migrations. No product/data/UX/visual-threshold/release-boundary change."
+    },
+    {
+      "id": "post-demo-data-quality-anomaly-guard",
+      "name": "Post-demo semantic data-quality anomaly guard",
+      "description": "Detect suspicious release-time source-content outcomes that can pass header/schema validation, separating hard blockers from observational warnings.",
+      "dependencies": [
+        "source-schema-drift-guard",
+        "release-data-change-summary",
+        "post-demo-ci-pages-runtime-optimization"
+      ],
+      "status": "in_progress",
+      "evidence": "2026-09-23 Batch 37 adds `npm run data:quality:check`, reusing the exact Batch 30 pre-fetch release baseline. Hard blockers are limited to disappearance of previously countable datasets, newly unreadable stable source row counts, loss of all countable source files, and previously populated datasets becoming empty. Row-count collapse to <=50% or spike to >=200% is warning-only and only applies from a >=20-row baseline. Pages runs the guard after schema/data-change checks and before conversion; successful release evidence includes `data-quality-anomaly-report.json`, while blocker failures upload a dedicated artifact. Focused unit coverage is included. Exact PR-head CI and merged Pages validation remain required before marking done."
     }
   ]
 }

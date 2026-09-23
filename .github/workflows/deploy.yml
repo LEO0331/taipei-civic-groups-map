@@ -33,13 +33,22 @@ jobs:
         env:
           NODE_OPTIONS: --dns-result-order=ipv4first
       - run: npm run data:schema:check
-      - run: npm run data:release:changes
       - name: Upload source schema drift evidence
         if: failure()
         uses: actions/upload-artifact@v7.0.1
         with:
           name: source-schema-drift
           path: public/data/source-schema-report.json
+          if-no-files-found: ignore
+          retention-days: 7
+      - run: npm run data:release:changes
+      - run: npm run data:quality:check
+      - name: Upload data-quality anomaly evidence
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: data-quality-anomaly
+          path: public/data/data-quality-anomaly-report.json
           if-no-files-found: ignore
           retention-days: 7
       - run: npm run data:convert
@@ -84,6 +93,7 @@ jobs:
             public/data/conversion-report.json
             public/data/source-schema-report.json
             public/data/data-change-summary.json
+            public/data/data-quality-anomaly-report.json
           if-no-files-found: error
       - uses: actions/upload-pages-artifact@v5.0.0
         with:

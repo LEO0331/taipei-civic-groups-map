@@ -2,12 +2,14 @@
 
 ## Current State
 
-- Last updated: 2026-09-22
-- Active feature: Post-demo Cycle 3 / Batch 33 — verification/freeze on `postdemo/33-cycle-3-verification`.
-- Baseline: Batches 29–32 are merged; PR #50's fixture correction is in `main@b70c2b2`. Checked-in Data Trust is 117 directories (63 dated / 54 unknown / 0 fallback) and the 2026-09-22 audit is 23 recent / 13 review / 27 priority_review.
-- Release record: `docs/post-demo-cycle-3-verification-2026-09-22.md` (freeze candidate); `docs/post-demo-cycle-2-verification-2026-09-22.md` (previous completed release baseline).
+- Last updated: 2026-09-23
+- Active feature: Batch 37 — semantic data-quality anomaly guard on `postdemo/37-data-quality-anomaly-guard`.
+- Baseline: `main@93c6ef4707e181177325efd156c2f65ba20ccdf6`, with Batch 38 merged/deployed and Batch 39 merged/deployed.
+- Scope: release-safety tooling only. No source refresh, converter/domain change, product/UX work, dependency migration, visual-baseline change, or performance-budget change.
 
 ## Latest Evidence
+
+- 2026-09-23: Batch 37 implementation adds a semantic/data-quality anomaly gate between Batch 30 release data-change comparison and conversion. It reuses the exact pre-fetch release baseline rather than creating a second capture format. Hard blockers are limited to: a previously countable dataset disappearing; a previously countable stable source file becoming unreadable for row counting; loss of all countable files in a previously countable dataset; and a previously populated dataset becoming empty. Severe row-count changes are warning-only at <=50% or >=200% of baseline and only for baselines with at least 20 rows. The report is written to `public/data/data-quality-anomaly-report.json`; blocker failures retain a dedicated artifact and successful Pages releases include the report in release evidence. PR #54 implementation head `6eacd662` passed Frontend CI run `35804423617`: **173/173 unit tests**, production build, **399.63 / 115.86 kB** entry budget, desktop **76/76**, and mobile **77/77**. Final evidence-only head must repeat CI; merged Pages validation remains pending.
 
 - 2026-09-23: Batch 39 / dependency-toolchain audit is implementation-green on PR #53. Exact head `49d5dfc` passed Frontend CI run `35802278329`: npm ci, typecheck, unit tests, production build, 450/130 kB performance budget, desktop Playwright **76/76**, and mobile Playwright **77/77** all succeeded; production entry remained **399.63 kB raw / 116.04 kB Vite gzip**. The only dependency change is dev-only `tsx` 4.22.4 → 4.23.15 with unchanged `esbuild ~0.28.0`; React 19.3, TypeScript 5.9/7, Playwright 1.63, Vite/plugin-react majors, and Node 24 remain isolated future migrations.
 

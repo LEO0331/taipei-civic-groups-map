@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "datasetDirectoryCount": 117,
-  "datedDatasetCount": 63,
+  "datedDatasetCount": 68,
   "fetchFallbackDatasetCount": 0,
   "entries": [
     {
@@ -35,7 +35,9 @@
     },
     {
       "id": "beauty-hairdressing-hygiene-certifications",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市營業場所衛生優良自主管理分級認證業者名冊〖美容美髮業〗",
+      "sourceUpdatedAt": "2026-03-06T10:03:31+08:00"
     },
     {
       "id": "bottled-gas-retailers",
@@ -201,7 +203,9 @@
     },
     {
       "id": "gbs-screening-clinics",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市孕婦乙型鏈球菌篩檢補助特約院所名單",
+      "sourceUpdatedAt": "2025-06-09T14:05:33+08:00"
     },
     {
       "id": "general-chinese-medicine-institutions",
@@ -392,7 +396,9 @@
     },
     {
       "id": "optometry-institutions",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市驗光所",
+      "sourceUpdatedAt": "2025-06-11T08:13:52+08:00"
     },
     {
       "id": "oral-maxillofacial-surgery-facilities",
@@ -455,7 +461,9 @@
     },
     {
       "id": "public-influenza-antiviral-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市公費流感抗病毒藥劑合約院所",
+      "sourceUpdatedAt": "2024-12-05T14:40:55+08:00"
     },
     {
       "id": "public-pneumococcal-vaccine-providers",
@@ -546,7 +554,9 @@
     },
     {
       "id": "tb-contact-screening-partner-providers",
-      "fetchStatus": "current"
+      "fetchStatus": "current",
+      "sourceName": "臺北市結核病接觸者胸部X光檢查暨丙型干擾素血液測驗(IGRA)合作醫療院所名單",
+      "sourceUpdatedAt": "2026-06-16T10:57:45+08:00"
     },
     {
       "id": "travel-medicine-clinics",

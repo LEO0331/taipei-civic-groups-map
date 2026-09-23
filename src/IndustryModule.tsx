@@ -3,7 +3,7 @@ import AccessibleTabs from './AccessibleTabs';
 import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet';
-import { DISTRICTS, TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
+import { TAIPEI_DISTRICT_CENTROIDS } from './lib/civicGroups';
 import { buildIndustryGrantSummary, filterIndustryGrants } from './lib/industryGrants';
 import type { IndustryGrantFilters, IndustryGrantRecipient, IndustryGrantSummary, Language } from './types';
 

@@ -2,76 +2,87 @@
 
 ## Current Objective
 
-- Goal: Complete Batch 37 semantic data-quality anomaly guard on `postdemo/37-data-quality-anomaly-guard`.
-- Baseline: `main@93c6ef4707e181177325efd156c2f65ba20ccdf6`.
-- Scope: release-safety tooling/evidence only. No source refresh, converter/domain changes, product/UX work, dependency migration, visual-baseline changes, or performance-budget changes.
+- Goal: Complete Batch 35 / Source-date Metadata D on `postdemo/35-source-date-metadata-d`.
+- Baseline: `main@552e3ad64202aced40d7bb6ec041312ff1a225a2`.
+- Scope: source-date provenance/evidence only. No raw source records, converters, domain calculations, product/UX, dependency/runtime, visual-baseline, or performance-budget changes.
 
-## Implemented Contract
+## Implemented Metadata D Tranche
 
-Pages retains the authoritative serialized release boundary:
+Five previously unknown-date Department of Health datasets now carry explicit authoritative Taipei downloadable-resource timestamps in both public metadata and raw fetch provenance:
 
-`schema capture → release capture → fetch → schema check → release data-change comparison → data-quality anomaly guard → conversion`
+| Dataset | `sourceFileUpdatedAt` |
+| --- | --- |
+| `beauty-hairdressing-hygiene-certifications` | `2026-03-06T10:03:31+08:00` |
+| `optometry-institutions` | `2025-06-11T08:13:52+08:00` |
+| `public-influenza-antiviral-providers` | `2024-12-05T14:40:55+08:00` |
+| `gbs-screening-clinics` | `2025-06-09T14:05:33+08:00` |
+| `tb-contact-screening-partner-providers` | `2026-06-16T10:57:45+08:00` |
 
-Batch 38 then snapshots the exact converted workspace once and fans out:
+Evidence rule: use the downloadable file/resource **更新時間** only; do not substitute metadata-page edit time, collection periods, fetch time, or commit time.
 
-- release build / typecheck / unit tests / performance budget;
-- desktop Playwright;
-- mobile Playwright.
+## Snapshot Applicability Evidence
 
-Deployment waits for all three downstream jobs.
+Batch 37 merged Pages run `35805442007` freshly fetched the release sources. Its data-change evidence reports all five Batch 35 candidate directories as unchanged from the checked-in snapshots.
 
-### Batch 37 hard blockers
+Release evidence artifact:
 
-- previously countable dataset disappears;
-- previously countable stable source file becomes unreadable for row-count validation;
-- previously countable dataset has no current countable source file;
-- previously populated dataset becomes empty.
+- ID: `10727078128`
+- SHA-256: `c16b21c5ae353f16f89a20da0a43a200266efc55eb88f7331519d87ae8f1bde2`
 
-### Batch 37 warnings
+Therefore the verified resource timestamps apply to the committed source bytes without a data refresh.
 
-- current rows <= 50% of reviewed baseline;
-- current rows >= 200% of reviewed baseline;
-- proportional warnings apply only for baselines with >= 20 rows.
+## Data Trust / Freshness Delta
 
-Warnings do not block release.
+- dataset directories: 117 → 117
+- dated: 63 → **68**
+- unknown-date: 54 → **49**
+- reused-snapshot fallback: 0 → 0
 
-Dataset-specific ID uniqueness, required-field, null-rate, coordinate, and domain-value rules are intentionally not generalized without explicit source contracts.
+Deterministic `2026-09-22` audit:
 
-## Files / Commands
+- recent: 23 → **24**
+- review: 13 → **14**
+- priority_review: 27 → **30**
 
-- Guard: `scripts/dataQualityAnomalyGuard.ts`
-- Tests: `src/lib/dataQualityAnomalyGuard.test.ts`
-- Command: `npm run data:quality:check`
-- Report: `public/data/data-quality-anomaly-report.json`
-- Design note: `docs/data-quality-anomaly-guard-2026-09-23.md`
+The increase in priority-review is expected: newly known old source dates become reviewable instead of remaining unknown. Age bands remain triage only.
 
-## Verification Evidence
+## Files
 
-| Check | Result | Notes |
-| --- | --- | --- |
-| Batch 38 | Complete | merged `main@cb191332`; final PR CI run 35801220101 green; Pages run 35801721501 green |
-| Batch 39 | Complete | merged `main@93c6ef47`; Pages run 35803359072 green |
-| Batch 37 focused design/tests | Implemented | stable/empty/unreadable/missing/collapse/spike/small/rolling cases covered |
-| Local clone verification | Unavailable | execution container could not resolve github.com |
-| Batch 37 implementation Frontend CI | Passed | PR #54 run 35804423617 on `6eacd662`: 173/173 unit; build/budget green; desktop 76/76; mobile 77/77 |
-| Batch 37 merged Pages | Pending | must execute live fetch + anomaly gate + conversion + Batch 38 fan-out |
-| Production URL | Deployed baseline | https://leo0331.github.io/taipei-civic-groups-map/ |
+- Five `public/data/<dataset>/metadata.json` files
+- Five `data/raw/<dataset>/fetch-metadata.json` files
+- `public/data/data-trust-manifest.json`
+- `public/data/data-release-summary.json`
+- `public/data/data-freshness-audit.json`
+- `docs/source-date-metadata-d-2026-09-23.md`
+- state files
+
+No `source.csv` file changes are intended.
+
+## Verification Gates
+
+| Check | Status |
+| --- | --- |
+| Batch 37 final Frontend CI | Passed — run `35804989294` |
+| Batch 37 merged Pages | Passed — run `35805442007` |
+| Batch 35 checked-in deterministic evidence | Implemented — 117 / 68 / 49 / 0 and 24 / 14 / 30 |
+| Batch 35 PR-head optimized Frontend CI | Pending |
+| Batch 35 merged Pages fresh release | Pending |
 
 ## Next Actions
 
-1. Require the final documentation/evidence head of PR #54 to repeat optimized Frontend CI successfully.
-2. Merge only that exact green head.
-3. Verify the merged Pages run succeeds through `data:quality:check`.
-4. Confirm `data-quality-anomaly-report.json` is included in release evidence.
-5. Only then mark Batch 37 done and proceed to Batch 35 (Source-date Metadata D).
+1. Open the Batch 35 PR.
+2. Require the exact PR head to pass quality + desktop + mobile Frontend CI.
+3. Merge only that green head.
+4. Verify the merged Pages run passes schema → data-change → anomaly guard → conversion and downstream Batch 38 fan-out.
+5. Confirm final release evidence is 117 directories / 68 dated / 49 unknown / 0 fallback.
+6. Then proceed to Batch 36 freshness audit C.
 
 ## Preserved Contracts
 
-- Node 22 runtime and Node-22 type line.
-- exact `@playwright/test@1.62.1` and `mcr.microsoft.com/playwright:v1.62.1-noble`.
-- 12 canonical visual baselines and `maxDiffPixelRatio: 0.0005`.
-- 450 kB raw / 130 kB independent-gzip production-entry budget.
 - Batch 29 schema guard.
 - Batch 30 release data-change evidence.
+- Batch 37 semantic anomaly guard.
 - Batch 38 one-snapshot Pages fan-out.
-- conservative Data Trust/source-date semantics.
+- Node 22 / exact Playwright 1.62.1 Noble.
+- 12 visual baselines / maxDiffPixelRatio 0.0005.
+- 450 / 130 kB production-entry budget.

@@ -7,18 +7,24 @@
     "note": "Age bands are review triage only. They do not assert that a public-data snapshot is stale or current. Confirm the authoritative upstream resource before refreshing."
   },
   "totalDatasetDirectoryCount": 117,
-  "datedDatasetCount": 63,
-  "unknownDateDatasetCount": 54,
+  "datedDatasetCount": 68,
+  "unknownDateDatasetCount": 49,
   "counts": {
-    "recent": 23,
-    "review": 13,
-    "priority_review": 27
+    "recent": 24,
+    "review": 14,
+    "priority_review": 30
   },
   "topPriorityReview": [
     {
       "id": "early-intervention-medical-providers",
       "sourceUpdatedAt": "2024-07-05T17:21:17+08:00",
       "ageDays": 809,
+      "band": "priority_review"
+    },
+    {
+      "id": "public-influenza-antiviral-providers",
+      "sourceUpdatedAt": "2024-12-05T14:40:55+08:00",
+      "ageDays": 656,
       "band": "priority_review"
     },
     {
@@ -66,12 +72,6 @@
     {
       "id": "orthopedic-facilities",
       "sourceUpdatedAt": "2025-06-06T16:57:49+08:00",
-      "ageDays": 473,
-      "band": "priority_review"
-    },
-    {
-      "id": "physical-therapy-clinics",
-      "sourceUpdatedAt": "2025-06-06",
       "ageDays": 473,
       "band": "priority_review"
     }
@@ -84,6 +84,12 @@
       "band": "priority_review"
     },
     {
+      "id": "public-influenza-antiviral-providers",
+      "sourceUpdatedAt": "2024-12-05T14:40:55+08:00",
+      "ageDays": 656,
+      "band": "priority_review"
+    },
+    {
       "id": "methadone-cross-region-services",
       "sourceUpdatedAt": "2024-12-17T15:35:13+08:00",
       "ageDays": 644,
@@ -135,6 +141,12 @@
       "id": "physical-therapy-clinics",
       "sourceUpdatedAt": "2025-06-06",
       "ageDays": 473,
+      "band": "priority_review"
+    },
+    {
+      "id": "gbs-screening-clinics",
+      "sourceUpdatedAt": "2025-06-09T14:05:33+08:00",
+      "ageDays": 470,
       "band": "priority_review"
     },
     {
@@ -204,6 +216,12 @@
       "band": "priority_review"
     },
     {
+      "id": "optometry-institutions",
+      "sourceUpdatedAt": "2025-06-11T08:13:52+08:00",
+      "ageDays": 468,
+      "band": "priority_review"
+    },
+    {
       "id": "pediatric-medical-institutions",
       "sourceUpdatedAt": "2025-06-11 14:58:56",
       "ageDays": 468,
@@ -267,6 +285,12 @@
       "id": "fertility-subsidy-contracted-hospitals",
       "sourceUpdatedAt": "2026-01-13T12:20:51+08:00",
       "ageDays": 252,
+      "band": "review"
+    },
+    {
+      "id": "beauty-hairdressing-hygiene-certifications",
+      "sourceUpdatedAt": "2026-03-06T10:03:31+08:00",
+      "ageDays": 200,
       "band": "review"
     },
     {
@@ -344,6 +368,12 @@
     {
       "id": "psychiatric-clinics",
       "sourceUpdatedAt": "2026-06-16 10:30:06",
+      "ageDays": 98,
+      "band": "recent"
+    },
+    {
+      "id": "tb-contact-screening-partner-providers",
+      "sourceUpdatedAt": "2026-06-16T10:57:45+08:00",
       "ageDays": 98,
       "band": "recent"
     },

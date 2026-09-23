@@ -60,9 +60,15 @@ test('Batch 31 source-date metadata is mirrored into Data Trust and raw provenan
   const releaseSummary = JSON.parse(await readFile('public/data/data-release-summary.json', 'utf8'));
 
   assert.equal(manifest.datasetDirectoryCount, 117);
-  assert.equal(manifest.datedDatasetCount, 63);
-  assert.equal(releaseSummary.datedDatasetCount, 63);
-  assert.equal(releaseSummary.unknownDateDatasetCount, 54);
+  assert.equal(
+    manifest.datedDatasetCount,
+    manifest.entries.filter((entry: { sourceUpdatedAt?: string }) => Boolean(entry.sourceUpdatedAt)).length,
+  );
+  assert.equal(releaseSummary.datedDatasetCount, manifest.datedDatasetCount);
+  assert.equal(
+    releaseSummary.unknownDateDatasetCount,
+    manifest.datasetDirectoryCount - manifest.datedDatasetCount,
+  );
   assert.equal(releaseSummary.fetchFallbackDatasetCount, 0);
 
   const byId = new Map(manifest.entries.map((entry: { id: string }) => [entry.id, entry]));

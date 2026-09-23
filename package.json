@@ -291,7 +291,8 @@
     "data:schema:capture": "tsx scripts/sourceSchemaGuard.ts --capture",
     "data:schema:check": "tsx scripts/sourceSchemaGuard.ts --check",
     "data:release:capture": "tsx scripts/buildDataChangeSummary.ts --capture",
-    "data:release:changes": "tsx scripts/buildDataChangeSummary.ts --compare"
+    "data:release:changes": "tsx scripts/buildDataChangeSummary.ts --compare",
+    "data:quality:check": "tsx scripts/dataQualityAnomalyGuard.ts --check"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

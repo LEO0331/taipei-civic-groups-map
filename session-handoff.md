@@ -2,80 +2,82 @@
 
 ## Current Objective
 
-- Goal: Complete Batch 35 / Source-date Metadata D on `postdemo/35-source-date-metadata-d`.
-- Baseline: `main@552e3ad64202aced40d7bb6ec041312ff1a225a2`.
-- Scope: source-date provenance/evidence only. No raw source records, converters, domain calculations, product/UX, dependency/runtime, visual-baseline, or performance-budget changes.
+- Goal: Complete Batch 36 / Data Freshness Audit C on `postdemo/36-data-freshness-audit-c`.
+- Baseline: `main@6a48dedf9f4ad256d6cb374703641f5af2c1bcc5`.
+- Scope: freshness evidence only. No raw source records, provenance metadata, converters, domain calculations, product/UX, dependency/runtime, visual-baseline, or performance-budget changes.
 
-## Implemented Metadata D Tranche
+## Batch 35 Closeout
 
-Five previously unknown-date Department of Health datasets now carry explicit authoritative Taipei downloadable-resource timestamps in both public metadata and raw fetch provenance:
+Batch 35 is merged and deployed:
 
-| Dataset | `sourceFileUpdatedAt` |
-| --- | --- |
-| `beauty-hairdressing-hygiene-certifications` | `2026-03-06T10:03:31+08:00` |
-| `optometry-institutions` | `2025-06-11T08:13:52+08:00` |
-| `public-influenza-antiviral-providers` | `2024-12-05T14:40:55+08:00` |
-| `gbs-screening-clinics` | `2025-06-09T14:05:33+08:00` |
-| `tb-contact-screening-partner-providers` | `2026-06-16T10:57:45+08:00` |
+- merge: `main@6a48dedf`;
+- PR-head Frontend CI: `35807182113` — quality + desktop + mobile passed;
+- Pages: `35807633618` — passed;
+- schema guard: passed;
+- release data-change comparison: passed;
+- semantic anomaly guard: 0 blockers / 0 warnings across 145 comparable raw-data directories;
+- production budget remained 399.63 kB raw / 115.86 kB gzip against 450 / 130 kB limits;
+- Data Trust: 117 directories / 68 dated / 49 unknown / 0 fallback.
 
-Evidence rule: use the downloadable file/resource **更新時間** only; do not substitute metadata-page edit time, collection periods, fetch time, or commit time.
+## Batch 36 Reviewed Tranche
 
-## Snapshot Applicability Evidence
+Batch 32 explicitly deferred three dated `priority_review` sources. Batch 36 checks exactly those three against the live Taipei Data Platform downloadable-resource `更新時間`:
 
-Batch 37 merged Pages run `35805442007` freshly fetched the release sources. Its data-change evidence reports all five Batch 35 candidate directories as unchanged from the checked-in snapshots.
+| Dataset | Local date | Official resource date | Result |
+| --- | --- | --- | --- |
+| `funeral-service-businesses` | 2025-06-11 10:33:01 +08:00 | 2025-06-11 10:33:01 +08:00 | No newer file |
+| `hakka-organizations` | 2025-06-12 16:16:44 +08:00 | 2025-06-12 16:16:44 +08:00 | No newer file |
+| `fixed-site-temporary-childcare` | 2025-06-13 18:36:01 +08:00 | 2025-06-13 18:36:01 +08:00 | No newer file |
 
-Release evidence artifact:
+The Hakka page's metadata-edit timestamp is later than the CSV timestamp; it is intentionally not used as freshness evidence.
 
-- ID: `10727078128`
-- SHA-256: `c16b21c5ae353f16f89a20da0a43a200266efc55eb88f7331519d87ae8f1bde2`
+## Refresh Decision
 
-Therefore the verified resource timestamps apply to the committed source bytes without a data refresh.
+**0 of 3 sources has a newer authoritative downloadable file.**
 
-## Data Trust / Freshness Delta
+Therefore:
 
-- dataset directories: 117 → 117
-- dated: 63 → **68**
-- unknown-date: 54 → **49**
-- reused-snapshot fallback: 0 → 0
+- no focused fetch is justified;
+- no converter is run;
+- no schema/release/anomaly capture sequence is needed;
+- no Data Trust metadata or deterministic audit JSON changes;
+- no source record or UI change.
 
-Deterministic `2026-09-22` audit:
+The checked-in deterministic 2026-09-22 state remains:
 
-- recent: 23 → **24**
-- review: 13 → **14**
-- priority_review: 27 → **30**
+- 117 directories;
+- 68 dated;
+- 49 unknown-date;
+- 0 fallback;
+- 24 recent / 14 review / 30 priority_review.
 
-The increase in priority-review is expected: newly known old source dates become reviewable instead of remaining unknown. Age bands remain triage only.
+Age bands remain review triage only.
 
 ## Files
 
-- Five `public/data/<dataset>/metadata.json` files
-- Five `data/raw/<dataset>/fetch-metadata.json` files
-- `public/data/data-trust-manifest.json`
-- `public/data/data-release-summary.json`
-- `public/data/data-freshness-audit.json`
-- `docs/source-date-metadata-d-2026-09-23.md`
-- state files
-
-No `source.csv` file changes are intended.
+- `docs/data-freshness-audit-c-2026-09-23.md`
+- `feature_list.json`
+- `progress.md`
+- `session-handoff.md`
 
 ## Verification Gates
 
 | Check | Status |
 | --- | --- |
-| Batch 37 final Frontend CI | Passed — run `35804989294` |
-| Batch 37 merged Pages | Passed — run `35805442007` |
-| Batch 35 checked-in deterministic evidence | Implemented — 117 / 68 / 49 / 0 and 24 / 14 / 30 |
-| Batch 35 PR-head optimized Frontend CI | Pending |
-| Batch 35 merged Pages fresh release | Pending |
+| Batch 35 corrected PR CI | Passed — run `35807182113` |
+| Batch 35 merged Pages | Passed — run `35807633618` |
+| Batch 36 official source comparisons | Complete — 0/3 newer files |
+| Batch 36 PR-head optimized Frontend CI | Pending |
+| Batch 36 merged Pages | Pending |
 
 ## Next Actions
 
-1. Open the Batch 35 PR.
-2. Require the exact PR head to pass quality + desktop + mobile Frontend CI.
+1. Open the Batch 36 PR.
+2. Require exact PR-head optimized Frontend CI.
 3. Merge only that green head.
-4. Verify the merged Pages run passes schema → data-change → anomaly guard → conversion and downstream Batch 38 fan-out.
-5. Confirm final release evidence is 117 directories / 68 dated / 49 unknown / 0 fallback.
-6. Then proceed to Batch 36 freshness audit C.
+4. Verify the merged Pages release passes.
+5. Mark Batch 36 done.
+6. Do not start Batch 40+ product/UX work unless justified by concrete evidence; future dependency migrations remain separately bounded per Batch 39.
 
 ## Preserved Contracts
 

@@ -423,8 +423,18 @@
       "dependencies": [
         "post-demo-data-quality-anomaly-guard"
       ],
+      "status": "done",
+      "evidence": "2026-09-23 Batch 35 is merged at main@6a48dedf. Corrected PR-head Frontend CI run 35807182113 passed quality plus full desktop/mobile Playwright; merged Pages run 35807633618 passed fresh fetch, schema guard, release data-change comparison, Batch 37 anomaly guard (0 blockers / 0 warnings across 145 comparable raw-data directories), conversion, build/budget, desktop/mobile E2E, and deployment. Data Trust is 117 directories / 68 dated / 49 unknown / 0 fallback; deterministic 2026-09-22 triage is 24 recent / 14 review / 30 priority_review."
+    },
+    {
+      "id": "post-demo-data-freshness-audit-c",
+      "name": "Post-demo data freshness audit C",
+      "description": "Close the three priority-review sources explicitly deferred by Batch 32 using authoritative downloadable-resource timestamps and approve refreshes only when a newer file is proven.",
+      "dependencies": [
+        "post-demo-source-date-metadata-d"
+      ],
       "status": "in_progress",
-      "evidence": "2026-09-23 Batch 35 adds authoritative resource timestamps for five previously unknown-date Department of Health datasets: beauty/hairdressing hygiene certifications, optometry institutions, public influenza antiviral providers, GBS screening clinics, and TB/IGRA screening partners. Batch 37 Pages run 35805442007 freshly fetched all five and release evidence confirms their raw directories were unchanged from the committed snapshots, so no source refresh is required. Checked-in Data Trust moves from 63 dated / 54 unknown to 68 dated / 49 unknown (117 total / 0 fallback); deterministic 2026-09-22 triage becomes 24 recent / 14 review / 30 priority_review. Exact PR-head CI and merged Pages validation remain required before marking done."
+      "evidence": "2026-09-23 Batch 36 verifies funeral-service businesses, Hakka organizations, and fixed-site temporary childcare against their live Taipei Data Platform downloadable-resource 更新時間. All three official file timestamps exactly match local source dates (2025-06-11 10:33:01, 2025-06-12 16:16:44, and 2025-06-13 18:36:01 +08:00), so 0/3 justify refresh. No source data, metadata, manifests, converters, or UI are changed. Exact PR-head CI and merged Pages validation remain required before marking done."
     }
   ]
 }

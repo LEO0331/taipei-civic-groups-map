@@ -124,17 +124,29 @@ If a later iteration is justified, a changed resource may be fetched into the te
 
 ## M3 — provenance review registry
 
-After weekly monitoring is stable, create `chore/provenance-review-registry`.
+Implemented by `chore/provenance-review-registry`.
 
-Purpose: distinguish datasets that are still unknown because they have not been reviewed from datasets that were reviewed and genuinely lack a defensible authoritative timestamp.
-
-Suggested registry:
+Registry:
 
 ```text
 data/provenance-review.json
 ```
 
-Suggested states:
+Validation/report command:
+
+```bash
+npm run data:provenance:review
+```
+
+Default report:
+
+```text
+.tmp/provenance-review-report.json
+```
+
+Purpose: distinguish datasets that are still unknown because they have not been reviewed from datasets that were reviewed and genuinely lack a defensible authoritative timestamp.
+
+Supported states:
 
 - `not_reviewed`
 - `verified`
@@ -143,6 +155,18 @@ Suggested states:
 - `api_source`
 - `source_unavailable`
 - `needs_manual_review`
+
+Registry invariants:
+
+- every current unknown-date dataset must have exactly one registry entry;
+- `not_reviewed` entries keep `lastReviewedAt: null` and carry no source date;
+- every reviewed state requires a valid `YYYY-MM-DD` review date;
+- `verified` is allowed only after Data Trust also contains the authoritative source date;
+- a retained verified history entry must match the current Data Trust source date exactly;
+- if a previously unknown dataset becomes dated, a retained registry entry must be promoted to `verified`;
+- unknown/unresolved outcomes remain valid review results and must not be converted into inferred dates.
+
+At implementation time the 49 current unknown-date datasets are initialized as `not_reviewed`. The validator is count-agnostic: later provenance work may reduce the unknown total while preserving registry consistency.
 
 The goal is not to force all unknown dates to zero. Zero fabricated dates is more important than 100% date coverage.
 

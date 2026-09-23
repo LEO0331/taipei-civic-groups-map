@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  release-prepare:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.62.1-noble
@@ -43,17 +43,35 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
       - run: npm run data:convert
-      - run: npm run typecheck
-      - run: npm test
-      - run: npm run test:e2e
-      - name: Upload Playwright failure artifacts
-        if: failure()
+      - name: Pack converted release workspace
+        run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf "$RUNNER_TEMP/release-workspace.tgz" .
+      - name: Upload converted release workspace
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: playwright-failures
-          path: test-results/
-          if-no-files-found: ignore
-          retention-days: 7
+          name: release-workspace
+          path: ${{ runner.temp }}/release-workspace.tgz
+          if-no-files-found: error
+          retention-days: 1
+
+  release-build:
+    needs: release-prepare
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
+    steps:
+      - uses: actions/download-artifact@v8.0.1
+        with:
+          name: release-workspace
+          path: ${{ runner.temp }}/release-workspace
+      - name: Restore converted release workspace
+        run: tar -xzf "$RUNNER_TEMP/release-workspace/release-workspace.tgz"
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
       - run: npm run build
       - run: npm run performance:budget
       - name: Upload data release evidence
@@ -71,8 +89,65 @@ jobs:
         with:
           path: dist
 
+  e2e-desktop:
+    needs: release-prepare
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
+    steps:
+      - uses: actions/download-artifact@v8.0.1
+        with:
+          name: release-workspace
+          path: ${{ runner.temp }}/release-workspace
+      - name: Restore converted release workspace
+        run: tar -xzf "$RUNNER_TEMP/release-workspace/release-workspace.tgz"
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:e2e -- --project=desktop
+      - name: Upload desktop Playwright failure artifacts
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: playwright-failures-desktop
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  e2e-mobile:
+    needs: release-prepare
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
+    steps:
+      - uses: actions/download-artifact@v8.0.1
+        with:
+          name: release-workspace
+          path: ${{ runner.temp }}/release-workspace
+      - name: Restore converted release workspace
+        run: tar -xzf "$RUNNER_TEMP/release-workspace/release-workspace.tgz"
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:e2e -- --project=mobile
+      - name: Upload mobile Playwright failure artifacts
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: playwright-failures-mobile
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
   deploy:
-    needs: build
+    needs:
+      - release-build
+      - e2e-desktop
+      - e2e-mobile
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -1,0 +1,103 @@
+name: Upstream Data Monitor
+
+on:
+  schedule:
+    # 09:00 Asia/Taipei (UTC+8)
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: upstream-data-monitor
+  cancel-in-progress: true
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check authoritative upstream resource metadata
+        run: npm run data:monitor:upstream
+        env:
+          NODE_OPTIONS: --dns-result-order=ipv4first
+      - name: Write monitor summary
+        if: always()
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFile, readFile } from 'node:fs/promises';
+
+          const reportPath = '.tmp/upstream-monitor-report.json';
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+          if (!summaryPath) throw new Error('GITHUB_STEP_SUMMARY is unavailable.');
+
+          let report;
+          try {
+            report = JSON.parse(await readFile(reportPath, 'utf8'));
+          } catch {
+            await appendFile(summaryPath, [
+              '# Upstream data monitor',
+              '',
+              'The monitor did not produce a report. Inspect the failed workflow step before taking any data action.',
+              '',
+            ].join('\n'));
+            process.exit(0);
+          }
+
+          const counts = report.counts ?? {};
+          const rows = [
+            ['Eligible datasets', report.eligibleDatasetCount ?? 0],
+            ['Unsupported-source skips', report.skippedUnsupportedSourceCount ?? 0],
+            ['Unchanged', counts.unchanged ?? 0],
+            ['Newer resource', counts.newer_resource ?? 0],
+            ['Resource changed', counts.resource_changed ?? 0],
+            ['Unknown date', counts.unknown_date ?? 0],
+            ['Unresolved', counts.unresolved ?? 0],
+            ['Errors', counts.error ?? 0],
+          ];
+
+          const attentionStatuses = new Set(['newer_resource', 'resource_changed', 'error']);
+          const attention = (report.entries ?? []).filter((entry) => attentionStatuses.has(entry.status));
+
+          const lines = [
+            '# Upstream data monitor',
+            '',
+            `Checked at: ${report.checkedAt ?? 'unknown'}`,
+            '',
+            '| Result | Count |',
+            '| --- | ---: |',
+            ...rows.map(([label, value]) => `| ${label} | ${value} |`),
+            '',
+            'A successful workflow is evidence collection only. It never updates source files, provenance dates, or production data.',
+            '',
+          ];
+
+          if (attention.length) {
+            lines.push('## Attention candidates', '');
+            for (const entry of attention.slice(0, 20)) {
+              lines.push(`- **${entry.id}** — ${entry.status}: ${entry.message}`);
+            }
+            if (attention.length > 20) lines.push(`- …and ${attention.length - 20} more; inspect the JSON artifact.`);
+            lines.push('');
+          } else {
+            lines.push('No newer-resource, resource-identity-change, or fetch-error candidates were detected.', '');
+          }
+
+          await appendFile(summaryPath, lines.join('\n'));
+          NODE
+      - name: Upload upstream monitor report
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: upstream-monitor-report
+          path: .tmp/upstream-monitor-report.json
+          if-no-files-found: warn
+          retention-days: 30

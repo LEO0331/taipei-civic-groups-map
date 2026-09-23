@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  verify:
+  quality:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.62.1-noble
@@ -27,12 +27,45 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run performance:budget
-      - run: npm run test:e2e
-      - name: Upload Playwright failure artifacts
+
+  e2e-desktop:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:e2e -- --project=desktop
+      - name: Upload desktop Playwright failure artifacts
         if: failure()
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: playwright-failures
+          name: playwright-failures-desktop
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  e2e-mobile:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:e2e -- --project=mobile
+      - name: Upload mobile Playwright failure artifacts
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: playwright-failures-mobile
           path: test-results/
           if-no-files-found: ignore
           retention-days: 7

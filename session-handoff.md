@@ -53,18 +53,17 @@ Dataset-specific ID uniqueness, required-field, null-rate, coordinate, and domai
 | Batch 39 | Complete | merged `main@93c6ef47`; Pages run 35803359072 green |
 | Batch 37 focused design/tests | Implemented | stable/empty/unreadable/missing/collapse/spike/small/rolling cases covered |
 | Local clone verification | Unavailable | execution container could not resolve github.com |
-| Batch 37 PR-head Frontend CI | Pending | authoritative compile/unit/build/performance/desktop/mobile gate |
+| Batch 37 implementation Frontend CI | Passed | PR #54 run 35804423617 on `6eacd662`: 173/173 unit; build/budget green; desktop 76/76; mobile 77/77 |
 | Batch 37 merged Pages | Pending | must execute live fetch + anomaly gate + conversion + Batch 38 fan-out |
 | Production URL | Deployed baseline | https://leo0331.github.io/taipei-civic-groups-map/ |
 
 ## Next Actions
 
-1. Open the Batch 37 PR from the current branch.
-2. Require the exact PR head to pass optimized Frontend CI.
-3. Merge only that green head.
-4. Verify the merged Pages run succeeds through `data:quality:check`.
-5. Confirm `data-quality-anomaly-report.json` is included in release evidence.
-6. Only then mark Batch 37 done and proceed to Batch 35 (Source-date Metadata D).
+1. Require the final documentation/evidence head of PR #54 to repeat optimized Frontend CI successfully.
+2. Merge only that exact green head.
+3. Verify the merged Pages run succeeds through `data:quality:check`.
+4. Confirm `data-quality-anomaly-report.json` is included in release evidence.
+5. Only then mark Batch 37 done and proceed to Batch 35 (Source-date Metadata D).
 
 ## Preserved Contracts
 

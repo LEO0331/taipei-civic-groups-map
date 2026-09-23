@@ -414,7 +414,7 @@
         "post-demo-ci-pages-runtime-optimization"
       ],
       "status": "in_progress",
-      "evidence": "2026-09-23 Batch 37 adds `npm run data:quality:check`, reusing the exact Batch 30 pre-fetch release baseline. Hard blockers are limited to disappearance of previously countable datasets, newly unreadable stable source row counts, loss of all countable source files, and previously populated datasets becoming empty. Row-count collapse to <=50% or spike to >=200% is warning-only and only applies from a >=20-row baseline. Pages runs the guard after schema/data-change checks and before conversion; successful release evidence includes `data-quality-anomaly-report.json`, while blocker failures upload a dedicated artifact. Focused unit coverage is included. Exact PR-head CI and merged Pages validation remain required before marking done."
+      "evidence": "2026-09-23 Batch 37 adds `npm run data:quality:check`, reusing the exact Batch 30 pre-fetch release baseline. Hard blockers are limited to disappearance of previously countable datasets, newly unreadable stable source row counts, loss of all countable source files, and previously populated datasets becoming empty. Row-count collapse to <=50% or spike to >=200% is warning-only and only applies from a >=20-row baseline. Pages runs the guard after schema/data-change checks and before conversion; successful release evidence includes `data-quality-anomaly-report.json`, while blocker failures upload a dedicated artifact. PR #54 implementation head `6eacd662` passed Frontend CI run `35804423617`: 173/173 unit tests, production build and 450/130 kB budget, desktop 76/76, mobile 77/77. Final evidence-only head and merged Pages validation remain required before marking done."
     }
   ]
 }

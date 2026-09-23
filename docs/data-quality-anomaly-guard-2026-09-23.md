@@ -123,11 +123,16 @@ Batch 37 changes no:
 
 ## Verification status
 
-Implementation is complete on `postdemo/37-data-quality-anomaly-guard`.
+PR #54 Frontend CI run `35804423617` passed on implementation head `6eacd6623d22223389cda7fa50ebf8ee77fc4403`:
 
-Required before merge:
+- typecheck passed;
+- **173/173 unit tests** passed, including the eight Batch 37 focused cases;
+- production build passed;
+- production entry remained **399.63 kB raw / 115.86 kB independent gzip** within the 450/130 kB budget;
+- desktop Playwright passed **76/76** in 3.4m;
+- mobile Playwright passed **77/77** in 5.0m.
 
-- optimized Frontend CI must pass on the exact PR head;
-- after merge, Pages must pass the live pre-fetch/fetch/schema/data-change/anomaly/conversion boundary and all Batch 38 downstream verification jobs;
-- the merged release evidence must contain the anomaly report.
+The final documentation/evidence head must repeat optimized Frontend CI before merge.
+
+After merge, Pages must still pass the live pre-fetch/fetch/schema/data-change/anomaly/conversion boundary and all Batch 38 downstream verification jobs, and the release evidence artifact must contain `data-quality-anomaly-report.json`.
 

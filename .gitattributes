@@ -1,0 +1,5 @@
+# Original acquisition bytes and content-addressed snapshots must survive Git checkout unchanged.
+data/raw/senior-care-policy/** -text
+public/policy/senior-care-policy/** -text
+data/raw/senior-care-policy/*.html binary
+data/raw/senior-care-policy/*.pdf binary

@@ -1,0 +1,141 @@
+{
+  "verified": true,
+  "method": "Independent rendered-page visual comparison against table extraction; PDF controls are source-edition-bound",
+  "sourceHashes": {
+    "A": "26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2",
+    "B": "c66d04fd36a5f4293e86769a5a1c02b02f746f73b6581b8e1357524fe019e3a7",
+    "C": "2e598f8d48b46a9b832dd3a661f900badb33f0ef79cc84ada48893af369b5336"
+  },
+  "parserVersion": "pdfplumber-0.11.9/table-lines-v1",
+  "controls": {
+    "A": {
+      "pageBoundaries": [
+        [
+          1,
+          36
+        ],
+        [
+          37,
+          74
+        ],
+        [
+          75,
+          112
+        ],
+        [
+          113,
+          149
+        ],
+        [
+          150,
+          187
+        ],
+        [
+          188,
+          225
+        ],
+        [
+          226,
+          262
+        ],
+        [
+          263,
+          298
+        ],
+        [
+          299,
+          335
+        ],
+        [
+          336,
+          373
+        ],
+        [
+          374,
+          412
+        ],
+        [
+          413,
+          451
+        ],
+        [
+          452,
+          489
+        ],
+        [
+          490,
+          520
+        ]
+      ],
+      "districtTransitionSerials": [
+        1,
+        49,
+        80,
+        145,
+        189,
+        220,
+        253,
+        307,
+        361,
+        400,
+        451,
+        477,
+        515,
+        516,
+        517,
+        519
+      ],
+      "multilineSerials": [
+        1,
+        14,
+        17,
+        35
+      ],
+      "first": 1,
+      "last": 520
+    },
+    "B": {
+      "pageBoundaries": [
+        [
+          1,
+          48
+        ],
+        [
+          49,
+          88
+        ]
+      ],
+      "districtTransitionSerials": [
+        1,
+        17,
+        22,
+        33,
+        41,
+        47,
+        59,
+        65,
+        71,
+        75,
+        80,
+        83
+      ],
+      "crossPageSpan": {
+        "district": "內湖區",
+        "serials": [
+          47,
+          58
+        ],
+        "visibleLabelPage": 2
+      },
+      "unicodeControl": {
+        "serial": 69,
+        "rawVillage": "㇐德里",
+        "visuallyRead": "一德里"
+      },
+      "first": 1,
+      "last": 88
+    }
+  },
+  "privacy": "Counts and phones remain only in original restricted-purpose raw PDFs; not emitted in extracted JSON",
+  "extractedSha256": "01849f9d64735139d5807e30631e9d73089113c56b842dbc62c3b8cc133406c6"
+}

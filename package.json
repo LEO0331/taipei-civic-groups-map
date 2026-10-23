@@ -295,7 +295,11 @@
     "data:schema:check": "tsx scripts/sourceSchemaGuard.ts --check",
     "data:release:capture": "tsx scripts/buildDataChangeSummary.ts --capture",
     "data:release:changes": "tsx scripts/buildDataChangeSummary.ts --compare",
-    "data:quality:check": "tsx scripts/dataQualityAnomalyGuard.ts --check"
+    "data:quality:check": "tsx scripts/dataQualityAnomalyGuard.ts --check",
+    "data:fetch:senior-care-policy": "tsx scripts/fetchSeniorCarePolicySources.ts",
+    "data:audit:senior-care-policy": "tsx scripts/auditSeniorCarePolicySources.ts",
+    "data:build:senior-care-policy": "tsx scripts/buildSeniorCarePolicySnapshot.ts",
+    "data:verify:senior-care-policy": "tsx scripts/verifySeniorCarePolicy.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

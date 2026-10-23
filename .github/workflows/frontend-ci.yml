@@ -23,6 +23,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run data:audit:senior-care-policy
+      - run: npm run data:verify:senior-care-policy
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
@@ -69,3 +71,14 @@ jobs:
           path: test-results/
           if-no-files-found: ignore
           retention-days: 7
+
+  policy-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Verify pinned official PDF extraction
+        run: |
+          python3 -m venv "$RUNNER_TEMP/policy-pdf"
+          "$RUNNER_TEMP/policy-pdf/bin/python" -m pip install --disable-pip-version-check -r scripts/senior-care-policy-requirements.txt
+          "$RUNNER_TEMP/policy-pdf/bin/python" scripts/seniorCarePolicyPdf.test.py
+          "$RUNNER_TEMP/policy-pdf/bin/python" scripts/seniorCarePolicyPdf.py

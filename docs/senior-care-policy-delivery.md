@@ -82,7 +82,7 @@ Policy evidence is outside `public/data`, so the historical 117-directory Data T
 - `npm run performance:budget`: 400.12 kB raw / 116.05 kB independent gzip, below unchanged 450 / 130 kB limits.
 - Policy lazy chunk: approximately 27 kB raw / 10.4 kB Vite gzip; policy CSS 1.67 / 0.63 kB. Main CSS 54.31 / 14.82 kB.
 - Snapshot rebuild and exact-file SHA verification: passed; all 5/10/all scenarios and privacy assertions passed.
-- Python: 11 parser tests and deterministic offline re-extraction passed.
+- Python: 20 parser/acquisition tests and deterministic offline re-extraction passed (the initial implementation CI had 11; the expanded staging boundary cases are included in the final PR checks).
 - Additional static analysis: application noUnusedLocals/noUnusedParameters passes; applying those optional flags to all legacy scripts reports nine existing unused declarations in untouched converters. No new policy diagnostic was reported; normal project typecheck passes.
 - Policy Playwright: 24 passes, both languages × 320/390/768/1024/1440px in desktop/mobile projects plus retry, corrupted bytes, export and empty-state checks; no page/console errors or government/PDF requests in successful policy flows.
 - Full local Playwright attempt: 165 passed / 1 expected skip / 12 Windows missing-platform-baseline failures. Existing twelve Linux baselines and thresholds are unchanged. Linux implementation CI [40000606560](https://github.com/LEO0331/taipei-civic-groups-map/actions/runs/40000606560) passed for `42f90e0cb9edbcfde63de89c0379edecc5a05635`: 177 browser passes / 1 expected skip / 0 failures, including all twelve original canonical screenshots. The latest exact-head checks remain visible on PR #66.
@@ -124,3 +124,9 @@ Source E CSV SHA/byte size explicitly normalize retained repository CRLF/LF text
 ## Final review clarifications
 
 A final read-only review identified and resolved a cross-platform E provenance issue: canonical Git LF bytes are verified independently against the committed blob, while acquired originals remain exact bytes. The final category label also makes its text-filter semantics explicit; functional care-point text remains included without certifying an ordinary programme type or eligibility. No candidate IDs, classifications, counts, tiers or source bytes changed during this wording clarification. Fourteen focused policy tests and 24 responsive policy browser checks pass.
+
+## Newer-source acquisition follow-up
+
+Linux follow-up `4e6501d` passed all four jobs in [run40002190989](https://github.com/LEO0331/taipei-civic-groups-map/actions/runs/40002190989), again including 177 browser passes / one expected skip and the twelve original snapshots. A final acquisition-only review then expanded the offline Python suite to 20 tests: latest clearly dated official attachment selection, retained-old/new coexistence, ambiguous or unparseable editions, bounded downloads and stage-only provenance. Label periods and verified PDF-header periods are separate fields. Changed PDFs remain staged with their actual hashes and admission diagnostics; accepted sources and snapshot f3dabc remain unchanged. The latest exact-head run is linked on PR #66.
+
+The accepted E association context is pinned. An intentional E source/record refresh requires explicit policy-context rebuild/review before release verification can pass; it is not silently relabelled as the August PDF edition.

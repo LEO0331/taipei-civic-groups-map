@@ -3,6 +3,9 @@ Requires pdfplumber==0.11.9 (bundled Codex runtime). Refresh stages only.
 """
 from pathlib import Path
 import argparse, hashlib, html, json, os, re, tempfile, urllib.request
+from datetime import datetime, timezone
+from html.parser import HTMLParser
+from urllib.parse import urlsplit
 import pdfplumber
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,24 +84,100 @@ def build():
     require(villages[68]['village']=='㇐德里','B independently reviewed glyph changed')
     return {'sites':sites,'villages':villages,'sources':manifest}
 
+class AttachmentLinks(HTMLParser):
+    def __init__(self):
+        super().__init__();self.links=[]
+
+    def handle_starttag(self, tag, attrs):
+        if tag.lower()=='a':
+            attrs=dict(attrs)
+            self.links.append((attrs.get('href',''),attrs.get('title','')))
+
+
+def select_latest_attachment(page_text, key):
+    """Choose one clearly dated official PDF; ambiguous evidence fails closed."""
+    parser=AttachmentLinks();parser.feed(page_text)
+    candidates={}
+    for url,label in parser.links:
+        title=label.replace('㇐','一')
+        if not ('社區照顧關懷據點' in title and '一覽表' in title
+                and 'pdf' in title.lower() and ('尚未' in title)==(key=='B')):
+            continue
+        edition_title=re.split(r'[（(]\s*pdf\b',title,flags=re.IGNORECASE)[0]
+        dates=re.findall(r'(?<!\d)(\d{2,3})[.．](\d{1,2})(?!\d)',edition_title)
+        require(len(dates)==1,'Unparseable relevant attachment edition: '+label)
+        year,month=map(int,dates[0])
+        require(year>0 and 1<=month<=12,'Invalid relevant attachment edition: '+label)
+        require(url.startswith('https://www-ws.gov.taipei/Download.ashx?'),'Unexpected attachment host')
+        candidates[(url,label)]={'attachmentUrl':url,'observedLabel':label,
+                                 'observedEdition':f'{year:03d}.{month:02d}',
+                                 'attachmentLabelPeriod':f'{year+1911:04d}-{month:02d}',
+                                 'editionEvidence':'official attachment label only; visible document header requires verification','editionOrder':(year,month)}
+    require(candidates,'No clearly dated relevant PDF attachment')
+    latest=max(item['editionOrder'] for item in candidates.values())
+    matches=[item for item in candidates.values() if item['editionOrder']==latest]
+    require(len(matches)==1,'Ambiguous same-edition attachment ties require admission review')
+    return {key:value for key,value in matches[0].items() if key!='editionOrder'}
+
+
+def fetch_bounded(url, limit, content_type=None):
+    with urllib.request.urlopen(url,timeout=30) as response:
+        original=urlsplit(url);final=urlsplit(response.url)
+        require(final.scheme=='https' and final.netloc==original.netloc,'Unexpected redirect host')
+        if content_type:
+            require(response.headers.get_content_type()==content_type,'Unexpected attachment content type')
+        data=response.read(limit+1)
+        require(len(data)<=limit,'Response size limit exceeded')
+        return data,response.headers.get_content_type()
+
+
 def stage_refresh():
-    # Bounded staging only: accepted originals/pointer are never overwritten by network refresh.
+    # Network evidence and diagnostics stay staged; accepted bytes are never promoted.
     stage=Path(tempfile.mkdtemp(prefix='policy-refresh-',dir=RAW))
-    for key,url in PAGES.items():
-        with urllib.request.urlopen(url,timeout=30) as response:
-            data=response.read(5_000_001);require(len(data)<=5_000_000,'HTML size limit');require(response.url.startswith(url.split('/')[0]+'//'+url.split('/')[2]+'/'),'Unexpected redirect host')
-        (stage/(key+'-page.html')).write_bytes(data)
-        if key!='C':
-            links=re.findall(r'<a\b[^>]*href="([^"]+)"[^>]*title="([^"]+)"',data.decode('utf-8'))
-            matches=[html.unescape(u) for u,title in links if '115.08(pdf' in title and '社區照顧關懷據點' in title and ('尚未' in title)==(key=='B')]
-            require(len(matches)==1,'Changed/ambiguous edition requires manual admission')
-            url=matches[0];require(url.startswith('https://www-ws.gov.taipei/Download.ashx?'),'Unexpected attachment host')
-            with urllib.request.urlopen(url,timeout=30) as response:
-                require(response.url.startswith('https://www-ws.gov.taipei/'),'Unexpected attachment redirect host')
-                require(response.headers.get_content_type()=='application/pdf','Unexpected attachment content type')
-                pdf=response.read(10_000_001)
-            require(len(pdf)<=10_000_000 and pdf.startswith(b'%PDF-'),'Invalid/oversized PDF');(stage/(key+'.pdf')).write_bytes(pdf);extract_pdf(stage/(key+'.pdf'),key)
-    print('Staged for independent admission review: '+str(stage))
+    print('Staged for independent admission review: '+str(stage),flush=True)
+    accepted={item['key']:item for item in json.loads((RAW/'manifest.json').read_text('utf-8'))}
+    metadata={'status':'staging','sources':[],'diagnostics':[]}
+    try:
+        for key,page_url in PAGES.items():
+            data,page_type=fetch_bounded(page_url,5_000_000)
+            page_file=key+'-page.html';(stage/page_file).write_bytes(data)
+            entry={'key':key,'pageUrl':page_url,'pageFilename':page_file,
+                   'pageSha256':hashlib.sha256(data).hexdigest(),'pageByteSize':len(data),
+                   'pageContentType':page_type,'acquiredAt':datetime.now(timezone.utc).isoformat()}
+            metadata['sources'].append(entry)
+            if key!='C':
+                entry.update(select_latest_attachment(data.decode('utf-8'),key))
+                pdf,content_type=fetch_bounded(entry['attachmentUrl'],10_000_000,'application/pdf')
+                filename=key+'.pdf';(stage/filename).write_bytes(pdf)
+                entry.update({'filename':filename,'sha256':hashlib.sha256(pdf).hexdigest(),
+                              'byteSize':len(pdf),'contentType':content_type,'documentHeaderPreparationDate':None})
+                require(pdf.startswith(b'%PDF-'),'Invalid PDF signature')
+                try:
+                    extract_pdf(stage/filename,key)
+                    entry['extractionStatus']='accepted-edition-controls-passed'
+                    # extract_pdf enforces this exact pinned visible header, independently of the attachment label.
+                    entry['documentHeaderPreparationDate']='2026-08'
+                    if entry['attachmentLabelPeriod']!=entry['documentHeaderPreparationDate']:
+                        metadata['diagnostics'].append({'key':key,'code':'label-header-period-mismatch','message':'Attachment label period differs from the verified pinned document header.'})
+                except Exception as error:
+                    entry['extractionStatus']='requires-new-admission'
+                    entry['diagnostic']=str(error)
+                    metadata['diagnostics'].append({'key':key,'code':'requires-new-admission','message':str(error)})
+            else:
+                entry.update({'filename':page_file,'sha256':entry['pageSha256'],
+                              'byteSize':len(data),'contentType':page_type})
+            entry['acceptedSha256']=accepted[key]['sha256']
+            entry['matchesAcceptedHash']=entry['sha256']==entry['acceptedSha256']
+            entry['admissionStatus']='staged-only'
+        metadata['status']='requires-independent-admission'
+    except Exception as error:
+        metadata['status']='failed-staging'
+        metadata['diagnostics'].append({'code':'staging-failed','message':str(error)})
+        raise
+    finally:
+        atomic(stage/'manifest.json',encode(metadata))
+    print('Staging status: '+metadata['status']+'; inspect '+str(stage/'manifest.json'),flush=True)
+    return stage
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--extract',action='store_true');parser.add_argument('--refresh',action='store_true');args=parser.parse_args()

@@ -22,6 +22,8 @@ The next action is human review. Do not merge, deploy, refresh unrelated sources
 
 ## Reproduction
 
+The final acquisition follow-up has 20 offline Python tests and stages the latest clearly dated official attachment with label/header dates separated, provenance and diagnostics. Staging never promotes data. Accepted snapshot and selection IDs remain unchanged. Intentional E source updates require explicit context rebuild/review.
+
 Run `npm ci`, focused policy fetch/audit/build/verify (default offline), `npm run typecheck`, `npm test`, `npm run build`, `npm run performance:budget`, `npm run test:e2e`, `git diff --check`. Python extraction uses `scripts/senior-care-policy-requirements.txt`; set `SENIOR_CARE_POLICY_PYTHON` if needed. `--refresh` only stages; changed editions need renewed independent admission.
 
 Windows tests require installed Chrome or CI-mode pinned Chromium. The local Windows full-suite attempt passed 165 cases with one expected skip; twelve canonical Linux cases could not use Windows baselines. Their authoritative Linux CI comparison subsequently passed. Do not create or commit Windows replacements. The original 450/130 kB entry budget, Node 22 CI and Playwright 1.62.1 renderer remain unchanged. Default policy verification must not invoke global data:fetch.

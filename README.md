@@ -9,7 +9,7 @@ A bilingual guide to selected Taipei public records. Browse source-recorded dire
 
 ## Explore public records with context
 
-- Search a catalogue of 156 routes/views across health, care, work, culture, city services, animals, and comparison topics.
+- Search a catalogue of 157 routes/views across health, care, work, culture, city services, animals, and comparison topics.
 - Filter each directory using its source-recorded fields, inspect source details, export filtered CSV data, and open an external address lookup where the source provides one.
 - Share a dataset and language through the URL; language, Back/Forward navigation, and keyboard tabs work across desktop and mobile.
 - See a consistent Data Trust panel that explains the local snapshot, its available source date, and any refresh fallback.
@@ -20,7 +20,7 @@ The interface uses six purposeful presentation families—healthcare standard, r
 
 This dashboard presents generated local snapshots of public records. A listed organization, institution, address, phone number, or historical administrative record does **not** establish current availability, eligibility, appointment capacity, prices, quality, safety, legal status, compliance, suitability, or a recommendation.
 
-Checked-in Data Trust evidence now tracks 117 static directories: 63 have a readable source date, 54 remain unknown, and none is marked as a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. The final Cycle 3 release verification is still pending; see the [Cycle 3 verification note](docs/post-demo-cycle-3-verification-2026-09-22.md). Opening an external map lookup shares the selected address with that map provider.
+Checked-in Data Trust evidence now tracks 117 static directories: 68 have a readable source date, 49 remain unknown, and none is marked as a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. The final Cycle 3 release verification is still pending; see the [Cycle 3 verification note](docs/post-demo-cycle-3-verification-2026-09-22.md). Opening an external map lookup shares the selected address with that map provider.
 
 ## Current demo baseline
 
@@ -59,3 +59,18 @@ New datasets need one catalogue category, conservative search terms, a deliberat
 - [UI family classification](docs/ui-family-classification.md)
 - [Data freshness audit](docs/data-freshness-audit-2026-09-22.md)
 - [Product and design direction](doc/臺北公共資料儀表板－設計決策與演進方向.md)
+
+## Policy #10: senior community-care evidence review
+
+Open the care catalogue's **Senior Community Care Policy 10** view, or use `?dataset=seniorCarePolicy&lang=en`. It compares independently verified August 2026 official PDFs (520 site rows / 88 officially unbuilt village rows) with the separate retained 510-row CSV. Modes A/B provide explainable administrative review scenarios; Mode C remains unavailable without operational/outcome evidence. Elderly-alone counts, phone numbers and full addresses are excluded from public policy outputs.
+
+The multi-edition policy manifest lives separately at `public/policy/senior-care-policy/`; it does not change the existing 117-directory Data Trust/freshness universe. Default commands are offline:
+
+```bash
+npm run data:fetch:senior-care-policy
+npm run data:audit:senior-care-policy
+npm run data:build:senior-care-policy
+npm run data:verify:senior-care-policy
+```
+
+Explicit `data:fetch:senior-care-policy -- --refresh` stages sources without promoting them. PDF re-extraction requires Python and `pip install -r scripts/senior-care-policy-requirements.txt`; run `python scripts/seniorCarePolicyPdf.py` and `python scripts/seniorCarePolicyPdf.test.py`. New editions require independent admission review. See the [delivery evidence](docs/senior-care-policy-delivery.md), [methodology](docs/senior-care-policy-methodology.md) and [Traditional Chinese decision MVP](docs/senior-care-policy-decision-mvp.zh-TW.md).

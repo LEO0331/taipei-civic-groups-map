@@ -1,0 +1,111 @@
+[
+  {
+    "key": "A",
+    "title": "115年度臺北市社區照顧關懷據點一覽表",
+    "publisher": "臺北市政府社會局",
+    "pageUrl": "https://dosw.gov.taipei/News_Content.aspx?n=222C9779823FA161&s=0CE286F6AA2F930F&sms=E2A8B6B533500CB0",
+    "attachmentUrl": "https://www-ws.gov.taipei/Download.ashx?u=LzAwMS9VcGxvYWQvMzU4L3JlbGZpbGUvMTc5MzkvMzE3MTAxMi8zMGIxZTE5Mi1kNTY0LTQ1NTAtYjA5NS1mZDdkODVkZDk5YWIucGRm&n=MTE15bm06Ie65YyX5biC56S%2b5Y2A54Wn6aGn6Zec5oe35pOa6bue44eQ6Ka96KGoMTE1LjA4LnBkZg%3d%3d&icon=..pdf",
+    "preparationDate": "2026-08",
+    "sourceUpdateDate": null,
+    "pageMetadataUpdateDate": "2026-09-10T14:54:00+08:00",
+    "effectiveDate": null,
+    "acquiredAt": "2026-10-23T13:21:31.049788+00:00",
+    "filename": "A.pdf",
+    "pageFilename": "A-page.html",
+    "format": "pdf",
+    "contentType": "application/pdf",
+    "byteSize": 467284,
+    "sha256": "26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2",
+    "pageSha256": "8e3f4663ce6ca1a922e185a02761b6a1fa22efbb4524d043a619b5137cb28c68",
+    "pageCount": 14,
+    "tableSchema": [
+      "序號",
+      "行政區",
+      "里別",
+      "據點名稱",
+      "據點類型",
+      "據點地址",
+      "聯絡電話"
+    ],
+    "parsedRecordCount": 520,
+    "licensingConditions": "Official government website open-data notice applies where rights are held by publisher; third-party rights remain excluded. Preserve attribution and source integrity. Legal HTML retained as public regulatory context.",
+    "licenseUrl": "https://dosw.gov.taipei/cp.aspx?Create=1&n=8E5BB52262D3A54D&s=B1A7C295503FEBEA&state=F5D336F102ACBC68",
+    "parserVersion": "pdfplumber-0.11.9/table-lines-v1",
+    "admissionStatus": "accepted",
+    "warnings": [
+      "PDF metadata title appears as legacy XLSX encoding; visible header governs edition",
+      "Previously reported 115.04 URL mismatch not observed: current attachment label and encoded filename both 115.08"
+    ],
+    "exclusions": [
+      "Telephone fields omitted from extracted.json"
+    ]
+  },
+  {
+    "key": "B",
+    "title": "115年度臺北市社區照顧關懷據點尚未布建里別一覽表",
+    "publisher": "臺北市政府社會局",
+    "pageUrl": "https://dosw.gov.taipei/News_Content.aspx?n=63FBD779B8854D69&s=207B5C83CE31EEAE",
+    "attachmentUrl": "https://www-ws.gov.taipei/Download.ashx?u=LzAwMS9VcGxvYWQvMzU4L3JlbGZpbGUvMTc5MzcvNzk2MzM4NS84MzQ3M2UzMi0yMWZjLTRkYTAtOWM4Ny05N2Y2NGQyYTQ4NjkucGRm&n=MTE15bm05bqm6Ie65YyX5biC56S%2b5Y2A54Wn6aGn6Zec5oe35pOa6bue5bCa5pyq5biD5bu66YeM5Yil5LiA6Ka96KGoMTE1LjA4LnBkZg%3d%3d&icon=..pdf",
+    "preparationDate": "2026-08",
+    "sourceUpdateDate": null,
+    "pageMetadataUpdateDate": "2026-09-10T14:50:00+08:00",
+    "effectiveDate": null,
+    "acquiredAt": "2026-10-23T13:21:31.461064+00:00",
+    "filename": "B.pdf",
+    "pageFilename": "B-page.html",
+    "format": "pdf",
+    "contentType": "application/pdf",
+    "byteSize": 104821,
+    "sha256": "c66d04fd36a5f4293e86769a5a1c02b02f746f73b6581b8e1357524fe019e3a7",
+    "pageSha256": "09b3671e0978d519f91af7bfcac0b56587386b8c9d2499de9e27848c7a1e3fc5",
+    "pageCount": 2,
+    "tableSchema": [
+      "序號",
+      "行政區",
+      "里別",
+      "里內獨居老人數"
+    ],
+    "parsedRecordCount": 88,
+    "licensingConditions": "Official government website open-data notice applies where rights are held by publisher; third-party rights remain excluded. Preserve attribution and source integrity. Legal HTML retained as public regulatory context.",
+    "licenseUrl": "https://dosw.gov.taipei/cp.aspx?Create=1&n=8E5BB52262D3A54D&s=B1A7C295503FEBEA&state=F5D336F102ACBC68",
+    "parserVersion": "pdfplumber-0.11.9/table-lines-v1",
+    "admissionStatus": "accepted",
+    "warnings": [
+      "Merged 內湖區 cell crosses page break; independently verified geometry and label",
+      "Source stroke glyph ㇐德里 preserved"
+    ],
+    "exclusions": [
+      "里內獨居老人數 omitted from extracted.json, public snapshot and standard exports"
+    ]
+  },
+  {
+    "key": "C",
+    "title": "臺北市政府社會局補助辦理社區照顧關懷據點實施計畫",
+    "publisher": "臺北市法規查詢系統",
+    "pageUrl": "https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL078396",
+    "attachmentUrl": null,
+    "preparationDate": null,
+    "sourceUpdateDate": "2025-12-17",
+    "pageMetadataUpdateDate": null,
+    "effectiveDate": "2026-01-01",
+    "acquiredAt": "2026-10-23T13:21:03.946494+00:00",
+    "filename": "C-page.html",
+    "pageFilename": "C-page.html",
+    "format": "html",
+    "contentType": "text/html",
+    "byteSize": 53742,
+    "sha256": "2e598f8d48b46a9b832dd3a661f900badb33f0ef79cc84ada48893af369b5336",
+    "pageSha256": "2e598f8d48b46a9b832dd3a661f900badb33f0ef79cc84ada48893af369b5336",
+    "pageCount": null,
+    "tableSchema": [],
+    "parsedRecordCount": null,
+    "licensingConditions": "Official government website open-data notice applies where rights are held by publisher; third-party rights remain excluded. Preserve attribution and source integrity. Legal HTML retained as public regulatory context.",
+    "licenseUrl": "https://dosw.gov.taipei/cp.aspx?Create=1&n=8E5BB52262D3A54D&s=B1A7C295503FEBEA&state=F5D336F102ACBC68",
+    "parserVersion": "pdfplumber-0.11.9/table-lines-v1",
+    "admissionStatus": "accepted",
+    "warnings": [
+      "Regulatory context only; no statutory eligibility determination"
+    ],
+    "exclusions": []
+  }
+]

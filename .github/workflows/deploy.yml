@@ -52,6 +52,8 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
       - run: npm run data:convert
+      - run: npm run data:audit:senior-care-policy
+      - run: npm run data:verify:senior-care-policy
       - name: Pack converted release workspace
         run: tar --exclude=.git --exclude=node_modules --exclude=dist -czf "$RUNNER_TEMP/release-workspace.tgz" .
       - name: Upload converted release workspace

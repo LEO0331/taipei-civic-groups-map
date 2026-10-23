@@ -86,6 +86,7 @@ const OptometryInstitutionsModule = lazy(() => import('./OptometryInstitutionsMo
 const GeneralChineseMedicineInstitutionsModule = lazy(() => import('./GeneralChineseMedicineInstitutionsModule'));
 const AlternativeServiceReserveStatisticsModule = lazy(() => import('./AlternativeServiceReserveStatisticsModule'));
 const MedicalLaboratoriesModule = lazy(() => import('./MedicalLaboratoriesModule'));
+const SeniorCarePolicyDashboard = lazy(() => import('./SeniorCarePolicyDashboard'));
 const CommunityCareServiceSitesModule = lazy(() => import('./CommunityCareServiceSitesModule'));
 const SeniorCareCapacityAndOccupancyModule = lazy(() => import('./SeniorCareCapacityAndOccupancyModule'));
 const DomesticEmploymentAgencyEvaluationsModule = lazy(() => import('./DomesticEmploymentAgencyEvaluationsModule'));
@@ -982,6 +983,7 @@ export default function App() {
   tabs.splice(13, 0, ['generalChineseMedicineInstitutions', language === 'zh' ? '中醫一般科醫療機構' : 'General Chinese Medicine Institutions']);
   tabs.splice(14, 0, ['alternativeServiceReserveStatistics', language === 'zh' ? '替代役備役列管人數分析統計' : 'Alternative Service Reserve Statistics']);
   tabs.splice(15, 0, ['medicalLaboratories', language === 'zh' ? '臺北市醫事檢驗所' : 'Taipei Medical Laboratories']);
+  tabs.push(['seniorCarePolicy', language === 'zh' ? '高齡社區照顧政策查核（Policy 10）' : 'Senior Community Care Policy 10']);
   tabs.splice(16, 0, ['communityCareServiceSites', language === 'zh' ? '社區照顧關懷據點' : 'Community Care Service Sites']);
   tabs.splice(17, 0, ['seniorCareCapacityAndOccupancy', language === 'zh' ? '老人照顧容量與實際進住統計' : 'Senior Care Capacity and Occupancy']);
   tabs.splice(18, 0, ['domesticEmploymentAgencyEvaluations', language === 'zh' ? '私立就業服務機構評鑑成績' : 'Domestic Employment Agency Evaluation Results']);
@@ -1054,7 +1056,7 @@ export default function App() {
       </nav>
     </header>
     <main data-active-ui-family={uiFamilyForDataset(tab)} data-active-dataset={tab}>
-      <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} activeDatasetLabel={activeDatasetLabel} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />
+      {tab !== 'seniorCarePolicy' && <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} activeDatasetLabel={activeDatasetLabel} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />}
       {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
       <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />
       <Suspense fallback={<DirectoryModuleLoading language={language} />}>
@@ -1109,6 +1111,7 @@ export default function App() {
       {tab === 'generalChineseMedicineInstitutions' && <GeneralChineseMedicineInstitutionsModule language={language} />}
       {tab === 'alternativeServiceReserveStatistics' && <AlternativeServiceReserveStatisticsModule language={language} />}
       {tab === 'medicalLaboratories' && <MedicalLaboratoriesModule language={language} />}
+      {tab === 'seniorCarePolicy' && <SeniorCarePolicyDashboard language={language} />}
       {tab === 'communityCareServiceSites' && <CommunityCareServiceSitesModule language={language} />}
       {tab === 'seniorCareCapacityAndOccupancy' && <SeniorCareCapacityAndOccupancyModule language={language} />}
       {tab === 'domesticEmploymentAgencyEvaluations' && <DomesticEmploymentAgencyEvaluationsModule language={language} />}

@@ -2,6 +2,7 @@ import { datasetCategoryById, type CatalogueCategoryId } from './datasetCatalogu
 import { UI_FAMILIES, type UiFamily } from './uiFamilies';
 
 const explicitFamilyByDataset: Record<string, UiFamily> = {
+  seniorCarePolicy: UI_FAMILIES.recordsAnalysis,
   civic: UI_FAMILIES.locationDirectory,
   adultInfluenzaVaccineProviders: UI_FAMILIES.healthcareRichDirectory,
   influenzaVaccineProvidersChildren3Plus: UI_FAMILIES.healthcareRichDirectory,

@@ -9,7 +9,7 @@
 
 ## 有脈絡地探索公共資料
 
-- 依健康、照顧、就業、文化、城市服務、動物與比較等主題，搜尋 156 個資料路由／檢視。
+- 依健康、照顧、就業、文化、城市服務、動物與比較等主題，搜尋 157 個資料路由／檢視。
 - 使用來源欄位篩選資料、查看來源明細、匯出篩選後 CSV；來源有提供地址時，可開啟外部地址查詢。
 - 用 URL 分享資料集與語言；桌面與手機都支援語言切換、Back/Forward 與鍵盤 tabs。
 - 每個資料集都以一致的 Data Trust 面板說明本機快照、可讀取的來源日期與 refresh fallback。
@@ -20,7 +20,7 @@
 
 本儀表板呈現的是由公開資料產生的本機快照。名冊中的機構、地址、電話或歷史行政紀錄，**不**代表目前可用、符合資格、可預約、具有容量、價格、品質、安全、法律狀態、法規遵循、適合性或推薦。
 
-目前已提交的 Data Trust 證據追蹤 117 個靜態資料目錄：63 個有可讀取來源日期、54 個日期未知，且沒有標記為沿用舊快照的 fallback。未知日期會保持未知，不會推估。Cycle 3 的最終 release 驗證仍待完成；詳見 [Cycle 3 verification](docs/post-demo-cycle-3-verification-2026-09-22.md)。開啟外部地圖查詢時，選取的地址會傳送給該地圖服務商。
+目前已提交的 Data Trust 證據追蹤 117 個靜態資料目錄：68 個有可讀取來源日期、49 個日期未知，且沒有標記為沿用舊快照的 fallback。未知日期會保持未知，不會推估。Cycle 3 的最終 release 驗證仍待完成；詳見 [Cycle 3 verification](docs/post-demo-cycle-3-verification-2026-09-22.md)。開啟外部地圖查詢時，選取的地址會傳送給該地圖服務商。
 
 ## 目前 demo baseline
 
@@ -59,3 +59,18 @@ git diff --check
 - [UI family classification](docs/ui-family-classification.md)
 - [Data freshness audit](docs/data-freshness-audit-2026-09-22.md)
 - [產品與設計方向](doc/臺北公共資料儀表板－設計決策與演進方向.md)
+
+## Policy #10：高齡社區照顧行政查核
+
+在照顧目錄開啟「高齡社區照顧政策查核（Policy 10）」，或使用 `?dataset=seniorCarePolicy&lang=zh`。工具對照已獨立驗證的 115.08 官方 PDF（520 筆據點、88 筆尚未布建里別）及另外保留的 510 筆 CSV。A／B 模式產生可解釋的行政查核情境；C 模式因缺乏營運與成果證據而不可用。公開政策輸出排除獨居老人數、電話與完整地址。
+
+多版本政策清冊放在 `public/policy/senior-care-policy/`，不改變既有 117 個資料目錄的 Data Trust 與 freshness 母體。以下指令預設離線：
+
+```bash
+npm run data:fetch:senior-care-policy
+npm run data:audit:senior-care-policy
+npm run data:build:senior-care-policy
+npm run data:verify:senior-care-policy
+```
+
+只有明確指定 `data:fetch:senior-care-policy -- --refresh` 才會下載至暫存區，不自動取代已接受版本。PDF 重跑需 Python 與 `pip install -r scripts/senior-care-policy-requirements.txt`；執行 `python scripts/seniorCarePolicyPdf.py` 及 `python scripts/seniorCarePolicyPdf.test.py`。新版本須重新獨立查核。詳見[交付證據](docs/senior-care-policy-delivery.md)、[方法](docs/senior-care-policy-methodology.md)與[決策 MVP](docs/senior-care-policy-decision-mvp.zh-TW.md)。

@@ -14,16 +14,14 @@ Deliver Policy #10 in exactly one PR from `codex/senior-community-care-policy-10
 
 See `docs/senior-care-policy-delivery.md` for actual findings, source/snapshot hashes, selected IDs, scenario overlap, local checks and known environment limits. `docs/senior-care-policy-results.json` and performance JSON retain machine-readable measurements. Public evidence is under `public/policy/senior-care-policy`; original PDFs are under `data/raw/senior-care-policy`, outside browser assets.
 
-## Next concrete actions
+## Delivery and next action
 
-1. Commit the bounded implementation in reviewable logical groups with Lore trailers.
-2. Push the requested branch and open exactly one PR, target main.
-3. Attach its URL to this chat and record it in delivery/progress.
-4. Require exact-head Linux CI (including canonical screenshots and pinned Python tests), fix actionable failures, and update final evidence/state.
-5. Leave the PR open for human review; do not deploy or merge.
+PR [#66](https://github.com/LEO0331/taipei-civic-groups-map/pull/66) is open and attached. Five implementation Lore commits plus final review/evidence follow-up are retained. Linux implementation CI run `40000606560` passed all four jobs: 208 unit tests, 11 PDF tests, 177 browser passes / 1 expected skip and all twelve original canonical screenshots. The PR checks tab gives the latest exact-head status.
+
+The next action is human review. Do not merge, deploy, refresh unrelated sources or start another feature automatically. Keep this worktree for review. A future source edition requires the documented focused staging and independent admission process.
 
 ## Reproduction
 
 Run `npm ci`, focused policy fetch/audit/build/verify (default offline), `npm run typecheck`, `npm test`, `npm run build`, `npm run performance:budget`, `npm run test:e2e`, `git diff --check`. Python extraction uses `scripts/senior-care-policy-requirements.txt`; set `SENIOR_CARE_POLICY_PYTHON` if needed. `--refresh` only stages; changed editions need renewed independent admission.
 
-Windows tests require installed Chrome or CI-mode pinned Chromium. Local complete suite passed 165 functional cases and expected one skip; twelve canonical Linux screenshot baselines cannot be compared as Windows baselines. Do not create or commit Windows replacements. The original 450/130 kB entry budget, Node 22 CI and Playwright 1.62.1 renderer remain unchanged. Default policy verification must not invoke global data:fetch.
+Windows tests require installed Chrome or CI-mode pinned Chromium. The local Windows full-suite attempt passed 165 cases with one expected skip; twelve canonical Linux cases could not use Windows baselines. Their authoritative Linux CI comparison subsequently passed. Do not create or commit Windows replacements. The original 450/130 kB entry budget, Node 22 CI and Playwright 1.62.1 renderer remain unchanged. Default policy verification must not invoke global data:fetch.

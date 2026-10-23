@@ -7,7 +7,7 @@
     "bytes": 771155,
     "gzipBytes": 119539
   },
-  "meanScenarioMs": 0.3435023,
+  "meanScenarioMs": 0.3556622,
   "exports": [
     {
       "mode": "A",
@@ -330,7 +330,7 @@
     "policyLoadedInShell": false,
     "shellRequests": [
       "http://127.0.0.1:4320/taipei-civic-groups-map/?dataset=civic&lang=en",
-      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-C2s3ywDv.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-BQyUSMJL.js",
       "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-Daub1XRh.css",
       "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
       "http://127.0.0.1:4320/taipei-civic-groups-map/data/data-trust-manifest.json",
@@ -340,8 +340,8 @@
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.122.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.123.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.116.woff2",
-      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/CivicMap-CcK23J7Z.js",
-      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/TileLayer-DKesT487.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/CivicMap-C1TuQyS4.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/TileLayer-BEPpOQoa.js",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.121.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.120.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.118.woff2",
@@ -364,7 +364,7 @@
     "policyEntryRequestCount": 24,
     "entryRequests": [
       "http://127.0.0.1:4320/taipei-civic-groups-map/?dataset=seniorCarePolicy&lang=en",
-      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-C2s3ywDv.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-BQyUSMJL.js",
       "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-Daub1XRh.css",
       "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
       "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
@@ -374,8 +374,8 @@
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.121.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.122.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.123.woff2",
-      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CuFeZB3y.js",
-      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/DatasetFamilyFrame-Dk_ZU6ky.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-N9aVH0CS.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/DatasetFamilyFrame-bQyD40y0.js",
       "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CJhU8ymK.css",
       "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-groups.json",
       "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-group-summary.json",
@@ -388,11 +388,11 @@
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.115.woff2",
       "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.112.woff2"
     ],
-    "scenarioInteractionMs": 26.800000071525574,
+    "scenarioInteractionMs": 35.10000002384186,
     "errors": [],
     "resources": [
       {
-        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-C2s3ywDv.js",
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-BQyUSMJL.js",
         "encodedBodySize": 0
       },
       {
@@ -401,7 +401,7 @@
       },
       {
         "name": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
-        "encodedBodySize": 138762
+        "encodedBodySize": 138763
       },
       {
         "name": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
@@ -432,12 +432,12 @@
         "encodedBodySize": 36328
       },
       {
-        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/DatasetFamilyFrame-Dk_ZU6ky.js",
-        "encodedBodySize": 428
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-N9aVH0CS.js",
+        "encodedBodySize": 10460
       },
       {
-        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CuFeZB3y.js",
-        "encodedBodySize": 10399
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/DatasetFamilyFrame-bQyD40y0.js",
+        "encodedBodySize": 428
       },
       {
         "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CJhU8ymK.css",

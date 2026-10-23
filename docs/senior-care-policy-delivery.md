@@ -5,7 +5,7 @@ Prepared 2026-10-24 (Asia/Taipei). Analysis date 2026-10-23; source reference pe
 - Repository: LEO0331/taipei-civic-groups-map.
 - Branch: `codex/senior-community-care-policy-10`.
 - Verified base: `e3a96dfc50c90b3e772fb4e0d20f14ab0e3a697a` (origin/main fetched before implementation and again on resume).
-- PR: pending creation; target `main`. Human review only; no automatic merge or Pages deployment.
+- PR: [#66](https://github.com/LEO0331/taipei-civic-groups-map/pull/66); target `main`. Human review only; no automatic merge or Pages deployment.
 
 ## Official sources and accepted findings
 
@@ -85,11 +85,11 @@ Policy evidence is outside `public/data`, so the historical 117-directory Data T
 - Python: 11 parser tests and deterministic offline re-extraction passed.
 - Additional static analysis: application noUnusedLocals/noUnusedParameters passes; applying those optional flags to all legacy scripts reports nine existing unused declarations in untouched converters. No new policy diagnostic was reported; normal project typecheck passes.
 - Policy Playwright: 24 passes, both languages × 320/390/768/1024/1440px in desktop/mobile projects plus retry, corrupted bytes, export and empty-state checks; no page/console errors or government/PDF requests in successful policy flows.
-- Full local Playwright attempt: 165 passed / 1 expected skip / 12 Windows missing-platform-baseline failures. Existing twelve Linux baselines and thresholds are unchanged. Exact Linux PR CI remains pending and is the authoritative visual gate.
+- Full local Playwright attempt: 165 passed / 1 expected skip / 12 Windows missing-platform-baseline failures. Existing twelve Linux baselines and thresholds are unchanged. Linux implementation CI [40000606560](https://github.com/LEO0331/taipei-civic-groups-map/actions/runs/40000606560) passed for `42f90e0cb9edbcfde63de89c0379edecc5a05635`: 177 browser passes / 1 expected skip / 0 failures, including all twelve original canonical screenshots. The latest exact-head checks remain visible on PR #66.
 - Host runtime is Node 24.14.1; repository/CI remains Node 22 with Playwright exactly 1.62.1. No POSIX `init.sh` was used on PowerShell; equivalent commands ran directly.
 - Visual-verdict manual check: pass 92/100 against the existing records-analysis family reference, with intentional policy-specific grouped evidence sections. Desktop/mobile source counts, controls and vertical flow are readable; automated overflow checks passed. The existing app has no dark-theme implementation.
 
-Production local-preview measurement: 31 shell requests, 24 total requests when entering the policy view; no policy module/snapshot requested by the civic shell. Policy evidence itself is a pointer + one immutable JSON fetch. Browser capacity-change interaction: 26.8 ms; mean pure scenario calculation over 1,000 local iterations: 0.345 ms. These are informational local measurements, not user-service performance guarantees. Full request/resource evidence is retained in the performance JSON.
+Production local-preview measurement: 31 shell requests, 24 total requests when entering the policy view; no policy module/snapshot requested by the civic shell. Policy evidence itself is a pointer + one immutable JSON fetch. Browser capacity-change interaction: 35.1 ms; mean pure scenario calculation over 1,000 local iterations: 0.356 ms. These are informational local measurements, not user-service performance guarantees. Full request/resource evidence is retained in the performance JSON.
 
 | Mode | Capacity | JSON bytes | CSV bytes |
 |---|---:|---:|---:|
@@ -106,7 +106,7 @@ No elderly-alone count, household/individual identifier, phone, full address, vu
 
 Mode C remains unavailable for lack of current operation, real hours, staffing/capacity, utilization/waitlists, travel/barriers, comparable denominators and outcomes. No compatible all-village registry or geometry is admitted; no government village codes, complete citywide coverage percentage, site map or accessibility radii are invented. Documentary issues and district balancing do not measure care quality, vulnerability or unmet demand. No site approval, subsidy, care placement or individual eligibility recommendation is issued.
 
-The accepted parser is intentionally edition-bound and rejects future layout/date/schema/control changes until renewed admission. A/E associations are conservative research relationships with different editions, not certified operating-site identity. CSV repeats lineage to retain standalone row context, so all-row exports are larger than JSON. Linux PR checks and human review remain the final delivery gates.
+The accepted parser is intentionally edition-bound and rejects future layout/date/schema/control changes until renewed admission. A/E associations are conservative research relationships with different editions, not certified operating-site identity. CSV repeats lineage to retain standalone row context, so all-row exports are larger than JSON. The complete Linux implementation verification passed. Human review and an explicit merge decision remain required; latest exact-head checks are on PR #66.
 
 ## Changed files and Case Study 010 material
 
@@ -120,3 +120,7 @@ The accepted parser is intentionally edition-bound and rejects future layout/dat
 Simplifications: reuse the existing catalogue, URL/language state, family frame and local JSON pattern; no router, Node runtime dependency, GIS stack, arbitrary scoring layer or new global source date. Case Study 010 can demonstrate PDF admission, the cross-page district trap, conservative identity and typed evidence gates, explainable administrative selection, privacy exclusion and bilingual reproducibility. It cannot claim improved care access or welfare outcomes.
 
 Source E CSV SHA/byte size explicitly normalize retained repository CRLF/LF text to its canonical Git LF edition; the generated-record JSON has a separate exact-byte hash. The original acquired A/B/C bytes are never normalized. This prevents Windows/Linux checkout differences from changing policy identities while preserving all existing E files.
+
+## Final review clarifications
+
+A final read-only review identified and resolved a cross-platform E provenance issue: canonical Git LF bytes are verified independently against the committed blob, while acquired originals remain exact bytes. The final category label also makes its text-filter semantics explicit; functional care-point text remains included without certifying an ordinary programme type or eligibility. No candidate IDs, classifications, counts, tiers or source bytes changed during this wording clarification. Fourteen focused policy tests and 24 responsive policy browser checks pass.

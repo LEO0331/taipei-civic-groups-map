@@ -19,6 +19,7 @@ test('classification preserves session bands without equating them with capacity
     assert.deepEqual(classifyPolicyType('社區照顧關懷據點 10個時段'), { category: 'care-point', sessionBand: '10個時段' });
     assert.equal(classifyPolicyType('社區照顧關懷據點樂齡學堂').category, 'learning');
     assert.equal(classifyPolicyType('其他').category, 'other');
+    assert.equal(classifyPolicyType('社區照顧關懷據點功能型(老服中心)').category, 'care-point');
 });
 test('associations require one-to-one name/address/district evidence; shared venue sites remain distinct', () => {
     const a = site(1), b = site(2, { address: a.address });

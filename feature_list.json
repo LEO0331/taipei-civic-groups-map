@@ -451,8 +451,8 @@
       "dependencies": [
         "maintenance-harness"
       ],
-      "status": "in_progress",
-      "evidence": "2026-10-24: implemented 520 A rows / 88 B candidates; local type/unit/build/budget and policy browser checks passed. PR and exact Linux CI pending; see docs/senior-care-policy-delivery.md."
+      "status": "done",
+      "evidence": "2026-10-24: implemented and verified 520 A rows / 88 B candidates; source/snapshot hashes and cross-platform rebuild pass; 208 unit tests, 11 Python tests, 177 Linux browser passes / 1 expected skip including all 12 canonical snapshots in CI run40000606560. PR #66 remains open for human review; latest exact-head checks on PR. No merge/deployment."
     }
   ]
 }

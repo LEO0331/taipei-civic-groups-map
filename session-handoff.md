@@ -1,90 +1,29 @@
 # Session Handoff
 
-## Current Objective
+## Current objective
 
-- Goal: Complete Batch 36 / Data Freshness Audit C on `postdemo/36-data-freshness-audit-c`.
-- Baseline: `main@6a48dedf9f4ad256d6cb374703641f5af2c1bcc5`.
-- Scope: freshness evidence only. No raw source records, provenance metadata, converters, domain calculations, product/UX, dependency/runtime, visual-baseline, or performance-budget changes.
+Deliver Policy #10 in exactly one PR from `codex/senior-community-care-policy-10` to `main`. Do not merge automatically.
 
-## Batch 35 Closeout
+- Worktree: `C:/Users/LeoLi/.codex/worktrees/senior-community-care-policy-10/taipei-civic-groups-map`.
+- Verified base: `e3a96dfc50c90b3e772fb4e0d20f14ab0e3a697a`.
+- Accepted analysis date: 2026-10-23; delivery work continued 2026-10-24.
+- Sources A/B August 2026: 520 sites / 88 villages. C revised 2025-12-17, effective 2026-01-01.
+- Source E/F and all original Data Trust/freshness/provenance data remain unchanged.
 
-Batch 35 is merged and deployed:
+## Implemented and verified
 
-- merge: `main@6a48dedf`;
-- PR-head Frontend CI: `35807182113` — quality + desktop + mobile passed;
-- Pages: `35807633618` — passed;
-- schema guard: passed;
-- release data-change comparison: passed;
-- semantic anomaly guard: 0 blockers / 0 warnings across 145 comparable raw-data directories;
-- production budget remained 399.63 kB raw / 115.86 kB gzip against 450 / 130 kB limits;
-- Data Trust: 117 directories / 68 dated / 49 unknown / 0 fallback.
+See `docs/senior-care-policy-delivery.md` for actual findings, source/snapshot hashes, selected IDs, scenario overlap, local checks and known environment limits. `docs/senior-care-policy-results.json` and performance JSON retain machine-readable measurements. Public evidence is under `public/policy/senior-care-policy`; original PDFs are under `data/raw/senior-care-policy`, outside browser assets.
 
-## Batch 36 Reviewed Tranche
+## Next concrete actions
 
-Batch 32 explicitly deferred three dated `priority_review` sources. Batch 36 checks exactly those three against the live Taipei Data Platform downloadable-resource `更新時間`:
+1. Commit the bounded implementation in reviewable logical groups with Lore trailers.
+2. Push the requested branch and open exactly one PR, target main.
+3. Attach its URL to this chat and record it in delivery/progress.
+4. Require exact-head Linux CI (including canonical screenshots and pinned Python tests), fix actionable failures, and update final evidence/state.
+5. Leave the PR open for human review; do not deploy or merge.
 
-| Dataset | Local date | Official resource date | Result |
-| --- | --- | --- | --- |
-| `funeral-service-businesses` | 2025-06-11 10:33:01 +08:00 | 2025-06-11 10:33:01 +08:00 | No newer file |
-| `hakka-organizations` | 2025-06-12 16:16:44 +08:00 | 2025-06-12 16:16:44 +08:00 | No newer file |
-| `fixed-site-temporary-childcare` | 2025-06-13 18:36:01 +08:00 | 2025-06-13 18:36:01 +08:00 | No newer file |
+## Reproduction
 
-The Hakka page's metadata-edit timestamp is later than the CSV timestamp; it is intentionally not used as freshness evidence.
+Run `npm ci`, focused policy fetch/audit/build/verify (default offline), `npm run typecheck`, `npm test`, `npm run build`, `npm run performance:budget`, `npm run test:e2e`, `git diff --check`. Python extraction uses `scripts/senior-care-policy-requirements.txt`; set `SENIOR_CARE_POLICY_PYTHON` if needed. `--refresh` only stages; changed editions need renewed independent admission.
 
-## Refresh Decision
-
-**0 of 3 sources has a newer authoritative downloadable file.**
-
-Therefore:
-
-- no focused fetch is justified;
-- no converter is run;
-- no schema/release/anomaly capture sequence is needed;
-- no Data Trust metadata or deterministic audit JSON changes;
-- no source record or UI change.
-
-The checked-in deterministic 2026-09-22 state remains:
-
-- 117 directories;
-- 68 dated;
-- 49 unknown-date;
-- 0 fallback;
-- 24 recent / 14 review / 30 priority_review.
-
-Age bands remain review triage only.
-
-## Files
-
-- `docs/data-freshness-audit-c-2026-09-23.md`
-- `feature_list.json`
-- `progress.md`
-- `session-handoff.md`
-
-## Verification Gates
-
-| Check | Status |
-| --- | --- |
-| Batch 35 corrected PR CI | Passed — run `35807182113` |
-| Batch 35 merged Pages | Passed — run `35807633618` |
-| Batch 36 official source comparisons | Complete — 0/3 newer files |
-| Batch 36 PR-head optimized Frontend CI | Pending |
-| Batch 36 merged Pages | Pending |
-
-## Next Actions
-
-1. Open the Batch 36 PR.
-2. Require exact PR-head optimized Frontend CI.
-3. Merge only that green head.
-4. Verify the merged Pages release passes.
-5. Mark Batch 36 done.
-6. Do not start Batch 40+ product/UX work unless justified by concrete evidence; future dependency migrations remain separately bounded per Batch 39.
-
-## Preserved Contracts
-
-- Batch 29 schema guard.
-- Batch 30 release data-change evidence.
-- Batch 37 semantic anomaly guard.
-- Batch 38 one-snapshot Pages fan-out.
-- Node 22 / exact Playwright 1.62.1 Noble.
-- 12 visual baselines / maxDiffPixelRatio 0.0005.
-- 450 / 130 kB production-entry budget.
+Windows tests require installed Chrome or CI-mode pinned Chromium. Local complete suite passed 165 functional cases and expected one skip; twelve canonical Linux screenshot baselines cannot be compared as Windows baselines. Do not create or commit Windows replacements. The original 450/130 kB entry budget, Node 22 CI and Playwright 1.62.1 renderer remain unchanged. Default policy verification must not invoke global data:fetch.

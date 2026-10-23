@@ -443,6 +443,16 @@
       "dependencies": [],
       "status": "done",
       "evidence": "2026-09-23: bounded cleanup removes both remaining application @ts-nocheck suppressions, adds the missing explicit App domain type imports, and clears all strict noUnusedLocals/noUnusedParameters findings. It also removes an unused conversion-report request/state path and two inert filter states with no UI controls, with a regression test preventing future source-level TypeScript opt-outs. Pinned Playwright 1.62.1 Noble verification passed: strict unused diagnostics, normal typecheck, 175 unit tests, production build, 399.56 kB raw / 115.82 kB gzip entry budget, and full Playwright with 153 passed, 1 expected skip, and 0 failures including desktop/mobile visual regression."
+    },
+    {
+      "id": "senior-community-care-policy-10",
+      "name": "Senior community care evidence review and village follow-up (Policy 10)",
+      "description": "Independently audited official PDFs, edition-bound identity/reconciliation, deterministic administrative scenarios, privacy-minimized bilingual lazy UI and exports.",
+      "dependencies": [
+        "maintenance-harness"
+      ],
+      "status": "in_progress",
+      "evidence": "2026-10-24: implemented 520 A rows / 88 B candidates; local type/unit/build/budget and policy browser checks passed. PR and exact Linux CI pending; see docs/senior-care-policy-delivery.md."
     }
   ]
 }

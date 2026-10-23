@@ -1,0 +1,464 @@
+{
+  "snapshot": {
+    "schemaVersion": 1,
+    "snapshotId": "senior-care-f3dabc24478b89c72dc25a4e7154fb8efed4669d9e07809dcff72c1d7a4e502c",
+    "sha256": "f3dabc24478b89c72dc25a4e7154fb8efed4669d9e07809dcff72c1d7a4e502c",
+    "file": "snapshot-f3dabc24478b89c72dc25a4e7154fb8efed4669d9e07809dcff72c1d7a4e502c.json",
+    "bytes": 771155,
+    "gzipBytes": 119539
+  },
+  "meanScenarioMs": 0.3435023,
+  "exports": [
+    {
+      "mode": "A",
+      "capacity": 5,
+      "jsonBytes": 13255,
+      "csvBytes": 36285
+    },
+    {
+      "mode": "A",
+      "capacity": 10,
+      "jsonBytes": 18069,
+      "csvBytes": 72229
+    },
+    {
+      "mode": "A",
+      "capacity": "all",
+      "jsonBytes": 526870,
+      "csvBytes": 3740225
+    },
+    {
+      "mode": "B",
+      "capacity": 5,
+      "jsonBytes": 12233,
+      "csvBytes": 36090
+    },
+    {
+      "mode": "B",
+      "capacity": 10,
+      "jsonBytes": 16391,
+      "csvBytes": 71861
+    },
+    {
+      "mode": "B",
+      "capacity": "all",
+      "jsonBytes": 81499,
+      "csvBytes": 630245
+    }
+  ],
+  "sensitivity": [
+    {
+      "sourceScope": "pdf",
+      "category": "all",
+      "population": 520,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0208:060c8b2b0bb06d0a64b4cab725e0db14deeb2591bba13d0c03becf1d46ff4754:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0229:4da94742b203ae757541860c2a98c7ca93ca4b5022e1555b04c5340e2a3ae742:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0332:c22cd356a25479c4975d0d6c17dd72164c0a3309503d90e93023696be6c44447:1"
+      ],
+      "districts": [
+        "中正區",
+        "內湖區",
+        "北投區",
+        "士林區",
+        "大同區"
+      ],
+      "shared": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0208:060c8b2b0bb06d0a64b4cab725e0db14deeb2591bba13d0c03becf1d46ff4754:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0229:4da94742b203ae757541860c2a98c7ca93ca4b5022e1555b04c5340e2a3ae742:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0332:c22cd356a25479c4975d0d6c17dd72164c0a3309503d90e93023696be6c44447:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1"
+      ],
+      "populationChange": 0
+    },
+    {
+      "sourceScope": "pdf",
+      "category": "care-point",
+      "population": 463,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0208:060c8b2b0bb06d0a64b4cab725e0db14deeb2591bba13d0c03becf1d46ff4754:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0229:4da94742b203ae757541860c2a98c7ca93ca4b5022e1555b04c5340e2a3ae742:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0332:c22cd356a25479c4975d0d6c17dd72164c0a3309503d90e93023696be6c44447:1"
+      ],
+      "districts": [
+        "中正區",
+        "內湖區",
+        "北投區",
+        "士林區",
+        "大同區"
+      ],
+      "shared": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0208:060c8b2b0bb06d0a64b4cab725e0db14deeb2591bba13d0c03becf1d46ff4754:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0229:4da94742b203ae757541860c2a98c7ca93ca4b5022e1555b04c5340e2a3ae742:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0332:c22cd356a25479c4975d0d6c17dd72164c0a3309503d90e93023696be6c44447:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1"
+      ],
+      "populationChange": -57
+    },
+    {
+      "sourceScope": "pdf",
+      "category": "learning",
+      "population": 57,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0012:8616f5afca584c0adf81a2f5355b024556256458898357d9607b4dd97d52ec07:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0013:f21acbd5aa0a4c9628b02ffcbc4b4802eff736d629403cfb097a41ac67443b7c:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0016:1f86652b47ab56c1385285b63a7ef1be2ab5de271139be9093b6776be2058b04:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0024:5935be152d572520133b39b7c8ed2a408a64bf068d98217f3ac27c69710eaa17:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0030:c846fbec74243965bbcd21e9353b607a0366bd62bab32d46bd0e82ef4fd8a336:1"
+      ],
+      "districts": [
+        "士林區"
+      ],
+      "shared": [],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0012:8616f5afca584c0adf81a2f5355b024556256458898357d9607b4dd97d52ec07:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0013:f21acbd5aa0a4c9628b02ffcbc4b4802eff736d629403cfb097a41ac67443b7c:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0016:1f86652b47ab56c1385285b63a7ef1be2ab5de271139be9093b6776be2058b04:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0024:5935be152d572520133b39b7c8ed2a408a64bf068d98217f3ac27c69710eaa17:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0030:c846fbec74243965bbcd21e9353b607a0366bd62bab32d46bd0e82ef4fd8a336:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "populationChange": -463
+    },
+    {
+      "sourceScope": "associated",
+      "category": "all",
+      "population": 493,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0072:8296d6596378603b882cab852ed95d3b666ad9dafd4230d01c95aafabeac5fd1:1"
+      ],
+      "districts": [
+        "士林區",
+        "大同區"
+      ],
+      "shared": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0072:8296d6596378603b882cab852ed95d3b666ad9dafd4230d01c95aafabeac5fd1:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1"
+      ],
+      "populationChange": -27
+    },
+    {
+      "sourceScope": "associated",
+      "category": "care-point",
+      "population": 441,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0072:8296d6596378603b882cab852ed95d3b666ad9dafd4230d01c95aafabeac5fd1:1"
+      ],
+      "districts": [
+        "士林區",
+        "大同區"
+      ],
+      "shared": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0072:8296d6596378603b882cab852ed95d3b666ad9dafd4230d01c95aafabeac5fd1:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1"
+      ],
+      "populationChange": -79
+    },
+    {
+      "sourceScope": "associated",
+      "category": "learning",
+      "population": 52,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0012:8616f5afca584c0adf81a2f5355b024556256458898357d9607b4dd97d52ec07:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0013:f21acbd5aa0a4c9628b02ffcbc4b4802eff736d629403cfb097a41ac67443b7c:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0016:1f86652b47ab56c1385285b63a7ef1be2ab5de271139be9093b6776be2058b04:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0024:5935be152d572520133b39b7c8ed2a408a64bf068d98217f3ac27c69710eaa17:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0030:c846fbec74243965bbcd21e9353b607a0366bd62bab32d46bd0e82ef4fd8a336:1"
+      ],
+      "districts": [
+        "士林區"
+      ],
+      "shared": [],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0012:8616f5afca584c0adf81a2f5355b024556256458898357d9607b4dd97d52ec07:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0013:f21acbd5aa0a4c9628b02ffcbc4b4802eff736d629403cfb097a41ac67443b7c:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0016:1f86652b47ab56c1385285b63a7ef1be2ab5de271139be9093b6776be2058b04:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0024:5935be152d572520133b39b7c8ed2a408a64bf068d98217f3ac27c69710eaa17:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0030:c846fbec74243965bbcd21e9353b607a0366bd62bab32d46bd0e82ef4fd8a336:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "populationChange": -468
+    },
+    {
+      "sourceScope": "broad",
+      "category": "all",
+      "population": 520,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "districts": [
+        "士林區",
+        "大同區",
+        "大安區"
+      ],
+      "shared": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "added": [],
+      "removed": [],
+      "populationChange": 0
+    },
+    {
+      "sourceScope": "broad",
+      "category": "care-point",
+      "population": 463,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "districts": [
+        "士林區",
+        "大同區",
+        "大安區"
+      ],
+      "shared": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "added": [],
+      "removed": [],
+      "populationChange": -57
+    },
+    {
+      "sourceScope": "broad",
+      "category": "learning",
+      "population": 57,
+      "selectedIds": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0096:20f236a5ff60353e06f76ea5766860f9fe213e77a948f434ea3abdf0f1cc3d85:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0140:88a3bcd33dbef4218bf664fc3ed9f48c65aa65ba758a61d0a5695b390ddf556a:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0147:ff2f1ecb38171f7e34b0f9e211d0821a0c9598ecc933952ef0696e98bb3a6023:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0209:75327893b27e35ca16fc99305096559ca6ac34dfe230a648748a4799a45d7943:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0263:5745f9dcfbd686430223b62fa008594b6613562947e8b8b91853d10239080734:1"
+      ],
+      "districts": [
+        "中山區",
+        "中正區",
+        "大安區",
+        "文山區"
+      ],
+      "shared": [],
+      "added": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0096:20f236a5ff60353e06f76ea5766860f9fe213e77a948f434ea3abdf0f1cc3d85:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0140:88a3bcd33dbef4218bf664fc3ed9f48c65aa65ba758a61d0a5695b390ddf556a:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0147:ff2f1ecb38171f7e34b0f9e211d0821a0c9598ecc933952ef0696e98bb3a6023:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0209:75327893b27e35ca16fc99305096559ca6ac34dfe230a648748a4799a45d7943:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0263:5745f9dcfbd686430223b62fa008594b6613562947e8b8b91853d10239080734:1"
+      ],
+      "removed": [
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0114:a382ed6d906c5c313e3bfcb4bc359db10a17ea7b4c837087184399e37e46d2fb:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0001:93d6c283a994775d7332a327149b50dd82ddf03c0a4c4f4386de11803bda6a27:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0059:a003356dfe0a02d1e43a6dfe2fa334f0cf62e80fc5842caa8e45c3cc30a93180:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0060:c48ef6c5ca6a0d8102e6d531ed75abc8629162f4c964eaa159c1e6f7d3bb5433:1",
+        "A:26a56351439c42d92a386bb02ad561fffe462b9c0f001776087c28223bc0bcf2:0066:c3c0cad58a6b5d482bf48262b13020204b2c3a3e8036c577699cdeebb96d6568:1"
+      ],
+      "populationChange": -463
+    }
+  ],
+  "browser": {
+    "environment": "Local production Vite preview, Playwright 1.62.1 Chromium, Windows; informational timing",
+    "shellRequestCount": 31,
+    "policyLoadedInShell": false,
+    "shellRequests": [
+      "http://127.0.0.1:4320/taipei-civic-groups-map/?dataset=civic&lang=en",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-C2s3ywDv.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-Daub1XRh.css",
+      "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/data/data-trust-manifest.json",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-groups.json",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-group-summary.json",
+      "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.122.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.123.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.116.woff2",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/CivicMap-CcK23J7Z.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/TileLayer-DKesT487.js",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.121.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.120.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.118.woff2",
+      "https://c.tile.openstreetmap.org/11/1715/876.png",
+      "https://b.tile.openstreetmap.org/11/1715/875.png",
+      "https://b.tile.openstreetmap.org/11/1714/876.png",
+      "https://a.tile.openstreetmap.org/11/1716/876.png",
+      "https://a.tile.openstreetmap.org/11/1715/877.png",
+      "https://a.tile.openstreetmap.org/11/1714/875.png",
+      "https://c.tile.openstreetmap.org/11/1716/875.png",
+      "https://c.tile.openstreetmap.org/11/1714/877.png",
+      "https://b.tile.openstreetmap.org/11/1716/877.png",
+      "https://a.tile.openstreetmap.org/11/1713/876.png",
+      "https://b.tile.openstreetmap.org/11/1717/876.png",
+      "https://c.tile.openstreetmap.org/11/1713/875.png",
+      "https://a.tile.openstreetmap.org/11/1717/875.png",
+      "https://b.tile.openstreetmap.org/11/1713/877.png",
+      "https://c.tile.openstreetmap.org/11/1717/877.png"
+    ],
+    "policyEntryRequestCount": 24,
+    "entryRequests": [
+      "http://127.0.0.1:4320/taipei-civic-groups-map/?dataset=seniorCarePolicy&lang=en",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-C2s3ywDv.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-Daub1XRh.css",
+      "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
+      "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.116.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.118.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.120.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.121.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.122.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.123.woff2",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CuFeZB3y.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/DatasetFamilyFrame-Dk_ZU6ky.js",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CJhU8ymK.css",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-groups.json",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-group-summary.json",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/policy/senior-care-policy/current.json",
+      "http://127.0.0.1:4320/taipei-civic-groups-map/policy/senior-care-policy/snapshot-f3dabc24478b89c72dc25a4e7154fb8efed4669d9e07809dcff72c1d7a4e502c.json",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.119.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.117.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.113.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.110.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.115.woff2",
+      "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.112.woff2"
+    ],
+    "scenarioInteractionMs": 26.800000071525574,
+    "errors": [],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-C2s3ywDv.js",
+        "encodedBodySize": 0
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/index-Daub1XRh.css",
+        "encodedBodySize": 0
+      },
+      {
+        "name": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap",
+        "encodedBodySize": 138762
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYY.woff2",
+        "encodedBodySize": 45712
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.116.woff2",
+        "encodedBodySize": 73280
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.118.woff2",
+        "encodedBodySize": 84968
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.120.woff2",
+        "encodedBodySize": 71436
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.121.woff2",
+        "encodedBodySize": 65220
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.122.woff2",
+        "encodedBodySize": 60092
+      },
+      {
+        "name": "https://fonts.gstatic.com/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.123.woff2",
+        "encodedBodySize": 36328
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/DatasetFamilyFrame-Dk_ZU6ky.js",
+        "encodedBodySize": 428
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CuFeZB3y.js",
+        "encodedBodySize": 10399
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/assets/SeniorCarePolicyDashboard-CJhU8ymK.css",
+        "encodedBodySize": 626
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-groups.json",
+        "encodedBodySize": 225526
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/data/civic-group-summary.json",
+        "encodedBodySize": 1336
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/policy/senior-care-policy/current.json",
+        "encodedBodySize": 293
+      },
+      {
+        "name": "http://127.0.0.1:4320/taipei-civic-groups-map/policy/senior-care-policy/snapshot-f3dabc24478b89c72dc25a4e7154fb8efed4669d9e07809dcff72c1d7a4e502c.json",
+        "encodedBodySize": 119539
+      }
+    ]
+  }
+}

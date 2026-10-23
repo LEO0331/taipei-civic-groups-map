@@ -2,13 +2,17 @@
 
 ## Current State
 
-- Last updated: 2026-09-23
-- Active feature: bounded anti-slop cleanup on `cleanup/strict-unused-code`.
-- Baseline: `main@bc30981`, after Batch 36 merged.
-- Scope: remove the final application `@ts-nocheck` suppression and code proven unused by strict TypeScript diagnostics. No UI redesign, dataset change, dependency change, or broad component rewrite.
-- Current Data Trust remains 117 directories / 68 dated / 49 unknown / 0 fallback; deterministic 2026-09-22 triage remains 24 recent / 14 review / 30 priority_review.
+- Last updated: 2026-10-24 (Asia/Taipei).
+- Active feature: Policy #10 on `codex/senior-community-care-policy-10` in the attached isolated worktree.
+- Base: `origin/main@e3a96dfc50c90b3e772fb4e0d20f14ab0e3a697a`.
+- Scope: official-source documentary review and administrative follow-up; no operational/need/outcome recommendation.
+- Accepted sources: A 520 rows / 14 pages; B 88 rows / 2 pages; C revised 2025-12-17, effective 2026-01-01. E/F and the original 117-directory Data Trust universe remain unchanged.
+- Implementation and local verification are complete; PR creation and exact Linux CI remain pending. Do not merge automatically.
+- Full evidence, actual selected IDs, source/snapshot hashes and risks: `docs/senior-care-policy-delivery.md`, `docs/senior-care-policy-results.json` and `docs/senior-care-policy-performance.json`.
 
 ## Latest Evidence
+
+- 2026-10-24: Policy #10 independently verified the August official PDF editions, including B47–58 cross-page merged district geometry. A/E associations are 427 exact / 66 normalized / 1 ambiguous / 9 rejected / 17 PDF-only; A/B overlap 0. Mode A broad tiers are 1 / 61 / 458; B has 88 documentary candidates; C remains unavailable. Public outputs exclude demographic counts/phones/addresses; immutable JSON rebuild and SHA checks pass. Policy browser checks: 24 passed across languages and five widths. Full local suite: 165 passed, 1 expected skip, 12 Windows missing-Linux-baseline failures; canonical visual files are preserved. Initial-entry budget 400.12 / 116.05 kB vs 450 / 130. Added no Node dependency; pinned Python extraction is independently tested. PR/Linux CI are next.
 
 - 2026-09-23: anti-slop cleanup is complete and intentionally bounded to type-safety and dead-code findings. The final two application `@ts-nocheck` suppressions are removed from `App.tsx` and the employment-agency module; the missing `App.tsx` domain types are now imported explicitly. Strict `noUnusedLocals` / `noUnusedParameters` diagnostics identified and removed one unused localization table, three unused imports/declarations, one unused tuple binding, two permanently inactive filter states/predicates that had no UI controls, and an unused conversion-report request/state path. A regression test now prevents source files from disabling TypeScript checking. Verification passed in the pinned Playwright 1.62.1 Noble container: strict unused diagnostics, normal typecheck, 175 unit tests, production build, performance budget (**399.56 kB raw / 115.82 kB gzip**), and full Playwright (**153 passed / 1 expected skip / 0 failed**) including desktop/mobile visual regression.
 

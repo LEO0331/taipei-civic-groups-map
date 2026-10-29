@@ -1,3 +1,4 @@
+import ExplorerBoundary from './explorer/ExplorerBoundary';
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { copy, zhUiCopy, getCatalogueItems } from './lib/catalogueItems';
 import DataTrustPanel from './DataTrustPanel';
@@ -19,6 +20,7 @@ import type {
   EarlyInterventionMedicalProviderRecord, EarlyInterventionMedicalProviderSummary, GeneralDentalMedicalInstitutionRecord, GeneralDentalMedicalInstitutionSummary, MajorElectricityUserRecord, MajorElectricityUserSummary, PublicPneumococcalVaccineMedicalProviderRecord, PublicPneumococcalVaccineMedicalProviderSummary, SeniorGroupMealServiceSiteRecord, SeniorGroupMealServiceSiteSummary,
 } from './types';
 
+const CivicExplorer = lazy(() => import('./CivicExplorer'));
 const CivicMap = lazy(() => import('./CivicMap'));
 const DistrictComparison = lazy(() => import('./DistrictComparison'));
 const RegisteredLaborUnionsModule = lazy(() => import('./RegisteredLaborUnionsModule'));
@@ -502,6 +504,8 @@ export default function App() {
   const [language, setLanguage] = useState<Language>(() => getInitialNavigation().language);
   const [tab, setTab] = useState<string>(() => getInitialNavigation().dataset);
   const [catalogueOpen, setCatalogueOpen] = useState(false);
+  const [explorerOpen, setExplorerOpen] = useState(false);
+  const explorerTrigger = useRef<HTMLButtonElement>(null);
   const [showOnboarding, setShowOnboarding] = useState(() => !hasDismissedOnboarding());
   const [catalogueQuery, setCatalogueQuery] = useState('');
   const datasetContentRef = useRef<HTMLDivElement>(null);
@@ -519,6 +523,7 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const next = readNavigationState(window.location.href, readStoredLanguage());
+      setExplorerOpen(false);
       setTab(next.dataset);
       setLanguage(next.language);
       scrollToDatasetContent('auto');
@@ -840,15 +845,22 @@ export default function App() {
     setTab(id);
     setCatalogueOpen(false);
     setCatalogueQuery('');
+    setExplorerOpen(false);
+    if (explorerOpen) requestAnimationFrame(() => datasetContentRef.current?.focus({ preventScroll: true }));
     if (current.dataset !== id) {
       const url = buildNavigationUrl(window.location.href, state);
       window.history.pushState(buildHistoryState(window.history.state, state), '', url);
     }
-    scrollToDatasetContent();
+    scrollToDatasetContent(window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth');
   };
   useEffect(() => {
     if (new URLSearchParams(window.location.search).get('dataset')) scrollToDatasetContent('auto');
   }, []);
+  const returnToCatalogue = () => {
+    setExplorerOpen(false);
+    setCatalogueOpen(true);
+    requestAnimationFrame(() => explorerTrigger.current?.focus());
+  };
   const civicViews = [['map', t.map], ['directory', t.directory], ['overview', t.overview]] as const;
 
   return <div className="app">
@@ -864,6 +876,7 @@ export default function App() {
         </div>
         {catalogueOpen && <div className="catalogue-popover" id="dataset-catalogue">
           <div className="catalogue-popover-heading"><div><p>{language === 'zh' ? '公共資料目錄' : 'PUBLIC DATA CATALOGUE'}</p><strong>{language === 'zh' ? '依主題探索資料集' : 'Browse datasets by topic'}</strong></div><button type="button" className="catalogue-close" onClick={() => { setCatalogueOpen(false); setCatalogueQuery(''); }} aria-label={language === 'zh' ? '關閉資料目錄' : 'Close data catalogue'}>×</button></div>
+          <button ref={explorerTrigger} className="catalogue-explorer-trigger" type="button" aria-expanded={explorerOpen} aria-controls="civic-explorer-area" onClick={() => { setCatalogueOpen(false); setExplorerOpen(true); }}>{language === 'zh' ? 'Civic Explorer · 七個主題圖' : 'Civic Explorer · Seven topic hubs'}</button>
           <label className="catalogue-popover-search"><span className="sr-only">{language === 'zh' ? '搜尋資料集' : 'Search datasets'}</span><input value={catalogueQuery} onChange={(event) => setCatalogueQuery(event.target.value)} placeholder={language === 'zh' ? '搜尋資料集或服務' : 'Search datasets or services'} /></label>
           {catalogue.length ? <div className="catalogue-grid">{catalogue.map((category) => <section className="catalogue-category" key={category.id}><h2>{category.title}<span>{category.items.length}</span></h2><div>{category.items.map(([id, label]) => <button type="button" key={id} className={tab === id ? 'active' : ''} aria-current={tab === id ? 'page' : undefined} onClick={() => selectDataset(id)}>{label}</button>)}</div></section>)}</div> : <p className="catalogue-empty" role="status">{language === 'zh' ? '找不到符合的資料集，請嘗試其他關鍵字。' : 'No matching datasets. Try another keyword.'}</p>}
         </div>}
@@ -871,8 +884,9 @@ export default function App() {
     </header>
     <main data-active-ui-family={uiFamilyForDataset(tab)} data-active-dataset={tab}>
       {tab !== 'seniorCarePolicy' && <DataTrustPanel language={language} activeDataset={activeDatasetDirectory} activeDatasetLabel={activeDatasetLabel} appliesSmallSampleGuard={tab === 'influenzaVaccineProvidersChildren3Plus'} />}
+      {explorerOpen && <div id="civic-explorer-area"><ExplorerBoundary language={language} onBack={returnToCatalogue}><Suspense fallback={<DirectoryModuleLoading language={language} />}><CivicExplorer language={language} dataset={tab} onNavigate={selectDataset} onBack={returnToCatalogue} /></Suspense></ExplorerBoundary></div>}
       {showOnboarding && <DashboardOnboarding language={language} onBrowse={() => setCatalogueOpen(true)} onDismiss={() => { try { localStorage.setItem(ONBOARDING_DISMISSED_KEY, '1'); } catch { /* Dismissal persistence is optional. */ } setShowOnboarding(false); }} />}
-      <div ref={datasetContentRef} className="dataset-content-anchor" aria-hidden="true" />
+      <div ref={datasetContentRef} className="dataset-content-anchor" tabIndex={-1} role="region" aria-label={language === 'zh' ? '目前資料集內容' : 'Current dataset content'} />
       <Suspense fallback={<DirectoryModuleLoading language={language} />}>
       {loadError && tab === 'civic' && <p className="status" role="alert">{t.loadError}</p>}
       {!loadError && tab === 'civic' && !summary && <p className="status" role="status">{t.loading}</p>}

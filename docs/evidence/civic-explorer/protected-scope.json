@@ -1,0 +1,9 @@
+{
+  "baseline": "e3a96df",
+  "protectedTrackedFiles": 1256,
+  "scope": "All existing public/, data/, scripts/ and src/ files except App.tsx and styles.css",
+  "changedProtectedFiles": [],
+  "dataRefreshCommandsRun": [],
+  "governanceComponentsUnchanged": true,
+  "dependencyManifestAndLockfileUnchanged": true
+}

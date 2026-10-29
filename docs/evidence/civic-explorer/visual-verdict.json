@@ -1,0 +1,12 @@
+{
+  "score": 94,
+  "verdict": "pass",
+  "category_match": true,
+  "differences": [
+    "Host cream/ink palette and square controls intentionally follow the existing public-data catalogue.",
+    "Seven hubs replace the reference five; mobile stacks the results below the hub grid."
+  ],
+  "suggestions": [],
+  "reasoning": "Layered SVG hubs, visible selected state, localized counts and adjacent readable list match the reference interaction pattern. Full-region captures retain controls and source caveat.",
+  "next_actions": []
+}

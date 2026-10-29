@@ -453,6 +453,16 @@
       ],
       "status": "done",
       "evidence": "2026-10-24: implemented and verified 520 A rows / 88 B candidates; source/snapshot hashes and cross-platform rebuild pass; 208 unit tests, 20 Python extraction/acquisition tests locally; 177 Linux browser passes / 1 expected skip including all 12 canonical snapshots in CI run40000606560. PR #66 remains open for human review; latest exact-head checks on PR. No merge/deployment."
+    },
+    {
+      "id": "civic-explorer",
+      "name": "Optional Civic Explorer category navigation",
+      "description": "Seven lightweight SVG category hubs derived from the existing bilingual catalogue, with searchable list, accessible controls and existing dataset URL navigation.",
+      "dependencies": [
+        "maintenance-harness"
+      ],
+      "status": "done",
+      "evidence": "2026-10-29: 156 actual entries mapped exactly once into seven hubs; 197 unit tests, typecheck, build, 401.23/116.47 kB entry budget, 20 focused desktop/mobile E2E and production loading checks passed. No source/dependency changes. PASS_WITH_LIMITATIONS: inherited Vite audit finding and local Windows/Linux visual runtime distinction; final Linux results recorded in the Draft PR. See docs/civic-explorer-verification-2026-10-29.md."
     }
   ]
 }

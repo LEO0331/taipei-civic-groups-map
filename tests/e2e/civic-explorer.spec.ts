@@ -37,8 +37,8 @@ test('every hub opens its authoritative list without loading other dataset modul
 test('a failed optional chunk leaves a working catalogue return, including reopening', async ({ page }) => {
   await page.route('**/src/CivicExplorer.tsx', route => route.abort());
   await page.goto('/?dataset=notes&lang=en');
+  await page.locator('.catalogue-trigger').click();
   for (let attempt = 0; attempt < 2; attempt++) {
-    await page.locator('.catalogue-trigger').click();
     await page.locator('.catalogue-explorer-trigger').click();
     const fallback = page.getByRole('alert').filter({ hasText: 'Explorer could not load' });
     await expect(fallback).toBeVisible();
@@ -46,7 +46,6 @@ test('a failed optional chunk leaves a working catalogue return, including reope
     await fallback.getByRole('button').click();
     await expect(page.locator('.catalogue-explorer-trigger')).toBeFocused();
     await expect(page.locator('main')).toHaveAttribute('data-active-dataset', 'notes');
-    if (attempt === 0) await page.locator('.catalogue-trigger').click();
   }
 });
 
@@ -77,9 +76,10 @@ test('optional seven hubs derive all counts and support search in either languag
   await expect(explorer.locator('.ce-results a')).toHaveCount(buildCivicCatalogueAdapter('en').find(g => g.id === 'animals')!.total);
   await page.keyboard.press('Escape');
   await expect(explorer.locator('[data-explorer-group="animals"]')).toBeFocused();
-  await explorer.locator('[data-explorer-group="health"]').click();
+  await explorer.locator('[data-explorer-group="animals"]').click();
   await explorer.scrollIntoViewIfNeeded();
-  await explorer.screenshot({ path: `docs/evidence/civic-explorer/en-${testInfo.project.name}.png` });
+  await explorer.screenshot({ path: `docs/evidence/civic-explorer/en-${testInfo.project.name}.png`, scale: 'css' });
+  await explorer.locator('[data-explorer-group="health"]').click();
   await page.getByRole('button', { name: 'Switch language' }).click();
   await search.fill('Physical Therapy');
   await expect(explorer.locator('.ce-results a')).toHaveText('臺北市物理治療所 ↗');
@@ -95,7 +95,7 @@ test('optional seven hubs derive all counts and support search in either languag
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
   expect(overflow).toBe(false);
   await explorer.locator('[data-explorer-group="animals"]').click();
-  await explorer.screenshot({ path: `docs/evidence/civic-explorer/zh-${testInfo.project.name}.png` });
+  await explorer.screenshot({ path: `docs/evidence/civic-explorer/zh-${testInfo.project.name}.png`, scale: 'css' });
   await explorer.getByRole('button', { name: '返回資料目錄' }).click();
   await expect(page.locator('.catalogue-explorer-trigger')).toBeFocused();
 });

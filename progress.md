@@ -173,12 +173,13 @@
 3. Keep `@playwright/test@1.62.1` aligned with both Noble workflow images unless performing a separately reviewed renderer migration with intentional visual-baseline review.
 4. Preserve the 450 / 130 kB entry budget, Node 22 runtime contract, conservative Data Trust semantics, and all existing verification gates.
 
-## Civic Explorer — 2026-10-29
+## Civic Explorer — 2026-10-31
 
-- Branch `codex/civic-explorer`, based on `main@e3a96df`; isolated checkout `.tmp/civic-explorer` under the original repository. Delivery is one Draft PR, manual review only; no merge/deployment.
+- Branch `codex/civic-explorer`, based on `main@aff5a81`; isolated managed checkout `C:/Users/LeoLi/.codex/worktrees/civic-explorer-4968/taipei-civic-groups-map`. Delivery is one Draft PR, manual review only; no merge/deployment.
 - Added lazy `CivicExplorer.tsx`/CSS, reused MIT `explorer/HexIsland.tsx`, optional failure boundary, pure catalogue metadata extraction and adapter. App retains its existing dataset navigation, URL/history utilities and mounted content. Existing catalogue remains default.
-- Actual source count: 156 entries, seven categories (60/31/28/10/18/6/3), complete unique ID coverage. Existing bilingual labels/order hash-identical. Search uses current labels and aliases from both languages without duplicating metadata.
+- Actual source count: 157 entries, seven categories (60/32/28/10/18/6/3), complete unique ID coverage. Existing bilingual labels/order hash-identical. Search uses current labels and aliases from both languages without duplicating metadata.
 - Simplification: shared the existing catalogue construction instead of introducing a second registry or rendering dataset islands. No new dependencies, source refresh, data/model, export, privacy or governance changes. Build-generated manifests restored.
-- Verification: typecheck; 197 unit tests; build; budget 401.23/116.47 kB vs 450/130; final focused desktop/mobile E2E 20/20; production opening adds only Explorer JS/CSS, zero dataset/heavy-module requests; independent review no blocker; diff check passed. Full local suite was run (145 passed, 1 skip, 12 absent Windows baselines and 2 time-sensitive fixture failures). Fixed only fixture clock, confirmed focused trust checks; Linux PR CI remains authoritative for canonical snapshots.
-- Dependency audit: completed, inherited high-severity Vite finding retained with unchanged lockfile. No lint command exists; strict TypeScript and source-contract tests run. Local Node 24 vs CI Node 22 is documented.
+- Verification: typecheck; 211 unit tests; build; budget 401.79/116.63 kB vs 450/130; final focused desktop/mobile E2E 20/20; production opening adds only Explorer JS/CSS, zero dataset/heavy-module requests; independent review no blocker; diff check passed. Full local suite was run (145 passed, 1 skip, 12 absent Windows baselines and 2 time-sensitive fixture failures). Fixed only fixture clock, confirmed focused trust checks; Linux PR CI remains authoritative for canonical snapshots.
+- Rebased final behavioral E2E: 175 passed / 1 expected skip / 0 failures, excluding only 12 Linux-only canonical screenshots; includes current-main Policy 10. Offline Policy 10 source/snapshot checks passed.
+- Dependency audit: 0 vulnerabilities on main's separately merged Vite 6.4.5 fix; dependency files unchanged relative to main. No lint command exists; strict TypeScript and source-contract tests run. Local Node 24 vs CI Node 22 is documented.
 - Evidence, screenshots, licensing and remaining limitations: `docs/civic-explorer-verification-2026-10-29.md`. Final remote check results are recorded in the Draft PR description. Do not auto-merge.

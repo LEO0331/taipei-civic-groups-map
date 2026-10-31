@@ -2,7 +2,7 @@
   "status": "PASS",
   "initialRequests": [
     "/taipei-civic-groups-map/",
-    "/taipei-civic-groups-map/assets/index-NNxwGfS9.js",
+    "/taipei-civic-groups-map/assets/index-Bv_eBo4m.js",
     "/taipei-civic-groups-map/assets/index-B9Y3741N.css",
     "/css2",
     "/taipei-civic-groups-map/data/data-trust-manifest.json",
@@ -106,20 +106,20 @@
     "/s/notosanstc/v40/-nF7OG829Oofr2wohFbTp9iFOkMQAewlpbGXhhyYs0QF3kPVyLylzU95vTq1Ltj5xQez1g.110.woff2"
   ],
   "explorerAddedRequests": [
-    "/taipei-civic-groups-map/assets/CivicExplorer-GD1zhFPc.js",
+    "/taipei-civic-groups-map/assets/CivicExplorer-DumyAadw.js",
     "/taipei-civic-groups-map/assets/CivicExplorer-DYb2e1_A.css"
   ],
   "unexpectedPageErrors": [],
   "assets": [
     {
+      "name": "CivicExplorer-DumyAadw.js",
+      "bytes": 7341,
+      "gzipBytes": 3465
+    },
+    {
       "name": "CivicExplorer-DYb2e1_A.css",
       "bytes": 4208,
       "gzipBytes": 1423
-    },
-    {
-      "name": "CivicExplorer-GD1zhFPc.js",
-      "bytes": 7341,
-      "gzipBytes": 3466
     },
     {
       "name": "index-B9Y3741N.css",
@@ -127,9 +127,9 @@
       "gzipBytes": 14815
     },
     {
-      "name": "index-NNxwGfS9.js",
-      "bytes": 401226,
-      "gzipBytes": 116473
+      "name": "index-Bv_eBo4m.js",
+      "bytes": 401793,
+      "gzipBytes": 116628
     }
   ]
 }

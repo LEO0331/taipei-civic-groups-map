@@ -462,7 +462,7 @@
         "maintenance-harness"
       ],
       "status": "done",
-      "evidence": "2026-10-29: 156 actual entries mapped exactly once into seven hubs; 197 unit tests, typecheck, build, 401.23/116.47 kB entry budget, 20 focused desktop/mobile E2E and production loading checks passed. No source/dependency changes. PASS_WITH_LIMITATIONS: inherited Vite audit finding and local Windows/Linux visual runtime distinction; final Linux results recorded in the Draft PR. See docs/civic-explorer-verification-2026-10-29.md."
+      "evidence": "2026-10-31: rebased onto main@aff5a81, preserving its Policy 10 entry and trust behavior. All 157 actual entries mapped exactly once (60/32/28/10/18/6/3); bilingual labels/order unchanged. Typecheck, 211 unit tests, build, 401.79/116.63 kB budget, 175 behavioral E2E passes + 1 expected skip, production lazy loading and offline Policy 10 checks passed. Audit: 0 vulnerabilities; no source or dependency diff against main. Final Linux CI recorded in Draft PR #68. See docs/civic-explorer-verification-2026-10-29.md."
     }
   ]
 }

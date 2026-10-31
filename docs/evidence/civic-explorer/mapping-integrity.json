@@ -1,5 +1,5 @@
 {
-  "totalCatalogueEntries": 156,
+  "totalCatalogueEntries": 157,
   "categoryCount": 7,
   "groups": [
     {
@@ -74,7 +74,7 @@
       "id": "care",
       "en": "Social welfare, family and care",
       "zh": "社福、家庭與照顧",
-      "total": 31,
+      "total": 32,
       "ids": [
         "civic",
         "seniorGroupMealServiceSites",
@@ -106,7 +106,8 @@
         "shelteredWorkshops",
         "infantCare",
         "infantCareEvaluations",
-        "elderlyWelfare"
+        "elderlyWelfare",
+        "seniorCarePolicy"
       ]
     },
     {

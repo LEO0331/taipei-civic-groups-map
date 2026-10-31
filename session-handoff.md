@@ -1,29 +1,11 @@
-# Session Handoff
+# Session handoff — Civic Explorer
 
-## Current objective
+Updated 2026-10-31. Existing Draft PR: https://github.com/LEO0331/taipei-civic-groups-map/pull/68.
 
-Deliver Policy #10 in exactly one PR from `codex/senior-community-care-policy-10` to `main`. Do not merge automatically.
+Delivery branch: `codex/civic-explorer`, isolated checkout `C:/Users/LeoLi/.codex/worktrees/civic-explorer-4968/taipei-civic-groups-map`, baseline `aff5a81`. One Draft PR, no automatic merge or deployment.
 
-- Worktree: `C:/Users/LeoLi/.codex/worktrees/senior-community-care-policy-10/taipei-civic-groups-map`.
-- Verified base: `e3a96dfc50c90b3e772fb4e0d20f14ab0e3a697a`.
-- Accepted analysis date: 2026-10-23; delivery work continued 2026-10-24.
-- Sources A/B August 2026: 520 sites / 88 villages. C revised 2025-12-17, effective 2026-01-01.
-- Source E/F and all original Data Trust/freshness/provenance data remain unchanged.
+Implementation, catalogue integrity, URL/history preservation and local verification are recorded in [verification](docs/civic-explorer-verification-2026-10-29.md) and progress.md. All 157 current-main entries and their bilingual labels/order are preserved. No source/dependency/model changes. Main's separately merged Vite fix is incorporated; audit is now clean. Its Policy 10 destination and trust behavior are preserved.
 
-## Implemented and verified
+Next concrete action: inspect the Draft PR's exact-head Linux Frontend CI (Node 22 / Playwright 1.62.1 Noble), including all 12 canonical screenshots; the current outcome is maintained in the PR description. Review screenshots and seven-hub behavior manually. Keep PR Draft and do not merge unless the human separately requests it. Do not run bulk data refresh or overwrite visual baselines to resolve renderer differences.
 
-See `docs/senior-care-policy-delivery.md` for actual findings, source/snapshot hashes, selected IDs, scenario overlap, local checks and known environment limits. `docs/senior-care-policy-results.json` and performance JSON retain machine-readable measurements. Public evidence is under `public/policy/senior-care-policy`; original PDFs are under `data/raw/senior-care-policy`, outside browser assets.
-
-## Delivery and next action
-
-PR [#66](https://github.com/LEO0331/taipei-civic-groups-map/pull/66) is open and attached. Five implementation Lore commits plus final review/evidence follow-up are retained. Linux implementation CI run `40000606560` passed all four jobs: 208 unit tests, 11 PDF tests, 177 browser passes / 1 expected skip and all twelve original canonical screenshots. The PR checks tab gives the latest exact-head status.
-
-The next action is human review. Do not merge, deploy, refresh unrelated sources or start another feature automatically. Keep this worktree for review. A future source edition requires the documented focused staging and independent admission process.
-
-## Reproduction
-
-The final acquisition follow-up has 20 offline Python tests and stages the latest clearly dated official attachment with label/header dates separated, provenance and diagnostics. Staging never promotes data. Accepted snapshot and selection IDs remain unchanged. Intentional E source updates require explicit context rebuild/review.
-
-Run `npm ci`, focused policy fetch/audit/build/verify (default offline), `npm run typecheck`, `npm test`, `npm run build`, `npm run performance:budget`, `npm run test:e2e`, `git diff --check`. Python extraction uses `scripts/senior-care-policy-requirements.txt`; set `SENIOR_CARE_POLICY_PYTHON` if needed. `--refresh` only stages; changed editions need renewed independent admission.
-
-Windows tests require installed Chrome or CI-mode pinned Chromium. The local Windows full-suite attempt passed 165 cases with one expected skip; twelve canonical Linux cases could not use Windows baselines. Their authoritative Linux CI comparison subsequently passed. Do not create or commit Windows replacements. The original 450/130 kB entry budget, Node 22 CI and Playwright 1.62.1 renderer remain unchanged. Default policy verification must not invoke global data:fetch.
+Local replay: npm ci; npm run typecheck; npm test; npm run build; npm run performance:budget; CI=1 npm run test:e2e (PowerShell: set $env:CI='1'); node scripts/checkCivicExplorerLoading.mjs; npm audit --json; git diff --check. Restore only task-generated build manifests before committing. No lint script exists.

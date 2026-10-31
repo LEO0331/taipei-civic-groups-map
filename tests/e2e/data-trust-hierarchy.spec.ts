@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 test('current datasets keep the data trust notice compact and neutral by default', async ({ page }) => {
+  // Keep this hierarchy fixture inside its reviewed source-date window as real time advances.
+  await page.clock.setFixedTime(new Date('2026-09-22T00:00:00Z'));
   await page.goto('/?dataset=hospicePalliativeCareInstitutions&lang=zh');
 
   const trust = page.locator('.data-trust');

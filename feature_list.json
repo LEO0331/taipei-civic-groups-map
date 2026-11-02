@@ -1,6 +1,16 @@
 {
   "features": [
     {
+      "id": "maintenance-audit-verification-handoff",
+      "name": "Release audit verification and handoff accuracy",
+      "description": "Correct merged delivery status and verify the audit follow-up in the existing pinned Linux renderer without changing application/data contracts.",
+      "dependencies": [
+        "maintenance-harness"
+      ],
+      "status": "in_progress",
+      "evidence": "2026-11-02: branch from main@f4a784a; PR68 merge verified. Local typecheck,211 tests,build,401.79/116.63kB budget,policy source/snapshot verification and audit0 passed. Windows E2E175 pass/1 expected skip/12 absent platform baselines. New Draft PR exact-head Node22/Playwright1.62.1Noble CI pending; no baseline/runtime changes."
+    },
+    {
       "id": "maintenance-harness",
       "name": "Agent development harness",
       "description": "Keep project instructions, feature state, handoff notes, and repeatable verification current.",

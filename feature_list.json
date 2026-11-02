@@ -7,8 +7,8 @@
       "dependencies": [
         "maintenance-harness"
       ],
-      "status": "in_progress",
-      "evidence": "2026-11-02: branch from main@f4a784a; PR68 merge verified. Local typecheck,211 tests,build,401.79/116.63kB budget,policy source/snapshot verification and audit0 passed. Windows E2E175 pass/1 expected skip/12 absent platform baselines. New Draft PR exact-head Node22/Playwright1.62.1Noble CI pending; no baseline/runtime changes."
+      "status": "done",
+      "evidence": "2026-11-03: PRs #68/#69 are externally merged. Corrected current handoff and preserved history. Canonical run 41396921714 passed PR69 head 5eb668befd3a21eec5846f5d647f9c52f7ee2d34: Node22.23.4 / Playwright1.62.1Noble, 211 unit tests,20 PDF tests,187 E2E passes/1 expected skip,all12 unchanged screenshots,budget401.79/116.63kB. Synthetic merge1fbe448 has the same submitted tree. New docs-only closeout branch from main1fd336e; final-head CI linked on its Draft PR. No application/data/CI/baseline changes."
     },
     {
       "id": "maintenance-harness",

@@ -2,11 +2,11 @@
 
 ## Current State
 
-- Last updated: 2026-11-02 (Asia/Taipei).
-- Active task: seven-repository audit follow-up; accurate handoff and canonical renderer verification on `codex/audit-civic-verification-handoff`.
-- Base: refreshed `origin/main@f4a784a69a55fc5395fb1995eb4af839eb119af5`; PR #68 is merged, not an open Draft PR.
+- Last updated: 2026-11-03 (Asia/Taipei).
+- Active task: seven-repository audit follow-up; canonical verification completed; evidence-only closeout on `codex/audit-civic-canonical-closeout`.
+- Base: refreshed `origin/main@1fd336ec9281bf58820d00cb7f15a42805ab2bf2`; PRs #68 and #69 are merged externally. No agent merge was performed.
 - Local gates: 211 unit tests, typecheck, production build, offline Policy 10 audit/verify, dependency audit (zero), and 401.79/116.63 kB budget passed. Windows browser result: 175 passed / 1 expected skip / 12 absent Windows baselines.
-- Exact follow-up-head canonical Linux CI is pending and must be checked on the new Draft PR. Existing CI already pins Node 22 / Playwright 1.62.1 Noble; no workflow change is needed.
+- Canonical Linux [run 41396921714](https://github.com/LEO0331/taipei-civic-groups-map/actions/runs/41396921714) passed PR #69 head `5eb668befd3a21eec5846f5d647f9c52f7ee2d34`: 211 unit tests, 20 PDF tests, 187 E2E passes / 1 expected skip, all twelve unchanged screenshots; all four jobs green. Node 22.23.4 / Playwright 1.62.1 Noble; synthetic merge 1fbe448 has the exact submitted head tree. This docs-only closeout receives its own final-head checks on its Draft PR.
 - No source/data, runtime/dependency, analytical boundary or application behavior changes. No merge or deployment is claimed for this follow-up.
 
 ## Historical current-state entry (2026-10-24)

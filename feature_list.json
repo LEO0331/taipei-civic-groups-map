@@ -1,6 +1,16 @@
 {
   "features": [
     {
+      "id": "maintenance-release-closure-corrections",
+      "name": "Cache ownership, missing directory snapshots and deployed notices",
+      "description": "Correct verified cross-application cache cleanup, restore two existing official directory snapshots, and ship exact production license notices without changing analytical boundaries.",
+      "dependencies": [
+        "maintenance-harness"
+      ],
+      "status": "done",
+      "evidence": "2026-11-03: restored official 4 hearing / 355 senior records with source-byte hashes, Big5 decoding and unknown source dates preserved. Original 117 trust entries retained, plus only two restored unknown-date directories. Cache retirement owns only civic prefixes/scope; deployed full runtime notices include Hippocratic and copied MIT. Typecheck,218 unit tests,production build,budget402.04/116.72,focused4 browser tests,actual production cleanup,policy,audit0,schema/quality/provenance pass. Full documented Windows E2E:179 passed,1 expected skip,12 missing Windows canonical baselines; no functional failures or baseline changes. Commit/push only, no new PR/merge/deployment. See docs/release-closure-fixes-2026-11-03.md."
+    },
+    {
       "id": "maintenance-audit-verification-handoff",
       "name": "Release audit verification and handoff accuracy",
       "description": "Correct merged delivery status and verify the audit follow-up in the existing pinned Linux renderer without changing application/data contracts.",

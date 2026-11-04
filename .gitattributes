@@ -1,5 +1,10 @@
 # Original acquisition bytes and content-addressed snapshots must survive Git checkout unchanged.
 data/raw/senior-care-policy/** -text
 public/policy/senior-care-policy/** -text
+# Preserve official line endings and source whitespace verbatim.
+data/raw/hearing-centers/source.csv -text -whitespace
+data/raw/senior-services/source.csv -text -whitespace
+# Upstream license texts retain their original line endings in the distribution.
+public/THIRD_PARTY_NOTICES.txt -text -whitespace
 data/raw/senior-care-policy/*.html binary
 data/raw/senior-care-policy/*.pdf binary

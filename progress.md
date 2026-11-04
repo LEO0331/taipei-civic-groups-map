@@ -2,12 +2,12 @@
 
 ## Current State
 
-- Last updated: 2026-11-03 (Asia/Taipei).
-- Active task: seven-repository audit follow-up; canonical verification completed; evidence-only closeout on `codex/audit-civic-canonical-closeout`.
-- Base: refreshed `origin/main@1fd336ec9281bf58820d00cb7f15a42805ab2bf2`; PRs #68 and #69 are merged externally. No agent merge was performed.
-- Local gates: 211 unit tests, typecheck, production build, offline Policy 10 audit/verify, dependency audit (zero), and 401.79/116.63 kB budget passed. Windows browser result: 175 passed / 1 expected skip / 12 absent Windows baselines.
-- Canonical Linux [run 41396921714](https://github.com/LEO0331/taipei-civic-groups-map/actions/runs/41396921714) passed PR #69 head `5eb668befd3a21eec5846f5d647f9c52f7ee2d34`: 211 unit tests, 20 PDF tests, 187 E2E passes / 1 expected skip, all twelve unchanged screenshots; all four jobs green. Node 22.23.4 / Playwright 1.62.1 Noble; synthetic merge 1fbe448 has the exact submitted head tree. This docs-only closeout receives its own final-head checks on its Draft PR.
-- No source/data, runtime/dependency, analytical boundary or application behavior changes. No merge or deployment is claimed for this follow-up.
+- Last updated: 2026-11-04 (Asia/Taipei).
+- Active task: verified release-closure corrections on `codex/fix-civic-release-closure`: owned service-worker cleanup, restored official hearing/senior snapshots and deployed runtime notices.
+- Base: current `origin/main@e392a5bebf4f3137374268e862792aed7f7376e0`; PRs #68–#70 merged externally. This correction branch is commit/push only; no merge or deployment.
+- Current correction gates: 218 unit tests, typecheck, production build, offline Policy10 audit/verify, dependency audit (zero), and 402.04/116.72 kB budget passed. Focused desktop/mobile corrections: 4 passed; real production cleanup preserves foreign workers/caches. Full Windows suite: 179 passed / 1 expected skip / 12 missing Windows canonical baselines; no functional failures, no baseline changes.
+- Historical canonical Linux run 41396921714 passed the earlier PR #69 head with all twelve baselines. It is not substituted for canonical pixel verification of this new correction commit; the current Windows platform limitation is recorded above.
+- This correction scope restores only two existing directories, restricts worker cleanup ownership, and ships discoverable licenses. Unrelated source/public datasets, Policy10, dependency/runtime pins, analytical boundaries and canonical screenshots are unchanged. No merge or deployment is claimed.
 
 ## Historical current-state entry (2026-10-24)
 
@@ -21,6 +21,9 @@
 - Full evidence, actual selected IDs, source/snapshot hashes and risks: `docs/senior-care-policy-delivery.md`, `docs/senior-care-policy-results.json` and `docs/senior-care-policy-performance.json`.
 
 ## Latest Evidence
+
+- 2026-11-03: release-closure corrections restore 4 Big5 hearing-center records and 355 UTF-8 senior-service records from the original official resources; unknown source dates remain unknown. Worker activation/startup now preserve other applications caches and registrations. Exact production license texts and copied MIT attribution are emitted as a discoverable static artifact. Source/data boundaries, original 117 trust entries, Policy10 and runtime dependencies remain intact. Current local evidence: typecheck,218unit tests,build,budget402.04/116.72,focused4 desktop/mobile tests,actual production cleanup regression,policy,audit0,schema/quality/provenance checks passed. Full documented browser suite: 179 passed / 1 expected skip / 12 missing Windows canonical baselines, no functional failures; see docs/release-closure-fixes-2026-11-03.md.
+
 
 - 2026-10-24: final acquisition follow-up selects the latest clearly dated official PDF even when 115.08 remains on the page, rejects ambiguous/unparseable edition evidence, and preserves stage-only hashes/differences/diagnostics without promotion. Twenty offline Python tests pass; default fetch and exact accepted-snapshot rebuild pass. Attachment-label and PDF-header periods are separate. Snapshot/data/scenarios remain unchanged. Follow-up UI head `4e6501d` also passed full Linux CI `40002190989`; latest source-follow-up checks are linked on PR #66.
 

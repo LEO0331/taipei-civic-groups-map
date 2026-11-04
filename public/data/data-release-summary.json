@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 117,
+  "datasetDirectoryCount": 119,
   "datedDatasetCount": 68,
-  "unknownDateDatasetCount": 49,
+  "unknownDateDatasetCount": 51,
   "fetchFallbackDatasetCount": 0,
   "datasetsWithSourceDates": [
     "adult-influenza-vaccine-providers",
@@ -97,6 +97,7 @@
     "entrusted-public-asset-operations",
     "environmental-pesticide-vendors",
     "healthcare-welfare-budget",
+    "hearing-centers",
     "influenza-vaccine-providers-under3",
     "kindergarten-basic-evaluation-pass-records",
     "labor-pension-act-violations",
@@ -116,6 +117,7 @@
     "senior-care-institution-evaluations",
     "senior-group-meal-service-sites",
     "senior-service-site-courses",
+    "senior-services",
     "social-welfare-foundations",
     "specific-pet-business-evaluation-results",
     "sports-public-participation",

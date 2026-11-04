@@ -6,9 +6,9 @@
     "reviewMaxAgeDays": 365,
     "note": "Age bands are review triage only. They do not assert that a public-data snapshot is stale or current. Confirm the authoritative upstream resource before refreshing."
   },
-  "totalDatasetDirectoryCount": 117,
+  "totalDatasetDirectoryCount": 119,
   "datedDatasetCount": 68,
-  "unknownDateDatasetCount": 49,
+  "unknownDateDatasetCount": 51,
   "counts": {
     "recent": 24,
     "review": 14,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "datasetDirectoryCount": 117,
+  "datasetDirectoryCount": 119,
   "datedDatasetCount": 68,
   "fetchFallbackDatasetCount": 0,
   "entries": [
@@ -237,6 +237,11 @@
     },
     {
       "id": "healthcare-welfare-budget",
+      "fetchStatus": "current"
+    },
+    {
+      "id": "hearing-centers",
+      "sourceName": "臺北市聽力所",
       "fetchStatus": "current"
     },
     {
@@ -521,6 +526,11 @@
     },
     {
       "id": "senior-service-site-courses",
+      "fetchStatus": "current"
+    },
+    {
+      "id": "senior-services",
+      "sourceName": "銀髮服務機構",
       "fetchStatus": "current"
     },
     {

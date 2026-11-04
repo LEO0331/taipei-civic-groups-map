@@ -1,0 +1,16 @@
+{
+  "source": "銀髮服務機構",
+  "encoding": "UTF-8-SIG / UTF-8",
+  "sourceFields": [
+    "序號",
+    "機構類型",
+    "機構名稱",
+    "地址",
+    "行政區代碼",
+    "電話",
+    "立案日期"
+  ],
+  "inputRows": 355,
+  "outputRecords": 355,
+  "sourceSha256": "1b8895c210f48952da50fca195e16ecf6db93adc800e2c1efb9d2f2739bbc676"
+}

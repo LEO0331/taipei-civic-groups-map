@@ -1156,6 +1156,6 @@ export default function App() {
       </section>}
       </Suspense>
     </main>
-    <footer>{t.footer}</footer>
+    <footer>{t.footer}<p><a href={`${import.meta.env.BASE_URL}THIRD_PARTY_NOTICES.txt`}>{language === 'zh' ? '軟體授權與出處' : 'Software licenses and attribution'}</a></p></footer>
   </div>;
 }

@@ -20,7 +20,7 @@
 
 本儀表板呈現的是由公開資料產生的本機快照。名冊中的機構、地址、電話或歷史行政紀錄，**不**代表目前可用、符合資格、可預約、具有容量、價格、品質、安全、法律狀態、法規遵循、適合性或推薦。
 
-目前已提交的 Data Trust 證據追蹤 117 個靜態資料目錄：68 個有可讀取來源日期、49 個日期未知，且沒有標記為沿用舊快照的 fallback。未知日期會保持未知，不會推估。Cycle 3 的最終 release 驗證仍待完成；詳見 [Cycle 3 verification](docs/post-demo-cycle-3-verification-2026-09-22.md)。開啟外部地圖查詢時，選取的地址會傳送給該地圖服務商。
+目前已提交的 Data Trust 證據追蹤 119 個靜態資料目錄：68 個有可讀取來源日期、51 個日期未知，且沒有標記為沿用舊快照的 fallback。未知日期會保持未知，不會推估。Cycle 3 的最終 release 驗證仍待完成；詳見 [Cycle 3 verification](docs/post-demo-cycle-3-verification-2026-09-22.md)。開啟外部地圖查詢時，選取的地址會傳送給該地圖服務商。
 
 ## 目前 demo baseline
 
@@ -74,3 +74,9 @@ npm run data:verify:senior-care-policy
 ```
 
 只有明確指定 `data:fetch:senior-care-policy -- --refresh` 才會下載至暫存區，不自動取代已接受版本。PDF 重跑需 Python 與 `pip install -r scripts/senior-care-policy-requirements.txt`；執行 `python scripts/seniorCarePolicyPdf.py` 及 `python scripts/seniorCarePolicyPdf.test.py`。新版本須重新獨立查核。詳見[交付證據](docs/senior-care-policy-delivery.md)、[方法](docs/senior-care-policy-methodology.md)與[決策 MVP](docs/senior-care-policy-decision-mvp.zh-TW.md)。
+
+## 2026-11-03 發布查核修正
+
+既有聽力所與銀髮服務機構頁面已恢復原官方來源快照（4 筆與 355 筆），來源檔更新日期仍維持未知。僅針對這兩份資料新增 fetch／convert 指令並納入發布流程；原始下載位元組與來源欄位保留不變。原有 117 個 Data Trust 項目均保留，補回兩個原本缺漏的快照後總數為 119。
+
+正式建置會依實際安裝的正式環境套件產生完整授權文字，並保留 Civic Explorer 改作 MIT 出處。頁尾的「軟體授權與出處」可開啟部署後的 THIRD_PARTY_NOTICES.txt；其中包含 Hippocratic 2.1 原文。詳見[來源與驗證紀錄](docs/release-closure-fixes-2026-11-03.md)。

@@ -1,0 +1,14 @@
+{
+  "source": "臺北市聽力所",
+  "encoding": "CP950 / Big5-compatible",
+  "sourceFields": [
+    "序號",
+    "機構名稱",
+    "行政區域代碼",
+    "郵遞區號",
+    "地址"
+  ],
+  "inputRows": 4,
+  "outputRecords": 4,
+  "sourceSha256": "953c755ce1f94890e1c496678373caf936fe417a840875b4c6792fc3985035aa"
+}

@@ -59,7 +59,7 @@ test('Batch 31 source-date metadata is mirrored into Data Trust and raw provenan
   const manifest = JSON.parse(await readFile('public/data/data-trust-manifest.json', 'utf8'));
   const releaseSummary = JSON.parse(await readFile('public/data/data-release-summary.json', 'utf8'));
 
-  assert.equal(manifest.datasetDirectoryCount, 117);
+  assert.equal(manifest.datasetDirectoryCount, 119); // Original 117 plus two restored directory snapshots.
   assert.equal(
     manifest.datedDatasetCount,
     manifest.entries.filter((entry: { sourceUpdatedAt?: string }) => Boolean(entry.sourceUpdatedAt)).length,

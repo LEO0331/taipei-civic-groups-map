@@ -12,7 +12,7 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
   // pair a cached HTML document with a removed bundle and leave a blank page.
   // Remove legacy workers and their caches; GitHub Pages remains network-first.
   navigator.serviceWorker.getRegistrations().then((registrations) =>
-    Promise.all(registrations.map((registration) => registration.unregister())),
+    Promise.all(registrations.filter((registration) => registration.scope === new URL(import.meta.env.BASE_URL, location.origin).href).map((registration) => registration.unregister())),
   ).then(() => caches.keys()).then((keys) =>
     Promise.all(keys.filter((key) => key.startsWith('taipei-civic-groups-')).map((key) => caches.delete(key))),
   ).catch(() => { /* caching is optional */ });

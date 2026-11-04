@@ -248,6 +248,18 @@
       "datasetId": "water-pipe-installation-contractors",
       "status": "not_reviewed",
       "lastReviewedAt": null
+    },
+    {
+      "datasetId": "hearing-centers",
+      "status": "needs_manual_review",
+      "lastReviewedAt": "2026-11-03",
+      "notes": "Restored from the pre-existing official downloadable resource after reviewing raw CSV headers and conversion. Download time and source-byte hash are recorded separately; an authoritative source-file update timestamp has not been established and remains unknown."
+    },
+    {
+      "datasetId": "senior-services",
+      "status": "needs_manual_review",
+      "lastReviewedAt": "2026-11-03",
+      "notes": "Restored from the pre-existing official downloadable resource after reviewing raw CSV headers and conversion. Download time and source-byte hash are recorded separately; an authoritative source-file update timestamp has not been established and remains unknown."
     }
   ]
 }

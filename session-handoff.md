@@ -1,3 +1,17 @@
+# Session handoff — verified release-closure corrections
+
+Updated 2026-11-04 (Asia/Taipei). Branch: `codex/fix-civic-release-closure`; base: `e392a5bebf4f3137374268e862792aed7f7376e0`. Commit/push only; no new PR, merge or deployment is performed for this correction scope.
+
+Verified defects corrected: legacy worker activation deleted foreign origin caches; production startup unregistered foreign workers; two existing directory snapshots were absent; deployed license notices were missing. Only civic cache names and the exact civic worker scope are retired now. Source-backed hearing/senior snapshots contain 4/355 readable records; raw bytes, official fields and unknown source dates are retained. Exact installed production license texts and copied MIT attribution are emitted as a static artifact linked from the bilingual footer.
+
+Verification so far: typecheck, 218 unit tests, build, unchanged 450/130 kB budget (402.04/116.72), source schema/release/quality/provenance guards, offline Policy10 audit/verify and dependency audit0 pass. Four focused desktop/mobile tests pass. The actual built application's cleanup also passed a browser regression preserving foreign caches and registrations. Full documented Windows browser suite completed: 179 passed / 1 expected skip / 12 missing Windows screenshot baselines. All behavioral checks pass; canonical Linux pixel validation for this correction commit remains unverified and its baselines are untouched.
+
+Data Trust retains the original 117 entries and adds only the two restored, unknown-date directories: 119 total / 68 dated / 51 unknown / 0 fallback. Policy10 snapshots and all unrelated raw/generated datasets are unchanged. See [source hashes, reviewed admission and verification](docs/release-closure-fixes-2026-11-03.md). Next review must use this branch's exact commit and run canonical Linux screenshots if required for release signoff; no successful deployment of these fixes is claimed.
+
+The original developer checkout's three uncommitted user files remain preserved and are excluded from this branch. No broad source fetch, source-date inference, dependency update, analytical change or screenshot refresh is authorized by this handoff.
+
+## Previous evidence-only handoff (historical)
+
 # Session handoff — release audit follow-up
 
 Updated 2026-11-03 (Asia/Taipei).

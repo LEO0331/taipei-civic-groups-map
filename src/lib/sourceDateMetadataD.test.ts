@@ -34,10 +34,10 @@ test('Batch 35 source-date metadata D is mirrored into Data Trust and raw proven
   const manifest = JSON.parse(await readFile('public/data/data-trust-manifest.json', 'utf8'));
   const releaseSummary = JSON.parse(await readFile('public/data/data-release-summary.json', 'utf8'));
 
-  assert.equal(manifest.datasetDirectoryCount, 117);
+  assert.equal(manifest.datasetDirectoryCount, 119); // Original 117 plus two restored directory snapshots.
   assert.equal(manifest.datedDatasetCount, 68);
   assert.equal(releaseSummary.datedDatasetCount, 68);
-  assert.equal(releaseSummary.unknownDateDatasetCount, 49);
+  assert.equal(releaseSummary.unknownDateDatasetCount, 51);
   assert.equal(releaseSummary.fetchFallbackDatasetCount, 0);
 
   const byId = new Map(manifest.entries.map((entry: { id: string }) => [entry.id, entry]));

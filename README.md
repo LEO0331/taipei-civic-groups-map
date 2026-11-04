@@ -20,7 +20,7 @@ The interface uses six purposeful presentation families—healthcare standard, r
 
 This dashboard presents generated local snapshots of public records. A listed organization, institution, address, phone number, or historical administrative record does **not** establish current availability, eligibility, appointment capacity, prices, quality, safety, legal status, compliance, suitability, or a recommendation.
 
-Checked-in Data Trust evidence now tracks 117 static directories: 68 have a readable source date, 49 remain unknown, and none is marked as a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. The final Cycle 3 release verification is still pending; see the [Cycle 3 verification note](docs/post-demo-cycle-3-verification-2026-09-22.md). Opening an external map lookup shares the selected address with that map provider.
+Checked-in Data Trust evidence now tracks 119 static directories: 68 have a readable source date, 51 remain unknown, and none is marked as a reused-snapshot fallback. Unknown dates are shown as unknown rather than estimated. The final Cycle 3 release verification is still pending; see the [Cycle 3 verification note](docs/post-demo-cycle-3-verification-2026-09-22.md). Opening an external map lookup shares the selected address with that map provider.
 
 ## Current demo baseline
 
@@ -74,3 +74,9 @@ npm run data:verify:senior-care-policy
 ```
 
 Explicit `data:fetch:senior-care-policy -- --refresh` stages sources without promoting them. PDF re-extraction requires Python and `pip install -r scripts/senior-care-policy-requirements.txt`; run `python scripts/seniorCarePolicyPdf.py` and `python scripts/seniorCarePolicyPdf.test.py`. New editions require independent admission review. See the [delivery evidence](docs/senior-care-policy-delivery.md), [methodology](docs/senior-care-policy-methodology.md) and [Traditional Chinese decision MVP](docs/senior-care-policy-decision-mvp.zh-TW.md).
+
+## Release-closure corrections (2026-11-03)
+
+The existing hearing-center and senior-service views now include source-backed snapshots (4 and 355 records), recovered through their original official resources. Their source-file dates remain unknown. Focused refresh commands are `npm run data:fetch:hearing-centers` / `npm run data:convert:hearing-centers` and `npm run data:fetch:senior-services` / `npm run data:convert:senior-services`; the aggregate release commands include both. Preserve raw bytes and review schema/release/quality guards before conversion.
+
+Production builds generate public/THIRD_PARTY_NOTICES.txt from the exact installed production packages and retained Civic Explorer attribution. The footer links to this deployed file, including the full Hippocratic 2.1 and adapted-artwork MIT texts. See [verification and provenance](docs/release-closure-fixes-2026-11-03.md).

@@ -1,3 +1,4 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { access, copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
@@ -40,7 +41,7 @@ async function copyLocalFiles(paths: string[]) {
   return resources;
 }
 async function officialResources() {
-  const response = await fetch(sourcePage);
+  const response = await fetchUpstream(sourcePage);
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const html = (await response.text()).replaceAll('\\u0026', '&');
   return [...html.matchAll(new RegExp(`(/api/dataset/${datasetId}/resource/[0-9a-f-]{36}/download[^"'<>]*)`, 'ig'))]
@@ -53,7 +54,7 @@ let resources = await copyLocalFiles(locals.length ? locals : defaultLocals);
 if (!resources.length) {
   for (const url of await officialResources()) {
     try {
-      const response = await fetch(url);
+      const response = await fetchUpstream(url);
       if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
       const name = decodeURIComponent(url.split('/').at(-2) ?? 'consumer-dispute-absence');
       const fileName = `${sanitize(name)}.csv`, destination = join(rawDir, fileName);

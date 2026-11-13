@@ -8,8 +8,6 @@ on:
 permissions:
   contents: read
   actions: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -156,6 +154,9 @@ jobs:
           retention-days: 7
 
   deploy:
+    permissions:
+      pages: write
+      id-token: write
     needs:
       - release-build
       - e2e-desktop

@@ -1,6 +1,7 @@
 import { UI_FAMILIES } from './lib/uiFamilies';
 import { DatasetFamilyFrame } from './DatasetFamilyFrame';
 import { useEffect, useMemo, useState } from 'react';
+import { csvExportCell } from './lib/csvExport';
 
 type ProviderRecord = {
   id: string;
@@ -57,7 +58,7 @@ export default function TbContactScreeningPartnerProvidersModule({ language }: {
     const csv = [
       ['ID', 'City', 'Institution', 'Physician', 'Specialty', 'Source-recorded clinic information'],
       ...filtered.map((record) => [record.sourceSequenceNumber, record.cityName, record.institutionName, record.physicianName, record.specialtyRaw, record.clinicHoursRaw]),
-    ].map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(',')).join('\n');
+    ].map((row) => row.map(csvExportCell).join(',')).join('\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF', csv], { type: 'text/csv;charset=utf-8' }));
     const link = document.createElement('a');
     link.href = url;

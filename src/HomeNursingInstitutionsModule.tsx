@@ -2,6 +2,7 @@ import { UI_FAMILIES } from './lib/uiFamilies';
 import { DatasetFamilyFrame } from './DatasetFamilyFrame';
 import AccessibleTabs from './AccessibleTabs';
 import { useEffect, useMemo, useState } from 'react';
+import { csvExportCell } from './lib/csvExport';
 
 type Record = { id: string; sourceSequenceNumber: string; cityCode: string; institutionName: string; address: string; districtName: string; phone: string; hasPhone: boolean; googleMapsQuery: string };
 type Report = { duplicates: string[]; missingNames: string[]; missingAddresses: string[]; malformedPhones: string[]; unknownCityCodes: string[]; unresolvedDistricts: string[] };
@@ -65,8 +66,7 @@ export default function HomeNursingInstitutionsModule({ language }: { language: 
   const copy = (value: string) => value && <button type="button" className="copy-button" aria-label={t('複製', 'Copy')} onClick={() => navigator.clipboard?.writeText(value)}>{t('複製', 'Copy')}</button>;
   const mapLink = (query: string) => query ? <a target="_blank" rel="noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`}>{t('地圖查詢', 'Map lookup')}</a> : missing;
   const download = () => {
-    const quote = (value: string) => `"${value.replaceAll('"', '""')}"`;
-    const contents = [['ID', 'Institution name', 'District', 'Address', 'Phone', 'City code'], ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.address, record.phone, record.cityCode])].map((line) => line.map(quote).join(',')).join('\n');
+    const contents = [['ID', 'Institution name', 'District', 'Address', 'Phone', 'City code'], ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.address, record.phone, record.cityCode])].map((line) => line.map(csvExportCell).join(',')).join('\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF', contents], { type: 'text/csv;charset=utf-8' }));
     const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'home-nursing-institutions-filtered.csv'; anchor.click(); URL.revokeObjectURL(url);
   };

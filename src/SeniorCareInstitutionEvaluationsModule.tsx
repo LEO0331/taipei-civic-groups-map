@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import AccessibleTabs from './AccessibleTabs';
 import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';
+import { csvExportCell } from './lib/csvExport';
 
 type Evaluation = { rocYear: number; gregorianYear: number; resultRaw: string; resultCategory: string; sourceStatus: string };
 type Institution = { id: string; institutionName: string; postalCode: string; districtName: string; address: string; phone: string; hasAddress: boolean; hasPhone: boolean; evaluations: Evaluation[]; latestEvaluationYear: number | null; latestEvaluationResultRaw: string; latestEvaluationCategory: string; googleMapsQuery: string; sourceValues: Record<string, string> };
@@ -71,7 +72,7 @@ export default function SeniorCareInstitutionEvaluationsModule({ language }: { l
   const csv = () => {
     const header = ['Institution', 'District', 'Postal code', 'Address', 'Phone', 'Latest year in dataset', 'Latest result in dataset', ...years.map(String)];
     const rows = filtered.map((record) => [record.institutionName, record.districtName, record.postalCode, record.address, record.phone, record.latestEvaluationYear ?? '', record.latestEvaluationResultRaw, ...years.map((value) => record.evaluations.find((evaluation) => evaluation.gregorianYear === value)?.resultRaw ?? '')]);
-    const content = [header, ...rows].map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(',')).join('\n');
+    const content = [header, ...rows].map((row) => row.map(csvExportCell).join(',')).join('\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF', content], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'senior-welfare-institution-evaluations-filtered.csv'; link.click(); URL.revokeObjectURL(url);
   };
   const chart = (title: string, data: Array<{ label: string; value: number }>) => <section className="chart"><h3>{title}</h3><div className="bars">{data.map((item) => <div className="bar-row" key={item.label}><span>{item.label}</span><b>{item.value}</b></div>)}</div></section>;

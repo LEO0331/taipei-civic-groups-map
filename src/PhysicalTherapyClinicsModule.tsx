@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { UI_FAMILIES } from './lib/uiFamilies';
 import AccessibleTabs, { AccessibleTabPanel } from './AccessibleTabs';
+import { csvExportCell } from './lib/csvExport';
 
 type Language = 'zh' | 'en';
 type Clinic = {
@@ -15,7 +16,6 @@ const missing = '—';
 function val(value: string) { return value || missing; }
 function mapUrl(query: string) { return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`; }
 function telHref(value: string) { const digits = value.replace(/[^\d+]/g, ''); return digits.length >= 7 ? `tel:${digits}` : ''; }
-function csvEscape(value: string) { return `"${value.replaceAll('"', '""')}"`; }
 
 function BarChart({ title, rows }: { title: string; rows: Array<{ label: string; value: number }> }) {
   const max = Math.max(...rows.map((row) => row.value), 1);
@@ -74,7 +74,7 @@ export default function PhysicalTherapyClinicsModule({ language }: { language: L
   const paged = filtered.slice((page - 1) * pageSize, page * pageSize);
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   const copy = async (key: string, text: string) => { if (!text) return; await navigator.clipboard?.writeText(text); setCopied(key); window.setTimeout(() => setCopied(''), 1200); };
-  const exportCsv = () => { const headers = ['ID', 'Clinic', 'District', 'Postal code', 'Address', 'Telephone']; const lines = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.postalCode, record.address, record.phoneRaw])].map((line) => line.map((value) => csvEscape(value)).join(',')); const blob = new Blob([`\uFEFF${lines.join('\n')}`], { type: 'text/csv;charset=utf-8' }); const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'taipei-physical-therapy-clinics-filtered.csv'; anchor.click(); URL.revokeObjectURL(url); };
+  const exportCsv = () => { const headers = ['ID', 'Clinic', 'District', 'Postal code', 'Address', 'Telephone']; const lines = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.postalCode, record.address, record.phoneRaw])].map((line) => line.map((value) => csvExportCell(value)).join(',')); const blob = new Blob([`\uFEFF${lines.join('\n')}`], { type: 'text/csv;charset=utf-8' }); const url = URL.createObjectURL(blob); const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'taipei-physical-therapy-clinics-filtered.csv'; anchor.click(); URL.revokeObjectURL(url); };
   const tabs: Array<[View, string, string]> = [['find', zh ? '找物理治療' : 'Find Physical Therapy', '01'], ['directory', zh ? '診所名錄' : 'Clinic Directory', '02'], ['districts', zh ? '行政區分布' : 'District Distribution', '03'], ['contact', zh ? '聯絡資訊' : 'Contact Information', '04'], ['quality', zh ? '資料品質' : 'Data Quality', '05'], ['notes', zh ? '資料說明' : 'Data Notes', '06']];
   const reset = () => { setSearch(''); setDistrict(''); setPostalCode(''); setPhoneFilter(''); setAddressFilter(''); };
   if (loading) return <section className="workspace physical-therapy-module" data-ui-family={UI_FAMILIES.locationDirectory}><p className="module-loading" role="status">{zh ? '正在載入物理治療所資料…' : 'Loading physical therapy clinic data…'}</p></section>;

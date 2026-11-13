@@ -1,9 +1,10 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { createHash } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const sourceUrl = 'https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=05d2c646-b36c-4fd0-9613-8a870147309f';
-const response = await fetch(sourceUrl);
+const response = await fetchUpstream(sourceUrl);
 if (!response.ok) throw new Error(`Hearing-center source HTTP ${response.status}`);
 const bytes = new Uint8Array(await response.arrayBuffer());
 const output = join(process.cwd(), 'data/raw/hearing-centers');

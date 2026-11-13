@@ -1,3 +1,4 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { access, copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
@@ -14,7 +15,7 @@ async function metadata(sourceUrl: string, notes: string[], failure?: string) {
   await writeFile(metadataPath, JSON.stringify({ sourceUrl, resourceName: '臺北市企業營運總部分布圖', downloadedAt: new Date().toISOString(), fileSize: file.size, encoding: 'UTF-8-SIG with Big5 / CP950 fallback at conversion', notes, failure, previous }, null, 2));
 }
 async function officialUrl() {
-  const response = await fetch(sourcePage); if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  const response = await fetchUpstream(sourcePage); if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const html = (await response.text()).replaceAll('\\u0026', '&');
   const resource = html.match(new RegExp(`/api/dataset/${datasetId}/resource/[0-9a-f-]{36}/download[^"'<>]*`, 'i'))?.[0];
   return resource && `https://data.taipei${resource}`;
@@ -27,7 +28,7 @@ if (localPath) { await copyFile(localPath, destination); await metadata('local-f
 else {
   try {
     const resolved = url ?? await officialUrl(); if (!resolved) throw new Error('No CSV resource found in dataset page.');
-    const response = await fetch(resolved); if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
+    const response = await fetchUpstream(resolved, { manualUrl: Boolean(url) }); if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
     await writeFile(destination, Buffer.from(await response.arrayBuffer())); await metadata(resolved, [url ? 'Official resource URL supplied with --url.' : 'Official resource discovered from dataset page.']);
   } catch (error) {
     const failure = error instanceof Error ? error.message : String(error);

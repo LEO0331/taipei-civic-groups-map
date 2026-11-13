@@ -3,6 +3,7 @@ import { DatasetFamilyFrame } from './DatasetFamilyFrame';
 import AccessibleTabs from './AccessibleTabs';
 import SourceFields from './SourceFields';
 import { useEffect, useMemo, useState } from 'react';
+import { csvExportCell } from './lib/csvExport';
 
 type Institution = {
   id: string;
@@ -181,9 +182,8 @@ export default function PediatricMedicalInstitutionsModule({ language }: { langu
   const copyButton = (value: string) => value ? <button type="button" className="copy-button" onClick={() => void copyValue(value)}>{copied === value ? t.copied : t.copy}</button> : null;
   const exportCsv = () => {
     const header = ['ID', 'Institution name', 'District', 'Postal code', 'Address', 'Telephone'];
-    const quote = (value: string) => `"${value.replaceAll('"', '""')}"`;
     const csv = [header, ...sorted.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.postalCode, record.address, record.phoneRaw])]
-      .map((line) => line.map((value) => quote(value ?? '')).join(',')).join('\n');
+      .map((line) => line.map((value) => csvExportCell(value ?? '')).join(',')).join('\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF', csv], { type: 'text/csv;charset=utf-8' }));
     const link = document.createElement('a'); link.href = url; link.download = 'pediatric-medical-institutions-filtered.csv'; link.click(); URL.revokeObjectURL(url);
   };

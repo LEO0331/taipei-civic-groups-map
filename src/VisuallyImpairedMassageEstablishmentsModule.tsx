@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import AccessibleTabs from './AccessibleTabs';
 import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';
+import { csvExportCell } from './lib/csvExport';
 
 interface VisuallyImpairedMassageEstablishment {
   id: string;
@@ -41,7 +42,7 @@ export default function VisuallyImpairedMassageEstablishmentsModule({ language }
   const sorted = useMemo(() => [...filtered].sort((a, b) => sort === 'year' ? (b.year ?? 0) - (a.year ?? 0) : sort === 'district' ? a.districtName.localeCompare(b.districtName, 'zh-Hant') : a.establishmentName.localeCompare(b.establishmentName, 'zh-Hant')), [filtered, sort]);
   const pageSize = 25; const pages = Math.max(1, Math.ceil(sorted.length / pageSize)); const rows = sorted.slice((Math.min(page, pages) - 1) * pageSize, Math.min(page, pages) * pageSize);
   const reset = (action: () => void) => { action(); setPage(1); };
-  const downloadCsv = () => { const headers = ['ID', 'Year', 'Establishment', 'District', 'Address', 'Opening hours']; const value = (text: string | number | null) => `"${String(text ?? '').replaceAll('"', '""')}"`; const content = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.yearRaw, record.establishmentName, record.districtName, record.address, record.openingHoursRaw])].map((row) => row.map(value).join(',')).join('\n'); const url = URL.createObjectURL(new Blob(['\uFEFF', content], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'visually-impaired-massage-establishments-filtered.csv'; link.click(); URL.revokeObjectURL(url); };
+  const downloadCsv = () => { const headers = ['ID', 'Year', 'Establishment', 'District', 'Address', 'Opening hours']; const content = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.yearRaw, record.establishmentName, record.districtName, record.address, record.openingHoursRaw])].map((row) => row.map(csvExportCell).join(',')).join('\n'); const url = URL.createObjectURL(new Blob(['\uFEFF', content], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'visually-impaired-massage-establishments-filtered.csv'; link.click(); URL.revokeObjectURL(url); };
   const mapLink = (address: string) => address ? <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} target="_blank" rel="noreferrer">{zh ? '地圖查詢' : 'Map lookup'}</a> : MISSING;
   if (loadError) return <section className="workspace"><div className="notice">{zh ? '無法載入本機資料檔。' : 'The local data file could not be loaded.'}</div></section>;
   return <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow="DISABILITY EMPLOYMENT / COMMUNITY SERVICES" title={zh ? '視障按摩院所名冊' : 'Visually Impaired Massage Establishments'} description={zh ? '公開歷年名冊與行政區彙整；僅提供外部地址查詢，不建立精確地圖標記。' : 'Public annual directory and district summaries; external address lookup only, with no exact map markers.'} />

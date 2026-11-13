@@ -1,3 +1,4 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { access, copyFile, mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
@@ -41,7 +42,7 @@ if (local) {
 const resources: Resource[] = [];
 const failures: Array<{ name?: string; url: string; error: string }> = [];
 try {
-  const response = await fetch(sourcePage);
+  const response = await fetchUpstream(sourcePage);
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   resources.push(...discoverResources(await response.text()));
   if (!resources.length) throw new Error('No monthly CSV resources found in dataset page.');
@@ -58,7 +59,7 @@ for (const resource of resources) {
     continue;
   }
   try {
-    const response = await fetch(resource.url);
+    const response = await fetchUpstream(resource.url);
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     await writeFile(destination, Buffer.from(await response.arrayBuffer()));
     const file = await stat(destination);

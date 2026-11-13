@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import AccessibleTabs from './AccessibleTabs';
 import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';
+import { csvExportCell } from './lib/csvExport';
 
 export interface GasWaterHeaterInstallerRecord {
   id: string;
@@ -143,8 +144,7 @@ export default function ApprovedGasWaterHeaterInstallersModule({ language }: { l
   const reset = (action: () => void) => { action(); setPage(1); };
   const downloadCsv = () => {
     const headers = ['Installer business', 'District', 'Address', 'Phone', 'Responsible person', 'Technician', 'Certificate number', 'Certificate effective date', 'Employment date', 'Latest training date'];
-    const escape = (value: string) => `"${value.replaceAll('"', '""')}"`;
-    const csv = [headers, ...filtered.map((r) => [r.installerName, r.districtName, r.address, r.phone, r.responsiblePerson, r.technicianName, r.technicianCertificateNumber, r.certificateEffectiveDate, r.employmentDate, r.latestTrainingDate])].map((row) => row.map(escape).join(',')).join('\n');
+    const csv = [headers, ...filtered.map((r) => [r.installerName, r.districtName, r.address, r.phone, r.responsiblePerson, r.technicianName, r.technicianCertificateNumber, r.certificateEffectiveDate, r.employmentDate, r.latestTrainingDate])].map((row) => row.map(csvExportCell).join(',')).join('\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF', csv], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'approved-gas-water-heater-installers-filtered.csv'; link.click(); URL.revokeObjectURL(url);
   };
   const filterLabel = (label: string, control: ReactNode) => <label>{label}{control}</label>;

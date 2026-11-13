@@ -1,3 +1,4 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { access, copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
@@ -21,7 +22,7 @@ async function writeMetadata(sourceUrl: string, notes: string[], failure?: strin
 }
 
 async function discoverOfficialCsvUrl() {
-  const response = await fetch(sourcePage);
+  const response = await fetchUpstream(sourcePage);
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const html = (await response.text()).replaceAll('\\u0026', '&');
   const resource = html.match(new RegExp(`/api/dataset/${datasetId}/resource/[0-9a-f-]{36}/download[^"'<>]*`, 'i'))?.[0];
@@ -43,9 +44,7 @@ if (local) {
   await writeMetadata('local-file', [`Copied from ${basename(local)}`]);
   console.log(`Copied ${basename(local)} to ${destination}.`);
 } else if (url) {
-  const parsedUrl = new URL(url);
-  if (!['http:', 'https:'].includes(parsedUrl.protocol)) throw new Error('Download URL must use HTTP or HTTPS.');
-  const response = await fetch(url);
+  const response = await fetchUpstream(url, { manualUrl: true });
   if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
   await writeFile(destination, Buffer.from(await response.arrayBuffer()));
   await writeMetadata(url, ['Official resource URL supplied with --url.']);
@@ -54,7 +53,7 @@ if (local) {
   try {
     const officialUrl = await discoverOfficialCsvUrl();
     if (!officialUrl) throw new Error('No CSV resource found in dataset page.');
-    const response = await fetch(officialUrl);
+    const response = await fetchUpstream(officialUrl);
     if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
     await writeFile(destination, Buffer.from(await response.arrayBuffer()));
     await writeMetadata(officialUrl, ['Official resource discovered from dataset page.']);

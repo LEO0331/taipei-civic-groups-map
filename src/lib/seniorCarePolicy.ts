@@ -1,3 +1,4 @@
+import { csvExportCell } from './csvExport';
 import type { PolicyCandidate, PolicyConfig, PolicyScenario, PolicySnapshot } from '../types/seniorCarePolicy';
 export const DEFAULT_POLICY_CONFIG: PolicyConfig = { mode: 'A', capacity: 5, strategy: 'evidence', sourceScope: 'broad', category: 'all', issueScope: 'all', district: '' };
 export const normalizePolicyText = (value: string) => value.normalize('NFKC').replace(/台/g, '臺').replace(/㇐/g, '一').replace(/[\s\u3000]/g, '').replace(/[（]/g, '(').replace(/[）]/g, ')');
@@ -74,15 +75,11 @@ export function policyBriefing(snapshot: PolicySnapshot, snapshotId: string, exa
     return { title: 'Administrative Investigation Briefing / 行政查核情境摘要', snapshotId, exactFileHash, policyId: snapshot.policyId, analysisDate: snapshot.analysisDate, referencePeriod: snapshot.referencePeriod, candidateGrain: scenario.config.mode === 'A' ? 'published-site-row' : 'published-village-row', methodVersion: snapshot.methodVersion, schemaVersion: snapshot.schemaVersion, sources: snapshot.sources,
         scenario, assumptions: ['District balancing is administrative representation, not care need.', 'Published session bands are not operating hours or capacity.'], limitations: snapshot.limitations };
 }
-export function safePolicyCsvCell(value: unknown): string {
-    const text = String(value ?? '');
-    return `"${(/^[\s\u0000-\u001f]*[=+@-]/.test(text) ? "'" + text : text).replace(/"/g, '""')}"`;
-}
 export function policyCsv(snapshot: PolicySnapshot, snapshotId: string, hash: string, scenario: PolicyScenario): string {
     const columns = ['snapshot_id', 'sha256', 'method', 'mode', 'strategy', 'capacity', 'eligible_count', 'used', 'candidate_id', 'source', 'edition_hash', 'source_row', 'page', 'district', 'village', 'type', 'tier', 'reasons', 'excluded_ids', 'limitations', 'schema_version', 'policy_id', 'analysis_date', 'reference_period', 'candidate_grain', 'configuration', 'source_manifest', 'assumptions'];
     const shared = [snapshotId, hash, snapshot.methodVersion, scenario.config.mode, scenario.config.strategy, scenario.config.capacity, scenario.eligibleCount, scenario.used];
     const rows = scenario.selected.map(r => [...shared, r.id, r.source, r.editionHash, r.serial, r.page, r.district, r.village, r.rawType, r.tier, r.reasons.join('|'), JSON.stringify(scenario.excluded), snapshot.limitations.join(' | ')]);
     if (!rows.length)
         rows.push([...shared, '', '', '', '', '', '', '', '', '', '', JSON.stringify(scenario.excluded), snapshot.limitations.join(' | ')]);
-    return '\ufeff' + [columns, ...rows.map(row => [...row, snapshot.schemaVersion, snapshot.policyId, snapshot.analysisDate, snapshot.referencePeriod, scenario.config.mode === 'A' ? 'published-site-row' : 'published-village-row', JSON.stringify(scenario.config), JSON.stringify(snapshot.sources), 'Administrative representation, not care need; session bands are not capacity.'])].map(row => row.map(safePolicyCsvCell).join(',')).join('\r\n');
+    return '\ufeff' + [columns, ...rows.map(row => [...row, snapshot.schemaVersion, snapshot.policyId, snapshot.analysisDate, snapshot.referencePeriod, scenario.config.mode === 'A' ? 'published-site-row' : 'published-village-row', JSON.stringify(scenario.config), JSON.stringify(snapshot.sources), 'Administrative representation, not care need; session bands are not capacity.'])].map(row => row.map(csvExportCell).join(',')).join('\r\n');
 }

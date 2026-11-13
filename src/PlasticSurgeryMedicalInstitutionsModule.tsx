@@ -3,6 +3,7 @@ import { DatasetFamilyFrame } from './DatasetFamilyFrame';
 import AccessibleTabs from './AccessibleTabs';
 import SourceFields from './SourceFields';
 import { useEffect, useMemo, useState } from 'react';
+import { csvExportCell } from './lib/csvExport';
 
 type Institution = { id: string; sourceSequenceNumber: string; institutionName: string; postalCode: string; districtName: string; address: string; phone: string; hasAddress: boolean; hasPhone: boolean; externalMapQuery: string; sourceValues: Record<string, string> };
 type Summary = { sourceFileUpdatedAt?: string; metadataUpdatedAt?: string; sourceUrl?: string };
@@ -22,7 +23,7 @@ export default function PlasticSurgeryMedicalInstitutionsModule({ language }: { 
   const pages = Math.max(1, Math.ceil(sorted.length / 25)); const currentPage = Math.min(page, pages); const rows = sorted.slice((currentPage - 1) * 25, currentPage * 25);
   const chart = (title: string, values: Array<{ label: string; value: number }>) => <section className="chart"><h3>{title}</h3><div className="bars">{values.map((item) => <div className="bar-row wide-label" key={item.label}><span>{item.label}</span><b>{item.value}</b></div>)}</div></section>;
   const copy = (value: string) => value && <button className="copy-button" type="button" aria-label={t('複製', 'Copy')} onClick={() => navigator.clipboard?.writeText(value)}>{t('複製', 'Copy')}</button>;
-  const download = () => { const header = ['ID', 'Institution name', 'District', 'Postal code', 'Address', 'Phone']; const quote = (value: string) => `"${value.replaceAll('"', '""')}"`; const csv = [header, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.postalCode, record.address, record.phone])].map((row) => row.map((value) => quote(value ?? '')).join(',')).join('\n'); const url = URL.createObjectURL(new Blob(['\uFEFF', csv], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'plastic-surgery-medical-institutions-filtered.csv'; link.click(); URL.revokeObjectURL(url); };
+  const download = () => { const header = ['ID', 'Institution name', 'District', 'Postal code', 'Address', 'Phone']; const csv = [header, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.postalCode, record.address, record.phone])].map((row) => row.map((value) => csvExportCell(value ?? '')).join(',')).join('\n'); const url = URL.createObjectURL(new Blob(['\uFEFF', csv], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'plastic-surgery-medical-institutions-filtered.csv'; link.click(); URL.revokeObjectURL(url); };
   const columns = [['id', t('ID', 'ID')], ['name', t('機構名稱', 'Institution name')], ['district', t('行政區', 'District')], ['postal', t('郵遞區號', 'Postal code')], ['address', t('地址', 'Address')], ['phone', t('電話', 'Phone')], ['map', t('地圖查詢', 'Map lookup')]];
   const show = (key: string) => !hidden.includes(key);
   if (failed) return <DatasetFamilyFrame family={UI_FAMILIES.healthcareStandard} className="workspace"><div className="notice">{t('無法載入本機資料檔。', 'The local data file could not be loaded.')}</div></DatasetFamilyFrame>;

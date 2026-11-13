@@ -22,6 +22,8 @@
 
 ## Latest Evidence
 
+- 2026-11-13: Scoped Pages/OIDC writes to deployment, shared CSV export cell protection across directory and Senior Care exports, and bounded HTTPS downloads in all 53 networked release fetchers. Node 22 typecheck, 226 unit tests, build, 402.47 / 116.87 kB entry budget, and desktop/mobile CSV checks passed. See docs/security-hardening-2026-11-13.md for verification and remaining limits.
+
 - 2026-11-03: release-closure corrections restore 4 Big5 hearing-center records and 355 UTF-8 senior-service records from the original official resources; unknown source dates remain unknown. Worker activation/startup now preserve other applications caches and registrations. Exact production license texts and copied MIT attribution are emitted as a discoverable static artifact. Source/data boundaries, original 117 trust entries, Policy10 and runtime dependencies remain intact. Current local evidence: typecheck,218unit tests,build,budget402.04/116.72,focused4 desktop/mobile tests,actual production cleanup regression,policy,audit0,schema/quality/provenance checks passed. Full documented browser suite: 179 passed / 1 expected skip / 12 missing Windows canonical baselines, no functional failures; see docs/release-closure-fixes-2026-11-03.md.
 
 

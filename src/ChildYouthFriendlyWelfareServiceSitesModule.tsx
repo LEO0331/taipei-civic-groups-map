@@ -3,6 +3,7 @@ import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';
 import SourceFields from './SourceFields';
 import { useEffect, useMemo, useState } from 'react';
+import { csvExportCell } from './lib/csvExport';
 
 type RecordItem = {
   id: string; institutionName: string; programmeName: string; phoneRaw: string; phone: string; address: string; districtName: string;
@@ -57,7 +58,7 @@ export default function ChildYouthFriendlyWelfareServiceSitesModule({ language }
   const copy = async (value: string) => { if (value && navigator.clipboard) await navigator.clipboard.writeText(value); };
   const exportCsv = () => {
     const headings = ['institutionName', 'programmeName', 'districtName', 'address', 'serviceAreaRaw', 'phone'];
-    const csv = [headings, ...filtered.map((record) => headings.map((key) => String(record[key as keyof RecordItem] ?? '').replaceAll('"', '""')))].map((row) => row.map((value) => `"${value}"`).join(',')).join('\n');
+    const csv = [headings, ...filtered.map((record) => headings.map((key) => record[key as keyof RecordItem] ?? ''))].map((row) => row.map(csvExportCell).join(',')).join('\n');
     const url = URL.createObjectURL(new Blob(['\uFEFF', csv], { type: 'text/csv;charset=utf-8' })); const link = document.createElement('a'); link.href = url; link.download = 'child-youth-friendly-welfare-service-sites-filtered.csv'; link.click(); URL.revokeObjectURL(url);
   };
   const tabs: Array<[View, string]> = [['find', text(zh, '尋找服務', 'Find a Service')], ['sites', text(zh, '服務據點', 'Service Sites')], ['programmes', text(zh, '服務方案', 'Programmes')], ['areas', text(zh, '服務區域', 'Service Areas')], ['districts', text(zh, '行政區分布', 'District Distribution')], ['contact', text(zh, '聯絡資訊', 'Contact Information')], ['quality', text(zh, '資料品質', 'Data Quality')], ['notes', text(zh, '資料說明', 'Data Notes')]];

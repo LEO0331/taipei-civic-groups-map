@@ -1,9 +1,10 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { createHash } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const sourceUrl = 'https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=f432adf0-0e92-473f-a81e-5d5e8ef75965';
-const response = await fetch(sourceUrl);
+const response = await fetchUpstream(sourceUrl);
 if (!response.ok) throw new Error(`Senior-service source HTTP ${response.status}`);
 const bytes = new Uint8Array(await response.arrayBuffer());
 const output = join(process.cwd(), 'data/raw/senior-services');

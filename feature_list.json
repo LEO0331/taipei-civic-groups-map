@@ -1,6 +1,14 @@
 {
   "features": [
     {
+      "id": "maintenance-security-hardening-2026-11-13",
+      "name": "CSV, Pages permissions, and release download hardening",
+      "description": "Protect directory CSV cells, scope Pages and OIDC write permissions to deployment, and constrain automated upstream downloads.",
+      "dependencies": ["maintenance-harness"],
+      "status": "done",
+      "evidence": "2026-11-13: Node 22 typecheck, 226 unit tests, production build, performance budget and desktop/mobile CSV downloads passed. Release helper verified against an official endpoint. See docs/security-hardening-2026-11-13.md for browser coverage and release verification limits."
+    },
+    {
       "id": "maintenance-release-closure-corrections",
       "name": "Cache ownership, missing directory snapshots and deployed notices",
       "description": "Correct verified cross-application cache cleanup, restore two existing official directory snapshots, and ship exact production license notices without changing analytical boundaries.",

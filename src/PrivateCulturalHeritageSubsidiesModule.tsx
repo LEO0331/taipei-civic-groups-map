@@ -7,6 +7,7 @@ import {
   type PrivateCulturalHeritageSubsidyRecord,
   type ProjectCategory,
 } from './lib/privateCulturalHeritageSubsidies';
+import { csvExportCell } from './lib/csvExport';
 
 type Language = 'zh' | 'en';
 type View = 'overview' | 'trends' | 'assets' | 'projects' | 'geography' | 'directory' | 'quality' | 'notes';
@@ -42,7 +43,6 @@ const median = (values: number[]) => {
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 };
 
-const csvCell = (value: string | number | null | undefined) => `"${String(value ?? '').replaceAll('"', '""')}"`;
 
 export default function PrivateCulturalHeritageSubsidiesModule({ language }: { language: Language }) {
   const [records, setRecords] = useState<PrivateCulturalHeritageSubsidyRecord[]>([]);
@@ -129,7 +129,7 @@ export default function PrivateCulturalHeritageSubsidiesModule({ language }: { l
     const csv = [headers, ...filtered.map((record) => [
       record.sourceValues['年度'], record.sourceValues['區域'], record.sourceValues['私有資產名稱'], record.sourceValues['同意補助項目'], record.sourceValues['核定補助經費'],
       record.gregorianYear, record.approvedProjectCategories.map((value) => categoryLabels[value].zh).join('；'), record.possibleHeritageRegistryMatch ? '可能' : '',
-    ])].map((row) => row.map(csvCell).join(',')).join('\n');
+    ])].map((row) => row.map(csvExportCell).join(',')).join('\n');
     const anchor = document.createElement('a');
     anchor.href = URL.createObjectURL(new Blob([`\uFEFF${csv}`], { type: 'text/csv;charset=utf-8' }));
     anchor.download = 'taipei-private-cultural-heritage-subsidies.csv';

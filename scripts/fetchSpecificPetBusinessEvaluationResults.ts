@@ -1,3 +1,4 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { access, copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
@@ -16,7 +17,7 @@ async function writeMetadata(resources: unknown[], failure?: string) {
   await writeFile(metadataPath, JSON.stringify({ sourceUrl: sourcePage, downloadedAt: new Date().toISOString(), resources, failure, previous }, null, 2));
 }
 async function officialUrls() {
-  const response = await fetch(sourcePage); if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  const response = await fetchUpstream(sourcePage); if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
   const html = (await response.text()).replaceAll('\\u0026', '&');
   return [...html.matchAll(new RegExp(`(\\d{3}年度臺北市特定寵物業評鑑成果)[\\s\\S]{0,800}?(/api/dataset/${datasetId}/resource/[0-9a-f-]{36}/download[^"'<>]*)`, 'gi'))].map((m) => ({ name: m[1], url: `https://data.taipei${m[2]}` }));
 }
@@ -37,7 +38,7 @@ if (locals.length) {
     for (const resource of discovered) {
       const destination = join(rawDir, fileName(resource.name));
       if (!force) try { await access(destination); resources.push({ ...resource, file: basename(destination), notes: ['Existing local CSV reused.'] }); continue; } catch { /* fetch */ }
-      const response = await fetch(resource.url); if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
+      const response = await fetchUpstream(resource.url, { manualUrl: urls.length > 0 }); if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
       await writeFile(destination, Buffer.from(await response.arrayBuffer()));
       const file = await stat(destination);
       resources.push({ ...resource, file: basename(destination), fileSize: file.size, notes: ['Downloaded resource.'] });

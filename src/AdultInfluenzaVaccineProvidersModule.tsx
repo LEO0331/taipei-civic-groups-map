@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { UI_FAMILIES } from './lib/uiFamilies';
 import AccessibleTabs, { AccessibleTabPanel } from './AccessibleTabs';
+import { csvExportCell } from './lib/csvExport';
 
 type Provider = { id: string; sourceSequenceNumber: string; districtCode: string; districtName: string; institutionName: string; address: string; phone: string; hasPhone: boolean; googleMapsQuery: string };
 type View = 'find' | 'districts' | 'directory' | 'quality' | 'notes';
 const dash = '—';
 function mapUrl(query: string) { return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`; }
-function csvEscape(value: string) { return `"${value.replaceAll('"', '""')}"`; }
 function telHref(value: string) { const digits = value.replace(/[^\d+]/g, ''); return digits.length >= 7 ? `tel:${digits}` : ''; }
 function BarChart({ title, rows }: { title: string; rows: Array<{ label: string; value: number }> }) { const max = Math.max(1, ...rows.map((row) => row.value)); return <article className="ivp-chart"><div className="ivp-chart-title"><h3>{title}</h3><span>{rows.reduce((sum, row) => sum + row.value, 0).toLocaleString()}</span></div><div className="ivp-bars">{rows.map((row) => <div className="ivp-bar" key={row.label}><span>{row.label}</span><div><i style={{ width: `${row.value ? Math.max(3, row.value / max * 100) : 0}%` }} /></div><b>{row.value}</b></div>)}</div></article>; }
 
@@ -53,7 +53,7 @@ export default function AdultInfluenzaVaccineProvidersModule({ language }: { lan
   const updateFilter = (action: () => void) => { action(); setPage(1); };
   const clear = () => { setSearch(''); setDistrict(''); setPhone(''); setAddress(''); setPage(1); };
   const copy = async (key: string, value: string) => { if (!value) return; await navigator.clipboard?.writeText(value); setCopied(key); window.setTimeout(() => setCopied(''), 1200); };
-  const exportCsv = () => { const headers = ['ID', 'Institution', 'District', 'Address', 'Phone']; const lines = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.address, record.phone])].map((row) => row.map((value) => csvEscape(value ?? '')).join(',')); const url = URL.createObjectURL(new Blob([`\uFEFF${lines.join('\n')}`], { type: 'text/csv;charset=utf-8' })); const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'adult-influenza-vaccine-providers-filtered.csv'; anchor.click(); URL.revokeObjectURL(url); };
+  const exportCsv = () => { const headers = ['ID', 'Institution', 'District', 'Address', 'Phone']; const lines = [headers, ...filtered.map((record) => [record.sourceSequenceNumber, record.institutionName, record.districtName, record.address, record.phone])].map((row) => row.map((value) => csvExportCell(value ?? '')).join(',')); const url = URL.createObjectURL(new Blob([`\uFEFF${lines.join('\n')}`], { type: 'text/csv;charset=utf-8' })); const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'adult-influenza-vaccine-providers-filtered.csv'; anchor.click(); URL.revokeObjectURL(url); };
   const tabs: Array<[View, string, string]> = [['find', t('找成人流感疫苗院所', 'Find a Vaccine Provider'), '01'], ['districts', t('行政區分布', 'District Distribution'), '02'], ['directory', t('院所名錄', 'Provider Directory'), '03'], ['quality', t('資料品質', 'Data Quality'), '04'], ['notes', t('資料說明', 'Data Notes'), '05']];
 
   if (loading) return <section className="workspace influenza-provider-module" data-ui-family={UI_FAMILIES.healthcareRichDirectory}><p className="module-loading" role="status">{t('正在載入成人流感疫苗院所資料…', 'Loading adult influenza vaccine provider data…')}</p></section>;

@@ -3,6 +3,7 @@ import { DatasetFamilyFrame } from './DatasetFamilyFrame';
 import AccessibleTabs from './AccessibleTabs';
 import { useEffect, useMemo, useState } from 'react';
 import { fullPhone, normalizeTravelMedicineText, type MpoxVaccinationStatus, type TravelMedicineClinicRecord } from './lib/travelMedicineClinics';
+import { csvExportCell } from './lib/csvExport';
 
 type Language = 'zh' | 'en';
 type View = 'find' | 'directory' | 'mpox' | 'districts' | 'quality' | 'notes';
@@ -17,7 +18,6 @@ const mpoxLabels: Record<MpoxVaccinationStatus, { zh: string; en: string }> = {
 const viewLabels: Record<View, { zh: string; en: string }> = {
   find: { zh: '尋找旅遊醫學服務', en: 'Find Travel Medicine Services' }, directory: { zh: '醫療機構名冊', en: 'Institution Directory' }, mpox: { zh: 'M痘自費接種', en: 'Mpox Vaccination' }, districts: { zh: '行政區分布', en: 'District Distribution' }, quality: { zh: '資料品質', en: 'Data Quality' }, notes: { zh: '資料說明', en: 'Data Notes' },
 };
-const csvCell = (value: string | null | undefined) => `"${(value ?? '').replaceAll('"', '""')}"`;
 
 export default function TravelMedicineClinicsModule({ language }: { language: Language }) {
   const [records, setRecords] = useState<TravelMedicineClinicRecord[]>([]); const [report, setReport] = useState<any>(null); const [error, setError] = useState(false);
@@ -35,7 +35,7 @@ export default function TravelMedicineClinicsModule({ language }: { language: La
   const byMpox = (Object.keys(mpoxLabels) as MpoxVaccinationStatus[]).map((status) => ({ name: mpoxLabels[status][language], count: filtered.filter((record) => record.mpoxSelfPaidVaccination === status).length }));
   const listedMpox = filtered.filter((record) => record.mpoxSelfPaidVaccination === 'available').length;
   const copy = async (value: string) => { try { await navigator.clipboard.writeText(value); } catch { /* clipboard permission may be unavailable */ } };
-  const exportCsv = () => { const headers = ['郵遞區號', '縣市', '醫院名稱', '科別', '電話', '分機', '地址', 'M痘疫苗自費接種服務', '衍生行政區', 'M痘衍生狀態']; const csv = [headers, ...filtered.map((record) => [record.sourceValues['郵遞區號'], record.sourceValues['縣市'], record.sourceValues['醫院名稱'], record.sourceValues['科別'], record.sourceValues['電話'], record.sourceValues['分機'], record.sourceValues['地址'], record.sourceValues['M痘疫苗自費接種服務'], record.districtName ?? '', record.mpoxSelfPaidVaccination])].map((row) => row.map(csvCell).join(',')).join('\n'); const anchor = document.createElement('a'); anchor.href = URL.createObjectURL(new Blob([`\uFEFF${csv}`], { type: 'text/csv;charset=utf-8' })); anchor.download = 'taipei-travel-medicine-clinics.csv'; anchor.click(); URL.revokeObjectURL(anchor.href); };
+  const exportCsv = () => { const headers = ['郵遞區號', '縣市', '醫院名稱', '科別', '電話', '分機', '地址', 'M痘疫苗自費接種服務', '衍生行政區', 'M痘衍生狀態']; const csv = [headers, ...filtered.map((record) => [record.sourceValues['郵遞區號'], record.sourceValues['縣市'], record.sourceValues['醫院名稱'], record.sourceValues['科別'], record.sourceValues['電話'], record.sourceValues['分機'], record.sourceValues['地址'], record.sourceValues['M痘疫苗自費接種服務'], record.districtName ?? '', record.mpoxSelfPaidVaccination])].map((row) => row.map(csvExportCell).join(',')).join('\n'); const anchor = document.createElement('a'); anchor.href = URL.createObjectURL(new Blob([`\uFEFF${csv}`], { type: 'text/csv;charset=utf-8' })); anchor.download = 'taipei-travel-medicine-clinics.csv'; anchor.click(); URL.revokeObjectURL(anchor.href); };
   if (error) return <DatasetFamilyFrame family={UI_FAMILIES.healthcareStandard} className="module-panel"><h1>{t('旅遊醫學門診醫院名冊', 'Travel Medicine Clinics')}</h1><p>{t('本機資料檔無法載入。請先執行資料轉換。', 'The local dataset could not be loaded. Run its conversion command first.')}</p></DatasetFamilyFrame>;
   return <DatasetFamilyFrame family={UI_FAMILIES.healthcareStandard} className="module-panel generated-module"><p className="eyebrow">{t('醫療資源名冊', 'HEALTHCARE RESOURCE DIRECTORY')}</p><h1>{t('旅遊醫學門診醫院名冊', 'Travel Medicine Clinics')}</h1><p className="module-intro">{t('依臺北市政府衛生局公開資料，搜尋旅遊醫學門診合約醫院的聯絡與地址資訊。', 'Search contact and address details for contracted travel-medicine outpatient hospitals in Taipei City Department of Health open data.')}</p><p className="muted">{t('這是來源更新時間的行政名冊，不表示即時門診、預約、疫苗庫存、資格、價格或醫療品質。', 'This is an administrative directory at the source update time; it does not establish real-time clinics, appointments, vaccine stock, eligibility, prices, or clinical quality.')}</p>
     <AccessibleTabs tabs={(Object.keys(viewLabels) as View[]).map((item) => [item, viewLabels[item][language]] as const)} value={view} onChange={setView} ariaLabel={t('資料檢視', 'Data views')} idPrefix="travel-medicine-clinics" />

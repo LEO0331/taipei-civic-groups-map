@@ -1,3 +1,4 @@
+import { fetchUpstream } from './fetchUpstream.ts';
 import { access, copyFile, mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 
@@ -28,7 +29,7 @@ if (local) {
 } else {
   const sourceUrl = url ?? officialResource;
   try {
-    const response = await fetch(sourceUrl);
+    const response = await fetchUpstream(sourceUrl, { manualUrl: Boolean(url) });
     if (!response.ok) throw new Error(`Download failed: ${response.status} ${response.statusText}`);
     await writeFile(destination, Buffer.from(await response.arrayBuffer()));
     await writeMetadata(sourceUrl, [url ? 'Source URL supplied with --url.' : 'Official resource URL used.']);

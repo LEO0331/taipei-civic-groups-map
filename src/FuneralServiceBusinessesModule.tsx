@@ -3,6 +3,7 @@ import AccessibleTabs from './AccessibleTabs';
 import { DatasetFamilyFrame, DatasetFamilyHeading } from './DatasetFamilyFrame';
 import { UI_FAMILIES } from './lib/uiFamilies';
 import { normalizeFuneralText, type FuneralServiceBusinessRecord } from './lib/funeralServiceBusinesses';
+import { csvExportCell } from './lib/csvExport';
 
 type Language = 'zh' | 'en';
 type View = 'find' | 'directory' | 'districts' | 'contacts' | 'coverage' | 'insights' | 'quality' | 'notes';
@@ -11,7 +12,6 @@ const sourceUrl = 'https://data.taipei/dataset/detail?id=20143c69-a790-4dec-bb5e
 const viewLabels: Record<View, { zh: string; en: string }> = {
   find: { zh: '查找業者', en: 'Find' }, directory: { zh: '業者名冊', en: 'Directory' }, districts: { zh: '行政區分布', en: 'District Distribution' }, contacts: { zh: '聯絡方式', en: 'Contact' }, coverage: { zh: '地址涵蓋', en: 'Address Coverage' }, insights: { zh: '名冊概況', en: 'Registry Insights' }, quality: { zh: '資料品質', en: 'Quality' }, notes: { zh: '資料說明', en: 'Notes' },
 };
-const csvCell = (value: string | undefined) => `"${(value ?? '').replaceAll('"', '""')}"`;
 const t = (language: Language, zh: string, en: string) => language === 'zh' ? zh : en;
 
 export default function FuneralServiceBusinessesModule({ language }: { language: Language }) {
@@ -23,7 +23,7 @@ export default function FuneralServiceBusinessesModule({ language }: { language:
   useEffect(() => setPage(1), [query, district, postal, phone, address, sort]); const pageSize = 12; const pages = Math.max(1, Math.ceil(filtered.length / pageSize)); const rows = filtered.slice((page - 1) * pageSize, page * pageSize);
   const byDistrict = useMemo(() => [...filtered.reduce((map, r) => { const key = r.districtName || t(language, '未解析行政區', 'Unresolved district'); map.set(key, (map.get(key) ?? 0) + 1); return map; }, new Map<string, number>())].map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'zh-Hant')), [filtered, language]);
   const copy = async (value: string) => { try { await navigator.clipboard.writeText(value); } catch { /* permission is browser-dependent */ } };
-  const exportCsv = () => { const headers = Object.keys(records[0]?.sourceValues ?? {}); const text = [headers, ...filtered.map((r) => headers.map((h) => r.sourceValues[h]))].map((line) => line.map(csvCell).join(',')).join('\n'); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([`\uFEFF${text}`], { type: 'text/csv;charset=utf-8' })); a.download = 'taipei-funeral-service-businesses.csv'; a.click(); URL.revokeObjectURL(a.href); };
+  const exportCsv = () => { const headers = Object.keys(records[0]?.sourceValues ?? {}); const text = [headers, ...filtered.map((r) => headers.map((h) => r.sourceValues[h]))].map((line) => line.map(csvExportCell).join(',')).join('\n'); const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([`\uFEFF${text}`], { type: 'text/csv;charset=utf-8' })); a.download = 'taipei-funeral-service-businesses.csv'; a.click(); URL.revokeObjectURL(a.href); };
   if (error) return <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow={t(language, '行政名冊資料', 'ADMINISTRATIVE REGISTRY')} title={t(language, '臺北市殯葬禮儀服務業', 'Taipei Funeral Service Businesses')} /><p className="notice error">{t(language, '無法載入本機資料快照；請先執行此資料集的轉換指令。', 'The local data snapshot could not be loaded. Run this dataset’s conversion command first.')}</p></DatasetFamilyFrame>;
   return <DatasetFamilyFrame family={UI_FAMILIES.registryDirectory}><DatasetFamilyHeading eyebrow={t(language, '行政名冊資料', 'ADMINISTRATIVE REGISTRY')} title={t(language, '臺北市殯葬禮儀服務業', 'Taipei Funeral Service Businesses')} description={t(language, '依公司名稱、行政區、郵遞區號、地址或電話，查閱官方備查核准名冊的來源登記資料。', 'Search the official filed-and-approved registry by company, district, postal code, address, or phone.')} /><p className="notice subtle">{t(language, '本名冊僅反映來源檔的行政登記；不代表目前營業、服務範圍、費用、品質、資格或推薦。請於聯絡前自行確認。', 'This registry reflects only the source file’s administrative record. It does not establish current operation, services, prices, quality, eligibility, or a recommendation. Confirm directly before relying on it.')}</p>
     <AccessibleTabs tabs={(Object.keys(viewLabels) as View[]).map((item) => [item, viewLabels[item][language]] as const)} value={view} onChange={setView} ariaLabel={t(language, '殯葬禮儀服務業資料檢視', 'Funeral service business data views')} idPrefix="funeral-service-businesses" />

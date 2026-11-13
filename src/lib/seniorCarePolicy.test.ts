@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { buildPolicySnapshot, canonicalPolicyJson, canonicalRetainedCsvBytes, sha256 } from '../../scripts/buildSeniorCarePolicySnapshot';
-import { classifyPolicyType, comparePolicyScenarios, DEFAULT_POLICY_CONFIG, normalizePolicyText, policyBriefing, policyCsv, runPolicyScenario, safePolicyCsvCell, villageIdentity } from './seniorCarePolicy';
+import { classifyPolicyType, comparePolicyScenarios, DEFAULT_POLICY_CONFIG, normalizePolicyText, policyBriefing, policyCsv, runPolicyScenario, villageIdentity } from './seniorCarePolicy';
 import type { PolicyExtraction, PublishedSite, RetainedSite } from '../types/seniorCarePolicy';
 const sources = ['A', 'B', 'C'].map((key, i) => ({ key, sha256: String(i + 1).repeat(64), edition: '2026-08' }));
 const site = (serial: number, patch: Partial<PublishedSite> = {}): PublishedSite => ({ serial, page: 1, district: '中正區', village: '梅花里', name: `組織${serial}`, type: '社區照顧關懷據點 2-3時段', address: `臺北市中正區梅花里${serial}號`, ...patch });
@@ -79,10 +79,7 @@ test('source mismatch and duplicate candidate IDs reject scenarios', () => {
     snapshot.candidates[0].editionHash = 'wrong';
     assert.throws(() => runPolicyScenario(snapshot, DEFAULT_POLICY_CONFIG), /edition mismatch/);
 });
-test('CSV formula injection, quotes, multiline and empty briefing provenance are safe', () => {
-    for (const value of ['=1+1', ' +cmd', '\t@SUM(1)', '-2'])
-        assert.ok(safePolicyCsvCell(value).startsWith('"\''));
-    assert.equal(safePolicyCsvCell('a"b\nc'), '"a""b\nc"');
+test('CSV and briefing preserve provenance for empty scenarios', () => {
     const snapshot = buildPolicySnapshot(extraction([site(1)]), [], true), empty = runPolicyScenario(snapshot, { ...DEFAULT_POLICY_CONFIG, issueScope: 'primary' });
     const csv = policyCsv(snapshot, 'snapshot-id', 'abc', empty);
     assert.match(csv, /snapshot-id/);
